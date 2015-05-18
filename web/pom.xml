@@ -48,12 +48,15 @@
     <dependencies>
 
         <!-- Import the ejb project so that the JSF managed bean can use the EJB -->
+<!--
         <dependency>
             <groupId>com.witbooking.middleware</groupId>
             <artifactId>witbooking-api-ejb</artifactId>
             <type>ejb</type>
             <scope>provided</scope>
         </dependency>
+-->
+
 
         <!-- Import the CDI API, we use provided scope as the API is included in JBoss WildFly -->
         <dependency>
@@ -89,9 +92,30 @@
             <groupId>org.jboss.resteasy</groupId>
             <artifactId>resteasy-jaxrs</artifactId>
             <version>3.0.11.Final</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.appdapter</groupId>
+            <artifactId>ext.bundle.math.symja_jas</artifactId>
+            <version>1.2.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.witbooking.middleware</groupId>
+            <artifactId>witbooking-api-ejb</artifactId>
+            <type>ejb</type>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.witbooking.middleware</groupId>
+            <artifactId>witbooking-api-remote</artifactId>
+            <type>jar</type>
         </dependency>
 
     </dependencies>
+
 
     <build>
         <!-- Set the name of the war, used as the context root when the app

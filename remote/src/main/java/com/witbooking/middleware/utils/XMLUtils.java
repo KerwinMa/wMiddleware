@@ -161,7 +161,7 @@ public final class XMLUtils {
      * @return the <code>String</code> that represents the object given marshal.
      * @throws JAXBException throw by {@link JAXBContext}.
      */
-    public static String toSend(Object item) throws JAXBException {
+    public static String parseToString(Object item) throws JAXBException {
         JAXBContext jaxbContext;
         jaxbContext = JAXBContext.newInstance(item.getClass());
         Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
@@ -251,5 +251,12 @@ public final class XMLUtils {
             }
         }
         return result;
+    }
+
+    public static String errorOTAString(String msg) {
+        return "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" +
+                "<ns2:Errors xmlns:ns2=\"http://www.opentravel.org/OTA/2003/05\">" +
+                "<ns2:Error Type=\"" + msg + "\"/>" +
+                "</ns2:Errors>";
     }
 }

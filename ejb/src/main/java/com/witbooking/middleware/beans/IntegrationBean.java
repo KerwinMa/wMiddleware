@@ -47,8 +47,10 @@ public class IntegrationBean implements IntegrationBeanLocal {
     private RateGainEnqueuerLocal rateGainEnqueuerLocal;
     @EJB
     private ConnectionBeanLocal connectionBeanLocal;
+/*
     @EJB
     private BookingBeanLocal bookingBeanLocal;
+*/
 
     private static final String LOGGER_PREFIX_KEY = "WIT_INTE_KEY";
 

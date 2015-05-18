@@ -66,7 +66,7 @@ import java.util.List;
 public class HotelReservationsType {
 
     @XmlElement(name = "HotelReservation", required = true)
-    protected List<HotelReservation> hotelReservation;
+    protected List<HotelReservationsType.HotelReservation> hotelReservation;
     @XmlElement(name = "RoutingHops")
     protected RoutingHopType routingHops;
     @XmlElement(name = "WrittenConfInst")
@@ -75,7 +75,7 @@ public class HotelReservationsType {
     protected TPAExtensionsType tpaExtensions;
 
     public HotelReservationsType() {
-        this.hotelReservation = new ArrayList<HotelReservation>();
+        this.hotelReservation = new ArrayList<HotelReservationsType.HotelReservation>();
     }
 
     /**
@@ -98,9 +98,9 @@ public class HotelReservationsType {
      * Objects of the following type(s) are allowed in the list
      * {@link HotelReservationsType.HotelReservation }
      */
-    public List<HotelReservation> getHotelReservation() {
+    public List<HotelReservationsType.HotelReservation> getHotelReservation() {
         if (hotelReservation == null) {
-            hotelReservation = new ArrayList<HotelReservation>();
+            hotelReservation = new ArrayList<HotelReservationsType.HotelReservation>();
         }
         return this.hotelReservation;
     }

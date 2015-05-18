@@ -39,6 +39,7 @@
         <module>ejb</module>
         <module>web</module>
         <module>ear</module>
+        <module>remote</module>
     </modules>
 
     <properties>

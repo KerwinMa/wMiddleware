@@ -56,6 +56,11 @@
 			<artifactId>witbooking-api-ejb</artifactId>
             <type>ejb</type>
         </dependency>
+        <dependency>
+            <groupId>com.witbooking.middleware</groupId>
+            <artifactId>witbooking-api-remote</artifactId>
+            <type>jar</type>
+        </dependency>
     </dependencies>
 
     <build>
