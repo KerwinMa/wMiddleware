@@ -8,12 +8,17 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -142,7 +147,7 @@ import java.util.List;
 public class VehicleRentalRateType {
 
     @XmlElement(name = "RateDistance")
-    protected List<RateDistance> rateDistance;
+    protected List<VehicleRentalRateType.RateDistance> rateDistance;
     @XmlElement(name = "VehicleCharges")
     protected VehicleRentalRateType.VehicleCharges vehicleCharges;
     @XmlElement(name = "RateQualifier")
@@ -152,7 +157,7 @@ public class VehicleRentalRateType {
     @XmlElement(name = "RateGuarantee")
     protected VehicleRentalRateType.RateGuarantee rateGuarantee;
     @XmlElement(name = "PickupReturnRule")
-    protected List<PickupReturnRule> pickupReturnRule;
+    protected List<VehicleRentalRateType.PickupReturnRule> pickupReturnRule;
     @XmlElement(name = "NoShowFeeInfo")
     protected NoShowFeeType noShowFeeInfo;
     @XmlAttribute(name = "QuoteID")
@@ -160,40 +165,40 @@ public class VehicleRentalRateType {
 
     /**
      * Gets the value of the rateDistance property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the rateDistance property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getRateDistance().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link VehicleRentalRateType.RateDistance }
-     *
-     *
+     * 
+     * 
      */
-    public List<RateDistance> getRateDistance() {
+    public List<VehicleRentalRateType.RateDistance> getRateDistance() {
         if (rateDistance == null) {
-            rateDistance = new ArrayList<RateDistance>();
+            rateDistance = new ArrayList<VehicleRentalRateType.RateDistance>();
         }
         return this.rateDistance;
     }
 
     /**
      * Gets the value of the vehicleCharges property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleRentalRateType.VehicleCharges }
-     *
+     *     
      */
     public VehicleRentalRateType.VehicleCharges getVehicleCharges() {
         return vehicleCharges;
@@ -201,11 +206,11 @@ public class VehicleRentalRateType {
 
     /**
      * Sets the value of the vehicleCharges property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleRentalRateType.VehicleCharges }
-     *
+     *     
      */
     public void setVehicleCharges(VehicleRentalRateType.VehicleCharges value) {
         this.vehicleCharges = value;
@@ -213,11 +218,11 @@ public class VehicleRentalRateType {
 
     /**
      * Gets the value of the rateQualifier property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleRentalRateType.RateQualifier }
-     *
+     *     
      */
     public VehicleRentalRateType.RateQualifier getRateQualifier() {
         return rateQualifier;
@@ -225,11 +230,11 @@ public class VehicleRentalRateType {
 
     /**
      * Sets the value of the rateQualifier property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleRentalRateType.RateQualifier }
-     *
+     *     
      */
     public void setRateQualifier(VehicleRentalRateType.RateQualifier value) {
         this.rateQualifier = value;
@@ -237,11 +242,11 @@ public class VehicleRentalRateType {
 
     /**
      * Gets the value of the rateRestrictions property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleRentalRateType.RateRestrictions }
-     *
+     *     
      */
     public VehicleRentalRateType.RateRestrictions getRateRestrictions() {
         return rateRestrictions;
@@ -249,11 +254,11 @@ public class VehicleRentalRateType {
 
     /**
      * Sets the value of the rateRestrictions property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleRentalRateType.RateRestrictions }
-     *
+     *     
      */
     public void setRateRestrictions(VehicleRentalRateType.RateRestrictions value) {
         this.rateRestrictions = value;
@@ -261,11 +266,11 @@ public class VehicleRentalRateType {
 
     /**
      * Gets the value of the rateGuarantee property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleRentalRateType.RateGuarantee }
-     *
+     *     
      */
     public VehicleRentalRateType.RateGuarantee getRateGuarantee() {
         return rateGuarantee;
@@ -273,11 +278,11 @@ public class VehicleRentalRateType {
 
     /**
      * Sets the value of the rateGuarantee property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleRentalRateType.RateGuarantee }
-     *
+     *     
      */
     public void setRateGuarantee(VehicleRentalRateType.RateGuarantee value) {
         this.rateGuarantee = value;
@@ -285,29 +290,29 @@ public class VehicleRentalRateType {
 
     /**
      * Gets the value of the pickupReturnRule property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the pickupReturnRule property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getPickupReturnRule().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link VehicleRentalRateType.PickupReturnRule }
-     *
-     *
+     * 
+     * 
      */
-    public List<PickupReturnRule> getPickupReturnRule() {
+    public List<VehicleRentalRateType.PickupReturnRule> getPickupReturnRule() {
         if (pickupReturnRule == null) {
-            pickupReturnRule = new ArrayList<PickupReturnRule>();
+            pickupReturnRule = new ArrayList<VehicleRentalRateType.PickupReturnRule>();
         }
         return this.pickupReturnRule;
     }

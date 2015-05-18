@@ -8,11 +8,15 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -70,7 +74,7 @@ import java.util.List;
 public class HotelSearchCriteriaType {
 
     @XmlElement(name = "Criterion", required = true)
-    protected List<Criterion> criterion;
+    protected List<HotelSearchCriteriaType.Criterion> criterion;
     @XmlAttribute(name = "AvailableOnlyIndicator")
     protected Boolean availableOnlyIndicator;
     @XmlAttribute(name = "BestOnlyIndicator")
@@ -78,29 +82,29 @@ public class HotelSearchCriteriaType {
 
     /**
      * Gets the value of the criterion property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the criterion property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getCriterion().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link HotelSearchCriteriaType.Criterion }
-     *
-     *
+     * 
+     * 
      */
-    public List<Criterion> getCriterion() {
+    public List<HotelSearchCriteriaType.Criterion> getCriterion() {
         if (criterion == null) {
-            criterion = new ArrayList<Criterion>();
+            criterion = new ArrayList<HotelSearchCriteriaType.Criterion>();
         }
         return this.criterion;
     }

@@ -8,11 +8,16 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -70,33 +75,33 @@ import java.util.List;
 public class TransportationType {
 
     @XmlElement(name = "Transportation", required = true)
-    protected List<Transportation> transportation;
+    protected List<TransportationType.Transportation> transportation;
 
     /**
      * Gets the value of the transportation property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the transportation property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getTransportation().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link TransportationType.Transportation }
-     *
-     *
+     * 
+     * 
      */
-    public List<Transportation> getTransportation() {
+    public List<TransportationType.Transportation> getTransportation() {
         if (transportation == null) {
-            transportation = new ArrayList<Transportation>();
+            transportation = new ArrayList<TransportationType.Transportation>();
         }
         return this.transportation;
     }

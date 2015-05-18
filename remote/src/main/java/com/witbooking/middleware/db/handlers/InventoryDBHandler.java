@@ -15,6 +15,7 @@ import com.witbooking.middleware.exceptions.db.DBAccessException;
 import com.witbooking.middleware.model.*;
 import com.witbooking.middleware.model.values.*;
 import com.witbooking.middleware.model.values.types.DaysCondition;
+import com.witbooking.middleware.model.values.types.FormulaValue;
 import com.witbooking.middleware.model.values.types.SharedValue;
 import org.apache.log4j.Logger;
 
@@ -207,6 +208,13 @@ public class InventoryDBHandler extends DBHandler {
         return (PaymentType) getObjectInMapperFromId(PaymentType.class.getSimpleName(), idPaymentType);
     }
 
+
+    public List<Service> getServicesValid() throws DBAccessException {
+        List<Service> fullList = getFullListObjectFromMapper(Service.class.getSimpleName());
+        Collections.sort(fullList);
+        return fullList;
+    }
+
     public List<Service> getServicesActives() throws DBAccessException {
         List<Service> fullList = getFullListObjectFromMapper(Service.class.getSimpleName());
         List<Service> serviceList = new ArrayList<Service>();
@@ -246,6 +254,12 @@ public class InventoryDBHandler extends DBHandler {
         } finally {
             DAOUtil.close(statement, resultSet);
         }
+    }
+
+    public List<Discount> getDiscountsValid() throws DBAccessException {
+        List<Discount> fullList = getFullListObjectFromMapper(Discount.class.getSimpleName());
+        Collections.sort(fullList);
+        return fullList;
     }
 
     public List<Discount> getDiscountsActives() throws DBAccessException {
@@ -392,6 +406,21 @@ public class InventoryDBHandler extends DBHandler {
         return inventoryList;
     }
 
+    public List<Inventory> getInventoriesByRoomMealPlanRatePlan(String roomCode, String mealPlanCode, String ratePlanCode) throws
+            DBAccessException {
+        List<Inventory> fullList = getFullListObjectFromMapper(Inventory.class.getSimpleName());
+        List<Inventory> inventoryList = new ArrayList<>();
+        for (Inventory inventory : fullList) {
+            if (inventory.isValid() && inventory.isVisible() &&
+                    inventory.getAccommodation().getTicker().equals(roomCode) &&
+                    inventory.getMealPlan().getTicker().equals(mealPlanCode) &&
+                    inventory.getCondition().getTicker().equals(ratePlanCode)) {
+                inventoryList.add(inventory);
+            }
+        }
+        return inventoryList;
+    }
+
     public List<Inventory> getInventoriesByTickers(List<String> tickers) throws DBAccessException {
         List<Inventory> inventoryList = new ArrayList<>();
         for (String ticker : tickers) {
@@ -409,6 +438,33 @@ public class InventoryDBHandler extends DBHandler {
         return (Inventory) getObjectInMapperFromId(Inventory.class.getSimpleName(), idInventory);
     }
 
+    public List<Inventory> getChildInventories(String ticker) throws DBAccessException {
+        List<Inventory> fullList = getFullListObjectFromMapper(Inventory.class.getSimpleName());
+        List<Inventory> inventoryList = new ArrayList<>();
+        for (Inventory inventory : fullList) {
+            for (DataValue dataValue : inventory.getDataValues()) {
+                if ((dataValue.isSharedValue() && ((SharedValue) dataValue.getValue()).getTicker().equals(ticker))
+                        || (dataValue.isFormulaValue() && ((FormulaValue) dataValue.getValue()).getTickersSet().contains(ticker))) {
+                    inventoryList.add(inventory);
+                }
+            }
+        }
+        return inventoryList;
+    }
+
+    public List<Inventory> getRateChildInventories(String ticker) throws DBAccessException {
+        List<Inventory> fullList = getFullListObjectFromMapper(Inventory.class.getSimpleName());
+        List<Inventory> inventoryList = new ArrayList<>();
+        for (Inventory inventory : fullList) {
+            RateDataValue dataValue = inventory.getRate();
+            if ((dataValue.isSharedValue() && ((SharedValue) dataValue.getValue()).getTicker().equals(ticker))
+                    || (dataValue.isFormulaValue() && ((FormulaValue) dataValue.getValue()).getTickersSet().contains(ticker))) {
+                inventoryList.add(inventory);
+            }
+        }
+        return inventoryList;
+    }
+
     private PreparedStatement preparedStatementWithLocate(final String tableName, List values) throws DBAccessException {
         if (values == null) {
             values = new ArrayList();
@@ -424,8 +480,7 @@ public class InventoryDBHandler extends DBHandler {
         try {
             statement = preparedStatementWithLocate(sqlCommand, values);
             resultSet = execute(statement);
-            List<Hotel> hotelList = getHotelFromResultSet(resultSet);
-            return hotelList;
+            return getHotelFromResultSet(resultSet);
         } finally {
             DAOUtil.close(statement, resultSet);
         }
@@ -438,8 +493,7 @@ public class InventoryDBHandler extends DBHandler {
         try {
             statement = preparedStatementWithLocate(sqlCommand, values);
             resultSet = execute(statement);
-            List<Chain> chainList = getChainFromResultSet(resultSet);
-            return chainList;
+            return getChainFromResultSet(resultSet);
         } finally {
             DAOUtil.close(statement, resultSet);
         }
@@ -1128,7 +1182,7 @@ public class InventoryDBHandler extends DBHandler {
             statement = prepareStatement(sqlCommand);
             resultSet = execute(statement);
             while (next(resultSet)) {
-                variables.add(getString(resultSet,"ticker"));
+                variables.add(getString(resultSet, "ticker"));
             }
             return variables;
         } finally {

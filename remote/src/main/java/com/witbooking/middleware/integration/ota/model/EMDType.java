@@ -8,14 +8,20 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import javax.xml.datatype.XMLGregorianCalendar;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.XmlValue;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
@@ -549,25 +555,25 @@ public class EMDType {
     @XmlElement(name = "OriginDestination")
     protected EMDType.OriginDestination originDestination;
     @XmlElement(name = "CustLoyalty")
-    protected List<CustLoyalty> custLoyalty;
+    protected List<EMDType.CustLoyalty> custLoyalty;
     @XmlElement(name = "Endorsement")
     protected EMDType.Endorsement endorsement;
     @XmlElement(name = "AddReferenceID")
     protected List<UniqueIDType> addReferenceID;
     @XmlElement(name = "BaseFare")
-    protected List<BaseFare> baseFare;
+    protected List<EMDType.BaseFare> baseFare;
     @XmlElement(name = "EquivFare")
-    protected List<EquivFare> equivFare;
+    protected List<EMDType.EquivFare> equivFare;
     @XmlElement(name = "TotalFare")
-    protected List<TotalFare> totalFare;
+    protected List<EMDType.TotalFare> totalFare;
     @XmlElement(name = "Taxes")
     protected EMDType.Taxes taxes;
     @XmlElement(name = "UnstructuredFareCalc")
-    protected List<UnstructuredFareCalc> unstructuredFareCalc;
+    protected List<EMDType.UnstructuredFareCalc> unstructuredFareCalc;
     @XmlElement(name = "FareInfo")
     protected EMDType.FareInfo fareInfo;
     @XmlElement(name = "TicketDocument", required = true)
-    protected List<TicketDocument> ticketDocument;
+    protected List<EMDType.TicketDocument> ticketDocument;
     @XmlElement(name = "Commission")
     protected EMDType.Commission commission;
     @XmlElement(name = "FareComponent")
@@ -575,11 +581,11 @@ public class EMDType {
     @XmlElement(name = "CarrierFeeInfo")
     protected EMDType.CarrierFeeInfo carrierFeeInfo;
     @XmlElement(name = "ExchResidualFareComponent")
-    protected List<ExchResidualFareComponent> exchResidualFareComponent;
+    protected List<EMDType.ExchResidualFareComponent> exchResidualFareComponent;
     @XmlElement(name = "OriginalIssueInfo")
     protected EMDType.OriginalIssueInfo originalIssueInfo;
     @XmlElement(name = "ReissuedFlown")
-    protected List<ReissuedFlown> reissuedFlown;
+    protected List<EMDType.ReissuedFlown> reissuedFlown;
     @XmlElement(name = "ResponseComment")
     protected FreeTextType responseComment;
     @XmlElement(name = "PresentInfo")
@@ -613,11 +619,11 @@ public class EMDType {
 
     /**
      * Gets the value of the travelerRefNumber property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link EMDType.TravelerRefNumber }
-     *
+     *     
      */
     public EMDType.TravelerRefNumber getTravelerRefNumber() {
         return travelerRefNumber;
@@ -625,11 +631,11 @@ public class EMDType {
 
     /**
      * Sets the value of the travelerRefNumber property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link EMDType.TravelerRefNumber }
-     *
+     *     
      */
     public void setTravelerRefNumber(EMDType.TravelerRefNumber value) {
         this.travelerRefNumber = value;
@@ -637,25 +643,25 @@ public class EMDType {
 
     /**
      * Gets the value of the agentID property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the agentID property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getAgentID().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link UniqueIDType }
-     *
-     *
+     * 
+     * 
      */
     public List<UniqueIDType> getAgentID() {
         if (agentID == null) {
@@ -666,25 +672,25 @@ public class EMDType {
 
     /**
      * Gets the value of the paymentDetail property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the paymentDetail property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getPaymentDetail().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link PaymentDetailType }
-     *
-     *
+     * 
+     * 
      */
     public List<PaymentDetailType> getPaymentDetail() {
         if (paymentDetail == null) {
@@ -695,11 +701,11 @@ public class EMDType {
 
     /**
      * Gets the value of the originDestination property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link EMDType.OriginDestination }
-     *
+     *     
      */
     public EMDType.OriginDestination getOriginDestination() {
         return originDestination;
@@ -707,11 +713,11 @@ public class EMDType {
 
     /**
      * Sets the value of the originDestination property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link EMDType.OriginDestination }
-     *
+     *     
      */
     public void setOriginDestination(EMDType.OriginDestination value) {
         this.originDestination = value;
@@ -719,40 +725,40 @@ public class EMDType {
 
     /**
      * Gets the value of the custLoyalty property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the custLoyalty property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getCustLoyalty().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link EMDType.CustLoyalty }
-     *
-     *
+     * 
+     * 
      */
-    public List<CustLoyalty> getCustLoyalty() {
+    public List<EMDType.CustLoyalty> getCustLoyalty() {
         if (custLoyalty == null) {
-            custLoyalty = new ArrayList<CustLoyalty>();
+            custLoyalty = new ArrayList<EMDType.CustLoyalty>();
         }
         return this.custLoyalty;
     }
 
     /**
      * Gets the value of the endorsement property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link EMDType.Endorsement }
-     *
+     *     
      */
     public EMDType.Endorsement getEndorsement() {
         return endorsement;
@@ -760,11 +766,11 @@ public class EMDType {
 
     /**
      * Sets the value of the endorsement property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link EMDType.Endorsement }
-     *
+     *     
      */
     public void setEndorsement(EMDType.Endorsement value) {
         this.endorsement = value;
@@ -772,25 +778,25 @@ public class EMDType {
 
     /**
      * Gets the value of the addReferenceID property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the addReferenceID property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getAddReferenceID().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link UniqueIDType }
-     *
-     *
+     * 
+     * 
      */
     public List<UniqueIDType> getAddReferenceID() {
         if (addReferenceID == null) {
@@ -801,98 +807,98 @@ public class EMDType {
 
     /**
      * Gets the value of the baseFare property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the baseFare property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getBaseFare().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link EMDType.BaseFare }
-     *
-     *
+     * 
+     * 
      */
-    public List<BaseFare> getBaseFare() {
+    public List<EMDType.BaseFare> getBaseFare() {
         if (baseFare == null) {
-            baseFare = new ArrayList<BaseFare>();
+            baseFare = new ArrayList<EMDType.BaseFare>();
         }
         return this.baseFare;
     }
 
     /**
      * Gets the value of the equivFare property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the equivFare property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getEquivFare().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link EMDType.EquivFare }
-     *
-     *
+     * 
+     * 
      */
-    public List<EquivFare> getEquivFare() {
+    public List<EMDType.EquivFare> getEquivFare() {
         if (equivFare == null) {
-            equivFare = new ArrayList<EquivFare>();
+            equivFare = new ArrayList<EMDType.EquivFare>();
         }
         return this.equivFare;
     }
 
     /**
      * Gets the value of the totalFare property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the totalFare property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getTotalFare().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link EMDType.TotalFare }
-     *
-     *
+     * 
+     * 
      */
-    public List<TotalFare> getTotalFare() {
+    public List<EMDType.TotalFare> getTotalFare() {
         if (totalFare == null) {
-            totalFare = new ArrayList<TotalFare>();
+            totalFare = new ArrayList<EMDType.TotalFare>();
         }
         return this.totalFare;
     }
 
     /**
      * Gets the value of the taxes property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link EMDType.Taxes }
-     *
+     *     
      */
     public EMDType.Taxes getTaxes() {
         return taxes;
@@ -900,11 +906,11 @@ public class EMDType {
 
     /**
      * Sets the value of the taxes property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link EMDType.Taxes }
-     *
+     *     
      */
     public void setTaxes(EMDType.Taxes value) {
         this.taxes = value;
@@ -912,40 +918,40 @@ public class EMDType {
 
     /**
      * Gets the value of the unstructuredFareCalc property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the unstructuredFareCalc property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getUnstructuredFareCalc().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link EMDType.UnstructuredFareCalc }
-     *
-     *
+     * 
+     * 
      */
-    public List<UnstructuredFareCalc> getUnstructuredFareCalc() {
+    public List<EMDType.UnstructuredFareCalc> getUnstructuredFareCalc() {
         if (unstructuredFareCalc == null) {
-            unstructuredFareCalc = new ArrayList<UnstructuredFareCalc>();
+            unstructuredFareCalc = new ArrayList<EMDType.UnstructuredFareCalc>();
         }
         return this.unstructuredFareCalc;
     }
 
     /**
      * Gets the value of the fareInfo property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link EMDType.FareInfo }
-     *
+     *     
      */
     public EMDType.FareInfo getFareInfo() {
         return fareInfo;
@@ -953,11 +959,11 @@ public class EMDType {
 
     /**
      * Sets the value of the fareInfo property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link EMDType.FareInfo }
-     *
+     *     
      */
     public void setFareInfo(EMDType.FareInfo value) {
         this.fareInfo = value;
@@ -965,40 +971,40 @@ public class EMDType {
 
     /**
      * Gets the value of the ticketDocument property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the ticketDocument property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getTicketDocument().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link EMDType.TicketDocument }
-     *
-     *
+     * 
+     * 
      */
-    public List<TicketDocument> getTicketDocument() {
+    public List<EMDType.TicketDocument> getTicketDocument() {
         if (ticketDocument == null) {
-            ticketDocument = new ArrayList<TicketDocument>();
+            ticketDocument = new ArrayList<EMDType.TicketDocument>();
         }
         return this.ticketDocument;
     }
 
     /**
      * Gets the value of the commission property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link EMDType.Commission }
-     *
+     *     
      */
     public EMDType.Commission getCommission() {
         return commission;
@@ -1006,11 +1012,11 @@ public class EMDType {
 
     /**
      * Sets the value of the commission property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link EMDType.Commission }
-     *
+     *     
      */
     public void setCommission(EMDType.Commission value) {
         this.commission = value;
@@ -1018,11 +1024,11 @@ public class EMDType {
 
     /**
      * Gets the value of the fareComponent property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link FareComponentType }
-     *
+     *     
      */
     public FareComponentType getFareComponent() {
         return fareComponent;
@@ -1030,11 +1036,11 @@ public class EMDType {
 
     /**
      * Sets the value of the fareComponent property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link FareComponentType }
-     *
+     *     
      */
     public void setFareComponent(FareComponentType value) {
         this.fareComponent = value;
@@ -1042,11 +1048,11 @@ public class EMDType {
 
     /**
      * Gets the value of the carrierFeeInfo property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link EMDType.CarrierFeeInfo }
-     *
+     *     
      */
     public EMDType.CarrierFeeInfo getCarrierFeeInfo() {
         return carrierFeeInfo;
@@ -1054,11 +1060,11 @@ public class EMDType {
 
     /**
      * Sets the value of the carrierFeeInfo property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link EMDType.CarrierFeeInfo }
-     *
+     *     
      */
     public void setCarrierFeeInfo(EMDType.CarrierFeeInfo value) {
         this.carrierFeeInfo = value;
@@ -1066,40 +1072,40 @@ public class EMDType {
 
     /**
      * Gets the value of the exchResidualFareComponent property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the exchResidualFareComponent property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getExchResidualFareComponent().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link EMDType.ExchResidualFareComponent }
-     *
-     *
+     * 
+     * 
      */
-    public List<ExchResidualFareComponent> getExchResidualFareComponent() {
+    public List<EMDType.ExchResidualFareComponent> getExchResidualFareComponent() {
         if (exchResidualFareComponent == null) {
-            exchResidualFareComponent = new ArrayList<ExchResidualFareComponent>();
+            exchResidualFareComponent = new ArrayList<EMDType.ExchResidualFareComponent>();
         }
         return this.exchResidualFareComponent;
     }
 
     /**
      * Gets the value of the originalIssueInfo property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link EMDType.OriginalIssueInfo }
-     *
+     *     
      */
     public EMDType.OriginalIssueInfo getOriginalIssueInfo() {
         return originalIssueInfo;
@@ -1107,11 +1113,11 @@ public class EMDType {
 
     /**
      * Sets the value of the originalIssueInfo property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link EMDType.OriginalIssueInfo }
-     *
+     *     
      */
     public void setOriginalIssueInfo(EMDType.OriginalIssueInfo value) {
         this.originalIssueInfo = value;
@@ -1119,40 +1125,40 @@ public class EMDType {
 
     /**
      * Gets the value of the reissuedFlown property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the reissuedFlown property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getReissuedFlown().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link EMDType.ReissuedFlown }
-     *
-     *
+     * 
+     * 
      */
-    public List<ReissuedFlown> getReissuedFlown() {
+    public List<EMDType.ReissuedFlown> getReissuedFlown() {
         if (reissuedFlown == null) {
-            reissuedFlown = new ArrayList<ReissuedFlown>();
+            reissuedFlown = new ArrayList<EMDType.ReissuedFlown>();
         }
         return this.reissuedFlown;
     }
 
     /**
      * Gets the value of the responseComment property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link FreeTextType }
-     *
+     *     
      */
     public FreeTextType getResponseComment() {
         return responseComment;
@@ -1160,11 +1166,11 @@ public class EMDType {
 
     /**
      * Sets the value of the responseComment property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link FreeTextType }
-     *
+     *     
      */
     public void setResponseComment(FreeTextType value) {
         this.responseComment = value;
@@ -1172,11 +1178,11 @@ public class EMDType {
 
     /**
      * Gets the value of the presentInfo property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link EMDType.PresentInfo }
-     *
+     *     
      */
     public EMDType.PresentInfo getPresentInfo() {
         return presentInfo;
@@ -1184,11 +1190,11 @@ public class EMDType {
 
     /**
      * Sets the value of the presentInfo property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link EMDType.PresentInfo }
-     *
+     *     
      */
     public void setPresentInfo(EMDType.PresentInfo value) {
         this.presentInfo = value;
@@ -1196,11 +1202,11 @@ public class EMDType {
 
     /**
      * Gets the value of the reasonForIssuance property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link EMDType.ReasonForIssuance }
-     *
+     *     
      */
     public EMDType.ReasonForIssuance getReasonForIssuance() {
         return reasonForIssuance;
@@ -1208,11 +1214,11 @@ public class EMDType {
 
     /**
      * Sets the value of the reasonForIssuance property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link EMDType.ReasonForIssuance }
-     *
+     *     
      */
     public void setReasonForIssuance(EMDType.ReasonForIssuance value) {
         this.reasonForIssuance = value;
@@ -1220,11 +1226,11 @@ public class EMDType {
 
     /**
      * Gets the value of the validatingAirline property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link EMDType.ValidatingAirline }
-     *
+     *     
      */
     public EMDType.ValidatingAirline getValidatingAirline() {
         return validatingAirline;
@@ -1232,11 +1238,11 @@ public class EMDType {
 
     /**
      * Sets the value of the validatingAirline property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link EMDType.ValidatingAirline }
-     *
+     *     
      */
     public void setValidatingAirline(EMDType.ValidatingAirline value) {
         this.validatingAirline = value;
@@ -1244,11 +1250,11 @@ public class EMDType {
 
     /**
      * Gets the value of the taxCouponInformation property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link EMDType.TaxCouponInformation }
-     *
+     *     
      */
     public EMDType.TaxCouponInformation getTaxCouponInformation() {
         return taxCouponInformation;
@@ -1256,11 +1262,11 @@ public class EMDType {
 
     /**
      * Sets the value of the taxCouponInformation property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link EMDType.TaxCouponInformation }
-     *
+     *     
      */
     public void setTaxCouponInformation(EMDType.TaxCouponInformation value) {
         this.taxCouponInformation = value;
@@ -1268,7 +1274,7 @@ public class EMDType {
 
     /**
      * Gets the value of the totalFltSegQty property.
-     *
+     * 
      */
     public int getTotalFltSegQty() {
         return totalFltSegQty;
@@ -1276,7 +1282,7 @@ public class EMDType {
 
     /**
      * Sets the value of the totalFltSegQty property.
-     *
+     * 
      */
     public void setTotalFltSegQty(int value) {
         this.totalFltSegQty = value;
@@ -1284,11 +1290,11 @@ public class EMDType {
 
     /**
      * Gets the value of the specificData property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getSpecificData() {
         return specificData;
@@ -1296,11 +1302,11 @@ public class EMDType {
 
     /**
      * Sets the value of the specificData property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setSpecificData(String value) {
         this.specificData = value;
@@ -1308,11 +1314,11 @@ public class EMDType {
 
     /**
      * Gets the value of the taxOnCommissionInd property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link Boolean }
-     *
+     *     
      */
     public Boolean isTaxOnCommissionInd() {
         return taxOnCommissionInd;
@@ -1320,11 +1326,11 @@ public class EMDType {
 
     /**
      * Sets the value of the taxOnCommissionInd property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *
+     *     
      */
     public void setTaxOnCommissionInd(Boolean value) {
         this.taxOnCommissionInd = value;
@@ -1332,11 +1338,11 @@ public class EMDType {
 
     /**
      * Gets the value of the ticketingModeCode property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getTicketingModeCode() {
         return ticketingModeCode;
@@ -1344,11 +1350,11 @@ public class EMDType {
 
     /**
      * Sets the value of the ticketingModeCode property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setTicketingModeCode(String value) {
         this.ticketingModeCode = value;
@@ -1356,11 +1362,11 @@ public class EMDType {
 
     /**
      * Gets the value of the emdType property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getEMDType() {
         return emdType;
@@ -1368,11 +1374,11 @@ public class EMDType {
 
     /**
      * Sets the value of the emdType property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setEMDType(String value) {
         this.emdType = value;
@@ -1380,11 +1386,11 @@ public class EMDType {
 
     /**
      * Gets the value of the quoteInd property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link Boolean }
-     *
+     *     
      */
     public Boolean isQuoteInd() {
         return quoteInd;
@@ -1392,11 +1398,11 @@ public class EMDType {
 
     /**
      * Sets the value of the quoteInd property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *
+     *     
      */
     public void setQuoteInd(Boolean value) {
         this.quoteInd = value;
@@ -1404,11 +1410,11 @@ public class EMDType {
 
     /**
      * Gets the value of the operation property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link ActionType }
-     *
+     *     
      */
     public ActionType getOperation() {
         return operation;
@@ -1416,11 +1422,11 @@ public class EMDType {
 
     /**
      * Sets the value of the operation property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link ActionType }
-     *
+     *     
      */
     public void setOperation(ActionType value) {
         this.operation = value;
@@ -1428,11 +1434,11 @@ public class EMDType {
 
     /**
      * Gets the value of the rph property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getRPH() {
         return rph;
@@ -1440,11 +1446,11 @@ public class EMDType {
 
     /**
      * Sets the value of the rph property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setRPH(String value) {
         this.rph = value;
@@ -1452,11 +1458,11 @@ public class EMDType {
 
     /**
      * Gets the value of the quantity property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link BigInteger }
-     *
+     *     
      */
     public BigInteger getQuantity() {
         return quantity;
@@ -1464,11 +1470,11 @@ public class EMDType {
 
     /**
      * Sets the value of the quantity property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link BigInteger }
-     *
+     *     
      */
     public void setQuantity(BigInteger value) {
         this.quantity = value;
@@ -1477,9 +1483,9 @@ public class EMDType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -1491,8 +1497,8 @@ public class EMDType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
@@ -1512,11 +1518,11 @@ public class EMDType {
 
         /**
          * Gets the value of the purpose property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link PurposeType }
-         *
+         *     
          */
         public PurposeType getPurpose() {
             return purpose;
@@ -1524,11 +1530,11 @@ public class EMDType {
 
         /**
          * Sets the value of the purpose property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link PurposeType }
-         *
+         *     
          */
         public void setPurpose(PurposeType value) {
             this.purpose = value;
@@ -1536,11 +1542,11 @@ public class EMDType {
 
         /**
          * Gets the value of the fareAmountType property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link FareAmountType }
-         *
+         *     
          */
         public FareAmountType getFareAmountType() {
             return fareAmountType;
@@ -1548,11 +1554,11 @@ public class EMDType {
 
         /**
          * Sets the value of the fareAmountType property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link FareAmountType }
-         *
+         *     
          */
         public void setFareAmountType(FareAmountType value) {
             this.fareAmountType = value;
@@ -1560,11 +1566,11 @@ public class EMDType {
 
         /**
          * Gets the value of the amount property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link BigDecimal }
-         *
+         *     
          */
         public BigDecimal getAmount() {
             return amount;
@@ -1572,11 +1578,11 @@ public class EMDType {
 
         /**
          * Sets the value of the amount property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link BigDecimal }
-         *
+         *     
          */
         public void setAmount(BigDecimal value) {
             this.amount = value;
@@ -1584,11 +1590,11 @@ public class EMDType {
 
         /**
          * Gets the value of the currencyCode property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getCurrencyCode() {
             return currencyCode;
@@ -1596,11 +1602,11 @@ public class EMDType {
 
         /**
          * Sets the value of the currencyCode property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setCurrencyCode(String value) {
             this.currencyCode = value;
@@ -1608,11 +1614,11 @@ public class EMDType {
 
         /**
          * Gets the value of the decimalPlaces property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link BigInteger }
-         *
+         *     
          */
         public BigInteger getDecimalPlaces() {
             return decimalPlaces;
@@ -1620,11 +1626,11 @@ public class EMDType {
 
         /**
          * Sets the value of the decimalPlaces property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link BigInteger }
-         *
+         *     
          */
         public void setDecimalPlaces(BigInteger value) {
             this.decimalPlaces = value;
@@ -1635,9 +1641,9 @@ public class EMDType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -1690,8 +1696,8 @@ public class EMDType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -1704,17 +1710,17 @@ public class EMDType {
         @XmlElement(name = "PaymentDetail")
         protected PaymentDetailType paymentDetail;
         @XmlElement(name = "CarrierFee")
-        protected List<CarrierFee> carrierFee;
+        protected List<EMDType.CarrierFeeInfo.CarrierFee> carrierFee;
         @XmlElement(name = "Taxes")
         protected EMDType.CarrierFeeInfo.Taxes taxes;
 
         /**
          * Gets the value of the paymentDetail property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link PaymentDetailType }
-         *
+         *     
          */
         public PaymentDetailType getPaymentDetail() {
             return paymentDetail;
@@ -1722,11 +1728,11 @@ public class EMDType {
 
         /**
          * Sets the value of the paymentDetail property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link PaymentDetailType }
-         *
+         *     
          */
         public void setPaymentDetail(PaymentDetailType value) {
             this.paymentDetail = value;
@@ -1734,40 +1740,40 @@ public class EMDType {
 
         /**
          * Gets the value of the carrierFee property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the carrierFee property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getCarrierFee().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link EMDType.CarrierFeeInfo.CarrierFee }
-         *
-         *
+         * 
+         * 
          */
-        public List<CarrierFee> getCarrierFee() {
+        public List<EMDType.CarrierFeeInfo.CarrierFee> getCarrierFee() {
             if (carrierFee == null) {
-                carrierFee = new ArrayList<CarrierFee>();
+                carrierFee = new ArrayList<EMDType.CarrierFeeInfo.CarrierFee>();
             }
             return this.carrierFee;
         }
 
         /**
          * Gets the value of the taxes property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link EMDType.CarrierFeeInfo.Taxes }
-         *
+         *     
          */
         public EMDType.CarrierFeeInfo.Taxes getTaxes() {
             return taxes;
@@ -1775,11 +1781,11 @@ public class EMDType {
 
         /**
          * Sets the value of the taxes property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link EMDType.CarrierFeeInfo.Taxes }
-         *
+         *     
          */
         public void setTaxes(EMDType.CarrierFeeInfo.Taxes value) {
             this.taxes = value;
@@ -1788,9 +1794,9 @@ public class EMDType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -1821,8 +1827,8 @@ public class EMDType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
@@ -1831,7 +1837,7 @@ public class EMDType {
         public static class CarrierFee {
 
             @XmlElement(name = "FeeAmount", required = true)
-            protected List<FeeAmount> feeAmount;
+            protected List<EMDType.CarrierFeeInfo.CarrierFee.FeeAmount> feeAmount;
             @XmlAttribute(name = "Type", required = true)
             protected String type;
             @XmlAttribute(name = "Number")
@@ -1857,40 +1863,40 @@ public class EMDType {
 
             /**
              * Gets the value of the feeAmount property.
-             *
+             * 
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the feeAmount property.
-             *
+             * 
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getFeeAmount().add(newItem);
              * </pre>
-             *
-             *
+             * 
+             * 
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link EMDType.CarrierFeeInfo.CarrierFee.FeeAmount }
-             *
-             *
+             * 
+             * 
              */
-            public List<FeeAmount> getFeeAmount() {
+            public List<EMDType.CarrierFeeInfo.CarrierFee.FeeAmount> getFeeAmount() {
                 if (feeAmount == null) {
-                    feeAmount = new ArrayList<FeeAmount>();
+                    feeAmount = new ArrayList<EMDType.CarrierFeeInfo.CarrierFee.FeeAmount>();
                 }
                 return this.feeAmount;
             }
 
             /**
              * Gets the value of the type property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getType() {
                 return type;
@@ -1898,11 +1904,11 @@ public class EMDType {
 
             /**
              * Sets the value of the type property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setType(String value) {
                 this.type = value;
@@ -1910,11 +1916,11 @@ public class EMDType {
 
             /**
              * Gets the value of the number property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link Integer }
-             *
+             *     
              */
             public Integer getNumber() {
                 return number;
@@ -1922,11 +1928,11 @@ public class EMDType {
 
             /**
              * Sets the value of the number property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link Integer }
-             *
+             *     
              */
             public void setNumber(Integer value) {
                 this.number = value;
@@ -1934,11 +1940,11 @@ public class EMDType {
 
             /**
              * Gets the value of the tariffNumber property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getTariffNumber() {
                 return tariffNumber;
@@ -1946,11 +1952,11 @@ public class EMDType {
 
             /**
              * Sets the value of the tariffNumber property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setTariffNumber(String value) {
                 this.tariffNumber = value;
@@ -1958,11 +1964,11 @@ public class EMDType {
 
             /**
              * Gets the value of the ruleNumber property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getRuleNumber() {
                 return ruleNumber;
@@ -1970,11 +1976,11 @@ public class EMDType {
 
             /**
              * Sets the value of the ruleNumber property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setRuleNumber(String value) {
                 this.ruleNumber = value;
@@ -1982,11 +1988,11 @@ public class EMDType {
 
             /**
              * Gets the value of the ruleCode property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getRuleCode() {
                 return ruleCode;
@@ -1994,11 +2000,11 @@ public class EMDType {
 
             /**
              * Sets the value of the ruleCode property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setRuleCode(String value) {
                 this.ruleCode = value;
@@ -2006,11 +2012,11 @@ public class EMDType {
 
             /**
              * Gets the value of the fareClassCode property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getFareClassCode() {
                 return fareClassCode;
@@ -2018,11 +2024,11 @@ public class EMDType {
 
             /**
              * Sets the value of the fareClassCode property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setFareClassCode(String value) {
                 this.fareClassCode = value;
@@ -2030,11 +2036,11 @@ public class EMDType {
 
             /**
              * Gets the value of the reportingCode property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getReportingCode() {
                 return reportingCode;
@@ -2042,11 +2048,11 @@ public class EMDType {
 
             /**
              * Sets the value of the reportingCode property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setReportingCode(String value) {
                 this.reportingCode = value;
@@ -2054,11 +2060,11 @@ public class EMDType {
 
             /**
              * Gets the value of the companyShortName property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getCompanyShortName() {
                 return companyShortName;
@@ -2066,11 +2072,11 @@ public class EMDType {
 
             /**
              * Sets the value of the companyShortName property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setCompanyShortName(String value) {
                 this.companyShortName = value;
@@ -2078,11 +2084,11 @@ public class EMDType {
 
             /**
              * Gets the value of the travelSector property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getTravelSector() {
                 return travelSector;
@@ -2090,11 +2096,11 @@ public class EMDType {
 
             /**
              * Sets the value of the travelSector property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setTravelSector(String value) {
                 this.travelSector = value;
@@ -2102,11 +2108,11 @@ public class EMDType {
 
             /**
              * Gets the value of the code property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getCode() {
                 return code;
@@ -2114,11 +2120,11 @@ public class EMDType {
 
             /**
              * Sets the value of the code property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setCode(String value) {
                 this.code = value;
@@ -2126,11 +2132,11 @@ public class EMDType {
 
             /**
              * Gets the value of the codeContext property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getCodeContext() {
                 return codeContext;
@@ -2138,11 +2144,11 @@ public class EMDType {
 
             /**
              * Sets the value of the codeContext property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setCodeContext(String value) {
                 this.codeContext = value;
@@ -2151,9 +2157,9 @@ public class EMDType {
 
             /**
              * <p>Java class for anonymous complex type.
-             *
+             * 
              * <p>The following schema fragment specifies the expected content contained within this class.
-             *
+             * 
              * <pre>
              * &lt;complexType>
              *   &lt;complexContent>
@@ -2166,8 +2172,8 @@ public class EMDType {
              *   &lt;/complexContent>
              * &lt;/complexType>
              * </pre>
-             *
-             *
+             * 
+             * 
              */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "")
@@ -2190,11 +2196,11 @@ public class EMDType {
 
                 /**
                  * Gets the value of the type property.
-                 *
+                 * 
                  * @return
                  *     possible object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public String getType() {
                     return type;
@@ -2202,11 +2208,11 @@ public class EMDType {
 
                 /**
                  * Sets the value of the type property.
-                 *
+                 * 
                  * @param value
                  *     allowed object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public void setType(String value) {
                     this.type = value;
@@ -2214,11 +2220,11 @@ public class EMDType {
 
                 /**
                  * Gets the value of the amount property.
-                 *
+                 * 
                  * @return
                  *     possible object is
                  *     {@link BigDecimal }
-                 *
+                 *     
                  */
                 public BigDecimal getAmount() {
                     return amount;
@@ -2226,11 +2232,11 @@ public class EMDType {
 
                 /**
                  * Sets the value of the amount property.
-                 *
+                 * 
                  * @param value
                  *     allowed object is
                  *     {@link BigDecimal }
-                 *
+                 *     
                  */
                 public void setAmount(BigDecimal value) {
                     this.amount = value;
@@ -2238,25 +2244,25 @@ public class EMDType {
 
                 /**
                  * Gets the value of the applicationCode property.
-                 *
+                 * 
                  * <p>
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
                  * This is why there is not a <CODE>set</CODE> method for the applicationCode property.
-                 *
+                 * 
                  * <p>
                  * For example, to add a new item, do as follows:
                  * <pre>
                  *    getApplicationCode().add(newItem);
                  * </pre>
-                 *
-                 *
+                 * 
+                 * 
                  * <p>
                  * Objects of the following type(s) are allowed in the list
                  * {@link String }
-                 *
-                 *
+                 * 
+                 * 
                  */
                 public List<String> getApplicationCode() {
                     if (applicationCode == null) {
@@ -2267,11 +2273,11 @@ public class EMDType {
 
                 /**
                  * Gets the value of the originCityCode property.
-                 *
+                 * 
                  * @return
                  *     possible object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public String getOriginCityCode() {
                     return originCityCode;
@@ -2279,11 +2285,11 @@ public class EMDType {
 
                 /**
                  * Sets the value of the originCityCode property.
-                 *
+                 * 
                  * @param value
                  *     allowed object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public void setOriginCityCode(String value) {
                     this.originCityCode = value;
@@ -2291,11 +2297,11 @@ public class EMDType {
 
                 /**
                  * Gets the value of the originCodeContext property.
-                 *
+                 * 
                  * @return
                  *     possible object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public String getOriginCodeContext() {
                     return originCodeContext;
@@ -2303,11 +2309,11 @@ public class EMDType {
 
                 /**
                  * Sets the value of the originCodeContext property.
-                 *
+                 * 
                  * @param value
                  *     allowed object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public void setOriginCodeContext(String value) {
                     this.originCodeContext = value;
@@ -2315,11 +2321,11 @@ public class EMDType {
 
                 /**
                  * Gets the value of the destinationCityCode property.
-                 *
+                 * 
                  * @return
                  *     possible object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public String getDestinationCityCode() {
                     return destinationCityCode;
@@ -2327,11 +2333,11 @@ public class EMDType {
 
                 /**
                  * Sets the value of the destinationCityCode property.
-                 *
+                 * 
                  * @param value
                  *     allowed object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public void setDestinationCityCode(String value) {
                     this.destinationCityCode = value;
@@ -2339,11 +2345,11 @@ public class EMDType {
 
                 /**
                  * Gets the value of the destinationCodeContext property.
-                 *
+                 * 
                  * @return
                  *     possible object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public String getDestinationCodeContext() {
                     return destinationCodeContext;
@@ -2351,11 +2357,11 @@ public class EMDType {
 
                 /**
                  * Sets the value of the destinationCodeContext property.
-                 *
+                 * 
                  * @param value
                  *     allowed object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public void setDestinationCodeContext(String value) {
                     this.destinationCodeContext = value;
@@ -2368,9 +2374,9 @@ public class EMDType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -2382,8 +2388,8 @@ public class EMDType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
@@ -2396,25 +2402,25 @@ public class EMDType {
 
             /**
              * Gets the value of the tax property.
-             *
+             * 
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the tax property.
-             *
+             * 
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getTax().add(newItem);
              * </pre>
-             *
-             *
+             * 
+             * 
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link AirTaxType }
-             *
-             *
+             * 
+             * 
              */
             public List<AirTaxType> getTax() {
                 if (tax == null) {
@@ -2430,9 +2436,9 @@ public class EMDType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -2444,8 +2450,8 @@ public class EMDType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
@@ -2465,11 +2471,11 @@ public class EMDType {
 
         /**
          * Gets the value of the type property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getType() {
             return type;
@@ -2477,11 +2483,11 @@ public class EMDType {
 
         /**
          * Sets the value of the type property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setType(String value) {
             this.type = value;
@@ -2489,11 +2495,11 @@ public class EMDType {
 
         /**
          * Gets the value of the percent property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link BigDecimal }
-         *
+         *     
          */
         public BigDecimal getPercent() {
             return percent;
@@ -2501,11 +2507,11 @@ public class EMDType {
 
         /**
          * Sets the value of the percent property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link BigDecimal }
-         *
+         *     
          */
         public void setPercent(BigDecimal value) {
             this.percent = value;
@@ -2513,11 +2519,11 @@ public class EMDType {
 
         /**
          * Gets the value of the amount property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link BigDecimal }
-         *
+         *     
          */
         public BigDecimal getAmount() {
             return amount;
@@ -2525,11 +2531,11 @@ public class EMDType {
 
         /**
          * Sets the value of the amount property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link BigDecimal }
-         *
+         *     
          */
         public void setAmount(BigDecimal value) {
             this.amount = value;
@@ -2537,11 +2543,11 @@ public class EMDType {
 
         /**
          * Gets the value of the currencyCode property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getCurrencyCode() {
             return currencyCode;
@@ -2549,11 +2555,11 @@ public class EMDType {
 
         /**
          * Sets the value of the currencyCode property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setCurrencyCode(String value) {
             this.currencyCode = value;
@@ -2561,11 +2567,11 @@ public class EMDType {
 
         /**
          * Gets the value of the decimalPlaces property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link BigInteger }
-         *
+         *     
          */
         public BigInteger getDecimalPlaces() {
             return decimalPlaces;
@@ -2573,11 +2579,11 @@ public class EMDType {
 
         /**
          * Sets the value of the decimalPlaces property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link BigInteger }
-         *
+         *     
          */
         public void setDecimalPlaces(BigInteger value) {
             this.decimalPlaces = value;
@@ -2588,9 +2594,9 @@ public class EMDType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -2600,8 +2606,8 @@ public class EMDType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
@@ -2654,11 +2660,11 @@ public class EMDType {
 
         /**
          * Gets the value of the shareSynchInd property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getShareSynchInd() {
             return shareSynchInd;
@@ -2666,11 +2672,11 @@ public class EMDType {
 
         /**
          * Sets the value of the shareSynchInd property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setShareSynchInd(String value) {
             this.shareSynchInd = value;
@@ -2678,11 +2684,11 @@ public class EMDType {
 
         /**
          * Gets the value of the shareMarketInd property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getShareMarketInd() {
             return shareMarketInd;
@@ -2690,11 +2696,11 @@ public class EMDType {
 
         /**
          * Sets the value of the shareMarketInd property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setShareMarketInd(String value) {
             this.shareMarketInd = value;
@@ -2702,11 +2708,11 @@ public class EMDType {
 
         /**
          * Gets the value of the programID property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getProgramID() {
             return programID;
@@ -2714,11 +2720,11 @@ public class EMDType {
 
         /**
          * Sets the value of the programID property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setProgramID(String value) {
             this.programID = value;
@@ -2726,11 +2732,11 @@ public class EMDType {
 
         /**
          * Gets the value of the membershipID property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getMembershipID() {
             return membershipID;
@@ -2738,11 +2744,11 @@ public class EMDType {
 
         /**
          * Sets the value of the membershipID property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setMembershipID(String value) {
             this.membershipID = value;
@@ -2750,11 +2756,11 @@ public class EMDType {
 
         /**
          * Gets the value of the travelSector property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getTravelSector() {
             return travelSector;
@@ -2762,11 +2768,11 @@ public class EMDType {
 
         /**
          * Sets the value of the travelSector property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setTravelSector(String value) {
             this.travelSector = value;
@@ -2774,11 +2780,11 @@ public class EMDType {
 
         /**
          * Gets the value of the loyalLevel property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getLoyalLevel() {
             return loyalLevel;
@@ -2786,11 +2792,11 @@ public class EMDType {
 
         /**
          * Sets the value of the loyalLevel property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setLoyalLevel(String value) {
             this.loyalLevel = value;
@@ -2798,11 +2804,11 @@ public class EMDType {
 
         /**
          * Gets the value of the loyalLevelCode property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link Integer }
-         *
+         *     
          */
         public Integer getLoyalLevelCode() {
             return loyalLevelCode;
@@ -2810,11 +2816,11 @@ public class EMDType {
 
         /**
          * Sets the value of the loyalLevelCode property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link Integer }
-         *
+         *     
          */
         public void setLoyalLevelCode(Integer value) {
             this.loyalLevelCode = value;
@@ -2822,11 +2828,11 @@ public class EMDType {
 
         /**
          * Gets the value of the singleVendorInd property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getSingleVendorInd() {
             return singleVendorInd;
@@ -2834,11 +2840,11 @@ public class EMDType {
 
         /**
          * Sets the value of the singleVendorInd property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setSingleVendorInd(String value) {
             this.singleVendorInd = value;
@@ -2846,11 +2852,11 @@ public class EMDType {
 
         /**
          * Gets the value of the signupDate property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link XMLGregorianCalendar }
-         *
+         *     
          */
         public XMLGregorianCalendar getSignupDate() {
             return signupDate;
@@ -2858,11 +2864,11 @@ public class EMDType {
 
         /**
          * Sets the value of the signupDate property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link XMLGregorianCalendar }
-         *
+         *     
          */
         public void setSignupDate(XMLGregorianCalendar value) {
             this.signupDate = value;
@@ -2870,11 +2876,11 @@ public class EMDType {
 
         /**
          * Gets the value of the effectiveDate property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link XMLGregorianCalendar }
-         *
+         *     
          */
         public XMLGregorianCalendar getEffectiveDate() {
             return effectiveDate;
@@ -2882,11 +2888,11 @@ public class EMDType {
 
         /**
          * Sets the value of the effectiveDate property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link XMLGregorianCalendar }
-         *
+         *     
          */
         public void setEffectiveDate(XMLGregorianCalendar value) {
             this.effectiveDate = value;
@@ -2894,11 +2900,11 @@ public class EMDType {
 
         /**
          * Gets the value of the expireDate property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link XMLGregorianCalendar }
-         *
+         *     
          */
         public XMLGregorianCalendar getExpireDate() {
             return expireDate;
@@ -2906,11 +2912,11 @@ public class EMDType {
 
         /**
          * Sets the value of the expireDate property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link XMLGregorianCalendar }
-         *
+         *     
          */
         public void setExpireDate(XMLGregorianCalendar value) {
             this.expireDate = value;
@@ -2918,11 +2924,11 @@ public class EMDType {
 
         /**
          * Gets the value of the expireDateExclusiveIndicator property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link Boolean }
-         *
+         *     
          */
         public Boolean isExpireDateExclusiveIndicator() {
             return expireDateExclusiveIndicator;
@@ -2930,11 +2936,11 @@ public class EMDType {
 
         /**
          * Sets the value of the expireDateExclusiveIndicator property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link Boolean }
-         *
+         *     
          */
         public void setExpireDateExclusiveIndicator(Boolean value) {
             this.expireDateExclusiveIndicator = value;
@@ -2942,11 +2948,11 @@ public class EMDType {
 
         /**
          * Gets the value of the rph property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getRPH() {
             return rph;
@@ -2954,11 +2960,11 @@ public class EMDType {
 
         /**
          * Sets the value of the rph property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setRPH(String value) {
             this.rph = value;
@@ -2966,25 +2972,25 @@ public class EMDType {
 
         /**
          * Gets the value of the vendorCode property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the vendorCode property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getVendorCode().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link String }
-         *
-         *
+         * 
+         * 
          */
         public List<String> getVendorCode() {
             if (vendorCode == null) {
@@ -2995,11 +3001,11 @@ public class EMDType {
 
         /**
          * Gets the value of the primaryLoyaltyIndicator property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link Boolean }
-         *
+         *     
          */
         public Boolean isPrimaryLoyaltyIndicator() {
             return primaryLoyaltyIndicator;
@@ -3007,11 +3013,11 @@ public class EMDType {
 
         /**
          * Sets the value of the primaryLoyaltyIndicator property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link Boolean }
-         *
+         *     
          */
         public void setPrimaryLoyaltyIndicator(Boolean value) {
             this.primaryLoyaltyIndicator = value;
@@ -3019,11 +3025,11 @@ public class EMDType {
 
         /**
          * Gets the value of the allianceLoyaltyLevelName property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getAllianceLoyaltyLevelName() {
             return allianceLoyaltyLevelName;
@@ -3031,11 +3037,11 @@ public class EMDType {
 
         /**
          * Sets the value of the allianceLoyaltyLevelName property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setAllianceLoyaltyLevelName(String value) {
             this.allianceLoyaltyLevelName = value;
@@ -3043,11 +3049,11 @@ public class EMDType {
 
         /**
          * Gets the value of the customerType property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getCustomerType() {
             return customerType;
@@ -3055,11 +3061,11 @@ public class EMDType {
 
         /**
          * Sets the value of the customerType property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setCustomerType(String value) {
             this.customerType = value;
@@ -3067,11 +3073,11 @@ public class EMDType {
 
         /**
          * Gets the value of the customerValue property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getCustomerValue() {
             return customerValue;
@@ -3079,11 +3085,11 @@ public class EMDType {
 
         /**
          * Sets the value of the customerValue property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setCustomerValue(String value) {
             this.customerValue = value;
@@ -3091,11 +3097,11 @@ public class EMDType {
 
         /**
          * Gets the value of the password property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getPassword() {
             return password;
@@ -3103,11 +3109,11 @@ public class EMDType {
 
         /**
          * Sets the value of the password property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setPassword(String value) {
             this.password = value;
@@ -3118,9 +3124,9 @@ public class EMDType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -3130,8 +3136,8 @@ public class EMDType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
@@ -3142,11 +3148,11 @@ public class EMDType {
 
         /**
          * Gets the value of the info property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getInfo() {
             return info;
@@ -3154,11 +3160,11 @@ public class EMDType {
 
         /**
          * Sets the value of the info property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setInfo(String value) {
             this.info = value;
@@ -3169,9 +3175,9 @@ public class EMDType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -3184,8 +3190,8 @@ public class EMDType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
@@ -3207,11 +3213,11 @@ public class EMDType {
 
         /**
          * Gets the value of the purpose property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link PurposeType }
-         *
+         *     
          */
         public PurposeType getPurpose() {
             return purpose;
@@ -3219,11 +3225,11 @@ public class EMDType {
 
         /**
          * Sets the value of the purpose property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link PurposeType }
-         *
+         *     
          */
         public void setPurpose(PurposeType value) {
             this.purpose = value;
@@ -3231,11 +3237,11 @@ public class EMDType {
 
         /**
          * Gets the value of the fareAmountType property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link FareAmountType }
-         *
+         *     
          */
         public FareAmountType getFareAmountType() {
             return fareAmountType;
@@ -3243,11 +3249,11 @@ public class EMDType {
 
         /**
          * Sets the value of the fareAmountType property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link FareAmountType }
-         *
+         *     
          */
         public void setFareAmountType(FareAmountType value) {
             this.fareAmountType = value;
@@ -3255,11 +3261,11 @@ public class EMDType {
 
         /**
          * Gets the value of the bankExchangeRate property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link BigDecimal }
-         *
+         *     
          */
         public BigDecimal getBankExchangeRate() {
             return bankExchangeRate;
@@ -3267,11 +3273,11 @@ public class EMDType {
 
         /**
          * Sets the value of the bankExchangeRate property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link BigDecimal }
-         *
+         *     
          */
         public void setBankExchangeRate(BigDecimal value) {
             this.bankExchangeRate = value;
@@ -3279,11 +3285,11 @@ public class EMDType {
 
         /**
          * Gets the value of the amount property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link BigDecimal }
-         *
+         *     
          */
         public BigDecimal getAmount() {
             return amount;
@@ -3291,11 +3297,11 @@ public class EMDType {
 
         /**
          * Sets the value of the amount property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link BigDecimal }
-         *
+         *     
          */
         public void setAmount(BigDecimal value) {
             this.amount = value;
@@ -3303,11 +3309,11 @@ public class EMDType {
 
         /**
          * Gets the value of the currencyCode property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getCurrencyCode() {
             return currencyCode;
@@ -3315,11 +3321,11 @@ public class EMDType {
 
         /**
          * Sets the value of the currencyCode property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setCurrencyCode(String value) {
             this.currencyCode = value;
@@ -3327,11 +3333,11 @@ public class EMDType {
 
         /**
          * Gets the value of the decimalPlaces property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link BigInteger }
-         *
+         *     
          */
         public BigInteger getDecimalPlaces() {
             return decimalPlaces;
@@ -3339,11 +3345,11 @@ public class EMDType {
 
         /**
          * Sets the value of the decimalPlaces property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link BigInteger }
-         *
+         *     
          */
         public void setDecimalPlaces(BigInteger value) {
             this.decimalPlaces = value;
@@ -3354,9 +3360,9 @@ public class EMDType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -3388,8 +3394,8 @@ public class EMDType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -3407,11 +3413,11 @@ public class EMDType {
 
         /**
          * Gets the value of the taxes property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link EMDType.ExchResidualFareComponent.Taxes }
-         *
+         *     
          */
         public EMDType.ExchResidualFareComponent.Taxes getTaxes() {
             return taxes;
@@ -3419,11 +3425,11 @@ public class EMDType {
 
         /**
          * Sets the value of the taxes property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link EMDType.ExchResidualFareComponent.Taxes }
-         *
+         *     
          */
         public void setTaxes(EMDType.ExchResidualFareComponent.Taxes value) {
             this.taxes = value;
@@ -3431,11 +3437,11 @@ public class EMDType {
 
         /**
          * Gets the value of the totalAmount property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link EMDType.ExchResidualFareComponent.TotalAmount }
-         *
+         *     
          */
         public EMDType.ExchResidualFareComponent.TotalAmount getTotalAmount() {
             return totalAmount;
@@ -3443,11 +3449,11 @@ public class EMDType {
 
         /**
          * Sets the value of the totalAmount property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link EMDType.ExchResidualFareComponent.TotalAmount }
-         *
+         *     
          */
         public void setTotalAmount(EMDType.ExchResidualFareComponent.TotalAmount value) {
             this.totalAmount = value;
@@ -3456,9 +3462,9 @@ public class EMDType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -3470,8 +3476,8 @@ public class EMDType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
@@ -3484,25 +3490,25 @@ public class EMDType {
 
             /**
              * Gets the value of the tax property.
-             *
+             * 
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the tax property.
-             *
+             * 
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getTax().add(newItem);
              * </pre>
-             *
-             *
+             * 
+             * 
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link AirTaxType }
-             *
-             *
+             * 
+             * 
              */
             public List<AirTaxType> getTax() {
                 if (tax == null) {
@@ -3516,9 +3522,9 @@ public class EMDType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -3529,8 +3535,8 @@ public class EMDType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
@@ -3548,11 +3554,11 @@ public class EMDType {
 
             /**
              * Gets the value of the purpose property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link PurposeType }
-             *
+             *     
              */
             public PurposeType getPurpose() {
                 return purpose;
@@ -3560,11 +3566,11 @@ public class EMDType {
 
             /**
              * Sets the value of the purpose property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link PurposeType }
-             *
+             *     
              */
             public void setPurpose(PurposeType value) {
                 this.purpose = value;
@@ -3572,11 +3578,11 @@ public class EMDType {
 
             /**
              * Gets the value of the amount property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link BigDecimal }
-             *
+             *     
              */
             public BigDecimal getAmount() {
                 return amount;
@@ -3584,11 +3590,11 @@ public class EMDType {
 
             /**
              * Sets the value of the amount property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link BigDecimal }
-             *
+             *     
              */
             public void setAmount(BigDecimal value) {
                 this.amount = value;
@@ -3596,11 +3602,11 @@ public class EMDType {
 
             /**
              * Gets the value of the currencyCode property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getCurrencyCode() {
                 return currencyCode;
@@ -3608,11 +3614,11 @@ public class EMDType {
 
             /**
              * Sets the value of the currencyCode property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setCurrencyCode(String value) {
                 this.currencyCode = value;
@@ -3620,11 +3626,11 @@ public class EMDType {
 
             /**
              * Gets the value of the decimalPlaces property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link BigInteger }
-             *
+             *     
              */
             public BigInteger getDecimalPlaces() {
                 return decimalPlaces;
@@ -3632,11 +3638,11 @@ public class EMDType {
 
             /**
              * Sets the value of the decimalPlaces property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link BigInteger }
-             *
+             *     
              */
             public void setDecimalPlaces(BigInteger value) {
                 this.decimalPlaces = value;
@@ -3649,9 +3655,9 @@ public class EMDType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -3672,8 +3678,8 @@ public class EMDType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -3712,25 +3718,25 @@ public class EMDType {
 
         /**
          * Gets the value of the penaltyAmount property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the penaltyAmount property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getPenaltyAmount().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link VoluntaryChangesType }
-         *
-         *
+         * 
+         * 
          */
         public List<VoluntaryChangesType> getPenaltyAmount() {
             if (penaltyAmount == null) {
@@ -3741,11 +3747,11 @@ public class EMDType {
 
         /**
          * Gets the value of the nonEndorsableInd property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link Boolean }
-         *
+         *     
          */
         public Boolean isNonEndorsableInd() {
             return nonEndorsableInd;
@@ -3753,11 +3759,11 @@ public class EMDType {
 
         /**
          * Sets the value of the nonEndorsableInd property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link Boolean }
-         *
+         *     
          */
         public void setNonEndorsableInd(Boolean value) {
             this.nonEndorsableInd = value;
@@ -3765,11 +3771,11 @@ public class EMDType {
 
         /**
          * Gets the value of the nonRefundableInd property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link Boolean }
-         *
+         *     
          */
         public Boolean isNonRefundableInd() {
             return nonRefundableInd;
@@ -3777,11 +3783,11 @@ public class EMDType {
 
         /**
          * Sets the value of the nonRefundableInd property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link Boolean }
-         *
+         *     
          */
         public void setNonRefundableInd(Boolean value) {
             this.nonRefundableInd = value;
@@ -3789,11 +3795,11 @@ public class EMDType {
 
         /**
          * Gets the value of the penaltyRestrictionInd property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link Boolean }
-         *
+         *     
          */
         public Boolean isPenaltyRestrictionInd() {
             return penaltyRestrictionInd;
@@ -3801,11 +3807,11 @@ public class EMDType {
 
         /**
          * Sets the value of the penaltyRestrictionInd property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link Boolean }
-         *
+         *     
          */
         public void setPenaltyRestrictionInd(Boolean value) {
             this.penaltyRestrictionInd = value;
@@ -3813,11 +3819,11 @@ public class EMDType {
 
         /**
          * Gets the value of the presentCreditCardInd property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link Boolean }
-         *
+         *     
          */
         public Boolean isPresentCreditCardInd() {
             return presentCreditCardInd;
@@ -3825,11 +3831,11 @@ public class EMDType {
 
         /**
          * Sets the value of the presentCreditCardInd property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link Boolean }
-         *
+         *     
          */
         public void setPresentCreditCardInd(Boolean value) {
             this.presentCreditCardInd = value;
@@ -3837,11 +3843,11 @@ public class EMDType {
 
         /**
          * Gets the value of the aroundTheWorldFareInd property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link Boolean }
-         *
+         *     
          */
         public Boolean isAroundTheWorldFareInd() {
             return aroundTheWorldFareInd;
@@ -3849,11 +3855,11 @@ public class EMDType {
 
         /**
          * Sets the value of the aroundTheWorldFareInd property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link Boolean }
-         *
+         *     
          */
         public void setAroundTheWorldFareInd(Boolean value) {
             this.aroundTheWorldFareInd = value;
@@ -3861,11 +3867,11 @@ public class EMDType {
 
         /**
          * Gets the value of the nonInterlineableInd property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link Boolean }
-         *
+         *     
          */
         public Boolean isNonInterlineableInd() {
             return nonInterlineableInd;
@@ -3873,11 +3879,11 @@ public class EMDType {
 
         /**
          * Sets the value of the nonInterlineableInd property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link Boolean }
-         *
+         *     
          */
         public void setNonInterlineableInd(Boolean value) {
             this.nonInterlineableInd = value;
@@ -3885,11 +3891,11 @@ public class EMDType {
 
         /**
          * Gets the value of the nonCommissionableInd property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link Boolean }
-         *
+         *     
          */
         public Boolean isNonCommissionableInd() {
             return nonCommissionableInd;
@@ -3897,11 +3903,11 @@ public class EMDType {
 
         /**
          * Sets the value of the nonCommissionableInd property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link Boolean }
-         *
+         *     
          */
         public void setNonCommissionableInd(Boolean value) {
             this.nonCommissionableInd = value;
@@ -3909,11 +3915,11 @@ public class EMDType {
 
         /**
          * Gets the value of the nonReissuableNonExchgInd property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link Boolean }
-         *
+         *     
          */
         public Boolean isNonReissuableNonExchgInd() {
             return nonReissuableNonExchgInd;
@@ -3921,11 +3927,11 @@ public class EMDType {
 
         /**
          * Sets the value of the nonReissuableNonExchgInd property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link Boolean }
-         *
+         *     
          */
         public void setNonReissuableNonExchgInd(Boolean value) {
             this.nonReissuableNonExchgInd = value;
@@ -3933,11 +3939,11 @@ public class EMDType {
 
         /**
          * Gets the value of the companyShortName property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getCompanyShortName() {
             return companyShortName;
@@ -3945,11 +3951,11 @@ public class EMDType {
 
         /**
          * Sets the value of the companyShortName property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setCompanyShortName(String value) {
             this.companyShortName = value;
@@ -3957,11 +3963,11 @@ public class EMDType {
 
         /**
          * Gets the value of the travelSector property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getTravelSector() {
             return travelSector;
@@ -3969,11 +3975,11 @@ public class EMDType {
 
         /**
          * Sets the value of the travelSector property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setTravelSector(String value) {
             this.travelSector = value;
@@ -3981,11 +3987,11 @@ public class EMDType {
 
         /**
          * Gets the value of the code property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getCode() {
             return code;
@@ -3993,11 +3999,11 @@ public class EMDType {
 
         /**
          * Sets the value of the code property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setCode(String value) {
             this.code = value;
@@ -4005,11 +4011,11 @@ public class EMDType {
 
         /**
          * Gets the value of the codeContext property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getCodeContext() {
             return codeContext;
@@ -4017,11 +4023,11 @@ public class EMDType {
 
         /**
          * Sets the value of the codeContext property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setCodeContext(String value) {
             this.codeContext = value;
@@ -4032,9 +4038,9 @@ public class EMDType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -4055,8 +4061,8 @@ public class EMDType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
@@ -4076,11 +4082,11 @@ public class EMDType {
 
         /**
          * Gets the value of the information property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getInformation() {
             return information;
@@ -4088,11 +4094,11 @@ public class EMDType {
 
         /**
          * Sets the value of the information property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setInformation(String value) {
             this.information = value;
@@ -4100,11 +4106,11 @@ public class EMDType {
 
         /**
          * Gets the value of the ticketDocumentNbr property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getTicketDocumentNbr() {
             return ticketDocumentNbr;
@@ -4112,11 +4118,11 @@ public class EMDType {
 
         /**
          * Sets the value of the ticketDocumentNbr property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setTicketDocumentNbr(String value) {
             this.ticketDocumentNbr = value;
@@ -4124,11 +4130,11 @@ public class EMDType {
 
         /**
          * Gets the value of the issuingAgentID property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getIssuingAgentID() {
             return issuingAgentID;
@@ -4136,11 +4142,11 @@ public class EMDType {
 
         /**
          * Sets the value of the issuingAgentID property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setIssuingAgentID(String value) {
             this.issuingAgentID = value;
@@ -4148,11 +4154,11 @@ public class EMDType {
 
         /**
          * Gets the value of the dateOfIssue property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link XMLGregorianCalendar }
-         *
+         *     
          */
         public XMLGregorianCalendar getDateOfIssue() {
             return dateOfIssue;
@@ -4160,11 +4166,11 @@ public class EMDType {
 
         /**
          * Sets the value of the dateOfIssue property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link XMLGregorianCalendar }
-         *
+         *     
          */
         public void setDateOfIssue(XMLGregorianCalendar value) {
             this.dateOfIssue = value;
@@ -4172,11 +4178,11 @@ public class EMDType {
 
         /**
          * Gets the value of the locationCode property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getLocationCode() {
             return locationCode;
@@ -4184,11 +4190,11 @@ public class EMDType {
 
         /**
          * Sets the value of the locationCode property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setLocationCode(String value) {
             this.locationCode = value;
@@ -4199,9 +4205,9 @@ public class EMDType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -4211,8 +4217,8 @@ public class EMDType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
@@ -4229,11 +4235,11 @@ public class EMDType {
 
         /**
          * Gets the value of the originCityCode property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getOriginCityCode() {
             return originCityCode;
@@ -4241,11 +4247,11 @@ public class EMDType {
 
         /**
          * Sets the value of the originCityCode property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setOriginCityCode(String value) {
             this.originCityCode = value;
@@ -4253,11 +4259,11 @@ public class EMDType {
 
         /**
          * Gets the value of the originCodeContext property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getOriginCodeContext() {
             return originCodeContext;
@@ -4265,11 +4271,11 @@ public class EMDType {
 
         /**
          * Sets the value of the originCodeContext property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setOriginCodeContext(String value) {
             this.originCodeContext = value;
@@ -4277,11 +4283,11 @@ public class EMDType {
 
         /**
          * Gets the value of the destinationCityCode property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getDestinationCityCode() {
             return destinationCityCode;
@@ -4289,11 +4295,11 @@ public class EMDType {
 
         /**
          * Sets the value of the destinationCityCode property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setDestinationCityCode(String value) {
             this.destinationCityCode = value;
@@ -4301,11 +4307,11 @@ public class EMDType {
 
         /**
          * Gets the value of the destinationCodeContext property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getDestinationCodeContext() {
             return destinationCodeContext;
@@ -4313,11 +4319,11 @@ public class EMDType {
 
         /**
          * Sets the value of the destinationCodeContext property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setDestinationCodeContext(String value) {
             this.destinationCodeContext = value;
@@ -4328,9 +4334,9 @@ public class EMDType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -4341,8 +4347,8 @@ public class EMDType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
@@ -4355,11 +4361,11 @@ public class EMDType {
 
         /**
          * Gets the value of the to property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getTo() {
             return to;
@@ -4367,11 +4373,11 @@ public class EMDType {
 
         /**
          * Sets the value of the to property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setTo(String value) {
             this.to = value;
@@ -4379,11 +4385,11 @@ public class EMDType {
 
         /**
          * Gets the value of the at property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getAt() {
             return at;
@@ -4391,11 +4397,11 @@ public class EMDType {
 
         /**
          * Sets the value of the at property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setAt(String value) {
             this.at = value;
@@ -4406,9 +4412,9 @@ public class EMDType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -4418,8 +4424,8 @@ public class EMDType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
@@ -4434,11 +4440,11 @@ public class EMDType {
 
         /**
          * Gets the value of the code property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getCode() {
             return code;
@@ -4446,11 +4452,11 @@ public class EMDType {
 
         /**
          * Sets the value of the code property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setCode(String value) {
             this.code = value;
@@ -4458,11 +4464,11 @@ public class EMDType {
 
         /**
          * Gets the value of the subCode property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getSubCode() {
             return subCode;
@@ -4470,11 +4476,11 @@ public class EMDType {
 
         /**
          * Sets the value of the subCode property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setSubCode(String value) {
             this.subCode = value;
@@ -4482,11 +4488,11 @@ public class EMDType {
 
         /**
          * Gets the value of the description property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getDescription() {
             return description;
@@ -4494,11 +4500,11 @@ public class EMDType {
 
         /**
          * Sets the value of the description property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setDescription(String value) {
             this.description = value;
@@ -4509,9 +4515,9 @@ public class EMDType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -4530,8 +4536,8 @@ public class EMDType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -4559,11 +4565,11 @@ public class EMDType {
 
         /**
          * Gets the value of the flightSegmentRPH property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getFlightSegmentRPH() {
             return flightSegmentRPH;
@@ -4571,11 +4577,11 @@ public class EMDType {
 
         /**
          * Sets the value of the flightSegmentRPH property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setFlightSegmentRPH(String value) {
             this.flightSegmentRPH = value;
@@ -4583,7 +4589,7 @@ public class EMDType {
 
         /**
          * Gets the value of the number property.
-         *
+         * 
          */
         public int getNumber() {
             return number;
@@ -4591,7 +4597,7 @@ public class EMDType {
 
         /**
          * Sets the value of the number property.
-         *
+         * 
          */
         public void setNumber(int value) {
             this.number = value;
@@ -4599,11 +4605,11 @@ public class EMDType {
 
         /**
          * Gets the value of the couponItinerarySeqNbr property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link Integer }
-         *
+         *     
          */
         public Integer getCouponItinerarySeqNbr() {
             return couponItinerarySeqNbr;
@@ -4611,11 +4617,11 @@ public class EMDType {
 
         /**
          * Sets the value of the couponItinerarySeqNbr property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link Integer }
-         *
+         *     
          */
         public void setCouponItinerarySeqNbr(Integer value) {
             this.couponItinerarySeqNbr = value;
@@ -4623,11 +4629,11 @@ public class EMDType {
 
         /**
          * Gets the value of the fareBasisCode property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getFareBasisCode() {
             return fareBasisCode;
@@ -4635,11 +4641,11 @@ public class EMDType {
 
         /**
          * Sets the value of the fareBasisCode property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setFareBasisCode(String value) {
             this.fareBasisCode = value;
@@ -4647,11 +4653,11 @@ public class EMDType {
 
         /**
          * Gets the value of the ticketDocumentNbr property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getTicketDocumentNbr() {
             return ticketDocumentNbr;
@@ -4659,11 +4665,11 @@ public class EMDType {
 
         /**
          * Sets the value of the ticketDocumentNbr property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setTicketDocumentNbr(String value) {
             this.ticketDocumentNbr = value;
@@ -4671,11 +4677,11 @@ public class EMDType {
 
         /**
          * Gets the value of the dateOfIssue property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link XMLGregorianCalendar }
-         *
+         *     
          */
         public XMLGregorianCalendar getDateOfIssue() {
             return dateOfIssue;
@@ -4683,11 +4689,11 @@ public class EMDType {
 
         /**
          * Sets the value of the dateOfIssue property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link XMLGregorianCalendar }
-         *
+         *     
          */
         public void setDateOfIssue(XMLGregorianCalendar value) {
             this.dateOfIssue = value;
@@ -4695,11 +4701,11 @@ public class EMDType {
 
         /**
          * Gets the value of the waiverCode property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getWaiverCode() {
             return waiverCode;
@@ -4707,11 +4713,11 @@ public class EMDType {
 
         /**
          * Sets the value of the waiverCode property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setWaiverCode(String value) {
             this.waiverCode = value;
@@ -4719,11 +4725,11 @@ public class EMDType {
 
         /**
          * Gets the value of the ticketDesignatorCode property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getTicketDesignatorCode() {
             return ticketDesignatorCode;
@@ -4731,11 +4737,11 @@ public class EMDType {
 
         /**
          * Sets the value of the ticketDesignatorCode property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setTicketDesignatorCode(String value) {
             this.ticketDesignatorCode = value;
@@ -4746,9 +4752,9 @@ public class EMDType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -4806,8 +4812,8 @@ public class EMDType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -4816,7 +4822,7 @@ public class EMDType {
     public static class TaxCouponInformation {
 
         @XmlElement(name = "TicketDocument", required = true)
-        protected List<TicketDocument> ticketDocument;
+        protected List<EMDType.TaxCouponInformation.TicketDocument> ticketDocument;
         @XmlAttribute(name = "BirthDate")
         @XmlSchemaType(name = "date")
         protected XMLGregorianCalendar birthDate;
@@ -4825,40 +4831,40 @@ public class EMDType {
 
         /**
          * Gets the value of the ticketDocument property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the ticketDocument property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getTicketDocument().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link EMDType.TaxCouponInformation.TicketDocument }
-         *
-         *
+         * 
+         * 
          */
-        public List<TicketDocument> getTicketDocument() {
+        public List<EMDType.TaxCouponInformation.TicketDocument> getTicketDocument() {
             if (ticketDocument == null) {
-                ticketDocument = new ArrayList<TicketDocument>();
+                ticketDocument = new ArrayList<EMDType.TaxCouponInformation.TicketDocument>();
             }
             return this.ticketDocument;
         }
 
         /**
          * Gets the value of the birthDate property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link XMLGregorianCalendar }
-         *
+         *     
          */
         public XMLGregorianCalendar getBirthDate() {
             return birthDate;
@@ -4866,11 +4872,11 @@ public class EMDType {
 
         /**
          * Sets the value of the birthDate property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link XMLGregorianCalendar }
-         *
+         *     
          */
         public void setBirthDate(XMLGregorianCalendar value) {
             this.birthDate = value;
@@ -4878,11 +4884,11 @@ public class EMDType {
 
         /**
          * Gets the value of the journeyTurnaroundCityCode property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getJourneyTurnaroundCityCode() {
             return journeyTurnaroundCityCode;
@@ -4890,11 +4896,11 @@ public class EMDType {
 
         /**
          * Sets the value of the journeyTurnaroundCityCode property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setJourneyTurnaroundCityCode(String value) {
             this.journeyTurnaroundCityCode = value;
@@ -4903,9 +4909,9 @@ public class EMDType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -4951,8 +4957,8 @@ public class EMDType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
@@ -4961,46 +4967,46 @@ public class EMDType {
         public static class TicketDocument {
 
             @XmlElement(name = "CouponNumber", required = true)
-            protected List<CouponNumber> couponNumber;
+            protected List<EMDType.TaxCouponInformation.TicketDocument.CouponNumber> couponNumber;
             @XmlAttribute(name = "TicketDocumentNbr", required = true)
             protected String ticketDocumentNbr;
 
             /**
              * Gets the value of the couponNumber property.
-             *
+             * 
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the couponNumber property.
-             *
+             * 
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getCouponNumber().add(newItem);
              * </pre>
-             *
-             *
+             * 
+             * 
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link EMDType.TaxCouponInformation.TicketDocument.CouponNumber }
-             *
-             *
+             * 
+             * 
              */
-            public List<CouponNumber> getCouponNumber() {
+            public List<EMDType.TaxCouponInformation.TicketDocument.CouponNumber> getCouponNumber() {
                 if (couponNumber == null) {
-                    couponNumber = new ArrayList<CouponNumber>();
+                    couponNumber = new ArrayList<EMDType.TaxCouponInformation.TicketDocument.CouponNumber>();
                 }
                 return this.couponNumber;
             }
 
             /**
              * Gets the value of the ticketDocumentNbr property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getTicketDocumentNbr() {
                 return ticketDocumentNbr;
@@ -5008,11 +5014,11 @@ public class EMDType {
 
             /**
              * Sets the value of the ticketDocumentNbr property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setTicketDocumentNbr(String value) {
                 this.ticketDocumentNbr = value;
@@ -5021,9 +5027,9 @@ public class EMDType {
 
             /**
              * <p>Java class for anonymous complex type.
-             *
+             * 
              * <p>The following schema fragment specifies the expected content contained within this class.
-             *
+             * 
              * <pre>
              * &lt;complexType>
              *   &lt;complexContent>
@@ -5058,8 +5064,8 @@ public class EMDType {
              *   &lt;/complexContent>
              * &lt;/complexType>
              * </pre>
-             *
-             *
+             * 
+             * 
              */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "", propOrder = {
@@ -5074,17 +5080,17 @@ public class EMDType {
                 @XmlElement(name = "Tax")
                 protected List<AirTaxType> tax;
                 @XmlElement(name = "UnticketedPointInfo")
-                protected List<UnticketedPointInfo> unticketedPointInfo;
+                protected List<EMDType.TaxCouponInformation.TicketDocument.CouponNumber.UnticketedPointInfo> unticketedPointInfo;
                 @XmlAttribute(name = "Number", required = true)
                 protected int number;
 
                 /**
                  * Gets the value of the taxCouponInfo property.
-                 *
+                 * 
                  * @return
                  *     possible object is
                  *     {@link EMDType.TaxCouponInformation.TicketDocument.CouponNumber.TaxCouponInfo }
-                 *
+                 *     
                  */
                 public EMDType.TaxCouponInformation.TicketDocument.CouponNumber.TaxCouponInfo getTaxCouponInfo() {
                     return taxCouponInfo;
@@ -5092,11 +5098,11 @@ public class EMDType {
 
                 /**
                  * Sets the value of the taxCouponInfo property.
-                 *
+                 * 
                  * @param value
                  *     allowed object is
                  *     {@link EMDType.TaxCouponInformation.TicketDocument.CouponNumber.TaxCouponInfo }
-                 *
+                 *     
                  */
                 public void setTaxCouponInfo(EMDType.TaxCouponInformation.TicketDocument.CouponNumber.TaxCouponInfo value) {
                     this.taxCouponInfo = value;
@@ -5104,25 +5110,25 @@ public class EMDType {
 
                 /**
                  * Gets the value of the tax property.
-                 *
+                 * 
                  * <p>
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
                  * This is why there is not a <CODE>set</CODE> method for the tax property.
-                 *
+                 * 
                  * <p>
                  * For example, to add a new item, do as follows:
                  * <pre>
                  *    getTax().add(newItem);
                  * </pre>
-                 *
-                 *
+                 * 
+                 * 
                  * <p>
                  * Objects of the following type(s) are allowed in the list
                  * {@link AirTaxType }
-                 *
-                 *
+                 * 
+                 * 
                  */
                 public List<AirTaxType> getTax() {
                     if (tax == null) {
@@ -5133,36 +5139,36 @@ public class EMDType {
 
                 /**
                  * Gets the value of the unticketedPointInfo property.
-                 *
+                 * 
                  * <p>
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
                  * This is why there is not a <CODE>set</CODE> method for the unticketedPointInfo property.
-                 *
+                 * 
                  * <p>
                  * For example, to add a new item, do as follows:
                  * <pre>
                  *    getUnticketedPointInfo().add(newItem);
                  * </pre>
-                 *
-                 *
+                 * 
+                 * 
                  * <p>
                  * Objects of the following type(s) are allowed in the list
                  * {@link EMDType.TaxCouponInformation.TicketDocument.CouponNumber.UnticketedPointInfo }
-                 *
-                 *
+                 * 
+                 * 
                  */
-                public List<UnticketedPointInfo> getUnticketedPointInfo() {
+                public List<EMDType.TaxCouponInformation.TicketDocument.CouponNumber.UnticketedPointInfo> getUnticketedPointInfo() {
                     if (unticketedPointInfo == null) {
-                        unticketedPointInfo = new ArrayList<UnticketedPointInfo>();
+                        unticketedPointInfo = new ArrayList<EMDType.TaxCouponInformation.TicketDocument.CouponNumber.UnticketedPointInfo>();
                     }
                     return this.unticketedPointInfo;
                 }
 
                 /**
                  * Gets the value of the number property.
-                 *
+                 * 
                  */
                 public int getNumber() {
                     return number;
@@ -5170,7 +5176,7 @@ public class EMDType {
 
                 /**
                  * Sets the value of the number property.
-                 *
+                 * 
                  */
                 public void setNumber(int value) {
                     this.number = value;
@@ -5179,9 +5185,9 @@ public class EMDType {
 
                 /**
                  * <p>Java class for anonymous complex type.
-                 *
+                 * 
                  * <p>The following schema fragment specifies the expected content contained within this class.
-                 *
+                 * 
                  * <pre>
                  * &lt;complexType>
                  *   &lt;complexContent>
@@ -5192,8 +5198,8 @@ public class EMDType {
                  *   &lt;/complexContent>
                  * &lt;/complexType>
                  * </pre>
-                 *
-                 *
+                 * 
+                 * 
                  */
                 @XmlAccessorType(XmlAccessType.FIELD)
                 @XmlType(name = "")
@@ -5206,11 +5212,11 @@ public class EMDType {
 
                     /**
                      * Gets the value of the cabin property.
-                     *
+                     * 
                      * @return
                      *     possible object is
                      *     {@link CabinType }
-                     *
+                     *     
                      */
                     public CabinType getCabin() {
                         return cabin;
@@ -5218,11 +5224,11 @@ public class EMDType {
 
                     /**
                      * Sets the value of the cabin property.
-                     *
+                     * 
                      * @param value
                      *     allowed object is
                      *     {@link CabinType }
-                     *
+                     *     
                      */
                     public void setCabin(CabinType value) {
                         this.cabin = value;
@@ -5230,11 +5236,11 @@ public class EMDType {
 
                     /**
                      * Gets the value of the airEquipType property.
-                     *
+                     * 
                      * @return
                      *     possible object is
                      *     {@link String }
-                     *
+                     *     
                      */
                     public String getAirEquipType() {
                         return airEquipType;
@@ -5242,11 +5248,11 @@ public class EMDType {
 
                     /**
                      * Sets the value of the airEquipType property.
-                     *
+                     * 
                      * @param value
                      *     allowed object is
                      *     {@link String }
-                     *
+                     *     
                      */
                     public void setAirEquipType(String value) {
                         this.airEquipType = value;
@@ -5257,9 +5263,9 @@ public class EMDType {
 
                 /**
                  * <p>Java class for anonymous complex type.
-                 *
+                 * 
                  * <p>The following schema fragment specifies the expected content contained within this class.
-                 *
+                 * 
                  * <pre>
                  * &lt;complexType>
                  *   &lt;complexContent>
@@ -5272,8 +5278,8 @@ public class EMDType {
                  *   &lt;/complexContent>
                  * &lt;/complexType>
                  * </pre>
-                 *
-                 *
+                 * 
+                 * 
                  */
                 @XmlAccessorType(XmlAccessType.FIELD)
                 @XmlType(name = "")
@@ -5290,11 +5296,11 @@ public class EMDType {
 
                     /**
                      * Gets the value of the cityAirportCode property.
-                     *
+                     * 
                      * @return
                      *     possible object is
                      *     {@link String }
-                     *
+                     *     
                      */
                     public String getCityAirportCode() {
                         return cityAirportCode;
@@ -5302,11 +5308,11 @@ public class EMDType {
 
                     /**
                      * Sets the value of the cityAirportCode property.
-                     *
+                     * 
                      * @param value
                      *     allowed object is
                      *     {@link String }
-                     *
+                     *     
                      */
                     public void setCityAirportCode(String value) {
                         this.cityAirportCode = value;
@@ -5314,11 +5320,11 @@ public class EMDType {
 
                     /**
                      * Gets the value of the arrivalDate property.
-                     *
+                     * 
                      * @return
                      *     possible object is
                      *     {@link String }
-                     *
+                     *     
                      */
                     public String getArrivalDate() {
                         return arrivalDate;
@@ -5326,11 +5332,11 @@ public class EMDType {
 
                     /**
                      * Sets the value of the arrivalDate property.
-                     *
+                     * 
                      * @param value
                      *     allowed object is
                      *     {@link String }
-                     *
+                     *     
                      */
                     public void setArrivalDate(String value) {
                         this.arrivalDate = value;
@@ -5338,11 +5344,11 @@ public class EMDType {
 
                     /**
                      * Gets the value of the departureDate property.
-                     *
+                     * 
                      * @return
                      *     possible object is
                      *     {@link String }
-                     *
+                     *     
                      */
                     public String getDepartureDate() {
                         return departureDate;
@@ -5350,11 +5356,11 @@ public class EMDType {
 
                     /**
                      * Sets the value of the departureDate property.
-                     *
+                     * 
                      * @param value
                      *     allowed object is
                      *     {@link String }
-                     *
+                     *     
                      */
                     public void setDepartureDate(String value) {
                         this.departureDate = value;
@@ -5362,11 +5368,11 @@ public class EMDType {
 
                     /**
                      * Gets the value of the airEquipType property.
-                     *
+                     * 
                      * @return
                      *     possible object is
                      *     {@link String }
-                     *
+                     *     
                      */
                     public String getAirEquipType() {
                         return airEquipType;
@@ -5374,11 +5380,11 @@ public class EMDType {
 
                     /**
                      * Sets the value of the airEquipType property.
-                     *
+                     * 
                      * @param value
                      *     allowed object is
                      *     {@link String }
-                     *
+                     *     
                      */
                     public void setAirEquipType(String value) {
                         this.airEquipType = value;
@@ -5395,9 +5401,9 @@ public class EMDType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -5416,8 +5422,8 @@ public class EMDType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -5426,33 +5432,33 @@ public class EMDType {
     public static class Taxes {
 
         @XmlElement(name = "Tax", required = true)
-        protected List<Tax> tax;
+        protected List<EMDType.Taxes.Tax> tax;
 
         /**
          * Gets the value of the tax property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the tax property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getTax().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link EMDType.Taxes.Tax }
-         *
-         *
+         * 
+         * 
          */
-        public List<Tax> getTax() {
+        public List<EMDType.Taxes.Tax> getTax() {
             if (tax == null) {
-                tax = new ArrayList<Tax>();
+                tax = new ArrayList<EMDType.Taxes.Tax>();
             }
             return this.tax;
         }
@@ -5460,9 +5466,9 @@ public class EMDType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -5471,8 +5477,8 @@ public class EMDType {
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
@@ -5488,9 +5494,9 @@ public class EMDType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -5606,8 +5612,8 @@ public class EMDType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -5616,7 +5622,7 @@ public class EMDType {
     public static class TicketDocument {
 
         @XmlElement(name = "CouponInfo", required = true)
-        protected List<CouponInfo> couponInfo;
+        protected List<EMDType.TicketDocument.CouponInfo> couponInfo;
         @XmlAttribute(name = "TicketDocumentNbr", required = true)
         protected String ticketDocumentNbr;
         @XmlAttribute(name = "Type")
@@ -5642,40 +5648,40 @@ public class EMDType {
 
         /**
          * Gets the value of the couponInfo property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the couponInfo property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getCouponInfo().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link EMDType.TicketDocument.CouponInfo }
-         *
-         *
+         * 
+         * 
          */
-        public List<CouponInfo> getCouponInfo() {
+        public List<EMDType.TicketDocument.CouponInfo> getCouponInfo() {
             if (couponInfo == null) {
-                couponInfo = new ArrayList<CouponInfo>();
+                couponInfo = new ArrayList<EMDType.TicketDocument.CouponInfo>();
             }
             return this.couponInfo;
         }
 
         /**
          * Gets the value of the ticketDocumentNbr property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getTicketDocumentNbr() {
             return ticketDocumentNbr;
@@ -5683,11 +5689,11 @@ public class EMDType {
 
         /**
          * Sets the value of the ticketDocumentNbr property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setTicketDocumentNbr(String value) {
             this.ticketDocumentNbr = value;
@@ -5695,11 +5701,11 @@ public class EMDType {
 
         /**
          * Gets the value of the type property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getType() {
             return type;
@@ -5707,11 +5713,11 @@ public class EMDType {
 
         /**
          * Sets the value of the type property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setType(String value) {
             this.type = value;
@@ -5719,11 +5725,11 @@ public class EMDType {
 
         /**
          * Gets the value of the primaryDocInd property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link Boolean }
-         *
+         *     
          */
         public Boolean isPrimaryDocInd() {
             return primaryDocInd;
@@ -5731,11 +5737,11 @@ public class EMDType {
 
         /**
          * Sets the value of the primaryDocInd property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link Boolean }
-         *
+         *     
          */
         public void setPrimaryDocInd(Boolean value) {
             this.primaryDocInd = value;
@@ -5743,11 +5749,11 @@ public class EMDType {
 
         /**
          * Gets the value of the inConnectionDocNbr property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getInConnectionDocNbr() {
             return inConnectionDocNbr;
@@ -5755,11 +5761,11 @@ public class EMDType {
 
         /**
          * Sets the value of the inConnectionDocNbr property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setInConnectionDocNbr(String value) {
             this.inConnectionDocNbr = value;
@@ -5767,11 +5773,11 @@ public class EMDType {
 
         /**
          * Gets the value of the dateOfIssue property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link XMLGregorianCalendar }
-         *
+         *     
          */
         public XMLGregorianCalendar getDateOfIssue() {
             return dateOfIssue;
@@ -5779,11 +5785,11 @@ public class EMDType {
 
         /**
          * Sets the value of the dateOfIssue property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link XMLGregorianCalendar }
-         *
+         *     
          */
         public void setDateOfIssue(XMLGregorianCalendar value) {
             this.dateOfIssue = value;
@@ -5791,11 +5797,11 @@ public class EMDType {
 
         /**
          * Gets the value of the exchangeTktNbrInd property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link Boolean }
-         *
+         *     
          */
         public Boolean isExchangeTktNbrInd() {
             return exchangeTktNbrInd;
@@ -5803,11 +5809,11 @@ public class EMDType {
 
         /**
          * Sets the value of the exchangeTktNbrInd property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link Boolean }
-         *
+         *     
          */
         public void setExchangeTktNbrInd(Boolean value) {
             this.exchangeTktNbrInd = value;
@@ -5815,11 +5821,11 @@ public class EMDType {
 
         /**
          * Gets the value of the companyShortName property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getCompanyShortName() {
             return companyShortName;
@@ -5827,11 +5833,11 @@ public class EMDType {
 
         /**
          * Sets the value of the companyShortName property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setCompanyShortName(String value) {
             this.companyShortName = value;
@@ -5839,11 +5845,11 @@ public class EMDType {
 
         /**
          * Gets the value of the travelSector property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getTravelSector() {
             return travelSector;
@@ -5851,11 +5857,11 @@ public class EMDType {
 
         /**
          * Sets the value of the travelSector property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setTravelSector(String value) {
             this.travelSector = value;
@@ -5863,11 +5869,11 @@ public class EMDType {
 
         /**
          * Gets the value of the code property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getCode() {
             return code;
@@ -5875,11 +5881,11 @@ public class EMDType {
 
         /**
          * Sets the value of the code property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setCode(String value) {
             this.code = value;
@@ -5887,11 +5893,11 @@ public class EMDType {
 
         /**
          * Gets the value of the codeContext property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getCodeContext() {
             return codeContext;
@@ -5899,11 +5905,11 @@ public class EMDType {
 
         /**
          * Sets the value of the codeContext property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setCodeContext(String value) {
             this.codeContext = value;
@@ -5912,9 +5918,9 @@ public class EMDType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -6006,8 +6012,8 @@ public class EMDType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
@@ -6086,11 +6092,11 @@ public class EMDType {
 
             /**
              * Gets the value of the soldFlightSegmentRPH property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getSoldFlightSegmentRPH() {
                 return soldFlightSegmentRPH;
@@ -6098,11 +6104,11 @@ public class EMDType {
 
             /**
              * Sets the value of the soldFlightSegmentRPH property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setSoldFlightSegmentRPH(String value) {
                 this.soldFlightSegmentRPH = value;
@@ -6110,11 +6116,11 @@ public class EMDType {
 
             /**
              * Gets the value of the checkedInAirlineRPH property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getCheckedInAirlineRPH() {
                 return checkedInAirlineRPH;
@@ -6122,11 +6128,11 @@ public class EMDType {
 
             /**
              * Sets the value of the checkedInAirlineRPH property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setCheckedInAirlineRPH(String value) {
                 this.checkedInAirlineRPH = value;
@@ -6134,11 +6140,11 @@ public class EMDType {
 
             /**
              * Gets the value of the flownAirlineSegmentRPH property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getFlownAirlineSegmentRPH() {
                 return flownAirlineSegmentRPH;
@@ -6146,11 +6152,11 @@ public class EMDType {
 
             /**
              * Sets the value of the flownAirlineSegmentRPH property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setFlownAirlineSegmentRPH(String value) {
                 this.flownAirlineSegmentRPH = value;
@@ -6158,11 +6164,11 @@ public class EMDType {
 
             /**
              * Gets the value of the excessBaggage property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link EMDType.TicketDocument.CouponInfo.ExcessBaggage }
-             *
+             *     
              */
             public EMDType.TicketDocument.CouponInfo.ExcessBaggage getExcessBaggage() {
                 return excessBaggage;
@@ -6170,11 +6176,11 @@ public class EMDType {
 
             /**
              * Sets the value of the excessBaggage property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link EMDType.TicketDocument.CouponInfo.ExcessBaggage }
-             *
+             *     
              */
             public void setExcessBaggage(EMDType.TicketDocument.CouponInfo.ExcessBaggage value) {
                 this.excessBaggage = value;
@@ -6182,11 +6188,11 @@ public class EMDType {
 
             /**
              * Gets the value of the presentInfo property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link EMDType.TicketDocument.CouponInfo.PresentInfo }
-             *
+             *     
              */
             public EMDType.TicketDocument.CouponInfo.PresentInfo getPresentInfo() {
                 return presentInfo;
@@ -6194,11 +6200,11 @@ public class EMDType {
 
             /**
              * Sets the value of the presentInfo property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link EMDType.TicketDocument.CouponInfo.PresentInfo }
-             *
+             *     
              */
             public void setPresentInfo(EMDType.TicketDocument.CouponInfo.PresentInfo value) {
                 this.presentInfo = value;
@@ -6206,11 +6212,11 @@ public class EMDType {
 
             /**
              * Gets the value of the reasonForIssuance property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link EMDType.TicketDocument.CouponInfo.ReasonForIssuance }
-             *
+             *     
              */
             public EMDType.TicketDocument.CouponInfo.ReasonForIssuance getReasonForIssuance() {
                 return reasonForIssuance;
@@ -6218,11 +6224,11 @@ public class EMDType {
 
             /**
              * Sets the value of the reasonForIssuance property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link EMDType.TicketDocument.CouponInfo.ReasonForIssuance }
-             *
+             *     
              */
             public void setReasonForIssuance(EMDType.TicketDocument.CouponInfo.ReasonForIssuance value) {
                 this.reasonForIssuance = value;
@@ -6230,11 +6236,11 @@ public class EMDType {
 
             /**
              * Gets the value of the validatingAirline property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link EMDType.TicketDocument.CouponInfo.ValidatingAirline }
-             *
+             *     
              */
             public EMDType.TicketDocument.CouponInfo.ValidatingAirline getValidatingAirline() {
                 return validatingAirline;
@@ -6242,11 +6248,11 @@ public class EMDType {
 
             /**
              * Sets the value of the validatingAirline property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link EMDType.TicketDocument.CouponInfo.ValidatingAirline }
-             *
+             *     
              */
             public void setValidatingAirline(EMDType.TicketDocument.CouponInfo.ValidatingAirline value) {
                 this.validatingAirline = value;
@@ -6254,11 +6260,11 @@ public class EMDType {
 
             /**
              * Gets the value of the filedFeeInfo property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link EMDType.TicketDocument.CouponInfo.FiledFeeInfo }
-             *
+             *     
              */
             public EMDType.TicketDocument.CouponInfo.FiledFeeInfo getFiledFeeInfo() {
                 return filedFeeInfo;
@@ -6266,11 +6272,11 @@ public class EMDType {
 
             /**
              * Sets the value of the filedFeeInfo property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link EMDType.TicketDocument.CouponInfo.FiledFeeInfo }
-             *
+             *     
              */
             public void setFiledFeeInfo(EMDType.TicketDocument.CouponInfo.FiledFeeInfo value) {
                 this.filedFeeInfo = value;

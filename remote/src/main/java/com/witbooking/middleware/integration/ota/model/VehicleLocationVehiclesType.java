@@ -8,9 +8,13 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -74,15 +78,15 @@ public class VehicleLocationVehiclesType {
     @XmlElement(name = "VehicleInfos")
     protected VehicleLocationVehiclesType.VehicleInfos vehicleInfos;
     @XmlElement(name = "Vehicle")
-    protected List<Vehicle> vehicle;
+    protected List<VehicleLocationVehiclesType.Vehicle> vehicle;
 
     /**
      * Gets the value of the vehicleInfos property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleLocationVehiclesType.VehicleInfos }
-     *
+     *     
      */
     public VehicleLocationVehiclesType.VehicleInfos getVehicleInfos() {
         return vehicleInfos;
@@ -90,11 +94,11 @@ public class VehicleLocationVehiclesType {
 
     /**
      * Sets the value of the vehicleInfos property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleLocationVehiclesType.VehicleInfos }
-     *
+     *     
      */
     public void setVehicleInfos(VehicleLocationVehiclesType.VehicleInfos value) {
         this.vehicleInfos = value;
@@ -102,29 +106,29 @@ public class VehicleLocationVehiclesType {
 
     /**
      * Gets the value of the vehicle property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the vehicle property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getVehicle().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link VehicleLocationVehiclesType.Vehicle }
-     *
-     *
+     * 
+     * 
      */
-    public List<Vehicle> getVehicle() {
+    public List<VehicleLocationVehiclesType.Vehicle> getVehicle() {
         if (vehicle == null) {
-            vehicle = new ArrayList<Vehicle>();
+            vehicle = new ArrayList<VehicleLocationVehiclesType.Vehicle>();
         }
         return this.vehicle;
     }
@@ -132,9 +136,9 @@ public class VehicleLocationVehiclesType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -149,8 +153,8 @@ public class VehicleLocationVehiclesType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -171,25 +175,25 @@ public class VehicleLocationVehiclesType {
 
         /**
          * Gets the value of the text property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the text property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getText().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link FormattedTextType }
-         *
-         *
+         * 
+         * 
          */
         public List<FormattedTextType> getText() {
             if (text == null) {
@@ -200,11 +204,11 @@ public class VehicleLocationVehiclesType {
 
         /**
          * Gets the value of the isConfirmableInd property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link Boolean }
-         *
+         *     
          */
         public Boolean isIsConfirmableInd() {
             return isConfirmableInd;
@@ -212,11 +216,11 @@ public class VehicleLocationVehiclesType {
 
         /**
          * Sets the value of the isConfirmableInd property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link Boolean }
-         *
+         *     
          */
         public void setIsConfirmableInd(Boolean value) {
             this.isConfirmableInd = value;
@@ -224,11 +228,11 @@ public class VehicleLocationVehiclesType {
 
         /**
          * Gets the value of the distanceUnit property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link DistanceUnitNameType }
-         *
+         *     
          */
         public DistanceUnitNameType getDistanceUnit() {
             return distanceUnit;
@@ -236,11 +240,11 @@ public class VehicleLocationVehiclesType {
 
         /**
          * Sets the value of the distanceUnit property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link DistanceUnitNameType }
-         *
+         *     
          */
         public void setDistanceUnit(DistanceUnitNameType value) {
             this.distanceUnit = value;
@@ -248,11 +252,11 @@ public class VehicleLocationVehiclesType {
 
         /**
          * Gets the value of the distancePerFuelUnit property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link Integer }
-         *
+         *     
          */
         public Integer getDistancePerFuelUnit() {
             return distancePerFuelUnit;
@@ -260,11 +264,11 @@ public class VehicleLocationVehiclesType {
 
         /**
          * Sets the value of the distancePerFuelUnit property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link Integer }
-         *
+         *     
          */
         public void setDistancePerFuelUnit(Integer value) {
             this.distancePerFuelUnit = value;
@@ -275,9 +279,9 @@ public class VehicleLocationVehiclesType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -297,8 +301,8 @@ public class VehicleLocationVehiclesType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -307,33 +311,33 @@ public class VehicleLocationVehiclesType {
     public static class VehicleInfos {
 
         @XmlElement(name = "VehicleInfo", required = true)
-        protected List<VehicleInfo> vehicleInfo;
+        protected List<VehicleLocationVehiclesType.VehicleInfos.VehicleInfo> vehicleInfo;
 
         /**
          * Gets the value of the vehicleInfo property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the vehicleInfo property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getVehicleInfo().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link VehicleLocationVehiclesType.VehicleInfos.VehicleInfo }
-         *
-         *
+         * 
+         * 
          */
-        public List<VehicleInfo> getVehicleInfo() {
+        public List<VehicleLocationVehiclesType.VehicleInfos.VehicleInfo> getVehicleInfo() {
             if (vehicleInfo == null) {
-                vehicleInfo = new ArrayList<VehicleInfo>();
+                vehicleInfo = new ArrayList<VehicleLocationVehiclesType.VehicleInfos.VehicleInfo>();
             }
             return this.vehicleInfo;
         }

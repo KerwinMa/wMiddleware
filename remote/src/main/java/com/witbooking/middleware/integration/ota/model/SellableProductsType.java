@@ -8,11 +8,16 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.XmlValue;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -108,33 +113,33 @@ import java.util.List;
 public class SellableProductsType {
 
     @XmlElement(name = "SellableProduct", required = true)
-    protected List<SellableProduct> sellableProduct;
+    protected List<SellableProductsType.SellableProduct> sellableProduct;
 
     /**
      * Gets the value of the sellableProduct property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the sellableProduct property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getSellableProduct().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link SellableProductsType.SellableProduct }
-     *
-     *
+     * 
+     * 
      */
-    public List<SellableProduct> getSellableProduct() {
+    public List<SellableProductsType.SellableProduct> getSellableProduct() {
         if (sellableProduct == null) {
-            sellableProduct = new ArrayList<SellableProduct>();
+            sellableProduct = new ArrayList<SellableProductsType.SellableProduct>();
         }
         return this.sellableProduct;
     }
@@ -142,9 +147,9 @@ public class SellableProductsType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -213,8 +218,8 @@ public class SellableProductsType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -269,11 +274,11 @@ public class SellableProductsType {
 
         /**
          * Gets the value of the destinationSystemCodes property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link SellableProductsType.SellableProduct.DestinationSystemCodes }
-         *
+         *     
          */
         public SellableProductsType.SellableProduct.DestinationSystemCodes getDestinationSystemCodes() {
             return destinationSystemCodes;
@@ -281,11 +286,11 @@ public class SellableProductsType {
 
         /**
          * Sets the value of the destinationSystemCodes property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link SellableProductsType.SellableProduct.DestinationSystemCodes }
-         *
+         *     
          */
         public void setDestinationSystemCodes(SellableProductsType.SellableProduct.DestinationSystemCodes value) {
             this.destinationSystemCodes = value;
@@ -293,11 +298,11 @@ public class SellableProductsType {
 
         /**
          * Gets the value of the guestRoom property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link GuestRoomType }
-         *
+         *     
          */
         public GuestRoomType getGuestRoom() {
             return guestRoom;
@@ -305,11 +310,11 @@ public class SellableProductsType {
 
         /**
          * Sets the value of the guestRoom property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link GuestRoomType }
-         *
+         *     
          */
         public void setGuestRoom(GuestRoomType value) {
             this.guestRoom = value;
@@ -317,11 +322,11 @@ public class SellableProductsType {
 
         /**
          * Gets the value of the meetingRooms property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link MeetingRoomsType }
-         *
+         *     
          */
         public MeetingRoomsType getMeetingRooms() {
             return meetingRooms;
@@ -329,11 +334,11 @@ public class SellableProductsType {
 
         /**
          * Sets the value of the meetingRooms property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link MeetingRoomsType }
-         *
+         *     
          */
         public void setMeetingRooms(MeetingRoomsType value) {
             this.meetingRooms = value;
@@ -341,11 +346,11 @@ public class SellableProductsType {
 
         /**
          * Gets the value of the inventoryBlock property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link SellableProductsType.SellableProduct.InventoryBlock }
-         *
+         *     
          */
         public SellableProductsType.SellableProduct.InventoryBlock getInventoryBlock() {
             return inventoryBlock;
@@ -353,11 +358,11 @@ public class SellableProductsType {
 
         /**
          * Sets the value of the inventoryBlock property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link SellableProductsType.SellableProduct.InventoryBlock }
-         *
+         *     
          */
         public void setInventoryBlock(SellableProductsType.SellableProduct.InventoryBlock value) {
             this.inventoryBlock = value;
@@ -365,11 +370,11 @@ public class SellableProductsType {
 
         /**
          * Gets the value of the description property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link ParagraphType }
-         *
+         *     
          */
         public ParagraphType getDescription() {
             return description;
@@ -377,11 +382,11 @@ public class SellableProductsType {
 
         /**
          * Sets the value of the description property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link ParagraphType }
-         *
+         *     
          */
         public void setDescription(ParagraphType value) {
             this.description = value;
@@ -389,11 +394,11 @@ public class SellableProductsType {
 
         /**
          * Gets the value of the uniqueID property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link UniqueIDType }
-         *
+         *     
          */
         public UniqueIDType getUniqueID() {
             return uniqueID;
@@ -401,11 +406,11 @@ public class SellableProductsType {
 
         /**
          * Sets the value of the uniqueID property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link UniqueIDType }
-         *
+         *     
          */
         public void setUniqueID(UniqueIDType value) {
             this.uniqueID = value;
@@ -413,11 +418,11 @@ public class SellableProductsType {
 
         /**
          * Gets the value of the rph property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getRPH() {
             return rph;
@@ -425,11 +430,11 @@ public class SellableProductsType {
 
         /**
          * Sets the value of the rph property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setRPH(String value) {
             this.rph = value;
@@ -437,11 +442,11 @@ public class SellableProductsType {
 
         /**
          * Gets the value of the invNotifType property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getInvNotifType() {
             return invNotifType;
@@ -449,11 +454,11 @@ public class SellableProductsType {
 
         /**
          * Sets the value of the invNotifType property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setInvNotifType(String value) {
             this.invNotifType = value;
@@ -461,11 +466,11 @@ public class SellableProductsType {
 
         /**
          * Gets the value of the invStatusType property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getInvStatusType() {
             return invStatusType;
@@ -473,11 +478,11 @@ public class SellableProductsType {
 
         /**
          * Sets the value of the invStatusType property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setInvStatusType(String value) {
             this.invStatusType = value;
@@ -485,11 +490,11 @@ public class SellableProductsType {
 
         /**
          * Gets the value of the invGroupingCode property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getInvGroupingCode() {
             return invGroupingCode;
@@ -497,11 +502,11 @@ public class SellableProductsType {
 
         /**
          * Sets the value of the invGroupingCode property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setInvGroupingCode(String value) {
             this.invGroupingCode = value;
@@ -509,11 +514,11 @@ public class SellableProductsType {
 
         /**
          * Gets the value of the orderSequence property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link Integer }
-         *
+         *     
          */
         public Integer getOrderSequence() {
             return orderSequence;
@@ -521,11 +526,11 @@ public class SellableProductsType {
 
         /**
          * Sets the value of the orderSequence property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link Integer }
-         *
+         *     
          */
         public void setOrderSequence(Integer value) {
             this.orderSequence = value;
@@ -533,11 +538,11 @@ public class SellableProductsType {
 
         /**
          * Gets the value of the invCodeApplication property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getInvCodeApplication() {
             return invCodeApplication;
@@ -545,11 +550,11 @@ public class SellableProductsType {
 
         /**
          * Sets the value of the invCodeApplication property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setInvCodeApplication(String value) {
             this.invCodeApplication = value;
@@ -557,11 +562,11 @@ public class SellableProductsType {
 
         /**
          * Gets the value of the invCode property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getInvCode() {
             return invCode;
@@ -569,11 +574,11 @@ public class SellableProductsType {
 
         /**
          * Sets the value of the invCode property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setInvCode(String value) {
             this.invCode = value;
@@ -581,11 +586,11 @@ public class SellableProductsType {
 
         /**
          * Gets the value of the invType property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getInvType() {
             return invType;
@@ -593,11 +598,11 @@ public class SellableProductsType {
 
         /**
          * Sets the value of the invType property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setInvType(String value) {
             this.invType = value;
@@ -605,11 +610,11 @@ public class SellableProductsType {
 
         /**
          * Gets the value of the invTypeCode property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getInvTypeCode() {
             return invTypeCode;
@@ -617,11 +622,11 @@ public class SellableProductsType {
 
         /**
          * Sets the value of the invTypeCode property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setInvTypeCode(String value) {
             this.invTypeCode = value;
@@ -629,11 +634,11 @@ public class SellableProductsType {
 
         /**
          * Gets the value of the isRoom property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link Boolean }
-         *
+         *     
          */
         public Boolean isIsRoom() {
             return isRoom;
@@ -641,11 +646,11 @@ public class SellableProductsType {
 
         /**
          * Sets the value of the isRoom property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link Boolean }
-         *
+         *     
          */
         public void setIsRoom(Boolean value) {
             this.isRoom = value;
@@ -653,11 +658,11 @@ public class SellableProductsType {
 
         /**
          * Gets the value of the start property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getStart() {
             return start;
@@ -665,11 +670,11 @@ public class SellableProductsType {
 
         /**
          * Sets the value of the start property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setStart(String value) {
             this.start = value;
@@ -677,11 +682,11 @@ public class SellableProductsType {
 
         /**
          * Gets the value of the duration property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getDuration() {
             return duration;
@@ -689,11 +694,11 @@ public class SellableProductsType {
 
         /**
          * Sets the value of the duration property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setDuration(String value) {
             this.duration = value;
@@ -701,11 +706,11 @@ public class SellableProductsType {
 
         /**
          * Gets the value of the end property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getEnd() {
             return end;
@@ -713,11 +718,11 @@ public class SellableProductsType {
 
         /**
          * Sets the value of the end property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setEnd(String value) {
             this.end = value;
@@ -726,9 +731,9 @@ public class SellableProductsType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -749,8 +754,8 @@ public class SellableProductsType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
@@ -759,33 +764,33 @@ public class SellableProductsType {
         public static class DestinationSystemCodes {
 
             @XmlElement(name = "DestinationSystemCode", required = true)
-            protected List<DestinationSystemCode> destinationSystemCode;
+            protected List<SellableProductsType.SellableProduct.DestinationSystemCodes.DestinationSystemCode> destinationSystemCode;
 
             /**
              * Gets the value of the destinationSystemCode property.
-             *
+             * 
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the destinationSystemCode property.
-             *
+             * 
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getDestinationSystemCode().add(newItem);
              * </pre>
-             *
-             *
+             * 
+             * 
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link SellableProductsType.SellableProduct.DestinationSystemCodes.DestinationSystemCode }
-             *
-             *
+             * 
+             * 
              */
-            public List<DestinationSystemCode> getDestinationSystemCode() {
+            public List<SellableProductsType.SellableProduct.DestinationSystemCodes.DestinationSystemCode> getDestinationSystemCode() {
                 if (destinationSystemCode == null) {
-                    destinationSystemCode = new ArrayList<DestinationSystemCode>();
+                    destinationSystemCode = new ArrayList<SellableProductsType.SellableProduct.DestinationSystemCodes.DestinationSystemCode>();
                 }
                 return this.destinationSystemCode;
             }

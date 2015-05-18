@@ -8,10 +8,14 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -135,7 +139,7 @@ public class AirReservationType {
     @XmlElement(name = "Queues")
     protected AirReservationType.Queues queues;
     @XmlElement(name = "BookingReferenceID")
-    protected List<BookingReferenceID> bookingReferenceID;
+    protected List<AirReservationType.BookingReferenceID> bookingReferenceID;
     @XmlElement(name = "Comment")
     protected FormattedTextTextType comment;
     @XmlElement(name = "PricingOverview")
@@ -147,11 +151,11 @@ public class AirReservationType {
 
     /**
      * Gets the value of the airItinerary property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link AirItineraryType }
-     *
+     *     
      */
     public AirItineraryType getAirItinerary() {
         return airItinerary;
@@ -159,11 +163,11 @@ public class AirReservationType {
 
     /**
      * Sets the value of the airItinerary property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link AirItineraryType }
-     *
+     *     
      */
     public void setAirItinerary(AirItineraryType value) {
         this.airItinerary = value;
@@ -171,11 +175,11 @@ public class AirReservationType {
 
     /**
      * Gets the value of the priceInfo property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link BookingPriceInfoType }
-     *
+     *     
      */
     public BookingPriceInfoType getPriceInfo() {
         return priceInfo;
@@ -183,11 +187,11 @@ public class AirReservationType {
 
     /**
      * Sets the value of the priceInfo property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link BookingPriceInfoType }
-     *
+     *     
      */
     public void setPriceInfo(BookingPriceInfoType value) {
         this.priceInfo = value;
@@ -195,11 +199,11 @@ public class AirReservationType {
 
     /**
      * Gets the value of the travelerInfo property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link TravelerInfoType }
-     *
+     *     
      */
     public TravelerInfoType getTravelerInfo() {
         return travelerInfo;
@@ -207,11 +211,11 @@ public class AirReservationType {
 
     /**
      * Sets the value of the travelerInfo property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link TravelerInfoType }
-     *
+     *     
      */
     public void setTravelerInfo(TravelerInfoType value) {
         this.travelerInfo = value;
@@ -219,11 +223,11 @@ public class AirReservationType {
 
     /**
      * Gets the value of the fulfillment property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link FulfillmentType }
-     *
+     *     
      */
     public FulfillmentType getFulfillment() {
         return fulfillment;
@@ -231,11 +235,11 @@ public class AirReservationType {
 
     /**
      * Sets the value of the fulfillment property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link FulfillmentType }
-     *
+     *     
      */
     public void setFulfillment(FulfillmentType value) {
         this.fulfillment = value;
@@ -243,25 +247,25 @@ public class AirReservationType {
 
     /**
      * Gets the value of the ticketing property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the ticketing property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getTicketing().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link TicketingInfoType }
-     *
-     *
+     * 
+     * 
      */
     public List<TicketingInfoType> getTicketing() {
         if (ticketing == null) {
@@ -272,11 +276,11 @@ public class AirReservationType {
 
     /**
      * Gets the value of the queues property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link AirReservationType.Queues }
-     *
+     *     
      */
     public AirReservationType.Queues getQueues() {
         return queues;
@@ -284,11 +288,11 @@ public class AirReservationType {
 
     /**
      * Sets the value of the queues property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link AirReservationType.Queues }
-     *
+     *     
      */
     public void setQueues(AirReservationType.Queues value) {
         this.queues = value;
@@ -296,40 +300,40 @@ public class AirReservationType {
 
     /**
      * Gets the value of the bookingReferenceID property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the bookingReferenceID property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getBookingReferenceID().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link AirReservationType.BookingReferenceID }
-     *
-     *
+     * 
+     * 
      */
-    public List<BookingReferenceID> getBookingReferenceID() {
+    public List<AirReservationType.BookingReferenceID> getBookingReferenceID() {
         if (bookingReferenceID == null) {
-            bookingReferenceID = new ArrayList<BookingReferenceID>();
+            bookingReferenceID = new ArrayList<AirReservationType.BookingReferenceID>();
         }
         return this.bookingReferenceID;
     }
 
     /**
      * Gets the value of the comment property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link FormattedTextTextType }
-     *
+     *     
      */
     public FormattedTextTextType getComment() {
         return comment;
@@ -337,11 +341,11 @@ public class AirReservationType {
 
     /**
      * Sets the value of the comment property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link FormattedTextTextType }
-     *
+     *     
      */
     public void setComment(FormattedTextTextType value) {
         this.comment = value;
@@ -349,11 +353,11 @@ public class AirReservationType {
 
     /**
      * Gets the value of the pricingOverview property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link AirReservationType.PricingOverview }
-     *
+     *     
      */
     public AirReservationType.PricingOverview getPricingOverview() {
         return pricingOverview;
@@ -361,11 +365,11 @@ public class AirReservationType {
 
     /**
      * Sets the value of the pricingOverview property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link AirReservationType.PricingOverview }
-     *
+     *     
      */
     public void setPricingOverview(AirReservationType.PricingOverview value) {
         this.pricingOverview = value;
@@ -373,11 +377,11 @@ public class AirReservationType {
 
     /**
      * Gets the value of the emdInfo property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link EMDType }
-     *
+     *     
      */
     public EMDType getEMDInfo() {
         return emdInfo;
@@ -385,11 +389,11 @@ public class AirReservationType {
 
     /**
      * Sets the value of the emdInfo property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link EMDType }
-     *
+     *     
      */
     public void setEMDInfo(EMDType value) {
         this.emdInfo = value;
@@ -397,11 +401,11 @@ public class AirReservationType {
 
     /**
      * Gets the value of the lastModified property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getLastModified() {
         return lastModified;
@@ -409,11 +413,11 @@ public class AirReservationType {
 
     /**
      * Sets the value of the lastModified property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setLastModified(String value) {
         this.lastModified = value;
@@ -422,9 +426,9 @@ public class AirReservationType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -434,8 +438,8 @@ public class AirReservationType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
@@ -448,25 +452,25 @@ public class AirReservationType {
 
         /**
          * Gets the value of the flightRefNumberRPHList property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the flightRefNumberRPHList property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getFlightRefNumberRPHList().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link String }
-         *
-         *
+         * 
+         * 
          */
         public List<String> getFlightRefNumberRPHList() {
             if (flightRefNumberRPHList == null) {
@@ -480,9 +484,9 @@ public class AirReservationType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -518,8 +522,8 @@ public class AirReservationType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -530,9 +534,9 @@ public class AirReservationType {
     public static class PricingOverview {
 
         @XmlElement(name = "PricingIndicator")
-        protected List<PricingIndicator> pricingIndicator;
+        protected List<AirReservationType.PricingOverview.PricingIndicator> pricingIndicator;
         @XmlElement(name = "Account")
-        protected List<Account> account;
+        protected List<AirReservationType.PricingOverview.Account> account;
         @XmlElement(name = "Comment")
         protected List<FreeTextType> comment;
         @XmlAttribute(name = "StatisticalCode")
@@ -550,83 +554,83 @@ public class AirReservationType {
 
         /**
          * Gets the value of the pricingIndicator property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the pricingIndicator property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getPricingIndicator().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link AirReservationType.PricingOverview.PricingIndicator }
-         *
-         *
+         * 
+         * 
          */
-        public List<PricingIndicator> getPricingIndicator() {
+        public List<AirReservationType.PricingOverview.PricingIndicator> getPricingIndicator() {
             if (pricingIndicator == null) {
-                pricingIndicator = new ArrayList<PricingIndicator>();
+                pricingIndicator = new ArrayList<AirReservationType.PricingOverview.PricingIndicator>();
             }
             return this.pricingIndicator;
         }
 
         /**
          * Gets the value of the account property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the account property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getAccount().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link AirReservationType.PricingOverview.Account }
-         *
-         *
+         * 
+         * 
          */
-        public List<Account> getAccount() {
+        public List<AirReservationType.PricingOverview.Account> getAccount() {
             if (account == null) {
-                account = new ArrayList<Account>();
+                account = new ArrayList<AirReservationType.PricingOverview.Account>();
             }
             return this.account;
         }
 
         /**
          * Gets the value of the comment property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the comment property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getComment().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link FreeTextType }
-         *
-         *
+         * 
+         * 
          */
         public List<FreeTextType> getComment() {
             if (comment == null) {
@@ -637,11 +641,11 @@ public class AirReservationType {
 
         /**
          * Gets the value of the statisticalCode property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getStatisticalCode() {
             return statisticalCode;
@@ -649,11 +653,11 @@ public class AirReservationType {
 
         /**
          * Sets the value of the statisticalCode property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setStatisticalCode(String value) {
             this.statisticalCode = value;
@@ -661,11 +665,11 @@ public class AirReservationType {
 
         /**
          * Gets the value of the validatingAirlineCode property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getValidatingAirlineCode() {
             return validatingAirlineCode;
@@ -673,11 +677,11 @@ public class AirReservationType {
 
         /**
          * Sets the value of the validatingAirlineCode property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setValidatingAirlineCode(String value) {
             this.validatingAirlineCode = value;
@@ -685,11 +689,11 @@ public class AirReservationType {
 
         /**
          * Gets the value of the departureDate property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getDepartureDate() {
             return departureDate;
@@ -697,11 +701,11 @@ public class AirReservationType {
 
         /**
          * Sets the value of the departureDate property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setDepartureDate(String value) {
             this.departureDate = value;
@@ -709,11 +713,11 @@ public class AirReservationType {
 
         /**
          * Gets the value of the priceType property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getPriceType() {
             return priceType;
@@ -721,11 +725,11 @@ public class AirReservationType {
 
         /**
          * Sets the value of the priceType property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setPriceType(String value) {
             this.priceType = value;
@@ -733,11 +737,11 @@ public class AirReservationType {
 
         /**
          * Gets the value of the nucRate property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link BigDecimal }
-         *
+         *     
          */
         public BigDecimal getNUCRate() {
             return nucRate;
@@ -745,11 +749,11 @@ public class AirReservationType {
 
         /**
          * Sets the value of the nucRate property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link BigDecimal }
-         *
+         *     
          */
         public void setNUCRate(BigDecimal value) {
             this.nucRate = value;
@@ -757,11 +761,11 @@ public class AirReservationType {
 
         /**
          * Gets the value of the exchangeRate property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link BigDecimal }
-         *
+         *     
          */
         public BigDecimal getExchangeRate() {
             return exchangeRate;
@@ -769,11 +773,11 @@ public class AirReservationType {
 
         /**
          * Sets the value of the exchangeRate property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link BigDecimal }
-         *
+         *     
          */
         public void setExchangeRate(BigDecimal value) {
             this.exchangeRate = value;
@@ -782,9 +786,9 @@ public class AirReservationType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -794,8 +798,8 @@ public class AirReservationType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
@@ -806,11 +810,11 @@ public class AirReservationType {
 
             /**
              * Gets the value of the code property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getCode() {
                 return code;
@@ -818,11 +822,11 @@ public class AirReservationType {
 
             /**
              * Sets the value of the code property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setCode(String value) {
                 this.code = value;
@@ -833,9 +837,9 @@ public class AirReservationType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -845,8 +849,8 @@ public class AirReservationType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
@@ -861,11 +865,11 @@ public class AirReservationType {
 
             /**
              * Gets the value of the type property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getType() {
                 return type;
@@ -873,11 +877,11 @@ public class AirReservationType {
 
             /**
              * Sets the value of the type property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setType(String value) {
                 this.type = value;
@@ -885,11 +889,11 @@ public class AirReservationType {
 
             /**
              * Gets the value of the excludeInd property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link Boolean }
-             *
+             *     
              */
             public Boolean isExcludeInd() {
                 return excludeInd;
@@ -897,11 +901,11 @@ public class AirReservationType {
 
             /**
              * Sets the value of the excludeInd property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link Boolean }
-             *
+             *     
              */
             public void setExcludeInd(Boolean value) {
                 this.excludeInd = value;
@@ -909,11 +913,11 @@ public class AirReservationType {
 
             /**
              * Gets the value of the qualifier property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getQualifier() {
                 return qualifier;
@@ -921,11 +925,11 @@ public class AirReservationType {
 
             /**
              * Sets the value of the qualifier property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setQualifier(String value) {
                 this.qualifier = value;
@@ -938,9 +942,9 @@ public class AirReservationType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -964,8 +968,8 @@ public class AirReservationType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -974,33 +978,33 @@ public class AirReservationType {
     public static class Queues {
 
         @XmlElement(name = "Queue", required = true)
-        protected List<Queue> queue;
+        protected List<AirReservationType.Queues.Queue> queue;
 
         /**
          * Gets the value of the queue property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the queue property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getQueue().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link AirReservationType.Queues.Queue }
-         *
-         *
+         * 
+         * 
          */
-        public List<Queue> getQueue() {
+        public List<AirReservationType.Queues.Queue> getQueue() {
             if (queue == null) {
-                queue = new ArrayList<Queue>();
+                queue = new ArrayList<AirReservationType.Queues.Queue>();
             }
             return this.queue;
         }

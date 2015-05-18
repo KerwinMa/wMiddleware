@@ -8,11 +8,16 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -74,9 +79,9 @@ import java.util.List;
 public class ETFareInfo {
 
     @XmlElement(name = "Waiver")
-    protected List<Waiver> waiver;
+    protected List<ETFareInfo.Waiver> waiver;
     @XmlElement(name = "RuleIndicator")
-    protected List<RuleIndicator> ruleIndicator;
+    protected List<ETFareInfo.RuleIndicator> ruleIndicator;
     @XmlAttribute(name = "NetReportingCode")
     protected String netReportingCode;
     @XmlAttribute(name = "StatisticalCode")
@@ -88,58 +93,58 @@ public class ETFareInfo {
 
     /**
      * Gets the value of the waiver property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the waiver property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getWaiver().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ETFareInfo.Waiver }
-     *
-     *
+     * 
+     * 
      */
-    public List<Waiver> getWaiver() {
+    public List<ETFareInfo.Waiver> getWaiver() {
         if (waiver == null) {
-            waiver = new ArrayList<Waiver>();
+            waiver = new ArrayList<ETFareInfo.Waiver>();
         }
         return this.waiver;
     }
 
     /**
      * Gets the value of the ruleIndicator property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the ruleIndicator property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getRuleIndicator().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ETFareInfo.RuleIndicator }
-     *
-     *
+     * 
+     * 
      */
-    public List<RuleIndicator> getRuleIndicator() {
+    public List<ETFareInfo.RuleIndicator> getRuleIndicator() {
         if (ruleIndicator == null) {
-            ruleIndicator = new ArrayList<RuleIndicator>();
+            ruleIndicator = new ArrayList<ETFareInfo.RuleIndicator>();
         }
         return this.ruleIndicator;
     }

@@ -56,7 +56,7 @@ public interface ServerInformationBeanRemote {
 
     public List<HashRangeValue> getARI(final String hotelTicker, List<String> inventoryTickers,
                                        final Date start, final Date end,
-                                       final String currency, final String promotionalCode, final String country) throws FrontEndException;
+                                       final String currency, final String promotionalCode , final String country) throws FrontEndException;
 
     public List<Page> getPages(final String hotelTicker, final String locale) throws FrontEndException;
 

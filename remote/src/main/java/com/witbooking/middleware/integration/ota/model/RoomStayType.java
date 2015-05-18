@@ -6,15 +6,22 @@
 //
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import javax.xml.datatype.Duration;
-import javax.xml.datatype.XMLGregorianCalendar;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.XmlValue;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import javax.xml.datatype.Duration;
+import javax.xml.datatype.XMLGregorianCalendar;
 
 /**
  * <p>Java class for RoomStayType complex type.
@@ -253,7 +260,7 @@ public class RoomStayType {
 //        this.basicPropertyInfo = new BasicPropertyInfoType();
 //        this.guestCounts = new GuestCountType();
     }
-
+    
     public void addGuestCount(final GuestCountType.GuestCount item){
         if (this.guestCounts==null){
             this.guestCounts= new GuestCountType();
@@ -421,7 +428,7 @@ public class RoomStayType {
     public void setTimeSpan(Date checkIn, final Date checkOut) {
         this.timeSpan = new DateTimeSpanType(checkIn, checkOut);
     }
-
+    
 
     /**
      * Gets the value of the guarantee property.
@@ -1064,7 +1071,7 @@ public class RoomStayType {
             }
             return this.ratePlan;
         }
-
+        
         public void addRatePlan(RatePlanType item) {
             if (ratePlan == null) {
                 ratePlan = new ArrayList<RatePlanType>();
@@ -1166,7 +1173,7 @@ public class RoomStayType {
     public static class RoomRates {
 
         @XmlElement(name = "RoomRate", required = true)
-        protected List<RoomRate> roomRate;
+        protected List<RoomStayType.RoomRates.RoomRate> roomRate;
         @XmlElement(name = "TPA_Extensions")
         protected TPAExtensionsType tpaExtensions;
         @XmlAttribute(name = "MoreRatesExistInd")
@@ -1197,16 +1204,16 @@ public class RoomStayType {
          *
          *
          */
-        public List<RoomRate> getRoomRate() {
+        public List<RoomStayType.RoomRates.RoomRate> getRoomRate() {
             if (roomRate == null) {
-                roomRate = new ArrayList<RoomRate>();
+                roomRate = new ArrayList<RoomStayType.RoomRates.RoomRate>();
             }
             return this.roomRate;
         }
 
         public void addRoomRate(final RoomStayType.RoomRates.RoomRate roomRate) {
             if (this.roomRate == null){
-                this.roomRate = new ArrayList<RoomRate>();
+                this.roomRate = new ArrayList<RoomStayType.RoomRates.RoomRate>();
             }
             this.roomRate.add(roomRate);
         }
@@ -1755,7 +1762,7 @@ public class RoomStayType {
             public static class GuestCounts {
 
                 @XmlElement(name = "GuestCount", required = true)
-                protected List<GuestCount> guestCount;
+                protected List<RoomStayType.RoomRates.RoomRate.GuestCounts.GuestCount> guestCount;
 
                 /**
                  * Gets the value of the guestCount property.
@@ -1780,9 +1787,9 @@ public class RoomStayType {
                  *
                  *
                  */
-                public List<GuestCount> getGuestCount() {
+                public List<RoomStayType.RoomRates.RoomRate.GuestCounts.GuestCount> getGuestCount() {
                     if (guestCount == null) {
-                        guestCount = new ArrayList<GuestCount>();
+                        guestCount = new ArrayList<RoomStayType.RoomRates.RoomRate.GuestCounts.GuestCount>();
                     }
                     return this.guestCount;
                 }
@@ -1938,7 +1945,7 @@ public class RoomStayType {
             public static class Restrictions {
 
                 @XmlElement(name = "Restriction", required = true)
-                protected List<Restriction> restriction;
+                protected List<RoomStayType.RoomRates.RoomRate.Restrictions.Restriction> restriction;
 
                 /**
                  * Gets the value of the restriction property.
@@ -1963,9 +1970,9 @@ public class RoomStayType {
                  *
                  *
                  */
-                public List<Restriction> getRestriction() {
+                public List<RoomStayType.RoomRates.RoomRate.Restrictions.Restriction> getRestriction() {
                     if (restriction == null) {
-                        restriction = new ArrayList<Restriction>();
+                        restriction = new ArrayList<RoomStayType.RoomRates.RoomRate.Restrictions.Restriction>();
                     }
                     return this.restriction;
                 }

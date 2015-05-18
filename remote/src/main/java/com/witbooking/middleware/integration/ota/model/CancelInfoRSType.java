@@ -8,12 +8,12 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
+import java.util.ArrayList;
+import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
-import java.util.ArrayList;
-import java.util.List;
 
 
 /**
@@ -60,11 +60,11 @@ public class CancelInfoRSType {
 
     /**
      * Gets the value of the cancelRules property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link CancelInfoRSType.CancelRules }
-     *
+     *     
      */
     public CancelInfoRSType.CancelRules getCancelRules() {
         return cancelRules;
@@ -72,11 +72,11 @@ public class CancelInfoRSType {
 
     /**
      * Sets the value of the cancelRules property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link CancelInfoRSType.CancelRules }
-     *
+     *     
      */
     public void setCancelRules(CancelInfoRSType.CancelRules value) {
         this.cancelRules = value;

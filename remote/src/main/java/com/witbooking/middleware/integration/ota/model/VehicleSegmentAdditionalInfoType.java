@@ -8,9 +8,13 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -120,11 +124,11 @@ public class VehicleSegmentAdditionalInfoType {
 
     /**
      * Gets the value of the paymentRules property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleSegmentAdditionalInfoType.PaymentRules }
-     *
+     *     
      */
     public VehicleSegmentAdditionalInfoType.PaymentRules getPaymentRules() {
         return paymentRules;
@@ -132,11 +136,11 @@ public class VehicleSegmentAdditionalInfoType {
 
     /**
      * Sets the value of the paymentRules property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleSegmentAdditionalInfoType.PaymentRules }
-     *
+     *     
      */
     public void setPaymentRules(VehicleSegmentAdditionalInfoType.PaymentRules value) {
         this.paymentRules = value;
@@ -144,25 +148,25 @@ public class VehicleSegmentAdditionalInfoType {
 
     /**
      * Gets the value of the rentalPaymentAmount property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the rentalPaymentAmount property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getRentalPaymentAmount().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link PaymentDetailType }
-     *
-     *
+     * 
+     * 
      */
     public List<PaymentDetailType> getRentalPaymentAmount() {
         if (rentalPaymentAmount == null) {
@@ -173,11 +177,11 @@ public class VehicleSegmentAdditionalInfoType {
 
     /**
      * Gets the value of the pricedCoverages property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleSegmentAdditionalInfoType.PricedCoverages }
-     *
+     *     
      */
     public VehicleSegmentAdditionalInfoType.PricedCoverages getPricedCoverages() {
         return pricedCoverages;
@@ -185,11 +189,11 @@ public class VehicleSegmentAdditionalInfoType {
 
     /**
      * Sets the value of the pricedCoverages property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleSegmentAdditionalInfoType.PricedCoverages }
-     *
+     *     
      */
     public void setPricedCoverages(VehicleSegmentAdditionalInfoType.PricedCoverages value) {
         this.pricedCoverages = value;
@@ -197,25 +201,25 @@ public class VehicleSegmentAdditionalInfoType {
 
     /**
      * Gets the value of the pricedOffLocService property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the pricedOffLocService property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getPricedOffLocService().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link OffLocationServicePricedType }
-     *
-     *
+     * 
+     * 
      */
     public List<OffLocationServicePricedType> getPricedOffLocService() {
         if (pricedOffLocService == null) {
@@ -226,11 +230,11 @@ public class VehicleSegmentAdditionalInfoType {
 
     /**
      * Gets the value of the vendorMessages property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleSegmentAdditionalInfoType.VendorMessages }
-     *
+     *     
      */
     public VehicleSegmentAdditionalInfoType.VendorMessages getVendorMessages() {
         return vendorMessages;
@@ -238,11 +242,11 @@ public class VehicleSegmentAdditionalInfoType {
 
     /**
      * Sets the value of the vendorMessages property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleSegmentAdditionalInfoType.VendorMessages }
-     *
+     *     
      */
     public void setVendorMessages(VehicleSegmentAdditionalInfoType.VendorMessages value) {
         this.vendorMessages = value;

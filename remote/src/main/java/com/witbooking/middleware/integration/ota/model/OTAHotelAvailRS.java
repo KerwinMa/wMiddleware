@@ -290,7 +290,7 @@ public class OTAHotelAvailRS implements Serializable {
      * @return
      *     possible object is
      *     {@link com.witbooking.middleware.integration.ota.model.POSType }
-     *
+     *     
      */
     public POSType getPOS() {
         return pos;
@@ -298,11 +298,11 @@ public class OTAHotelAvailRS implements Serializable {
 
     /**
      * Sets the value of the pos property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link com.witbooking.middleware.integration.ota.model.POSType }
-     *
+     *     
      */
     public void setPOS(POSType value) {
         this.pos = value;
@@ -310,11 +310,11 @@ public class OTAHotelAvailRS implements Serializable {
 
     /**
      * Gets the value of the success property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link com.witbooking.middleware.integration.ota.model.SuccessType }
-     *
+     *     
      */
     public SuccessType getSuccess() {
         return success;
@@ -322,11 +322,11 @@ public class OTAHotelAvailRS implements Serializable {
 
     /**
      * Sets the value of the success property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link com.witbooking.middleware.integration.ota.model.SuccessType }
-     *
+     *     
      */
     public void setSuccess(SuccessType value) {
         this.success = value;
@@ -334,11 +334,11 @@ public class OTAHotelAvailRS implements Serializable {
 
     /**
      * Gets the value of the warnings property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link com.witbooking.middleware.integration.ota.model.WarningsType }
-     *
+     *     
      */
     public WarningsType getWarnings() {
         return warnings;
@@ -346,11 +346,11 @@ public class OTAHotelAvailRS implements Serializable {
 
     /**
      * Sets the value of the warnings property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link com.witbooking.middleware.integration.ota.model.WarningsType }
-     *
+     *     
      */
     public void setWarnings(WarningsType value) {
         this.warnings = value;
@@ -358,11 +358,11 @@ public class OTAHotelAvailRS implements Serializable {
 
     /**
      * Gets the value of the profiles property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link com.witbooking.middleware.integration.ota.model.ProfilesType }
-     *
+     *     
      */
     public ProfilesType getProfiles() {
         return profiles;
@@ -370,11 +370,11 @@ public class OTAHotelAvailRS implements Serializable {
 
     /**
      * Sets the value of the profiles property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link com.witbooking.middleware.integration.ota.model.ProfilesType }
-     *
+     *     
      */
     public void setProfiles(ProfilesType value) {
         this.profiles = value;
@@ -382,11 +382,11 @@ public class OTAHotelAvailRS implements Serializable {
 
     /**
      * Gets the value of the hotelStays property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link com.witbooking.middleware.integration.ota.model.OTAHotelAvailRS.HotelStays }
-     *
+     *     
      */
     public HotelStays getHotelStays() {
         return hotelStays;
@@ -394,11 +394,11 @@ public class OTAHotelAvailRS implements Serializable {
 
     /**
      * Sets the value of the hotelStays property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link com.witbooking.middleware.integration.ota.model.OTAHotelAvailRS.HotelStays }
-     *
+     *     
      */
     public void setHotelStays(HotelStays value) {
         this.hotelStays = value;
@@ -406,11 +406,11 @@ public class OTAHotelAvailRS implements Serializable {
 
     /**
      * Gets the value of the roomStays property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link com.witbooking.middleware.integration.ota.model.OTAHotelAvailRS.RoomStays }
-     *
+     *     
      */
     public RoomStays getRoomStays() {
         return roomStays;
@@ -418,11 +418,11 @@ public class OTAHotelAvailRS implements Serializable {
 
     /**
      * Sets the value of the roomStays property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link com.witbooking.middleware.integration.ota.model.OTAHotelAvailRS.RoomStays }
-     *
+     *     
      */
     public void setRoomStays(RoomStays value) {
         this.roomStays = value;
@@ -430,11 +430,11 @@ public class OTAHotelAvailRS implements Serializable {
 
     /**
      * Gets the value of the services property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link com.witbooking.middleware.integration.ota.model.ServicesType }
-     *
+     *     
      */
     public ServicesType getServices() {
         return services;
@@ -442,11 +442,11 @@ public class OTAHotelAvailRS implements Serializable {
 
     /**
      * Sets the value of the services property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link com.witbooking.middleware.integration.ota.model.ServicesType }
-     *
+     *     
      */
     public void setServices(ServicesType value) {
         this.services = value;
@@ -454,11 +454,11 @@ public class OTAHotelAvailRS implements Serializable {
 
     /**
      * Gets the value of the areas property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link com.witbooking.middleware.integration.ota.model.AreasType }
-     *
+     *     
      */
     public AreasType getAreas() {
         return areas;
@@ -466,11 +466,11 @@ public class OTAHotelAvailRS implements Serializable {
 
     /**
      * Sets the value of the areas property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link com.witbooking.middleware.integration.ota.model.AreasType }
-     *
+     *     
      */
     public void setAreas(AreasType value) {
         this.areas = value;
@@ -478,11 +478,11 @@ public class OTAHotelAvailRS implements Serializable {
 
     /**
      * Gets the value of the criteria property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link com.witbooking.middleware.integration.ota.model.OTAHotelAvailRS.Criteria }
-     *
+     *     
      */
     public Criteria getCriteria() {
         return criteria;
@@ -490,11 +490,11 @@ public class OTAHotelAvailRS implements Serializable {
 
     /**
      * Sets the value of the criteria property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link com.witbooking.middleware.integration.ota.model.OTAHotelAvailRS.Criteria }
-     *
+     *     
      */
     public void setCriteria(Criteria value) {
         this.criteria = value;
@@ -502,11 +502,11 @@ public class OTAHotelAvailRS implements Serializable {
 
     /**
      * Gets the value of the currencyConversions property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link com.witbooking.middleware.integration.ota.model.OTAHotelAvailRS.CurrencyConversions }
-     *
+     *     
      */
     public CurrencyConversions getCurrencyConversions() {
         return currencyConversions;
@@ -514,11 +514,11 @@ public class OTAHotelAvailRS implements Serializable {
 
     /**
      * Sets the value of the currencyConversions property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link com.witbooking.middleware.integration.ota.model.OTAHotelAvailRS.CurrencyConversions }
-     *
+     *     
      */
     public void setCurrencyConversions(CurrencyConversions value) {
         this.currencyConversions = value;
@@ -526,11 +526,11 @@ public class OTAHotelAvailRS implements Serializable {
 
     /**
      * Gets the value of the tpaExtensions property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link com.witbooking.middleware.integration.ota.model.TPAExtensionsType }
-     *
+     *     
      */
     public TPAExtensionsType getTPAExtensions() {
         return tpaExtensions;
@@ -538,11 +538,11 @@ public class OTAHotelAvailRS implements Serializable {
 
     /**
      * Sets the value of the tpaExtensions property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link com.witbooking.middleware.integration.ota.model.TPAExtensionsType }
-     *
+     *     
      */
     public void setTPAExtensions(TPAExtensionsType value) {
         this.tpaExtensions = value;
@@ -550,11 +550,11 @@ public class OTAHotelAvailRS implements Serializable {
 
     /**
      * Gets the value of the errors property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link com.witbooking.middleware.integration.ota.model.ErrorsType }
-     *
+     *     
      */
     public ErrorsType getErrors() {
         return errors;
@@ -562,11 +562,11 @@ public class OTAHotelAvailRS implements Serializable {
 
     /**
      * Sets the value of the errors property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link com.witbooking.middleware.integration.ota.model.ErrorsType }
-     *
+     *     
      */
     public void setErrors(ErrorsType value) {
         this.errors = value;
@@ -574,11 +574,11 @@ public class OTAHotelAvailRS implements Serializable {
 
     /**
      * Gets the value of the searchCacheLevel property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getSearchCacheLevel() {
         return searchCacheLevel;
@@ -586,11 +586,11 @@ public class OTAHotelAvailRS implements Serializable {
 
     /**
      * Sets the value of the searchCacheLevel property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setSearchCacheLevel(String value) {
         this.searchCacheLevel = value;
@@ -598,11 +598,11 @@ public class OTAHotelAvailRS implements Serializable {
 
     /**
      * Gets the value of the echoToken property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getEchoToken() {
         return echoToken;
@@ -610,11 +610,11 @@ public class OTAHotelAvailRS implements Serializable {
 
     /**
      * Sets the value of the echoToken property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setEchoToken(String value) {
         this.echoToken = value;
@@ -622,11 +622,11 @@ public class OTAHotelAvailRS implements Serializable {
 
     /**
      * Gets the value of the timeStamp property.
-     *
+     * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *
+     *     {@link javax.xml.datatype.XMLGregorianCalendar }
+     *     
      */
     public XMLGregorianCalendar getTimeStamp() {
         return timeStamp;
@@ -634,11 +634,11 @@ public class OTAHotelAvailRS implements Serializable {
 
     /**
      * Sets the value of the timeStamp property.
-     *
+     * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *
+     *     {@link javax.xml.datatype.XMLGregorianCalendar }
+     *     
      */
     public void setTimeStamp(XMLGregorianCalendar value) {
         this.timeStamp = value;
@@ -646,11 +646,11 @@ public class OTAHotelAvailRS implements Serializable {
 
     /**
      * Gets the value of the target property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getTarget() {
         return target;
@@ -658,11 +658,11 @@ public class OTAHotelAvailRS implements Serializable {
 
     /**
      * Sets the value of the target property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setTarget(String value) {
         this.target = value;
@@ -670,11 +670,11 @@ public class OTAHotelAvailRS implements Serializable {
 
     /**
      * Gets the value of the version property.
-     *
+     * 
      * @return
      *     possible object is
-     *     {@link BigDecimal }
-     *
+     *     {@link java.math.BigDecimal }
+     *     
      */
     public BigDecimal getVersion() {
         return version;
@@ -682,11 +682,11 @@ public class OTAHotelAvailRS implements Serializable {
 
     /**
      * Sets the value of the version property.
-     *
+     * 
      * @param value
      *     allowed object is
-     *     {@link BigDecimal }
-     *
+     *     {@link java.math.BigDecimal }
+     *     
      */
     public void setVersion(BigDecimal value) {
         this.version = value;
@@ -694,11 +694,11 @@ public class OTAHotelAvailRS implements Serializable {
 
     /**
      * Gets the value of the transactionIdentifier property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getTransactionIdentifier() {
         return transactionIdentifier;
@@ -706,11 +706,11 @@ public class OTAHotelAvailRS implements Serializable {
 
     /**
      * Sets the value of the transactionIdentifier property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setTransactionIdentifier(String value) {
         this.transactionIdentifier = value;
@@ -718,11 +718,11 @@ public class OTAHotelAvailRS implements Serializable {
 
     /**
      * Gets the value of the sequenceNmbr property.
-     *
+     * 
      * @return
      *     possible object is
-     *     {@link BigInteger }
-     *
+     *     {@link java.math.BigInteger }
+     *     
      */
     public BigInteger getSequenceNmbr() {
         return sequenceNmbr;
@@ -730,11 +730,11 @@ public class OTAHotelAvailRS implements Serializable {
 
     /**
      * Sets the value of the sequenceNmbr property.
-     *
+     * 
      * @param value
      *     allowed object is
-     *     {@link BigInteger }
-     *
+     *     {@link java.math.BigInteger }
+     *     
      */
     public void setSequenceNmbr(BigInteger value) {
         this.sequenceNmbr = value;
@@ -742,11 +742,11 @@ public class OTAHotelAvailRS implements Serializable {
 
     /**
      * Gets the value of the transactionStatusCode property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getTransactionStatusCode() {
         return transactionStatusCode;
@@ -754,11 +754,11 @@ public class OTAHotelAvailRS implements Serializable {
 
     /**
      * Sets the value of the transactionStatusCode property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setTransactionStatusCode(String value) {
         this.transactionStatusCode = value;
@@ -766,11 +766,11 @@ public class OTAHotelAvailRS implements Serializable {
 
     /**
      * Gets the value of the retransmissionIndicator property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link Boolean }
-     *
+     *     
      */
     public Boolean isRetransmissionIndicator() {
         return retransmissionIndicator;
@@ -778,11 +778,11 @@ public class OTAHotelAvailRS implements Serializable {
 
     /**
      * Sets the value of the retransmissionIndicator property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *
+     *     
      */
     public void setRetransmissionIndicator(Boolean value) {
         this.retransmissionIndicator = value;
@@ -790,11 +790,11 @@ public class OTAHotelAvailRS implements Serializable {
 
     /**
      * Gets the value of the correlationID property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getCorrelationID() {
         return correlationID;
@@ -802,11 +802,11 @@ public class OTAHotelAvailRS implements Serializable {
 
     /**
      * Sets the value of the correlationID property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setCorrelationID(String value) {
         this.correlationID = value;
@@ -814,11 +814,11 @@ public class OTAHotelAvailRS implements Serializable {
 
     /**
      * Gets the value of the altLangID property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getAltLangID() {
         return altLangID;
@@ -826,11 +826,11 @@ public class OTAHotelAvailRS implements Serializable {
 
     /**
      * Sets the value of the altLangID property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setAltLangID(String value) {
         this.altLangID = value;
@@ -838,11 +838,11 @@ public class OTAHotelAvailRS implements Serializable {
 
     /**
      * Gets the value of the primaryLangID property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getPrimaryLangID() {
         return primaryLangID;
@@ -850,11 +850,11 @@ public class OTAHotelAvailRS implements Serializable {
 
     /**
      * Sets the value of the primaryLangID property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setPrimaryLangID(String value) {
         this.primaryLangID = value;
@@ -863,9 +863,9 @@ public class OTAHotelAvailRS implements Serializable {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -877,8 +877,8 @@ public class OTAHotelAvailRS implements Serializable {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -891,25 +891,25 @@ public class OTAHotelAvailRS implements Serializable {
 
         /**
          * Gets the value of the criterion property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the criterion property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getCriterion().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link com.witbooking.middleware.integration.ota.model.HotelSearchCriterionType }
-         *
-         *
+         * 
+         * 
          */
         public List<HotelSearchCriterionType> getCriterion() {
             if (criterion == null) {
@@ -923,9 +923,9 @@ public class OTAHotelAvailRS implements Serializable {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -949,8 +949,8 @@ public class OTAHotelAvailRS implements Serializable {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -963,25 +963,25 @@ public class OTAHotelAvailRS implements Serializable {
 
         /**
          * Gets the value of the currencyConversion property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the currencyConversion property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getCurrencyConversion().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link com.witbooking.middleware.integration.ota.model.OTAHotelAvailRS.CurrencyConversions.CurrencyConversion }
-         *
-         *
+         * 
+         * 
          */
         public List<CurrencyConversion> getCurrencyConversion() {
             if (currencyConversion == null) {
@@ -993,9 +993,9 @@ public class OTAHotelAvailRS implements Serializable {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -1009,8 +1009,8 @@ public class OTAHotelAvailRS implements Serializable {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
@@ -1030,11 +1030,11 @@ public class OTAHotelAvailRS implements Serializable {
 
             /**
              * Gets the value of the rateConversion property.
-             *
+             * 
              * @return
              *     possible object is
-             *     {@link BigDecimal }
-             *
+             *     {@link java.math.BigDecimal }
+             *     
              */
             public BigDecimal getRateConversion() {
                 return rateConversion;
@@ -1042,11 +1042,11 @@ public class OTAHotelAvailRS implements Serializable {
 
             /**
              * Sets the value of the rateConversion property.
-             *
+             * 
              * @param value
              *     allowed object is
-             *     {@link BigDecimal }
-             *
+             *     {@link java.math.BigDecimal }
+             *     
              */
             public void setRateConversion(BigDecimal value) {
                 this.rateConversion = value;
@@ -1054,11 +1054,11 @@ public class OTAHotelAvailRS implements Serializable {
 
             /**
              * Gets the value of the sourceCurrencyCode property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getSourceCurrencyCode() {
                 return sourceCurrencyCode;
@@ -1066,11 +1066,11 @@ public class OTAHotelAvailRS implements Serializable {
 
             /**
              * Sets the value of the sourceCurrencyCode property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setSourceCurrencyCode(String value) {
                 this.sourceCurrencyCode = value;
@@ -1078,11 +1078,11 @@ public class OTAHotelAvailRS implements Serializable {
 
             /**
              * Gets the value of the requestedCurrencyCode property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getRequestedCurrencyCode() {
                 return requestedCurrencyCode;
@@ -1090,11 +1090,11 @@ public class OTAHotelAvailRS implements Serializable {
 
             /**
              * Sets the value of the requestedCurrencyCode property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setRequestedCurrencyCode(String value) {
                 this.requestedCurrencyCode = value;
@@ -1102,11 +1102,11 @@ public class OTAHotelAvailRS implements Serializable {
 
             /**
              * Gets the value of the decimalPlaces property.
-             *
+             * 
              * @return
              *     possible object is
-             *     {@link BigInteger }
-             *
+             *     {@link java.math.BigInteger }
+             *     
              */
             public BigInteger getDecimalPlaces() {
                 return decimalPlaces;
@@ -1114,11 +1114,11 @@ public class OTAHotelAvailRS implements Serializable {
 
             /**
              * Sets the value of the decimalPlaces property.
-             *
+             * 
              * @param value
              *     allowed object is
-             *     {@link BigInteger }
-             *
+             *     {@link java.math.BigInteger }
+             *     
              */
             public void setDecimalPlaces(BigInteger value) {
                 this.decimalPlaces = value;
@@ -1126,11 +1126,11 @@ public class OTAHotelAvailRS implements Serializable {
 
             /**
              * Gets the value of the source property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getSource() {
                 return source;
@@ -1138,11 +1138,11 @@ public class OTAHotelAvailRS implements Serializable {
 
             /**
              * Sets the value of the source property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setSource(String value) {
                 this.source = value;
@@ -1155,9 +1155,9 @@ public class OTAHotelAvailRS implements Serializable {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -1212,8 +1212,8 @@ public class OTAHotelAvailRS implements Serializable {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -1226,25 +1226,25 @@ public class OTAHotelAvailRS implements Serializable {
 
         /**
          * Gets the value of the hotelStay property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the hotelStay property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getHotelStay().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link com.witbooking.middleware.integration.ota.model.OTAHotelAvailRS.HotelStays.HotelStay }
-         *
-         *
+         * 
+         * 
          */
         public List<HotelStay> getHotelStay() {
             if (hotelStay == null) {
@@ -1256,9 +1256,9 @@ public class OTAHotelAvailRS implements Serializable {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -1303,8 +1303,8 @@ public class OTAHotelAvailRS implements Serializable {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
@@ -1322,25 +1322,25 @@ public class OTAHotelAvailRS implements Serializable {
 
             /**
              * Gets the value of the availability property.
-             *
+             * 
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the availability property.
-             *
+             * 
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getAvailability().add(newItem);
              * </pre>
-             *
-             *
+             * 
+             * 
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link com.witbooking.middleware.integration.ota.model.OTAHotelAvailRS.HotelStays.HotelStay.Availability }
-             *
-             *
+             * 
+             * 
              */
             public List<Availability> getAvailability() {
                 if (availability == null) {
@@ -1351,11 +1351,11 @@ public class OTAHotelAvailRS implements Serializable {
 
             /**
              * Gets the value of the basicPropertyInfo property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link com.witbooking.middleware.integration.ota.model.BasicPropertyInfoType }
-             *
+             *     
              */
             public BasicPropertyInfoType getBasicPropertyInfo() {
                 return basicPropertyInfo;
@@ -1363,11 +1363,11 @@ public class OTAHotelAvailRS implements Serializable {
 
             /**
              * Sets the value of the basicPropertyInfo property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link com.witbooking.middleware.integration.ota.model.BasicPropertyInfoType }
-             *
+             *     
              */
             public void setBasicPropertyInfo(BasicPropertyInfoType value) {
                 this.basicPropertyInfo = value;
@@ -1375,25 +1375,25 @@ public class OTAHotelAvailRS implements Serializable {
 
             /**
              * Gets the value of the roomStayRPH property.
-             *
+             * 
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the roomStayRPH property.
-             *
+             * 
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getRoomStayRPH().add(newItem);
              * </pre>
-             *
-             *
+             * 
+             * 
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link String }
-             *
-             *
+             * 
+             * 
              */
             public List<String> getRoomStayRPH() {
                 if (roomStayRPH == null) {
@@ -1405,9 +1405,9 @@ public class OTAHotelAvailRS implements Serializable {
 
             /**
              * <p>Java class for anonymous complex type.
-             *
+             * 
              * <p>The following schema fragment specifies the expected content contained within this class.
-             *
+             * 
              * <pre>
              * &lt;complexType>
              *   &lt;complexContent>
@@ -1440,8 +1440,8 @@ public class OTAHotelAvailRS implements Serializable {
              *   &lt;/complexContent>
              * &lt;/complexType>
              * </pre>
-             *
-             *
+             * 
+             * 
              */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "", propOrder = {
@@ -1462,25 +1462,25 @@ public class OTAHotelAvailRS implements Serializable {
 
                 /**
                  * Gets the value of the restriction property.
-                 *
+                 * 
                  * <p>
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
                  * This is why there is not a <CODE>set</CODE> method for the restriction property.
-                 *
+                 * 
                  * <p>
                  * For example, to add a new item, do as follows:
                  * <pre>
                  *    getRestriction().add(newItem);
                  * </pre>
-                 *
-                 *
+                 * 
+                 * 
                  * <p>
                  * Objects of the following type(s) are allowed in the list
                  * {@link com.witbooking.middleware.integration.ota.model.OTAHotelAvailRS.HotelStays.HotelStay.Availability.Restriction }
-                 *
-                 *
+                 * 
+                 * 
                  */
                 public List<Restriction> getRestriction() {
                     if (restriction == null) {
@@ -1491,25 +1491,25 @@ public class OTAHotelAvailRS implements Serializable {
 
                 /**
                  * Gets the value of the status property.
-                 *
+                 * 
                  * <p>
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
                  * This is why there is not a <CODE>set</CODE> method for the status property.
-                 *
+                 * 
                  * <p>
                  * For example, to add a new item, do as follows:
                  * <pre>
                  *    getStatus().add(newItem);
                  * </pre>
-                 *
-                 *
+                 * 
+                 * 
                  * <p>
                  * Objects of the following type(s) are allowed in the list
                  * {@link String }
-                 *
-                 *
+                 * 
+                 * 
                  */
                 public List<String> getStatus() {
                     if (status == null) {
@@ -1520,11 +1520,11 @@ public class OTAHotelAvailRS implements Serializable {
 
                 /**
                  * Gets the value of the start property.
-                 *
+                 * 
                  * @return
                  *     possible object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public String getStart() {
                     return start;
@@ -1532,11 +1532,11 @@ public class OTAHotelAvailRS implements Serializable {
 
                 /**
                  * Sets the value of the start property.
-                 *
+                 * 
                  * @param value
                  *     allowed object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public void setStart(String value) {
                     this.start = value;
@@ -1544,11 +1544,11 @@ public class OTAHotelAvailRS implements Serializable {
 
                 /**
                  * Gets the value of the duration property.
-                 *
+                 * 
                  * @return
                  *     possible object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public String getDuration() {
                     return duration;
@@ -1556,11 +1556,11 @@ public class OTAHotelAvailRS implements Serializable {
 
                 /**
                  * Sets the value of the duration property.
-                 *
+                 * 
                  * @param value
                  *     allowed object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public void setDuration(String value) {
                     this.duration = value;
@@ -1568,11 +1568,11 @@ public class OTAHotelAvailRS implements Serializable {
 
                 /**
                  * Gets the value of the end property.
-                 *
+                 * 
                  * @return
                  *     possible object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public String getEnd() {
                     return end;
@@ -1580,11 +1580,11 @@ public class OTAHotelAvailRS implements Serializable {
 
                 /**
                  * Sets the value of the end property.
-                 *
+                 * 
                  * @param value
                  *     allowed object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public void setEnd(String value) {
                     this.end = value;
@@ -1593,9 +1593,9 @@ public class OTAHotelAvailRS implements Serializable {
 
                 /**
                  * <p>Java class for anonymous complex type.
-                 *
+                 * 
                  * <p>The following schema fragment specifies the expected content contained within this class.
-                 *
+                 * 
                  * <pre>
                  * &lt;complexType>
                  *   &lt;complexContent>
@@ -1616,8 +1616,8 @@ public class OTAHotelAvailRS implements Serializable {
                  *   &lt;/complexContent>
                  * &lt;/complexType>
                  * </pre>
-                 *
-                 *
+                 * 
+                 * 
                  */
                 @XmlAccessorType(XmlAccessType.FIELD)
                 @XmlType(name = "")
@@ -1633,11 +1633,11 @@ public class OTAHotelAvailRS implements Serializable {
 
                     /**
                      * Gets the value of the restrictionType property.
-                     *
+                     * 
                      * @return
                      *     possible object is
                      *     {@link String }
-                     *
+                     *     
                      */
                     public String getRestrictionType() {
                         return restrictionType;
@@ -1645,11 +1645,11 @@ public class OTAHotelAvailRS implements Serializable {
 
                     /**
                      * Sets the value of the restrictionType property.
-                     *
+                     * 
                      * @param value
                      *     allowed object is
                      *     {@link String }
-                     *
+                     *     
                      */
                     public void setRestrictionType(String value) {
                         this.restrictionType = value;
@@ -1657,11 +1657,11 @@ public class OTAHotelAvailRS implements Serializable {
 
                     /**
                      * Gets the value of the time property.
-                     *
+                     * 
                      * @return
                      *     possible object is
-                     *     {@link BigInteger }
-                     *
+                     *     {@link java.math.BigInteger }
+                     *     
                      */
                     public BigInteger getTime() {
                         return time;
@@ -1669,11 +1669,11 @@ public class OTAHotelAvailRS implements Serializable {
 
                     /**
                      * Sets the value of the time property.
-                     *
+                     * 
                      * @param value
                      *     allowed object is
-                     *     {@link BigInteger }
-                     *
+                     *     {@link java.math.BigInteger }
+                     *     
                      */
                     public void setTime(BigInteger value) {
                         this.time = value;
@@ -1681,11 +1681,11 @@ public class OTAHotelAvailRS implements Serializable {
 
                     /**
                      * Gets the value of the timeUnit property.
-                     *
+                     * 
                      * @return
                      *     possible object is
                      *     {@link com.witbooking.middleware.integration.ota.model.TimeUnitType }
-                     *
+                     *     
                      */
                     public TimeUnitType getTimeUnit() {
                         return timeUnit;
@@ -1693,11 +1693,11 @@ public class OTAHotelAvailRS implements Serializable {
 
                     /**
                      * Sets the value of the timeUnit property.
-                     *
+                     * 
                      * @param value
                      *     allowed object is
                      *     {@link com.witbooking.middleware.integration.ota.model.TimeUnitType }
-                     *
+                     *     
                      */
                     public void setTimeUnit(TimeUnitType value) {
                         this.timeUnit = value;
@@ -1714,9 +1714,9 @@ public class OTAHotelAvailRS implements Serializable {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -1756,8 +1756,8 @@ public class OTAHotelAvailRS implements Serializable {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -1779,25 +1779,25 @@ public class OTAHotelAvailRS implements Serializable {
 
         /**
          * Gets the value of the roomStay property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the roomStay property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getRoomStay().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link com.witbooking.middleware.integration.ota.model.OTAHotelAvailRS.RoomStays.RoomStay }
-         *
-         *
+         * 
+         * 
          */
         public List<RoomStay> getRoomStay() {
             if (roomStay == null) {
@@ -1812,11 +1812,11 @@ public class OTAHotelAvailRS implements Serializable {
 
         /**
          * Gets the value of the moreIndicator property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getMoreIndicator() {
             return moreIndicator;
@@ -1824,11 +1824,11 @@ public class OTAHotelAvailRS implements Serializable {
 
         /**
          * Sets the value of the moreIndicator property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setMoreIndicator(String value) {
             this.moreIndicator = value;
@@ -1837,9 +1837,9 @@ public class OTAHotelAvailRS implements Serializable {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -1868,8 +1868,8 @@ public class OTAHotelAvailRS implements Serializable {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
@@ -1903,11 +1903,11 @@ public class OTAHotelAvailRS implements Serializable {
 
             /**
              * Gets the value of the reference property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link com.witbooking.middleware.integration.ota.model.OTAHotelAvailRS.RoomStays.RoomStay.Reference }
-             *
+             *     
              */
             public Reference getReference() {
                 return reference;
@@ -1915,11 +1915,11 @@ public class OTAHotelAvailRS implements Serializable {
 
             /**
              * Sets the value of the reference property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link com.witbooking.middleware.integration.ota.model.OTAHotelAvailRS.RoomStays.RoomStay.Reference }
-             *
+             *     
              */
             public void setReference(Reference value) {
                 this.reference = value;
@@ -1927,11 +1927,11 @@ public class OTAHotelAvailRS implements Serializable {
 
             /**
              * Gets the value of the serviceRPHs property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link com.witbooking.middleware.integration.ota.model.ServiceRPHsType }
-             *
+             *     
              */
             public ServiceRPHsType getServiceRPHs() {
                 return serviceRPHs;
@@ -1939,11 +1939,11 @@ public class OTAHotelAvailRS implements Serializable {
 
             /**
              * Sets the value of the serviceRPHs property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link com.witbooking.middleware.integration.ota.model.ServiceRPHsType }
-             *
+             *     
              */
             public void setServiceRPHs(ServiceRPHsType value) {
                 this.serviceRPHs = value;
@@ -1951,11 +1951,11 @@ public class OTAHotelAvailRS implements Serializable {
 
             /**
              * Gets the value of the isAlternate property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link Boolean }
-             *
+             *     
              */
             public Boolean isIsAlternate() {
                 return isAlternate;
@@ -1963,11 +1963,11 @@ public class OTAHotelAvailRS implements Serializable {
 
             /**
              * Sets the value of the isAlternate property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link Boolean }
-             *
+             *     
              */
             public void setIsAlternate(Boolean value) {
                 this.isAlternate = value;
@@ -1975,11 +1975,11 @@ public class OTAHotelAvailRS implements Serializable {
 
             /**
              * Gets the value of the availabilityStatus property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link com.witbooking.middleware.integration.ota.model.RateIndicatorType }
-             *
+             *     
              */
             public RateIndicatorType getAvailabilityStatus() {
                 return availabilityStatus;
@@ -1987,11 +1987,11 @@ public class OTAHotelAvailRS implements Serializable {
 
             /**
              * Sets the value of the availabilityStatus property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link com.witbooking.middleware.integration.ota.model.RateIndicatorType }
-             *
+             *     
              */
             public void setAvailabilityStatus(RateIndicatorType value) {
                 this.availabilityStatus = value;
@@ -1999,11 +1999,11 @@ public class OTAHotelAvailRS implements Serializable {
 
             /**
              * Gets the value of the roomStayCandidateRPH property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getRoomStayCandidateRPH() {
                 return roomStayCandidateRPH;
@@ -2011,11 +2011,11 @@ public class OTAHotelAvailRS implements Serializable {
 
             /**
              * Sets the value of the roomStayCandidateRPH property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setRoomStayCandidateRPH(String value) {
                 this.roomStayCandidateRPH = value;
@@ -2023,11 +2023,11 @@ public class OTAHotelAvailRS implements Serializable {
 
             /**
              * Gets the value of the moreDataEchoToken property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getMoreDataEchoToken() {
                 return moreDataEchoToken;
@@ -2035,11 +2035,11 @@ public class OTAHotelAvailRS implements Serializable {
 
             /**
              * Sets the value of the moreDataEchoToken property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setMoreDataEchoToken(String value) {
                 this.moreDataEchoToken = value;
@@ -2047,11 +2047,11 @@ public class OTAHotelAvailRS implements Serializable {
 
             /**
              * Gets the value of the infoSource property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getInfoSource() {
                 return infoSource;
@@ -2059,11 +2059,11 @@ public class OTAHotelAvailRS implements Serializable {
 
             /**
              * Sets the value of the infoSource property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setInfoSource(String value) {
                 this.infoSource = value;
@@ -2071,11 +2071,11 @@ public class OTAHotelAvailRS implements Serializable {
 
             /**
              * Gets the value of the rph property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getRPH() {
                 return rph;
@@ -2083,11 +2083,11 @@ public class OTAHotelAvailRS implements Serializable {
 
             /**
              * Sets the value of the rph property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setRPH(String value) {
                 this.rph = value;
@@ -2095,11 +2095,11 @@ public class OTAHotelAvailRS implements Serializable {
 
             /**
              * Gets the value of the availableIndicator property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link Boolean }
-             *
+             *     
              */
             public Boolean isAvailableIndicator() {
                 return availableIndicator;
@@ -2107,11 +2107,11 @@ public class OTAHotelAvailRS implements Serializable {
 
             /**
              * Sets the value of the availableIndicator property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link Boolean }
-             *
+             *     
              */
             public void setAvailableIndicator(Boolean value) {
                 this.availableIndicator = value;
@@ -2119,11 +2119,11 @@ public class OTAHotelAvailRS implements Serializable {
 
             /**
              * Gets the value of the responseType property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getResponseType() {
                 return responseType;
@@ -2131,11 +2131,11 @@ public class OTAHotelAvailRS implements Serializable {
 
             /**
              * Sets the value of the responseType property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setResponseType(String value) {
                 this.responseType = value;
@@ -2144,9 +2144,9 @@ public class OTAHotelAvailRS implements Serializable {
 
             /**
              * <p>Java class for anonymous complex type.
-             *
+             * 
              * <p>The following schema fragment specifies the expected content contained within this class.
-             *
+             * 
              * <pre>
              * &lt;complexType>
              *   &lt;complexContent>
@@ -2156,8 +2156,8 @@ public class OTAHotelAvailRS implements Serializable {
              *   &lt;/complexContent>
              * &lt;/complexType>
              * </pre>
-             *
-             *
+             * 
+             * 
              */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "")
@@ -2171,11 +2171,11 @@ public class OTAHotelAvailRS implements Serializable {
 
                 /**
                  * Gets the value of the dateTime property.
-                 *
+                 * 
                  * @return
                  *     possible object is
-                 *     {@link XMLGregorianCalendar }
-                 *
+                 *     {@link javax.xml.datatype.XMLGregorianCalendar }
+                 *     
                  */
                 public XMLGregorianCalendar getDateTime() {
                     return dateTime;
@@ -2183,10 +2183,10 @@ public class OTAHotelAvailRS implements Serializable {
 
                 /**
                  * Sets the value of the dateTime property.
-                 *
+                 * 
                  * @param value
                  *     allowed object is
-                 *     {@link XMLGregorianCalendar }
+                 *     {@link javax.xml.datatype.XMLGregorianCalendar }
                  *     
                  */
                 public void setDateTime(XMLGregorianCalendar value) {

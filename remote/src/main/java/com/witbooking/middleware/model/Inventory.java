@@ -24,7 +24,7 @@ import java.util.List;
  * @date 24-ene-2013
  */
 
-public class Inventory implements Serializable, DataValueHolder {
+public class Inventory implements Serializable, DataValueHolder, Comparable<Inventory> {
 
     /**
      * Constant serialized ID used for compatibility.
@@ -249,6 +249,24 @@ public class Inventory implements Serializable, DataValueHolder {
         this.maxNotice = maxNotice;
     }
 
+    @Override
+    public boolean isActive() {
+        return visible;
+    }
+
+    @Override
+    public List<DataValue> getDataValues() {
+        List<DataValue> dataValues = new ArrayList<>();
+        dataValues.add(rate);
+        dataValues.add(availability);
+        dataValues.add(lock);
+        dataValues.add(minStay);
+        dataValues.add(maxStay);
+        dataValues.add(minNotice);
+        dataValues.add(maxNotice);
+        return dataValues;
+    }
+
     public String getAccessCode() {
         return accessCode;
     }
@@ -323,6 +341,7 @@ public class Inventory implements Serializable, DataValueHolder {
             discountList.add(discount);
         }
     }
+
     public List<Service> getServiceList() {
         return serviceList;
     }
@@ -452,6 +471,23 @@ public class Inventory implements Serializable, DataValueHolder {
             return false;
         }
         return true;
+    }
+
+    @Override
+    public int compareTo(Inventory o) {
+        int accomOrder = this.accommodation.compareTo(o.accommodation);
+        if (accomOrder == 0) {
+            int confOrder = this.configuration.compareTo(o.configuration);
+            if (confOrder == 0) {
+                int mealOrder = this.mealPlan.compareTo(o.mealPlan);
+                if (mealOrder == 0) {
+                    int condOrder = this.condition.compareTo(o.condition);
+                    if (condOrder == 0) {
+                        return this.ticker.compareTo(o.ticker);
+                    } else return condOrder;
+                } else return mealOrder;
+            } else return confOrder;
+        } else return accomOrder;
     }
 
 }

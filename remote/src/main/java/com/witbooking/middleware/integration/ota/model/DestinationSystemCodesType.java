@@ -46,7 +46,7 @@ import java.util.List;
 public class DestinationSystemCodesType {
 
     @XmlElement(name = "DestinationSystemCode", required = true)
-    protected List<DestinationSystemCode> destinationSystemCode;
+    protected List<DestinationSystemCodesType.DestinationSystemCode> destinationSystemCode;
 
     /**
      * Gets the value of the destinationSystemCode property.
@@ -68,9 +68,9 @@ public class DestinationSystemCodesType {
      * Objects of the following type(s) are allowed in the list
      * {@link DestinationSystemCodesType.DestinationSystemCode }
      */
-    public List<DestinationSystemCode> getDestinationSystemCode() {
+    public List<DestinationSystemCodesType.DestinationSystemCode> getDestinationSystemCode() {
         if (destinationSystemCode == null) {
-            destinationSystemCode = new ArrayList<DestinationSystemCode>();
+            destinationSystemCode = new ArrayList<DestinationSystemCodesType.DestinationSystemCode>();
         }
         return this.destinationSystemCode;
     }

@@ -8,10 +8,15 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.datatype.XMLGregorianCalendar;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
@@ -50,33 +55,33 @@ import java.util.List;
 public class TextItemsType {
 
     @XmlElement(name = "TextItem", required = true)
-    protected List<TextItem> textItem;
+    protected List<TextItemsType.TextItem> textItem;
 
     /**
      * Gets the value of the textItem property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the textItem property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getTextItem().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link TextItemsType.TextItem }
-     *
-     *
+     * 
+     * 
      */
-    public List<TextItem> getTextItem() {
+    public List<TextItemsType.TextItem> getTextItem() {
         if (textItem == null) {
-            textItem = new ArrayList<TextItem>();
+            textItem = new ArrayList<TextItemsType.TextItem>();
         }
         return this.textItem;
     }

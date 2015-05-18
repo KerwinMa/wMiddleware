@@ -8,11 +8,17 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.XmlValue;
 
 
 /**
@@ -88,7 +94,7 @@ public class PropertyValueMatchType
 {
 
     @XmlElement(name = "SearchValueMatch")
-    protected List<SearchValueMatch> searchValueMatch;
+    protected List<PropertyValueMatchType.SearchValueMatch> searchValueMatch;
     @XmlElement(name = "Amenities")
     protected PropertyValueMatchType.Amenities amenities;
     @XmlElement(name = "RateRange")
@@ -102,40 +108,40 @@ public class PropertyValueMatchType
 
     /**
      * Gets the value of the searchValueMatch property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the searchValueMatch property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getSearchValueMatch().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link PropertyValueMatchType.SearchValueMatch }
-     *
-     *
+     * 
+     * 
      */
-    public List<SearchValueMatch> getSearchValueMatch() {
+    public List<PropertyValueMatchType.SearchValueMatch> getSearchValueMatch() {
         if (searchValueMatch == null) {
-            searchValueMatch = new ArrayList<SearchValueMatch>();
+            searchValueMatch = new ArrayList<PropertyValueMatchType.SearchValueMatch>();
         }
         return this.searchValueMatch;
     }
 
     /**
      * Gets the value of the amenities property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link PropertyValueMatchType.Amenities }
-     *
+     *     
      */
     public PropertyValueMatchType.Amenities getAmenities() {
         return amenities;
@@ -143,11 +149,11 @@ public class PropertyValueMatchType
 
     /**
      * Sets the value of the amenities property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link PropertyValueMatchType.Amenities }
-     *
+     *     
      */
     public void setAmenities(PropertyValueMatchType.Amenities value) {
         this.amenities = value;
@@ -155,11 +161,11 @@ public class PropertyValueMatchType
 
     /**
      * Gets the value of the rateRange property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link PropertyValueMatchType.RateRange }
-     *
+     *     
      */
     public PropertyValueMatchType.RateRange getRateRange() {
         return rateRange;
@@ -167,11 +173,11 @@ public class PropertyValueMatchType
 
     /**
      * Sets the value of the rateRange property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link PropertyValueMatchType.RateRange }
-     *
+     *     
      */
     public void setRateRange(PropertyValueMatchType.RateRange value) {
         this.rateRange = value;
@@ -179,11 +185,11 @@ public class PropertyValueMatchType
 
     /**
      * Gets the value of the moreDataEchoToken property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getMoreDataEchoToken() {
         return moreDataEchoToken;
@@ -191,11 +197,11 @@ public class PropertyValueMatchType
 
     /**
      * Sets the value of the moreDataEchoToken property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setMoreDataEchoToken(String value) {
         this.moreDataEchoToken = value;
@@ -203,11 +209,11 @@ public class PropertyValueMatchType
 
     /**
      * Gets the value of the sameCountryInd property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link Boolean }
-     *
+     *     
      */
     public Boolean isSameCountryInd() {
         return sameCountryInd;
@@ -215,11 +221,11 @@ public class PropertyValueMatchType
 
     /**
      * Sets the value of the sameCountryInd property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *
+     *     
      */
     public void setSameCountryInd(Boolean value) {
         this.sameCountryInd = value;
@@ -227,11 +233,11 @@ public class PropertyValueMatchType
 
     /**
      * Gets the value of the availabilityStatus property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link RateIndicatorType }
-     *
+     *     
      */
     public RateIndicatorType getAvailabilityStatus() {
         return availabilityStatus;
@@ -239,11 +245,11 @@ public class PropertyValueMatchType
 
     /**
      * Sets the value of the availabilityStatus property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link RateIndicatorType }
-     *
+     *     
      */
     public void setAvailabilityStatus(RateIndicatorType value) {
         this.availabilityStatus = value;
@@ -252,9 +258,9 @@ public class PropertyValueMatchType
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -274,8 +280,8 @@ public class PropertyValueMatchType
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -284,33 +290,33 @@ public class PropertyValueMatchType
     public static class Amenities {
 
         @XmlElement(name = "Amenity", required = true)
-        protected List<Amenity> amenity;
+        protected List<PropertyValueMatchType.Amenities.Amenity> amenity;
 
         /**
          * Gets the value of the amenity property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the amenity property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getAmenity().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link PropertyValueMatchType.Amenities.Amenity }
-         *
-         *
+         * 
+         * 
          */
-        public List<Amenity> getAmenity() {
+        public List<PropertyValueMatchType.Amenities.Amenity> getAmenity() {
             if (amenity == null) {
-                amenity = new ArrayList<Amenity>();
+                amenity = new ArrayList<PropertyValueMatchType.Amenities.Amenity>();
             }
             return this.amenity;
         }

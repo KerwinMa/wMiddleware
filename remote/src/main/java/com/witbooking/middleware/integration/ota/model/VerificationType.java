@@ -8,13 +8,19 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import javax.xml.datatype.XMLGregorianCalendar;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
@@ -134,13 +140,13 @@ public class VerificationType {
     @XmlElement(name = "AddressInfo")
     protected AddressInfoType addressInfo;
     @XmlElement(name = "CustLoyalty")
-    protected List<CustLoyalty> custLoyalty;
+    protected List<VerificationType.CustLoyalty> custLoyalty;
     @XmlElement(name = "Vendor")
     protected List<CompanyNameType> vendor;
     @XmlElement(name = "ReservationTimeSpan")
     protected VerificationType.ReservationTimeSpan reservationTimeSpan;
     @XmlElement(name = "AssociatedQuantity")
-    protected List<AssociatedQuantity> associatedQuantity;
+    protected List<VerificationType.AssociatedQuantity> associatedQuantity;
     @XmlElement(name = "StartLocation")
     protected VerificationType.StartLocation startLocation;
     @XmlElement(name = "EndLocation")
@@ -150,11 +156,11 @@ public class VerificationType {
 
     /**
      * Gets the value of the personName property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VerificationType.PersonName }
-     *
+     *     
      */
     public VerificationType.PersonName getPersonName() {
         return personName;
@@ -162,11 +168,11 @@ public class VerificationType {
 
     /**
      * Sets the value of the personName property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VerificationType.PersonName }
-     *
+     *     
      */
     public void setPersonName(VerificationType.PersonName value) {
         this.personName = value;
@@ -174,11 +180,11 @@ public class VerificationType {
 
     /**
      * Gets the value of the email property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link EmailType }
-     *
+     *     
      */
     public EmailType getEmail() {
         return email;
@@ -186,11 +192,11 @@ public class VerificationType {
 
     /**
      * Sets the value of the email property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link EmailType }
-     *
+     *     
      */
     public void setEmail(EmailType value) {
         this.email = value;
@@ -198,11 +204,11 @@ public class VerificationType {
 
     /**
      * Gets the value of the telephoneInfo property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VerificationType.TelephoneInfo }
-     *
+     *     
      */
     public VerificationType.TelephoneInfo getTelephoneInfo() {
         return telephoneInfo;
@@ -210,11 +216,11 @@ public class VerificationType {
 
     /**
      * Sets the value of the telephoneInfo property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VerificationType.TelephoneInfo }
-     *
+     *     
      */
     public void setTelephoneInfo(VerificationType.TelephoneInfo value) {
         this.telephoneInfo = value;
@@ -222,11 +228,11 @@ public class VerificationType {
 
     /**
      * Gets the value of the paymentCard property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link PaymentCardType }
-     *
+     *     
      */
     public PaymentCardType getPaymentCard() {
         return paymentCard;
@@ -234,11 +240,11 @@ public class VerificationType {
 
     /**
      * Sets the value of the paymentCard property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link PaymentCardType }
-     *
+     *     
      */
     public void setPaymentCard(PaymentCardType value) {
         this.paymentCard = value;
@@ -246,11 +252,11 @@ public class VerificationType {
 
     /**
      * Gets the value of the addressInfo property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link AddressInfoType }
-     *
+     *     
      */
     public AddressInfoType getAddressInfo() {
         return addressInfo;
@@ -258,11 +264,11 @@ public class VerificationType {
 
     /**
      * Sets the value of the addressInfo property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link AddressInfoType }
-     *
+     *     
      */
     public void setAddressInfo(AddressInfoType value) {
         this.addressInfo = value;
@@ -270,54 +276,54 @@ public class VerificationType {
 
     /**
      * Gets the value of the custLoyalty property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the custLoyalty property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getCustLoyalty().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link VerificationType.CustLoyalty }
-     *
-     *
+     * 
+     * 
      */
-    public List<CustLoyalty> getCustLoyalty() {
+    public List<VerificationType.CustLoyalty> getCustLoyalty() {
         if (custLoyalty == null) {
-            custLoyalty = new ArrayList<CustLoyalty>();
+            custLoyalty = new ArrayList<VerificationType.CustLoyalty>();
         }
         return this.custLoyalty;
     }
 
     /**
      * Gets the value of the vendor property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the vendor property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getVendor().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link CompanyNameType }
-     *
-     *
+     * 
+     * 
      */
     public List<CompanyNameType> getVendor() {
         if (vendor == null) {
@@ -328,11 +334,11 @@ public class VerificationType {
 
     /**
      * Gets the value of the reservationTimeSpan property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VerificationType.ReservationTimeSpan }
-     *
+     *     
      */
     public VerificationType.ReservationTimeSpan getReservationTimeSpan() {
         return reservationTimeSpan;
@@ -340,11 +346,11 @@ public class VerificationType {
 
     /**
      * Sets the value of the reservationTimeSpan property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VerificationType.ReservationTimeSpan }
-     *
+     *     
      */
     public void setReservationTimeSpan(VerificationType.ReservationTimeSpan value) {
         this.reservationTimeSpan = value;
@@ -352,40 +358,40 @@ public class VerificationType {
 
     /**
      * Gets the value of the associatedQuantity property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the associatedQuantity property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getAssociatedQuantity().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link VerificationType.AssociatedQuantity }
-     *
-     *
+     * 
+     * 
      */
-    public List<AssociatedQuantity> getAssociatedQuantity() {
+    public List<VerificationType.AssociatedQuantity> getAssociatedQuantity() {
         if (associatedQuantity == null) {
-            associatedQuantity = new ArrayList<AssociatedQuantity>();
+            associatedQuantity = new ArrayList<VerificationType.AssociatedQuantity>();
         }
         return this.associatedQuantity;
     }
 
     /**
      * Gets the value of the startLocation property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VerificationType.StartLocation }
-     *
+     *     
      */
     public VerificationType.StartLocation getStartLocation() {
         return startLocation;
@@ -393,11 +399,11 @@ public class VerificationType {
 
     /**
      * Sets the value of the startLocation property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VerificationType.StartLocation }
-     *
+     *     
      */
     public void setStartLocation(VerificationType.StartLocation value) {
         this.startLocation = value;
@@ -405,11 +411,11 @@ public class VerificationType {
 
     /**
      * Gets the value of the endLocation property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VerificationType.EndLocation }
-     *
+     *     
      */
     public VerificationType.EndLocation getEndLocation() {
         return endLocation;
@@ -417,11 +423,11 @@ public class VerificationType {
 
     /**
      * Sets the value of the endLocation property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VerificationType.EndLocation }
-     *
+     *     
      */
     public void setEndLocation(VerificationType.EndLocation value) {
         this.endLocation = value;

@@ -11,14 +11,11 @@ import com.witbooking.middleware.db.DAOUtil;
 import com.witbooking.middleware.db.DBConnection;
 import com.witbooking.middleware.db.handlers.EmailDataDBHandler;
 import com.witbooking.middleware.db.handlers.ReservationDBHandler;
-import com.witbooking.middleware.exceptions.EmailDataException;
-import com.witbooking.middleware.exceptions.ExternalFileException;
-import com.witbooking.middleware.exceptions.NonexistentValueException;
+import com.witbooking.middleware.exceptions.*;
 import com.witbooking.middleware.exceptions.db.DBAccessException;
-import com.witbooking.middleware.integration.mandrill.model.Event;
+import com.witbooking.middleware.integration.mandrill.model.*;
 import com.witbooking.middleware.integration.mandrill.model.Message;
-import com.witbooking.middleware.model.EmailData;
-import com.witbooking.middleware.model.EmailEvent;
+import com.witbooking.middleware.model.*;
 import com.witbooking.middleware.resources.DBProperties;
 
 import javax.ejb.Stateless;
@@ -51,7 +48,7 @@ public class EmailDataBean implements EmailDataBeanLocal {
         try {
             emailDataDBHandler = new EmailDataDBHandler();
             EmailData emailData=null;
-            Event.EventType newEventType= Event.EventType.getFromValue(eventType);
+            Event.EventType newEventType=Event.EventType.getFromValue(eventType);
             emailData=emailDataDBHandler.getEmailData(emailID);
             EmailEvent emailEvent=new EmailEvent();
             /*

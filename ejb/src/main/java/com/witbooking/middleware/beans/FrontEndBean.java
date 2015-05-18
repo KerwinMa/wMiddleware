@@ -90,10 +90,10 @@ public class FrontEndBean implements FrontEndBeanRemote, FrontEndBeanLocal {
     }
 
 
-    public DBCredentials getTestDBCredentials(String hotelTicker) throws FrontEndException {
+    public DBCredentials getTestDBCredentials(String hotelTicker) throws FrontEndException{
         DBCredentials dbCredential = null;
         try {
-            dbCredential= DBProperties.getDBSupportByTicker(SQLInstructions.WitMetaDataDBHandler.DB_WITMETADATA_TICKER);
+            dbCredential=DBProperties.getDBSupportByTicker(SQLInstructions.WitMetaDataDBHandler.DB_WITMETADATA_TICKER);
             return DBProperties.getDBCustomerByTicker(hotelTicker);
         } catch (MiddlewareException ex) {
             logger.error("Error getting the DBCredential for the Hotel '" + hotelTicker + "': " + ex.getMessage());

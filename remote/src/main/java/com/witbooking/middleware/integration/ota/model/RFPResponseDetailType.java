@@ -8,10 +8,14 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.datatype.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.Duration;
 
 
 /**
@@ -75,11 +79,11 @@ public class RFPResponseDetailType {
 
     /**
      * Gets the value of the comments property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link RFPResponseDetailType.Comments }
-     *
+     *     
      */
     public RFPResponseDetailType.Comments getComments() {
         return comments;
@@ -87,11 +91,11 @@ public class RFPResponseDetailType {
 
     /**
      * Sets the value of the comments property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link RFPResponseDetailType.Comments }
-     *
+     *     
      */
     public void setComments(RFPResponseDetailType.Comments value) {
         this.comments = value;

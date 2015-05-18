@@ -4,6 +4,8 @@ import com.witbooking.middleware.integration.mandrill.model.Event;
 import com.witbooking.middleware.integration.mandrill.model.Message;
 import org.apache.log4j.Logger;
 
+import java.util.Date;
+
 /**
  * Created by mongoose on 1/21/15.
  */

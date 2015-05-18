@@ -1,5 +1,8 @@
 package com.witbooking.middleware.model.dynamicPriceVariation;
 
+import com.witbooking.middleware.utils.DateUtil;
+import org.joda.time.DateTime;
+import org.joda.time.format.DateTimeFormat;
 import org.mvel2.MVEL;
 
 import java.io.Serializable;
@@ -21,6 +24,7 @@ public class BookingPriceRule implements Evaluable, Serializable, Comparable {
     private Double priceVariation;
     private boolean percentage;
     private boolean stackable;
+    private boolean active;
     private List<Condition> conditions;
     private int order;
 
@@ -120,7 +124,7 @@ public class BookingPriceRule implements Evaluable, Serializable, Comparable {
                 expressionPredicates.put(conditionID, true);
                 continue;
             }
-/*
+
             boolean ruleEvaluation=condition.evaluate(arguments);
             String conditionInfo=null;
             String argumentInfo=null;
@@ -136,12 +140,12 @@ public class BookingPriceRule implements Evaluable, Serializable, Comparable {
                 conditionInfo+=((HourRangeCondition)condition).getEnd().toString();
                 argumentInfo= DateTimeFormat.forPattern("HH:mm:ss").print(((DateTime) arguments.get(DatetimeRangeCondition.ARGUMENT_CURRENT_TIME)));;
             }else if(condition.getClass().equals(DatetimeRangeCondition.class)){
-                conditionInfo= DateUtil.calendarFormat( ((DatetimeRangeCondition) condition).getStart().toDate() )+" - ";
-                conditionInfo+=DateUtil.calendarFormat( ((DatetimeRangeCondition) condition).getEnd().toDate() );
+                conditionInfo= DateUtil.timestampFormat(((DatetimeRangeCondition) condition).getStart().toDate())+" - ";
+                conditionInfo+=DateUtil.timestampFormat(((DatetimeRangeCondition) condition).getEnd().toDate());
                 if(condition.isType(ConditionType.CONTRACT)){
-                    argumentInfo=DateUtil.calendarFormat(((DateTime)arguments.get(DatetimeRangeCondition.ARGUMENT_CURRENT_TIME)).toDate());
+                    argumentInfo=DateUtil.timestampFormat(((DateTime) arguments.get(DatetimeRangeCondition.ARGUMENT_CURRENT_TIME)).toDate());
                 }else if(condition.isType(ConditionType.STAY)){
-                    argumentInfo=DateUtil.calendarFormat(((DateTime)arguments.get(DatetimeRangeCondition.ARGUMENT_COMPARISON_DATE)).toDate());
+                    argumentInfo=DateUtil.timestampFormat(((DateTime)arguments.get(DatetimeRangeCondition.ARGUMENT_COMPARISON_DATE)).toDate());
                 }
             }else if(condition.getClass().equals(CountryOfOriginCondition.class)){
                 conditionInfo=((CountryOfOriginCondition)condition).getCountries().toString();
@@ -155,7 +159,7 @@ public class BookingPriceRule implements Evaluable, Serializable, Comparable {
                 logger.debug("Passed Condition '" + condition.getClass().getSimpleName() + "' for type: " + conditionInfo + "  " + condition.getConditionType() + "  with arguments " + argumentInfo);
             }else{
                 logger.debug("Failed Condition '" + condition.getClass().getSimpleName() + "' for type: " + conditionInfo + "  " + condition.getConditionType() + "  with arguments " + argumentInfo);
-            }*/
+            }
             expressionPredicates.put(conditionID, condition.evaluate(arguments));
         };
 

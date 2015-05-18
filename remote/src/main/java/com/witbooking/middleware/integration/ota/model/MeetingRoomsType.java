@@ -8,11 +8,16 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -104,7 +109,7 @@ import java.util.List;
 public class MeetingRoomsType {
 
     @XmlElement(name = "MeetingRoom")
-    protected List<MeetingRoom> meetingRoom;
+    protected List<MeetingRoomsType.MeetingRoom> meetingRoom;
     @XmlAttribute(name = "MeetingRoomCount")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger meetingRoomCount;
@@ -141,40 +146,40 @@ public class MeetingRoomsType {
 
     /**
      * Gets the value of the meetingRoom property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the meetingRoom property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getMeetingRoom().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link MeetingRoomsType.MeetingRoom }
-     *
-     *
+     * 
+     * 
      */
-    public List<MeetingRoom> getMeetingRoom() {
+    public List<MeetingRoomsType.MeetingRoom> getMeetingRoom() {
         if (meetingRoom == null) {
-            meetingRoom = new ArrayList<MeetingRoom>();
+            meetingRoom = new ArrayList<MeetingRoomsType.MeetingRoom>();
         }
         return this.meetingRoom;
     }
 
     /**
      * Gets the value of the meetingRoomCount property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link BigInteger }
-     *
+     *     
      */
     public BigInteger getMeetingRoomCount() {
         return meetingRoomCount;
@@ -182,11 +187,11 @@ public class MeetingRoomsType {
 
     /**
      * Sets the value of the meetingRoomCount property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link BigInteger }
-     *
+     *     
      */
     public void setMeetingRoomCount(BigInteger value) {
         this.meetingRoomCount = value;
@@ -194,11 +199,11 @@ public class MeetingRoomsType {
 
     /**
      * Gets the value of the smallestRoomSpace property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link BigInteger }
-     *
+     *     
      */
     public BigInteger getSmallestRoomSpace() {
         return smallestRoomSpace;
@@ -206,11 +211,11 @@ public class MeetingRoomsType {
 
     /**
      * Sets the value of the smallestRoomSpace property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link BigInteger }
-     *
+     *     
      */
     public void setSmallestRoomSpace(BigInteger value) {
         this.smallestRoomSpace = value;
@@ -218,11 +223,11 @@ public class MeetingRoomsType {
 
     /**
      * Gets the value of the largestRoomSpace property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link BigInteger }
-     *
+     *     
      */
     public BigInteger getLargestRoomSpace() {
         return largestRoomSpace;
@@ -230,11 +235,11 @@ public class MeetingRoomsType {
 
     /**
      * Sets the value of the largestRoomSpace property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link BigInteger }
-     *
+     *     
      */
     public void setLargestRoomSpace(BigInteger value) {
         this.largestRoomSpace = value;
@@ -242,11 +247,11 @@ public class MeetingRoomsType {
 
     /**
      * Gets the value of the totalRoomSpace property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link BigInteger }
-     *
+     *     
      */
     public BigInteger getTotalRoomSpace() {
         return totalRoomSpace;
@@ -254,11 +259,11 @@ public class MeetingRoomsType {
 
     /**
      * Sets the value of the totalRoomSpace property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link BigInteger }
-     *
+     *     
      */
     public void setTotalRoomSpace(BigInteger value) {
         this.totalRoomSpace = value;
@@ -266,11 +271,11 @@ public class MeetingRoomsType {
 
     /**
      * Gets the value of the largestSeatingCapacity property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link BigInteger }
-     *
+     *     
      */
     public BigInteger getLargestSeatingCapacity() {
         return largestSeatingCapacity;
@@ -278,11 +283,11 @@ public class MeetingRoomsType {
 
     /**
      * Sets the value of the largestSeatingCapacity property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link BigInteger }
-     *
+     *     
      */
     public void setLargestSeatingCapacity(BigInteger value) {
         this.largestSeatingCapacity = value;
@@ -290,11 +295,11 @@ public class MeetingRoomsType {
 
     /**
      * Gets the value of the secondLargestSeatingCapacity property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link BigInteger }
-     *
+     *     
      */
     public BigInteger getSecondLargestSeatingCapacity() {
         return secondLargestSeatingCapacity;
@@ -302,11 +307,11 @@ public class MeetingRoomsType {
 
     /**
      * Sets the value of the secondLargestSeatingCapacity property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link BigInteger }
-     *
+     *     
      */
     public void setSecondLargestSeatingCapacity(BigInteger value) {
         this.secondLargestSeatingCapacity = value;
@@ -314,11 +319,11 @@ public class MeetingRoomsType {
 
     /**
      * Gets the value of the smallestSeatingCapacity property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link BigInteger }
-     *
+     *     
      */
     public BigInteger getSmallestSeatingCapacity() {
         return smallestSeatingCapacity;
@@ -326,11 +331,11 @@ public class MeetingRoomsType {
 
     /**
      * Sets the value of the smallestSeatingCapacity property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link BigInteger }
-     *
+     *     
      */
     public void setSmallestSeatingCapacity(BigInteger value) {
         this.smallestSeatingCapacity = value;
@@ -338,11 +343,11 @@ public class MeetingRoomsType {
 
     /**
      * Gets the value of the totalRoomSeatingCapacity property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link BigInteger }
-     *
+     *     
      */
     public BigInteger getTotalRoomSeatingCapacity() {
         return totalRoomSeatingCapacity;
@@ -350,11 +355,11 @@ public class MeetingRoomsType {
 
     /**
      * Sets the value of the totalRoomSeatingCapacity property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link BigInteger }
-     *
+     *     
      */
     public void setTotalRoomSeatingCapacity(BigInteger value) {
         this.totalRoomSeatingCapacity = value;
@@ -362,11 +367,11 @@ public class MeetingRoomsType {
 
     /**
      * Gets the value of the largestRoomHeight property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link BigInteger }
-     *
+     *     
      */
     public BigInteger getLargestRoomHeight() {
         return largestRoomHeight;
@@ -374,11 +379,11 @@ public class MeetingRoomsType {
 
     /**
      * Sets the value of the largestRoomHeight property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link BigInteger }
-     *
+     *     
      */
     public void setLargestRoomHeight(BigInteger value) {
         this.largestRoomHeight = value;
@@ -386,11 +391,11 @@ public class MeetingRoomsType {
 
     /**
      * Gets the value of the unitOfMeasureQuantity property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link BigDecimal }
-     *
+     *     
      */
     public BigDecimal getUnitOfMeasureQuantity() {
         return unitOfMeasureQuantity;
@@ -398,11 +403,11 @@ public class MeetingRoomsType {
 
     /**
      * Sets the value of the unitOfMeasureQuantity property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link BigDecimal }
-     *
+     *     
      */
     public void setUnitOfMeasureQuantity(BigDecimal value) {
         this.unitOfMeasureQuantity = value;
@@ -410,11 +415,11 @@ public class MeetingRoomsType {
 
     /**
      * Gets the value of the unitOfMeasure property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getUnitOfMeasure() {
         return unitOfMeasure;
@@ -422,11 +427,11 @@ public class MeetingRoomsType {
 
     /**
      * Sets the value of the unitOfMeasure property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setUnitOfMeasure(String value) {
         this.unitOfMeasure = value;
@@ -434,11 +439,11 @@ public class MeetingRoomsType {
 
     /**
      * Gets the value of the unitOfMeasureCode property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getUnitOfMeasureCode() {
         return unitOfMeasureCode;
@@ -446,11 +451,11 @@ public class MeetingRoomsType {
 
     /**
      * Sets the value of the unitOfMeasureCode property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setUnitOfMeasureCode(String value) {
         this.unitOfMeasureCode = value;
@@ -459,9 +464,9 @@ public class MeetingRoomsType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -516,8 +521,8 @@ public class MeetingRoomsType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -566,11 +571,11 @@ public class MeetingRoomsType {
 
         /**
          * Gets the value of the codes property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link MeetingRoomsType.MeetingRoom.Codes }
-         *
+         *     
          */
         public MeetingRoomsType.MeetingRoom.Codes getCodes() {
             return codes;
@@ -578,11 +583,11 @@ public class MeetingRoomsType {
 
         /**
          * Sets the value of the codes property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link MeetingRoomsType.MeetingRoom.Codes }
-         *
+         *     
          */
         public void setCodes(MeetingRoomsType.MeetingRoom.Codes value) {
             this.codes = value;
@@ -590,11 +595,11 @@ public class MeetingRoomsType {
 
         /**
          * Gets the value of the dimension property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link MeetingRoomsType.MeetingRoom.Dimension }
-         *
+         *     
          */
         public MeetingRoomsType.MeetingRoom.Dimension getDimension() {
             return dimension;
@@ -602,11 +607,11 @@ public class MeetingRoomsType {
 
         /**
          * Sets the value of the dimension property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link MeetingRoomsType.MeetingRoom.Dimension }
-         *
+         *     
          */
         public void setDimension(MeetingRoomsType.MeetingRoom.Dimension value) {
             this.dimension = value;
@@ -614,11 +619,11 @@ public class MeetingRoomsType {
 
         /**
          * Gets the value of the availableCapacities property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link MeetingRoomsType.MeetingRoom.AvailableCapacities }
-         *
+         *     
          */
         public MeetingRoomsType.MeetingRoom.AvailableCapacities getAvailableCapacities() {
             return availableCapacities;
@@ -626,11 +631,11 @@ public class MeetingRoomsType {
 
         /**
          * Sets the value of the availableCapacities property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link MeetingRoomsType.MeetingRoom.AvailableCapacities }
-         *
+         *     
          */
         public void setAvailableCapacities(MeetingRoomsType.MeetingRoom.AvailableCapacities value) {
             this.availableCapacities = value;

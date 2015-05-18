@@ -8,7 +8,12 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -56,11 +61,11 @@ public class OffLocationServiceCoreType {
 
     /**
      * Gets the value of the address property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link OffLocationServiceCoreType.Address }
-     *
+     *     
      */
     public OffLocationServiceCoreType.Address getAddress() {
         return address;
@@ -68,11 +73,11 @@ public class OffLocationServiceCoreType {
 
     /**
      * Sets the value of the address property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link OffLocationServiceCoreType.Address }
-     *
+     *     
      */
     public void setAddress(OffLocationServiceCoreType.Address value) {
         this.address = value;

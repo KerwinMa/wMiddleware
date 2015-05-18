@@ -8,8 +8,13 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
 import java.math.BigInteger;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -58,11 +63,11 @@ public class MeetingRoomCapacityType {
 
     /**
      * Gets the value of the occupancy property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link MeetingRoomCapacityType.Occupancy }
-     *
+     *     
      */
     public MeetingRoomCapacityType.Occupancy getOccupancy() {
         return occupancy;
@@ -70,11 +75,11 @@ public class MeetingRoomCapacityType {
 
     /**
      * Sets the value of the occupancy property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link MeetingRoomCapacityType.Occupancy }
-     *
+     *     
      */
     public void setOccupancy(MeetingRoomCapacityType.Occupancy value) {
         this.occupancy = value;

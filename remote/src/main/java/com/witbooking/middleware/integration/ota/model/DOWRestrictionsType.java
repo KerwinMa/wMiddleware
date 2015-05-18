@@ -8,7 +8,11 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -85,11 +89,11 @@ public class DOWRestrictionsType {
 
     /**
      * Gets the value of the availableDaysOfWeek property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link DOWRestrictionsType.AvailableDaysOfWeek }
-     *
+     *     
      */
     public DOWRestrictionsType.AvailableDaysOfWeek getAvailableDaysOfWeek() {
         return availableDaysOfWeek;
@@ -97,11 +101,11 @@ public class DOWRestrictionsType {
 
     /**
      * Sets the value of the availableDaysOfWeek property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link DOWRestrictionsType.AvailableDaysOfWeek }
-     *
+     *     
      */
     public void setAvailableDaysOfWeek(DOWRestrictionsType.AvailableDaysOfWeek value) {
         this.availableDaysOfWeek = value;
@@ -109,11 +113,11 @@ public class DOWRestrictionsType {
 
     /**
      * Gets the value of the arrivalDaysOfWeek property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link DOWRestrictionsType.ArrivalDaysOfWeek }
-     *
+     *     
      */
     public DOWRestrictionsType.ArrivalDaysOfWeek getArrivalDaysOfWeek() {
         return arrivalDaysOfWeek;
@@ -121,11 +125,11 @@ public class DOWRestrictionsType {
 
     /**
      * Sets the value of the arrivalDaysOfWeek property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link DOWRestrictionsType.ArrivalDaysOfWeek }
-     *
+     *     
      */
     public void setArrivalDaysOfWeek(DOWRestrictionsType.ArrivalDaysOfWeek value) {
         this.arrivalDaysOfWeek = value;
@@ -133,11 +137,11 @@ public class DOWRestrictionsType {
 
     /**
      * Gets the value of the departureDaysOfWeek property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link DOWRestrictionsType.DepartureDaysOfWeek }
-     *
+     *     
      */
     public DOWRestrictionsType.DepartureDaysOfWeek getDepartureDaysOfWeek() {
         return departureDaysOfWeek;
@@ -145,11 +149,11 @@ public class DOWRestrictionsType {
 
     /**
      * Sets the value of the departureDaysOfWeek property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link DOWRestrictionsType.DepartureDaysOfWeek }
-     *
+     *     
      */
     public void setDepartureDaysOfWeek(DOWRestrictionsType.DepartureDaysOfWeek value) {
         this.departureDaysOfWeek = value;
@@ -157,11 +161,11 @@ public class DOWRestrictionsType {
 
     /**
      * Gets the value of the requiredDaysOfWeek property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link DOWRestrictionsType.RequiredDaysOfWeek }
-     *
+     *     
      */
     public DOWRestrictionsType.RequiredDaysOfWeek getRequiredDaysOfWeek() {
         return requiredDaysOfWeek;
@@ -169,11 +173,11 @@ public class DOWRestrictionsType {
 
     /**
      * Sets the value of the requiredDaysOfWeek property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link DOWRestrictionsType.RequiredDaysOfWeek }
-     *
+     *     
      */
     public void setRequiredDaysOfWeek(DOWRestrictionsType.RequiredDaysOfWeek value) {
         this.requiredDaysOfWeek = value;

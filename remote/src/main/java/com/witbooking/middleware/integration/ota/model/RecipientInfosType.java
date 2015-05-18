@@ -8,11 +8,16 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -73,33 +78,33 @@ import java.util.List;
 public class RecipientInfosType {
 
     @XmlElement(name = "RecipientInfo", required = true)
-    protected List<RecipientInfo> recipientInfo;
+    protected List<RecipientInfosType.RecipientInfo> recipientInfo;
 
     /**
      * Gets the value of the recipientInfo property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the recipientInfo property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getRecipientInfo().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link RecipientInfosType.RecipientInfo }
-     *
-     *
+     * 
+     * 
      */
-    public List<RecipientInfo> getRecipientInfo() {
+    public List<RecipientInfosType.RecipientInfo> getRecipientInfo() {
         if (recipientInfo == null) {
-            recipientInfo = new ArrayList<RecipientInfo>();
+            recipientInfo = new ArrayList<RecipientInfosType.RecipientInfo>();
         }
         return this.recipientInfo;
     }
@@ -107,9 +112,9 @@ public class RecipientInfosType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -143,8 +148,8 @@ public class RecipientInfosType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -165,25 +170,25 @@ public class RecipientInfosType {
 
         /**
          * Gets the value of the reservationID property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the reservationID property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getReservationID().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link UniqueIDType }
-         *
-         *
+         * 
+         * 
          */
         public List<UniqueIDType> getReservationID() {
             if (reservationID == null) {
@@ -194,11 +199,11 @@ public class RecipientInfosType {
 
         /**
          * Gets the value of the shippingInfo property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link RecipientInfosType.RecipientInfo.ShippingInfo }
-         *
+         *     
          */
         public RecipientInfosType.RecipientInfo.ShippingInfo getShippingInfo() {
             return shippingInfo;
@@ -206,11 +211,11 @@ public class RecipientInfosType {
 
         /**
          * Sets the value of the shippingInfo property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link RecipientInfosType.RecipientInfo.ShippingInfo }
-         *
+         *     
          */
         public void setShippingInfo(RecipientInfosType.RecipientInfo.ShippingInfo value) {
             this.shippingInfo = value;
@@ -218,11 +223,11 @@ public class RecipientInfosType {
 
         /**
          * Gets the value of the comments property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link RecipientInfosType.RecipientInfo.Comments }
-         *
+         *     
          */
         public RecipientInfosType.RecipientInfo.Comments getComments() {
             return comments;
@@ -230,11 +235,11 @@ public class RecipientInfosType {
 
         /**
          * Sets the value of the comments property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link RecipientInfosType.RecipientInfo.Comments }
-         *
+         *     
          */
         public void setComments(RecipientInfosType.RecipientInfo.Comments value) {
             this.comments = value;

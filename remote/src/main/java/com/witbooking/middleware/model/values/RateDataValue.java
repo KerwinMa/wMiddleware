@@ -110,5 +110,11 @@ public class RateDataValue extends DataValue<Float> {
         return true;
     }
 
+    @Override
+    public boolean isChildOf(String ticker) {
+        return ((this.isSharedValue() && ((SharedValue) this.value).getTicker().equals(ticker))
+                || (this.isFormulaValue() && ((FormulaValue) this.value).getTickersSet().contains(ticker)));
+    }
+
 
 }

@@ -267,8 +267,8 @@ public final class AvailStatusMessage implements Serializable {
 
     /**
      * This function is used to check the logic of the ranges of days. If used
-     * in {@link #AvailStatusMessage(String, Date, Date, String)
-     * } and {@link RateAmountMessage#RateAmountMessage(String, Date, Date, String)
+     * in {@link #AvailStatusMessage(java.lang.String, java.util.Date, java.util.Date, java.lang.String)
+     * } and {@link RateAmountMessage#RateAmountMessage(java.lang.String, java.util.Date, java.util.Date, java.lang.String)
      * }
      *
      * @param start The start day  {@link StatusApplicationControl#start} of the range to check.

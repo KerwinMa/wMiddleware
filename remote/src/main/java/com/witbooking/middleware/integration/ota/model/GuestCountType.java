@@ -8,9 +8,13 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -49,39 +53,39 @@ import java.util.List;
 public class GuestCountType {
 
     @XmlElement(name = "GuestCount", required = true)
-    protected List<GuestCount> guestCount;
+    protected List<GuestCountType.GuestCount> guestCount;
     @XmlAttribute(name = "IsPerRoom")
     protected Boolean isPerRoom;
 
     public GuestCountType() {
         this.guestCount = new ArrayList<GuestCount>();
     }
-
+    
     /**
      * Gets the value of the guestCount property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the guestCount property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getGuestCount().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link GuestCountType.GuestCount }
-     *
-     *
+     * 
+     * 
      */
-    public List<GuestCount> getGuestCount() {
+    public List<GuestCountType.GuestCount> getGuestCount() {
         if (guestCount == null) {
-            guestCount = new ArrayList<GuestCount>();
+            guestCount = new ArrayList<GuestCountType.GuestCount>();
         }
         return this.guestCount;
     }

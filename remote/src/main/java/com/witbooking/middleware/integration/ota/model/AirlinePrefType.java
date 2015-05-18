@@ -8,12 +8,17 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -265,7 +270,7 @@ public class AirlinePrefType {
     @XmlElement(name = "LoyaltyPref")
     protected List<LoyaltyPrefType> loyaltyPref;
     @XmlElement(name = "VendorPref")
-    protected List<VendorPref> vendorPref;
+    protected List<AirlinePrefType.VendorPref> vendorPref;
     @XmlElement(name = "PaymentFormPref")
     protected List<PaymentFormPrefType> paymentFormPref;
     @XmlElement(name = "AirportOriginPref")
@@ -275,19 +280,19 @@ public class AirlinePrefType {
     @XmlElement(name = "AirportRoutePref")
     protected List<AirportPrefType> airportRoutePref;
     @XmlElement(name = "FareRestrictPref")
-    protected List<FareRestrictPref> fareRestrictPref;
+    protected List<AirlinePrefType.FareRestrictPref> fareRestrictPref;
     @XmlElement(name = "FarePref")
-    protected List<FarePref> farePref;
+    protected List<AirlinePrefType.FarePref> farePref;
     @XmlElement(name = "TourCodePref")
-    protected List<TourCodePref> tourCodePref;
+    protected List<AirlinePrefType.TourCodePref> tourCodePref;
     @XmlElement(name = "FlightTypePref")
-    protected List<FlightTypePref> flightTypePref;
+    protected List<AirlinePrefType.FlightTypePref> flightTypePref;
     @XmlElement(name = "EquipPref")
     protected List<EquipmentTypePref> equipPref;
     @XmlElement(name = "CabinPref")
-    protected List<CabinPref> cabinPref;
+    protected List<AirlinePrefType.CabinPref> cabinPref;
     @XmlElement(name = "SeatPref")
-    protected List<SeatPref> seatPref;
+    protected List<AirlinePrefType.SeatPref> seatPref;
     @XmlElement(name = "TicketDistribPref")
     protected List<TicketDistribPrefType> ticketDistribPref;
     @XmlElement(name = "MealPref")
@@ -295,7 +300,7 @@ public class AirlinePrefType {
     @XmlElement(name = "SpecRequestPref")
     protected List<SpecRequestPrefType> specRequestPref;
     @XmlElement(name = "SSR_Pref")
-    protected List<SSRPref> ssrPref;
+    protected List<AirlinePrefType.SSRPref> ssrPref;
     @XmlElement(name = "TPA_Extensions")
     protected TPAExtensionsType tpaExtensions;
     @XmlElement(name = "MediaEntertainPref")
@@ -307,7 +312,7 @@ public class AirlinePrefType {
     @XmlElement(name = "OSI_Pref")
     protected List<OtherServiceInfoType> osiPref;
     @XmlElement(name = "KeywordPref")
-    protected List<KeywordPref> keywordPref;
+    protected List<AirlinePrefType.KeywordPref> keywordPref;
     @XmlAttribute(name = "PassengerTypeCode")
     protected String passengerTypeCode;
     @XmlAttribute(name = "AirTicketType")
@@ -325,25 +330,25 @@ public class AirlinePrefType {
 
     /**
      * Gets the value of the loyaltyPref property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the loyaltyPref property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getLoyaltyPref().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link LoyaltyPrefType }
-     *
-     *
+     * 
+     * 
      */
     public List<LoyaltyPrefType> getLoyaltyPref() {
         if (loyaltyPref == null) {
@@ -354,54 +359,54 @@ public class AirlinePrefType {
 
     /**
      * Gets the value of the vendorPref property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the vendorPref property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getVendorPref().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link AirlinePrefType.VendorPref }
-     *
-     *
+     * 
+     * 
      */
-    public List<VendorPref> getVendorPref() {
+    public List<AirlinePrefType.VendorPref> getVendorPref() {
         if (vendorPref == null) {
-            vendorPref = new ArrayList<VendorPref>();
+            vendorPref = new ArrayList<AirlinePrefType.VendorPref>();
         }
         return this.vendorPref;
     }
 
     /**
      * Gets the value of the paymentFormPref property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the paymentFormPref property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getPaymentFormPref().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link PaymentFormPrefType }
-     *
-     *
+     * 
+     * 
      */
     public List<PaymentFormPrefType> getPaymentFormPref() {
         if (paymentFormPref == null) {
@@ -412,25 +417,25 @@ public class AirlinePrefType {
 
     /**
      * Gets the value of the airportOriginPref property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the airportOriginPref property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getAirportOriginPref().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link AirportPrefType }
-     *
-     *
+     * 
+     * 
      */
     public List<AirportPrefType> getAirportOriginPref() {
         if (airportOriginPref == null) {
@@ -441,11 +446,11 @@ public class AirlinePrefType {
 
     /**
      * Gets the value of the airportDestinationPref property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link AirportPrefType }
-     *
+     *     
      */
     public AirportPrefType getAirportDestinationPref() {
         return airportDestinationPref;
@@ -453,11 +458,11 @@ public class AirlinePrefType {
 
     /**
      * Sets the value of the airportDestinationPref property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link AirportPrefType }
-     *
+     *     
      */
     public void setAirportDestinationPref(AirportPrefType value) {
         this.airportDestinationPref = value;
@@ -465,25 +470,25 @@ public class AirlinePrefType {
 
     /**
      * Gets the value of the airportRoutePref property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the airportRoutePref property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getAirportRoutePref().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link AirportPrefType }
-     *
-     *
+     * 
+     * 
      */
     public List<AirportPrefType> getAirportRoutePref() {
         if (airportRoutePref == null) {
@@ -494,141 +499,141 @@ public class AirlinePrefType {
 
     /**
      * Gets the value of the fareRestrictPref property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the fareRestrictPref property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getFareRestrictPref().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link AirlinePrefType.FareRestrictPref }
-     *
-     *
+     * 
+     * 
      */
-    public List<FareRestrictPref> getFareRestrictPref() {
+    public List<AirlinePrefType.FareRestrictPref> getFareRestrictPref() {
         if (fareRestrictPref == null) {
-            fareRestrictPref = new ArrayList<FareRestrictPref>();
+            fareRestrictPref = new ArrayList<AirlinePrefType.FareRestrictPref>();
         }
         return this.fareRestrictPref;
     }
 
     /**
      * Gets the value of the farePref property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the farePref property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getFarePref().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link AirlinePrefType.FarePref }
-     *
-     *
+     * 
+     * 
      */
-    public List<FarePref> getFarePref() {
+    public List<AirlinePrefType.FarePref> getFarePref() {
         if (farePref == null) {
-            farePref = new ArrayList<FarePref>();
+            farePref = new ArrayList<AirlinePrefType.FarePref>();
         }
         return this.farePref;
     }
 
     /**
      * Gets the value of the tourCodePref property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the tourCodePref property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getTourCodePref().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link AirlinePrefType.TourCodePref }
-     *
-     *
+     * 
+     * 
      */
-    public List<TourCodePref> getTourCodePref() {
+    public List<AirlinePrefType.TourCodePref> getTourCodePref() {
         if (tourCodePref == null) {
-            tourCodePref = new ArrayList<TourCodePref>();
+            tourCodePref = new ArrayList<AirlinePrefType.TourCodePref>();
         }
         return this.tourCodePref;
     }
 
     /**
      * Gets the value of the flightTypePref property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the flightTypePref property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getFlightTypePref().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link AirlinePrefType.FlightTypePref }
-     *
-     *
+     * 
+     * 
      */
-    public List<FlightTypePref> getFlightTypePref() {
+    public List<AirlinePrefType.FlightTypePref> getFlightTypePref() {
         if (flightTypePref == null) {
-            flightTypePref = new ArrayList<FlightTypePref>();
+            flightTypePref = new ArrayList<AirlinePrefType.FlightTypePref>();
         }
         return this.flightTypePref;
     }
 
     /**
      * Gets the value of the equipPref property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the equipPref property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getEquipPref().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link EquipmentTypePref }
-     *
-     *
+     * 
+     * 
      */
     public List<EquipmentTypePref> getEquipPref() {
         if (equipPref == null) {
@@ -639,83 +644,83 @@ public class AirlinePrefType {
 
     /**
      * Gets the value of the cabinPref property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the cabinPref property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getCabinPref().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link AirlinePrefType.CabinPref }
-     *
-     *
+     * 
+     * 
      */
-    public List<CabinPref> getCabinPref() {
+    public List<AirlinePrefType.CabinPref> getCabinPref() {
         if (cabinPref == null) {
-            cabinPref = new ArrayList<CabinPref>();
+            cabinPref = new ArrayList<AirlinePrefType.CabinPref>();
         }
         return this.cabinPref;
     }
 
     /**
      * Gets the value of the seatPref property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the seatPref property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getSeatPref().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link AirlinePrefType.SeatPref }
-     *
-     *
+     * 
+     * 
      */
-    public List<SeatPref> getSeatPref() {
+    public List<AirlinePrefType.SeatPref> getSeatPref() {
         if (seatPref == null) {
-            seatPref = new ArrayList<SeatPref>();
+            seatPref = new ArrayList<AirlinePrefType.SeatPref>();
         }
         return this.seatPref;
     }
 
     /**
      * Gets the value of the ticketDistribPref property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the ticketDistribPref property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getTicketDistribPref().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link TicketDistribPrefType }
-     *
-     *
+     * 
+     * 
      */
     public List<TicketDistribPrefType> getTicketDistribPref() {
         if (ticketDistribPref == null) {
@@ -726,25 +731,25 @@ public class AirlinePrefType {
 
     /**
      * Gets the value of the mealPref property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the mealPref property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getMealPref().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link MealPrefType }
-     *
-     *
+     * 
+     * 
      */
     public List<MealPrefType> getMealPref() {
         if (mealPref == null) {
@@ -755,25 +760,25 @@ public class AirlinePrefType {
 
     /**
      * Gets the value of the specRequestPref property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the specRequestPref property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getSpecRequestPref().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link SpecRequestPrefType }
-     *
-     *
+     * 
+     * 
      */
     public List<SpecRequestPrefType> getSpecRequestPref() {
         if (specRequestPref == null) {
@@ -784,40 +789,40 @@ public class AirlinePrefType {
 
     /**
      * Gets the value of the ssrPref property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the ssrPref property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getSSRPref().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link AirlinePrefType.SSRPref }
-     *
-     *
+     * 
+     * 
      */
-    public List<SSRPref> getSSRPref() {
+    public List<AirlinePrefType.SSRPref> getSSRPref() {
         if (ssrPref == null) {
-            ssrPref = new ArrayList<SSRPref>();
+            ssrPref = new ArrayList<AirlinePrefType.SSRPref>();
         }
         return this.ssrPref;
     }
 
     /**
      * Gets the value of the tpaExtensions property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link TPAExtensionsType }
-     *
+     *     
      */
     public TPAExtensionsType getTPAExtensions() {
         return tpaExtensions;
@@ -825,11 +830,11 @@ public class AirlinePrefType {
 
     /**
      * Sets the value of the tpaExtensions property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link TPAExtensionsType }
-     *
+     *     
      */
     public void setTPAExtensions(TPAExtensionsType value) {
         this.tpaExtensions = value;
@@ -837,25 +842,25 @@ public class AirlinePrefType {
 
     /**
      * Gets the value of the mediaEntertainPref property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the mediaEntertainPref property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getMediaEntertainPref().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link MediaEntertainPrefType }
-     *
-     *
+     * 
+     * 
      */
     public List<MediaEntertainPrefType> getMediaEntertainPref() {
         if (mediaEntertainPref == null) {
@@ -866,25 +871,25 @@ public class AirlinePrefType {
 
     /**
      * Gets the value of the petInfoPref property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the petInfoPref property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getPetInfoPref().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link PetInfoPrefType }
-     *
-     *
+     * 
+     * 
      */
     public List<PetInfoPrefType> getPetInfoPref() {
         if (petInfoPref == null) {
@@ -895,11 +900,11 @@ public class AirlinePrefType {
 
     /**
      * Gets the value of the accountInformation property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link AirlinePrefType.AccountInformation }
-     *
+     *     
      */
     public AirlinePrefType.AccountInformation getAccountInformation() {
         return accountInformation;
@@ -907,11 +912,11 @@ public class AirlinePrefType {
 
     /**
      * Sets the value of the accountInformation property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link AirlinePrefType.AccountInformation }
-     *
+     *     
      */
     public void setAccountInformation(AirlinePrefType.AccountInformation value) {
         this.accountInformation = value;
@@ -919,25 +924,25 @@ public class AirlinePrefType {
 
     /**
      * Gets the value of the osiPref property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the osiPref property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getOSIPref().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link OtherServiceInfoType }
-     *
-     *
+     * 
+     * 
      */
     public List<OtherServiceInfoType> getOSIPref() {
         if (osiPref == null) {
@@ -948,40 +953,40 @@ public class AirlinePrefType {
 
     /**
      * Gets the value of the keywordPref property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the keywordPref property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getKeywordPref().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link AirlinePrefType.KeywordPref }
-     *
-     *
+     * 
+     * 
      */
-    public List<KeywordPref> getKeywordPref() {
+    public List<AirlinePrefType.KeywordPref> getKeywordPref() {
         if (keywordPref == null) {
-            keywordPref = new ArrayList<KeywordPref>();
+            keywordPref = new ArrayList<AirlinePrefType.KeywordPref>();
         }
         return this.keywordPref;
     }
 
     /**
      * Gets the value of the passengerTypeCode property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getPassengerTypeCode() {
         return passengerTypeCode;
@@ -989,11 +994,11 @@ public class AirlinePrefType {
 
     /**
      * Sets the value of the passengerTypeCode property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setPassengerTypeCode(String value) {
         this.passengerTypeCode = value;
@@ -1001,11 +1006,11 @@ public class AirlinePrefType {
 
     /**
      * Gets the value of the airTicketType property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link TicketType }
-     *
+     *     
      */
     public TicketType getAirTicketType() {
         return airTicketType;
@@ -1013,11 +1018,11 @@ public class AirlinePrefType {
 
     /**
      * Sets the value of the airTicketType property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link TicketType }
-     *
+     *     
      */
     public void setAirTicketType(TicketType value) {
         this.airTicketType = value;
@@ -1025,11 +1030,11 @@ public class AirlinePrefType {
 
     /**
      * Gets the value of the smokingAllowed property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link Boolean }
-     *
+     *     
      */
     public Boolean isSmokingAllowed() {
         return smokingAllowed;
@@ -1037,11 +1042,11 @@ public class AirlinePrefType {
 
     /**
      * Sets the value of the smokingAllowed property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *
+     *     
      */
     public void setSmokingAllowed(Boolean value) {
         this.smokingAllowed = value;
@@ -1049,11 +1054,11 @@ public class AirlinePrefType {
 
     /**
      * Gets the value of the preferLevel property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link PreferLevelType }
-     *
+     *     
      */
     public PreferLevelType getPreferLevel() {
         return preferLevel;
@@ -1061,11 +1066,11 @@ public class AirlinePrefType {
 
     /**
      * Sets the value of the preferLevel property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link PreferLevelType }
-     *
+     *     
      */
     public void setPreferLevel(PreferLevelType value) {
         this.preferLevel = value;
@@ -1073,11 +1078,11 @@ public class AirlinePrefType {
 
     /**
      * Gets the value of the shareSynchInd property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getShareSynchInd() {
         return shareSynchInd;
@@ -1085,11 +1090,11 @@ public class AirlinePrefType {
 
     /**
      * Sets the value of the shareSynchInd property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setShareSynchInd(String value) {
         this.shareSynchInd = value;
@@ -1097,11 +1102,11 @@ public class AirlinePrefType {
 
     /**
      * Gets the value of the shareMarketInd property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getShareMarketInd() {
         return shareMarketInd;
@@ -1109,11 +1114,11 @@ public class AirlinePrefType {
 
     /**
      * Sets the value of the shareMarketInd property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setShareMarketInd(String value) {
         this.shareMarketInd = value;
@@ -1122,9 +1127,9 @@ public class AirlinePrefType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -1150,8 +1155,8 @@ public class AirlinePrefType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -1172,11 +1177,11 @@ public class AirlinePrefType {
 
         /**
          * Gets the value of the taxRegistrationDetails property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link AirlinePrefType.AccountInformation.TaxRegistrationDetails }
-         *
+         *     
          */
         public AirlinePrefType.AccountInformation.TaxRegistrationDetails getTaxRegistrationDetails() {
             return taxRegistrationDetails;
@@ -1184,11 +1189,11 @@ public class AirlinePrefType {
 
         /**
          * Sets the value of the taxRegistrationDetails property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link AirlinePrefType.AccountInformation.TaxRegistrationDetails }
-         *
+         *     
          */
         public void setTaxRegistrationDetails(AirlinePrefType.AccountInformation.TaxRegistrationDetails value) {
             this.taxRegistrationDetails = value;
@@ -1196,11 +1201,11 @@ public class AirlinePrefType {
 
         /**
          * Gets the value of the number property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getNumber() {
             return number;
@@ -1208,11 +1213,11 @@ public class AirlinePrefType {
 
         /**
          * Sets the value of the number property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setNumber(String value) {
             this.number = value;
@@ -1220,11 +1225,11 @@ public class AirlinePrefType {
 
         /**
          * Gets the value of the costCenter property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getCostCenter() {
             return costCenter;
@@ -1232,11 +1237,11 @@ public class AirlinePrefType {
 
         /**
          * Sets the value of the costCenter property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setCostCenter(String value) {
             this.costCenter = value;
@@ -1244,11 +1249,11 @@ public class AirlinePrefType {
 
         /**
          * Gets the value of the companyNumber property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getCompanyNumber() {
             return companyNumber;
@@ -1256,11 +1261,11 @@ public class AirlinePrefType {
 
         /**
          * Sets the value of the companyNumber property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setCompanyNumber(String value) {
             this.companyNumber = value;
@@ -1268,11 +1273,11 @@ public class AirlinePrefType {
 
         /**
          * Gets the value of the clientReference property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getClientReference() {
             return clientReference;
@@ -1280,11 +1285,11 @@ public class AirlinePrefType {
 
         /**
          * Sets the value of the clientReference property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setClientReference(String value) {
             this.clientReference = value;
@@ -1293,9 +1298,9 @@ public class AirlinePrefType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -1307,8 +1312,8 @@ public class AirlinePrefType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
@@ -1323,11 +1328,11 @@ public class AirlinePrefType {
 
             /**
              * Gets the value of the taxID property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getTaxID() {
                 return taxID;
@@ -1335,11 +1340,11 @@ public class AirlinePrefType {
 
             /**
              * Sets the value of the taxID property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setTaxID(String value) {
                 this.taxID = value;
@@ -1347,11 +1352,11 @@ public class AirlinePrefType {
 
             /**
              * Gets the value of the recipientName property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getRecipientName() {
                 return recipientName;
@@ -1359,11 +1364,11 @@ public class AirlinePrefType {
 
             /**
              * Sets the value of the recipientName property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setRecipientName(String value) {
                 this.recipientName = value;
@@ -1371,11 +1376,11 @@ public class AirlinePrefType {
 
             /**
              * Gets the value of the recipientAddress property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getRecipientAddress() {
                 return recipientAddress;
@@ -1383,11 +1388,11 @@ public class AirlinePrefType {
 
             /**
              * Sets the value of the recipientAddress property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setRecipientAddress(String value) {
                 this.recipientAddress = value;
@@ -1400,9 +1405,9 @@ public class AirlinePrefType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -1412,8 +1417,8 @@ public class AirlinePrefType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
@@ -1426,11 +1431,11 @@ public class AirlinePrefType {
 
         /**
          * Gets the value of the preferLevel property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link PreferLevelType }
-         *
+         *     
          */
         public PreferLevelType getPreferLevel() {
             return preferLevel;
@@ -1438,11 +1443,11 @@ public class AirlinePrefType {
 
         /**
          * Sets the value of the preferLevel property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link PreferLevelType }
-         *
+         *     
          */
         public void setPreferLevel(PreferLevelType value) {
             this.preferLevel = value;
@@ -1450,11 +1455,11 @@ public class AirlinePrefType {
 
         /**
          * Gets the value of the cabin property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link CabinType }
-         *
+         *     
          */
         public CabinType getCabin() {
             return cabin;
@@ -1462,11 +1467,11 @@ public class AirlinePrefType {
 
         /**
          * Sets the value of the cabin property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link CabinType }
-         *
+         *     
          */
         public void setCabin(CabinType value) {
             this.cabin = value;
@@ -1477,9 +1482,9 @@ public class AirlinePrefType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -1493,8 +1498,8 @@ public class AirlinePrefType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
@@ -1513,11 +1518,11 @@ public class AirlinePrefType {
 
         /**
          * Gets the value of the code property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getCode() {
             return code;
@@ -1525,11 +1530,11 @@ public class AirlinePrefType {
 
         /**
          * Sets the value of the code property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setCode(String value) {
             this.code = value;
@@ -1537,11 +1542,11 @@ public class AirlinePrefType {
 
         /**
          * Gets the value of the description property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getDescription() {
             return description;
@@ -1549,11 +1554,11 @@ public class AirlinePrefType {
 
         /**
          * Sets the value of the description property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setDescription(String value) {
             this.description = value;
@@ -1561,25 +1566,25 @@ public class AirlinePrefType {
 
         /**
          * Gets the value of the airlineVendorPrefRPH property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the airlineVendorPrefRPH property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getAirlineVendorPrefRPH().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link String }
-         *
-         *
+         * 
+         * 
          */
         public List<String> getAirlineVendorPrefRPH() {
             if (airlineVendorPrefRPH == null) {
@@ -1590,11 +1595,11 @@ public class AirlinePrefType {
 
         /**
          * Gets the value of the rateCategoryCode property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getRateCategoryCode() {
             return rateCategoryCode;
@@ -1602,11 +1607,11 @@ public class AirlinePrefType {
 
         /**
          * Sets the value of the rateCategoryCode property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setRateCategoryCode(String value) {
             this.rateCategoryCode = value;
@@ -1614,11 +1619,11 @@ public class AirlinePrefType {
 
         /**
          * Gets the value of the transferAction property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link TransferActionType }
-         *
+         *     
          */
         public TransferActionType getTransferAction() {
             return transferAction;
@@ -1626,11 +1631,11 @@ public class AirlinePrefType {
 
         /**
          * Sets the value of the transferAction property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link TransferActionType }
-         *
+         *     
          */
         public void setTransferAction(TransferActionType value) {
             this.transferAction = value;
@@ -1641,9 +1646,9 @@ public class AirlinePrefType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -1653,8 +1658,8 @@ public class AirlinePrefType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
@@ -1669,11 +1674,11 @@ public class AirlinePrefType {
 
         /**
          * Gets the value of the preferLevel property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link PreferLevelType }
-         *
+         *     
          */
         public PreferLevelType getPreferLevel() {
             return preferLevel;
@@ -1681,11 +1686,11 @@ public class AirlinePrefType {
 
         /**
          * Sets the value of the preferLevel property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link PreferLevelType }
-         *
+         *     
          */
         public void setPreferLevel(PreferLevelType value) {
             this.preferLevel = value;
@@ -1693,11 +1698,11 @@ public class AirlinePrefType {
 
         /**
          * Gets the value of the fareRestriction property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getFareRestriction() {
             return fareRestriction;
@@ -1705,11 +1710,11 @@ public class AirlinePrefType {
 
         /**
          * Sets the value of the fareRestriction property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setFareRestriction(String value) {
             this.fareRestriction = value;
@@ -1717,11 +1722,11 @@ public class AirlinePrefType {
 
         /**
          * Gets the value of the date property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getDate() {
             return date;
@@ -1729,11 +1734,11 @@ public class AirlinePrefType {
 
         /**
          * Sets the value of the date property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setDate(String value) {
             this.date = value;
@@ -1744,9 +1749,9 @@ public class AirlinePrefType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -1756,8 +1761,8 @@ public class AirlinePrefType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
@@ -1791,11 +1796,11 @@ public class AirlinePrefType {
 
         /**
          * Gets the value of the preferLevel property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link PreferLevelType }
-         *
+         *     
          */
         public PreferLevelType getPreferLevel() {
             return preferLevel;
@@ -1803,11 +1808,11 @@ public class AirlinePrefType {
 
         /**
          * Sets the value of the preferLevel property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link PreferLevelType }
-         *
+         *     
          */
         public void setPreferLevel(PreferLevelType value) {
             this.preferLevel = value;
@@ -1815,11 +1820,11 @@ public class AirlinePrefType {
 
         /**
          * Gets the value of the flightType property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link FlightTypeType }
-         *
+         *     
          */
         public FlightTypeType getFlightType() {
             return flightType;
@@ -1827,11 +1832,11 @@ public class AirlinePrefType {
 
         /**
          * Sets the value of the flightType property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link FlightTypeType }
-         *
+         *     
          */
         public void setFlightType(FlightTypeType value) {
             this.flightType = value;
@@ -1839,11 +1844,11 @@ public class AirlinePrefType {
 
         /**
          * Gets the value of the maxConnections property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link BigInteger }
-         *
+         *     
          */
         public BigInteger getMaxConnections() {
             return maxConnections;
@@ -1851,11 +1856,11 @@ public class AirlinePrefType {
 
         /**
          * Sets the value of the maxConnections property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link BigInteger }
-         *
+         *     
          */
         public void setMaxConnections(BigInteger value) {
             this.maxConnections = value;
@@ -1863,11 +1868,11 @@ public class AirlinePrefType {
 
         /**
          * Gets the value of the nonScheduledFltInfo property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getNonScheduledFltInfo() {
             return nonScheduledFltInfo;
@@ -1875,11 +1880,11 @@ public class AirlinePrefType {
 
         /**
          * Sets the value of the nonScheduledFltInfo property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setNonScheduledFltInfo(String value) {
             this.nonScheduledFltInfo = value;
@@ -1887,11 +1892,11 @@ public class AirlinePrefType {
 
         /**
          * Gets the value of the backhaulIndicator property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link Boolean }
-         *
+         *     
          */
         public Boolean isBackhaulIndicator() {
             return backhaulIndicator;
@@ -1899,11 +1904,11 @@ public class AirlinePrefType {
 
         /**
          * Sets the value of the backhaulIndicator property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link Boolean }
-         *
+         *     
          */
         public void setBackhaulIndicator(Boolean value) {
             this.backhaulIndicator = value;
@@ -1911,11 +1916,11 @@ public class AirlinePrefType {
 
         /**
          * Gets the value of the groundTransportIndicator property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link Boolean }
-         *
+         *     
          */
         public Boolean isGroundTransportIndicator() {
             return groundTransportIndicator;
@@ -1923,11 +1928,11 @@ public class AirlinePrefType {
 
         /**
          * Sets the value of the groundTransportIndicator property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link Boolean }
-         *
+         *     
          */
         public void setGroundTransportIndicator(Boolean value) {
             this.groundTransportIndicator = value;
@@ -1935,11 +1940,11 @@ public class AirlinePrefType {
 
         /**
          * Gets the value of the directAndNonStopOnlyInd property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link Boolean }
-         *
+         *     
          */
         public Boolean isDirectAndNonStopOnlyInd() {
             return directAndNonStopOnlyInd;
@@ -1947,11 +1952,11 @@ public class AirlinePrefType {
 
         /**
          * Sets the value of the directAndNonStopOnlyInd property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link Boolean }
-         *
+         *     
          */
         public void setDirectAndNonStopOnlyInd(Boolean value) {
             this.directAndNonStopOnlyInd = value;
@@ -1959,11 +1964,11 @@ public class AirlinePrefType {
 
         /**
          * Gets the value of the nonStopsOnlyInd property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link Boolean }
-         *
+         *     
          */
         public Boolean isNonStopsOnlyInd() {
             return nonStopsOnlyInd;
@@ -1971,11 +1976,11 @@ public class AirlinePrefType {
 
         /**
          * Sets the value of the nonStopsOnlyInd property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link Boolean }
-         *
+         *     
          */
         public void setNonStopsOnlyInd(Boolean value) {
             this.nonStopsOnlyInd = value;
@@ -1983,11 +1988,11 @@ public class AirlinePrefType {
 
         /**
          * Gets the value of the onlineConnectionsOnlyInd property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link Boolean }
-         *
+         *     
          */
         public Boolean isOnlineConnectionsOnlyInd() {
             return onlineConnectionsOnlyInd;
@@ -1995,11 +2000,11 @@ public class AirlinePrefType {
 
         /**
          * Sets the value of the onlineConnectionsOnlyInd property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link Boolean }
-         *
+         *     
          */
         public void setOnlineConnectionsOnlyInd(Boolean value) {
             this.onlineConnectionsOnlyInd = value;
@@ -2007,11 +2012,11 @@ public class AirlinePrefType {
 
         /**
          * Gets the value of the routingType property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getRoutingType() {
             return routingType;
@@ -2019,11 +2024,11 @@ public class AirlinePrefType {
 
         /**
          * Sets the value of the routingType property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setRoutingType(String value) {
             this.routingType = value;
@@ -2031,11 +2036,11 @@ public class AirlinePrefType {
 
         /**
          * Gets the value of the excludeTrainInd property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link Boolean }
-         *
+         *     
          */
         public Boolean isExcludeTrainInd() {
             return excludeTrainInd;
@@ -2043,11 +2048,11 @@ public class AirlinePrefType {
 
         /**
          * Sets the value of the excludeTrainInd property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link Boolean }
-         *
+         *     
          */
         public void setExcludeTrainInd(Boolean value) {
             this.excludeTrainInd = value;
@@ -2058,9 +2063,9 @@ public class AirlinePrefType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -2076,8 +2081,8 @@ public class AirlinePrefType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
@@ -2101,11 +2106,11 @@ public class AirlinePrefType {
 
         /**
          * Gets the value of the vendorCode property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getVendorCode() {
             return vendorCode;
@@ -2113,11 +2118,11 @@ public class AirlinePrefType {
 
         /**
          * Sets the value of the vendorCode property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setVendorCode(String value) {
             this.vendorCode = value;
@@ -2125,11 +2130,11 @@ public class AirlinePrefType {
 
         /**
          * Gets the value of the description property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getDescription() {
             return description;
@@ -2137,11 +2142,11 @@ public class AirlinePrefType {
 
         /**
          * Sets the value of the description property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setDescription(String value) {
             this.description = value;
@@ -2149,11 +2154,11 @@ public class AirlinePrefType {
 
         /**
          * Gets the value of the keyword property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getKeyword() {
             return keyword;
@@ -2161,11 +2166,11 @@ public class AirlinePrefType {
 
         /**
          * Sets the value of the keyword property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setKeyword(String value) {
             this.keyword = value;
@@ -2173,11 +2178,11 @@ public class AirlinePrefType {
 
         /**
          * Gets the value of the statusCode property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getStatusCode() {
             return statusCode;
@@ -2185,11 +2190,11 @@ public class AirlinePrefType {
 
         /**
          * Sets the value of the statusCode property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setStatusCode(String value) {
             this.statusCode = value;
@@ -2197,11 +2202,11 @@ public class AirlinePrefType {
 
         /**
          * Gets the value of the numberInParty property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link BigInteger }
-         *
+         *     
          */
         public BigInteger getNumberInParty() {
             return numberInParty;
@@ -2209,11 +2214,11 @@ public class AirlinePrefType {
 
         /**
          * Sets the value of the numberInParty property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link BigInteger }
-         *
+         *     
          */
         public void setNumberInParty(BigInteger value) {
             this.numberInParty = value;
@@ -2221,25 +2226,25 @@ public class AirlinePrefType {
 
         /**
          * Gets the value of the airlineVendorRPH property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the airlineVendorRPH property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getAirlineVendorRPH().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link String }
-         *
-         *
+         * 
+         * 
          */
         public List<String> getAirlineVendorRPH() {
             if (airlineVendorRPH == null) {
@@ -2250,11 +2255,11 @@ public class AirlinePrefType {
 
         /**
          * Gets the value of the transferAction property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link TransferActionType }
-         *
+         *     
          */
         public TransferActionType getTransferAction() {
             return transferAction;
@@ -2262,11 +2267,11 @@ public class AirlinePrefType {
 
         /**
          * Sets the value of the transferAction property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link TransferActionType }
-         *
+         *     
          */
         public void setTransferAction(TransferActionType value) {
             this.transferAction = value;
@@ -2277,9 +2282,9 @@ public class AirlinePrefType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -2301,8 +2306,8 @@ public class AirlinePrefType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
@@ -2336,11 +2341,11 @@ public class AirlinePrefType {
 
         /**
          * Gets the value of the flightDistanceQualifier property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getFlightDistanceQualifier() {
             return flightDistanceQualifier;
@@ -2348,11 +2353,11 @@ public class AirlinePrefType {
 
         /**
          * Sets the value of the flightDistanceQualifier property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setFlightDistanceQualifier(String value) {
             this.flightDistanceQualifier = value;
@@ -2360,11 +2365,11 @@ public class AirlinePrefType {
 
         /**
          * Gets the value of the internationalIndicator property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link Boolean }
-         *
+         *     
          */
         public Boolean isInternationalIndicator() {
             return internationalIndicator;
@@ -2372,11 +2377,11 @@ public class AirlinePrefType {
 
         /**
          * Sets the value of the internationalIndicator property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link Boolean }
-         *
+         *     
          */
         public void setInternationalIndicator(Boolean value) {
             this.internationalIndicator = value;
@@ -2384,25 +2389,25 @@ public class AirlinePrefType {
 
         /**
          * Gets the value of the airlineVendorPrefRPH property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the airlineVendorPrefRPH property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getAirlineVendorPrefRPH().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link String }
-         *
-         *
+         * 
+         * 
          */
         public List<String> getAirlineVendorPrefRPH() {
             if (airlineVendorPrefRPH == null) {
@@ -2413,11 +2418,11 @@ public class AirlinePrefType {
 
         /**
          * Gets the value of the passengerTypeCode property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getPassengerTypeCode() {
             return passengerTypeCode;
@@ -2425,11 +2430,11 @@ public class AirlinePrefType {
 
         /**
          * Sets the value of the passengerTypeCode property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setPassengerTypeCode(String value) {
             this.passengerTypeCode = value;
@@ -2437,11 +2442,11 @@ public class AirlinePrefType {
 
         /**
          * Gets the value of the transferAction property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link TransferActionType }
-         *
+         *     
          */
         public TransferActionType getTransferAction() {
             return transferAction;
@@ -2449,11 +2454,11 @@ public class AirlinePrefType {
 
         /**
          * Sets the value of the transferAction property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link TransferActionType }
-         *
+         *     
          */
         public void setTransferAction(TransferActionType value) {
             this.transferAction = value;
@@ -2461,11 +2466,11 @@ public class AirlinePrefType {
 
         /**
          * Gets the value of the preferLevel property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link PreferLevelType }
-         *
+         *     
          */
         public PreferLevelType getPreferLevel() {
             return preferLevel;
@@ -2473,11 +2478,11 @@ public class AirlinePrefType {
 
         /**
          * Sets the value of the preferLevel property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link PreferLevelType }
-         *
+         *     
          */
         public void setPreferLevel(PreferLevelType value) {
             this.preferLevel = value;
@@ -2485,11 +2490,11 @@ public class AirlinePrefType {
 
         /**
          * Gets the value of the seatNumber property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getSeatNumber() {
             return seatNumber;
@@ -2497,11 +2502,11 @@ public class AirlinePrefType {
 
         /**
          * Sets the value of the seatNumber property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setSeatNumber(String value) {
             this.seatNumber = value;
@@ -2509,25 +2514,25 @@ public class AirlinePrefType {
 
         /**
          * Gets the value of the seatPreference property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the seatPreference property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getSeatPreference().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link String }
-         *
-         *
+         * 
+         * 
          */
         public List<String> getSeatPreference() {
             if (seatPreference == null) {
@@ -2538,11 +2543,11 @@ public class AirlinePrefType {
 
         /**
          * Gets the value of the smokingAllowed property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link Boolean }
-         *
+         *     
          */
         public Boolean isSmokingAllowed() {
             return smokingAllowed;
@@ -2550,11 +2555,11 @@ public class AirlinePrefType {
 
         /**
          * Sets the value of the smokingAllowed property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link Boolean }
-         *
+         *     
          */
         public void setSmokingAllowed(Boolean value) {
             this.smokingAllowed = value;
@@ -2562,11 +2567,11 @@ public class AirlinePrefType {
 
         /**
          * Gets the value of the deckLevel property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getDeckLevel() {
             return deckLevel;
@@ -2574,11 +2579,11 @@ public class AirlinePrefType {
 
         /**
          * Sets the value of the deckLevel property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setDeckLevel(String value) {
             this.deckLevel = value;
@@ -2586,11 +2591,11 @@ public class AirlinePrefType {
 
         /**
          * Gets the value of the rowNumber property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link Integer }
-         *
+         *     
          */
         public Integer getRowNumber() {
             return rowNumber;
@@ -2598,11 +2603,11 @@ public class AirlinePrefType {
 
         /**
          * Sets the value of the rowNumber property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link Integer }
-         *
+         *     
          */
         public void setRowNumber(Integer value) {
             this.rowNumber = value;
@@ -2610,11 +2615,11 @@ public class AirlinePrefType {
 
         /**
          * Gets the value of the seatInRow property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getSeatInRow() {
             return seatInRow;
@@ -2622,11 +2627,11 @@ public class AirlinePrefType {
 
         /**
          * Sets the value of the seatInRow property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setSeatInRow(String value) {
             this.seatInRow = value;
@@ -2637,9 +2642,9 @@ public class AirlinePrefType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -2656,8 +2661,8 @@ public class AirlinePrefType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
@@ -2685,11 +2690,11 @@ public class AirlinePrefType {
 
         /**
          * Gets the value of the vendorCode property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getVendorCode() {
             return vendorCode;
@@ -2697,11 +2702,11 @@ public class AirlinePrefType {
 
         /**
          * Sets the value of the vendorCode property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setVendorCode(String value) {
             this.vendorCode = value;
@@ -2709,11 +2714,11 @@ public class AirlinePrefType {
 
         /**
          * Gets the value of the numberInParty property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link BigInteger }
-         *
+         *     
          */
         public BigInteger getNumberInParty() {
             return numberInParty;
@@ -2721,11 +2726,11 @@ public class AirlinePrefType {
 
         /**
          * Sets the value of the numberInParty property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link BigInteger }
-         *
+         *     
          */
         public void setNumberInParty(BigInteger value) {
             this.numberInParty = value;
@@ -2733,11 +2738,11 @@ public class AirlinePrefType {
 
         /**
          * Gets the value of the defaultStatusCode property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getDefaultStatusCode() {
             return defaultStatusCode;
@@ -2745,11 +2750,11 @@ public class AirlinePrefType {
 
         /**
          * Sets the value of the defaultStatusCode property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setDefaultStatusCode(String value) {
             this.defaultStatusCode = value;
@@ -2757,11 +2762,11 @@ public class AirlinePrefType {
 
         /**
          * Gets the value of the remark property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getRemark() {
             return remark;
@@ -2769,11 +2774,11 @@ public class AirlinePrefType {
 
         /**
          * Sets the value of the remark property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setRemark(String value) {
             this.remark = value;
@@ -2781,11 +2786,11 @@ public class AirlinePrefType {
 
         /**
          * Gets the value of the lookupKey property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getLookupKey() {
             return lookupKey;
@@ -2793,11 +2798,11 @@ public class AirlinePrefType {
 
         /**
          * Sets the value of the lookupKey property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setLookupKey(String value) {
             this.lookupKey = value;
@@ -2805,25 +2810,25 @@ public class AirlinePrefType {
 
         /**
          * Gets the value of the airlineVendorPrefRPH property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the airlineVendorPrefRPH property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getAirlineVendorPrefRPH().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link String }
-         *
-         *
+         * 
+         * 
          */
         public List<String> getAirlineVendorPrefRPH() {
             if (airlineVendorPrefRPH == null) {
@@ -2834,11 +2839,11 @@ public class AirlinePrefType {
 
         /**
          * Gets the value of the transferActionType property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link TransferActionType }
-         *
+         *     
          */
         public TransferActionType getTransferActionType() {
             return transferActionType;
@@ -2846,11 +2851,11 @@ public class AirlinePrefType {
 
         /**
          * Sets the value of the transferActionType property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link TransferActionType }
-         *
+         *     
          */
         public void setTransferActionType(TransferActionType value) {
             this.transferActionType = value;
@@ -2858,11 +2863,11 @@ public class AirlinePrefType {
 
         /**
          * Gets the value of the preferLevel property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link PreferLevelType }
-         *
+         *     
          */
         public PreferLevelType getPreferLevel() {
             return preferLevel;
@@ -2870,11 +2875,11 @@ public class AirlinePrefType {
 
         /**
          * Sets the value of the preferLevel property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link PreferLevelType }
-         *
+         *     
          */
         public void setPreferLevel(PreferLevelType value) {
             this.preferLevel = value;
@@ -2882,11 +2887,11 @@ public class AirlinePrefType {
 
         /**
          * Gets the value of the ssrCode property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getSSRCode() {
             return ssrCode;
@@ -2894,11 +2899,11 @@ public class AirlinePrefType {
 
         /**
          * Sets the value of the ssrCode property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setSSRCode(String value) {
             this.ssrCode = value;
@@ -2909,9 +2914,9 @@ public class AirlinePrefType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -2968,8 +2973,8 @@ public class AirlinePrefType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -2991,11 +2996,11 @@ public class AirlinePrefType {
 
         /**
          * Gets the value of the tourCodeInfo property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link AirlinePrefType.TourCodePref.TourCodeInfo }
-         *
+         *     
          */
         public AirlinePrefType.TourCodePref.TourCodeInfo getTourCodeInfo() {
             return tourCodeInfo;
@@ -3003,11 +3008,11 @@ public class AirlinePrefType {
 
         /**
          * Sets the value of the tourCodeInfo property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link AirlinePrefType.TourCodePref.TourCodeInfo }
-         *
+         *     
          */
         public void setTourCodeInfo(AirlinePrefType.TourCodePref.TourCodeInfo value) {
             this.tourCodeInfo = value;
@@ -3015,11 +3020,11 @@ public class AirlinePrefType {
 
         /**
          * Gets the value of the staffTourCodeInfo property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link AirlinePrefType.TourCodePref.StaffTourCodeInfo }
-         *
+         *     
          */
         public AirlinePrefType.TourCodePref.StaffTourCodeInfo getStaffTourCodeInfo() {
             return staffTourCodeInfo;
@@ -3027,11 +3032,11 @@ public class AirlinePrefType {
 
         /**
          * Sets the value of the staffTourCodeInfo property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link AirlinePrefType.TourCodePref.StaffTourCodeInfo }
-         *
+         *     
          */
         public void setStaffTourCodeInfo(AirlinePrefType.TourCodePref.StaffTourCodeInfo value) {
             this.staffTourCodeInfo = value;

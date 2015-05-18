@@ -8,13 +8,19 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -115,7 +121,7 @@ public class VehicleChargeType {
     @XmlElement(name = "MinMax")
     protected VehicleChargeType.MinMax minMax;
     @XmlElement(name = "Calculation")
-    protected List<Calculation> calculation;
+    protected List<VehicleChargeType.Calculation> calculation;
     @XmlAttribute(name = "TaxInclusive")
     protected Boolean taxInclusive;
     @XmlAttribute(name = "Description")
@@ -138,11 +144,11 @@ public class VehicleChargeType {
 
     /**
      * Gets the value of the taxAmounts property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleChargeType.TaxAmounts }
-     *
+     *     
      */
     public VehicleChargeType.TaxAmounts getTaxAmounts() {
         return taxAmounts;
@@ -150,11 +156,11 @@ public class VehicleChargeType {
 
     /**
      * Sets the value of the taxAmounts property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleChargeType.TaxAmounts }
-     *
+     *     
      */
     public void setTaxAmounts(VehicleChargeType.TaxAmounts value) {
         this.taxAmounts = value;
@@ -162,11 +168,11 @@ public class VehicleChargeType {
 
     /**
      * Gets the value of the minMax property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleChargeType.MinMax }
-     *
+     *     
      */
     public VehicleChargeType.MinMax getMinMax() {
         return minMax;
@@ -174,11 +180,11 @@ public class VehicleChargeType {
 
     /**
      * Sets the value of the minMax property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleChargeType.MinMax }
-     *
+     *     
      */
     public void setMinMax(VehicleChargeType.MinMax value) {
         this.minMax = value;
@@ -186,40 +192,40 @@ public class VehicleChargeType {
 
     /**
      * Gets the value of the calculation property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the calculation property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getCalculation().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link VehicleChargeType.Calculation }
-     *
-     *
+     * 
+     * 
      */
-    public List<Calculation> getCalculation() {
+    public List<VehicleChargeType.Calculation> getCalculation() {
         if (calculation == null) {
-            calculation = new ArrayList<Calculation>();
+            calculation = new ArrayList<VehicleChargeType.Calculation>();
         }
         return this.calculation;
     }
 
     /**
      * Gets the value of the taxInclusive property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link Boolean }
-     *
+     *     
      */
     public Boolean isTaxInclusive() {
         return taxInclusive;
@@ -227,11 +233,11 @@ public class VehicleChargeType {
 
     /**
      * Sets the value of the taxInclusive property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *
+     *     
      */
     public void setTaxInclusive(Boolean value) {
         this.taxInclusive = value;
@@ -239,11 +245,11 @@ public class VehicleChargeType {
 
     /**
      * Gets the value of the description property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getDescription() {
         return description;
@@ -251,11 +257,11 @@ public class VehicleChargeType {
 
     /**
      * Sets the value of the description property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setDescription(String value) {
         this.description = value;
@@ -263,11 +269,11 @@ public class VehicleChargeType {
 
     /**
      * Gets the value of the guaranteedInd property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link Boolean }
-     *
+     *     
      */
     public Boolean isGuaranteedInd() {
         return guaranteedInd;
@@ -275,11 +281,11 @@ public class VehicleChargeType {
 
     /**
      * Sets the value of the guaranteedInd property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *
+     *     
      */
     public void setGuaranteedInd(Boolean value) {
         this.guaranteedInd = value;
@@ -287,11 +293,11 @@ public class VehicleChargeType {
 
     /**
      * Gets the value of the includedInRate property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link Boolean }
-     *
+     *     
      */
     public Boolean isIncludedInRate() {
         return includedInRate;
@@ -299,11 +305,11 @@ public class VehicleChargeType {
 
     /**
      * Sets the value of the includedInRate property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *
+     *     
      */
     public void setIncludedInRate(Boolean value) {
         this.includedInRate = value;
@@ -311,11 +317,11 @@ public class VehicleChargeType {
 
     /**
      * Gets the value of the includedInEstTotalInd property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link Boolean }
-     *
+     *     
      */
     public Boolean isIncludedInEstTotalInd() {
         return includedInEstTotalInd;
@@ -323,11 +329,11 @@ public class VehicleChargeType {
 
     /**
      * Sets the value of the includedInEstTotalInd property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *
+     *     
      */
     public void setIncludedInEstTotalInd(Boolean value) {
         this.includedInEstTotalInd = value;
@@ -335,11 +341,11 @@ public class VehicleChargeType {
 
     /**
      * Gets the value of the rateConvertInd property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link Boolean }
-     *
+     *     
      */
     public Boolean isRateConvertInd() {
         return rateConvertInd;
@@ -347,11 +353,11 @@ public class VehicleChargeType {
 
     /**
      * Sets the value of the rateConvertInd property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *
+     *     
      */
     public void setRateConvertInd(Boolean value) {
         this.rateConvertInd = value;
@@ -359,11 +365,11 @@ public class VehicleChargeType {
 
     /**
      * Gets the value of the amount property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link BigDecimal }
-     *
+     *     
      */
     public BigDecimal getAmount() {
         return amount;
@@ -371,11 +377,11 @@ public class VehicleChargeType {
 
     /**
      * Sets the value of the amount property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link BigDecimal }
-     *
+     *     
      */
     public void setAmount(BigDecimal value) {
         this.amount = value;
@@ -383,11 +389,11 @@ public class VehicleChargeType {
 
     /**
      * Gets the value of the currencyCode property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getCurrencyCode() {
         return currencyCode;
@@ -395,11 +401,11 @@ public class VehicleChargeType {
 
     /**
      * Sets the value of the currencyCode property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setCurrencyCode(String value) {
         this.currencyCode = value;
@@ -407,11 +413,11 @@ public class VehicleChargeType {
 
     /**
      * Gets the value of the decimalPlaces property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link BigInteger }
-     *
+     *     
      */
     public BigInteger getDecimalPlaces() {
         return decimalPlaces;
@@ -419,11 +425,11 @@ public class VehicleChargeType {
 
     /**
      * Sets the value of the decimalPlaces property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link BigInteger }
-     *
+     *     
      */
     public void setDecimalPlaces(BigInteger value) {
         this.decimalPlaces = value;
@@ -432,9 +438,9 @@ public class VehicleChargeType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -459,8 +465,8 @@ public class VehicleChargeType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
@@ -484,11 +490,11 @@ public class VehicleChargeType {
 
         /**
          * Gets the value of the unitCharge property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link BigDecimal }
-         *
+         *     
          */
         public BigDecimal getUnitCharge() {
             return unitCharge;
@@ -496,11 +502,11 @@ public class VehicleChargeType {
 
         /**
          * Sets the value of the unitCharge property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link BigDecimal }
-         *
+         *     
          */
         public void setUnitCharge(BigDecimal value) {
             this.unitCharge = value;
@@ -508,11 +514,11 @@ public class VehicleChargeType {
 
         /**
          * Gets the value of the unitName property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getUnitName() {
             return unitName;
@@ -520,11 +526,11 @@ public class VehicleChargeType {
 
         /**
          * Sets the value of the unitName property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setUnitName(String value) {
             this.unitName = value;
@@ -532,11 +538,11 @@ public class VehicleChargeType {
 
         /**
          * Gets the value of the quantity property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link Integer }
-         *
+         *     
          */
         public Integer getQuantity() {
             return quantity;
@@ -544,11 +550,11 @@ public class VehicleChargeType {
 
         /**
          * Sets the value of the quantity property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link Integer }
-         *
+         *     
          */
         public void setQuantity(Integer value) {
             this.quantity = value;
@@ -556,11 +562,11 @@ public class VehicleChargeType {
 
         /**
          * Gets the value of the percentage property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link BigDecimal }
-         *
+         *     
          */
         public BigDecimal getPercentage() {
             return percentage;
@@ -568,11 +574,11 @@ public class VehicleChargeType {
 
         /**
          * Sets the value of the percentage property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link BigDecimal }
-         *
+         *     
          */
         public void setPercentage(BigDecimal value) {
             this.percentage = value;
@@ -580,11 +586,11 @@ public class VehicleChargeType {
 
         /**
          * Gets the value of the applicability property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getApplicability() {
             return applicability;
@@ -592,11 +598,11 @@ public class VehicleChargeType {
 
         /**
          * Sets the value of the applicability property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setApplicability(String value) {
             this.applicability = value;
@@ -604,11 +610,11 @@ public class VehicleChargeType {
 
         /**
          * Gets the value of the maxQuantity property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link Integer }
-         *
+         *     
          */
         public Integer getMaxQuantity() {
             return maxQuantity;
@@ -616,11 +622,11 @@ public class VehicleChargeType {
 
         /**
          * Sets the value of the maxQuantity property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link Integer }
-         *
+         *     
          */
         public void setMaxQuantity(Integer value) {
             this.maxQuantity = value;
@@ -628,11 +634,11 @@ public class VehicleChargeType {
 
         /**
          * Gets the value of the total property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link BigDecimal }
-         *
+         *     
          */
         public BigDecimal getTotal() {
             return total;
@@ -640,11 +646,11 @@ public class VehicleChargeType {
 
         /**
          * Sets the value of the total property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link BigDecimal }
-         *
+         *     
          */
         public void setTotal(BigDecimal value) {
             this.total = value;
@@ -655,9 +661,9 @@ public class VehicleChargeType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -669,8 +675,8 @@ public class VehicleChargeType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
@@ -685,11 +691,11 @@ public class VehicleChargeType {
 
         /**
          * Gets the value of the maxCharge property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link BigDecimal }
-         *
+         *     
          */
         public BigDecimal getMaxCharge() {
             return maxCharge;
@@ -697,11 +703,11 @@ public class VehicleChargeType {
 
         /**
          * Sets the value of the maxCharge property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link BigDecimal }
-         *
+         *     
          */
         public void setMaxCharge(BigDecimal value) {
             this.maxCharge = value;
@@ -709,11 +715,11 @@ public class VehicleChargeType {
 
         /**
          * Gets the value of the minCharge property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link BigDecimal }
-         *
+         *     
          */
         public BigDecimal getMinCharge() {
             return minCharge;
@@ -721,11 +727,11 @@ public class VehicleChargeType {
 
         /**
          * Sets the value of the minCharge property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link BigDecimal }
-         *
+         *     
          */
         public void setMinCharge(BigDecimal value) {
             this.minCharge = value;
@@ -733,11 +739,11 @@ public class VehicleChargeType {
 
         /**
          * Gets the value of the maxChargeDays property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link BigInteger }
-         *
+         *     
          */
         public BigInteger getMaxChargeDays() {
             return maxChargeDays;
@@ -745,11 +751,11 @@ public class VehicleChargeType {
 
         /**
          * Sets the value of the maxChargeDays property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link BigInteger }
-         *
+         *     
          */
         public void setMaxChargeDays(BigInteger value) {
             this.maxChargeDays = value;
@@ -760,9 +766,9 @@ public class VehicleChargeType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -782,8 +788,8 @@ public class VehicleChargeType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -792,33 +798,33 @@ public class VehicleChargeType {
     public static class TaxAmounts {
 
         @XmlElement(name = "TaxAmount", required = true)
-        protected List<TaxAmount> taxAmount;
+        protected List<VehicleChargeType.TaxAmounts.TaxAmount> taxAmount;
 
         /**
          * Gets the value of the taxAmount property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the taxAmount property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getTaxAmount().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link VehicleChargeType.TaxAmounts.TaxAmount }
-         *
-         *
+         * 
+         * 
          */
-        public List<TaxAmount> getTaxAmount() {
+        public List<VehicleChargeType.TaxAmounts.TaxAmount> getTaxAmount() {
             if (taxAmount == null) {
-                taxAmount = new ArrayList<TaxAmount>();
+                taxAmount = new ArrayList<VehicleChargeType.TaxAmounts.TaxAmount>();
             }
             return this.taxAmount;
         }

@@ -8,15 +8,21 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import javax.xml.datatype.XMLGregorianCalendar;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
@@ -104,7 +110,7 @@ public class OTAHotelRateAmountNotifRQ  implements Serializable {
      * @return
      *     possible object is
      *     {@link com.witbooking.middleware.integration.ota.model.POSType }
-     *
+     *     
      */
     public POSType getPOS() {
         return pos;
@@ -112,11 +118,11 @@ public class OTAHotelRateAmountNotifRQ  implements Serializable {
 
     /**
      * Sets the value of the pos property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link com.witbooking.middleware.integration.ota.model.POSType }
-     *
+     *     
      */
     public void setPOS(POSType value) {
         this.pos = value;
@@ -124,11 +130,11 @@ public class OTAHotelRateAmountNotifRQ  implements Serializable {
 
     /**
      * Gets the value of the uniqueID property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link com.witbooking.middleware.integration.ota.model.UniqueIDType }
-     *
+     *     
      */
     public UniqueIDType getUniqueID() {
         return uniqueID;
@@ -136,11 +142,11 @@ public class OTAHotelRateAmountNotifRQ  implements Serializable {
 
     /**
      * Sets the value of the uniqueID property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link com.witbooking.middleware.integration.ota.model.UniqueIDType }
-     *
+     *     
      */
     public void setUniqueID(UniqueIDType value) {
         this.uniqueID = value;
@@ -148,11 +154,11 @@ public class OTAHotelRateAmountNotifRQ  implements Serializable {
 
     /**
      * Gets the value of the rateAmountMessages property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link com.witbooking.middleware.integration.ota.model.OTAHotelRateAmountNotifRQ.RateAmountMessages }
-     *
+     *     
      */
     public RateAmountMessages getRateAmountMessages() {
         return rateAmountMessages;
@@ -160,11 +166,11 @@ public class OTAHotelRateAmountNotifRQ  implements Serializable {
 
     /**
      * Sets the value of the rateAmountMessages property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link com.witbooking.middleware.integration.ota.model.OTAHotelRateAmountNotifRQ.RateAmountMessages }
-     *
+     *     
      */
     public void setRateAmountMessages(RateAmountMessages value) {
         this.rateAmountMessages = value;
@@ -172,11 +178,11 @@ public class OTAHotelRateAmountNotifRQ  implements Serializable {
 
     /**
      * Gets the value of the echoToken property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getEchoToken() {
         return echoToken;
@@ -184,11 +190,11 @@ public class OTAHotelRateAmountNotifRQ  implements Serializable {
 
     /**
      * Sets the value of the echoToken property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setEchoToken(String value) {
         this.echoToken = value;
@@ -196,11 +202,11 @@ public class OTAHotelRateAmountNotifRQ  implements Serializable {
 
     /**
      * Gets the value of the timeStamp property.
-     *
+     * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *
+     *     {@link javax.xml.datatype.XMLGregorianCalendar }
+     *     
      */
     public XMLGregorianCalendar getTimeStamp() {
         return timeStamp;
@@ -208,11 +214,11 @@ public class OTAHotelRateAmountNotifRQ  implements Serializable {
 
     /**
      * Sets the value of the timeStamp property.
-     *
+     * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *
+     *     {@link javax.xml.datatype.XMLGregorianCalendar }
+     *     
      */
     public void setTimeStamp(XMLGregorianCalendar value) {
         this.timeStamp = value;
@@ -220,11 +226,11 @@ public class OTAHotelRateAmountNotifRQ  implements Serializable {
 
     /**
      * Gets the value of the target property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getTarget() {
         return target;
@@ -232,11 +238,11 @@ public class OTAHotelRateAmountNotifRQ  implements Serializable {
 
     /**
      * Sets the value of the target property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setTarget(String value) {
         this.target = value;
@@ -244,11 +250,11 @@ public class OTAHotelRateAmountNotifRQ  implements Serializable {
 
     /**
      * Gets the value of the version property.
-     *
+     * 
      * @return
      *     possible object is
-     *     {@link BigDecimal }
-     *
+     *     {@link java.math.BigDecimal }
+     *     
      */
     public BigDecimal getVersion() {
         return version;
@@ -256,11 +262,11 @@ public class OTAHotelRateAmountNotifRQ  implements Serializable {
 
     /**
      * Sets the value of the version property.
-     *
+     * 
      * @param value
      *     allowed object is
-     *     {@link BigDecimal }
-     *
+     *     {@link java.math.BigDecimal }
+     *     
      */
     public void setVersion(BigDecimal value) {
         this.version = value;
@@ -268,11 +274,11 @@ public class OTAHotelRateAmountNotifRQ  implements Serializable {
 
     /**
      * Gets the value of the transactionIdentifier property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getTransactionIdentifier() {
         return transactionIdentifier;
@@ -280,11 +286,11 @@ public class OTAHotelRateAmountNotifRQ  implements Serializable {
 
     /**
      * Sets the value of the transactionIdentifier property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setTransactionIdentifier(String value) {
         this.transactionIdentifier = value;
@@ -292,11 +298,11 @@ public class OTAHotelRateAmountNotifRQ  implements Serializable {
 
     /**
      * Gets the value of the sequenceNmbr property.
-     *
+     * 
      * @return
      *     possible object is
-     *     {@link BigInteger }
-     *
+     *     {@link java.math.BigInteger }
+     *     
      */
     public BigInteger getSequenceNmbr() {
         return sequenceNmbr;
@@ -304,11 +310,11 @@ public class OTAHotelRateAmountNotifRQ  implements Serializable {
 
     /**
      * Sets the value of the sequenceNmbr property.
-     *
+     * 
      * @param value
      *     allowed object is
-     *     {@link BigInteger }
-     *
+     *     {@link java.math.BigInteger }
+     *     
      */
     public void setSequenceNmbr(BigInteger value) {
         this.sequenceNmbr = value;
@@ -316,11 +322,11 @@ public class OTAHotelRateAmountNotifRQ  implements Serializable {
 
     /**
      * Gets the value of the transactionStatusCode property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getTransactionStatusCode() {
         return transactionStatusCode;
@@ -328,11 +334,11 @@ public class OTAHotelRateAmountNotifRQ  implements Serializable {
 
     /**
      * Sets the value of the transactionStatusCode property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setTransactionStatusCode(String value) {
         this.transactionStatusCode = value;
@@ -340,11 +346,11 @@ public class OTAHotelRateAmountNotifRQ  implements Serializable {
 
     /**
      * Gets the value of the retransmissionIndicator property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link Boolean }
-     *
+     *     
      */
     public Boolean isRetransmissionIndicator() {
         return retransmissionIndicator;
@@ -352,11 +358,11 @@ public class OTAHotelRateAmountNotifRQ  implements Serializable {
 
     /**
      * Sets the value of the retransmissionIndicator property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *
+     *     
      */
     public void setRetransmissionIndicator(Boolean value) {
         this.retransmissionIndicator = value;
@@ -364,11 +370,11 @@ public class OTAHotelRateAmountNotifRQ  implements Serializable {
 
     /**
      * Gets the value of the correlationID property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getCorrelationID() {
         return correlationID;
@@ -376,11 +382,11 @@ public class OTAHotelRateAmountNotifRQ  implements Serializable {
 
     /**
      * Sets the value of the correlationID property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setCorrelationID(String value) {
         this.correlationID = value;
@@ -388,11 +394,11 @@ public class OTAHotelRateAmountNotifRQ  implements Serializable {
 
     /**
      * Gets the value of the altLangID property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getAltLangID() {
         return altLangID;
@@ -400,11 +406,11 @@ public class OTAHotelRateAmountNotifRQ  implements Serializable {
 
     /**
      * Sets the value of the altLangID property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setAltLangID(String value) {
         this.altLangID = value;
@@ -412,11 +418,11 @@ public class OTAHotelRateAmountNotifRQ  implements Serializable {
 
     /**
      * Gets the value of the primaryLangID property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getPrimaryLangID() {
         return primaryLangID;
@@ -424,11 +430,11 @@ public class OTAHotelRateAmountNotifRQ  implements Serializable {
 
     /**
      * Sets the value of the primaryLangID property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setPrimaryLangID(String value) {
         this.primaryLangID = value;
@@ -437,9 +443,9 @@ public class OTAHotelRateAmountNotifRQ  implements Serializable {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -452,8 +458,8 @@ public class OTAHotelRateAmountNotifRQ  implements Serializable {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -484,20 +490,20 @@ public class OTAHotelRateAmountNotifRQ  implements Serializable {
 
         /**
          * Gets the value of the rateAmountMessage property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the rateAmountMessage property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getRateAmountMessage().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link com.witbooking.middleware.integration.ota.model.RateAmountMessageType }

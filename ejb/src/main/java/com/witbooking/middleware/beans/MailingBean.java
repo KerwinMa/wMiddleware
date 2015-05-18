@@ -7,25 +7,27 @@
  */
 package com.witbooking.middleware.beans;
 
+import com.google.gson.JsonSyntaxException;
+import com.google.gson.reflect.TypeToken;
+import com.microtripit.mandrillapp.lutung.view.MandrillMessageStatus;
 import com.witbooking.middleware.db.DAOUtil;
 import com.witbooking.middleware.db.DBConnection;
 import com.witbooking.middleware.db.DBCredentials;
+import com.witbooking.middleware.db.handlers.EmailDataDBHandler;
 import com.witbooking.middleware.db.handlers.HotelConfigurationDBHandler;
 import com.witbooking.middleware.db.handlers.ReservationDBHandler;
-import com.witbooking.middleware.exceptions.MailingException;
-import com.witbooking.middleware.exceptions.MiddlewareException;
-import com.witbooking.middleware.exceptions.RemoteServiceException;
+import com.witbooking.middleware.exceptions.*;
 import com.witbooking.middleware.exceptions.db.DBAccessException;
 import com.witbooking.middleware.integration.EntryQueue;
-import com.witbooking.middleware.model.Customer;
-import com.witbooking.middleware.model.Poll;
-import com.witbooking.middleware.model.Reservation;
-import com.witbooking.middleware.model.Smtp;
+import com.witbooking.middleware.integration.mandrill.model.Event;
+import com.witbooking.middleware.model.*;
 import com.witbooking.middleware.resources.DBProperties;
 import com.witbooking.middleware.resources.MiddlewareProperties;
 import com.witbooking.middleware.utils.DateUtil;
 import com.witbooking.middleware.utils.EmailsUtils;
+import com.witbooking.middleware.utils.JsonUtils;
 
+import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
@@ -49,6 +51,9 @@ public class MailingBean implements MailingBeanLocal {
 
     private static final String FROM_EMAIL_ADDRESS_PROPERTY = "emailRemitenteSobreescrito_client";
     private static final String FROM_EMAIL_NAME_PROPERTY = "emailRemitenteSobreescrito_nombre";
+
+    @EJB
+    private ConnectionBeanLocal connectionBeanLocal;
 
     public void sendMailPreOrPostStay(String hotelTicker, int daysBetween, boolean postStay) throws MailingException {
         //If is a PostStay Mail, need to calculate the days before today (negative days)
@@ -155,7 +160,10 @@ public class MailingBean implements MailingBeanLocal {
             //Create the connection
             transport = mailSession.getTransport(smtp.getKindConnection());
             transport.connect(smtp.getHost(), smtp.getUser(), smtp.getPassword());
-            String content, subject, computerName = MiddlewareProperties.URL_WITBOOKER_V6, computerNickName = "";
+            String content;
+            String subject;
+            String computerName = MiddlewareProperties.URL_WITBOOKER_V6;
+            String computerNickName = "";
             subject = "[WB-API] Error in EntryQueue " + entryQueue.getChannelTicker() + " for hotel: " + entryQueue
                     .getHotelTicker();
             try {
@@ -249,6 +257,53 @@ public class MailingBean implements MailingBeanLocal {
         } else {
             logger.debug("Trying to send a mail to a null or empty list of recipients. This is the content of the message:\n '" + content + "'");
         }
+    }
+
+    public List<EmailData> saveReservationEmailData(Reservation reservation, String hotelTicker, List<MandrillMessageStatus> messageStatusReports) throws MailingException {
+        List<EmailData> emailDataList = new ArrayList<>();
+        try {
+            EmailDataDBHandler emailDataDBHandler = new EmailDataDBHandler();
+            for (MandrillMessageStatus mandrillMessageStatus : messageStatusReports) {
+                EmailData emailData = new EmailData();
+                emailData.setLastEmailStatus(Event.EventType.convertFromMandrillMessageEventType(Event.MandrillMessageEventType.getFromValue(mandrillMessageStatus.getStatus())));
+                emailData.setEmailID(mandrillMessageStatus.getId());
+                emailData.setHotelTicker(hotelTicker);
+                emailData.setReservationID(reservation.getReservationId());
+                if (mandrillMessageStatus.getEmail().equals(reservation.getCustomer().getEmail())) {
+                    emailData.setMessageType(com.witbooking.middleware.integration.mandrill.model.Message.MessageType.USER_CONFIRMATION);
+                } else {
+                    emailData.setMessageType(com.witbooking.middleware.integration.mandrill.model.Message.MessageType.HOTEL_CONFIRMATION);
+                }
+                emailDataList.add(emailData);
+                emailDataDBHandler.saveEmailData(emailData);
+            }
+        } catch (JsonSyntaxException | ExternalFileException | DBAccessException | NonexistentValueException e) {
+            logger.error("Could not save reservation email Data" + e);
+            throw new MailingException(e);
+        }
+        return emailDataList;
+    }
+
+
+    public List<MandrillMessageStatus> sendConfirmationEmail(String hotelTicker, Reservation reservation) throws
+            MailingException {
+        List<MandrillMessageStatus> mandrillMessageStatusList = new ArrayList<>();
+        String responseEmails = null;
+        try {
+            responseEmails = connectionBeanLocal.sendConfirmationEmail(hotelTicker, reservation.getReservationId());
+            mandrillMessageStatusList = JsonUtils.gsonInstance().fromJson(responseEmails, new TypeToken<ArrayList<MandrillMessageStatus>>() {
+            }.getType());
+        } catch (Exception ex) {
+            logger.error("Error Sending the Email. hotel:'" + hotelTicker + "' Exception:" + ex);
+            EmailsUtils.sendEmailToAdmins("Error sending confirmation email for: " + hotelTicker,
+                    "Error sending confirmation email for hotel: '" + hotelTicker +
+                            "' <br/> Reservation: '" + reservation.getReservationId() + "' <br/>" +
+                            " <br/> Error: '" + ex + "' <br/>" +
+                            " <br/> ResponsePHP: '" + responseEmails + "' <br/>" +
+                            " <br/>Please Verify and resend the Emails if is necessary!<br/>",
+                    Arrays.asList("WitBookerAPI Errors", "Error Confirmation Emails"), ex);
+        }
+        return mandrillMessageStatusList;
     }
 
     private DBCredentials getDBCredentials(String hotelTicker) throws MailingException {

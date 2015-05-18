@@ -8,9 +8,15 @@
 package com.witbooking.middleware.beans;
 
 import com.witbooking.middleware.exceptions.integration.rategain.RateGainException;
+import com.witbooking.middleware.integration.rategain.model.HotelARIGetRQ;
+import com.witbooking.middleware.integration.rategain.model.HotelARIGetRS;
+import com.witbooking.middleware.integration.rategain.model.HotelARIUpdateRQ;
+import com.witbooking.middleware.integration.rategain.model.HotelARIUpdateRS;
+import com.witbooking.middleware.integration.rategain.model.HotelProductListGetRQ;
+import com.witbooking.middleware.integration.rategain.model.HotelProductListGetRS;
+import com.witbooking.middleware.integration.rategain.model.HotelPropertyListGetRQ;
+import com.witbooking.middleware.integration.rategain.model.HotelPropertyListGetRS;
 import com.witbooking.middleware.integration.ota.model.OTAHotelResNotifRQ;
-import com.witbooking.middleware.integration.rategain.model.*;
-
 import javax.ejb.Remote;
 
 /**
@@ -33,5 +39,5 @@ public interface RateGainBeanRemote {
     public HotelARIUpdateRS getHotelARIUpdateRS(final HotelARIUpdateRQ request) throws RateGainException;
 
     public OTAHotelResNotifRQ getOTAHotelResNotifRQ(final String reservationId,
-                                                    final String hotelTicker) throws RateGainException;
+            final String hotelTicker) throws RateGainException;
 }

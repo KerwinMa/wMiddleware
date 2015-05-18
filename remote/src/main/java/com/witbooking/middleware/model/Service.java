@@ -10,6 +10,7 @@ package com.witbooking.middleware.model;
 import com.witbooking.middleware.model.values.*;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -133,6 +134,18 @@ public class Service implements Serializable, DataValueHolder, Comparable<Servic
 
     public boolean isActive() {
         return active;
+    }
+
+    @Override
+    public List<DataValue> getDataValues() {
+        List<DataValue> dataValues = new ArrayList<>();
+        dataValues.add(rate);
+        dataValues.add(lock);
+        dataValues.add(minStay);
+        dataValues.add(maxStay);
+        dataValues.add(minNotice);
+        dataValues.add(maxNotice);
+        return dataValues;
     }
 
     public void setActive(boolean active) {

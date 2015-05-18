@@ -205,7 +205,7 @@ public class OTAHotelAvailNotifRQ implements Serializable {
      * Gets the value of the timeStamp property.
      *
      * @return possible object is
-     * {@link XMLGregorianCalendar }
+     * {@link javax.xml.datatype.XMLGregorianCalendar }
      */
     public XMLGregorianCalendar getTimeStamp() {
         return timeStamp;
@@ -215,7 +215,7 @@ public class OTAHotelAvailNotifRQ implements Serializable {
      * Sets the value of the timeStamp property.
      *
      * @param value allowed object is
-     *              {@link XMLGregorianCalendar }
+     *              {@link javax.xml.datatype.XMLGregorianCalendar }
      */
     public void setTimeStamp(XMLGregorianCalendar value) {
         this.timeStamp = value;
@@ -245,7 +245,7 @@ public class OTAHotelAvailNotifRQ implements Serializable {
      * Gets the value of the version property.
      *
      * @return possible object is
-     * {@link BigDecimal }
+     * {@link java.math.BigDecimal }
      */
     public BigDecimal getVersion() {
         return version;
@@ -255,7 +255,7 @@ public class OTAHotelAvailNotifRQ implements Serializable {
      * Sets the value of the version property.
      *
      * @param value allowed object is
-     *              {@link BigDecimal }
+     *              {@link java.math.BigDecimal }
      */
     public void setVersion(BigDecimal value) {
         this.version = value;
@@ -285,7 +285,7 @@ public class OTAHotelAvailNotifRQ implements Serializable {
      * Gets the value of the sequenceNmbr property.
      *
      * @return possible object is
-     * {@link BigInteger }
+     * {@link java.math.BigInteger }
      */
     public BigInteger getSequenceNmbr() {
         return sequenceNmbr;
@@ -295,7 +295,7 @@ public class OTAHotelAvailNotifRQ implements Serializable {
      * Sets the value of the sequenceNmbr property.
      *
      * @param value allowed object is
-     *              {@link BigInteger }
+     *              {@link java.math.BigInteger }
      */
     public void setSequenceNmbr(BigInteger value) {
         this.sequenceNmbr = value;

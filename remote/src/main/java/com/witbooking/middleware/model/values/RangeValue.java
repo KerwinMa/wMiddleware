@@ -30,12 +30,12 @@ public class RangeValue<E> implements Serializable {
      * Constant serialized ID used for compatibility.
      */
     private static final long serialVersionUID = 1L;
-//    @XmlElementWrapper(name = "dailySet")
+    //    @XmlElementWrapper(name = "dailySet")
 //    @XmlElement(name = "DailyValue")
     private TreeSet<DailyValue<E>> dailySet;
-//    @XmlAttribute(name = "defaultValue")
+    //    @XmlAttribute(name = "defaultValue")
     private E defaultValue;
-//    @XmlAttribute(name = "type")
+    //    @XmlAttribute(name = "type")
     private OperatorType operator;
 
 
@@ -68,7 +68,7 @@ public class RangeValue<E> implements Serializable {
 
         @Override
         public String toString() {
-            return  value;
+            return value;
         }
     }
 
@@ -107,6 +107,12 @@ public class RangeValue<E> implements Serializable {
         this.defaultValue = defaultValue;
     }
 
+    public RangeValue(Date startDate, Date endDate, E value, E defaultValue) {
+        this.dailySet = new TreeSet<>(new DateComparator());
+        this.dailySet.add(new DailyValue<>(startDate, endDate, value));
+        this.defaultValue = defaultValue;
+    }
+
     public Set<DailyValue<E>> getDailySet() {
         return dailySet;
     }
@@ -127,8 +133,8 @@ public class RangeValue<E> implements Serializable {
         return operator;
     }
 
-    public boolean isOperator(){
-        return (operator !=null && operator != OperatorType.EQUALS);
+    public boolean isOperator() {
+        return (operator != null && operator != OperatorType.EQUALS);
     }
 
     public void setOperator(OperatorType operator) {
@@ -155,15 +161,15 @@ public class RangeValue<E> implements Serializable {
         return null;
     }
 
-    public void applyVariation(Double variation, boolean isPercentage){
+    public void applyVariation(Double variation, boolean isPercentage) {
         for (Iterator<DailyValue<E>> it1 = dailySet.iterator(); it1.hasNext(); ) {
             DailyValue<E> dailyValue = it1.next();
-            if(dailyValue.getValue()!=null){
+            if (dailyValue.getValue() != null) {
                 try {
-                    Float rate= (Float)dailyValue.getValue();
-                    rate=isPercentage? rate*( 1 + (variation.floatValue()/100) ):rate +variation.floatValue();
-                    dailyValue.setValue((E)rate);
-                }catch (ClassCastException e){
+                    Float rate = (Float) dailyValue.getValue();
+                    rate = isPercentage ? rate * (1 + (variation.floatValue() / 100)) : rate + variation.floatValue();
+                    dailyValue.setValue((E) rate);
+                } catch (ClassCastException e) {
                     logger.error("Tried to use applyVariation with a Non Float DailyValue");
                 }
             }
@@ -334,6 +340,23 @@ public class RangeValue<E> implements Serializable {
         return values;
     }
 
+
+    public Map<Date, E> getMapValuesForEachDay() {
+        Map<Date, E> values = new TreeMap<>();
+        for (DailyValue<E> dailyValue : dailySet) {
+            Date dateIterator = (Date) dailyValue.getStartDate().clone();
+            while (DateUtil.dateBetweenDaysRange(dateIterator, dailyValue.getStartDate(), dailyValue.getEndDate())) {
+                if (dailyValue.getValue() != null) {
+                    values.put(dateIterator, dailyValue.getValue());
+                } else {
+                    values.put(dateIterator, defaultValue);
+                }
+                dateIterator = DateUtil.cloneAndIncrementDays(dateIterator, 1);
+            }
+        }
+        return values;
+    }
+
     public List<E> getValuesForEachDayForContinuousRange() {
         List<E> values = new ArrayList<>();
         if (dailySet == null || dailySet.isEmpty())
@@ -458,7 +481,10 @@ public class RangeValue<E> implements Serializable {
 
     @Override
     public String toString() {
-        return "RangeValue{" + "dailySet=" + dailySet + ", defaultValue=" + defaultValue + '}';
+        if (isOperator())
+            return "RangeValue{" + "dailySet=" + dailySet + ", defaultValue=" + defaultValue + ", operator=" + operator + '}';
+        else
+            return "RangeValue{" + "dailySet=" + dailySet + ", defaultValue=" + defaultValue + '}';
     }
 
     @Override
@@ -478,4 +504,6 @@ public class RangeValue<E> implements Serializable {
         }
         return true;
     }
+
+
 }

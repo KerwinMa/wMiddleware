@@ -8,14 +8,19 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import javax.xml.datatype.Duration;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import javax.xml.datatype.Duration;
 
 
 /**
@@ -176,33 +181,33 @@ import java.util.List;
 public class BookingRulesType {
 
     @XmlElement(name = "BookingRule", required = true)
-    protected List<BookingRule> bookingRule;
+    protected List<BookingRulesType.BookingRule> bookingRule;
 
     /**
      * Gets the value of the bookingRule property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the bookingRule property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getBookingRule().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link BookingRulesType.BookingRule }
-     *
-     *
+     * 
+     * 
      */
-    public List<BookingRule> getBookingRule() {
+    public List<BookingRulesType.BookingRule> getBookingRule() {
         if (bookingRule == null) {
-            bookingRule = new ArrayList<BookingRule>();
+            bookingRule = new ArrayList<BookingRulesType.BookingRule>();
         }
         return this.bookingRule;
     }
@@ -210,9 +215,9 @@ public class BookingRulesType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -346,8 +351,8 @@ public class BookingRulesType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -386,7 +391,7 @@ public class BookingRulesType {
         @XmlElement(name = "UniqueID")
         protected UniqueIDType uniqueID;
         @XmlElement(name = "CheckoutCharge")
-        protected List<CheckoutCharge> checkoutCharge;
+        protected List<BookingRulesType.BookingRule.CheckoutCharge> checkoutCharge;
         @XmlAttribute(name = "MaxAdvancedBookingOffset")
         protected Duration maxAdvancedBookingOffset;
         @XmlAttribute(name = "MinAdvancedBookingOffset")
@@ -440,11 +445,11 @@ public class BookingRulesType {
 
         /**
          * Gets the value of the acceptableGuarantees property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link BookingRulesType.BookingRule.AcceptableGuarantees }
-         *
+         *     
          */
         public BookingRulesType.BookingRule.AcceptableGuarantees getAcceptableGuarantees() {
             return acceptableGuarantees;
@@ -452,11 +457,11 @@ public class BookingRulesType {
 
         /**
          * Sets the value of the acceptableGuarantees property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link BookingRulesType.BookingRule.AcceptableGuarantees }
-         *
+         *     
          */
         public void setAcceptableGuarantees(BookingRulesType.BookingRule.AcceptableGuarantees value) {
             this.acceptableGuarantees = value;
@@ -464,11 +469,11 @@ public class BookingRulesType {
 
         /**
          * Gets the value of the cancelPenalties property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link CancelPenaltiesType }
-         *
+         *     
          */
         public CancelPenaltiesType getCancelPenalties() {
             return cancelPenalties;
@@ -476,11 +481,11 @@ public class BookingRulesType {
 
         /**
          * Sets the value of the cancelPenalties property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link CancelPenaltiesType }
-         *
+         *     
          */
         public void setCancelPenalties(CancelPenaltiesType value) {
             this.cancelPenalties = value;
@@ -488,11 +493,11 @@ public class BookingRulesType {
 
         /**
          * Gets the value of the requiredPaymts property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link RequiredPaymentsType }
-         *
+         *     
          */
         public RequiredPaymentsType getRequiredPaymts() {
             return requiredPaymts;
@@ -500,11 +505,11 @@ public class BookingRulesType {
 
         /**
          * Sets the value of the requiredPaymts property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link RequiredPaymentsType }
-         *
+         *     
          */
         public void setRequiredPaymts(RequiredPaymentsType value) {
             this.requiredPaymts = value;
@@ -512,11 +517,11 @@ public class BookingRulesType {
 
         /**
          * Gets the value of the lengthsOfStay property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link LengthsOfStayType }
-         *
+         *     
          */
         public LengthsOfStayType getLengthsOfStay() {
             return lengthsOfStay;
@@ -524,11 +529,11 @@ public class BookingRulesType {
 
         /**
          * Sets the value of the lengthsOfStay property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link LengthsOfStayType }
-         *
+         *     
          */
         public void setLengthsOfStay(LengthsOfStayType value) {
             this.lengthsOfStay = value;
@@ -536,11 +541,11 @@ public class BookingRulesType {
 
         /**
          * Gets the value of the dowRestrictions property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link DOWRestrictionsType }
-         *
+         *     
          */
         public DOWRestrictionsType getDOWRestrictions() {
             return dowRestrictions;
@@ -548,11 +553,11 @@ public class BookingRulesType {
 
         /**
          * Sets the value of the dowRestrictions property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link DOWRestrictionsType }
-         *
+         *     
          */
         public void setDOWRestrictions(DOWRestrictionsType value) {
             this.dowRestrictions = value;
@@ -560,11 +565,11 @@ public class BookingRulesType {
 
         /**
          * Gets the value of the restrictionStatus property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link BookingRulesType.BookingRule.RestrictionStatus }
-         *
+         *     
          */
         public BookingRulesType.BookingRule.RestrictionStatus getRestrictionStatus() {
             return restrictionStatus;
@@ -572,11 +577,11 @@ public class BookingRulesType {
 
         /**
          * Sets the value of the restrictionStatus property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link BookingRulesType.BookingRule.RestrictionStatus }
-         *
+         *     
          */
         public void setRestrictionStatus(BookingRulesType.BookingRule.RestrictionStatus value) {
             this.restrictionStatus = value;
@@ -584,11 +589,11 @@ public class BookingRulesType {
 
         /**
          * Gets the value of the viewerships property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link ViewershipsType }
-         *
+         *     
          */
         public ViewershipsType getViewerships() {
             return viewerships;
@@ -596,11 +601,11 @@ public class BookingRulesType {
 
         /**
          * Sets the value of the viewerships property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link ViewershipsType }
-         *
+         *     
          */
         public void setViewerships(ViewershipsType value) {
             this.viewerships = value;
@@ -608,11 +613,11 @@ public class BookingRulesType {
 
         /**
          * Gets the value of the addtionalRules property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link BookingRulesType.BookingRule.AddtionalRules }
-         *
+         *     
          */
         public BookingRulesType.BookingRule.AddtionalRules getAddtionalRules() {
             return addtionalRules;
@@ -620,11 +625,11 @@ public class BookingRulesType {
 
         /**
          * Sets the value of the addtionalRules property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link BookingRulesType.BookingRule.AddtionalRules }
-         *
+         *     
          */
         public void setAddtionalRules(BookingRulesType.BookingRule.AddtionalRules value) {
             this.addtionalRules = value;
@@ -632,25 +637,25 @@ public class BookingRulesType {
 
         /**
          * Gets the value of the description property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the description property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getDescription().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link ParagraphType }
-         *
-         *
+         * 
+         * 
          */
         public List<ParagraphType> getDescription() {
             if (description == null) {
@@ -661,11 +666,11 @@ public class BookingRulesType {
 
         /**
          * Gets the value of the uniqueID property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link UniqueIDType }
-         *
+         *     
          */
         public UniqueIDType getUniqueID() {
             return uniqueID;
@@ -673,11 +678,11 @@ public class BookingRulesType {
 
         /**
          * Sets the value of the uniqueID property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link UniqueIDType }
-         *
+         *     
          */
         public void setUniqueID(UniqueIDType value) {
             this.uniqueID = value;
@@ -685,40 +690,40 @@ public class BookingRulesType {
 
         /**
          * Gets the value of the checkoutCharge property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the checkoutCharge property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getCheckoutCharge().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link BookingRulesType.BookingRule.CheckoutCharge }
-         *
-         *
+         * 
+         * 
          */
-        public List<CheckoutCharge> getCheckoutCharge() {
+        public List<BookingRulesType.BookingRule.CheckoutCharge> getCheckoutCharge() {
             if (checkoutCharge == null) {
-                checkoutCharge = new ArrayList<CheckoutCharge>();
+                checkoutCharge = new ArrayList<BookingRulesType.BookingRule.CheckoutCharge>();
             }
             return this.checkoutCharge;
         }
 
         /**
          * Gets the value of the maxAdvancedBookingOffset property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link Duration }
-         *
+         *     
          */
         public Duration getMaxAdvancedBookingOffset() {
             return maxAdvancedBookingOffset;
@@ -726,11 +731,11 @@ public class BookingRulesType {
 
         /**
          * Sets the value of the maxAdvancedBookingOffset property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link Duration }
-         *
+         *     
          */
         public void setMaxAdvancedBookingOffset(Duration value) {
             this.maxAdvancedBookingOffset = value;
@@ -738,11 +743,11 @@ public class BookingRulesType {
 
         /**
          * Gets the value of the minAdvancedBookingOffset property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link Duration }
-         *
+         *     
          */
         public Duration getMinAdvancedBookingOffset() {
             return minAdvancedBookingOffset;
@@ -750,11 +755,11 @@ public class BookingRulesType {
 
         /**
          * Sets the value of the minAdvancedBookingOffset property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link Duration }
-         *
+         *     
          */
         public void setMinAdvancedBookingOffset(Duration value) {
             this.minAdvancedBookingOffset = value;
@@ -762,11 +767,11 @@ public class BookingRulesType {
 
         /**
          * Gets the value of the forceGuaranteeOffset property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link Duration }
-         *
+         *     
          */
         public Duration getForceGuaranteeOffset() {
             return forceGuaranteeOffset;
@@ -774,11 +779,11 @@ public class BookingRulesType {
 
         /**
          * Sets the value of the forceGuaranteeOffset property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link Duration }
-         *
+         *     
          */
         public void setForceGuaranteeOffset(Duration value) {
             this.forceGuaranteeOffset = value;
@@ -786,11 +791,11 @@ public class BookingRulesType {
 
         /**
          * Gets the value of the depositWaiverOffset property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link Duration }
-         *
+         *     
          */
         public Duration getDepositWaiverOffset() {
             return depositWaiverOffset;
@@ -798,11 +803,11 @@ public class BookingRulesType {
 
         /**
          * Sets the value of the depositWaiverOffset property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link Duration }
-         *
+         *     
          */
         public void setDepositWaiverOffset(Duration value) {
             this.depositWaiverOffset = value;
@@ -810,11 +815,11 @@ public class BookingRulesType {
 
         /**
          * Gets the value of the minTotalOccupancy property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link BigInteger }
-         *
+         *     
          */
         public BigInteger getMinTotalOccupancy() {
             return minTotalOccupancy;
@@ -822,11 +827,11 @@ public class BookingRulesType {
 
         /**
          * Sets the value of the minTotalOccupancy property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link BigInteger }
-         *
+         *     
          */
         public void setMinTotalOccupancy(BigInteger value) {
             this.minTotalOccupancy = value;
@@ -834,11 +839,11 @@ public class BookingRulesType {
 
         /**
          * Gets the value of the maxTotalOccupancy property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link BigInteger }
-         *
+         *     
          */
         public BigInteger getMaxTotalOccupancy() {
             return maxTotalOccupancy;
@@ -846,11 +851,11 @@ public class BookingRulesType {
 
         /**
          * Sets the value of the maxTotalOccupancy property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link BigInteger }
-         *
+         *     
          */
         public void setMaxTotalOccupancy(BigInteger value) {
             this.maxTotalOccupancy = value;
@@ -858,11 +863,11 @@ public class BookingRulesType {
 
         /**
          * Gets the value of the absoluteDropTime property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getAbsoluteDropTime() {
             return absoluteDropTime;
@@ -870,11 +875,11 @@ public class BookingRulesType {
 
         /**
          * Sets the value of the absoluteDropTime property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setAbsoluteDropTime(String value) {
             this.absoluteDropTime = value;
@@ -882,11 +887,11 @@ public class BookingRulesType {
 
         /**
          * Gets the value of the generallyBookable property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link Boolean }
-         *
+         *     
          */
         public Boolean isGenerallyBookable() {
             return generallyBookable;
@@ -894,11 +899,11 @@ public class BookingRulesType {
 
         /**
          * Sets the value of the generallyBookable property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link Boolean }
-         *
+         *     
          */
         public void setGenerallyBookable(Boolean value) {
             this.generallyBookable = value;
@@ -906,11 +911,11 @@ public class BookingRulesType {
 
         /**
          * Gets the value of the priceViewable property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link Boolean }
-         *
+         *     
          */
         public Boolean isPriceViewable() {
             return priceViewable;
@@ -918,11 +923,11 @@ public class BookingRulesType {
 
         /**
          * Sets the value of the priceViewable property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link Boolean }
-         *
+         *     
          */
         public void setPriceViewable(Boolean value) {
             this.priceViewable = value;
@@ -930,11 +935,11 @@ public class BookingRulesType {
 
         /**
          * Gets the value of the qualifiedRateYN property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link Boolean }
-         *
+         *     
          */
         public Boolean isQualifiedRateYN() {
             return qualifiedRateYN;
@@ -942,11 +947,11 @@ public class BookingRulesType {
 
         /**
          * Sets the value of the qualifiedRateYN property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link Boolean }
-         *
+         *     
          */
         public void setQualifiedRateYN(Boolean value) {
             this.qualifiedRateYN = value;
@@ -954,11 +959,11 @@ public class BookingRulesType {
 
         /**
          * Gets the value of the addressRequired property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link Boolean }
-         *
+         *     
          */
         public Boolean isAddressRequired() {
             return addressRequired;
@@ -966,11 +971,11 @@ public class BookingRulesType {
 
         /**
          * Sets the value of the addressRequired property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link Boolean }
-         *
+         *     
          */
         public void setAddressRequired(Boolean value) {
             this.addressRequired = value;
@@ -978,11 +983,11 @@ public class BookingRulesType {
 
         /**
          * Gets the value of the maxContiguousBookings property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link BigInteger }
-         *
+         *     
          */
         public BigInteger getMaxContiguousBookings() {
             return maxContiguousBookings;
@@ -990,11 +995,11 @@ public class BookingRulesType {
 
         /**
          * Sets the value of the maxContiguousBookings property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link BigInteger }
-         *
+         *     
          */
         public void setMaxContiguousBookings(BigInteger value) {
             this.maxContiguousBookings = value;
@@ -1002,11 +1007,11 @@ public class BookingRulesType {
 
         /**
          * Gets the value of the start property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getStart() {
             return start;
@@ -1014,11 +1019,11 @@ public class BookingRulesType {
 
         /**
          * Sets the value of the start property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setStart(String value) {
             this.start = value;
@@ -1026,11 +1031,11 @@ public class BookingRulesType {
 
         /**
          * Gets the value of the duration property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getDuration() {
             return duration;
@@ -1038,11 +1043,11 @@ public class BookingRulesType {
 
         /**
          * Sets the value of the duration property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setDuration(String value) {
             this.duration = value;
@@ -1050,11 +1055,11 @@ public class BookingRulesType {
 
         /**
          * Gets the value of the end property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getEnd() {
             return end;
@@ -1062,11 +1067,11 @@ public class BookingRulesType {
 
         /**
          * Sets the value of the end property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setEnd(String value) {
             this.end = value;
@@ -1074,11 +1079,11 @@ public class BookingRulesType {
 
         /**
          * Gets the value of the code property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getCode() {
             return code;
@@ -1086,11 +1091,11 @@ public class BookingRulesType {
 
         /**
          * Sets the value of the code property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setCode(String value) {
             this.code = value;
@@ -1098,11 +1103,11 @@ public class BookingRulesType {
 
         /**
          * Gets the value of the codeContext property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getCodeContext() {
             return codeContext;
@@ -1110,11 +1115,11 @@ public class BookingRulesType {
 
         /**
          * Sets the value of the codeContext property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setCodeContext(String value) {
             this.codeContext = value;
@@ -1122,11 +1127,11 @@ public class BookingRulesType {
 
         /**
          * Gets the value of the uri property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getURI() {
             return uri;
@@ -1134,11 +1139,11 @@ public class BookingRulesType {
 
         /**
          * Sets the value of the uri property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setURI(String value) {
             this.uri = value;
@@ -1146,11 +1151,11 @@ public class BookingRulesType {
 
         /**
          * Gets the value of the quantity property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link BigInteger }
-         *
+         *     
          */
         public BigInteger getQuantity() {
             return quantity;
@@ -1158,11 +1163,11 @@ public class BookingRulesType {
 
         /**
          * Sets the value of the quantity property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link BigInteger }
-         *
+         *     
          */
         public void setQuantity(BigInteger value) {
             this.quantity = value;
@@ -1170,11 +1175,11 @@ public class BookingRulesType {
 
         /**
          * Gets the value of the absoluteCutoff property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getAbsoluteCutoff() {
             return absoluteCutoff;
@@ -1182,11 +1187,11 @@ public class BookingRulesType {
 
         /**
          * Sets the value of the absoluteCutoff property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setAbsoluteCutoff(String value) {
             this.absoluteCutoff = value;
@@ -1194,11 +1199,11 @@ public class BookingRulesType {
 
         /**
          * Gets the value of the offsetDuration property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link Duration }
-         *
+         *     
          */
         public Duration getOffsetDuration() {
             return offsetDuration;
@@ -1206,11 +1211,11 @@ public class BookingRulesType {
 
         /**
          * Sets the value of the offsetDuration property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link Duration }
-         *
+         *     
          */
         public void setOffsetDuration(Duration value) {
             this.offsetDuration = value;
@@ -1218,11 +1223,11 @@ public class BookingRulesType {
 
         /**
          * Gets the value of the offsetCalculationMode property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getOffsetCalculationMode() {
             return offsetCalculationMode;
@@ -1230,11 +1235,11 @@ public class BookingRulesType {
 
         /**
          * Sets the value of the offsetCalculationMode property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setOffsetCalculationMode(String value) {
             this.offsetCalculationMode = value;
@@ -1243,9 +1248,9 @@ public class BookingRulesType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -1282,8 +1287,8 @@ public class BookingRulesType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
@@ -1292,33 +1297,33 @@ public class BookingRulesType {
         public static class AcceptableGuarantees {
 
             @XmlElement(name = "AcceptableGuarantee", required = true)
-            protected List<AcceptableGuarantee> acceptableGuarantee;
+            protected List<BookingRulesType.BookingRule.AcceptableGuarantees.AcceptableGuarantee> acceptableGuarantee;
 
             /**
              * Gets the value of the acceptableGuarantee property.
-             *
+             * 
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the acceptableGuarantee property.
-             *
+             * 
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getAcceptableGuarantee().add(newItem);
              * </pre>
-             *
-             *
+             * 
+             * 
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link BookingRulesType.BookingRule.AcceptableGuarantees.AcceptableGuarantee }
-             *
-             *
+             * 
+             * 
              */
-            public List<AcceptableGuarantee> getAcceptableGuarantee() {
+            public List<BookingRulesType.BookingRule.AcceptableGuarantees.AcceptableGuarantee> getAcceptableGuarantee() {
                 if (acceptableGuarantee == null) {
-                    acceptableGuarantee = new ArrayList<AcceptableGuarantee>();
+                    acceptableGuarantee = new ArrayList<BookingRulesType.BookingRule.AcceptableGuarantees.AcceptableGuarantee>();
                 }
                 return this.acceptableGuarantee;
             }
@@ -1326,9 +1331,9 @@ public class BookingRulesType {
 
             /**
              * <p>Java class for anonymous complex type.
-             *
+             * 
              * <p>The following schema fragment specifies the expected content contained within this class.
-             *
+             * 
              * <pre>
              * &lt;complexType>
              *   &lt;complexContent>
@@ -1355,8 +1360,8 @@ public class BookingRulesType {
              *   &lt;/complexContent>
              * &lt;/complexType>
              * </pre>
-             *
-             *
+             * 
+             * 
              */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "")
@@ -1379,11 +1384,11 @@ public class BookingRulesType {
 
                 /**
                  * Gets the value of the guaranteePolicyType property.
-                 *
+                 * 
                  * @return
                  *     possible object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public String getGuaranteePolicyType() {
                     return guaranteePolicyType;
@@ -1391,11 +1396,11 @@ public class BookingRulesType {
 
                 /**
                  * Sets the value of the guaranteePolicyType property.
-                 *
+                 * 
                  * @param value
                  *     allowed object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public void setGuaranteePolicyType(String value) {
                     this.guaranteePolicyType = value;
@@ -1403,11 +1408,11 @@ public class BookingRulesType {
 
                 /**
                  * Gets the value of the paymentType property.
-                 *
+                 * 
                  * @return
                  *     possible object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public String getPaymentType() {
                     return paymentType;
@@ -1415,11 +1420,11 @@ public class BookingRulesType {
 
                 /**
                  * Sets the value of the paymentType property.
-                 *
+                 * 
                  * @param value
                  *     allowed object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public void setPaymentType(String value) {
                     this.paymentType = value;
@@ -1427,11 +1432,11 @@ public class BookingRulesType {
 
                 /**
                  * Gets the value of the unacceptablePaymentType property.
-                 *
+                 * 
                  * @return
                  *     possible object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public String getUnacceptablePaymentType() {
                     return unacceptablePaymentType;
@@ -1439,11 +1444,11 @@ public class BookingRulesType {
 
                 /**
                  * Sets the value of the unacceptablePaymentType property.
-                 *
+                 * 
                  * @param value
                  *     allowed object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public void setUnacceptablePaymentType(String value) {
                     this.unacceptablePaymentType = value;
@@ -1451,11 +1456,11 @@ public class BookingRulesType {
 
                 /**
                  * Gets the value of the currencyCode property.
-                 *
+                 * 
                  * @return
                  *     possible object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public String getCurrencyCode() {
                     return currencyCode;
@@ -1463,11 +1468,11 @@ public class BookingRulesType {
 
                 /**
                  * Sets the value of the currencyCode property.
-                 *
+                 * 
                  * @param value
                  *     allowed object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public void setCurrencyCode(String value) {
                     this.currencyCode = value;
@@ -1475,11 +1480,11 @@ public class BookingRulesType {
 
                 /**
                  * Gets the value of the decimalPlaces property.
-                 *
+                 * 
                  * @return
                  *     possible object is
                  *     {@link BigInteger }
-                 *
+                 *     
                  */
                 public BigInteger getDecimalPlaces() {
                     return decimalPlaces;
@@ -1487,11 +1492,11 @@ public class BookingRulesType {
 
                 /**
                  * Sets the value of the decimalPlaces property.
-                 *
+                 * 
                  * @param value
                  *     allowed object is
                  *     {@link BigInteger }
-                 *
+                 *     
                  */
                 public void setDecimalPlaces(BigInteger value) {
                     this.decimalPlaces = value;
@@ -1504,9 +1509,9 @@ public class BookingRulesType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -1541,8 +1546,8 @@ public class BookingRulesType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
@@ -1551,33 +1556,33 @@ public class BookingRulesType {
         public static class AddtionalRules {
 
             @XmlElement(name = "AdditionalRule", required = true)
-            protected List<AdditionalRule> additionalRule;
+            protected List<BookingRulesType.BookingRule.AddtionalRules.AdditionalRule> additionalRule;
 
             /**
              * Gets the value of the additionalRule property.
-             *
+             * 
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the additionalRule property.
-             *
+             * 
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getAdditionalRule().add(newItem);
              * </pre>
-             *
-             *
+             * 
+             * 
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link BookingRulesType.BookingRule.AddtionalRules.AdditionalRule }
-             *
-             *
+             * 
+             * 
              */
-            public List<AdditionalRule> getAdditionalRule() {
+            public List<BookingRulesType.BookingRule.AddtionalRules.AdditionalRule> getAdditionalRule() {
                 if (additionalRule == null) {
-                    additionalRule = new ArrayList<AdditionalRule>();
+                    additionalRule = new ArrayList<BookingRulesType.BookingRule.AddtionalRules.AdditionalRule>();
                 }
                 return this.additionalRule;
             }

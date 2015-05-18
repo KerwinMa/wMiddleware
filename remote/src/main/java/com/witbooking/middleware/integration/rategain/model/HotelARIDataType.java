@@ -1398,8 +1398,8 @@ public class HotelARIDataType {
      *
      *
      */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
+    @javax.xml.bind.annotation.XmlAccessorType(XmlAccessType.FIELD)
+    @javax.xml.bind.annotation.XmlType(name = "", propOrder = {
         "base",
         "additional",
         "mealPlans",
@@ -1408,9 +1408,9 @@ public class HotelARIDataType {
     public static class RateAmounts {
 
         @XmlElement(name = "Base")
-        protected List<Base> base = new ArrayList<Base>();
+        protected List<HotelARIDataType.RateAmounts.Base> base = new ArrayList<HotelARIDataType.RateAmounts.Base>();
         @XmlElement(name = "Additional")
-        protected List<Additional> additional;
+        protected List<HotelARIDataType.RateAmounts.Additional> additional;
         @XmlElement(name = "MealPlans")
         protected HotelARIDataType.RateAmounts.MealPlans mealPlans;
         @XmlElement(name = "Discount")
@@ -1536,9 +1536,9 @@ public class HotelARIDataType {
          *
          *
          */
-        public List<Base> getBase() {
+        public List<HotelARIDataType.RateAmounts.Base> getBase() {
             if (base == null) {
-                base = new ArrayList<Base>();
+                base = new ArrayList<HotelARIDataType.RateAmounts.Base>();
             }
             return this.base;
         }
@@ -1565,9 +1565,9 @@ public class HotelARIDataType {
          *
          *
          */
-        public List<Additional> getAdditional() {
+        public List<HotelARIDataType.RateAmounts.Additional> getAdditional() {
             if (additional == null) {
-                additional = new ArrayList<Additional>();
+                additional = new ArrayList<HotelARIDataType.RateAmounts.Additional>();
             }
             return this.additional;
         }
@@ -1978,14 +1978,14 @@ public class HotelARIDataType {
          *
          *
          */
-        @XmlAccessorType(XmlAccessType.FIELD)
-        @XmlType(name = "", propOrder = {
+        @javax.xml.bind.annotation.XmlAccessorType(XmlAccessType.FIELD)
+        @javax.xml.bind.annotation.XmlType(name = "", propOrder = {
             "mealPlan"
         })
         public static class MealPlans {
 
             @XmlElement(name = "MealPlan", required = true)
-            protected List<MealPlan> mealPlan = new ArrayList<MealPlan>();
+            protected List<HotelARIDataType.RateAmounts.MealPlans.MealPlan> mealPlan = new ArrayList<HotelARIDataType.RateAmounts.MealPlans.MealPlan>();
 
             public MealPlans() {
             }
@@ -2033,9 +2033,9 @@ public class HotelARIDataType {
              *
              *
              */
-            public List<MealPlan> getMealPlan() {
+            public List<HotelARIDataType.RateAmounts.MealPlans.MealPlan> getMealPlan() {
                 if (mealPlan == null) {
-                    mealPlan = new ArrayList<MealPlan>();
+                    mealPlan = new ArrayList<HotelARIDataType.RateAmounts.MealPlans.MealPlan>();
                 }
                 return this.mealPlan;
             }
@@ -2077,13 +2077,14 @@ public class HotelARIDataType {
 
                 public MealPlan(String mealPlanTicker) {
                     if (mealPlanTicker != null) {
-                        if (mealPlanTicker.contains("PC") || mealPlanTicker.contains("TI")) {
+                        if (mealPlanTicker.contains(com.witbooking.middleware.model.MealPlan.FULL_BOARD) ||
+                                mealPlanTicker.contains(com.witbooking.middleware.model.MealPlan.ALL_INCLUSIVE)) {
                             this.mealPlanCode = MealPlanCodeType.ALL_INCLUSIVE;
-                        } else if (mealPlanTicker.contains("SA")) {
+                        } else if (mealPlanTicker.contains(com.witbooking.middleware.model.MealPlan.ROOM_ONLY)){
                             this.mealPlanCode = MealPlanCodeType.ROOM_ONLY;
-                        } else if (mealPlanTicker.contains("HD")) {
+                        } else if (mealPlanTicker.contains(com.witbooking.middleware.model.MealPlan.BED_AND_BREAKFAST)) {
                             this.mealPlanCode = MealPlanCodeType.BREAKFAST;
-                        } else if (mealPlanTicker.contains("MP")) {
+                        } else if (mealPlanTicker.contains(com.witbooking.middleware.model.MealPlan.HALF_BOARD)) {
                             this.mealPlanCode = MealPlanCodeType.DINNED_BED_AND_BREAKFAST_PLAN;
                         } else {
                             this.mealPlanCode = MealPlanCodeType.MODIFIED;
@@ -2121,7 +2122,7 @@ public class HotelARIDataType {
                     }
                     return true;
                 }
-                
+
 
                 @XmlType(name = "MealPlanCodeType")
                 @XmlEnum

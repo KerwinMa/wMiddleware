@@ -75,6 +75,8 @@ public abstract class SiteMinderBusinessLogic {
                 }
             } catch (UnmarshalException ex) {
                 logger.error(ex);
+                logger.error("Request SOAP Body Message = " + request);
+                logger.error("Response SOAP Body Message = " + soapBodyResponse);
                 SoapFault soapFault = (SoapFault) XMLUtils.unmarshalFromString(soapBodyResponse, SoapFault.class);
                 otaHotelResNotifRS = new OTAHotelResNotifRS(
                         com.witbooking.middleware.integration.ota.model.ErrorType.getSoapFault(soapFault));

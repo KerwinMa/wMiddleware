@@ -8,11 +8,15 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -61,7 +65,7 @@ public class VehicleLocationDetailsType {
     @XmlElement(name = "Address")
     protected List<AddressInfoType> address;
     @XmlElement(name = "Telephone")
-    protected List<Telephone> telephone;
+    protected List<VehicleLocationDetailsType.Telephone> telephone;
     @XmlElement(name = "AdditionalInfo")
     protected VehicleLocationAdditionalDetailsType additionalInfo;
     @XmlAttribute(name = "AtAirport")
@@ -79,25 +83,25 @@ public class VehicleLocationDetailsType {
 
     /**
      * Gets the value of the address property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the address property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getAddress().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link AddressInfoType }
-     *
-     *
+     * 
+     * 
      */
     public List<AddressInfoType> getAddress() {
         if (address == null) {
@@ -108,29 +112,29 @@ public class VehicleLocationDetailsType {
 
     /**
      * Gets the value of the telephone property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the telephone property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getTelephone().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link VehicleLocationDetailsType.Telephone }
-     *
-     *
+     * 
+     * 
      */
-    public List<Telephone> getTelephone() {
+    public List<VehicleLocationDetailsType.Telephone> getTelephone() {
         if (telephone == null) {
-            telephone = new ArrayList<Telephone>();
+            telephone = new ArrayList<VehicleLocationDetailsType.Telephone>();
         }
         return this.telephone;
     }

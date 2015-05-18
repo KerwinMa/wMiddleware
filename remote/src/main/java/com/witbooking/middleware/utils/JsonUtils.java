@@ -9,9 +9,8 @@ package com.witbooking.middleware.utils;
 
 import com.fatboyindustrial.gsonjodatime.DateTimeConverter;
 import com.fatboyindustrial.gsonjodatime.LocalTimeConverter;
-import com.witbooking.middleware.model.Configuration;
-import com.witbooking.middleware.model.Guest;
-import com.witbooking.middleware.model.Inventory;
+import com.google.gson.*;
+import com.witbooking.middleware.model.*;
 import com.witbooking.middleware.model.dynamicPriceVariation.Condition;
 import com.witbooking.middleware.model.values.*;
 import com.witbooking.middleware.model.values.types.ConstantValue;
@@ -20,9 +19,9 @@ import com.witbooking.middleware.model.values.types.SharedValue;
 import com.witbooking.middleware.utils.serializers.JSONConditionSerializer;
 import org.joda.time.DateTime;
 import org.joda.time.LocalTime;
-import com.google.gson.*;
 
 import java.lang.reflect.Type;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -45,7 +44,7 @@ public final class JsonUtils {
             .registerTypeAdapter(DateTime.class, new DateTimeConverter())
             .create();
 
-    public static final Gson gsonInstance(){
+    public static final Gson gsonInstance() {
         Gson gson = new GsonBuilder()
                 .registerTypeAdapter(RateDataValue.class, new DataValueAdapter())
                 .registerTypeAdapter(AvailabilityDataValue.class, new DataValueAdapter())
@@ -65,19 +64,36 @@ public final class JsonUtils {
     }
 
 
-    public static JsonObject inventoryResumeToJson(Inventory inventory) {
+    public static JsonArray dataValueHolderResumeToJsonArray(List<DataValueHolder> valueHolderList, boolean printType) {
+        JsonArray jsonArray = new JsonArray();
+        for (DataValueHolder item : valueHolderList) {
+            jsonArray.add(JsonUtils.dataValueHolderResumeToJsonObject(item, printType));
+        }
+        return jsonArray;
+    }
+
+    public static JsonObject dataValueHolderResumeToJsonObject(DataValueHolder valueHolder, boolean printType) {
         JsonObject jsonObject = new JsonObject();
-        jsonObject.addProperty("ticker", inventory.getTicker());
-        jsonObject.addProperty("name", inventory.getFullName());
-        jsonObject.addProperty("visible", inventory.isVisible());
-        jsonObject.add("occupancy", configurationToJson(inventory.getConfiguration()));
-        jsonObject.add(HashRangeValue.RATE, dataValueToJson(inventory.getRate()));
-        jsonObject.add(HashRangeValue.ACTUAL_AVAILABILITY, dataValueToJson(inventory.getAvailability()));
-        jsonObject.add(HashRangeValue.LOCK, dataValueToJson(inventory.getLock()));
-        jsonObject.add(HashRangeValue.MIN_STAY, dataValueToJson(inventory.getMinStay()));
-        jsonObject.add(HashRangeValue.MAX_STAY, dataValueToJson(inventory.getMaxStay()));
-        jsonObject.add(HashRangeValue.MIN_NOTICE, dataValueToJson(inventory.getMinNotice()));
-        jsonObject.add(HashRangeValue.MAX_NOTICE, dataValueToJson(inventory.getMaxNotice()));
+        jsonObject.addProperty("ticker", valueHolder.getTicker());
+        if (printType)
+            jsonObject.addProperty("type", valueHolder.getClass().getSimpleName());
+        if (valueHolder instanceof Inventory) {
+            jsonObject.addProperty("name", ((Inventory) valueHolder).getFullName());
+        } else {
+            jsonObject.addProperty("name", valueHolder.getName());
+        }
+        jsonObject.addProperty("visible", valueHolder.isActive());
+        if (valueHolder instanceof Inventory)
+            jsonObject.add("occupancy", configurationToJson(((Inventory) valueHolder).getConfiguration()));
+        if (!(valueHolder instanceof Discount))
+            jsonObject.add(HashRangeValue.RATE, dataValueToJson(valueHolder.getRate()));
+        if (valueHolder instanceof Inventory)
+            jsonObject.add(HashRangeValue.ACTUAL_AVAILABILITY, dataValueToJson(valueHolder.getAvailability()));
+        jsonObject.add(HashRangeValue.LOCK, dataValueToJson(valueHolder.getLock()));
+        jsonObject.add(HashRangeValue.MIN_STAY, dataValueToJson(valueHolder.getMinStay()));
+        jsonObject.add(HashRangeValue.MAX_STAY, dataValueToJson(valueHolder.getMaxStay()));
+        jsonObject.add(HashRangeValue.MIN_NOTICE, dataValueToJson(valueHolder.getMinNotice()));
+        jsonObject.add(HashRangeValue.MAX_NOTICE, dataValueToJson(valueHolder.getMaxNotice()));
         return jsonObject;
     }
 

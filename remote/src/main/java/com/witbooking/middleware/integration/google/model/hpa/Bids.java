@@ -68,7 +68,7 @@ import java.util.List;
 public class Bids {
 
     @XmlElement(name = "Bid")
-    protected List<Bid> bid;
+    protected List<Bids.Bid> bid;
     @XmlAttribute(name = "timestamp", required = true)
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar timestamp;
@@ -77,47 +77,47 @@ public class Bids {
 
     /**
      * Gets the value of the bid property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the bid property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getBid().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Bids.Bid }
-     *
-     *
+     * 
+     * 
      */
-    public List<Bid> getBid() {
+    public List<Bids.Bid> getBid() {
         if (bid == null) {
-            bid = new ArrayList<Bid>();
+            bid = new ArrayList<Bids.Bid>();
         }
         return this.bid;
     }
 
     public void addBid(Bids.Bid bidAdd) {
         if (bid == null) {
-            bid = new ArrayList<Bid>();
+            bid = new ArrayList<Bids.Bid>();
         }
         if (bidAdd != null) bid.add(bidAdd);
     }
 
     /**
      * Gets the value of the timestamp property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link XMLGregorianCalendar }
-     *
+     *     
      */
     public XMLGregorianCalendar getTimestamp() {
         return timestamp;
@@ -125,11 +125,11 @@ public class Bids {
 
     /**
      * Sets the value of the timestamp property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link XMLGregorianCalendar }
-     *
+     *     
      */
     public void setTimestamp(XMLGregorianCalendar value) {
         this.timestamp = value;
@@ -137,11 +137,11 @@ public class Bids {
 
     /**
      * Gets the value of the id property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getId() {
         return id;
@@ -149,11 +149,11 @@ public class Bids {
 
     /**
      * Sets the value of the id property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setId(String value) {
         this.id = value;
@@ -162,9 +162,9 @@ public class Bids {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -198,8 +198,8 @@ public class Bids {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -232,11 +232,11 @@ public class Bids {
 
         /**
          * Gets the value of the propertyList property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link Bids.Bid.PropertyList }
-         *
+         *     
          */
         public Bids.Bid.PropertyList getPropertyList() {
             return propertyList;
@@ -244,11 +244,11 @@ public class Bids {
 
         /**
          * Sets the value of the propertyList property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link Bids.Bid.PropertyList }
-         *
+         *     
          */
         public void setPropertyList(Bids.Bid.PropertyList value) {
             this.propertyList = value;
@@ -256,11 +256,11 @@ public class Bids {
 
         /**
          * Gets the value of the sites property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link Bids.Bid.Sites }
-         *
+         *     
          */
         public Bids.Bid.Sites getSites() {
             return sites;
@@ -268,11 +268,11 @@ public class Bids {
 
         /**
          * Sets the value of the sites property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link Bids.Bid.Sites }
-         *
+         *     
          */
         public void setSites(Bids.Bid.Sites value) {
             this.sites = value;

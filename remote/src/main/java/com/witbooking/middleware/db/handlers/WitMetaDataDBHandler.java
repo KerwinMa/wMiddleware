@@ -158,6 +158,49 @@ public final class WitMetaDataDBHandler extends DBHandler {
         }
     }
 
+    /**
+     * Returns all the hotel tickers on our system for a channel given.
+     *
+     * @param channelTicker      The channel ticker. (eg: BOOKING)
+     * @return The hotel ticker on our system.
+     * @throws DBAccessException
+     */
+    public List<String> getHotelTickerFromChannel(String channelTicker) throws DBAccessException {
+        PreparedStatement statement = null;
+        ResultSet resultSet = null;
+        List<String> items = new ArrayList<>();
+        try {
+            statement = prepareStatement(
+                    SQLInstructions.WitMetaDataDBHandler.GET_HOTEL_TICKER_FROM_CHANNEL,
+                    Collections.singletonList(channelTicker));
+            resultSet = execute(statement);
+            while (next(resultSet)) {
+                items.add(getString(resultSet, SQLInstructions.WitMetaDataDBHandler.HOTEL_TICKER));
+            }
+            return items;
+        } finally {
+            DAOUtil.close(statement, resultSet);
+        }
+    }
+
+    public List<String> getChannelHotelTickerFromChannel(String channelTicker) throws DBAccessException {
+        PreparedStatement statement = null;
+        ResultSet resultSet = null;
+        List<String> items = new ArrayList<>();
+        try {
+            statement = prepareStatement(
+                    SQLInstructions.WitMetaDataDBHandler.GET_CHANNEL_HOTEL_TICKER_FROM_CHANNEL,
+                    Collections.singletonList(channelTicker));
+            resultSet = execute(statement);
+            while (next(resultSet)) {
+                items.add(getString(resultSet, SQLInstructions.WitMetaDataDBHandler.CHANNEL_HOTEL_TICKER));
+            }
+            return items;
+        } finally {
+            DAOUtil.close(statement, resultSet);
+        }
+    }
+
 
     /**
      * Returns the channel hotel ticker on our system for a channel and a hotel
@@ -269,6 +312,8 @@ public final class WitMetaDataDBHandler extends DBHandler {
             resultSet = getGeneratedKeys(statement);
             next(resultSet);
             rowId = getInt(resultSet, 1);
+        } catch (Exception e) {
+            logger.error(e);
         } finally {
             DAOUtil.close(statement, resultSet);
         }
@@ -284,6 +329,8 @@ public final class WitMetaDataDBHandler extends DBHandler {
                     addBatch(statement, values);
                 }
                 executeBatch(statement);
+            } catch (Exception e) {
+                logger.error(e);
             } finally {
                 DAOUtil.close(statement);
             }
@@ -671,22 +718,31 @@ public final class WitMetaDataDBHandler extends DBHandler {
                                               final ChannelConnectionType type, final ChannelQueueStatus status)
             throws DBAccessException {
         Integer entryId = null;
-        List<EntryQueueItem> newItems = new ArrayList<>();
         Set<Integer> ids = new HashSet<>();
-        for (EntryQueueItem entryQueueItem : entryQueueItems) {
-            entryId = getEntryIdFromItem(hotelTicker, channelTicker, type, entryQueueItem);
-            //Check if exists.
+        if (entryQueueItems == null || entryQueueItems.isEmpty()) {
+            entryId = getEntryId(hotelTicker, channelTicker, type, null, UNIQUE);
             if (entryId != null) {
-                ids.add(entryId.intValue());
+                return reportAnExistingConnection(status, entryId);
             } else {
-                newItems.add(entryQueueItem);
+                entryId = createNewEntry(hotelTicker, channelTicker, type, status, entryQueueItems);
             }
+        } else {
+            List<EntryQueueItem> newItems = new ArrayList<>();
+            for (EntryQueueItem entryQueueItem : entryQueueItems) {
+                entryId = getEntryIdFromItem(hotelTicker, channelTicker, type, entryQueueItem);
+                //Check if exists.
+                if (entryId != null) {
+                    ids.add(entryId.intValue());
+                } else {
+                    newItems.add(entryQueueItem);
+                }
+            }
+            for (Integer id : ids) {
+                entryId = reportAnExistingConnection(status, id);
+            }
+            if (!newItems.isEmpty())
+                entryId = createNewEntry(hotelTicker, channelTicker, type, status, newItems);
         }
-        for (Integer id : ids) {
-            entryId = reportAnExistingConnection(status, id);
-        }
-        if (!newItems.isEmpty())
-            entryId = createNewEntry(hotelTicker, channelTicker, type, status, newItems);
         return entryId;
     }
 

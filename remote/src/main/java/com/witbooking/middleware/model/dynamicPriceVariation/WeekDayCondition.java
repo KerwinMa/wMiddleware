@@ -3,12 +3,10 @@ package com.witbooking.middleware.model.dynamicPriceVariation;
 import com.witbooking.middleware.exceptions.model.IncompatibleTypesException;
 import org.apache.log4j.Logger;
 import org.joda.time.DateTime;
+import org.joda.time.DateTimeZone;
 
 import java.io.Serializable;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by mongoose on 9/29/14.
@@ -19,9 +17,9 @@ public class WeekDayCondition extends Condition implements Serializable {
 
     private static final Logger logger = Logger.getLogger(WeekDayCondition.class);
 
-    private static List<String> REQUIRED_ARGUMENTS= Arrays.asList(ARGUMENT_WEEK_DAY, DatetimeCondition.ARGUMENT_CURRENT_TIME);
+    private static List<String> REQUIRED_ARGUMENTS= Arrays.asList(ARGUMENT_WEEK_DAY,DatetimeCondition.ARGUMENT_CURRENT_TIME);
 
-    private static HashSet<ConditionType> VALID_CONDITIONS= new HashSet<ConditionType>(Arrays.asList(ConditionType.INCLUDE, ConditionType.EXCLUDE, ConditionType.STAY, ConditionType.CONTRACT));
+    private static HashSet<ConditionType> VALID_CONDITIONS= new HashSet<ConditionType>(Arrays.asList(ConditionType.INCLUDE,ConditionType.EXCLUDE,ConditionType.STAY,ConditionType.CONTRACT));
 
 
     public enum WeekDay implements Serializable {

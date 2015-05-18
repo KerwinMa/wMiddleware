@@ -8,7 +8,11 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
@@ -64,11 +68,11 @@ public class OffLocationServiceType
 
     /**
      * Gets the value of the personName property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link PersonNameType }
-     *
+     *     
      */
     public PersonNameType getPersonName() {
         return personName;
@@ -76,11 +80,11 @@ public class OffLocationServiceType
 
     /**
      * Sets the value of the personName property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link PersonNameType }
-     *
+     *     
      */
     public void setPersonName(PersonNameType value) {
         this.personName = value;
@@ -88,11 +92,11 @@ public class OffLocationServiceType
 
     /**
      * Gets the value of the telephone property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link OffLocationServiceType.Telephone }
-     *
+     *     
      */
     public OffLocationServiceType.Telephone getTelephone() {
         return telephone;
@@ -100,11 +104,11 @@ public class OffLocationServiceType
 
     /**
      * Sets the value of the telephone property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link OffLocationServiceType.Telephone }
-     *
+     *     
      */
     public void setTelephone(OffLocationServiceType.Telephone value) {
         this.telephone = value;

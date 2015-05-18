@@ -13,7 +13,9 @@ import java.io.Serializable;
  */
 public class Media implements Serializable,Comparable<Media> {
 
-    private String file, title, description;
+    private String file;
+    private String title;
+    private String description;
 
     private KindMedia kindMedia;
 
@@ -79,6 +81,24 @@ public class Media implements Serializable,Comparable<Media> {
                 ? title + " " + description
                 : title
                 : description;
+    }
+
+    public String getFileNameWithSize(String size) {
+        String ext = getFileExtension();
+        String nameFile = file.replace("." + ext, "");
+        return nameFile + "_" + size + "." + ext;
+    }
+
+    public String getFileName() {
+        String ext = getFileExtension();
+        return file.replace("." + ext, "");
+    }
+
+    public String getFileExtension() {
+        String[] name = file.split("\\.");
+        if (name.length < 2)
+            return "";
+        return name[name.length - 1];
     }
 
     @Override

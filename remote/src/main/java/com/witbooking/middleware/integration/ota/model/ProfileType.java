@@ -8,10 +8,15 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.datatype.XMLGregorianCalendar;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
@@ -107,7 +112,7 @@ public class ProfileType {
     @XmlElement(name = "Customer")
     protected CustomerType customer;
     @XmlElement(name = "UserID")
-    protected List<UserID> userID;
+    protected List<ProfileType.UserID> userID;
     @XmlElement(name = "PrefCollections")
     protected PreferencesType prefCollections;
     @XmlElement(name = "CompanyInfo")
@@ -145,29 +150,29 @@ public class ProfileType {
     protected YesNoType shareAllMarketInd;
     @XmlAttribute(name = "ShareAllOptOutInd")
     protected YesNoType shareAllOptOutInd;
-
+    
     private static final String PROFILE_TYPE = "1";
 
     public ProfileType() {
     }
 
-    public ProfileType(final List<String> givenName, final String surName,
+    public ProfileType(final List<String> givenName, final String surName, 
             final String telephoneNumber,final String email,
             final String address,final String country,final String countryCode) {
         this.profileType = PROFILE_TYPE;
-        this.customer = new CustomerType(givenName, surName,
+        this.customer = new CustomerType(givenName, surName, 
                 telephoneNumber, email, address,country,countryCode);
     }
 
-
-
+    
+    
     /**
      * Gets the value of the accesses property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link AccessesType }
-     *
+     *     
      */
     public AccessesType getAccesses() {
         return accesses;
@@ -175,11 +180,11 @@ public class ProfileType {
 
     /**
      * Sets the value of the accesses property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link AccessesType }
-     *
+     *     
      */
     public void setAccesses(AccessesType value) {
         this.accesses = value;
@@ -187,11 +192,11 @@ public class ProfileType {
 
     /**
      * Gets the value of the customer property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link CustomerType }
-     *
+     *     
      */
     public CustomerType getCustomer() {
         return customer;
@@ -199,11 +204,11 @@ public class ProfileType {
 
     /**
      * Sets the value of the customer property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link CustomerType }
-     *
+     *     
      */
     public void setCustomer(CustomerType value) {
         this.customer = value;
@@ -211,40 +216,40 @@ public class ProfileType {
 
     /**
      * Gets the value of the userID property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the userID property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getUserID().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ProfileType.UserID }
-     *
-     *
+     * 
+     * 
      */
-    public List<UserID> getUserID() {
+    public List<ProfileType.UserID> getUserID() {
         if (userID == null) {
-            userID = new ArrayList<UserID>();
+            userID = new ArrayList<ProfileType.UserID>();
         }
         return this.userID;
     }
 
     /**
      * Gets the value of the prefCollections property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link PreferencesType }
-     *
+     *     
      */
     public PreferencesType getPrefCollections() {
         return prefCollections;
@@ -252,11 +257,11 @@ public class ProfileType {
 
     /**
      * Sets the value of the prefCollections property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link PreferencesType }
-     *
+     *     
      */
     public void setPrefCollections(PreferencesType value) {
         this.prefCollections = value;
@@ -264,11 +269,11 @@ public class ProfileType {
 
     /**
      * Gets the value of the companyInfo property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link CompanyInfoType }
-     *
+     *     
      */
     public CompanyInfoType getCompanyInfo() {
         return companyInfo;
@@ -276,11 +281,11 @@ public class ProfileType {
 
     /**
      * Sets the value of the companyInfo property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link CompanyInfoType }
-     *
+     *     
      */
     public void setCompanyInfo(CompanyInfoType value) {
         this.companyInfo = value;
@@ -288,11 +293,11 @@ public class ProfileType {
 
     /**
      * Gets the value of the affiliations property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link AffiliationsType }
-     *
+     *     
      */
     public AffiliationsType getAffiliations() {
         return affiliations;
@@ -300,11 +305,11 @@ public class ProfileType {
 
     /**
      * Sets the value of the affiliations property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link AffiliationsType }
-     *
+     *     
      */
     public void setAffiliations(AffiliationsType value) {
         this.affiliations = value;
@@ -312,11 +317,11 @@ public class ProfileType {
 
     /**
      * Gets the value of the agreements property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link AgreementsType }
-     *
+     *     
      */
     public AgreementsType getAgreements() {
         return agreements;
@@ -324,11 +329,11 @@ public class ProfileType {
 
     /**
      * Sets the value of the agreements property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link AgreementsType }
-     *
+     *     
      */
     public void setAgreements(AgreementsType value) {
         this.agreements = value;
@@ -336,11 +341,11 @@ public class ProfileType {
 
     /**
      * Gets the value of the comments property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link ProfileType.Comments }
-     *
+     *     
      */
     public ProfileType.Comments getComments() {
         return comments;
@@ -348,11 +353,11 @@ public class ProfileType {
 
     /**
      * Sets the value of the comments property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link ProfileType.Comments }
-     *
+     *     
      */
     public void setComments(ProfileType.Comments value) {
         this.comments = value;
@@ -360,11 +365,11 @@ public class ProfileType {
 
     /**
      * Gets the value of the tpaExtensions property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link TPAExtensionsType }
-     *
+     *     
      */
     public TPAExtensionsType getTPAExtensions() {
         return tpaExtensions;
@@ -372,11 +377,11 @@ public class ProfileType {
 
     /**
      * Sets the value of the tpaExtensions property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link TPAExtensionsType }
-     *
+     *     
      */
     public void setTPAExtensions(TPAExtensionsType value) {
         this.tpaExtensions = value;
@@ -384,11 +389,11 @@ public class ProfileType {
 
     /**
      * Gets the value of the rph property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getRPH() {
         return rph;
@@ -396,11 +401,11 @@ public class ProfileType {
 
     /**
      * Sets the value of the rph property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setRPH(String value) {
         this.rph = value;
@@ -408,25 +413,25 @@ public class ProfileType {
 
     /**
      * Gets the value of the statusCode property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the statusCode property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getStatusCode().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link String }
-     *
-     *
+     * 
+     * 
      */
     public List<String> getStatusCode() {
         if (statusCode == null) {
@@ -437,11 +442,11 @@ public class ProfileType {
 
     /**
      * Gets the value of the createDateTime property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link XMLGregorianCalendar }
-     *
+     *     
      */
     public XMLGregorianCalendar getCreateDateTime() {
         return createDateTime;
@@ -449,11 +454,11 @@ public class ProfileType {
 
     /**
      * Sets the value of the createDateTime property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link XMLGregorianCalendar }
-     *
+     *     
      */
     public void setCreateDateTime(XMLGregorianCalendar value) {
         this.createDateTime = value;
@@ -461,11 +466,11 @@ public class ProfileType {
 
     /**
      * Gets the value of the creatorID property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getCreatorID() {
         return creatorID;
@@ -473,11 +478,11 @@ public class ProfileType {
 
     /**
      * Sets the value of the creatorID property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setCreatorID(String value) {
         this.creatorID = value;
@@ -485,11 +490,11 @@ public class ProfileType {
 
     /**
      * Gets the value of the lastModifyDateTime property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link XMLGregorianCalendar }
-     *
+     *     
      */
     public XMLGregorianCalendar getLastModifyDateTime() {
         return lastModifyDateTime;
@@ -497,11 +502,11 @@ public class ProfileType {
 
     /**
      * Sets the value of the lastModifyDateTime property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link XMLGregorianCalendar }
-     *
+     *     
      */
     public void setLastModifyDateTime(XMLGregorianCalendar value) {
         this.lastModifyDateTime = value;
@@ -509,11 +514,11 @@ public class ProfileType {
 
     /**
      * Gets the value of the lastModifierID property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getLastModifierID() {
         return lastModifierID;
@@ -521,11 +526,11 @@ public class ProfileType {
 
     /**
      * Sets the value of the lastModifierID property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setLastModifierID(String value) {
         this.lastModifierID = value;
@@ -533,11 +538,11 @@ public class ProfileType {
 
     /**
      * Gets the value of the purgeDate property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link XMLGregorianCalendar }
-     *
+     *     
      */
     public XMLGregorianCalendar getPurgeDate() {
         return purgeDate;
@@ -545,11 +550,11 @@ public class ProfileType {
 
     /**
      * Sets the value of the purgeDate property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link XMLGregorianCalendar }
-     *
+     *     
      */
     public void setPurgeDate(XMLGregorianCalendar value) {
         this.purgeDate = value;
@@ -557,11 +562,11 @@ public class ProfileType {
 
     /**
      * Gets the value of the profileType property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getProfileType() {
         return profileType;
@@ -569,11 +574,11 @@ public class ProfileType {
 
     /**
      * Sets the value of the profileType property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setProfileType(String value) {
         this.profileType = value;
@@ -581,11 +586,11 @@ public class ProfileType {
 
     /**
      * Gets the value of the shareAllSynchInd property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link YesNoType }
-     *
+     *     
      */
     public YesNoType getShareAllSynchInd() {
         return shareAllSynchInd;
@@ -593,11 +598,11 @@ public class ProfileType {
 
     /**
      * Sets the value of the shareAllSynchInd property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link YesNoType }
-     *
+     *     
      */
     public void setShareAllSynchInd(YesNoType value) {
         this.shareAllSynchInd = value;
@@ -605,11 +610,11 @@ public class ProfileType {
 
     /**
      * Gets the value of the shareAllMarketInd property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link YesNoType }
-     *
+     *     
      */
     public YesNoType getShareAllMarketInd() {
         return shareAllMarketInd;
@@ -617,11 +622,11 @@ public class ProfileType {
 
     /**
      * Sets the value of the shareAllMarketInd property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link YesNoType }
-     *
+     *     
      */
     public void setShareAllMarketInd(YesNoType value) {
         this.shareAllMarketInd = value;
@@ -629,11 +634,11 @@ public class ProfileType {
 
     /**
      * Gets the value of the shareAllOptOutInd property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link YesNoType }
-     *
+     *     
      */
     public YesNoType getShareAllOptOutInd() {
         return shareAllOptOutInd;
@@ -641,11 +646,11 @@ public class ProfileType {
 
     /**
      * Sets the value of the shareAllOptOutInd property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link YesNoType }
-     *
+     *     
      */
     public void setShareAllOptOutInd(YesNoType value) {
         this.shareAllOptOutInd = value;
@@ -654,9 +659,9 @@ public class ProfileType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -692,8 +697,8 @@ public class ProfileType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -702,33 +707,33 @@ public class ProfileType {
     public static class Comments {
 
         @XmlElement(name = "Comment", required = true)
-        protected List<Comment> comment;
+        protected List<ProfileType.Comments.Comment> comment;
 
         /**
          * Gets the value of the comment property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the comment property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getComment().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link ProfileType.Comments.Comment }
-         *
-         *
+         * 
+         * 
          */
-        public List<Comment> getComment() {
+        public List<ProfileType.Comments.Comment> getComment() {
             if (comment == null) {
-                comment = new ArrayList<Comment>();
+                comment = new ArrayList<ProfileType.Comments.Comment>();
             }
             return this.comment;
         }
@@ -736,9 +741,9 @@ public class ProfileType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -764,8 +769,8 @@ public class ProfileType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
@@ -776,7 +781,7 @@ public class ProfileType {
         {
 
             @XmlElement(name = "AuthorizedViewer")
-            protected List<AuthorizedViewer> authorizedViewer;
+            protected List<ProfileType.Comments.Comment.AuthorizedViewer> authorizedViewer;
             @XmlAttribute(name = "CommentOriginatorCode")
             protected String commentOriginatorCode;
             @XmlAttribute(name = "GuestViewable")
@@ -793,29 +798,29 @@ public class ProfileType {
 
             /**
              * Gets the value of the authorizedViewer property.
-             *
+             * 
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the authorizedViewer property.
-             *
+             * 
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getAuthorizedViewer().add(newItem);
              * </pre>
-             *
-             *
+             * 
+             * 
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link ProfileType.Comments.Comment.AuthorizedViewer }
-             *
-             *
+             * 
+             * 
              */
-            public List<AuthorizedViewer> getAuthorizedViewer() {
+            public List<ProfileType.Comments.Comment.AuthorizedViewer> getAuthorizedViewer() {
                 if (authorizedViewer == null) {
-                    authorizedViewer = new ArrayList<AuthorizedViewer>();
+                    authorizedViewer = new ArrayList<ProfileType.Comments.Comment.AuthorizedViewer>();
                 }
                 return this.authorizedViewer;
             }

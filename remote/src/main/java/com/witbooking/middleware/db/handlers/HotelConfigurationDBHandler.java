@@ -264,6 +264,28 @@ public class HotelConfigurationDBHandler extends DBHandler {
         }
     }
 
+    public List<String> getConfirmationEmails() {
+        PreparedStatement statement = null;
+        ResultSet resultSet = null;
+        List<String> emailList = new ArrayList<>();
+        try {
+            statement = prepareStatement(SQLInstructions.HotelConfigurationDBHandler.GET_CONFIRMATION_EMAILS);
+            resultSet = execute(statement);
+            String emails = next(resultSet) ? getString(resultSet, 1) : null;
+            if (emails != null) {
+                for (String s : emails.split(",")) {
+                    if (!s.trim().isEmpty())
+                        emailList.add(s);
+                }
+            }
+        } catch (DBAccessException ex) {
+            logger.error(ex.getMessage());
+        } finally {
+            DAOUtil.close(statement, resultSet);
+        }
+        return emailList;
+    }
+
     public String getProcessedURL(String hotelTicker, String language) {
         String urlLink = getWebHotelURL();
         //If the hotel don't have Web URL, we send the reservation web in step1
@@ -500,8 +522,8 @@ public class HotelConfigurationDBHandler extends DBHandler {
         }
     }
 
-    public Map<Markup.Phase,List<Markup>> getScripts() throws DBAccessException {
-        Map<Markup.Phase,List<Markup>> scripts = new HashMap<Markup.Phase,List<Markup>>();
+    public Map<Markup.Phase, List<Markup>> getScripts() throws DBAccessException {
+        Map<Markup.Phase, List<Markup>> scripts = new HashMap<Markup.Phase, List<Markup>>();
         PreparedStatement statement = null;
         ResultSet resultSet = null;
         try {
@@ -509,16 +531,16 @@ public class HotelConfigurationDBHandler extends DBHandler {
             resultSet = execute(statement);
             while (next(resultSet)) {
                 Markup markup = new Markup();
-                markup.setId(getInt(resultSet,1));
+                markup.setId(getInt(resultSet, 1));
                 markup.setName(getString(resultSet, 2));
                 markup.setCode(getString(resultSet, 3));
                 markup.setPosition(Markup.Position.getPositionFromSqlString(getString(resultSet, 4)));
                 markup.setPhase(Markup.Phase.getTypeFromSqlString(getString(resultSet, 5)));
-                markup.setActive(getBoolean(resultSet,6));
-                if(!scripts.containsKey(markup.getPhase())){
-                    scripts.put(markup.getPhase(),new ArrayList<Markup>());
+                markup.setActive(getBoolean(resultSet, 6));
+                if (!scripts.containsKey(markup.getPhase())) {
+                    scripts.put(markup.getPhase(), new ArrayList<Markup>());
                 }
-                if(markup.isActive()){
+                if (markup.isActive()) {
                     scripts.get(markup.getPhase()).add(markup);
                 }
             }
@@ -581,7 +603,7 @@ public class HotelConfigurationDBHandler extends DBHandler {
         //Finding languages information
         final List<Language> languages = getActiveLanguages();
         //Finding scripts information
-        final Map<Markup.Phase,List<Markup>> scripts = getScripts();
+        final Map<Markup.Phase, List<Markup>> scripts = getScripts();
 
         //Finding Credit Card information
         final Map<String, String> creditCardsAllowed = getActiveCreditCards();
@@ -592,7 +614,7 @@ public class HotelConfigurationDBHandler extends DBHandler {
             properties.setProperty("isDemo", "1");
         hotel.setConfiguration(properties);
         hotel.setVisualRepresentation(new WitBookerVisualRepresentation(languages, currencies, discounts, services,
-                frontEndMessages, inventories, creditCardsAllowed, transferData,scripts));
+                frontEndMessages, inventories, creditCardsAllowed, transferData, scripts));
         return hotel;
     }
 
@@ -612,7 +634,10 @@ public class HotelConfigurationDBHandler extends DBHandler {
         if (isDemo)
             properties.setProperty("isDemo", "1");
         chain.setConfiguration(properties);
-        chain.setVisualRepresentation(new ChainVisualRepresentation(activeLanguages, activesCurrencies, frontEndMessages, discounts));
+
+        //Finding scripts information
+        final Map<Markup.Phase, List<Markup>> scripts = getScripts();
+        chain.setVisualRepresentation(new ChainVisualRepresentation(activeLanguages, activesCurrencies, frontEndMessages, discounts, scripts));
         return chain;
     }
 

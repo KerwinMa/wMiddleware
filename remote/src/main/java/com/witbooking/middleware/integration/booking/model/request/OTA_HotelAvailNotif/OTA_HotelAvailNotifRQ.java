@@ -97,8 +97,8 @@ public class OTA_HotelAvailNotifRQ implements Serializable {
      * @param amount     Number of days offered the room.
      * @throws BookingException thrown when an error occurs with the date
      *                          indicated.
-     *                          {@link AvailStatusMessage#checkDates(Date, Date)}
-     * @see {{@link AvailStatusMessage#checkDates(Date, Date)}
+     *                          {@link AvailStatusMessage#checkDates(java.util.Date, java.util.Date)}
+     * @see {{@link AvailStatusMessage#checkDates(java.util.Date, java.util.Date)}
      */
     public OTA_HotelAvailNotifRQ addAmountRoomsAvailable(String roomTicker, Date start, Date end, int amount) throws BookingException {
         AvailStatusMessage item = new AvailStatusMessage(roomTicker, start, end, null);
@@ -119,8 +119,8 @@ public class OTA_HotelAvailNotifRQ implements Serializable {
      * @param minStay    Number of days minimum stay.
      * @throws BookingException thrown when an error occurs with the date
      *                          indicated.
-     *                          {@link AvailStatusMessage#checkDates(Date, Date)}
-     * @see {{@link AvailStatusMessage#checkDates(Date, Date)}
+     *                          {@link AvailStatusMessage#checkDates(java.util.Date, java.util.Date)}
+     * @see {{@link AvailStatusMessage#checkDates(java.util.Date, java.util.Date)}
      */
     public OTA_HotelAvailNotifRQ addRestrictionOfStayMin(String roomTicker, String ratePlan, Date start, Date end, int minStay) throws BookingException {
         AvailStatusMessage item = new AvailStatusMessage(roomTicker, start, end, ratePlan);
@@ -141,8 +141,8 @@ public class OTA_HotelAvailNotifRQ implements Serializable {
      * @param maxStay    Number of days maximum stay.
      * @throws BookingException thrown when an error occurs with the date
      *                          indicated.
-     *                          {@link AvailStatusMessage#checkDates(Date, Date)}
-     * @see {{@link AvailStatusMessage#checkDates(Date, Date)}
+     *                          {@link AvailStatusMessage#checkDates(java.util.Date, java.util.Date)}
+     * @see {{@link AvailStatusMessage#checkDates(java.util.Date, java.util.Date)}
      */
     public OTA_HotelAvailNotifRQ addRestrictionOfStayMax(String roomTicker, String ratePlan, Date start, Date end, int maxStay) throws BookingException {
         AvailStatusMessage item = new AvailStatusMessage(roomTicker, start, end, ratePlan);
@@ -164,7 +164,7 @@ public class OTA_HotelAvailNotifRQ implements Serializable {
      * @param minStay    Number of days minimum stay.
      * @param maxStay    Number of days maximum stay.
      * @throws BookingException thrown when an error occurs with the range given.
-     * @see AvailStatusMessage#checkDates(Date, Date)
+     * @see AvailStatusMessage#checkDates(java.util.Date, java.util.Date)
      */
     public OTA_HotelAvailNotifRQ addRestrictionOfStayBoth(String roomTicker, String ratePlan, Date start, Date end, int minStay, int maxStay) throws BookingException {
         AvailStatusMessage item = new AvailStatusMessage(roomTicker, start, end, ratePlan);
@@ -182,6 +182,19 @@ public class OTA_HotelAvailNotifRQ implements Serializable {
         return this;
     }
 
+    public void removeLocksRestrictions() {
+        int index = 1;
+        for (AvailStatusMessage message : new ArrayList<>(messages)) {
+            if (message.getRestrictionStatus() != null) {
+                messages.remove(message);
+            } else {
+                message.setId(index);
+                index++;
+            }
+        }
+    }
+
+
     /**
      * Adds the message given to the {@link OTA_HotelAvailNotifRQ#messages} of
      * messages. this function is implemented to prevent NullPointerException of
@@ -197,5 +210,17 @@ public class OTA_HotelAvailNotifRQ implements Serializable {
         }
         item.setId(messages.size() + 1);
         messages.add(item);
+    }
+
+    public List<AvailStatusMessage> getMessages() {
+        return messages;
+    }
+
+    public void setMessages(List<AvailStatusMessage> messages) {
+        this.messages = messages;
+    }
+
+    public boolean isEmpty(){
+        return messages == null || messages.isEmpty();
     }
 }

@@ -12,6 +12,7 @@ public enum ChannelTicker {
     RATEGAIN("RATEGAIN"),
     SITEMINDER("SITEMINDER"),
     PARITYRATE("PARITYRATE"),
+    DINGUS("DINGUS"),
     OTHER("OTHER");
 
     private final String value;

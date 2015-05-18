@@ -8,11 +8,16 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -56,7 +61,7 @@ import java.util.List;
 public class HotelAdditionalChargesType {
 
     @XmlElement(name = "AdditionalCharge", required = true)
-    protected List<AdditionalCharge> additionalCharge;
+    protected List<HotelAdditionalChargesType.AdditionalCharge> additionalCharge;
     @XmlAttribute(name = "AmountBeforeTax")
     protected BigDecimal amountBeforeTax;
     @XmlAttribute(name = "AmountAfterTax")
@@ -69,29 +74,29 @@ public class HotelAdditionalChargesType {
 
     /**
      * Gets the value of the additionalCharge property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the additionalCharge property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getAdditionalCharge().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link HotelAdditionalChargesType.AdditionalCharge }
-     *
-     *
+     * 
+     * 
      */
-    public List<AdditionalCharge> getAdditionalCharge() {
+    public List<HotelAdditionalChargesType.AdditionalCharge> getAdditionalCharge() {
         if (additionalCharge == null) {
-            additionalCharge = new ArrayList<AdditionalCharge>();
+            additionalCharge = new ArrayList<HotelAdditionalChargesType.AdditionalCharge>();
         }
         return this.additionalCharge;
     }

@@ -2,6 +2,7 @@ package com.witbooking.middleware.model.dynamicPriceVariation;
 
 import com.witbooking.middleware.exceptions.model.IncompatibleTypesException;
 import org.apache.log4j.Logger;
+import org.joda.time.DateTime;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.io.Serializable;
@@ -21,7 +22,7 @@ public class TickerCondition extends Condition implements Serializable  {
 
     private static List<String> REQUIRED_ARGUMENTS= Arrays.asList(ARGUMENT_TICKER);
 
-    private static HashSet<ConditionType> VALID_CONDITIONS= new HashSet<ConditionType>(Arrays.asList(ConditionType.INCLUDE, ConditionType.EXCLUDE, ConditionType.EXACT, ConditionType.LIKE, ConditionType.ALL));
+    private static HashSet<ConditionType> VALID_CONDITIONS= new HashSet<ConditionType>(Arrays.asList(ConditionType.INCLUDE,ConditionType.EXCLUDE,ConditionType.EXACT,ConditionType.LIKE,ConditionType.ALL));
 
     /**
      * Constant serialized ID used for compatibility.

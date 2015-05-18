@@ -53,7 +53,7 @@ import java.util.List;
 public class ExchangeRates {
 
     @XmlElement(name = "Rate", required = true)
-    protected List<Rate> rate;
+    protected List<ExchangeRates.Rate> rate;
 
     /**
      * Gets the value of the rate property.
@@ -75,9 +75,9 @@ public class ExchangeRates {
      * Objects of the following type(s) are allowed in the list
      * {@link ExchangeRates.Rate }
      */
-    public List<Rate> getRate() {
+    public List<ExchangeRates.Rate> getRate() {
         if (rate == null) {
-            rate = new ArrayList<Rate>();
+            rate = new ArrayList<ExchangeRates.Rate>();
         }
         return this.rate;
     }

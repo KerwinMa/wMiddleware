@@ -8,12 +8,17 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -116,33 +121,33 @@ import java.util.List;
 public class RatePlanCandidatesType {
 
     @XmlElement(name = "RatePlanCandidate", required = true)
-    protected List<RatePlanCandidate> ratePlanCandidate;
+    protected List<RatePlanCandidatesType.RatePlanCandidate> ratePlanCandidate;
 
     /**
      * Gets the value of the ratePlanCandidate property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the ratePlanCandidate property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getRatePlanCandidate().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link RatePlanCandidatesType.RatePlanCandidate }
-     *
-     *
+     * 
+     * 
      */
-    public List<RatePlanCandidate> getRatePlanCandidate() {
+    public List<RatePlanCandidatesType.RatePlanCandidate> getRatePlanCandidate() {
         if (ratePlanCandidate == null) {
-            ratePlanCandidate = new ArrayList<RatePlanCandidate>();
+            ratePlanCandidate = new ArrayList<RatePlanCandidatesType.RatePlanCandidate>();
         }
         return this.ratePlanCandidate;
     }
@@ -150,9 +155,9 @@ public class RatePlanCandidatesType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -225,8 +230,8 @@ public class RatePlanCandidatesType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -269,11 +274,11 @@ public class RatePlanCandidatesType {
 
         /**
          * Gets the value of the hotelRefs property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link RatePlanCandidatesType.RatePlanCandidate.HotelRefs }
-         *
+         *     
          */
         public RatePlanCandidatesType.RatePlanCandidate.HotelRefs getHotelRefs() {
             return hotelRefs;
@@ -281,11 +286,11 @@ public class RatePlanCandidatesType {
 
         /**
          * Sets the value of the hotelRefs property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link RatePlanCandidatesType.RatePlanCandidate.HotelRefs }
-         *
+         *     
          */
         public void setHotelRefs(RatePlanCandidatesType.RatePlanCandidate.HotelRefs value) {
             this.hotelRefs = value;
@@ -293,11 +298,11 @@ public class RatePlanCandidatesType {
 
         /**
          * Gets the value of the mealsIncluded property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link RatePlanCandidatesType.RatePlanCandidate.MealsIncluded }
-         *
+         *     
          */
         public RatePlanCandidatesType.RatePlanCandidate.MealsIncluded getMealsIncluded() {
             return mealsIncluded;
@@ -305,11 +310,11 @@ public class RatePlanCandidatesType {
 
         /**
          * Sets the value of the mealsIncluded property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link RatePlanCandidatesType.RatePlanCandidate.MealsIncluded }
-         *
+         *     
          */
         public void setMealsIncluded(RatePlanCandidatesType.RatePlanCandidate.MealsIncluded value) {
             this.mealsIncluded = value;
@@ -317,11 +322,11 @@ public class RatePlanCandidatesType {
 
         /**
          * Gets the value of the arrivalPolicy property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link RatePlanCandidatesType.RatePlanCandidate.ArrivalPolicy }
-         *
+         *     
          */
         public RatePlanCandidatesType.RatePlanCandidate.ArrivalPolicy getArrivalPolicy() {
             return arrivalPolicy;
@@ -329,11 +334,11 @@ public class RatePlanCandidatesType {
 
         /**
          * Sets the value of the arrivalPolicy property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link RatePlanCandidatesType.RatePlanCandidate.ArrivalPolicy }
-         *
+         *     
          */
         public void setArrivalPolicy(RatePlanCandidatesType.RatePlanCandidate.ArrivalPolicy value) {
             this.arrivalPolicy = value;
@@ -341,11 +346,11 @@ public class RatePlanCandidatesType {
 
         /**
          * Gets the value of the ratePlanCommission property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link RatePlanCandidatesType.RatePlanCandidate.RatePlanCommission }
-         *
+         *     
          */
         public RatePlanCandidatesType.RatePlanCandidate.RatePlanCommission getRatePlanCommission() {
             return ratePlanCommission;
@@ -353,11 +358,11 @@ public class RatePlanCandidatesType {
 
         /**
          * Sets the value of the ratePlanCommission property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link RatePlanCandidatesType.RatePlanCandidate.RatePlanCommission }
-         *
+         *     
          */
         public void setRatePlanCommission(RatePlanCandidatesType.RatePlanCandidate.RatePlanCommission value) {
             this.ratePlanCommission = value;
@@ -365,11 +370,11 @@ public class RatePlanCandidatesType {
 
         /**
          * Gets the value of the rph property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getRPH() {
             return rph;
@@ -377,11 +382,11 @@ public class RatePlanCandidatesType {
 
         /**
          * Sets the value of the rph property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setRPH(String value) {
             this.rph = value;
@@ -389,11 +394,11 @@ public class RatePlanCandidatesType {
 
         /**
          * Gets the value of the prepaidQualifier property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getPrepaidQualifier() {
             return prepaidQualifier;
@@ -401,11 +406,11 @@ public class RatePlanCandidatesType {
 
         /**
          * Sets the value of the prepaidQualifier property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setPrepaidQualifier(String value) {
             this.prepaidQualifier = value;
@@ -413,11 +418,11 @@ public class RatePlanCandidatesType {
 
         /**
          * Gets the value of the availRatesOnlyInd property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link Boolean }
-         *
+         *     
          */
         public Boolean isAvailRatesOnlyInd() {
             return availRatesOnlyInd;
@@ -425,11 +430,11 @@ public class RatePlanCandidatesType {
 
         /**
          * Sets the value of the availRatesOnlyInd property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link Boolean }
-         *
+         *     
          */
         public void setAvailRatesOnlyInd(Boolean value) {
             this.availRatesOnlyInd = value;
@@ -437,11 +442,11 @@ public class RatePlanCandidatesType {
 
         /**
          * Gets the value of the ratePlanType property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getRatePlanType() {
             return ratePlanType;
@@ -449,11 +454,11 @@ public class RatePlanCandidatesType {
 
         /**
          * Sets the value of the ratePlanType property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setRatePlanType(String value) {
             this.ratePlanType = value;
@@ -461,11 +466,11 @@ public class RatePlanCandidatesType {
 
         /**
          * Gets the value of the ratePlanCode property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getRatePlanCode() {
             return ratePlanCode;
@@ -473,11 +478,11 @@ public class RatePlanCandidatesType {
 
         /**
          * Sets the value of the ratePlanCode property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setRatePlanCode(String value) {
             this.ratePlanCode = value;
@@ -485,11 +490,11 @@ public class RatePlanCandidatesType {
 
         /**
          * Gets the value of the ratePlanID property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getRatePlanID() {
             return ratePlanID;
@@ -497,11 +502,11 @@ public class RatePlanCandidatesType {
 
         /**
          * Sets the value of the ratePlanID property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setRatePlanID(String value) {
             this.ratePlanID = value;
@@ -509,11 +514,11 @@ public class RatePlanCandidatesType {
 
         /**
          * Gets the value of the ratePlanQualifier property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link Boolean }
-         *
+         *     
          */
         public Boolean isRatePlanQualifier() {
             return ratePlanQualifier;
@@ -521,11 +526,11 @@ public class RatePlanCandidatesType {
 
         /**
          * Sets the value of the ratePlanQualifier property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link Boolean }
-         *
+         *     
          */
         public void setRatePlanQualifier(Boolean value) {
             this.ratePlanQualifier = value;
@@ -533,11 +538,11 @@ public class RatePlanCandidatesType {
 
         /**
          * Gets the value of the promotionCode property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getPromotionCode() {
             return promotionCode;
@@ -545,11 +550,11 @@ public class RatePlanCandidatesType {
 
         /**
          * Sets the value of the promotionCode property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setPromotionCode(String value) {
             this.promotionCode = value;
@@ -557,25 +562,25 @@ public class RatePlanCandidatesType {
 
         /**
          * Gets the value of the promotionVendorCode property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the promotionVendorCode property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getPromotionVendorCode().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link String }
-         *
-         *
+         * 
+         * 
          */
         public List<String> getPromotionVendorCode() {
             if (promotionVendorCode == null) {
@@ -586,11 +591,11 @@ public class RatePlanCandidatesType {
 
         /**
          * Gets the value of the ratePlanCategory property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getRatePlanCategory() {
             return ratePlanCategory;
@@ -598,11 +603,11 @@ public class RatePlanCandidatesType {
 
         /**
          * Sets the value of the ratePlanCategory property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setRatePlanCategory(String value) {
             this.ratePlanCategory = value;
@@ -611,9 +616,9 @@ public class RatePlanCandidatesType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -625,8 +630,8 @@ public class RatePlanCandidatesType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
@@ -641,11 +646,11 @@ public class RatePlanCandidatesType {
 
             /**
              * Gets the value of the guaranteePolicyIndicator property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link Boolean }
-             *
+             *     
              */
             public Boolean isGuaranteePolicyIndicator() {
                 return guaranteePolicyIndicator;
@@ -653,11 +658,11 @@ public class RatePlanCandidatesType {
 
             /**
              * Sets the value of the guaranteePolicyIndicator property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link Boolean }
-             *
+             *     
              */
             public void setGuaranteePolicyIndicator(Boolean value) {
                 this.guaranteePolicyIndicator = value;
@@ -665,11 +670,11 @@ public class RatePlanCandidatesType {
 
             /**
              * Gets the value of the depositPolicyIndicator property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link Boolean }
-             *
+             *     
              */
             public Boolean isDepositPolicyIndicator() {
                 return depositPolicyIndicator;
@@ -677,11 +682,11 @@ public class RatePlanCandidatesType {
 
             /**
              * Sets the value of the depositPolicyIndicator property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link Boolean }
-             *
+             *     
              */
             public void setDepositPolicyIndicator(Boolean value) {
                 this.depositPolicyIndicator = value;
@@ -689,11 +694,11 @@ public class RatePlanCandidatesType {
 
             /**
              * Gets the value of the holdTimePolicyIndicator property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link Boolean }
-             *
+             *     
              */
             public Boolean isHoldTimePolicyIndicator() {
                 return holdTimePolicyIndicator;
@@ -701,11 +706,11 @@ public class RatePlanCandidatesType {
 
             /**
              * Sets the value of the holdTimePolicyIndicator property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link Boolean }
-             *
+             *     
              */
             public void setHoldTimePolicyIndicator(Boolean value) {
                 this.holdTimePolicyIndicator = value;
@@ -716,9 +721,9 @@ public class RatePlanCandidatesType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -738,8 +743,8 @@ public class RatePlanCandidatesType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
@@ -748,33 +753,33 @@ public class RatePlanCandidatesType {
         public static class HotelRefs {
 
             @XmlElement(name = "HotelRef", required = true)
-            protected List<HotelRef> hotelRef;
+            protected List<RatePlanCandidatesType.RatePlanCandidate.HotelRefs.HotelRef> hotelRef;
 
             /**
              * Gets the value of the hotelRef property.
-             *
+             * 
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the hotelRef property.
-             *
+             * 
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getHotelRef().add(newItem);
              * </pre>
-             *
-             *
+             * 
+             * 
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link RatePlanCandidatesType.RatePlanCandidate.HotelRefs.HotelRef }
-             *
-             *
+             * 
+             * 
              */
-            public List<HotelRef> getHotelRef() {
+            public List<RatePlanCandidatesType.RatePlanCandidate.HotelRefs.HotelRef> getHotelRef() {
                 if (hotelRef == null) {
-                    hotelRef = new ArrayList<HotelRef>();
+                    hotelRef = new ArrayList<RatePlanCandidatesType.RatePlanCandidate.HotelRefs.HotelRef>();
                 }
                 return this.hotelRef;
             }

@@ -12,10 +12,9 @@ import com.witbooking.middleware.db.handlers.InventoryDBHandler;
 import com.witbooking.middleware.exceptions.FrontEndException;
 import com.witbooking.middleware.model.Inventory;
 import com.witbooking.middleware.model.values.HashRangeValue;
-
-import javax.ejb.Remote;
 import java.util.Date;
 import java.util.List;
+import javax.ejb.Remote;
 
 /**
  * Remote Interface for the Session Bean FrontEndBeanRemote
@@ -31,7 +30,7 @@ public interface FrontEndBeanRemote {
    public List<Inventory> getInventory(InventoryDBHandler inventoryDBHandler) throws FrontEndException;
 
    public List<HashRangeValue> getARIValues(DailyValuesDBHandler dailyValuesDBHandler,
-                                            List<Inventory> inventoryList, Date startDate, Date endDate, String currency)
+           List<Inventory> inventoryList, Date startDate, Date endDate, String currency)
            throws FrontEndException;
 
    public String testFrontEndServices();

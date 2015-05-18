@@ -8,9 +8,13 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -64,11 +68,11 @@ public class AirItineraryType {
 
     /**
      * Gets the value of the originDestinationOptions property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link AirItineraryType.OriginDestinationOptions }
-     *
+     *     
      */
     public AirItineraryType.OriginDestinationOptions getOriginDestinationOptions() {
         return originDestinationOptions;
@@ -76,11 +80,11 @@ public class AirItineraryType {
 
     /**
      * Sets the value of the originDestinationOptions property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link AirItineraryType.OriginDestinationOptions }
-     *
+     *     
      */
     public void setOriginDestinationOptions(AirItineraryType.OriginDestinationOptions value) {
         this.originDestinationOptions = value;
@@ -88,11 +92,11 @@ public class AirItineraryType {
 
     /**
      * Gets the value of the directionInd property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link AirTripType }
-     *
+     *     
      */
     public AirTripType getDirectionInd() {
         return directionInd;
@@ -100,11 +104,11 @@ public class AirItineraryType {
 
     /**
      * Sets the value of the directionInd property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link AirTripType }
-     *
+     *     
      */
     public void setDirectionInd(AirTripType value) {
         this.directionInd = value;
@@ -113,9 +117,9 @@ public class AirItineraryType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -135,8 +139,8 @@ public class AirItineraryType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -145,33 +149,33 @@ public class AirItineraryType {
     public static class OriginDestinationOptions {
 
         @XmlElement(name = "OriginDestinationOption", required = true)
-        protected List<OriginDestinationOption> originDestinationOption;
+        protected List<AirItineraryType.OriginDestinationOptions.OriginDestinationOption> originDestinationOption;
 
         /**
          * Gets the value of the originDestinationOption property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the originDestinationOption property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getOriginDestinationOption().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link AirItineraryType.OriginDestinationOptions.OriginDestinationOption }
-         *
-         *
+         * 
+         * 
          */
-        public List<OriginDestinationOption> getOriginDestinationOption() {
+        public List<AirItineraryType.OriginDestinationOptions.OriginDestinationOption> getOriginDestinationOption() {
             if (originDestinationOption == null) {
-                originDestinationOption = new ArrayList<OriginDestinationOption>();
+                originDestinationOption = new ArrayList<AirItineraryType.OriginDestinationOptions.OriginDestinationOption>();
             }
             return this.originDestinationOption;
         }

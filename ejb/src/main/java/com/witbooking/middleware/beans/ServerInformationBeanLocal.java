@@ -56,7 +56,7 @@ public interface ServerInformationBeanLocal {
 
     public List<HashRangeValue> getARI(final String hotelTicker, List<String> inventoryTickers,
                                        final Date start, final Date end,
-                                       final String currency, final String promotionalCode, final String country) throws FrontEndException;
+                                       final String currency, final String promotionalCode,final String country) throws FrontEndException;
 
     public List<Page> getPages(final String hotelTicker, final String locale) throws FrontEndException;
 
@@ -77,5 +77,5 @@ public interface ServerInformationBeanLocal {
     public CurrencyExchange getCurrencyExchange(String masterCurrency) throws FrontEndException;
 
     public List<String> sendEmail(String fromAddress, String fromName, String subject, String contentHTML,
-                                  List<String> toAddress, String toName, List<String> tags) throws FrontEndException;
+                            List<String> toAddress, String toName, List<String> tags) throws FrontEndException;
 }

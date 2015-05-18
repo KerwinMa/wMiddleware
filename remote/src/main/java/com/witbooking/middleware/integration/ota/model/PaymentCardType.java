@@ -8,12 +8,18 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.datatype.XMLGregorianCalendar;
-import java.util.ArrayList;
-import java.util.List;
 
 
 /**
@@ -144,11 +150,11 @@ public class PaymentCardType {
     @XmlElement(name = "Address")
     protected AddressType address;
     @XmlElement(name = "Telephone")
-    protected List<Telephone> telephone;
+    protected List<PaymentCardType.Telephone> telephone;
     @XmlElement(name = "Email")
     protected List<EmailType> email;
     @XmlElement(name = "CustLoyalty")
-    protected List<CustLoyalty> custLoyalty;
+    protected List<PaymentCardType.CustLoyalty> custLoyalty;
     @XmlElement(name = "SignatureOnFile")
     protected PaymentCardType.SignatureOnFile signatureOnFile;
     @XmlElement(name = "MagneticStripe")
@@ -193,8 +199,8 @@ public class PaymentCardType {
     public PaymentCardType() {
     }
 
-    public PaymentCardType(final String cardHolderName, final String cardType,
-            final String cardCode, final String cardNumber,
+    public PaymentCardType(final String cardHolderName, final String cardType, 
+            final String cardCode, final String cardNumber, 
             final String expireDate) {
         this.cardHolderName = cardHolderName;
         this.cardType = cardType;
@@ -205,11 +211,11 @@ public class PaymentCardType {
 
     /**
      * Gets the value of the cardHolderName property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getCardHolderName() {
         return cardHolderName;
@@ -217,11 +223,11 @@ public class PaymentCardType {
 
     /**
      * Sets the value of the cardHolderName property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setCardHolderName(String value) {
         this.cardHolderName = value;
@@ -229,11 +235,11 @@ public class PaymentCardType {
 
     /**
      * Gets the value of the cardIssuerName property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link PaymentCardType.CardIssuerName }
-     *
+     *     
      */
     public PaymentCardType.CardIssuerName getCardIssuerName() {
         return cardIssuerName;
@@ -241,11 +247,11 @@ public class PaymentCardType {
 
     /**
      * Sets the value of the cardIssuerName property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link PaymentCardType.CardIssuerName }
-     *
+     *     
      */
     public void setCardIssuerName(PaymentCardType.CardIssuerName value) {
         this.cardIssuerName = value;
@@ -253,11 +259,11 @@ public class PaymentCardType {
 
     /**
      * Gets the value of the address property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link AddressType }
-     *
+     *     
      */
     public AddressType getAddress() {
         return address;
@@ -265,11 +271,11 @@ public class PaymentCardType {
 
     /**
      * Sets the value of the address property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link AddressType }
-     *
+     *     
      */
     public void setAddress(AddressType value) {
         this.address = value;
@@ -277,54 +283,54 @@ public class PaymentCardType {
 
     /**
      * Gets the value of the telephone property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the telephone property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getTelephone().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link PaymentCardType.Telephone }
-     *
-     *
+     * 
+     * 
      */
-    public List<Telephone> getTelephone() {
+    public List<PaymentCardType.Telephone> getTelephone() {
         if (telephone == null) {
-            telephone = new ArrayList<Telephone>();
+            telephone = new ArrayList<PaymentCardType.Telephone>();
         }
         return this.telephone;
     }
 
     /**
      * Gets the value of the email property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the email property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getEmail().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link EmailType }
-     *
-     *
+     * 
+     * 
      */
     public List<EmailType> getEmail() {
         if (email == null) {
@@ -335,40 +341,40 @@ public class PaymentCardType {
 
     /**
      * Gets the value of the custLoyalty property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the custLoyalty property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getCustLoyalty().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link PaymentCardType.CustLoyalty }
-     *
-     *
+     * 
+     * 
      */
-    public List<CustLoyalty> getCustLoyalty() {
+    public List<PaymentCardType.CustLoyalty> getCustLoyalty() {
         if (custLoyalty == null) {
-            custLoyalty = new ArrayList<CustLoyalty>();
+            custLoyalty = new ArrayList<PaymentCardType.CustLoyalty>();
         }
         return this.custLoyalty;
     }
 
     /**
      * Gets the value of the signatureOnFile property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link PaymentCardType.SignatureOnFile }
-     *
+     *     
      */
     public PaymentCardType.SignatureOnFile getSignatureOnFile() {
         return signatureOnFile;
@@ -376,11 +382,11 @@ public class PaymentCardType {
 
     /**
      * Sets the value of the signatureOnFile property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link PaymentCardType.SignatureOnFile }
-     *
+     *     
      */
     public void setSignatureOnFile(PaymentCardType.SignatureOnFile value) {
         this.signatureOnFile = value;
@@ -388,11 +394,11 @@ public class PaymentCardType {
 
     /**
      * Gets the value of the magneticStripe property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link PaymentCardType.MagneticStripe }
-     *
+     *     
      */
     public PaymentCardType.MagneticStripe getMagneticStripe() {
         return magneticStripe;
@@ -400,11 +406,11 @@ public class PaymentCardType {
 
     /**
      * Sets the value of the magneticStripe property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link PaymentCardType.MagneticStripe }
-     *
+     *     
      */
     public void setMagneticStripe(PaymentCardType.MagneticStripe value) {
         this.magneticStripe = value;

@@ -35,6 +35,7 @@ import java.util.*;
  * @version 1.0
  * @date 21-ene-2013
  */
+@SuppressWarnings("SuspiciousMethodCalls")
 public class DailyValuesDBHandler extends DBHandler {
 
     /**
@@ -52,6 +53,8 @@ public class DailyValuesDBHandler extends DBHandler {
 //    private float currencyMultiplier = 1;
     private String defaultCurrency = "";
     private CurrencyExchange currencyExchange;
+
+    private static int MAX_RECURSION_LEVEL = 1;
 
     /**
      * Creates a new instance of
@@ -101,33 +104,45 @@ public class DailyValuesDBHandler extends DBHandler {
             return 0;
         }
         String ticker = getSuperTicker(tickerInv, 0);
+        //if the SuperTicker is null, it can be updated
+        if (ticker == null) {
+            return 0;
+        }
         RangeValue<Integer> newTotalValues = new RangeValue<>(AvailabilityDataValue.DEFAULT_VALUE);
         RangeValue<Integer> totalValues = getTotalAvailabilityByTicker(ticker);
         RangeValue<Integer> actualValues = getAvailabilityByTicker(ticker);
         Date dateIterator = (Date) startDate.clone();
         while (DateUtil.dateBetweenDaysRange(dateIterator, startDate, endDate)) {
-            int totalValuesInt;
-            int actualValuesInt;
+            Integer totalValuesInt = 0;
+            Integer actualValuesInt = 0;
             //[Bug] Should ask if #totalValues and #actualValues are null for v6,
             // because we can't know if exists this Availability values
             //Use new Float(totalValues.getFinalValueForADate(dateIterator)+"").intValue() to avoid Cast Exception
-            if (totalValues == null || totalValues.getFinalValueForADate(dateIterator) == null) {
-                totalValuesInt = 0;
+            if (totalValues != null) {
+                totalValuesInt = totalValues.getValueForADate(dateIterator);
+                if (totalValuesInt == null)
+                    totalValuesInt = 0;
+            }
+            if (actualValues != null) {
+                actualValuesInt = actualValues.getValueForADate(dateIterator);
+                if (actualValuesInt == null)
+                    actualValuesInt = 0;
+            }
+            int newTotalValue;
+            int newActualValue;
+            //Object avoiding cast exceptions
+            Object newDayValue = newValues.getValueForADate(dateIterator);
+            if (newDayValue != null) {
+                newActualValue = new Float(newDayValue + "").intValue();
+                //(totalValuesInt - actualValuesInt)= number of bookings this day
+                newTotalValue = totalValuesInt - actualValuesInt + newActualValue;
             } else {
-                totalValuesInt = new Float(totalValues.getFinalValueForADate(dateIterator) + "").intValue();
+                newTotalValue = totalValuesInt;
+                newActualValue = actualValuesInt;
             }
-            if (actualValues == null || actualValues.getFinalValueForADate(dateIterator) == null) {
-                actualValuesInt = 0;
-            } else {
-                actualValuesInt = new Float(actualValues.getFinalValueForADate(dateIterator) + "").intValue();
+            if (actualValues != null) {
+                actualValues.putValueForADate(dateIterator, newActualValue);
             }
-            int newTotalValue = totalValuesInt - actualValuesInt;
-            int newActualValue = 0;
-            if (newValues.getFinalValueForADate(dateIterator) != null) {
-                newActualValue = new Float(newValues.getFinalValueForADate(dateIterator) + "").intValue();
-            }
-            newTotalValue = newTotalValue + newActualValue;
-            actualValues.putValueForADate(dateIterator, newActualValue);
             newTotalValues.putValueForADate(dateIterator, newTotalValue);
             DateUtil.incrementDays(dateIterator, 1);
         }
@@ -156,7 +171,7 @@ public class DailyValuesDBHandler extends DBHandler {
 
     public String getSuperTicker(String ticker, final int elementTypeId) throws DBAccessException, NonexistentValueException {
         if (ticker == null)
-            return ticker;
+            return null;
         Inventory inventory = inventoryDBHandler.getInventoryByTicker(ticker);
         if (inventory == null) {
             Discount discount = inventoryDBHandler.getDiscountByTicker(ticker);
@@ -172,69 +187,55 @@ public class DailyValuesDBHandler extends DBHandler {
             return ticker;
         }
 //        logger.debug("inventory:" + inventory);
-        SharedValue sharedValue = null;
+        EnumDataValueType valueType = EnumDataValueType.NULL_VALUE;
+        DataValue dataValue;
         switch (elementTypeId) {
             case 0:
-                sharedValue = (inventory.getAvailability() != null &&
-                        inventory.getAvailability().getValueType() == EnumDataValueType.SHARED)
-                        ? (SharedValue) inventory.getAvailability().getValue()
-                        : null;
+                dataValue = inventory.getAvailability();
                 break;
             case 1:
-                sharedValue = (inventory.getRate() != null &&
-                        inventory.getRate().getValueType() == EnumDataValueType.SHARED)
-                        ? (SharedValue) inventory.getRate().getValue()
-                        : null;
+                dataValue = inventory.getRate();
                 break;
             case 2:
-                sharedValue = (inventory.getAvailability() != null &&
-                        inventory.getAvailability().getValueType() == EnumDataValueType.SHARED)
-                        ? (SharedValue) inventory.getAvailability().getValue()
-                        : null;
+                dataValue = inventory.getAvailability();
                 break;
             case 3:
-                sharedValue = (inventory.getLock() != null &&
-                        inventory.getLock().getValueType() == EnumDataValueType.SHARED)
-                        ? (SharedValue) inventory.getLock().getValue()
-                        : null;
+                dataValue = inventory.getLock();
                 break;
             case 4:
-                sharedValue = (inventory.getMinStay() != null &&
-                        inventory.getMinStay().getValueType() == EnumDataValueType.SHARED)
-                        ? (SharedValue) inventory.getMinStay().getValue()
-                        : null;
+                dataValue = inventory.getMinStay();
                 break;
             case 6:
-                sharedValue = (inventory.getMaxStay() != null &&
-                        inventory.getMaxStay().getValueType() == EnumDataValueType.SHARED)
-                        ? (SharedValue) inventory.getMaxStay().getValue()
-                        : null;
+                dataValue = inventory.getMaxStay();
                 break;
             case 7:
-                sharedValue = (inventory.getMinNotice() != null &&
-                        inventory.getMinNotice().getValueType() == EnumDataValueType.SHARED)
-                        ? (SharedValue) inventory.getMinNotice().getValue()
-                        : null;
+                dataValue = inventory.getMinNotice();
                 break;
             case 8:
-                sharedValue = (inventory.getMaxNotice() != null &&
-                        inventory.getMaxNotice().getValueType() == EnumDataValueType.SHARED)
-                        ? (SharedValue) inventory.getMaxNotice().getValue()
-                        : null;
+                dataValue = inventory.getMaxNotice();
                 break;
             default:
-                return ticker;
+                return null;
         }
-        return (sharedValue != null)
-                ? sharedValue.getTicker()
-                : ticker;
-
+        if (dataValue != null)
+            valueType = dataValue.getValueType();
+        switch (valueType) {
+            case SHARED:
+                return ((SharedValue) dataValue.getValue()).getTicker();
+            case OWN:
+                return ticker;
+            default:
+                return null;
+        }
     }
 
 
     private int updateDailyValuesByTicker(final String tickerInv, final RangeValue values, final int elementTypeId)
             throws DBAccessException, NonexistentValueException {
         String ticker = getSuperTicker(tickerInv, elementTypeId);
+        if (ticker == null) {
+            return 0;
+        }
         String elementType = getElementType(elementTypeId);
         logger.debug("updateDailyValuesByTicker: '" + ticker + "' Element:'" + elementType + "'" + " value: " + values);
         if (values == null) {
@@ -264,7 +265,7 @@ public class DailyValuesDBHandler extends DBHandler {
             for (Long longDate : dateListToUpdate) {
                 Date dateIter = new Date(longDate);
                 Object val = values.getFinalValueForADate(dateIter);
-                List valuesSQL = new ArrayList();
+                List<Object> valuesSQL = new ArrayList<>();
                 final Float value = setElementValue(elementTypeId, val);
 //                logger.debug("valueStored: " + value + " day: " + DateUtil.calendarFormat(dateIter) + " val: " + val + " valSinFinal:" +
 //                        " " +
@@ -322,7 +323,7 @@ public class DailyValuesDBHandler extends DBHandler {
         try {
             statement = prepareStatement(sqlCommand);
             for (Long longDate : dateListToInsert) {
-                List valuesSQL = new ArrayList();
+                List<Object> valuesSQL = new ArrayList<>();
                 valuesSQL.add(setElementValue(elementTypeId, values.getFinalValueForADate(new Date(longDate))));
                 valuesSQL.add(new java.sql.Timestamp(dateModify.getTime()));
                 valuesSQL.add(ticker);
@@ -345,12 +346,12 @@ public class DailyValuesDBHandler extends DBHandler {
     private boolean validateIfExistsDateInRange(final long start, final long end) throws DBAccessException {
         PreparedStatement statement = null;
         ResultSet resultSet = null;
-        List values = new ArrayList();
+        List<Object> valuesSQL = new ArrayList<>();
         final int totalDays = DateUtil.daysBetweenDates(new Date(start), new Date(end));
         try {
-            values.add(new java.sql.Date(start));
-            values.add(new java.sql.Date(end));
-            statement = prepareStatement(SQLInstructions.DailyValuesDBHandler.VALIDATE_IF_ALL_DAYS_IN_RANGE_EXISTS, values);
+            valuesSQL.add(new java.sql.Date(start));
+            valuesSQL.add(new java.sql.Date(end));
+            statement = prepareStatement(SQLInstructions.DailyValuesDBHandler.VALIDATE_IF_ALL_DAYS_IN_RANGE_EXISTS, valuesSQL);
             resultSet = execute(statement);
             int sizeDays = 0;
             if (last(resultSet)) {
@@ -370,7 +371,7 @@ public class DailyValuesDBHandler extends DBHandler {
         logger.info(" InsertDaysBetweenRange: " + new Date(start) + " to " + new Date(end));
         PreparedStatement statement = null;
         String sqlCommand = SQLInstructions.DailyValuesDBHandler.INSERT_NEW_DAYS;
-        List valuesSQL = new ArrayList();
+        List<Object> valuesSQL = new ArrayList<>();
         valuesSQL.add(new java.sql.Date(start));
         valuesSQL.add(new java.sql.Date(start));
         valuesSQL.add(new java.sql.Date(end));
@@ -400,7 +401,7 @@ public class DailyValuesDBHandler extends DBHandler {
         int elementTypeId = getElementTypeId(elementType);
         //Validate if exists the element for the ticker given in the DB
         String sqlCommand = SQLInstructions.DailyValuesDBHandler.VALIDATE_IF_INVENTORY_EXISTS;
-        List valuesSQL = new ArrayList();
+        List<Object> valuesSQL = new ArrayList<>();
         valuesSQL.add(ticker);
         valuesSQL.add(elementTypeId);
         try {
@@ -593,7 +594,7 @@ public class DailyValuesDBHandler extends DBHandler {
                                 }
                             }
                             if (reductionDiscount != 0 && discount.isPercentage()) {
-                                reductionDiscount = Math.abs(actualRate.floatValue() * reductionDiscount / 100);
+                                reductionDiscount = Math.abs(actualRate * reductionDiscount / 100);
                             }
                         }
                         if (reductionDiscount > reductionFinal) {
@@ -608,7 +609,7 @@ public class DailyValuesDBHandler extends DBHandler {
 //                    discounts.put(bestDiscount, reductionFinal * currencyMultiplier);
 //                    reductionFinal=NumberUtils.roundFloat(reductionFinal * currencyMultiplier, 2);
 //                    discounts.putValueForADate(dateIterator, new AbstractMap.SimpleEntry<String, Float>(bestDiscount.getTicker(), reductionFinal));
-                    discounts.putValueForADate(dateIterator, new AbstractMap.SimpleEntry<String, Float>(bestDiscount.getTicker(), reductionFinal * currencyMultiplier));
+                    discounts.putValueForADate(dateIterator, new AbstractMap.SimpleEntry<>(bestDiscount.getTicker(), reductionFinal * currencyMultiplier));
                 }
             }
             DateUtil.incrementDays(dateIterator, 1);
@@ -617,6 +618,15 @@ public class DailyValuesDBHandler extends DBHandler {
     }
 
     public RangeValue<Float> getRatesByTicker(String ticker) throws DBAccessException {
+        return getRatesByTicker(ticker, 0);
+    }
+
+    private RangeValue<Float> getRatesByTicker(String ticker, int recursion) throws DBAccessException {
+        if (recursion > MAX_RECURSION_LEVEL) {
+            logger.error("Invalid Shared RateDataValue Hotel: '" +
+                    getDbConnection().getDbCredentials().getTicker() + "' for ticker: '" + ticker + "'");
+            return new RangeValue<>(RateDataValue.DEFAULT_VALUE);
+        }
         HashRangeValue dailyRanges;
         RangeValue<Float> values = null;
         if (mapHashRangeValue.get(ticker) != null) {
@@ -644,7 +654,7 @@ public class DailyValuesDBHandler extends DBHandler {
             if (sharedTicker.equalsIgnoreCase(ticker)) {
                 values = new RangeValue<>(RateDataValue.DEFAULT_VALUE);
             } else {
-                values = getRatesByTicker(sharedTicker);
+                values = getRatesByTicker(sharedTicker, recursion + 1);
             }
         } else if (typeRate == EnumDataValueType.FORMULA) {
             values = new RangeValue<>(RateDataValue.DEFAULT_VALUE);
@@ -652,16 +662,15 @@ public class DailyValuesDBHandler extends DBHandler {
             Date dateIterator = (Date) startDate.clone();
             DateUtil.toBeginningOfTheDay(dateIterator);
             while (DateUtil.dateBetweenDaysRange(dateIterator, startDate, endDate)) {
-                Map<String, Float> variableValues = new HashMap<String, Float>();
+                Map<String, Float> variableValues = new HashMap<>();
                 //if some variable of the formula is null, the value for that day is null
                 boolean isNull = false;
                 for (String tickerFormula : formulaValue.getTickersSet()) {
                     Float varValue = null;
                     //warning for errors in migrations V5
                     if (!tickerFormula.equalsIgnoreCase(ticker)) {
-                        //TODO: error CBTallers
                         try {
-                            varValue = getRatesByTicker(tickerFormula).getValueForADate(dateIterator);
+                            varValue = getRatesByTicker(tickerFormula, recursion + 1).getValueForADate(dateIterator);
                         } catch (Throwable ex) {
                             logger.error(" Error calculating the formula for the ticker '" + ticker
                                     + "' tickerFormula:'" + tickerFormula + "' formulaValue:'" + formulaValue.getFormulaValue()
@@ -689,7 +698,7 @@ public class DailyValuesDBHandler extends DBHandler {
                                 DateUtil.calendarFormat(dateIterator) + "' Hotel: '" + this.getDbConnection()
                                 .getDbCredentials().getNameDB() + "' Ticker: '" + ticker + "' : " +
                                 ex.getMessage());
-                        return new RangeValue<Float>(RateDataValue.DEFAULT_VALUE);
+                        return new RangeValue<>(RateDataValue.DEFAULT_VALUE);
                     }
                     values.putValueForADate(dateIterator, dayValue);
                 }
@@ -707,6 +716,15 @@ public class DailyValuesDBHandler extends DBHandler {
     }
 
     public RangeValue<Integer> getAvailabilityByTicker(String ticker) throws DBAccessException {
+        return getAvailabilityByTicker(ticker, 0);
+    }
+
+    private RangeValue<Integer> getAvailabilityByTicker(String ticker, int recursion) throws DBAccessException {
+        if (recursion > MAX_RECURSION_LEVEL) {
+            logger.error("Invalid Shared AvailabilityDataValue Hotel: '" +
+                    getDbConnection().getDbCredentials().getTicker() + "' for ticker: '" + ticker + "'");
+            return new RangeValue<>(AvailabilityDataValue.DEFAULT_VALUE);
+        }
         HashRangeValue dailyRanges;
         RangeValue<Integer> values = null;
         if (mapHashRangeValue.get(ticker) != null) {
@@ -723,7 +741,7 @@ public class DailyValuesDBHandler extends DBHandler {
 //        logger.debug("inventory:" + inventory);
         if (inventory != null && inventory.getAvailability().getValueType() == EnumDataValueType.SHARED &&
                 !ticker.equalsIgnoreCase(((SharedValue) inventory.getAvailability().getValue()).getTicker())) {
-            return getAvailabilityByTicker(((SharedValue) inventory.getAvailability().getValue()).getTicker());
+            return getAvailabilityByTicker(((SharedValue) inventory.getAvailability().getValue()).getTicker(), recursion + 1);
         } else {
             values = new RangeValue<>(AvailabilityDataValue.DEFAULT_VALUE);
             RangeValue<Integer> totalAvailability = dailyRanges.getRangeValue(HashRangeValue.TOTAL_AVAILABILITY);
@@ -731,7 +749,7 @@ public class DailyValuesDBHandler extends DBHandler {
             List<Inventory> inventoryList = inventoryDBHandler.getTreeAvailability(ticker);
             List<Reservation> reservationList;
             if (inventoryList == null || inventoryList.isEmpty()) {
-                reservationList = new ArrayList<Reservation>();
+                reservationList = new ArrayList<>();
             } else {
                 ReservationDBHandler reservationDBHandler = new ReservationDBHandler(inventoryDBHandler);
                 reservationList = reservationDBHandler.getReservationByInventoriesOccupied(startDate, endDate, Inventory.listOfId(inventoryList));
@@ -765,8 +783,17 @@ public class DailyValuesDBHandler extends DBHandler {
     }
 
     public RangeValue<Integer> getTotalAvailabilityByTicker(String ticker) throws DBAccessException {
+        return getTotalAvailabilityByTicker(ticker, 0);
+    }
+
+    private RangeValue<Integer> getTotalAvailabilityByTicker(String ticker, int recursion) throws DBAccessException {
+        if (recursion > MAX_RECURSION_LEVEL) {
+            logger.error("Invalid Shared AvailabilityDataValue Hotel: '" +
+                    getDbConnection().getDbCredentials().getTicker() + "' for ticker: '" + ticker + "'");
+            return new RangeValue<>(AvailabilityDataValue.DEFAULT_VALUE);
+        }
         HashRangeValue dailyRanges;
-        RangeValue<Integer> values = null;
+        RangeValue<Integer> values;
         if (mapHashRangeValue.get(ticker) != null) {
             if (mapHashRangeValue.get(ticker).getRangeValue(HashRangeValue.TOTAL_AVAILABILITY) != null) {
                 return mapHashRangeValue.get(ticker).getRangeValue(HashRangeValue.TOTAL_AVAILABILITY).clone();
@@ -779,7 +806,7 @@ public class DailyValuesDBHandler extends DBHandler {
         Inventory inventory = inventoryDBHandler.getInventoryByTicker(ticker);
         if (inventory != null && inventory.getAvailability().getValueType() == EnumDataValueType.SHARED &&
                 !ticker.equalsIgnoreCase(((SharedValue) inventory.getAvailability().getValue()).getTicker())) {
-            return getTotalAvailabilityByTicker(((SharedValue) inventory.getAvailability().getValue()).getTicker());
+            return getTotalAvailabilityByTicker(((SharedValue) inventory.getAvailability().getValue()).getTicker(), recursion + 1);
         } else {
             values = dailyRanges.getRangeValue(HashRangeValue.TOTAL_AVAILABILITY);
         }
@@ -788,6 +815,15 @@ public class DailyValuesDBHandler extends DBHandler {
     }
 
     public RangeValue<Boolean> getLockByTicker(String ticker) throws DBAccessException {
+        return getLockByTicker(ticker, 0);
+    }
+
+    private RangeValue<Boolean> getLockByTicker(String ticker, int recursion) throws DBAccessException {
+        if (recursion > MAX_RECURSION_LEVEL) {
+            logger.error("Invalid Shared LockDataValue Hotel: '" +
+                    getDbConnection().getDbCredentials().getTicker() + "' for ticker: '" + ticker + "'");
+            return new RangeValue<>(LockDataValue.DEFAULT_VALUE);
+        }
         HashRangeValue dailyRanges;
         RangeValue<Boolean> values = null;
         if (mapHashRangeValue.get(ticker) != null) {
@@ -810,16 +846,25 @@ public class DailyValuesDBHandler extends DBHandler {
         }
         if (typeLock == EnumDataValueType.SHARED &&
                 !ticker.equalsIgnoreCase(((SharedValue) valueLock).getTicker())) {
-            values = getLockByTicker(((SharedValue) valueLock).getTicker());
+            values = getLockByTicker(((SharedValue) valueLock).getTicker(), recursion + 1);
         }
         if (values == null) {
-            values = new RangeValue<Boolean>(LockDataValue.DEFAULT_VALUE);
+            values = new RangeValue<>(LockDataValue.DEFAULT_VALUE);
         }
         dailyRanges.putRangeValues(HashRangeValue.LOCK, values);
         return values != null ? values.clone() : null;
     }
 
     public RangeValue<Integer> getMinStayByTicker(String ticker) throws DBAccessException {
+        return getMinStayByTicker(ticker, 0);
+    }
+
+    private RangeValue<Integer> getMinStayByTicker(String ticker, int recursion) throws DBAccessException {
+        if (recursion > MAX_RECURSION_LEVEL) {
+            logger.error("Invalid Shared MinStayDataValue Hotel: '" +
+                    getDbConnection().getDbCredentials().getTicker() + "' for ticker: '" + ticker + "'");
+            return new RangeValue<>(StayDataValue.DEFAULT_VALUE);
+        }
         HashRangeValue dailyRanges;
         RangeValue<Integer> values = null;
         if (mapHashRangeValue.get(ticker) != null) {
@@ -842,23 +887,32 @@ public class DailyValuesDBHandler extends DBHandler {
         }
         if (typeStay == EnumDataValueType.SHARED &&
                 !ticker.equalsIgnoreCase(((SharedValue) valueStay).getTicker())) {
-            values = getMinStayByTicker(((SharedValue) valueStay).getTicker());
+            values = getMinStayByTicker(((SharedValue) valueStay).getTicker(), recursion + 1);
         } else if (typeStay == EnumDataValueType.CONSTANT) {
             int constant = ((ConstantValue<Integer>) valueStay).getConstantValue();
-            values = new RangeValue<Integer>(new DailyValue<Integer>(startDate, endDate, constant), constant);
+            values = new RangeValue<>(new DailyValue<>(startDate, endDate, constant), constant);
         } else if (typeStay == EnumDataValueType.NULL_VALUE) {
-            values = new RangeValue<Integer>(null);
+            values = new RangeValue<>(null);
         } else if (typeStay == EnumDataValueType.OWN) {
-            values = new RangeValue<Integer>(StayDataValue.DEFAULT_VALUE);
+            values = new RangeValue<>(StayDataValue.DEFAULT_VALUE);
         }
         if (values == null) {
-            values = new RangeValue<Integer>(null);
+            values = new RangeValue<>(null);
         }
         dailyRanges.putRangeValues(HashRangeValue.MIN_STAY, values);
         return values != null ? values.clone() : null;
     }
 
     public RangeValue<Integer> getMaxStayByTicker(String ticker) throws DBAccessException {
+        return getMaxStayByTicker(ticker, 0);
+    }
+
+    private RangeValue<Integer> getMaxStayByTicker(String ticker, int recursion) throws DBAccessException {
+        if (recursion > MAX_RECURSION_LEVEL) {
+            logger.error("Invalid Shared MaxStayDataValue Hotel: '" +
+                    getDbConnection().getDbCredentials().getTicker() + "' for ticker: '" + ticker + "'");
+            return new RangeValue<>(StayDataValue.DEFAULT_VALUE);
+        }
         HashRangeValue dailyRanges;
         RangeValue<Integer> values = null;
         if (mapHashRangeValue.get(ticker) != null) {
@@ -881,23 +935,32 @@ public class DailyValuesDBHandler extends DBHandler {
         }
         if (typeStay == EnumDataValueType.SHARED &&
                 !ticker.equalsIgnoreCase(((SharedValue) valueStay).getTicker())) {
-            values = getMaxStayByTicker(((SharedValue) valueStay).getTicker());
+            values = getMaxStayByTicker(((SharedValue) valueStay).getTicker(), recursion + 1);
         } else if (typeStay == EnumDataValueType.CONSTANT) {
             int constant = ((ConstantValue<Integer>) valueStay).getConstantValue();
-            values = new RangeValue<Integer>(new DailyValue<Integer>(startDate, endDate, constant), constant);
+            values = new RangeValue<>(new DailyValue<>(startDate, endDate, constant), constant);
         } else if (typeStay == EnumDataValueType.NULL_VALUE) {
-            values = new RangeValue<Integer>(null);
+            values = new RangeValue<>(null);
         } else if (typeStay == EnumDataValueType.OWN) {
-            values = new RangeValue<Integer>(StayDataValue.DEFAULT_VALUE);
+            values = new RangeValue<>(StayDataValue.DEFAULT_VALUE);
         }
         if (values == null) {
-            values = new RangeValue<Integer>(null);
+            values = new RangeValue<>(null);
         }
         dailyRanges.putRangeValues(HashRangeValue.MAX_STAY, values);
         return values != null ? values.clone() : null;
     }
 
     public RangeValue<Integer> getMinNoticeByTicker(String ticker) throws DBAccessException {
+        return getMinNoticeByTicker(ticker, 0);
+    }
+
+    private RangeValue<Integer> getMinNoticeByTicker(String ticker, int recursion) throws DBAccessException {
+        if (recursion > MAX_RECURSION_LEVEL) {
+            logger.error("Invalid Shared MinNoticeDataValue Hotel: '" +
+                    getDbConnection().getDbCredentials().getTicker() + "' for ticker: '" + ticker + "'");
+            return new RangeValue<>(NoticeDataValue.DEFAULT_VALUE);
+        }
         HashRangeValue dailyRanges;
         RangeValue<Integer> values = null;
         if (mapHashRangeValue.get(ticker) != null) {
@@ -921,23 +984,32 @@ public class DailyValuesDBHandler extends DBHandler {
         }
         if (typeNotice == EnumDataValueType.SHARED &&
                 !ticker.equalsIgnoreCase(((SharedValue) valueNotice).getTicker())) {
-            values = getMinNoticeByTicker(((SharedValue) valueNotice).getTicker());
+            values = getMinNoticeByTicker(((SharedValue) valueNotice).getTicker(), recursion + 1);
         } else if (typeNotice == EnumDataValueType.CONSTANT) {
             int constant = ((ConstantValue<Integer>) valueNotice).getConstantValue();
-            values = new RangeValue<Integer>(new DailyValue<Integer>(startDate, endDate, constant), constant);
+            values = new RangeValue<>(new DailyValue<>(startDate, endDate, constant), constant);
         } else if (typeNotice == EnumDataValueType.NULL_VALUE) {
-            values = new RangeValue<Integer>(null);
+            values = new RangeValue<>(null);
         } else if (typeNotice == EnumDataValueType.OWN) {
-            values = new RangeValue<Integer>(NoticeDataValue.DEFAULT_VALUE);
+            values = new RangeValue<>(NoticeDataValue.DEFAULT_VALUE);
         }
         if (values == null) {
-            values = new RangeValue<Integer>(null);
+            values = new RangeValue<>(null);
         }
         dailyRanges.putRangeValues(HashRangeValue.MIN_NOTICE, values);
         return values != null ? values.clone() : null;
     }
 
     public RangeValue<Integer> getMaxNoticeByTicker(String ticker) throws DBAccessException {
+        return getMaxNoticeByTicker(ticker, 0);
+    }
+
+    private RangeValue<Integer> getMaxNoticeByTicker(String ticker, int recursion) throws DBAccessException {
+        if (recursion > MAX_RECURSION_LEVEL) {
+            logger.error("Invalid Shared MaxNoticeDataValue Hotel: '" +
+                    getDbConnection().getDbCredentials().getTicker() + "' for ticker: '" + ticker + "'");
+            return new RangeValue<>(NoticeDataValue.DEFAULT_VALUE);
+        }
         HashRangeValue dailyRanges;
         RangeValue<Integer> values = null;
         if (mapHashRangeValue.get(ticker) != null) {
@@ -960,17 +1032,17 @@ public class DailyValuesDBHandler extends DBHandler {
         }
         if (typeNotice == EnumDataValueType.SHARED &&
                 !ticker.equalsIgnoreCase(((SharedValue) valueNotice).getTicker())) {
-            values = getMaxNoticeByTicker(((SharedValue) valueNotice).getTicker());
+            values = getMaxNoticeByTicker(((SharedValue) valueNotice).getTicker(), recursion + 1);
         } else if (typeNotice == EnumDataValueType.CONSTANT) {
             int constant = ((ConstantValue<Integer>) valueNotice).getConstantValue();
-            values = new RangeValue<Integer>(new DailyValue<Integer>(startDate, endDate, constant), constant);
+            values = new RangeValue<>(new DailyValue<>(startDate, endDate, constant), constant);
         } else if (typeNotice == EnumDataValueType.NULL_VALUE) {
-            values = new RangeValue<Integer>(null);
+            values = new RangeValue<>(null);
         } else if (typeNotice == EnumDataValueType.OWN) {
-            values = new RangeValue<Integer>(NoticeDataValue.DEFAULT_VALUE);
+            values = new RangeValue<>(NoticeDataValue.DEFAULT_VALUE);
         }
         if (values == null) {
-            values = new RangeValue<Integer>(null);
+            values = new RangeValue<>(null);
         }
         dailyRanges.putRangeValues(HashRangeValue.MAX_NOTICE, values);
         return values != null ? values.clone() : null;
@@ -979,7 +1051,7 @@ public class DailyValuesDBHandler extends DBHandler {
 
     public void getSelectedInventoryValuesBetweenDates(String ticker) throws DBAccessException,
             NonexistentValueException {
-        getSelectedInventoryValuesBetweenDates(Arrays.asList(ticker));
+        getSelectedInventoryValuesBetweenDates(Collections.singletonList(ticker));
     }
 
     public void getSelectedInventoryValuesBetweenDates(List<String> tickerList) throws DBAccessException,
@@ -1033,7 +1105,7 @@ public class DailyValuesDBHandler extends DBHandler {
             }
         }
         sqlCommand += ")  ";
-        List valuesSQL = new ArrayList();
+        List<Object> valuesSQL = new ArrayList<>();
         valuesSQL.add(new java.sql.Date(startDate.getTime()));
         valuesSQL.add(new java.sql.Date(endDate.getTime()));
         PreparedStatement statement = prepareStatement(sqlCommand, valuesSQL);
@@ -1052,7 +1124,7 @@ public class DailyValuesDBHandler extends DBHandler {
                 + "AND inventario_elementos.obsoleto=0 "
                 + "AND inventario.fecha_id=fechas.id "
                 + "AND fechas.fecha BETWEEN ? AND ? ;";
-        List valuesSQL = new ArrayList();
+        List<Object> valuesSQL = new ArrayList<>();
         valuesSQL.add(new java.sql.Date(startDate.getTime()));
         valuesSQL.add(new java.sql.Date(endDate.getTime()));
         PreparedStatement statement = prepareStatement(sqlCommand, valuesSQL);
@@ -1093,10 +1165,10 @@ public class DailyValuesDBHandler extends DBHandler {
         inventoryDBHandler.getFullListObjectFromMapper(Service.class.getSimpleName());
         inventoryDBHandler.getFullListObjectFromMapper(Discount.class.getSimpleName());
         for (String ticker : mapHashRangeValue.keySet()) {
-            List elementTypes = new ArrayList(mapHashRangeValue.get(ticker).getHashRangeValues().keySet());
+            List<String> elementTypes = new ArrayList<>(mapHashRangeValue.get(ticker).getHashRangeValues().keySet());
             DataValueHolder dataValueHolder = getDataValueHolderByTicker(ticker);
             if (dataValueHolder != null) {
-                for (Object elementType : elementTypes) {
+                for (String elementType : elementTypes) {
                     EnumDataValueType valueType = EnumDataValueType.NULL_VALUE;
                     try {
                         if (HashRangeValue.ACTUAL_AVAILABILITY.equals(elementType)) {

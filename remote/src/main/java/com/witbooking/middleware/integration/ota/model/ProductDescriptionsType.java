@@ -8,9 +8,13 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -50,33 +54,33 @@ import java.util.List;
 public class ProductDescriptionsType {
 
     @XmlElement(name = "ProductDescription", required = true)
-    protected List<ProductDescription> productDescription;
+    protected List<ProductDescriptionsType.ProductDescription> productDescription;
 
     /**
      * Gets the value of the productDescription property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the productDescription property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getProductDescription().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ProductDescriptionsType.ProductDescription }
-     *
-     *
+     * 
+     * 
      */
-    public List<ProductDescription> getProductDescription() {
+    public List<ProductDescriptionsType.ProductDescription> getProductDescription() {
         if (productDescription == null) {
-            productDescription = new ArrayList<ProductDescription>();
+            productDescription = new ArrayList<ProductDescriptionsType.ProductDescription>();
         }
         return this.productDescription;
     }

@@ -8,10 +8,14 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.datatype.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.Duration;
 
 
 /**
@@ -65,11 +69,11 @@ public class VehicleAvailAdditionalInfoType {
 
     /**
      * Gets the value of the pricedCoverages property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleAvailAdditionalInfoType.PricedCoverages }
-     *
+     *     
      */
     public VehicleAvailAdditionalInfoType.PricedCoverages getPricedCoverages() {
         return pricedCoverages;
@@ -77,11 +81,11 @@ public class VehicleAvailAdditionalInfoType {
 
     /**
      * Sets the value of the pricedCoverages property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleAvailAdditionalInfoType.PricedCoverages }
-     *
+     *     
      */
     public void setPricedCoverages(VehicleAvailAdditionalInfoType.PricedCoverages value) {
         this.pricedCoverages = value;

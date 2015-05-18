@@ -8,12 +8,18 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -70,66 +76,66 @@ import java.util.List;
 public class ImageDescriptionType {
 
     @XmlElement(name = "ImageFormat")
-    protected List<ImageFormat> imageFormat;
+    protected List<ImageDescriptionType.ImageFormat> imageFormat;
     @XmlElement(name = "Description")
-    protected List<Description> description;
+    protected List<ImageDescriptionType.Description> description;
     @XmlAttribute(name = "Category")
     protected String category;
 
     /**
      * Gets the value of the imageFormat property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the imageFormat property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getImageFormat().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ImageDescriptionType.ImageFormat }
-     *
-     *
+     * 
+     * 
      */
-    public List<ImageFormat> getImageFormat() {
+    public List<ImageDescriptionType.ImageFormat> getImageFormat() {
         if (imageFormat == null) {
-            imageFormat = new ArrayList<ImageFormat>();
+            imageFormat = new ArrayList<ImageDescriptionType.ImageFormat>();
         }
         return this.imageFormat;
     }
 
     /**
      * Gets the value of the description property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the description property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getDescription().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ImageDescriptionType.Description }
-     *
-     *
+     * 
+     * 
      */
-    public List<Description> getDescription() {
+    public List<ImageDescriptionType.Description> getDescription() {
         if (description == null) {
-            description = new ArrayList<Description>();
+            description = new ArrayList<ImageDescriptionType.Description>();
         }
         return this.description;
     }

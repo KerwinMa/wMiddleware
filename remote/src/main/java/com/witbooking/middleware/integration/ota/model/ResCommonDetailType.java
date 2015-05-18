@@ -8,9 +8,14 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.datatype.Duration;
 import java.util.Date;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.Duration;
 
 
 /**
@@ -106,11 +111,11 @@ public class ResCommonDetailType {
 
     /**
      * Gets the value of the guestCounts property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link GuestCountType }
-     *
+     *     
      */
     public GuestCountType getGuestCounts() {
         return guestCounts;
@@ -118,11 +123,11 @@ public class ResCommonDetailType {
 
     /**
      * Sets the value of the guestCounts property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link GuestCountType }
-     *
+     *     
      */
     public void setGuestCounts(GuestCountType value) {
         this.guestCounts = value;
@@ -130,11 +135,11 @@ public class ResCommonDetailType {
 
     /**
      * Gets the value of the timeSpan property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link ResCommonDetailType.TimeSpan }
-     *
+     *     
      */
     public ResCommonDetailType.TimeSpan getTimeSpan() {
         return timeSpan;
@@ -142,11 +147,11 @@ public class ResCommonDetailType {
 
     /**
      * Sets the value of the timeSpan property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link ResCommonDetailType.TimeSpan }
-     *
+     *     
      */
     public void setTimeSpan(ResCommonDetailType.TimeSpan value) {
         this.timeSpan = value;

@@ -8,10 +8,15 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.datatype.XMLGregorianCalendar;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
@@ -229,11 +234,11 @@ public class HotelRoomListType {
 
     /**
      * Gets the value of the uniqueID property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link UniqueIDType }
-     *
+     *     
      */
     public UniqueIDType getUniqueID() {
         return uniqueID;
@@ -241,11 +246,11 @@ public class HotelRoomListType {
 
     /**
      * Sets the value of the uniqueID property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link UniqueIDType }
-     *
+     *     
      */
     public void setUniqueID(UniqueIDType value) {
         this.uniqueID = value;
@@ -253,11 +258,11 @@ public class HotelRoomListType {
 
     /**
      * Gets the value of the guests property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link HotelRoomListType.Guests }
-     *
+     *     
      */
     public HotelRoomListType.Guests getGuests() {
         return guests;
@@ -265,11 +270,11 @@ public class HotelRoomListType {
 
     /**
      * Sets the value of the guests property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link HotelRoomListType.Guests }
-     *
+     *     
      */
     public void setGuests(HotelRoomListType.Guests value) {
         this.guests = value;
@@ -277,11 +282,11 @@ public class HotelRoomListType {
 
     /**
      * Gets the value of the masterContact property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link HotelRoomListType.MasterContact }
-     *
+     *     
      */
     public HotelRoomListType.MasterContact getMasterContact() {
         return masterContact;
@@ -289,11 +294,11 @@ public class HotelRoomListType {
 
     /**
      * Sets the value of the masterContact property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link HotelRoomListType.MasterContact }
-     *
+     *     
      */
     public void setMasterContact(HotelRoomListType.MasterContact value) {
         this.masterContact = value;
@@ -301,11 +306,11 @@ public class HotelRoomListType {
 
     /**
      * Gets the value of the masterAccount property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link HotelRoomListType.MasterAccount }
-     *
+     *     
      */
     public HotelRoomListType.MasterAccount getMasterAccount() {
         return masterAccount;
@@ -313,11 +318,11 @@ public class HotelRoomListType {
 
     /**
      * Sets the value of the masterAccount property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link HotelRoomListType.MasterAccount }
-     *
+     *     
      */
     public void setMasterAccount(HotelRoomListType.MasterAccount value) {
         this.masterAccount = value;
@@ -325,11 +330,11 @@ public class HotelRoomListType {
 
     /**
      * Gets the value of the roomStays property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link HotelRoomListType.RoomStays }
-     *
+     *     
      */
     public HotelRoomListType.RoomStays getRoomStays() {
         return roomStays;
@@ -337,11 +342,11 @@ public class HotelRoomListType {
 
     /**
      * Sets the value of the roomStays property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link HotelRoomListType.RoomStays }
-     *
+     *     
      */
     public void setRoomStays(HotelRoomListType.RoomStays value) {
         this.roomStays = value;
@@ -349,11 +354,11 @@ public class HotelRoomListType {
 
     /**
      * Gets the value of the event property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link HotelRoomListType.Event }
-     *
+     *     
      */
     public HotelRoomListType.Event getEvent() {
         return event;
@@ -361,11 +366,11 @@ public class HotelRoomListType {
 
     /**
      * Sets the value of the event property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link HotelRoomListType.Event }
-     *
+     *     
      */
     public void setEvent(HotelRoomListType.Event value) {
         this.event = value;
@@ -373,11 +378,11 @@ public class HotelRoomListType {
 
     /**
      * Gets the value of the groupBlockCode property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getGroupBlockCode() {
         return groupBlockCode;
@@ -385,11 +390,11 @@ public class HotelRoomListType {
 
     /**
      * Sets the value of the groupBlockCode property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setGroupBlockCode(String value) {
         this.groupBlockCode = value;
@@ -397,11 +402,11 @@ public class HotelRoomListType {
 
     /**
      * Gets the value of the creationDate property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link XMLGregorianCalendar }
-     *
+     *     
      */
     public XMLGregorianCalendar getCreationDate() {
         return creationDate;
@@ -409,11 +414,11 @@ public class HotelRoomListType {
 
     /**
      * Sets the value of the creationDate property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link XMLGregorianCalendar }
-     *
+     *     
      */
     public void setCreationDate(XMLGregorianCalendar value) {
         this.creationDate = value;
@@ -421,11 +426,11 @@ public class HotelRoomListType {
 
     /**
      * Gets the value of the chainCode property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getChainCode() {
         return chainCode;
@@ -433,11 +438,11 @@ public class HotelRoomListType {
 
     /**
      * Sets the value of the chainCode property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setChainCode(String value) {
         this.chainCode = value;
@@ -445,11 +450,11 @@ public class HotelRoomListType {
 
     /**
      * Gets the value of the brandCode property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getBrandCode() {
         return brandCode;
@@ -457,11 +462,11 @@ public class HotelRoomListType {
 
     /**
      * Sets the value of the brandCode property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setBrandCode(String value) {
         this.brandCode = value;
@@ -469,11 +474,11 @@ public class HotelRoomListType {
 
     /**
      * Gets the value of the hotelCode property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getHotelCode() {
         return hotelCode;
@@ -481,11 +486,11 @@ public class HotelRoomListType {
 
     /**
      * Sets the value of the hotelCode property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setHotelCode(String value) {
         this.hotelCode = value;
@@ -493,11 +498,11 @@ public class HotelRoomListType {
 
     /**
      * Gets the value of the hotelCityCode property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getHotelCityCode() {
         return hotelCityCode;
@@ -505,11 +510,11 @@ public class HotelRoomListType {
 
     /**
      * Sets the value of the hotelCityCode property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setHotelCityCode(String value) {
         this.hotelCityCode = value;
@@ -517,11 +522,11 @@ public class HotelRoomListType {
 
     /**
      * Gets the value of the hotelName property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getHotelName() {
         return hotelName;
@@ -529,11 +534,11 @@ public class HotelRoomListType {
 
     /**
      * Sets the value of the hotelName property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setHotelName(String value) {
         this.hotelName = value;
@@ -541,11 +546,11 @@ public class HotelRoomListType {
 
     /**
      * Gets the value of the hotelCodeContext property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getHotelCodeContext() {
         return hotelCodeContext;
@@ -553,11 +558,11 @@ public class HotelRoomListType {
 
     /**
      * Sets the value of the hotelCodeContext property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setHotelCodeContext(String value) {
         this.hotelCodeContext = value;
@@ -565,11 +570,11 @@ public class HotelRoomListType {
 
     /**
      * Gets the value of the chainName property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getChainName() {
         return chainName;
@@ -577,11 +582,11 @@ public class HotelRoomListType {
 
     /**
      * Sets the value of the chainName property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setChainName(String value) {
         this.chainName = value;
@@ -589,11 +594,11 @@ public class HotelRoomListType {
 
     /**
      * Gets the value of the brandName property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getBrandName() {
         return brandName;
@@ -601,11 +606,11 @@ public class HotelRoomListType {
 
     /**
      * Sets the value of the brandName property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setBrandName(String value) {
         this.brandName = value;
@@ -613,11 +618,11 @@ public class HotelRoomListType {
 
     /**
      * Gets the value of the areaID property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getAreaID() {
         return areaID;
@@ -625,11 +630,11 @@ public class HotelRoomListType {
 
     /**
      * Sets the value of the areaID property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setAreaID(String value) {
         this.areaID = value;
@@ -638,9 +643,9 @@ public class HotelRoomListType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -654,8 +659,8 @@ public class HotelRoomListType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -676,11 +681,11 @@ public class HotelRoomListType {
 
         /**
          * Gets the value of the eventContact property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link ContactPersonType }
-         *
+         *     
          */
         public ContactPersonType getEventContact() {
             return eventContact;
@@ -688,11 +693,11 @@ public class HotelRoomListType {
 
         /**
          * Sets the value of the eventContact property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link ContactPersonType }
-         *
+         *     
          */
         public void setEventContact(ContactPersonType value) {
             this.eventContact = value;
@@ -700,11 +705,11 @@ public class HotelRoomListType {
 
         /**
          * Gets the value of the meetingName property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getMeetingName() {
             return meetingName;
@@ -712,11 +717,11 @@ public class HotelRoomListType {
 
         /**
          * Sets the value of the meetingName property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setMeetingName(String value) {
             this.meetingName = value;
@@ -724,11 +729,11 @@ public class HotelRoomListType {
 
         /**
          * Gets the value of the start property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getStart() {
             return start;
@@ -736,11 +741,11 @@ public class HotelRoomListType {
 
         /**
          * Sets the value of the start property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setStart(String value) {
             this.start = value;
@@ -748,11 +753,11 @@ public class HotelRoomListType {
 
         /**
          * Gets the value of the duration property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getDuration() {
             return duration;
@@ -760,11 +765,11 @@ public class HotelRoomListType {
 
         /**
          * Sets the value of the duration property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setDuration(String value) {
             this.duration = value;
@@ -772,11 +777,11 @@ public class HotelRoomListType {
 
         /**
          * Gets the value of the end property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getEnd() {
             return end;
@@ -784,11 +789,11 @@ public class HotelRoomListType {
 
         /**
          * Sets the value of the end property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setEnd(String value) {
             this.end = value;
@@ -799,9 +804,9 @@ public class HotelRoomListType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -863,8 +868,8 @@ public class HotelRoomListType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -873,33 +878,33 @@ public class HotelRoomListType {
     public static class Guests {
 
         @XmlElement(name = "Guest", required = true)
-        protected List<Guest> guest;
+        protected List<HotelRoomListType.Guests.Guest> guest;
 
         /**
          * Gets the value of the guest property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the guest property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getGuest().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link HotelRoomListType.Guests.Guest }
-         *
-         *
+         * 
+         * 
          */
-        public List<Guest> getGuest() {
+        public List<HotelRoomListType.Guests.Guest> getGuest() {
             if (guest == null) {
-                guest = new ArrayList<Guest>();
+                guest = new ArrayList<HotelRoomListType.Guests.Guest>();
             }
             return this.guest;
         }
@@ -907,9 +912,9 @@ public class HotelRoomListType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -961,8 +966,8 @@ public class HotelRoomListType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
@@ -978,9 +983,9 @@ public class HotelRoomListType {
             @XmlElement(name = "UniqueID")
             protected UniqueIDType uniqueID;
             @XmlElement(name = "Loyalty")
-            protected List<Loyalty> loyalty;
+            protected List<HotelRoomListType.Guests.Guest.Loyalty> loyalty;
             @XmlElement(name = "GuaranteePayment")
-            protected List<GuaranteePayment> guaranteePayment;
+            protected List<HotelRoomListType.Guests.Guest.GuaranteePayment> guaranteePayment;
             @XmlElement(name = "AdditionalDetails")
             protected AdditionalDetailsType additionalDetails;
             @XmlAttribute(name = "GuestAction")
@@ -990,11 +995,11 @@ public class HotelRoomListType {
 
             /**
              * Gets the value of the uniqueID property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link UniqueIDType }
-             *
+             *     
              */
             public UniqueIDType getUniqueID() {
                 return uniqueID;
@@ -1002,11 +1007,11 @@ public class HotelRoomListType {
 
             /**
              * Sets the value of the uniqueID property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link UniqueIDType }
-             *
+             *     
              */
             public void setUniqueID(UniqueIDType value) {
                 this.uniqueID = value;
@@ -1014,69 +1019,69 @@ public class HotelRoomListType {
 
             /**
              * Gets the value of the loyalty property.
-             *
+             * 
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the loyalty property.
-             *
+             * 
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getLoyalty().add(newItem);
              * </pre>
-             *
-             *
+             * 
+             * 
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link HotelRoomListType.Guests.Guest.Loyalty }
-             *
-             *
+             * 
+             * 
              */
-            public List<Loyalty> getLoyalty() {
+            public List<HotelRoomListType.Guests.Guest.Loyalty> getLoyalty() {
                 if (loyalty == null) {
-                    loyalty = new ArrayList<Loyalty>();
+                    loyalty = new ArrayList<HotelRoomListType.Guests.Guest.Loyalty>();
                 }
                 return this.loyalty;
             }
 
             /**
              * Gets the value of the guaranteePayment property.
-             *
+             * 
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the guaranteePayment property.
-             *
+             * 
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getGuaranteePayment().add(newItem);
              * </pre>
-             *
-             *
+             * 
+             * 
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link HotelRoomListType.Guests.Guest.GuaranteePayment }
-             *
-             *
+             * 
+             * 
              */
-            public List<GuaranteePayment> getGuaranteePayment() {
+            public List<HotelRoomListType.Guests.Guest.GuaranteePayment> getGuaranteePayment() {
                 if (guaranteePayment == null) {
-                    guaranteePayment = new ArrayList<GuaranteePayment>();
+                    guaranteePayment = new ArrayList<HotelRoomListType.Guests.Guest.GuaranteePayment>();
                 }
                 return this.guaranteePayment;
             }
 
             /**
              * Gets the value of the additionalDetails property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link AdditionalDetailsType }
-             *
+             *     
              */
             public AdditionalDetailsType getAdditionalDetails() {
                 return additionalDetails;
@@ -1084,11 +1089,11 @@ public class HotelRoomListType {
 
             /**
              * Sets the value of the additionalDetails property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link AdditionalDetailsType }
-             *
+             *     
              */
             public void setAdditionalDetails(AdditionalDetailsType value) {
                 this.additionalDetails = value;
@@ -1096,11 +1101,11 @@ public class HotelRoomListType {
 
             /**
              * Gets the value of the guestAction property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link ActionType }
-             *
+             *     
              */
             public ActionType getGuestAction() {
                 return guestAction;
@@ -1108,11 +1113,11 @@ public class HotelRoomListType {
 
             /**
              * Sets the value of the guestAction property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link ActionType }
-             *
+             *     
              */
             public void setGuestAction(ActionType value) {
                 this.guestAction = value;
@@ -1120,11 +1125,11 @@ public class HotelRoomListType {
 
             /**
              * Gets the value of the printConfoInd property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link Boolean }
-             *
+             *     
              */
             public Boolean isPrintConfoInd() {
                 return printConfoInd;
@@ -1132,11 +1137,11 @@ public class HotelRoomListType {
 
             /**
              * Sets the value of the printConfoInd property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link Boolean }
-             *
+             *     
              */
             public void setPrintConfoInd(Boolean value) {
                 this.printConfoInd = value;
@@ -1145,9 +1150,9 @@ public class HotelRoomListType {
 
             /**
              * <p>Java class for anonymous complex type.
-             *
+             * 
              * <p>The following schema fragment specifies the expected content contained within this class.
-             *
+             * 
              * <pre>
              * &lt;complexType>
              *   &lt;complexContent>
@@ -1176,8 +1181,8 @@ public class HotelRoomListType {
              *   &lt;/complexContent>
              * &lt;/complexType>
              * </pre>
-             *
-             *
+             * 
+             * 
              */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "")
@@ -1192,11 +1197,11 @@ public class HotelRoomListType {
 
                 /**
                  * Gets the value of the detailType property.
-                 *
+                 * 
                  * @return
                  *     possible object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public String getDetailType() {
                     return detailType;
@@ -1204,11 +1209,11 @@ public class HotelRoomListType {
 
                 /**
                  * Sets the value of the detailType property.
-                 *
+                 * 
                  * @param value
                  *     allowed object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public void setDetailType(String value) {
                     this.detailType = value;
@@ -1216,11 +1221,11 @@ public class HotelRoomListType {
 
                 /**
                  * Gets the value of the guaranteeType property.
-                 *
+                 * 
                  * @return
                  *     possible object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public String getGuaranteeType() {
                     return guaranteeType;
@@ -1228,11 +1233,11 @@ public class HotelRoomListType {
 
                 /**
                  * Sets the value of the guaranteeType property.
-                 *
+                 * 
                  * @param value
                  *     allowed object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public void setGuaranteeType(String value) {
                     this.guaranteeType = value;
@@ -1243,9 +1248,9 @@ public class HotelRoomListType {
 
             /**
              * <p>Java class for anonymous complex type.
-             *
+             * 
              * <p>The following schema fragment specifies the expected content contained within this class.
-             *
+             * 
              * <pre>
              * &lt;complexType>
              *   &lt;complexContent>
@@ -1255,8 +1260,8 @@ public class HotelRoomListType {
              *   &lt;/complexContent>
              * &lt;/complexType>
              * </pre>
-             *
-             *
+             * 
+             * 
              */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "")
@@ -1277,11 +1282,11 @@ public class HotelRoomListType {
 
                 /**
                  * Gets the value of the reservationActionType property.
-                 *
+                 * 
                  * @return
                  *     possible object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public String getReservationActionType() {
                     return reservationActionType;
@@ -1289,11 +1294,11 @@ public class HotelRoomListType {
 
                 /**
                  * Sets the value of the reservationActionType property.
-                 *
+                 * 
                  * @param value
                  *     allowed object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public void setReservationActionType(String value) {
                     this.reservationActionType = value;
@@ -1301,11 +1306,11 @@ public class HotelRoomListType {
 
                 /**
                  * Gets the value of the selectedLoyaltyRPH property.
-                 *
+                 * 
                  * @return
                  *     possible object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public String getSelectedLoyaltyRPH() {
                     return selectedLoyaltyRPH;
@@ -1313,11 +1318,11 @@ public class HotelRoomListType {
 
                 /**
                  * Sets the value of the selectedLoyaltyRPH property.
-                 *
+                 * 
                  * @param value
                  *     allowed object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public void setSelectedLoyaltyRPH(String value) {
                     this.selectedLoyaltyRPH = value;
@@ -1325,11 +1330,11 @@ public class HotelRoomListType {
 
                 /**
                  * Gets the value of the programCode property.
-                 *
+                 * 
                  * @return
                  *     possible object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public String getProgramCode() {
                     return programCode;
@@ -1337,11 +1342,11 @@ public class HotelRoomListType {
 
                 /**
                  * Sets the value of the programCode property.
-                 *
+                 * 
                  * @param value
                  *     allowed object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public void setProgramCode(String value) {
                     this.programCode = value;
@@ -1349,11 +1354,11 @@ public class HotelRoomListType {
 
                 /**
                  * Gets the value of the bonusCode property.
-                 *
+                 * 
                  * @return
                  *     possible object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public String getBonusCode() {
                     return bonusCode;
@@ -1361,11 +1366,11 @@ public class HotelRoomListType {
 
                 /**
                  * Sets the value of the bonusCode property.
-                 *
+                 * 
                  * @param value
                  *     allowed object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public void setBonusCode(String value) {
                     this.bonusCode = value;
@@ -1373,11 +1378,11 @@ public class HotelRoomListType {
 
                 /**
                  * Gets the value of the accountID property.
-                 *
+                 * 
                  * @return
                  *     possible object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public String getAccountID() {
                     return accountID;
@@ -1385,11 +1390,11 @@ public class HotelRoomListType {
 
                 /**
                  * Sets the value of the accountID property.
-                 *
+                 * 
                  * @param value
                  *     allowed object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public void setAccountID(String value) {
                     this.accountID = value;
@@ -1397,11 +1402,11 @@ public class HotelRoomListType {
 
                 /**
                  * Gets the value of the pointsEarned property.
-                 *
+                 * 
                  * @return
                  *     possible object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public String getPointsEarned() {
                     return pointsEarned;
@@ -1409,11 +1414,11 @@ public class HotelRoomListType {
 
                 /**
                  * Sets the value of the pointsEarned property.
-                 *
+                 * 
                  * @param value
                  *     allowed object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public void setPointsEarned(String value) {
                     this.pointsEarned = value;
@@ -1428,9 +1433,9 @@ public class HotelRoomListType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -1440,8 +1445,8 @@ public class HotelRoomListType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
@@ -1456,11 +1461,11 @@ public class HotelRoomListType {
 
         /**
          * Gets the value of the billingType property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getBillingType() {
             return billingType;
@@ -1468,11 +1473,11 @@ public class HotelRoomListType {
 
         /**
          * Sets the value of the billingType property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setBillingType(String value) {
             this.billingType = value;
@@ -1480,11 +1485,11 @@ public class HotelRoomListType {
 
         /**
          * Gets the value of the signFoodAndBev property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link Boolean }
-         *
+         *     
          */
         public Boolean isSignFoodAndBev() {
             return signFoodAndBev;
@@ -1492,11 +1497,11 @@ public class HotelRoomListType {
 
         /**
          * Sets the value of the signFoodAndBev property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link Boolean }
-         *
+         *     
          */
         public void setSignFoodAndBev(Boolean value) {
             this.signFoodAndBev = value;
@@ -1507,9 +1512,9 @@ public class HotelRoomListType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -1540,8 +1545,8 @@ public class HotelRoomListType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -1555,15 +1560,15 @@ public class HotelRoomListType {
         @XmlElement(name = "UniqueIDs")
         protected HotelRoomListType.MasterContact.UniqueIDs uniqueIDs;
         @XmlElement(name = "Loyalty")
-        protected List<Loyalty> loyalty;
+        protected List<HotelRoomListType.MasterContact.Loyalty> loyalty;
 
         /**
          * Gets the value of the uniqueIDs property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link HotelRoomListType.MasterContact.UniqueIDs }
-         *
+         *     
          */
         public HotelRoomListType.MasterContact.UniqueIDs getUniqueIDs() {
             return uniqueIDs;
@@ -1571,11 +1576,11 @@ public class HotelRoomListType {
 
         /**
          * Sets the value of the uniqueIDs property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link HotelRoomListType.MasterContact.UniqueIDs }
-         *
+         *     
          */
         public void setUniqueIDs(HotelRoomListType.MasterContact.UniqueIDs value) {
             this.uniqueIDs = value;
@@ -1583,29 +1588,29 @@ public class HotelRoomListType {
 
         /**
          * Gets the value of the loyalty property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the loyalty property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getLoyalty().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link HotelRoomListType.MasterContact.Loyalty }
-         *
-         *
+         * 
+         * 
          */
-        public List<Loyalty> getLoyalty() {
+        public List<HotelRoomListType.MasterContact.Loyalty> getLoyalty() {
             if (loyalty == null) {
-                loyalty = new ArrayList<Loyalty>();
+                loyalty = new ArrayList<HotelRoomListType.MasterContact.Loyalty>();
             }
             return this.loyalty;
         }
@@ -1613,9 +1618,9 @@ public class HotelRoomListType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -1625,8 +1630,8 @@ public class HotelRoomListType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
@@ -1647,11 +1652,11 @@ public class HotelRoomListType {
 
             /**
              * Gets the value of the reservationActionType property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getReservationActionType() {
                 return reservationActionType;
@@ -1659,11 +1664,11 @@ public class HotelRoomListType {
 
             /**
              * Sets the value of the reservationActionType property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setReservationActionType(String value) {
                 this.reservationActionType = value;
@@ -1671,11 +1676,11 @@ public class HotelRoomListType {
 
             /**
              * Gets the value of the selectedLoyaltyRPH property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getSelectedLoyaltyRPH() {
                 return selectedLoyaltyRPH;
@@ -1683,11 +1688,11 @@ public class HotelRoomListType {
 
             /**
              * Sets the value of the selectedLoyaltyRPH property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setSelectedLoyaltyRPH(String value) {
                 this.selectedLoyaltyRPH = value;
@@ -1695,11 +1700,11 @@ public class HotelRoomListType {
 
             /**
              * Gets the value of the programCode property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getProgramCode() {
                 return programCode;
@@ -1707,11 +1712,11 @@ public class HotelRoomListType {
 
             /**
              * Sets the value of the programCode property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setProgramCode(String value) {
                 this.programCode = value;
@@ -1719,11 +1724,11 @@ public class HotelRoomListType {
 
             /**
              * Gets the value of the bonusCode property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getBonusCode() {
                 return bonusCode;
@@ -1731,11 +1736,11 @@ public class HotelRoomListType {
 
             /**
              * Sets the value of the bonusCode property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setBonusCode(String value) {
                 this.bonusCode = value;
@@ -1743,11 +1748,11 @@ public class HotelRoomListType {
 
             /**
              * Gets the value of the accountID property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getAccountID() {
                 return accountID;
@@ -1755,11 +1760,11 @@ public class HotelRoomListType {
 
             /**
              * Sets the value of the accountID property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setAccountID(String value) {
                 this.accountID = value;
@@ -1767,11 +1772,11 @@ public class HotelRoomListType {
 
             /**
              * Gets the value of the pointsEarned property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getPointsEarned() {
                 return pointsEarned;
@@ -1779,11 +1784,11 @@ public class HotelRoomListType {
 
             /**
              * Sets the value of the pointsEarned property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setPointsEarned(String value) {
                 this.pointsEarned = value;
@@ -1794,9 +1799,9 @@ public class HotelRoomListType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -1808,8 +1813,8 @@ public class HotelRoomListType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
@@ -1822,25 +1827,25 @@ public class HotelRoomListType {
 
             /**
              * Gets the value of the uniqueID property.
-             *
+             * 
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the uniqueID property.
-             *
+             * 
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getUniqueID().add(newItem);
              * </pre>
-             *
-             *
+             * 
+             * 
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link UniqueIDType }
-             *
-             *
+             * 
+             * 
              */
             public List<UniqueIDType> getUniqueID() {
                 if (uniqueID == null) {
@@ -1856,9 +1861,9 @@ public class HotelRoomListType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -1890,8 +1895,8 @@ public class HotelRoomListType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -1900,33 +1905,33 @@ public class HotelRoomListType {
     public static class RoomStays {
 
         @XmlElement(name = "RoomStay", required = true)
-        protected List<RoomStay> roomStay;
+        protected List<HotelRoomListType.RoomStays.RoomStay> roomStay;
 
         /**
          * Gets the value of the roomStay property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the roomStay property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getRoomStay().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link HotelRoomListType.RoomStays.RoomStay }
-         *
-         *
+         * 
+         * 
          */
-        public List<RoomStay> getRoomStay() {
+        public List<HotelRoomListType.RoomStays.RoomStay> getRoomStay() {
             if (roomStay == null) {
-                roomStay = new ArrayList<RoomStay>();
+                roomStay = new ArrayList<HotelRoomListType.RoomStays.RoomStay>();
             }
             return this.roomStay;
         }

@@ -81,7 +81,7 @@ import java.util.List;
 public class LengthsOfStayType {
 
     @XmlElement(name = "LengthOfStay")
-    protected List<LengthOfStay> lengthOfStay;
+    protected List<LengthsOfStayType.LengthOfStay> lengthOfStay;
     @XmlAttribute(name = "ArrivalDateBased")
     protected Boolean arrivalDateBased;
     @XmlAttribute(name = "FixedPatternLength")
@@ -107,9 +107,9 @@ public class LengthsOfStayType {
      * Objects of the following type(s) are allowed in the list
      * {@link LengthsOfStayType.LengthOfStay }
      */
-    public List<LengthOfStay> getLengthOfStay() {
+    public List<LengthsOfStayType.LengthOfStay> getLengthOfStay() {
         if (lengthOfStay == null) {
-            lengthOfStay = new ArrayList<LengthOfStay>();
+            lengthOfStay = new ArrayList<LengthsOfStayType.LengthOfStay>();
         }
         return this.lengthOfStay;
     }

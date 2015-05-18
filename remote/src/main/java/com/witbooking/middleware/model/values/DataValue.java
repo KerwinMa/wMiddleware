@@ -7,6 +7,7 @@
  */
 package com.witbooking.middleware.model.values;
 
+import com.witbooking.middleware.model.values.types.SharedValue;
 import com.witbooking.middleware.model.values.types.Value;
 
 import java.io.Serializable;
@@ -107,5 +108,14 @@ public abstract class DataValue<E> implements DataValueInterface<E>, Serializabl
 
     public boolean isFormulaValue() {
         return (value != null && value.getValueType() == EnumDataValueType.FORMULA);
+    }
+
+    public boolean isChildOf(String ticker) {
+        return (isSharedValue() && ((SharedValue) this.value).getTicker().equals(ticker));
+    }
+
+    public boolean isSiblingOf(DataValue dataValue) {
+        return (isSharedValue() && dataValue.isSharedValue() &&
+                ((SharedValue) this.value).getTicker().equals(((SharedValue) dataValue.getValue()).getTicker()));
     }
 }

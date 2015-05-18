@@ -8,12 +8,19 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.XmlValue;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -185,11 +192,11 @@ public class ItemSearchCriterionType {
     @XmlElement(name = "Telephone")
     protected ItemSearchCriterionType.Telephone telephone;
     @XmlElement(name = "RefPoint")
-    protected List<RefPoint> refPoint;
+    protected List<ItemSearchCriterionType.RefPoint> refPoint;
     @XmlElement(name = "CodeRef")
     protected ItemSearchCriterionType.CodeRef codeRef;
     @XmlElement(name = "HotelRef")
-    protected List<HotelRef> hotelRef;
+    protected List<ItemSearchCriterionType.HotelRef> hotelRef;
     @XmlElement(name = "Radius")
     protected ItemSearchCriterionType.Radius radius;
     @XmlElement(name = "MapArea")
@@ -205,11 +212,11 @@ public class ItemSearchCriterionType {
 
     /**
      * Gets the value of the position property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link ItemSearchCriterionType.Position }
-     *
+     *     
      */
     public ItemSearchCriterionType.Position getPosition() {
         return position;
@@ -217,11 +224,11 @@ public class ItemSearchCriterionType {
 
     /**
      * Sets the value of the position property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link ItemSearchCriterionType.Position }
-     *
+     *     
      */
     public void setPosition(ItemSearchCriterionType.Position value) {
         this.position = value;
@@ -229,11 +236,11 @@ public class ItemSearchCriterionType {
 
     /**
      * Gets the value of the address property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link ItemSearchCriterionType.Address }
-     *
+     *     
      */
     public ItemSearchCriterionType.Address getAddress() {
         return address;
@@ -241,11 +248,11 @@ public class ItemSearchCriterionType {
 
     /**
      * Sets the value of the address property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link ItemSearchCriterionType.Address }
-     *
+     *     
      */
     public void setAddress(ItemSearchCriterionType.Address value) {
         this.address = value;
@@ -253,11 +260,11 @@ public class ItemSearchCriterionType {
 
     /**
      * Gets the value of the telephone property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link ItemSearchCriterionType.Telephone }
-     *
+     *     
      */
     public ItemSearchCriterionType.Telephone getTelephone() {
         return telephone;
@@ -265,11 +272,11 @@ public class ItemSearchCriterionType {
 
     /**
      * Sets the value of the telephone property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link ItemSearchCriterionType.Telephone }
-     *
+     *     
      */
     public void setTelephone(ItemSearchCriterionType.Telephone value) {
         this.telephone = value;
@@ -277,40 +284,40 @@ public class ItemSearchCriterionType {
 
     /**
      * Gets the value of the refPoint property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the refPoint property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getRefPoint().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ItemSearchCriterionType.RefPoint }
-     *
-     *
+     * 
+     * 
      */
-    public List<RefPoint> getRefPoint() {
+    public List<ItemSearchCriterionType.RefPoint> getRefPoint() {
         if (refPoint == null) {
-            refPoint = new ArrayList<RefPoint>();
+            refPoint = new ArrayList<ItemSearchCriterionType.RefPoint>();
         }
         return this.refPoint;
     }
 
     /**
      * Gets the value of the codeRef property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link ItemSearchCriterionType.CodeRef }
-     *
+     *     
      */
     public ItemSearchCriterionType.CodeRef getCodeRef() {
         return codeRef;
@@ -318,11 +325,11 @@ public class ItemSearchCriterionType {
 
     /**
      * Sets the value of the codeRef property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link ItemSearchCriterionType.CodeRef }
-     *
+     *     
      */
     public void setCodeRef(ItemSearchCriterionType.CodeRef value) {
         this.codeRef = value;
@@ -330,40 +337,40 @@ public class ItemSearchCriterionType {
 
     /**
      * Gets the value of the hotelRef property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the hotelRef property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getHotelRef().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ItemSearchCriterionType.HotelRef }
-     *
-     *
+     * 
+     * 
      */
-    public List<HotelRef> getHotelRef() {
+    public List<ItemSearchCriterionType.HotelRef> getHotelRef() {
         if (hotelRef == null) {
-            hotelRef = new ArrayList<HotelRef>();
+            hotelRef = new ArrayList<ItemSearchCriterionType.HotelRef>();
         }
         return this.hotelRef;
     }
 
     /**
      * Gets the value of the radius property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link ItemSearchCriterionType.Radius }
-     *
+     *     
      */
     public ItemSearchCriterionType.Radius getRadius() {
         return radius;
@@ -371,11 +378,11 @@ public class ItemSearchCriterionType {
 
     /**
      * Sets the value of the radius property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link ItemSearchCriterionType.Radius }
-     *
+     *     
      */
     public void setRadius(ItemSearchCriterionType.Radius value) {
         this.radius = value;
@@ -383,11 +390,11 @@ public class ItemSearchCriterionType {
 
     /**
      * Gets the value of the mapArea property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link ItemSearchCriterionType.MapArea }
-     *
+     *     
      */
     public ItemSearchCriterionType.MapArea getMapArea() {
         return mapArea;
@@ -395,11 +402,11 @@ public class ItemSearchCriterionType {
 
     /**
      * Sets the value of the mapArea property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link ItemSearchCriterionType.MapArea }
-     *
+     *     
      */
     public void setMapArea(ItemSearchCriterionType.MapArea value) {
         this.mapArea = value;
@@ -407,11 +414,11 @@ public class ItemSearchCriterionType {
 
     /**
      * Gets the value of the additionalContents property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link ItemSearchCriterionType.AdditionalContents }
-     *
+     *     
      */
     public ItemSearchCriterionType.AdditionalContents getAdditionalContents() {
         return additionalContents;
@@ -419,11 +426,11 @@ public class ItemSearchCriterionType {
 
     /**
      * Sets the value of the additionalContents property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link ItemSearchCriterionType.AdditionalContents }
-     *
+     *     
      */
     public void setAdditionalContents(ItemSearchCriterionType.AdditionalContents value) {
         this.additionalContents = value;
@@ -431,11 +438,11 @@ public class ItemSearchCriterionType {
 
     /**
      * Gets the value of the exactMatch property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link Boolean }
-     *
+     *     
      */
     public Boolean isExactMatch() {
         return exactMatch;
@@ -443,11 +450,11 @@ public class ItemSearchCriterionType {
 
     /**
      * Sets the value of the exactMatch property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *
+     *     
      */
     public void setExactMatch(Boolean value) {
         this.exactMatch = value;
@@ -455,11 +462,11 @@ public class ItemSearchCriterionType {
 
     /**
      * Gets the value of the importanceType property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getImportanceType() {
         return importanceType;
@@ -467,11 +474,11 @@ public class ItemSearchCriterionType {
 
     /**
      * Sets the value of the importanceType property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setImportanceType(String value) {
         this.importanceType = value;
@@ -479,11 +486,11 @@ public class ItemSearchCriterionType {
 
     /**
      * Gets the value of the ranking property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link BigInteger }
-     *
+     *     
      */
     public BigInteger getRanking() {
         return ranking;
@@ -491,11 +498,11 @@ public class ItemSearchCriterionType {
 
     /**
      * Sets the value of the ranking property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link BigInteger }
-     *
+     *     
      */
     public void setRanking(BigInteger value) {
         this.ranking = value;
@@ -504,9 +511,9 @@ public class ItemSearchCriterionType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -527,8 +534,8 @@ public class ItemSearchCriterionType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -537,33 +544,33 @@ public class ItemSearchCriterionType {
     public static class AdditionalContents {
 
         @XmlElement(name = "AdditionalContent", required = true)
-        protected List<AdditionalContent> additionalContent;
+        protected List<ItemSearchCriterionType.AdditionalContents.AdditionalContent> additionalContent;
 
         /**
          * Gets the value of the additionalContent property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the additionalContent property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getAdditionalContent().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link ItemSearchCriterionType.AdditionalContents.AdditionalContent }
-         *
-         *
+         * 
+         * 
          */
-        public List<AdditionalContent> getAdditionalContent() {
+        public List<ItemSearchCriterionType.AdditionalContents.AdditionalContent> getAdditionalContent() {
             if (additionalContent == null) {
-                additionalContent = new ArrayList<AdditionalContent>();
+                additionalContent = new ArrayList<ItemSearchCriterionType.AdditionalContents.AdditionalContent>();
             }
             return this.additionalContent;
         }

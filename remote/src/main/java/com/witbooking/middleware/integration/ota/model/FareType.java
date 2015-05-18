@@ -8,14 +8,21 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import javax.xml.datatype.XMLGregorianCalendar;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.XmlValue;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
@@ -237,7 +244,7 @@ public class FareType {
     @XmlElement(name = "BaseFare")
     protected FareType.BaseFare baseFare;
     @XmlElement(name = "EquivFare")
-    protected List<EquivFare> equivFare;
+    protected List<FareType.EquivFare> equivFare;
     @XmlElement(name = "Taxes")
     protected FareType.Taxes taxes;
     @XmlElement(name = "Fees")
@@ -249,11 +256,11 @@ public class FareType {
     @XmlElement(name = "UnstructuredFareCalc")
     protected FareType.UnstructuredFareCalc unstructuredFareCalc;
     @XmlElement(name = "FareBaggageAllowance")
-    protected List<FareBaggageAllowance> fareBaggageAllowance;
+    protected List<FareType.FareBaggageAllowance> fareBaggageAllowance;
     @XmlElement(name = "TourCode")
     protected FareType.TourCode tourCode;
     @XmlElement(name = "Remark")
-    protected List<Remark> remark;
+    protected List<FareType.Remark> remark;
     @XmlElement(name = "OriginalIssueInfo")
     protected FareType.OriginalIssueInfo originalIssueInfo;
     @XmlElement(name = "ExchangeInfo")
@@ -275,11 +282,11 @@ public class FareType {
 
     /**
      * Gets the value of the baseFare property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link FareType.BaseFare }
-     *
+     *     
      */
     public FareType.BaseFare getBaseFare() {
         return baseFare;
@@ -287,11 +294,11 @@ public class FareType {
 
     /**
      * Sets the value of the baseFare property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link FareType.BaseFare }
-     *
+     *     
      */
     public void setBaseFare(FareType.BaseFare value) {
         this.baseFare = value;
@@ -299,40 +306,40 @@ public class FareType {
 
     /**
      * Gets the value of the equivFare property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the equivFare property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getEquivFare().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link FareType.EquivFare }
-     *
-     *
+     * 
+     * 
      */
-    public List<EquivFare> getEquivFare() {
+    public List<FareType.EquivFare> getEquivFare() {
         if (equivFare == null) {
-            equivFare = new ArrayList<EquivFare>();
+            equivFare = new ArrayList<FareType.EquivFare>();
         }
         return this.equivFare;
     }
 
     /**
      * Gets the value of the taxes property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link FareType.Taxes }
-     *
+     *     
      */
     public FareType.Taxes getTaxes() {
         return taxes;
@@ -340,11 +347,11 @@ public class FareType {
 
     /**
      * Sets the value of the taxes property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link FareType.Taxes }
-     *
+     *     
      */
     public void setTaxes(FareType.Taxes value) {
         this.taxes = value;
@@ -352,11 +359,11 @@ public class FareType {
 
     /**
      * Gets the value of the fees property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link FareType.Fees }
-     *
+     *     
      */
     public FareType.Fees getFees() {
         return fees;
@@ -364,11 +371,11 @@ public class FareType {
 
     /**
      * Sets the value of the fees property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link FareType.Fees }
-     *
+     *     
      */
     public void setFees(FareType.Fees value) {
         this.fees = value;
@@ -376,11 +383,11 @@ public class FareType {
 
     /**
      * Gets the value of the totalFare property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link FareType.TotalFare }
-     *
+     *     
      */
     public FareType.TotalFare getTotalFare() {
         return totalFare;
@@ -388,11 +395,11 @@ public class FareType {
 
     /**
      * Sets the value of the totalFare property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link FareType.TotalFare }
-     *
+     *     
      */
     public void setTotalFare(FareType.TotalFare value) {
         this.totalFare = value;
@@ -400,11 +407,11 @@ public class FareType {
 
     /**
      * Gets the value of the fareConstruction property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link FareType.FareConstruction }
-     *
+     *     
      */
     public FareType.FareConstruction getFareConstruction() {
         return fareConstruction;
@@ -412,11 +419,11 @@ public class FareType {
 
     /**
      * Sets the value of the fareConstruction property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link FareType.FareConstruction }
-     *
+     *     
      */
     public void setFareConstruction(FareType.FareConstruction value) {
         this.fareConstruction = value;
@@ -424,11 +431,11 @@ public class FareType {
 
     /**
      * Gets the value of the unstructuredFareCalc property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link FareType.UnstructuredFareCalc }
-     *
+     *     
      */
     public FareType.UnstructuredFareCalc getUnstructuredFareCalc() {
         return unstructuredFareCalc;
@@ -436,11 +443,11 @@ public class FareType {
 
     /**
      * Sets the value of the unstructuredFareCalc property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link FareType.UnstructuredFareCalc }
-     *
+     *     
      */
     public void setUnstructuredFareCalc(FareType.UnstructuredFareCalc value) {
         this.unstructuredFareCalc = value;
@@ -448,40 +455,40 @@ public class FareType {
 
     /**
      * Gets the value of the fareBaggageAllowance property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the fareBaggageAllowance property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getFareBaggageAllowance().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link FareType.FareBaggageAllowance }
-     *
-     *
+     * 
+     * 
      */
-    public List<FareBaggageAllowance> getFareBaggageAllowance() {
+    public List<FareType.FareBaggageAllowance> getFareBaggageAllowance() {
         if (fareBaggageAllowance == null) {
-            fareBaggageAllowance = new ArrayList<FareBaggageAllowance>();
+            fareBaggageAllowance = new ArrayList<FareType.FareBaggageAllowance>();
         }
         return this.fareBaggageAllowance;
     }
 
     /**
      * Gets the value of the tourCode property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link FareType.TourCode }
-     *
+     *     
      */
     public FareType.TourCode getTourCode() {
         return tourCode;
@@ -489,11 +496,11 @@ public class FareType {
 
     /**
      * Sets the value of the tourCode property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link FareType.TourCode }
-     *
+     *     
      */
     public void setTourCode(FareType.TourCode value) {
         this.tourCode = value;
@@ -501,40 +508,40 @@ public class FareType {
 
     /**
      * Gets the value of the remark property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the remark property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getRemark().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link FareType.Remark }
-     *
-     *
+     * 
+     * 
      */
-    public List<Remark> getRemark() {
+    public List<FareType.Remark> getRemark() {
         if (remark == null) {
-            remark = new ArrayList<Remark>();
+            remark = new ArrayList<FareType.Remark>();
         }
         return this.remark;
     }
 
     /**
      * Gets the value of the originalIssueInfo property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link FareType.OriginalIssueInfo }
-     *
+     *     
      */
     public FareType.OriginalIssueInfo getOriginalIssueInfo() {
         return originalIssueInfo;
@@ -542,11 +549,11 @@ public class FareType {
 
     /**
      * Sets the value of the originalIssueInfo property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link FareType.OriginalIssueInfo }
-     *
+     *     
      */
     public void setOriginalIssueInfo(FareType.OriginalIssueInfo value) {
         this.originalIssueInfo = value;
@@ -554,11 +561,11 @@ public class FareType {
 
     /**
      * Gets the value of the exchangeInfo property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link FareType.ExchangeInfo }
-     *
+     *     
      */
     public FareType.ExchangeInfo getExchangeInfo() {
         return exchangeInfo;
@@ -566,11 +573,11 @@ public class FareType {
 
     /**
      * Sets the value of the exchangeInfo property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link FareType.ExchangeInfo }
-     *
+     *     
      */
     public void setExchangeInfo(FareType.ExchangeInfo value) {
         this.exchangeInfo = value;
@@ -578,11 +585,11 @@ public class FareType {
 
     /**
      * Gets the value of the discounts property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link FareType.Discounts }
-     *
+     *     
      */
     public FareType.Discounts getDiscounts() {
         return discounts;
@@ -590,11 +597,11 @@ public class FareType {
 
     /**
      * Sets the value of the discounts property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link FareType.Discounts }
-     *
+     *     
      */
     public void setDiscounts(FareType.Discounts value) {
         this.discounts = value;
@@ -602,11 +609,11 @@ public class FareType {
 
     /**
      * Gets the value of the tpaExtensions property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link TPAExtensionsType }
-     *
+     *     
      */
     public TPAExtensionsType getTPAExtensions() {
         return tpaExtensions;
@@ -614,11 +621,11 @@ public class FareType {
 
     /**
      * Sets the value of the tpaExtensions property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link TPAExtensionsType }
-     *
+     *     
      */
     public void setTPAExtensions(TPAExtensionsType value) {
         this.tpaExtensions = value;
@@ -626,11 +633,11 @@ public class FareType {
 
     /**
      * Gets the value of the ticketDesignatorCode property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getTicketDesignatorCode() {
         return ticketDesignatorCode;
@@ -638,11 +645,11 @@ public class FareType {
 
     /**
      * Sets the value of the ticketDesignatorCode property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setTicketDesignatorCode(String value) {
         this.ticketDesignatorCode = value;
@@ -650,11 +657,11 @@ public class FareType {
 
     /**
      * Gets the value of the totalNbrTrips property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link Integer }
-     *
+     *     
      */
     public Integer getTotalNbrTrips() {
         return totalNbrTrips;
@@ -662,11 +669,11 @@ public class FareType {
 
     /**
      * Sets the value of the totalNbrTrips property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link Integer }
-     *
+     *     
      */
     public void setTotalNbrTrips(Integer value) {
         this.totalNbrTrips = value;
@@ -674,11 +681,11 @@ public class FareType {
 
     /**
      * Gets the value of the totalNbrPTC property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link Integer }
-     *
+     *     
      */
     public Integer getTotalNbrPTC() {
         return totalNbrPTC;
@@ -686,11 +693,11 @@ public class FareType {
 
     /**
      * Sets the value of the totalNbrPTC property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link Integer }
-     *
+     *     
      */
     public void setTotalNbrPTC(Integer value) {
         this.totalNbrPTC = value;
@@ -698,11 +705,11 @@ public class FareType {
 
     /**
      * Gets the value of the negotiatedFare property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link Boolean }
-     *
+     *     
      */
     public Boolean isNegotiatedFare() {
         return negotiatedFare;
@@ -710,11 +717,11 @@ public class FareType {
 
     /**
      * Sets the value of the negotiatedFare property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *
+     *     
      */
     public void setNegotiatedFare(Boolean value) {
         this.negotiatedFare = value;
@@ -722,11 +729,11 @@ public class FareType {
 
     /**
      * Gets the value of the negotiatedFareCode property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getNegotiatedFareCode() {
         return negotiatedFareCode;
@@ -734,11 +741,11 @@ public class FareType {
 
     /**
      * Sets the value of the negotiatedFareCode property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setNegotiatedFareCode(String value) {
         this.negotiatedFareCode = value;
@@ -747,9 +754,9 @@ public class FareType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -761,8 +768,8 @@ public class FareType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
@@ -789,11 +796,11 @@ public class FareType {
 
         /**
          * Gets the value of the operation property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link ActionType }
-         *
+         *     
          */
         public ActionType getOperation() {
             return operation;
@@ -801,11 +808,11 @@ public class FareType {
 
         /**
          * Sets the value of the operation property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link ActionType }
-         *
+         *     
          */
         public void setOperation(ActionType value) {
             this.operation = value;
@@ -813,11 +820,11 @@ public class FareType {
 
         /**
          * Gets the value of the fromCurrency property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getFromCurrency() {
             return fromCurrency;
@@ -825,11 +832,11 @@ public class FareType {
 
         /**
          * Sets the value of the fromCurrency property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setFromCurrency(String value) {
             this.fromCurrency = value;
@@ -837,11 +844,11 @@ public class FareType {
 
         /**
          * Gets the value of the toCurrency property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getToCurrency() {
             return toCurrency;
@@ -849,11 +856,11 @@ public class FareType {
 
         /**
          * Sets the value of the toCurrency property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setToCurrency(String value) {
             this.toCurrency = value;
@@ -861,11 +868,11 @@ public class FareType {
 
         /**
          * Gets the value of the rate property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link BigDecimal }
-         *
+         *     
          */
         public BigDecimal getRate() {
             return rate;
@@ -873,11 +880,11 @@ public class FareType {
 
         /**
          * Sets the value of the rate property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link BigDecimal }
-         *
+         *     
          */
         public void setRate(BigDecimal value) {
             this.rate = value;
@@ -885,11 +892,11 @@ public class FareType {
 
         /**
          * Gets the value of the date property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link XMLGregorianCalendar }
-         *
+         *     
          */
         public XMLGregorianCalendar getDate() {
             return date;
@@ -897,11 +904,11 @@ public class FareType {
 
         /**
          * Sets the value of the date property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link XMLGregorianCalendar }
-         *
+         *     
          */
         public void setDate(XMLGregorianCalendar value) {
             this.date = value;
@@ -909,11 +916,11 @@ public class FareType {
 
         /**
          * Gets the value of the amount property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link BigDecimal }
-         *
+         *     
          */
         public BigDecimal getAmount() {
             return amount;
@@ -921,11 +928,11 @@ public class FareType {
 
         /**
          * Sets the value of the amount property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link BigDecimal }
-         *
+         *     
          */
         public void setAmount(BigDecimal value) {
             this.amount = value;
@@ -933,11 +940,11 @@ public class FareType {
 
         /**
          * Gets the value of the currencyCode property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getCurrencyCode() {
             return currencyCode;
@@ -945,11 +952,11 @@ public class FareType {
 
         /**
          * Sets the value of the currencyCode property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setCurrencyCode(String value) {
             this.currencyCode = value;
@@ -957,11 +964,11 @@ public class FareType {
 
         /**
          * Gets the value of the decimalPlaces property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link BigInteger }
-         *
+         *     
          */
         public BigInteger getDecimalPlaces() {
             return decimalPlaces;
@@ -969,11 +976,11 @@ public class FareType {
 
         /**
          * Sets the value of the decimalPlaces property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link BigInteger }
-         *
+         *     
          */
         public void setDecimalPlaces(BigInteger value) {
             this.decimalPlaces = value;
@@ -984,9 +991,9 @@ public class FareType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -1006,8 +1013,8 @@ public class FareType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -1016,33 +1023,33 @@ public class FareType {
     public static class Discounts {
 
         @XmlElement(name = "Discount", required = true)
-        protected List<Discount> discount;
+        protected List<FareType.Discounts.Discount> discount;
 
         /**
          * Gets the value of the discount property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the discount property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getDiscount().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link FareType.Discounts.Discount }
-         *
-         *
+         * 
+         * 
          */
-        public List<Discount> getDiscount() {
+        public List<FareType.Discounts.Discount> getDiscount() {
             if (discount == null) {
-                discount = new ArrayList<Discount>();
+                discount = new ArrayList<FareType.Discounts.Discount>();
             }
             return this.discount;
         }
@@ -1050,9 +1057,9 @@ public class FareType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -1062,8 +1069,8 @@ public class FareType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
@@ -1085,11 +1092,11 @@ public class FareType {
 
             /**
              * Gets the value of the amount property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link BigDecimal }
-             *
+             *     
              */
             public BigDecimal getAmount() {
                 return amount;
@@ -1097,11 +1104,11 @@ public class FareType {
 
             /**
              * Sets the value of the amount property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link BigDecimal }
-             *
+             *     
              */
             public void setAmount(BigDecimal value) {
                 this.amount = value;
@@ -1109,11 +1116,11 @@ public class FareType {
 
             /**
              * Gets the value of the currencyCode property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getCurrencyCode() {
                 return currencyCode;
@@ -1121,11 +1128,11 @@ public class FareType {
 
             /**
              * Sets the value of the currencyCode property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setCurrencyCode(String value) {
                 this.currencyCode = value;
@@ -1133,11 +1140,11 @@ public class FareType {
 
             /**
              * Gets the value of the decimalPlaces property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link BigInteger }
-             *
+             *     
              */
             public BigInteger getDecimalPlaces() {
                 return decimalPlaces;
@@ -1145,11 +1152,11 @@ public class FareType {
 
             /**
              * Sets the value of the decimalPlaces property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link BigInteger }
-             *
+             *     
              */
             public void setDecimalPlaces(BigInteger value) {
                 this.decimalPlaces = value;
@@ -1157,11 +1164,11 @@ public class FareType {
 
             /**
              * Gets the value of the percent property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link BigDecimal }
-             *
+             *     
              */
             public BigDecimal getPercent() {
                 return percent;
@@ -1169,11 +1176,11 @@ public class FareType {
 
             /**
              * Sets the value of the percent property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link BigDecimal }
-             *
+             *     
              */
             public void setPercent(BigDecimal value) {
                 this.percent = value;
@@ -1181,11 +1188,11 @@ public class FareType {
 
             /**
              * Gets the value of the id property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getID() {
                 return id;
@@ -1193,11 +1200,11 @@ public class FareType {
 
             /**
              * Sets the value of the id property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setID(String value) {
                 this.id = value;
@@ -1205,11 +1212,11 @@ public class FareType {
 
             /**
              * Gets the value of the description property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getDescription() {
                 return description;
@@ -1217,11 +1224,11 @@ public class FareType {
 
             /**
              * Sets the value of the description property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setDescription(String value) {
                 this.description = value;
@@ -1234,9 +1241,9 @@ public class FareType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -1247,8 +1254,8 @@ public class FareType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
@@ -1266,11 +1273,11 @@ public class FareType {
 
         /**
          * Gets the value of the operation property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link ActionType }
-         *
+         *     
          */
         public ActionType getOperation() {
             return operation;
@@ -1278,11 +1285,11 @@ public class FareType {
 
         /**
          * Sets the value of the operation property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link ActionType }
-         *
+         *     
          */
         public void setOperation(ActionType value) {
             this.operation = value;
@@ -1290,11 +1297,11 @@ public class FareType {
 
         /**
          * Gets the value of the amount property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link BigDecimal }
-         *
+         *     
          */
         public BigDecimal getAmount() {
             return amount;
@@ -1302,11 +1309,11 @@ public class FareType {
 
         /**
          * Sets the value of the amount property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link BigDecimal }
-         *
+         *     
          */
         public void setAmount(BigDecimal value) {
             this.amount = value;
@@ -1314,11 +1321,11 @@ public class FareType {
 
         /**
          * Gets the value of the currencyCode property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getCurrencyCode() {
             return currencyCode;
@@ -1326,11 +1333,11 @@ public class FareType {
 
         /**
          * Sets the value of the currencyCode property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setCurrencyCode(String value) {
             this.currencyCode = value;
@@ -1338,11 +1345,11 @@ public class FareType {
 
         /**
          * Gets the value of the decimalPlaces property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link BigInteger }
-         *
+         *     
          */
         public BigInteger getDecimalPlaces() {
             return decimalPlaces;
@@ -1350,11 +1357,11 @@ public class FareType {
 
         /**
          * Sets the value of the decimalPlaces property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link BigInteger }
-         *
+         *     
          */
         public void setDecimalPlaces(BigInteger value) {
             this.decimalPlaces = value;
@@ -1365,9 +1372,9 @@ public class FareType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -1398,8 +1405,8 @@ public class FareType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -1409,7 +1416,7 @@ public class FareType {
     public static class ExchangeInfo {
 
         @XmlElement(name = "CouponInfo")
-        protected List<CouponInfo> couponInfo;
+        protected List<FareType.ExchangeInfo.CouponInfo> couponInfo;
         @XmlElement(name = "OriginalOriginDestination")
         protected FareType.ExchangeInfo.OriginalOriginDestination originalOriginDestination;
         @XmlAttribute(name = "TicketDocumentNbr")
@@ -1417,40 +1424,40 @@ public class FareType {
 
         /**
          * Gets the value of the couponInfo property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the couponInfo property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getCouponInfo().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link FareType.ExchangeInfo.CouponInfo }
-         *
-         *
+         * 
+         * 
          */
-        public List<CouponInfo> getCouponInfo() {
+        public List<FareType.ExchangeInfo.CouponInfo> getCouponInfo() {
             if (couponInfo == null) {
-                couponInfo = new ArrayList<CouponInfo>();
+                couponInfo = new ArrayList<FareType.ExchangeInfo.CouponInfo>();
             }
             return this.couponInfo;
         }
 
         /**
          * Gets the value of the originalOriginDestination property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link FareType.ExchangeInfo.OriginalOriginDestination }
-         *
+         *     
          */
         public FareType.ExchangeInfo.OriginalOriginDestination getOriginalOriginDestination() {
             return originalOriginDestination;
@@ -1458,11 +1465,11 @@ public class FareType {
 
         /**
          * Sets the value of the originalOriginDestination property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link FareType.ExchangeInfo.OriginalOriginDestination }
-         *
+         *     
          */
         public void setOriginalOriginDestination(FareType.ExchangeInfo.OriginalOriginDestination value) {
             this.originalOriginDestination = value;

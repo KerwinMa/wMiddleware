@@ -285,7 +285,11 @@ public abstract class RateGainBusinessLogic {
             }
         } finally {
             try {
-                final Set<EntryQueueItem> items = new HashSet<EntryQueueItem>(queueItemsMap.values());
+                final Set<EntryQueueItem> items = new HashSet<>(queueItemsMap.values());
+                if (status == ChannelQueueStatus.FAIL) {
+//                        logger.error("Fail Status: "+  requestBody.replace("\n", "").replace("\r", ""));
+                    logger.error("Fail Status: " + returnObjectString);
+                }
                 final Integer id = integrationBeanLocal.storeSingleConnection
                         (hotelCode, ChannelTicker.RATEGAIN, type, status, items,
                                 requestBody.replace("\n", "").replace("\r", ""), returnObjectString);

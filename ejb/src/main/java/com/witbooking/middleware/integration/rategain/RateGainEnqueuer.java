@@ -21,7 +21,7 @@ import javax.ejb.Stateless;
  * @since 1.0 , Aug 21, 2013
  */
 @Stateless
-public class RateGainEnqueuer extends RateGainBusinessLogic implements RateGainEnqueuerLocal {
+public class RateGainEnqueuer extends RateGainBusinessLogic implements RateGainEnqueuerLocal{
 
 
     private static final Logger logger = Logger.getLogger(RateGainEnqueuer.class);

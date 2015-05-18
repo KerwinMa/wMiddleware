@@ -8,11 +8,17 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -101,11 +107,11 @@ public class PricedItineraryType {
 
     /**
      * Gets the value of the airItinerary property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link AirItineraryType }
-     *
+     *     
      */
     public AirItineraryType getAirItinerary() {
         return airItinerary;
@@ -113,11 +119,11 @@ public class PricedItineraryType {
 
     /**
      * Sets the value of the airItinerary property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link AirItineraryType }
-     *
+     *     
      */
     public void setAirItinerary(AirItineraryType value) {
         this.airItinerary = value;
@@ -125,11 +131,11 @@ public class PricedItineraryType {
 
     /**
      * Gets the value of the airItineraryPricingInfo property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link PricedItineraryType.AirItineraryPricingInfo }
-     *
+     *     
      */
     public PricedItineraryType.AirItineraryPricingInfo getAirItineraryPricingInfo() {
         return airItineraryPricingInfo;
@@ -137,11 +143,11 @@ public class PricedItineraryType {
 
     /**
      * Sets the value of the airItineraryPricingInfo property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link PricedItineraryType.AirItineraryPricingInfo }
-     *
+     *     
      */
     public void setAirItineraryPricingInfo(PricedItineraryType.AirItineraryPricingInfo value) {
         this.airItineraryPricingInfo = value;
@@ -149,25 +155,25 @@ public class PricedItineraryType {
 
     /**
      * Gets the value of the notes property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the notes property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getNotes().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link FreeTextType }
-     *
-     *
+     * 
+     * 
      */
     public List<FreeTextType> getNotes() {
         if (notes == null) {
@@ -178,11 +184,11 @@ public class PricedItineraryType {
 
     /**
      * Gets the value of the ticketingInfo property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link PricedItineraryType.TicketingInfo }
-     *
+     *     
      */
     public PricedItineraryType.TicketingInfo getTicketingInfo() {
         return ticketingInfo;
@@ -190,11 +196,11 @@ public class PricedItineraryType {
 
     /**
      * Sets the value of the ticketingInfo property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link PricedItineraryType.TicketingInfo }
-     *
+     *     
      */
     public void setTicketingInfo(PricedItineraryType.TicketingInfo value) {
         this.ticketingInfo = value;
@@ -202,11 +208,11 @@ public class PricedItineraryType {
 
     /**
      * Gets the value of the sequenceNumber property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link BigInteger }
-     *
+     *     
      */
     public BigInteger getSequenceNumber() {
         return sequenceNumber;
@@ -214,11 +220,11 @@ public class PricedItineraryType {
 
     /**
      * Sets the value of the sequenceNumber property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link BigInteger }
-     *
+     *     
      */
     public void setSequenceNumber(BigInteger value) {
         this.sequenceNumber = value;
@@ -226,11 +232,11 @@ public class PricedItineraryType {
 
     /**
      * Gets the value of the priceType property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getPriceType() {
         return priceType;
@@ -238,11 +244,11 @@ public class PricedItineraryType {
 
     /**
      * Sets the value of the priceType property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setPriceType(String value) {
         this.priceType = value;
@@ -250,11 +256,11 @@ public class PricedItineraryType {
 
     /**
      * Gets the value of the nucRate property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link BigDecimal }
-     *
+     *     
      */
     public BigDecimal getNUCRate() {
         return nucRate;
@@ -262,11 +268,11 @@ public class PricedItineraryType {
 
     /**
      * Sets the value of the nucRate property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link BigDecimal }
-     *
+     *     
      */
     public void setNUCRate(BigDecimal value) {
         this.nucRate = value;
@@ -274,11 +280,11 @@ public class PricedItineraryType {
 
     /**
      * Gets the value of the exchangeRate property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link BigDecimal }
-     *
+     *     
      */
     public BigDecimal getExchangeRate() {
         return exchangeRate;
@@ -286,11 +292,11 @@ public class PricedItineraryType {
 
     /**
      * Sets the value of the exchangeRate property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link BigDecimal }
-     *
+     *     
      */
     public void setExchangeRate(BigDecimal value) {
         this.exchangeRate = value;
@@ -299,9 +305,9 @@ public class PricedItineraryType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -311,8 +317,8 @@ public class PricedItineraryType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
@@ -325,11 +331,11 @@ public class PricedItineraryType {
 
         /**
          * Gets the value of the repriceRequired property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link Boolean }
-         *
+         *     
          */
         public Boolean isRepriceRequired() {
             return repriceRequired;
@@ -337,11 +343,11 @@ public class PricedItineraryType {
 
         /**
          * Sets the value of the repriceRequired property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link Boolean }
-         *
+         *     
          */
         public void setRepriceRequired(Boolean value) {
             this.repriceRequired = value;
@@ -352,9 +358,9 @@ public class PricedItineraryType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -376,8 +382,8 @@ public class PricedItineraryType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -388,35 +394,35 @@ public class PricedItineraryType {
     {
 
         @XmlElement(name = "DeliveryInfo")
-        protected List<DeliveryInfo> deliveryInfo;
+        protected List<PricedItineraryType.TicketingInfo.DeliveryInfo> deliveryInfo;
         @XmlAttribute(name = "PaymentType")
         protected List<String> paymentType;
 
         /**
          * Gets the value of the deliveryInfo property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the deliveryInfo property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getDeliveryInfo().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link PricedItineraryType.TicketingInfo.DeliveryInfo }
-         *
-         *
+         * 
+         * 
          */
-        public List<DeliveryInfo> getDeliveryInfo() {
+        public List<PricedItineraryType.TicketingInfo.DeliveryInfo> getDeliveryInfo() {
             if (deliveryInfo == null) {
-                deliveryInfo = new ArrayList<DeliveryInfo>();
+                deliveryInfo = new ArrayList<PricedItineraryType.TicketingInfo.DeliveryInfo>();
             }
             return this.deliveryInfo;
         }

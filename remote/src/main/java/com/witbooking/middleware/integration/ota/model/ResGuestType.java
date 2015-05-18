@@ -8,10 +8,15 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.datatype.XMLGregorianCalendar;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
@@ -133,22 +138,22 @@ public class ResGuestType {
     public ResGuestType() {
     }
 
-    public ResGuestType(final String ageQualifyingCode,final List<String> givenName, final String surName,
+    public ResGuestType(final String ageQualifyingCode,final List<String> givenName, final String surName, 
             final String telephoneNumber,final String email,
             final String address,final String country,final String countryCode) {
         this.ageQualifyingCode = ageQualifyingCode;
         this.primaryIndicator = true;
-        this.profiles = new ProfilesType(givenName, surName, telephoneNumber,
+        this.profiles = new ProfilesType(givenName, surName, telephoneNumber, 
                 email, address, country, countryCode);
     }
 
     /**
      * Gets the value of the profiles property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link ProfilesType }
-     *
+     *     
      */
     public ProfilesType getProfiles() {
         return profiles;
@@ -156,11 +161,11 @@ public class ResGuestType {
 
     /**
      * Sets the value of the profiles property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link ProfilesType }
-     *
+     *     
      */
     public void setProfiles(ProfilesType value) {
         this.profiles = value;
@@ -168,11 +173,11 @@ public class ResGuestType {
 
     /**
      * Gets the value of the specialRequests property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link SpecialRequestType }
-     *
+     *     
      */
     public SpecialRequestType getSpecialRequests() {
         return specialRequests;
@@ -180,11 +185,11 @@ public class ResGuestType {
 
     /**
      * Sets the value of the specialRequests property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link SpecialRequestType }
-     *
+     *     
      */
     public void setSpecialRequests(SpecialRequestType value) {
         this.specialRequests = value;
@@ -192,11 +197,11 @@ public class ResGuestType {
 
     /**
      * Gets the value of the comments property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link CommentType }
-     *
+     *     
      */
     public CommentType getComments() {
         return comments;
@@ -204,11 +209,11 @@ public class ResGuestType {
 
     /**
      * Sets the value of the comments property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link CommentType }
-     *
+     *     
      */
     public void setComments(CommentType value) {
         this.comments = value;
@@ -216,11 +221,11 @@ public class ResGuestType {
 
     /**
      * Gets the value of the serviceRPHs property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link ServiceRPHsType }
-     *
+     *     
      */
     public ServiceRPHsType getServiceRPHs() {
         return serviceRPHs;
@@ -228,11 +233,11 @@ public class ResGuestType {
 
     /**
      * Sets the value of the serviceRPHs property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link ServiceRPHsType }
-     *
+     *     
      */
     public void setServiceRPHs(ServiceRPHsType value) {
         this.serviceRPHs = value;
@@ -240,11 +245,11 @@ public class ResGuestType {
 
     /**
      * Gets the value of the profileRPHs property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link ResGuestType.ProfileRPHs }
-     *
+     *     
      */
     public ResGuestType.ProfileRPHs getProfileRPHs() {
         return profileRPHs;
@@ -252,11 +257,11 @@ public class ResGuestType {
 
     /**
      * Sets the value of the profileRPHs property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link ResGuestType.ProfileRPHs }
-     *
+     *     
      */
     public void setProfileRPHs(ResGuestType.ProfileRPHs value) {
         this.profileRPHs = value;
@@ -264,11 +269,11 @@ public class ResGuestType {
 
     /**
      * Gets the value of the arrivalTransport property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link TransportInfoType }
-     *
+     *     
      */
     public TransportInfoType getArrivalTransport() {
         return arrivalTransport;
@@ -276,11 +281,11 @@ public class ResGuestType {
 
     /**
      * Sets the value of the arrivalTransport property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link TransportInfoType }
-     *
+     *     
      */
     public void setArrivalTransport(TransportInfoType value) {
         this.arrivalTransport = value;
@@ -288,11 +293,11 @@ public class ResGuestType {
 
     /**
      * Gets the value of the departureTransport property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link TransportInfoType }
-     *
+     *     
      */
     public TransportInfoType getDepartureTransport() {
         return departureTransport;
@@ -300,11 +305,11 @@ public class ResGuestType {
 
     /**
      * Sets the value of the departureTransport property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link TransportInfoType }
-     *
+     *     
      */
     public void setDepartureTransport(TransportInfoType value) {
         this.departureTransport = value;
@@ -312,11 +317,11 @@ public class ResGuestType {
 
     /**
      * Gets the value of the guestCounts property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link GuestCountType }
-     *
+     *     
      */
     public GuestCountType getGuestCounts() {
         return guestCounts;
@@ -324,11 +329,11 @@ public class ResGuestType {
 
     /**
      * Sets the value of the guestCounts property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link GuestCountType }
-     *
+     *     
      */
     public void setGuestCounts(GuestCountType value) {
         this.guestCounts = value;
@@ -336,11 +341,11 @@ public class ResGuestType {
 
     /**
      * Gets the value of the inHouseTimeSpan property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link DateTimeSpanType }
-     *
+     *     
      */
     public DateTimeSpanType getInHouseTimeSpan() {
         return inHouseTimeSpan;
@@ -348,11 +353,11 @@ public class ResGuestType {
 
     /**
      * Sets the value of the inHouseTimeSpan property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link DateTimeSpanType }
-     *
+     *     
      */
     public void setInHouseTimeSpan(DateTimeSpanType value) {
         this.inHouseTimeSpan = value;
@@ -360,11 +365,11 @@ public class ResGuestType {
 
     /**
      * Gets the value of the tpaExtensions property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link TPAExtensionsType }
-     *
+     *     
      */
     public TPAExtensionsType getTPAExtensions() {
         return tpaExtensions;
@@ -372,11 +377,11 @@ public class ResGuestType {
 
     /**
      * Sets the value of the tpaExtensions property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link TPAExtensionsType }
-     *
+     *     
      */
     public void setTPAExtensions(TPAExtensionsType value) {
         this.tpaExtensions = value;
@@ -384,11 +389,11 @@ public class ResGuestType {
 
     /**
      * Gets the value of the resGuestRPH property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getResGuestRPH() {
         return resGuestRPH;
@@ -396,11 +401,11 @@ public class ResGuestType {
 
     /**
      * Sets the value of the resGuestRPH property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setResGuestRPH(String value) {
         this.resGuestRPH = value;
@@ -408,11 +413,11 @@ public class ResGuestType {
 
     /**
      * Gets the value of the ageQualifyingCode property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getAgeQualifyingCode() {
         return ageQualifyingCode;
@@ -420,11 +425,11 @@ public class ResGuestType {
 
     /**
      * Sets the value of the ageQualifyingCode property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setAgeQualifyingCode(String value) {
         this.ageQualifyingCode = value;
@@ -432,11 +437,11 @@ public class ResGuestType {
 
     /**
      * Gets the value of the arrivalTime property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link XMLGregorianCalendar }
-     *
+     *     
      */
     public XMLGregorianCalendar getArrivalTime() {
         return arrivalTime;
@@ -444,11 +449,11 @@ public class ResGuestType {
 
     /**
      * Sets the value of the arrivalTime property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link XMLGregorianCalendar }
-     *
+     *     
      */
     public void setArrivalTime(XMLGregorianCalendar value) {
         this.arrivalTime = value;
@@ -456,11 +461,11 @@ public class ResGuestType {
 
     /**
      * Gets the value of the departureTime property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link XMLGregorianCalendar }
-     *
+     *     
      */
     public XMLGregorianCalendar getDepartureTime() {
         return departureTime;
@@ -468,11 +473,11 @@ public class ResGuestType {
 
     /**
      * Sets the value of the departureTime property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link XMLGregorianCalendar }
-     *
+     *     
      */
     public void setDepartureTime(XMLGregorianCalendar value) {
         this.departureTime = value;
@@ -480,11 +485,11 @@ public class ResGuestType {
 
     /**
      * Gets the value of the groupEventCode property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getGroupEventCode() {
         return groupEventCode;
@@ -492,11 +497,11 @@ public class ResGuestType {
 
     /**
      * Sets the value of the groupEventCode property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setGroupEventCode(String value) {
         this.groupEventCode = value;
@@ -504,11 +509,11 @@ public class ResGuestType {
 
     /**
      * Gets the value of the vip property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link Boolean }
-     *
+     *     
      */
     public Boolean isVIP() {
         return vip;
@@ -516,11 +521,11 @@ public class ResGuestType {
 
     /**
      * Sets the value of the vip property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *
+     *     
      */
     public void setVIP(Boolean value) {
         this.vip = value;
@@ -528,11 +533,11 @@ public class ResGuestType {
 
     /**
      * Gets the value of the primaryIndicator property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link Boolean }
-     *
+     *     
      */
     public Boolean isPrimaryIndicator() {
         return primaryIndicator;
@@ -540,11 +545,11 @@ public class ResGuestType {
 
     /**
      * Sets the value of the primaryIndicator property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *
+     *     
      */
     public void setPrimaryIndicator(Boolean value) {
         this.primaryIndicator = value;
@@ -552,11 +557,11 @@ public class ResGuestType {
 
     /**
      * Gets the value of the age property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link Integer }
-     *
+     *     
      */
     public Integer getAge() {
         return age;
@@ -564,11 +569,11 @@ public class ResGuestType {
 
     /**
      * Sets the value of the age property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link Integer }
-     *
+     *     
      */
     public void setAge(Integer value) {
         this.age = value;
@@ -576,11 +581,11 @@ public class ResGuestType {
 
     /**
      * Gets the value of the action property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link ActionType }
-     *
+     *     
      */
     public ActionType getAction() {
         return action;
@@ -588,11 +593,11 @@ public class ResGuestType {
 
     /**
      * Sets the value of the action property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link ActionType }
-     *
+     *     
      */
     public void setAction(ActionType value) {
         this.action = value;
@@ -600,11 +605,11 @@ public class ResGuestType {
 
     /**
      * Gets the value of the locationCode property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getLocationCode() {
         return locationCode;
@@ -612,11 +617,11 @@ public class ResGuestType {
 
     /**
      * Sets the value of the locationCode property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setLocationCode(String value) {
         this.locationCode = value;
@@ -624,11 +629,11 @@ public class ResGuestType {
 
     /**
      * Gets the value of the codeContext property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getCodeContext() {
         return codeContext;
@@ -636,11 +641,11 @@ public class ResGuestType {
 
     /**
      * Sets the value of the codeContext property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setCodeContext(String value) {
         this.codeContext = value;
@@ -649,9 +654,9 @@ public class ResGuestType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -671,8 +676,8 @@ public class ResGuestType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -681,33 +686,33 @@ public class ResGuestType {
     public static class ProfileRPHs {
 
         @XmlElement(name = "ProfileRPH", required = true)
-        protected List<ProfileRPH> profileRPH;
+        protected List<ResGuestType.ProfileRPHs.ProfileRPH> profileRPH;
 
         /**
          * Gets the value of the profileRPH property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the profileRPH property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getProfileRPH().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link ResGuestType.ProfileRPHs.ProfileRPH }
-         *
-         *
+         * 
+         * 
          */
-        public List<ProfileRPH> getProfileRPH() {
+        public List<ResGuestType.ProfileRPHs.ProfileRPH> getProfileRPH() {
             if (profileRPH == null) {
-                profileRPH = new ArrayList<ProfileRPH>();
+                profileRPH = new ArrayList<ResGuestType.ProfileRPHs.ProfileRPH>();
             }
             return this.profileRPH;
         }

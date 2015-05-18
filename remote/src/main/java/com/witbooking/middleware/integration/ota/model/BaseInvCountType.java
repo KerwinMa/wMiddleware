@@ -8,14 +8,18 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import javax.xml.datatype.Duration;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import javax.xml.datatype.Duration;
 
 
 /**
@@ -117,11 +121,11 @@ public class BaseInvCountType {
 
     /**
      * Gets the value of the statusApplicationControl property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link StatusApplicationControlType }
-     *
+     *     
      */
     public StatusApplicationControlType getStatusApplicationControl() {
         return statusApplicationControl;
@@ -129,11 +133,11 @@ public class BaseInvCountType {
 
     /**
      * Sets the value of the statusApplicationControl property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link StatusApplicationControlType }
-     *
+     *     
      */
     public void setStatusApplicationControl(StatusApplicationControlType value) {
         this.statusApplicationControl = value;
@@ -141,11 +145,11 @@ public class BaseInvCountType {
 
     /**
      * Gets the value of the invCounts property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link BaseInvCountType.InvCounts }
-     *
+     *     
      */
     public BaseInvCountType.InvCounts getInvCounts() {
         return invCounts;
@@ -153,11 +157,11 @@ public class BaseInvCountType {
 
     /**
      * Sets the value of the invCounts property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link BaseInvCountType.InvCounts }
-     *
+     *     
      */
     public void setInvCounts(BaseInvCountType.InvCounts value) {
         this.invCounts = value;
@@ -165,11 +169,11 @@ public class BaseInvCountType {
 
     /**
      * Gets the value of the offSell property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link BaseInvCountType.OffSell }
-     *
+     *     
      */
     public BaseInvCountType.OffSell getOffSell() {
         return offSell;
@@ -177,11 +181,11 @@ public class BaseInvCountType {
 
     /**
      * Sets the value of the offSell property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link BaseInvCountType.OffSell }
-     *
+     *     
      */
     public void setOffSell(BaseInvCountType.OffSell value) {
         this.offSell = value;
@@ -189,11 +193,11 @@ public class BaseInvCountType {
 
     /**
      * Gets the value of the uniqueID property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link UniqueIDType }
-     *
+     *     
      */
     public UniqueIDType getUniqueID() {
         return uniqueID;
@@ -201,11 +205,11 @@ public class BaseInvCountType {
 
     /**
      * Sets the value of the uniqueID property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link UniqueIDType }
-     *
+     *     
      */
     public void setUniqueID(UniqueIDType value) {
         this.uniqueID = value;
@@ -214,9 +218,9 @@ public class BaseInvCountType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -259,8 +263,8 @@ public class BaseInvCountType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -269,33 +273,33 @@ public class BaseInvCountType {
     public static class InvCounts {
 
         @XmlElement(name = "InvCount", required = true)
-        protected List<InvCount> invCount;
+        protected List<BaseInvCountType.InvCounts.InvCount> invCount;
 
         /**
          * Gets the value of the invCount property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the invCount property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getInvCount().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link BaseInvCountType.InvCounts.InvCount }
-         *
-         *
+         * 
+         * 
          */
-        public List<InvCount> getInvCount() {
+        public List<BaseInvCountType.InvCounts.InvCount> getInvCount() {
             if (invCount == null) {
-                invCount = new ArrayList<InvCount>();
+                invCount = new ArrayList<BaseInvCountType.InvCounts.InvCount>();
             }
             return this.invCount;
         }
@@ -303,9 +307,9 @@ public class BaseInvCountType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -338,8 +342,8 @@ public class BaseInvCountType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
@@ -360,11 +364,11 @@ public class BaseInvCountType {
 
             /**
              * Gets the value of the invBlockCutoff property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link BaseInvCountType.InvCounts.InvCount.InvBlockCutoff }
-             *
+             *     
              */
             public BaseInvCountType.InvCounts.InvCount.InvBlockCutoff getInvBlockCutoff() {
                 return invBlockCutoff;
@@ -372,11 +376,11 @@ public class BaseInvCountType {
 
             /**
              * Sets the value of the invBlockCutoff property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link BaseInvCountType.InvCounts.InvCount.InvBlockCutoff }
-             *
+             *     
              */
             public void setInvBlockCutoff(BaseInvCountType.InvCounts.InvCount.InvBlockCutoff value) {
                 this.invBlockCutoff = value;

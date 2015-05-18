@@ -8,9 +8,13 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -89,15 +93,15 @@ public class FulfillmentType {
     @XmlElement(name = "Receipt")
     protected FulfillmentType.Receipt receipt;
     @XmlElement(name = "PaymentText")
-    protected List<PaymentText> paymentText;
+    protected List<FulfillmentType.PaymentText> paymentText;
 
     /**
      * Gets the value of the paymentDetails property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link FulfillmentType.PaymentDetails }
-     *
+     *     
      */
     public FulfillmentType.PaymentDetails getPaymentDetails() {
         return paymentDetails;
@@ -105,11 +109,11 @@ public class FulfillmentType {
 
     /**
      * Sets the value of the paymentDetails property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link FulfillmentType.PaymentDetails }
-     *
+     *     
      */
     public void setPaymentDetails(FulfillmentType.PaymentDetails value) {
         this.paymentDetails = value;
@@ -117,11 +121,11 @@ public class FulfillmentType {
 
     /**
      * Gets the value of the deliveryAddress property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link AddressType }
-     *
+     *     
      */
     public AddressType getDeliveryAddress() {
         return deliveryAddress;
@@ -129,11 +133,11 @@ public class FulfillmentType {
 
     /**
      * Sets the value of the deliveryAddress property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link AddressType }
-     *
+     *     
      */
     public void setDeliveryAddress(AddressType value) {
         this.deliveryAddress = value;
@@ -141,11 +145,11 @@ public class FulfillmentType {
 
     /**
      * Gets the value of the name property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link PersonNameType }
-     *
+     *     
      */
     public PersonNameType getName() {
         return name;
@@ -153,11 +157,11 @@ public class FulfillmentType {
 
     /**
      * Sets the value of the name property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link PersonNameType }
-     *
+     *     
      */
     public void setName(PersonNameType value) {
         this.name = value;
@@ -165,11 +169,11 @@ public class FulfillmentType {
 
     /**
      * Gets the value of the receipt property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link FulfillmentType.Receipt }
-     *
+     *     
      */
     public FulfillmentType.Receipt getReceipt() {
         return receipt;
@@ -177,11 +181,11 @@ public class FulfillmentType {
 
     /**
      * Sets the value of the receipt property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link FulfillmentType.Receipt }
-     *
+     *     
      */
     public void setReceipt(FulfillmentType.Receipt value) {
         this.receipt = value;
@@ -189,29 +193,29 @@ public class FulfillmentType {
 
     /**
      * Gets the value of the paymentText property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the paymentText property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getPaymentText().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link FulfillmentType.PaymentText }
-     *
-     *
+     * 
+     * 
      */
-    public List<PaymentText> getPaymentText() {
+    public List<FulfillmentType.PaymentText> getPaymentText() {
         if (paymentText == null) {
-            paymentText = new ArrayList<PaymentText>();
+            paymentText = new ArrayList<FulfillmentType.PaymentText>();
         }
         return this.paymentText;
     }
@@ -219,9 +223,9 @@ public class FulfillmentType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -241,8 +245,8 @@ public class FulfillmentType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -251,33 +255,33 @@ public class FulfillmentType {
     public static class PaymentDetails {
 
         @XmlElement(name = "PaymentDetail", required = true)
-        protected List<PaymentDetail> paymentDetail;
+        protected List<FulfillmentType.PaymentDetails.PaymentDetail> paymentDetail;
 
         /**
          * Gets the value of the paymentDetail property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the paymentDetail property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getPaymentDetail().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link FulfillmentType.PaymentDetails.PaymentDetail }
-         *
-         *
+         * 
+         * 
          */
-        public List<PaymentDetail> getPaymentDetail() {
+        public List<FulfillmentType.PaymentDetails.PaymentDetail> getPaymentDetail() {
             if (paymentDetail == null) {
-                paymentDetail = new ArrayList<PaymentDetail>();
+                paymentDetail = new ArrayList<FulfillmentType.PaymentDetails.PaymentDetail>();
             }
             return this.paymentDetail;
         }

@@ -8,9 +8,14 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -57,11 +62,11 @@ public class VoluntaryChangesType {
 
     /**
      * Gets the value of the penalty property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VoluntaryChangesType.Penalty }
-     *
+     *     
      */
     public VoluntaryChangesType.Penalty getPenalty() {
         return penalty;
@@ -69,11 +74,11 @@ public class VoluntaryChangesType {
 
     /**
      * Sets the value of the penalty property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VoluntaryChangesType.Penalty }
-     *
+     *     
      */
     public void setPenalty(VoluntaryChangesType.Penalty value) {
         this.penalty = value;

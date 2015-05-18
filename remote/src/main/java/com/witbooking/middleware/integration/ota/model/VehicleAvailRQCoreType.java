@@ -8,11 +8,16 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -143,9 +148,9 @@ public class VehicleAvailRQCoreType {
     @XmlElement(name = "VehPrefs")
     protected VehicleAvailRQCoreType.VehPrefs vehPrefs;
     @XmlElement(name = "DriverType")
-    protected List<DriverType> driverType;
+    protected List<VehicleAvailRQCoreType.DriverType> driverType;
     @XmlElement(name = "RateQualifier")
-    protected List<RateQualifier> rateQualifier;
+    protected List<VehicleAvailRQCoreType.RateQualifier> rateQualifier;
     @XmlElement(name = "RateRange")
     protected VehicleAvailRQCoreType.RateRange rateRange;
     @XmlElement(name = "SpecialEquipPrefs")
@@ -159,11 +164,11 @@ public class VehicleAvailRQCoreType {
 
     /**
      * Gets the value of the vehRentalCore property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleRentalCoreType }
-     *
+     *     
      */
     public VehicleRentalCoreType getVehRentalCore() {
         return vehRentalCore;
@@ -171,11 +176,11 @@ public class VehicleAvailRQCoreType {
 
     /**
      * Sets the value of the vehRentalCore property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleRentalCoreType }
-     *
+     *     
      */
     public void setVehRentalCore(VehicleRentalCoreType value) {
         this.vehRentalCore = value;
@@ -183,11 +188,11 @@ public class VehicleAvailRQCoreType {
 
     /**
      * Gets the value of the vendorPrefs property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleAvailRQCoreType.VendorPrefs }
-     *
+     *     
      */
     public VehicleAvailRQCoreType.VendorPrefs getVendorPrefs() {
         return vendorPrefs;
@@ -195,11 +200,11 @@ public class VehicleAvailRQCoreType {
 
     /**
      * Sets the value of the vendorPrefs property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleAvailRQCoreType.VendorPrefs }
-     *
+     *     
      */
     public void setVendorPrefs(VehicleAvailRQCoreType.VendorPrefs value) {
         this.vendorPrefs = value;
@@ -207,11 +212,11 @@ public class VehicleAvailRQCoreType {
 
     /**
      * Gets the value of the vehPrefs property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleAvailRQCoreType.VehPrefs }
-     *
+     *     
      */
     public VehicleAvailRQCoreType.VehPrefs getVehPrefs() {
         return vehPrefs;
@@ -219,11 +224,11 @@ public class VehicleAvailRQCoreType {
 
     /**
      * Sets the value of the vehPrefs property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleAvailRQCoreType.VehPrefs }
-     *
+     *     
      */
     public void setVehPrefs(VehicleAvailRQCoreType.VehPrefs value) {
         this.vehPrefs = value;
@@ -231,69 +236,69 @@ public class VehicleAvailRQCoreType {
 
     /**
      * Gets the value of the driverType property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the driverType property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getDriverType().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link VehicleAvailRQCoreType.DriverType }
-     *
-     *
+     * 
+     * 
      */
-    public List<DriverType> getDriverType() {
+    public List<VehicleAvailRQCoreType.DriverType> getDriverType() {
         if (driverType == null) {
-            driverType = new ArrayList<DriverType>();
+            driverType = new ArrayList<VehicleAvailRQCoreType.DriverType>();
         }
         return this.driverType;
     }
 
     /**
      * Gets the value of the rateQualifier property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the rateQualifier property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getRateQualifier().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link VehicleAvailRQCoreType.RateQualifier }
-     *
-     *
+     * 
+     * 
      */
-    public List<RateQualifier> getRateQualifier() {
+    public List<VehicleAvailRQCoreType.RateQualifier> getRateQualifier() {
         if (rateQualifier == null) {
-            rateQualifier = new ArrayList<RateQualifier>();
+            rateQualifier = new ArrayList<VehicleAvailRQCoreType.RateQualifier>();
         }
         return this.rateQualifier;
     }
 
     /**
      * Gets the value of the rateRange property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleAvailRQCoreType.RateRange }
-     *
+     *     
      */
     public VehicleAvailRQCoreType.RateRange getRateRange() {
         return rateRange;
@@ -301,11 +306,11 @@ public class VehicleAvailRQCoreType {
 
     /**
      * Sets the value of the rateRange property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleAvailRQCoreType.RateRange }
-     *
+     *     
      */
     public void setRateRange(VehicleAvailRQCoreType.RateRange value) {
         this.rateRange = value;
@@ -313,11 +318,11 @@ public class VehicleAvailRQCoreType {
 
     /**
      * Gets the value of the specialEquipPrefs property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleAvailRQCoreType.SpecialEquipPrefs }
-     *
+     *     
      */
     public VehicleAvailRQCoreType.SpecialEquipPrefs getSpecialEquipPrefs() {
         return specialEquipPrefs;
@@ -325,11 +330,11 @@ public class VehicleAvailRQCoreType {
 
     /**
      * Sets the value of the specialEquipPrefs property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleAvailRQCoreType.SpecialEquipPrefs }
-     *
+     *     
      */
     public void setSpecialEquipPrefs(VehicleAvailRQCoreType.SpecialEquipPrefs value) {
         this.specialEquipPrefs = value;
@@ -337,11 +342,11 @@ public class VehicleAvailRQCoreType {
 
     /**
      * Gets the value of the tpaExtensions property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link TPAExtensionsType }
-     *
+     *     
      */
     public TPAExtensionsType getTPAExtensions() {
         return tpaExtensions;
@@ -349,11 +354,11 @@ public class VehicleAvailRQCoreType {
 
     /**
      * Sets the value of the tpaExtensions property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link TPAExtensionsType }
-     *
+     *     
      */
     public void setTPAExtensions(TPAExtensionsType value) {
         this.tpaExtensions = value;
@@ -361,11 +366,11 @@ public class VehicleAvailRQCoreType {
 
     /**
      * Gets the value of the status property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link InventoryStatusType }
-     *
+     *     
      */
     public InventoryStatusType getStatus() {
         return status;
@@ -373,11 +378,11 @@ public class VehicleAvailRQCoreType {
 
     /**
      * Sets the value of the status property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link InventoryStatusType }
-     *
+     *     
      */
     public void setStatus(InventoryStatusType value) {
         this.status = value;
@@ -385,11 +390,11 @@ public class VehicleAvailRQCoreType {
 
     /**
      * Gets the value of the targetSource property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getTargetSource() {
         return targetSource;
@@ -397,11 +402,11 @@ public class VehicleAvailRQCoreType {
 
     /**
      * Sets the value of the targetSource property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setTargetSource(String value) {
         this.targetSource = value;
@@ -410,9 +415,9 @@ public class VehicleAvailRQCoreType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -422,8 +427,8 @@ public class VehicleAvailRQCoreType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
@@ -444,11 +449,11 @@ public class VehicleAvailRQCoreType {
 
         /**
          * Gets the value of the age property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link Integer }
-         *
+         *     
          */
         public Integer getAge() {
             return age;
@@ -456,11 +461,11 @@ public class VehicleAvailRQCoreType {
 
         /**
          * Sets the value of the age property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link Integer }
-         *
+         *     
          */
         public void setAge(Integer value) {
             this.age = value;
@@ -468,11 +473,11 @@ public class VehicleAvailRQCoreType {
 
         /**
          * Gets the value of the code property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getCode() {
             return code;
@@ -480,11 +485,11 @@ public class VehicleAvailRQCoreType {
 
         /**
          * Sets the value of the code property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setCode(String value) {
             this.code = value;
@@ -492,11 +497,11 @@ public class VehicleAvailRQCoreType {
 
         /**
          * Gets the value of the codeContext property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getCodeContext() {
             return codeContext;
@@ -504,11 +509,11 @@ public class VehicleAvailRQCoreType {
 
         /**
          * Sets the value of the codeContext property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setCodeContext(String value) {
             this.codeContext = value;
@@ -516,11 +521,11 @@ public class VehicleAvailRQCoreType {
 
         /**
          * Gets the value of the uri property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getURI() {
             return uri;
@@ -528,11 +533,11 @@ public class VehicleAvailRQCoreType {
 
         /**
          * Sets the value of the uri property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setURI(String value) {
             this.uri = value;
@@ -540,11 +545,11 @@ public class VehicleAvailRQCoreType {
 
         /**
          * Gets the value of the quantity property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link BigInteger }
-         *
+         *     
          */
         public BigInteger getQuantity() {
             return quantity;
@@ -552,11 +557,11 @@ public class VehicleAvailRQCoreType {
 
         /**
          * Sets the value of the quantity property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link BigInteger }
-         *
+         *     
          */
         public void setQuantity(BigInteger value) {
             this.quantity = value;
@@ -567,9 +572,9 @@ public class VehicleAvailRQCoreType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -579,8 +584,8 @@ public class VehicleAvailRQCoreType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
@@ -605,11 +610,11 @@ public class VehicleAvailRQCoreType {
 
         /**
          * Gets the value of the travelPurpose property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getTravelPurpose() {
             return travelPurpose;
@@ -617,11 +622,11 @@ public class VehicleAvailRQCoreType {
 
         /**
          * Sets the value of the travelPurpose property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setTravelPurpose(String value) {
             this.travelPurpose = value;
@@ -629,11 +634,11 @@ public class VehicleAvailRQCoreType {
 
         /**
          * Gets the value of the rateCategory property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getRateCategory() {
             return rateCategory;
@@ -641,11 +646,11 @@ public class VehicleAvailRQCoreType {
 
         /**
          * Sets the value of the rateCategory property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setRateCategory(String value) {
             this.rateCategory = value;
@@ -653,11 +658,11 @@ public class VehicleAvailRQCoreType {
 
         /**
          * Gets the value of the corpDiscountNmbr property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getCorpDiscountNmbr() {
             return corpDiscountNmbr;
@@ -665,11 +670,11 @@ public class VehicleAvailRQCoreType {
 
         /**
          * Sets the value of the corpDiscountNmbr property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setCorpDiscountNmbr(String value) {
             this.corpDiscountNmbr = value;
@@ -677,11 +682,11 @@ public class VehicleAvailRQCoreType {
 
         /**
          * Gets the value of the promotionCode property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getPromotionCode() {
             return promotionCode;
@@ -689,11 +694,11 @@ public class VehicleAvailRQCoreType {
 
         /**
          * Sets the value of the promotionCode property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setPromotionCode(String value) {
             this.promotionCode = value;
@@ -701,25 +706,25 @@ public class VehicleAvailRQCoreType {
 
         /**
          * Gets the value of the promotionVendorCode property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the promotionVendorCode property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getPromotionVendorCode().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link String }
-         *
-         *
+         * 
+         * 
          */
         public List<String> getPromotionVendorCode() {
             if (promotionVendorCode == null) {
@@ -730,11 +735,11 @@ public class VehicleAvailRQCoreType {
 
         /**
          * Gets the value of the rateQualifier property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getRateQualifier() {
             return rateQualifier;
@@ -742,11 +747,11 @@ public class VehicleAvailRQCoreType {
 
         /**
          * Sets the value of the rateQualifier property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setRateQualifier(String value) {
             this.rateQualifier = value;
@@ -754,11 +759,11 @@ public class VehicleAvailRQCoreType {
 
         /**
          * Gets the value of the ratePeriod property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link RatePeriodSimpleType }
-         *
+         *     
          */
         public RatePeriodSimpleType getRatePeriod() {
             return ratePeriod;
@@ -766,11 +771,11 @@ public class VehicleAvailRQCoreType {
 
         /**
          * Sets the value of the ratePeriod property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link RatePeriodSimpleType }
-         *
+         *     
          */
         public void setRatePeriod(RatePeriodSimpleType value) {
             this.ratePeriod = value;
@@ -778,11 +783,11 @@ public class VehicleAvailRQCoreType {
 
         /**
          * Gets the value of the guaranteedInd property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link Boolean }
-         *
+         *     
          */
         public Boolean isGuaranteedInd() {
             return guaranteedInd;
@@ -790,11 +795,11 @@ public class VehicleAvailRQCoreType {
 
         /**
          * Sets the value of the guaranteedInd property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link Boolean }
-         *
+         *     
          */
         public void setGuaranteedInd(Boolean value) {
             this.guaranteedInd = value;
@@ -805,9 +810,9 @@ public class VehicleAvailRQCoreType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -817,8 +822,8 @@ public class VehicleAvailRQCoreType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
@@ -840,11 +845,11 @@ public class VehicleAvailRQCoreType {
 
         /**
          * Gets the value of the minRate property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link BigDecimal }
-         *
+         *     
          */
         public BigDecimal getMinRate() {
             return minRate;
@@ -852,11 +857,11 @@ public class VehicleAvailRQCoreType {
 
         /**
          * Sets the value of the minRate property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link BigDecimal }
-         *
+         *     
          */
         public void setMinRate(BigDecimal value) {
             this.minRate = value;
@@ -864,11 +869,11 @@ public class VehicleAvailRQCoreType {
 
         /**
          * Gets the value of the maxRate property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link BigDecimal }
-         *
+         *     
          */
         public BigDecimal getMaxRate() {
             return maxRate;
@@ -876,11 +881,11 @@ public class VehicleAvailRQCoreType {
 
         /**
          * Sets the value of the maxRate property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link BigDecimal }
-         *
+         *     
          */
         public void setMaxRate(BigDecimal value) {
             this.maxRate = value;
@@ -888,11 +893,11 @@ public class VehicleAvailRQCoreType {
 
         /**
          * Gets the value of the fixedRate property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link BigDecimal }
-         *
+         *     
          */
         public BigDecimal getFixedRate() {
             return fixedRate;
@@ -900,11 +905,11 @@ public class VehicleAvailRQCoreType {
 
         /**
          * Sets the value of the fixedRate property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link BigDecimal }
-         *
+         *     
          */
         public void setFixedRate(BigDecimal value) {
             this.fixedRate = value;
@@ -912,11 +917,11 @@ public class VehicleAvailRQCoreType {
 
         /**
          * Gets the value of the rateTimeUnit property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link TimeUnitType }
-         *
+         *     
          */
         public TimeUnitType getRateTimeUnit() {
             return rateTimeUnit;
@@ -924,11 +929,11 @@ public class VehicleAvailRQCoreType {
 
         /**
          * Sets the value of the rateTimeUnit property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link TimeUnitType }
-         *
+         *     
          */
         public void setRateTimeUnit(TimeUnitType value) {
             this.rateTimeUnit = value;
@@ -936,11 +941,11 @@ public class VehicleAvailRQCoreType {
 
         /**
          * Gets the value of the currencyCode property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getCurrencyCode() {
             return currencyCode;
@@ -948,11 +953,11 @@ public class VehicleAvailRQCoreType {
 
         /**
          * Sets the value of the currencyCode property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setCurrencyCode(String value) {
             this.currencyCode = value;
@@ -960,11 +965,11 @@ public class VehicleAvailRQCoreType {
 
         /**
          * Gets the value of the decimalPlaces property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link BigInteger }
-         *
+         *     
          */
         public BigInteger getDecimalPlaces() {
             return decimalPlaces;
@@ -972,11 +977,11 @@ public class VehicleAvailRQCoreType {
 
         /**
          * Sets the value of the decimalPlaces property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link BigInteger }
-         *
+         *     
          */
         public void setDecimalPlaces(BigInteger value) {
             this.decimalPlaces = value;
@@ -987,9 +992,9 @@ public class VehicleAvailRQCoreType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -1009,8 +1014,8 @@ public class VehicleAvailRQCoreType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -1019,33 +1024,33 @@ public class VehicleAvailRQCoreType {
     public static class SpecialEquipPrefs {
 
         @XmlElement(name = "SpecialEquipPref", required = true)
-        protected List<SpecialEquipPref> specialEquipPref;
+        protected List<VehicleAvailRQCoreType.SpecialEquipPrefs.SpecialEquipPref> specialEquipPref;
 
         /**
          * Gets the value of the specialEquipPref property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the specialEquipPref property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getSpecialEquipPref().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link VehicleAvailRQCoreType.SpecialEquipPrefs.SpecialEquipPref }
-         *
-         *
+         * 
+         * 
          */
-        public List<SpecialEquipPref> getSpecialEquipPref() {
+        public List<VehicleAvailRQCoreType.SpecialEquipPrefs.SpecialEquipPref> getSpecialEquipPref() {
             if (specialEquipPref == null) {
-                specialEquipPref = new ArrayList<SpecialEquipPref>();
+                specialEquipPref = new ArrayList<VehicleAvailRQCoreType.SpecialEquipPrefs.SpecialEquipPref>();
             }
             return this.specialEquipPref;
         }
@@ -1053,9 +1058,9 @@ public class VehicleAvailRQCoreType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -1065,8 +1070,8 @@ public class VehicleAvailRQCoreType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
@@ -1084,11 +1089,11 @@ public class VehicleAvailRQCoreType {
 
             /**
              * Gets the value of the equipType property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getEquipType() {
                 return equipType;
@@ -1096,11 +1101,11 @@ public class VehicleAvailRQCoreType {
 
             /**
              * Sets the value of the equipType property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setEquipType(String value) {
                 this.equipType = value;
@@ -1108,11 +1113,11 @@ public class VehicleAvailRQCoreType {
 
             /**
              * Gets the value of the quantity property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link BigInteger }
-             *
+             *     
              */
             public BigInteger getQuantity() {
                 return quantity;
@@ -1120,11 +1125,11 @@ public class VehicleAvailRQCoreType {
 
             /**
              * Sets the value of the quantity property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link BigInteger }
-             *
+             *     
              */
             public void setQuantity(BigInteger value) {
                 this.quantity = value;
@@ -1132,11 +1137,11 @@ public class VehicleAvailRQCoreType {
 
             /**
              * Gets the value of the preferLevel property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link PreferLevelType }
-             *
+             *     
              */
             public PreferLevelType getPreferLevel() {
                 return preferLevel;
@@ -1144,11 +1149,11 @@ public class VehicleAvailRQCoreType {
 
             /**
              * Sets the value of the preferLevel property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link PreferLevelType }
-             *
+             *     
              */
             public void setPreferLevel(PreferLevelType value) {
                 this.preferLevel = value;
@@ -1156,11 +1161,11 @@ public class VehicleAvailRQCoreType {
 
             /**
              * Gets the value of the action property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link ActionType }
-             *
+             *     
              */
             public ActionType getAction() {
                 return action;
@@ -1168,11 +1173,11 @@ public class VehicleAvailRQCoreType {
 
             /**
              * Sets the value of the action property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link ActionType }
-             *
+             *     
              */
             public void setAction(ActionType value) {
                 this.action = value;
@@ -1185,9 +1190,9 @@ public class VehicleAvailRQCoreType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -1207,8 +1212,8 @@ public class VehicleAvailRQCoreType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -1217,33 +1222,33 @@ public class VehicleAvailRQCoreType {
     public static class VehPrefs {
 
         @XmlElement(name = "VehPref", required = true)
-        protected List<VehPref> vehPref;
+        protected List<VehicleAvailRQCoreType.VehPrefs.VehPref> vehPref;
 
         /**
          * Gets the value of the vehPref property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the vehPref property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getVehPref().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link VehicleAvailRQCoreType.VehPrefs.VehPref }
-         *
-         *
+         * 
+         * 
          */
-        public List<VehPref> getVehPref() {
+        public List<VehicleAvailRQCoreType.VehPrefs.VehPref> getVehPref() {
             if (vehPref == null) {
-                vehPref = new ArrayList<VehPref>();
+                vehPref = new ArrayList<VehicleAvailRQCoreType.VehPrefs.VehPref>();
             }
             return this.vehPref;
         }
@@ -1251,9 +1256,9 @@ public class VehicleAvailRQCoreType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -1263,8 +1268,8 @@ public class VehicleAvailRQCoreType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
@@ -1277,11 +1282,11 @@ public class VehicleAvailRQCoreType {
 
             /**
              * Gets the value of the upSellInd property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link Boolean }
-             *
+             *     
              */
             public Boolean isUpSellInd() {
                 return upSellInd;
@@ -1289,11 +1294,11 @@ public class VehicleAvailRQCoreType {
 
             /**
              * Sets the value of the upSellInd property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link Boolean }
-             *
+             *     
              */
             public void setUpSellInd(Boolean value) {
                 this.upSellInd = value;
@@ -1306,9 +1311,9 @@ public class VehicleAvailRQCoreType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -1330,8 +1335,8 @@ public class VehicleAvailRQCoreType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -1340,7 +1345,7 @@ public class VehicleAvailRQCoreType {
     public static class VendorPrefs {
 
         @XmlElement(name = "VendorPref", required = true)
-        protected List<VendorPref> vendorPref;
+        protected List<VehicleAvailRQCoreType.VendorPrefs.VendorPref> vendorPref;
         @XmlAttribute(name = "ParticipationLevelCode")
         protected String participationLevelCode;
         @XmlAttribute(name = "LocationCategory")
@@ -1348,29 +1353,29 @@ public class VehicleAvailRQCoreType {
 
         /**
          * Gets the value of the vendorPref property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the vendorPref property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getVendorPref().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link VehicleAvailRQCoreType.VendorPrefs.VendorPref }
-         *
-         *
+         * 
+         * 
          */
-        public List<VendorPref> getVendorPref() {
+        public List<VehicleAvailRQCoreType.VendorPrefs.VendorPref> getVendorPref() {
             if (vendorPref == null) {
-                vendorPref = new ArrayList<VendorPref>();
+                vendorPref = new ArrayList<VehicleAvailRQCoreType.VendorPrefs.VendorPref>();
             }
             return this.vendorPref;
         }

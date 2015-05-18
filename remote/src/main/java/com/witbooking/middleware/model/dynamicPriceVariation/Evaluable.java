@@ -1,5 +1,6 @@
 package com.witbooking.middleware.model.dynamicPriceVariation;
 
+import java.util.Date;
 import java.util.Map;
 
 /**

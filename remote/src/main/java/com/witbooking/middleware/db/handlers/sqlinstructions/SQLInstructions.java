@@ -243,6 +243,10 @@ public class SQLInstructions {
         public static final String TBL_RESERVATION = "reservas";
         public static final String ATT_STATUS_TBL_RESERVATION = "estado";
         public static final String ATT_ID_CONFIRMACION_TBL_RESERVATION = "idgeneradomulti";
+        public static final String ATT_CC_NUMBER = "ccnumber";
+        public static final String ATT_CC_VALID_TO = "ccvalidto";
+        public static final String ATT_CC_CODE = "ccsecuritycode";
+        public static final String ATT_CHECK_OUT = "fechasalida";
         /**
          * Represents the room stay. In our database table is idgenerado.
          */
@@ -307,7 +311,7 @@ public class SQLInstructions {
                 + "ultimamodificacion = ?, agente_id =?, motivocancelacion = ?, f_cancelacion = ?, emailing = ?, "
                 + "fenvio_encuesta_post_estancia = ?, es_consultada_ws = ?, es_solicita_cancelacion = ?, control_confirmadas = ?, prcj_impuestos = ?, "
                 + "importe_promos_sin_impuestos = ?, prcj_promos = ?, importe_aloj_sin_impuestos = ?, codigo_aplicado = ?, tracking_trivago = ?, "
-                + "reserva_cancelar_release = ?, dni = ?, fenvio_pre_stay = ?, commission = ? "
+                + "reserva_cancelar_release = ?, dni = ?, fenvio_pre_stay = ?, commission = ?, referer=? "
                 + " WHERE " + ATT_ROOM_STAY_ID_CONFIRMATION_TBL_RESERVATION + " =? ";
 
         public static final String UPDATE_USER_RESERVATION_EMAIL_INFO = "UPDATE " + TBL_RESERVATION + " SET "
@@ -336,6 +340,13 @@ public class SQLInstructions {
                 + ATT_ULTIMA_MODIFICACION_TBL_RESERVATION + "= NOW() "
                 + " WHERE "
                 + ATT_ROOM_STAY_ID_CONFIRMATION_TBL_RESERVATION + "= ?";
+        public static final String UPDATE_CREDIT_CARD = "UPDATE " + TBL_RESERVATION
+                + " SET "
+                + ATT_CC_NUMBER + "=? , "
+                + ATT_CC_VALID_TO + "=? , "
+                + ATT_CC_CODE + "=?  "
+                + " WHERE "
+                + ATT_CHECK_OUT + "= ? ;";
     }
 //   public static final String SELECT_DISCOUNT =
 /*
@@ -393,6 +404,13 @@ public class SQLInstructions {
         public static final String GET_HOTEL_TICKER_FROM_CHANNEL_HOTEL_TICKER =
                 "SELECT ch.hotel_ticker as " + HOTEL_TICKER + " FROM channels_hotels AS ch, "
                         + " channels AS c WHERE ch.channel = c.ticker AND c.ticker= ? AND ch.channel_hotel_ticker=?;";
+
+        public static final String GET_HOTEL_TICKER_FROM_CHANNEL =
+                "SELECT ch.hotel_ticker as " + HOTEL_TICKER + " FROM channels_hotels AS ch "
+                        + " WHERE ch.channel=?;";
+        public static final String GET_CHANNEL_HOTEL_TICKER_FROM_CHANNEL =
+                "SELECT ch.channel_hotel_ticker as " + CHANNEL_HOTEL_TICKER + " FROM channels_hotels AS ch "
+                        + " WHERE ch.channel=?;";
 
         public static final String GET_CHANNEL_HOTEL_TICKER_FROM_HOTEL_TICKER =
                 "SELECT ch.channel_hotel_ticker as " + CHANNEL_HOTEL_TICKER + " FROM channels_hotels AS ch, "
@@ -560,6 +578,7 @@ public class SQLInstructions {
                 "AND tiposhabs.deleted <>1 " +
                 "AND tiposhabs.activa=1; ";
         public static final String GET_DEFAULT_URL_WEBHOTEL = "SELECT c.urlwebhotel FROM configurations as c;";
+        public static final String GET_CONFIRMATION_EMAILS = "SELECT c.emails FROM configurations as c;";
         public static final String GET_NEWSLETTER_LANGUAGE_SQL_COMMAND = "SELECT id, email, language, active " +
                 "FROM newsletter " +
                 "WHERE language =? " +
@@ -742,6 +761,10 @@ public class SQLInstructions {
                         + " WHERE i.id = m.channels_integrations AND mc.channels_mappings = m.id AND "
                         + " mct.id = mc.channels_mappings_code_types AND "
                         + " i.channel_ticker=? AND m.tiposhabs_ticker=?;";
+        public static final String SELECT_TICKERS_MAPPED_BY_CHANNEL =
+                "SELECT m.tiposhabs_ticker FROM "
+                        + TBL_CHANNELS_MAPPINGS + " as m, " + TBL_CHANNELS_INTEGRATIONS + " as i "
+                        + " WHERE i.id = m.channels_integrations AND i.channel_ticker=?;";
         public static final String SELECT_CHANNEL_MAPPING =
                 "SELECT mct.name AS " + KEY + " , mc.value AS " + VALUE
                         + " , m.tiposhabs_ticker AS " + CHANNEL_TICKER + " FROM "

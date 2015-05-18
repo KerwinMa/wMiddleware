@@ -37,6 +37,7 @@ public class HashRangeValue implements Serializable {
     public static final String MAX_NOTICE = "maxNotice";
     public static final String VARIABLE = "variable";
     public static final String DISCOUNTS_APPLIED = "discountsApplied";
+    public static final String RULES_APPLIED = "rulesApplied";
 
     /**
      * Creates a new instance of

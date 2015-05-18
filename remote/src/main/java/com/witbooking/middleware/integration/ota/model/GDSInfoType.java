@@ -8,9 +8,13 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -107,11 +111,11 @@ public class GDSInfoType {
 
     /**
      * Gets the value of the gdsCodes property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link GDSInfoType.GDSCodes }
-     *
+     *     
      */
     public GDSInfoType.GDSCodes getGDSCodes() {
         return gdsCodes;
@@ -119,11 +123,11 @@ public class GDSInfoType {
 
     /**
      * Sets the value of the gdsCodes property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link GDSInfoType.GDSCodes }
-     *
+     *     
      */
     public void setGDSCodes(GDSInfoType.GDSCodes value) {
         this.gdsCodes = value;
@@ -131,11 +135,11 @@ public class GDSInfoType {
 
     /**
      * Gets the value of the masterChainCode property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getMasterChainCode() {
         return masterChainCode;
@@ -143,11 +147,11 @@ public class GDSInfoType {
 
     /**
      * Sets the value of the masterChainCode property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setMasterChainCode(String value) {
         this.masterChainCode = value;
@@ -156,9 +160,9 @@ public class GDSInfoType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -214,8 +218,8 @@ public class GDSInfoType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -224,46 +228,46 @@ public class GDSInfoType {
     public static class GDSCodes {
 
         @XmlElement(name = "GDS_Code")
-        protected List<GDSCode> gdsCode;
+        protected List<GDSInfoType.GDSCodes.GDSCode> gdsCode;
         @XmlAttribute(name = "LoadGDSIndicator")
         protected Boolean loadGDSIndicator;
 
         /**
          * Gets the value of the gdsCode property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the gdsCode property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getGDSCode().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link GDSInfoType.GDSCodes.GDSCode }
-         *
-         *
+         * 
+         * 
          */
-        public List<GDSCode> getGDSCode() {
+        public List<GDSInfoType.GDSCodes.GDSCode> getGDSCode() {
             if (gdsCode == null) {
-                gdsCode = new ArrayList<GDSCode>();
+                gdsCode = new ArrayList<GDSInfoType.GDSCodes.GDSCode>();
             }
             return this.gdsCode;
         }
 
         /**
          * Gets the value of the loadGDSIndicator property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link Boolean }
-         *
+         *     
          */
         public Boolean isLoadGDSIndicator() {
             return loadGDSIndicator;
@@ -271,11 +275,11 @@ public class GDSInfoType {
 
         /**
          * Sets the value of the loadGDSIndicator property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link Boolean }
-         *
+         *     
          */
         public void setLoadGDSIndicator(Boolean value) {
             this.loadGDSIndicator = value;
@@ -284,9 +288,9 @@ public class GDSInfoType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -331,8 +335,8 @@ public class GDSInfoType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
@@ -359,11 +363,11 @@ public class GDSInfoType {
 
             /**
              * Gets the value of the gdsCodeDetails property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link GDSInfoType.GDSCodes.GDSCode.GDSCodeDetails }
-             *
+             *     
              */
             public GDSInfoType.GDSCodes.GDSCode.GDSCodeDetails getGDSCodeDetails() {
                 return gdsCodeDetails;
@@ -371,11 +375,11 @@ public class GDSInfoType {
 
             /**
              * Sets the value of the gdsCodeDetails property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link GDSInfoType.GDSCodes.GDSCode.GDSCodeDetails }
-             *
+             *     
              */
             public void setGDSCodeDetails(GDSInfoType.GDSCodes.GDSCode.GDSCodeDetails value) {
                 this.gdsCodeDetails = value;
@@ -383,11 +387,11 @@ public class GDSInfoType {
 
             /**
              * Gets the value of the chainCode property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getChainCode() {
                 return chainCode;
@@ -395,11 +399,11 @@ public class GDSInfoType {
 
             /**
              * Sets the value of the chainCode property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setChainCode(String value) {
                 this.chainCode = value;
@@ -407,11 +411,11 @@ public class GDSInfoType {
 
             /**
              * Gets the value of the gdsPropertyCode property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getGDSPropertyCode() {
                 return gdsPropertyCode;
@@ -419,11 +423,11 @@ public class GDSInfoType {
 
             /**
              * Sets the value of the gdsPropertyCode property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setGDSPropertyCode(String value) {
                 this.gdsPropertyCode = value;
@@ -431,11 +435,11 @@ public class GDSInfoType {
 
             /**
              * Gets the value of the gdsName property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getGDSName() {
                 return gdsName;
@@ -443,11 +447,11 @@ public class GDSInfoType {
 
             /**
              * Sets the value of the gdsName property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setGDSName(String value) {
                 this.gdsName = value;
@@ -455,11 +459,11 @@ public class GDSInfoType {
 
             /**
              * Gets the value of the loadGDSIndicator property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link Boolean }
-             *
+             *     
              */
             public Boolean isLoadGDSIndicator() {
                 return loadGDSIndicator;
@@ -467,11 +471,11 @@ public class GDSInfoType {
 
             /**
              * Sets the value of the loadGDSIndicator property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link Boolean }
-             *
+             *     
              */
             public void setLoadGDSIndicator(Boolean value) {
                 this.loadGDSIndicator = value;
@@ -479,11 +483,11 @@ public class GDSInfoType {
 
             /**
              * Gets the value of the gdsPropertyLongName property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getGDSPropertyLongName() {
                 return gdsPropertyLongName;
@@ -491,11 +495,11 @@ public class GDSInfoType {
 
             /**
              * Sets the value of the gdsPropertyLongName property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setGDSPropertyLongName(String value) {
                 this.gdsPropertyLongName = value;
@@ -503,11 +507,11 @@ public class GDSInfoType {
 
             /**
              * Gets the value of the gdsPropertyShortName property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getGDSPropertyShortName() {
                 return gdsPropertyShortName;
@@ -515,11 +519,11 @@ public class GDSInfoType {
 
             /**
              * Sets the value of the gdsPropertyShortName property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setGDSPropertyShortName(String value) {
                 this.gdsPropertyShortName = value;
@@ -527,11 +531,11 @@ public class GDSInfoType {
 
             /**
              * Gets the value of the gdsRoomTypeCode property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getGDSRoomTypeCode() {
                 return gdsRoomTypeCode;
@@ -539,11 +543,11 @@ public class GDSInfoType {
 
             /**
              * Sets the value of the gdsRoomTypeCode property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setGDSRoomTypeCode(String value) {
                 this.gdsRoomTypeCode = value;
@@ -552,9 +556,9 @@ public class GDSInfoType {
 
             /**
              * <p>Java class for anonymous complex type.
-             *
+             * 
              * <p>The following schema fragment specifies the expected content contained within this class.
-             *
+             * 
              * <pre>
              * &lt;complexType>
              *   &lt;complexContent>
@@ -575,8 +579,8 @@ public class GDSInfoType {
              *   &lt;/complexContent>
              * &lt;/complexType>
              * </pre>
-             *
-             *
+             * 
+             * 
              */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "", propOrder = {
@@ -585,33 +589,33 @@ public class GDSInfoType {
             public static class GDSCodeDetails {
 
                 @XmlElement(name = "GDS_CodeDetail")
-                protected List<GDSCodeDetail> gdsCodeDetail;
+                protected List<GDSInfoType.GDSCodes.GDSCode.GDSCodeDetails.GDSCodeDetail> gdsCodeDetail;
 
                 /**
                  * Gets the value of the gdsCodeDetail property.
-                 *
+                 * 
                  * <p>
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
                  * This is why there is not a <CODE>set</CODE> method for the gdsCodeDetail property.
-                 *
+                 * 
                  * <p>
                  * For example, to add a new item, do as follows:
                  * <pre>
                  *    getGDSCodeDetail().add(newItem);
                  * </pre>
-                 *
-                 *
+                 * 
+                 * 
                  * <p>
                  * Objects of the following type(s) are allowed in the list
                  * {@link GDSInfoType.GDSCodes.GDSCode.GDSCodeDetails.GDSCodeDetail }
-                 *
-                 *
+                 * 
+                 * 
                  */
-                public List<GDSCodeDetail> getGDSCodeDetail() {
+                public List<GDSInfoType.GDSCodes.GDSCode.GDSCodeDetails.GDSCodeDetail> getGDSCodeDetail() {
                     if (gdsCodeDetail == null) {
-                        gdsCodeDetail = new ArrayList<GDSCodeDetail>();
+                        gdsCodeDetail = new ArrayList<GDSInfoType.GDSCodes.GDSCode.GDSCodeDetails.GDSCodeDetail>();
                     }
                     return this.gdsCodeDetail;
                 }

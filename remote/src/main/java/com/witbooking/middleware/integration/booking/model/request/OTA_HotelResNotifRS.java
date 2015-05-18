@@ -41,12 +41,12 @@ public final class OTA_HotelResNotifRS extends OTA_StandardResponse implements S
 
     /**
      * Constructor who initialized {@link #hotelReservations} with a new new
-     * {@link HotelReservations} and {@link #add(String, String)
+     * {@link HotelReservations} and {@link #add(java.lang.String, java.lang.String)
      * } the values given.
      *
-     * @param resIDValueBooking see {@link #add(String, String)
+     * @param resIDValueBooking see {@link #add(java.lang.String, java.lang.String)
      *                          }
-     * @ param resIDValueOwn see {@link #add(String, String)
+     * @ param resIDValueOwn see {@link #add(java.lang.String, java.lang.String)
      * }
      * @ see #add(java.lang.String, java.lang.String)
      */
@@ -56,13 +56,13 @@ public final class OTA_HotelResNotifRS extends OTA_StandardResponse implements S
     }
 
     /**
-     * Applies {@link HotelReservations#add(String, String)
+     * Applies {@link HotelReservations#add(java.lang.String, java.lang.String)
      * } with the
      * <code>String</codes> givens..
      *
-     * @param resIDValueBooking See {@link HotelReservations#add(String, String)
+     * @param resIDValueBooking See {@link HotelReservations#add(java.lang.String, java.lang.String)
      *                          }.
-     * @param resIDValueOwn     See {@link HotelReservations#add(String, String)
+     * @param resIDValueOwn     See {@link HotelReservations#add(java.lang.String, java.lang.String)
      *                          }.
      */
     public void add(String resIDValueBooking, String resIDValueOwn) {
@@ -78,13 +78,13 @@ public final class OTA_HotelResNotifRS extends OTA_StandardResponse implements S
         private List<HotelReservation> reservations;
 
         /**
-         * Creates new {@link HotelReservation#HotelReservation(String, String)
+         * Creates new {@link HotelReservation#HotelReservation(java.lang.String, java.lang.String)
          * } with the
          * <code>String</code> givens.
          *
-         * @param resIDValueBooking see {@link HotelReservation#HotelReservation(String, String)
+         * @param resIDValueBooking see {@link HotelReservation#HotelReservation(java.lang.String, java.lang.String)
          *                          }
-         * @ param resIDValueOwn see {@link HotelReservation#HotelReservation(String, String)
+         * @ param resIDValueOwn see {@link HotelReservation#HotelReservation(java.lang.String, java.lang.String)
          * }
          */
         public void add(String resIDValueBooking, String resIDValueOwn) {

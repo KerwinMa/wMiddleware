@@ -68,8 +68,8 @@ public final class TableConnectionsQueue {
             TableConnectionsQueueItems.TBL_NAME + " WHERE " + TableConnectionsQueueItems.CONNECTION + " = ? ;";
     public static final String GET_ENTRY_QUEUE_UNFINISHED_FROM_ITEM = "SELECT * FROM " + TBL_NAME + " AS c, " +
             TableConnectionsQueueItems.TBL_NAME + " AS i WHERE i." + TableConnectionsQueueItems.ITEM_ID
-            + "=? AND i." + TableConnectionsQueueItems.START + "=? AND i." + TableConnectionsQueueItems.END
-            + "=? AND c." + FINISHED + "=" + CommunicationFinished.NOT_FINISHED.getValue() + " AND c.id=i.connection "
+            + "<=>? AND i." + TableConnectionsQueueItems.START + "<=>? AND i." + TableConnectionsQueueItems.END
+            + "<=>? AND c." + FINISHED + "=" + CommunicationFinished.NOT_FINISHED.getValue() + " AND c.id=i.connection "
             + " AND c." + HOTEL_TICKER + "=? AND c." + TYPE + "=? AND c." + CHANNEL + "=? ;";
 
     //    public static final String INSERT_BOOKING_GET_RESERVES = "INSERT INTO " + TBL_NAME + "(" + HOTEL_TICKER + "," + CHANNEL + "," + TYPE + "," + STATUS + ") VALUES (?,?,?,?);";

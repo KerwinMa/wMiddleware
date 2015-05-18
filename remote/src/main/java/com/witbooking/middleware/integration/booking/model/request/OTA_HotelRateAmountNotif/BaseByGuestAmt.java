@@ -95,6 +95,10 @@ public class BaseByGuestAmt implements Serializable {
         }
     }
 
+    public void setDecimalPlace(Integer decimalPlace) throws BookingException{
+        this.decimalPlace = decimalPlace;
+    }
+
     /**
      * Try to set the {@link #amountBeforeTax} value. if
      * {@link BookingException} occurs, set {@link #amountBeforeTax} to its

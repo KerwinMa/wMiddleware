@@ -8,7 +8,12 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
@@ -105,11 +110,11 @@ public class VehicleCoreType {
 
     /**
      * Gets the value of the vehType property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleCoreType.VehType }
-     *
+     *     
      */
     public VehicleCoreType.VehType getVehType() {
         return vehType;
@@ -117,11 +122,11 @@ public class VehicleCoreType {
 
     /**
      * Sets the value of the vehType property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleCoreType.VehType }
-     *
+     *     
      */
     public void setVehType(VehicleCoreType.VehType value) {
         this.vehType = value;
@@ -129,11 +134,11 @@ public class VehicleCoreType {
 
     /**
      * Gets the value of the vehClass property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleCoreType.VehClass }
-     *
+     *     
      */
     public VehicleCoreType.VehClass getVehClass() {
         return vehClass;
@@ -141,11 +146,11 @@ public class VehicleCoreType {
 
     /**
      * Sets the value of the vehClass property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleCoreType.VehClass }
-     *
+     *     
      */
     public void setVehClass(VehicleCoreType.VehClass value) {
         this.vehClass = value;

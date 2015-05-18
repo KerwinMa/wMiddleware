@@ -8,10 +8,15 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -64,35 +69,35 @@ import java.util.List;
 public class AdjustmentsType {
 
     @XmlElement(name = "Adjustment", required = true)
-    protected List<Adjustment> adjustment;
+    protected List<AdjustmentsType.Adjustment> adjustment;
     @XmlAttribute(name = "RequestID")
     protected String requestID;
 
     /**
      * Gets the value of the adjustment property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the adjustment property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getAdjustment().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link AdjustmentsType.Adjustment }
-     *
-     *
+     * 
+     * 
      */
-    public List<Adjustment> getAdjustment() {
+    public List<AdjustmentsType.Adjustment> getAdjustment() {
         if (adjustment == null) {
-            adjustment = new ArrayList<Adjustment>();
+            adjustment = new ArrayList<AdjustmentsType.Adjustment>();
         }
         return this.adjustment;
     }

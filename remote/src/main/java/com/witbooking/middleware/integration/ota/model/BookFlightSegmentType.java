@@ -8,10 +8,16 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -103,11 +109,11 @@ public class BookFlightSegmentType
     @XmlElement(name = "MarriageGrp")
     protected String marriageGrp;
     @XmlElement(name = "BookingClassAvails")
-    protected List<BookingClassAvails> bookingClassAvails;
+    protected List<BookFlightSegmentType.BookingClassAvails> bookingClassAvails;
     @XmlElement(name = "Comment")
     protected List<FreeTextType> comment;
     @XmlElement(name = "StopLocation")
-    protected List<StopLocation> stopLocation;
+    protected List<BookFlightSegmentType.StopLocation> stopLocation;
     @XmlAttribute(name = "ResBookDesigCode")
     protected String resBookDesigCode;
     @XmlAttribute(name = "NumberInParty")
@@ -139,11 +145,11 @@ public class BookFlightSegmentType
 
     /**
      * Gets the value of the marriageGrp property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getMarriageGrp() {
         return marriageGrp;
@@ -151,11 +157,11 @@ public class BookFlightSegmentType
 
     /**
      * Sets the value of the marriageGrp property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setMarriageGrp(String value) {
         this.marriageGrp = value;
@@ -163,54 +169,54 @@ public class BookFlightSegmentType
 
     /**
      * Gets the value of the bookingClassAvails property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the bookingClassAvails property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getBookingClassAvails().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link BookFlightSegmentType.BookingClassAvails }
-     *
-     *
+     * 
+     * 
      */
-    public List<BookingClassAvails> getBookingClassAvails() {
+    public List<BookFlightSegmentType.BookingClassAvails> getBookingClassAvails() {
         if (bookingClassAvails == null) {
-            bookingClassAvails = new ArrayList<BookingClassAvails>();
+            bookingClassAvails = new ArrayList<BookFlightSegmentType.BookingClassAvails>();
         }
         return this.bookingClassAvails;
     }
 
     /**
      * Gets the value of the comment property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the comment property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getComment().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link FreeTextType }
-     *
-     *
+     * 
+     * 
      */
     public List<FreeTextType> getComment() {
         if (comment == null) {
@@ -221,40 +227,40 @@ public class BookFlightSegmentType
 
     /**
      * Gets the value of the stopLocation property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the stopLocation property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getStopLocation().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link BookFlightSegmentType.StopLocation }
-     *
-     *
+     * 
+     * 
      */
-    public List<StopLocation> getStopLocation() {
+    public List<BookFlightSegmentType.StopLocation> getStopLocation() {
         if (stopLocation == null) {
-            stopLocation = new ArrayList<StopLocation>();
+            stopLocation = new ArrayList<BookFlightSegmentType.StopLocation>();
         }
         return this.stopLocation;
     }
 
     /**
      * Gets the value of the resBookDesigCode property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getResBookDesigCode() {
         return resBookDesigCode;
@@ -262,11 +268,11 @@ public class BookFlightSegmentType
 
     /**
      * Sets the value of the resBookDesigCode property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setResBookDesigCode(String value) {
         this.resBookDesigCode = value;
@@ -274,11 +280,11 @@ public class BookFlightSegmentType
 
     /**
      * Gets the value of the numberInParty property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link BigInteger }
-     *
+     *     
      */
     public BigInteger getNumberInParty() {
         return numberInParty;
@@ -286,11 +292,11 @@ public class BookFlightSegmentType
 
     /**
      * Sets the value of the numberInParty property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link BigInteger }
-     *
+     *     
      */
     public void setNumberInParty(BigInteger value) {
         this.numberInParty = value;
@@ -298,11 +304,11 @@ public class BookFlightSegmentType
 
     /**
      * Gets the value of the status property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getStatus() {
         return status;
@@ -310,11 +316,11 @@ public class BookFlightSegmentType
 
     /**
      * Sets the value of the status property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setStatus(String value) {
         this.status = value;
@@ -322,11 +328,11 @@ public class BookFlightSegmentType
 
     /**
      * Gets the value of the eTicketEligibility property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getETicketEligibility() {
         return eTicketEligibility;
@@ -334,11 +340,11 @@ public class BookFlightSegmentType
 
     /**
      * Sets the value of the eTicketEligibility property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setETicketEligibility(String value) {
         this.eTicketEligibility = value;
@@ -346,11 +352,11 @@ public class BookFlightSegmentType
 
     /**
      * Gets the value of the mealCode property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getMealCode() {
         return mealCode;
@@ -358,11 +364,11 @@ public class BookFlightSegmentType
 
     /**
      * Sets the value of the mealCode property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setMealCode(String value) {
         this.mealCode = value;
@@ -370,11 +376,11 @@ public class BookFlightSegmentType
 
     /**
      * Gets the value of the departureDay property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link DayOfWeekType }
-     *
+     *     
      */
     public DayOfWeekType getDepartureDay() {
         return departureDay;
@@ -382,11 +388,11 @@ public class BookFlightSegmentType
 
     /**
      * Sets the value of the departureDay property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link DayOfWeekType }
-     *
+     *     
      */
     public void setDepartureDay(DayOfWeekType value) {
         this.departureDay = value;
@@ -394,11 +400,11 @@ public class BookFlightSegmentType
 
     /**
      * Gets the value of the stopoverInd property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link Boolean }
-     *
+     *     
      */
     public Boolean isStopoverInd() {
         return stopoverInd;
@@ -406,11 +412,11 @@ public class BookFlightSegmentType
 
     /**
      * Sets the value of the stopoverInd property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *
+     *     
      */
     public void setStopoverInd(Boolean value) {
         this.stopoverInd = value;
@@ -418,11 +424,11 @@ public class BookFlightSegmentType
 
     /**
      * Gets the value of the lineNumber property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link Integer }
-     *
+     *     
      */
     public Integer getLineNumber() {
         return lineNumber;
@@ -430,11 +436,11 @@ public class BookFlightSegmentType
 
     /**
      * Sets the value of the lineNumber property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link Integer }
-     *
+     *     
      */
     public void setLineNumber(Integer value) {
         this.lineNumber = value;
@@ -442,11 +448,11 @@ public class BookFlightSegmentType
 
     /**
      * Gets the value of the connectionType property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getConnectionType() {
         return connectionType;
@@ -454,11 +460,11 @@ public class BookFlightSegmentType
 
     /**
      * Sets the value of the connectionType property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setConnectionType(String value) {
         this.connectionType = value;
@@ -466,11 +472,11 @@ public class BookFlightSegmentType
 
     /**
      * Gets the value of the participationLevelCode property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getParticipationLevelCode() {
         return participationLevelCode;
@@ -478,11 +484,11 @@ public class BookFlightSegmentType
 
     /**
      * Sets the value of the participationLevelCode property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setParticipationLevelCode(String value) {
         this.participationLevelCode = value;
@@ -490,11 +496,11 @@ public class BookFlightSegmentType
 
     /**
      * Gets the value of the distance property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link BigInteger }
-     *
+     *     
      */
     public BigInteger getDistance() {
         return distance;
@@ -502,11 +508,11 @@ public class BookFlightSegmentType
 
     /**
      * Sets the value of the distance property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link BigInteger }
-     *
+     *     
      */
     public void setDistance(BigInteger value) {
         this.distance = value;
@@ -514,11 +520,11 @@ public class BookFlightSegmentType
 
     /**
      * Gets the value of the dateChangeNbr property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getDateChangeNbr() {
         return dateChangeNbr;
@@ -526,11 +532,11 @@ public class BookFlightSegmentType
 
     /**
      * Sets the value of the dateChangeNbr property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setDateChangeNbr(String value) {
         this.dateChangeNbr = value;
@@ -538,11 +544,11 @@ public class BookFlightSegmentType
 
     /**
      * Gets the value of the validConnectionInd property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link Boolean }
-     *
+     *     
      */
     public Boolean isValidConnectionInd() {
         return validConnectionInd;
@@ -550,11 +556,11 @@ public class BookFlightSegmentType
 
     /**
      * Sets the value of the validConnectionInd property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *
+     *     
      */
     public void setValidConnectionInd(Boolean value) {
         this.validConnectionInd = value;
@@ -563,9 +569,9 @@ public class BookFlightSegmentType
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -587,8 +593,8 @@ public class BookFlightSegmentType
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -597,35 +603,35 @@ public class BookFlightSegmentType
     public static class BookingClassAvails {
 
         @XmlElement(name = "BookingClassAvail", required = true)
-        protected List<BookingClassAvail> bookingClassAvail;
+        protected List<BookFlightSegmentType.BookingClassAvails.BookingClassAvail> bookingClassAvail;
         @XmlAttribute(name = "CabinType")
         protected CabinType cabinType;
 
         /**
          * Gets the value of the bookingClassAvail property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the bookingClassAvail property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getBookingClassAvail().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link BookFlightSegmentType.BookingClassAvails.BookingClassAvail }
-         *
-         *
+         * 
+         * 
          */
-        public List<BookingClassAvail> getBookingClassAvail() {
+        public List<BookFlightSegmentType.BookingClassAvails.BookingClassAvail> getBookingClassAvail() {
             if (bookingClassAvail == null) {
-                bookingClassAvail = new ArrayList<BookingClassAvail>();
+                bookingClassAvail = new ArrayList<BookFlightSegmentType.BookingClassAvails.BookingClassAvail>();
             }
             return this.bookingClassAvail;
         }

@@ -8,9 +8,13 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -59,60 +63,60 @@ import java.util.List;
 public class TravelerInfoType {
 
     @XmlElement(name = "AirTraveler")
-    protected List<AirTraveler> airTraveler;
+    protected List<TravelerInfoType.AirTraveler> airTraveler;
     @XmlElement(name = "SpecialReqDetails")
     protected List<SpecialReqDetailsType> specialReqDetails;
 
     /**
      * Gets the value of the airTraveler property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the airTraveler property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getAirTraveler().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link TravelerInfoType.AirTraveler }
-     *
-     *
+     * 
+     * 
      */
-    public List<AirTraveler> getAirTraveler() {
+    public List<TravelerInfoType.AirTraveler> getAirTraveler() {
         if (airTraveler == null) {
-            airTraveler = new ArrayList<AirTraveler>();
+            airTraveler = new ArrayList<TravelerInfoType.AirTraveler>();
         }
         return this.airTraveler;
     }
 
     /**
      * Gets the value of the specialReqDetails property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the specialReqDetails property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getSpecialReqDetails().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link SpecialReqDetailsType }
-     *
-     *
+     * 
+     * 
      */
     public List<SpecialReqDetailsType> getSpecialReqDetails() {
         if (specialReqDetails == null) {
@@ -124,9 +128,9 @@ public class TravelerInfoType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -146,8 +150,8 @@ public class TravelerInfoType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -158,33 +162,33 @@ public class TravelerInfoType {
     {
 
         @XmlElement(name = "Comment")
-        protected List<Comment> comment;
+        protected List<TravelerInfoType.AirTraveler.Comment> comment;
 
         /**
          * Gets the value of the comment property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the comment property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getComment().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link TravelerInfoType.AirTraveler.Comment }
-         *
-         *
+         * 
+         * 
          */
-        public List<Comment> getComment() {
+        public List<TravelerInfoType.AirTraveler.Comment> getComment() {
             if (comment == null) {
-                comment = new ArrayList<Comment>();
+                comment = new ArrayList<TravelerInfoType.AirTraveler.Comment>();
             }
             return this.comment;
         }

@@ -8,9 +8,14 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -62,11 +67,11 @@ public class CabinClassType {
 
     /**
      * Gets the value of the airRows property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link CabinClassType.AirRows }
-     *
+     *     
      */
     public CabinClassType.AirRows getAirRows() {
         return airRows;
@@ -74,11 +79,11 @@ public class CabinClassType {
 
     /**
      * Sets the value of the airRows property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link CabinClassType.AirRows }
-     *
+     *     
      */
     public void setAirRows(CabinClassType.AirRows value) {
         this.airRows = value;

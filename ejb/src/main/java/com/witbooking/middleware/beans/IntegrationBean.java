@@ -11,6 +11,7 @@ import com.witbooking.middleware.exceptions.NonexistentValueException;
 import com.witbooking.middleware.exceptions.db.DBAccessException;
 import com.witbooking.middleware.exceptions.integration.IntegrationException;
 import com.witbooking.middleware.integration.*;
+import com.witbooking.middleware.integration.booking.BookingEnqueuerLocal;
 import com.witbooking.middleware.integration.mandrill.model.Event;
 import com.witbooking.middleware.integration.rategain.RateGainEnqueuerLocal;
 import com.witbooking.middleware.integration.siteminder.SiteMinderEnqueuerLocal;
@@ -47,10 +48,8 @@ public class IntegrationBean implements IntegrationBeanLocal {
     private RateGainEnqueuerLocal rateGainEnqueuerLocal;
     @EJB
     private ConnectionBeanLocal connectionBeanLocal;
-/*
     @EJB
-    private BookingBeanLocal bookingBeanLocal;
-*/
+    private BookingEnqueuerLocal bookingEnqueuerLocal;
 
     private static final String LOGGER_PREFIX_KEY = "WIT_INTE_KEY";
 
@@ -368,9 +367,24 @@ public class IntegrationBean implements IntegrationBeanLocal {
         }
     }
 
-    @Override
-    public String enqueueReservationForIntegration(final String reservationId, final String hotelTicker, final Channel channel,
+    public String enqueueReservationForIntegration(final Reservation reservation, final String hotelTicker, final Channel channel,
                                                    final ChannelConnectionType type) throws IntegrationException {
+        //This method is for those integrations that required more that just the ReservationID
+        if (reservation == null)
+            throw new IntegrationException("The reservation is null");
+        ChannelTicker channelTicker = ChannelTicker.fromValue(channel.getChannelTicker());
+        switch (channelTicker) {
+            case BOOKING:
+                return bookingEnqueuerLocal.updateARI(hotelTicker, reservation.getAllInventoryTickers(),
+                        reservation.getFirstCheckIn(), reservation.getLastCheckOut());
+            default:
+                return enqueueReservationForIntegration(reservation.getReservationId(), hotelTicker, channel, type);
+        }
+    }
+
+    private String enqueueReservationForIntegration(final String reservationId, final String hotelTicker, final Channel channel,
+                                                    final ChannelConnectionType type) throws IntegrationException {
+        //This method is for those integrations that required just the ReservationID
         ChannelTicker channelTicker = ChannelTicker.fromValue(channel.getChannelTicker());
         switch (channelTicker) {
             case SITEMINDER:
@@ -408,9 +422,21 @@ public class IntegrationBean implements IntegrationBeanLocal {
             String enqueueString = "";
             if (type == null || type.trim().isEmpty())
                 type = ChannelConnectionType.NOTIFY_RESERVES + "";
+            Reservation reservation=null;
             for (Channel channel : channels) {
-                if (channel.isActive())
-                    enqueueString = enqueueString + enqueueReservationForIntegration(reservationId, hotelTicker, channel, ChannelConnectionType.fromValue(type));
+                if (channel.isActive()) {
+                    //if the channel need all the reservation (as Booking), we get all the reservation
+                    if (ChannelTicker.fromValue(channel.getChannelTicker()) == ChannelTicker.BOOKING) {
+                        if (reservation == null) {
+                            ReservationDBHandler reservationDBHandler = new ReservationDBHandler(new InventoryDBHandler(dBConnection));
+                            reservation = reservationDBHandler.getReservationByReservationId(reservationId);
+                        }
+                        enqueueString = enqueueString + enqueueReservationForIntegration(reservation, hotelTicker, channel, ChannelConnectionType.fromValue(type));
+
+                    } else {
+                        enqueueString = enqueueString + enqueueReservationForIntegration(reservationId, hotelTicker, channel, ChannelConnectionType.fromValue(type));
+                    }
+                }
             }
             return enqueueString;
         } catch (Exception ex) {
@@ -470,7 +496,7 @@ public class IntegrationBean implements IntegrationBeanLocal {
                     for (Channel channel : channels) {
                         if (channel.isActive()) {
                             try {
-                                enqueueReservationForIntegration(newReservation.getReservationId(), hotelTicker, channel,
+                                enqueueReservationForIntegration(newReservation, hotelTicker, channel,
                                         ChannelConnectionType.NOTIFY_RESERVES);
                             } catch (IntegrationException e) {
                                 logger.error(e);
@@ -515,7 +541,7 @@ public class IntegrationBean implements IntegrationBeanLocal {
                             if (emailAddress == null || !emailAddress.contains("@")) {
                                 emailAddress = inventoryDBHandler.getHotel().getEmailAdmin();
                             }
-                            String mailResponse = Event.MandrillMessageEventType.SENT.getValue();
+                            String mailResponse =Event.MandrillMessageEventType.SENT.getValue();
                             try {
                                 if (emailAddress != null && !emailAddress.trim().isEmpty() && emailAddress.contains("@"))
                                     for (String email : emailAddress.split(",")) {

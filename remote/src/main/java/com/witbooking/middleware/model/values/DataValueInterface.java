@@ -12,7 +12,7 @@ import com.witbooking.middleware.model.values.types.Value;
  */
 public interface DataValueInterface<E> {
    
-   public Value<E> getValue();
+   public  Value<E> getValue();
 
    public void setValue(Value<E> value);
 

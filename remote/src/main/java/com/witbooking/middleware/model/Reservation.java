@@ -7,6 +7,7 @@
  */
 package com.witbooking.middleware.model;
 
+import com.google.common.base.Objects;
 import com.witbooking.middleware.integration.mandrill.model.Event;
 
 import java.io.Serializable;
@@ -86,12 +87,15 @@ public class Reservation implements Serializable {
     public enum ReservationStatus implements Serializable {
         RESERVATION("reserva"), CANCEL("cancelada"), PRE_RESERVATION("prereserva");
         private String value;
+
         ReservationStatus(String item) {
             value = item;
         }
+
         public String getStringValue() {
             return value;
         }
+
         public static ReservationStatus getValueOf(String item) {
             return item == null
                     ? null
@@ -355,13 +359,30 @@ public class Reservation implements Serializable {
         return new ArrayList<>(invTickers);
     }
 
-    public static String generateRandomCode(){
-        long number = (long) Math.floor(Math.random() * 9000000L) + 1000000L;
-        return number+"";
+    public boolean areAllCancelled() {
+        int cancelled = 0;
+        for (final RoomStay roomStay : roomStays) {
+            if (roomStay.getStatus()==ReservationStatus.CANCEL)
+                cancelled++;
+        }
+        return roomStays.size() == cancelled;
     }
 
-    public void updateModificationDate(){
-        Date now=new Date();
+    public boolean haveModified() {
+        for (final RoomStay roomStay : roomStays) {
+            if (roomStay.getDateModification() != null || roomStay.getCancellationDate() != null)
+                return true;
+        }
+        return false;
+    }
+
+    public static String generateRandomCode() {
+        long number = (long) Math.floor(Math.random() * 9000000L) + 1000000L;
+        return number + "";
+    }
+
+    public void updateModificationDate() {
+        Date now = new Date();
         for (RoomStay roomStay : roomStays) {
             roomStay.setDateModification(now);
         }
@@ -431,7 +452,6 @@ public class Reservation implements Serializable {
         return null;
     }
 
-/*
     @Override
     public String toString() {
         return Objects.toStringHelper(this)
@@ -455,7 +475,6 @@ public class Reservation implements Serializable {
                 .add("paymentStatus", paymentStatus)
                 .toString();
     }
-*/
 
     @Override
     public boolean equals(Object obj) {

@@ -6,13 +6,20 @@
 //
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import javax.xml.datatype.XMLGregorianCalendar;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.XmlValue;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import javax.xml.datatype.XMLGregorianCalendar;
 
 /**
  * <p>Java class for CustomerType complex type.
@@ -310,21 +317,21 @@ public class CustomerType {
     @XmlElement(name = "PersonName")
     protected List<PersonNameType> personName;
     @XmlElement(name = "Telephone")
-    protected List<Telephone> telephone;
+    protected List<CustomerType.Telephone> telephone;
     @XmlElement(name = "Email")
-    protected List<Email> email;
+    protected List<CustomerType.Email> email;
     @XmlElement(name = "Address")
-    protected List<Address> address;
+    protected List<CustomerType.Address> address;
     @XmlElement(name = "URL")
-    protected List<URL> url;
+    protected List<CustomerType.URL> url;
     @XmlElement(name = "CitizenCountryName")
-    protected List<CitizenCountryName> citizenCountryName;
+    protected List<CustomerType.CitizenCountryName> citizenCountryName;
     @XmlElement(name = "PhysChallName")
-    protected List<PhysChallName> physChallName;
+    protected List<CustomerType.PhysChallName> physChallName;
     @XmlElement(name = "PetInfo")
     protected List<String> petInfo;
     @XmlElement(name = "PaymentForm")
-    protected List<PaymentForm> paymentForm;
+    protected List<CustomerType.PaymentForm> paymentForm;
     @XmlElement(name = "RelatedTraveler")
     protected List<RelatedTravelerType> relatedTraveler;
     @XmlElement(name = "ContactPerson")
@@ -332,13 +339,13 @@ public class CustomerType {
     @XmlElement(name = "Document")
     protected List<DocumentType> document;
     @XmlElement(name = "CustLoyalty")
-    protected List<CustLoyalty> custLoyalty;
+    protected List<CustomerType.CustLoyalty> custLoyalty;
     @XmlElement(name = "EmployeeInfo")
     protected List<EmployeeInfoType> employeeInfo;
     @XmlElement(name = "EmployerInfo")
     protected CompanyNameType employerInfo;
     @XmlElement(name = "AdditionalLanguage")
-    protected List<AdditionalLanguage> additionalLanguage;
+    protected List<CustomerType.AdditionalLanguage> additionalLanguage;
     @XmlElement(name = "TPA_Extensions")
     protected TPAExtensionsType tpaExtensions;
     @XmlAttribute(name = "Deceased")
@@ -377,7 +384,7 @@ public class CustomerType {
     public CustomerType() {
     }
 
-    public CustomerType(final List<String> givenName, final String surName,
+    public CustomerType(final List<String> givenName, final String surName, 
             final String telephoneNumber,final String email,
             final String address,final String country,final String countryCode) {
         this.personName = new ArrayList<PersonNameType>(1);
@@ -390,12 +397,12 @@ public class CustomerType {
             this.email = new ArrayList<Email>(1);
             this.email.add(new Email(email));
         }
-
+        
         if (address != null || country != null){
-            this.address = new ArrayList<Address>(1);
+            this.address = new ArrayList<CustomerType.Address>(1);
             this.address.add(new CustomerType.Address(address,country,countryCode));
         }
-
+        
     }
 
     /**
@@ -449,9 +456,9 @@ public class CustomerType {
      *
      *
      */
-    public List<Telephone> getTelephone() {
+    public List<CustomerType.Telephone> getTelephone() {
         if (telephone == null) {
-            telephone = new ArrayList<Telephone>();
+            telephone = new ArrayList<CustomerType.Telephone>();
         }
         return this.telephone;
     }
@@ -478,9 +485,9 @@ public class CustomerType {
      *
      *
      */
-    public List<Email> getEmail() {
+    public List<CustomerType.Email> getEmail() {
         if (email == null) {
-            email = new ArrayList<Email>();
+            email = new ArrayList<CustomerType.Email>();
         }
         return this.email;
     }
@@ -507,9 +514,9 @@ public class CustomerType {
      *
      *
      */
-    public List<Address> getAddress() {
+    public List<CustomerType.Address> getAddress() {
         if (address == null) {
-            address = new ArrayList<Address>();
+            address = new ArrayList<CustomerType.Address>();
         }
         return this.address;
     }
@@ -536,9 +543,9 @@ public class CustomerType {
      *
      *
      */
-    public List<URL> getURL() {
+    public List<CustomerType.URL> getURL() {
         if (url == null) {
-            url = new ArrayList<URL>();
+            url = new ArrayList<CustomerType.URL>();
         }
         return this.url;
     }
@@ -565,9 +572,9 @@ public class CustomerType {
      *
      *
      */
-    public List<CitizenCountryName> getCitizenCountryName() {
+    public List<CustomerType.CitizenCountryName> getCitizenCountryName() {
         if (citizenCountryName == null) {
-            citizenCountryName = new ArrayList<CitizenCountryName>();
+            citizenCountryName = new ArrayList<CustomerType.CitizenCountryName>();
         }
         return this.citizenCountryName;
     }
@@ -594,9 +601,9 @@ public class CustomerType {
      *
      *
      */
-    public List<PhysChallName> getPhysChallName() {
+    public List<CustomerType.PhysChallName> getPhysChallName() {
         if (physChallName == null) {
-            physChallName = new ArrayList<PhysChallName>();
+            physChallName = new ArrayList<CustomerType.PhysChallName>();
         }
         return this.physChallName;
     }
@@ -651,9 +658,9 @@ public class CustomerType {
      *
      *
      */
-    public List<PaymentForm> getPaymentForm() {
+    public List<CustomerType.PaymentForm> getPaymentForm() {
         if (paymentForm == null) {
-            paymentForm = new ArrayList<PaymentForm>();
+            paymentForm = new ArrayList<CustomerType.PaymentForm>();
         }
         return this.paymentForm;
     }
@@ -767,9 +774,9 @@ public class CustomerType {
      *
      *
      */
-    public List<CustLoyalty> getCustLoyalty() {
+    public List<CustomerType.CustLoyalty> getCustLoyalty() {
         if (custLoyalty == null) {
-            custLoyalty = new ArrayList<CustLoyalty>();
+            custLoyalty = new ArrayList<CustomerType.CustLoyalty>();
         }
         return this.custLoyalty;
     }
@@ -845,9 +852,9 @@ public class CustomerType {
      *
      *
      */
-    public List<AdditionalLanguage> getAdditionalLanguage() {
+    public List<CustomerType.AdditionalLanguage> getAdditionalLanguage() {
         if (additionalLanguage == null) {
-            additionalLanguage = new ArrayList<AdditionalLanguage>();
+            additionalLanguage = new ArrayList<CustomerType.AdditionalLanguage>();
         }
         return this.additionalLanguage;
     }
@@ -1248,11 +1255,11 @@ public class CustomerType {
         public Address(final String addressLine,final String country,final String countryCode) {
             super(addressLine,country,countryCode);
         }
+        
+        
 
-
-
-
-
+        
+        
         /**
          * Gets the value of the companyName property.
          *
@@ -1614,7 +1621,7 @@ public class CustomerType {
         @XmlElement(name = "SecurityInfo")
         protected CustomerType.CustLoyalty.SecurityInfo securityInfo;
         @XmlElement(name = "SubAccountBalance")
-        protected List<SubAccountBalance> subAccountBalance;
+        protected List<CustomerType.CustLoyalty.SubAccountBalance> subAccountBalance;
         @XmlAttribute(name = "Remark")
         protected String remark;
         @XmlAttribute(name = "ShareSynchInd")
@@ -1728,9 +1735,9 @@ public class CustomerType {
          *
          *
          */
-        public List<SubAccountBalance> getSubAccountBalance() {
+        public List<CustomerType.CustLoyalty.SubAccountBalance> getSubAccountBalance() {
             if (subAccountBalance == null) {
-                subAccountBalance = new ArrayList<SubAccountBalance>();
+                subAccountBalance = new ArrayList<CustomerType.CustLoyalty.SubAccountBalance>();
             }
             return this.subAccountBalance;
         }
@@ -2221,9 +2228,9 @@ public class CustomerType {
         public static class MemberPreferences {
 
             @XmlElement(name = "AdditionalReward")
-            protected List<AdditionalReward> additionalReward;
+            protected List<CustomerType.CustLoyalty.MemberPreferences.AdditionalReward> additionalReward;
             @XmlElement(name = "Offer")
-            protected List<Offer> offer;
+            protected List<CustomerType.CustLoyalty.MemberPreferences.Offer> offer;
             @XmlAttribute(name = "Awareness")
             protected String awareness;
             @XmlAttribute(name = "AwardsPreference")
@@ -2256,9 +2263,9 @@ public class CustomerType {
              *
              *
              */
-            public List<AdditionalReward> getAdditionalReward() {
+            public List<CustomerType.CustLoyalty.MemberPreferences.AdditionalReward> getAdditionalReward() {
                 if (additionalReward == null) {
-                    additionalReward = new ArrayList<AdditionalReward>();
+                    additionalReward = new ArrayList<CustomerType.CustLoyalty.MemberPreferences.AdditionalReward>();
                 }
                 return this.additionalReward;
             }
@@ -2286,9 +2293,9 @@ public class CustomerType {
              *
              *
              */
-            public List<Offer> getOffer() {
+            public List<CustomerType.CustLoyalty.MemberPreferences.Offer> getOffer() {
                 if (offer == null) {
-                    offer = new ArrayList<Offer>();
+                    offer = new ArrayList<CustomerType.CustLoyalty.MemberPreferences.Offer>();
                 }
                 return this.offer;
             }
@@ -2523,7 +2530,7 @@ public class CustomerType {
             public static class Offer {
 
                 @XmlElement(name = "Communication")
-                protected List<Communication> communication;
+                protected List<CustomerType.CustLoyalty.MemberPreferences.Offer.Communication> communication;
                 @XmlAttribute(name = "Type")
                 protected String type;
 
@@ -2550,9 +2557,9 @@ public class CustomerType {
                  *
                  *
                  */
-                public List<Communication> getCommunication() {
+                public List<CustomerType.CustLoyalty.MemberPreferences.Offer.Communication> getCommunication() {
                     if (communication == null) {
-                        communication = new ArrayList<Communication>();
+                        communication = new ArrayList<CustomerType.CustLoyalty.MemberPreferences.Offer.Communication>();
                     }
                     return this.communication;
                 }
@@ -2669,7 +2676,7 @@ public class CustomerType {
         public static class SecurityInfo {
 
             @XmlElement(name = "PasswordHint")
-            protected List<PasswordHint> passwordHint;
+            protected List<CustomerType.CustLoyalty.SecurityInfo.PasswordHint> passwordHint;
             @XmlAttribute(name = "Username")
             protected String username;
             @XmlAttribute(name = "Password")
@@ -2698,9 +2705,9 @@ public class CustomerType {
              *
              *
              */
-            public List<PasswordHint> getPasswordHint() {
+            public List<CustomerType.CustLoyalty.SecurityInfo.PasswordHint> getPasswordHint() {
                 if (passwordHint == null) {
-                    passwordHint = new ArrayList<PasswordHint>();
+                    passwordHint = new ArrayList<CustomerType.CustLoyalty.SecurityInfo.PasswordHint>();
                 }
                 return this.passwordHint;
             }

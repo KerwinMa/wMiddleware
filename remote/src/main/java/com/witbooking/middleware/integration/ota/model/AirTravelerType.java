@@ -8,12 +8,18 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.datatype.XMLGregorianCalendar;
-import java.util.ArrayList;
-import java.util.List;
 
 
 /**
@@ -144,15 +150,15 @@ public class AirTravelerType {
     @XmlElement(name = "PersonName")
     protected PersonNameType personName;
     @XmlElement(name = "Telephone")
-    protected List<Telephone> telephone;
+    protected List<AirTravelerType.Telephone> telephone;
     @XmlElement(name = "Email")
-    protected List<Email> email;
+    protected List<AirTravelerType.Email> email;
     @XmlElement(name = "Address")
-    protected List<Address> address;
+    protected List<AirTravelerType.Address> address;
     @XmlElement(name = "CustLoyalty")
-    protected List<CustLoyalty> custLoyalty;
+    protected List<AirTravelerType.CustLoyalty> custLoyalty;
     @XmlElement(name = "Document")
-    protected List<Document> document;
+    protected List<AirTravelerType.Document> document;
     @XmlElement(name = "PassengerTypeQuantity")
     protected PassengerTypeQuantityType passengerTypeQuantity;
     @XmlElement(name = "TravelerRefNumber")
@@ -180,11 +186,11 @@ public class AirTravelerType {
 
     /**
      * Gets the value of the profileRef property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link AirTravelerType.ProfileRef }
-     *
+     *     
      */
     public AirTravelerType.ProfileRef getProfileRef() {
         return profileRef;
@@ -192,11 +198,11 @@ public class AirTravelerType {
 
     /**
      * Sets the value of the profileRef property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link AirTravelerType.ProfileRef }
-     *
+     *     
      */
     public void setProfileRef(AirTravelerType.ProfileRef value) {
         this.profileRef = value;
@@ -204,11 +210,11 @@ public class AirTravelerType {
 
     /**
      * Gets the value of the personName property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link PersonNameType }
-     *
+     *     
      */
     public PersonNameType getPersonName() {
         return personName;
@@ -216,11 +222,11 @@ public class AirTravelerType {
 
     /**
      * Sets the value of the personName property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link PersonNameType }
-     *
+     *     
      */
     public void setPersonName(PersonNameType value) {
         this.personName = value;
@@ -228,156 +234,156 @@ public class AirTravelerType {
 
     /**
      * Gets the value of the telephone property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the telephone property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getTelephone().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link AirTravelerType.Telephone }
-     *
-     *
+     * 
+     * 
      */
-    public List<Telephone> getTelephone() {
+    public List<AirTravelerType.Telephone> getTelephone() {
         if (telephone == null) {
-            telephone = new ArrayList<Telephone>();
+            telephone = new ArrayList<AirTravelerType.Telephone>();
         }
         return this.telephone;
     }
 
     /**
      * Gets the value of the email property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the email property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getEmail().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link AirTravelerType.Email }
-     *
-     *
+     * 
+     * 
      */
-    public List<Email> getEmail() {
+    public List<AirTravelerType.Email> getEmail() {
         if (email == null) {
-            email = new ArrayList<Email>();
+            email = new ArrayList<AirTravelerType.Email>();
         }
         return this.email;
     }
 
     /**
      * Gets the value of the address property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the address property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getAddress().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link AirTravelerType.Address }
-     *
-     *
+     * 
+     * 
      */
-    public List<Address> getAddress() {
+    public List<AirTravelerType.Address> getAddress() {
         if (address == null) {
-            address = new ArrayList<Address>();
+            address = new ArrayList<AirTravelerType.Address>();
         }
         return this.address;
     }
 
     /**
      * Gets the value of the custLoyalty property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the custLoyalty property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getCustLoyalty().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link AirTravelerType.CustLoyalty }
-     *
-     *
+     * 
+     * 
      */
-    public List<CustLoyalty> getCustLoyalty() {
+    public List<AirTravelerType.CustLoyalty> getCustLoyalty() {
         if (custLoyalty == null) {
-            custLoyalty = new ArrayList<CustLoyalty>();
+            custLoyalty = new ArrayList<AirTravelerType.CustLoyalty>();
         }
         return this.custLoyalty;
     }
 
     /**
      * Gets the value of the document property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the document property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getDocument().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link AirTravelerType.Document }
-     *
-     *
+     * 
+     * 
      */
-    public List<Document> getDocument() {
+    public List<AirTravelerType.Document> getDocument() {
         if (document == null) {
-            document = new ArrayList<Document>();
+            document = new ArrayList<AirTravelerType.Document>();
         }
         return this.document;
     }
 
     /**
      * Gets the value of the passengerTypeQuantity property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link PassengerTypeQuantityType }
-     *
+     *     
      */
     public PassengerTypeQuantityType getPassengerTypeQuantity() {
         return passengerTypeQuantity;
@@ -385,11 +391,11 @@ public class AirTravelerType {
 
     /**
      * Sets the value of the passengerTypeQuantity property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link PassengerTypeQuantityType }
-     *
+     *     
      */
     public void setPassengerTypeQuantity(PassengerTypeQuantityType value) {
         this.passengerTypeQuantity = value;
@@ -397,11 +403,11 @@ public class AirTravelerType {
 
     /**
      * Gets the value of the travelerRefNumber property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link AirTravelerType.TravelerRefNumber }
-     *
+     *     
      */
     public AirTravelerType.TravelerRefNumber getTravelerRefNumber() {
         return travelerRefNumber;
@@ -409,11 +415,11 @@ public class AirTravelerType {
 
     /**
      * Sets the value of the travelerRefNumber property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link AirTravelerType.TravelerRefNumber }
-     *
+     *     
      */
     public void setTravelerRefNumber(AirTravelerType.TravelerRefNumber value) {
         this.travelerRefNumber = value;
@@ -421,11 +427,11 @@ public class AirTravelerType {
 
     /**
      * Gets the value of the flightSegmentRPHs property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link AirTravelerType.FlightSegmentRPHs }
-     *
+     *     
      */
     public AirTravelerType.FlightSegmentRPHs getFlightSegmentRPHs() {
         return flightSegmentRPHs;
@@ -433,11 +439,11 @@ public class AirTravelerType {
 
     /**
      * Sets the value of the flightSegmentRPHs property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link AirTravelerType.FlightSegmentRPHs }
-     *
+     *     
      */
     public void setFlightSegmentRPHs(AirTravelerType.FlightSegmentRPHs value) {
         this.flightSegmentRPHs = value;

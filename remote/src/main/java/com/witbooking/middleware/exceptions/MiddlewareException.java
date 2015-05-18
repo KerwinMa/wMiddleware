@@ -53,6 +53,7 @@ public class MiddlewareException extends Exception implements Serializable {
     public static String ERR_BOOKING_PRICE_RULE_SERVICE = "24";
     public static String ERR_EMAIL_DATA_SERVICE = "25";
     public static String ERR_INVALID_ENTRY_VALUE = "26";
+    public static String ERR_DINGUS_SERVICE = "27";
 
     ///
     public static String DESERR_UNKNOWN = "Unknown Error.";
@@ -70,6 +71,7 @@ public class MiddlewareException extends Exception implements Serializable {
     public static String DESERR_SCRAPPING_SERVICE = "Error in the Scrapping Services.";
     public static String DESERR_FRONTEND_SERVICE = "Error in the FrontEnd Services.";
     public static String DESERR_RATEGAIN_SERVICE = "Error in the RateGain Services.";
+    public static String DESERR_DINGUS_SERVICE = "Error in the Dingus Services.";
     public static String DESERR_WITCHANNELAPI_SERVICE = "Error in the WitBookingAPI Services";
     public static String DESERR_REMOTE_SERVICE = "Error accessing the remote services.";
     public static String DESERR_BOOKING_SERVICE = "Error in Booking Web services.";

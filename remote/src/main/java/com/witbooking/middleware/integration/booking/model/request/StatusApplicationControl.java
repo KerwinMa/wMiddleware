@@ -2,13 +2,12 @@ package com.witbooking.middleware.integration.booking.model.request;
 
 import com.witbooking.middleware.integration.booking.model.request.OTA_HotelAvailNotif.AvailStatusMessage;
 import com.witbooking.middleware.utils.serializers.JaxbDateWithoutTimeSerializer;
-
+import java.util.Date;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import java.util.Date;
 
 /**
  * StatusApplicationControl contains the range of the period to be then updated,

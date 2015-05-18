@@ -8,10 +8,15 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.datatype.XMLGregorianCalendar;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
@@ -74,7 +79,7 @@ import java.util.List;
 public class VehicleReservationSummaryType {
 
     @XmlElement(name = "ConfID", required = true)
-    protected List<ConfID> confID;
+    protected List<VehicleReservationSummaryType.ConfID> confID;
     @XmlElement(name = "PickUpLocation")
     protected LocationType pickUpLocation;
     @XmlElement(name = "ReturnLocation")
@@ -111,29 +116,29 @@ public class VehicleReservationSummaryType {
 
     /**
      * Gets the value of the confID property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the confID property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getConfID().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link VehicleReservationSummaryType.ConfID }
-     *
-     *
+     * 
+     * 
      */
-    public List<ConfID> getConfID() {
+    public List<VehicleReservationSummaryType.ConfID> getConfID() {
         if (confID == null) {
-            confID = new ArrayList<ConfID>();
+            confID = new ArrayList<VehicleReservationSummaryType.ConfID>();
         }
         return this.confID;
     }

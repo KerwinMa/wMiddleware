@@ -5,7 +5,6 @@ import java.util.Map;
 
 
 //TODO: traducir
-
 /**
  *
  * OTAUtils Class implements OTA utilities.

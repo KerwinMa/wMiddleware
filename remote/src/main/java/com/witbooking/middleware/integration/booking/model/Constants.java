@@ -46,7 +46,7 @@ public class Constants {
     public static final int NUMBER_OF_KEYS = 2;
 
     /**
-     * Is used in {@link XMLUtils#getRUID(String) }.
+     * Is used in {@link XMLUtils#getRUID(java.lang.String) }.
      */
     public static final String RUID = "RUID";
     /**
@@ -64,6 +64,11 @@ public class Constants {
      * since a date selected and whose value is '{@value #PARAM_VALUE_LAST_CHANGE}'.
      */
     public static final String PARAM_VALUE_LAST_CHANGE = "last_change";
+    /**
+     * PARAM_VALUE_LAST_CHANGE static field who represents the error mesagge to find for Minimun Contracted Rooms
+     * Error sent by Booking.com
+     */
+    public static final String ERROR_MINIMUM_CONTRACTED_ROOMS = "because of remaining Minimum Contracted Rooms";
 
     /**
      * This 3 constants are used in {@link OTA_HotelResNotifRS.HotelReservations.HotelReservation.ResGlobalInfo.HotelReservationIDs} constructor.

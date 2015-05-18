@@ -8,12 +8,17 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -110,7 +115,7 @@ public class GuestRoomType {
     @XmlElement(name = "Quantities")
     protected GuestRoomType.Quantities quantities;
     @XmlElement(name = "Occupancy")
-    protected List<Occupancy> occupancy;
+    protected List<GuestRoomType.Occupancy> occupancy;
     @XmlElement(name = "Room")
     protected GuestRoomType.Room room;
     @XmlElement(name = "Amenities")
@@ -124,11 +129,11 @@ public class GuestRoomType {
 
     /**
      * Gets the value of the quantities property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link GuestRoomType.Quantities }
-     *
+     *     
      */
     public GuestRoomType.Quantities getQuantities() {
         return quantities;
@@ -136,11 +141,11 @@ public class GuestRoomType {
 
     /**
      * Sets the value of the quantities property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link GuestRoomType.Quantities }
-     *
+     *     
      */
     public void setQuantities(GuestRoomType.Quantities value) {
         this.quantities = value;
@@ -148,40 +153,40 @@ public class GuestRoomType {
 
     /**
      * Gets the value of the occupancy property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the occupancy property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getOccupancy().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link GuestRoomType.Occupancy }
-     *
-     *
+     * 
+     * 
      */
-    public List<Occupancy> getOccupancy() {
+    public List<GuestRoomType.Occupancy> getOccupancy() {
         if (occupancy == null) {
-            occupancy = new ArrayList<Occupancy>();
+            occupancy = new ArrayList<GuestRoomType.Occupancy>();
         }
         return this.occupancy;
     }
 
     /**
      * Gets the value of the room property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link GuestRoomType.Room }
-     *
+     *     
      */
     public GuestRoomType.Room getRoom() {
         return room;
@@ -189,11 +194,11 @@ public class GuestRoomType {
 
     /**
      * Sets the value of the room property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link GuestRoomType.Room }
-     *
+     *     
      */
     public void setRoom(GuestRoomType.Room value) {
         this.room = value;
@@ -201,11 +206,11 @@ public class GuestRoomType {
 
     /**
      * Gets the value of the amenities property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link GuestRoomType.Amenities }
-     *
+     *     
      */
     public GuestRoomType.Amenities getAmenities() {
         return amenities;
@@ -213,11 +218,11 @@ public class GuestRoomType {
 
     /**
      * Sets the value of the amenities property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link GuestRoomType.Amenities }
-     *
+     *     
      */
     public void setAmenities(GuestRoomType.Amenities value) {
         this.amenities = value;
@@ -225,11 +230,11 @@ public class GuestRoomType {
 
     /**
      * Gets the value of the roomLevelFees property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link GuestRoomType.RoomLevelFees }
-     *
+     *     
      */
     public GuestRoomType.RoomLevelFees getRoomLevelFees() {
         return roomLevelFees;
@@ -237,11 +242,11 @@ public class GuestRoomType {
 
     /**
      * Sets the value of the roomLevelFees property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link GuestRoomType.RoomLevelFees }
-     *
+     *     
      */
     public void setRoomLevelFees(GuestRoomType.RoomLevelFees value) {
         this.roomLevelFees = value;
@@ -249,25 +254,25 @@ public class GuestRoomType {
 
     /**
      * Gets the value of the additionalGuestAmount property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the additionalGuestAmount property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getAdditionalGuestAmount().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link AdditionalGuestAmountType }
-     *
-     *
+     * 
+     * 
      */
     public List<AdditionalGuestAmountType> getAdditionalGuestAmount() {
         if (additionalGuestAmount == null) {
@@ -278,11 +283,11 @@ public class GuestRoomType {
 
     /**
      * Gets the value of the description property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link ParagraphType }
-     *
+     *     
      */
     public ParagraphType getDescription() {
         return description;
@@ -290,11 +295,11 @@ public class GuestRoomType {
 
     /**
      * Sets the value of the description property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link ParagraphType }
-     *
+     *     
      */
     public void setDescription(ParagraphType value) {
         this.description = value;
@@ -303,9 +308,9 @@ public class GuestRoomType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -325,8 +330,8 @@ public class GuestRoomType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -335,33 +340,33 @@ public class GuestRoomType {
     public static class Amenities {
 
         @XmlElement(name = "Amenity", required = true)
-        protected List<Amenity> amenity;
+        protected List<GuestRoomType.Amenities.Amenity> amenity;
 
         /**
          * Gets the value of the amenity property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the amenity property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getAmenity().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link GuestRoomType.Amenities.Amenity }
-         *
-         *
+         * 
+         * 
          */
-        public List<Amenity> getAmenity() {
+        public List<GuestRoomType.Amenities.Amenity> getAmenity() {
             if (amenity == null) {
-                amenity = new ArrayList<Amenity>();
+                amenity = new ArrayList<GuestRoomType.Amenities.Amenity>();
             }
             return this.amenity;
         }

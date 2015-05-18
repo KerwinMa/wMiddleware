@@ -23,6 +23,7 @@ import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 import java.io.UnsupportedEncodingException;
+import java.net.InetAddress;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -149,8 +150,30 @@ public class EmailsUtils {
     }
 
     public static List<String> sendEmailToAdmins(String subject, String contentHTML, List<String> tags, Exception ex) {
+        String computerName = MiddlewareProperties.URL_WITBOOKER_V6;
+        String computerNickName = "";
         try {
-            String body = contentHTML + " <br/><br/>  Exception: " + ex;
+            computerName = InetAddress.getLocalHost().getHostName();
+            computerNickName = (MiddlewareProperties.PROD_SERVER_NAME != null && MiddlewareProperties.PROD_SERVER_NAME.equals(computerName))
+                    ? "Production"
+                    : (MiddlewareProperties.TEST_SERVER_NAME != null && MiddlewareProperties.TEST_SERVER_NAME.equals(computerName))
+                    ? "Test"
+                    : (MiddlewareProperties.LUKE_SERVER_NAME != null && MiddlewareProperties.LUKE_SERVER_NAME.equals(computerName))
+                    ? "Luke"
+                    : "";
+        } catch (Exception e) {
+            logger.error(e);
+        }
+        try {
+            String body = "There was a problem in the server ";
+            if (!computerNickName.isEmpty()) {
+                subject += " Server: " + computerNickName;
+                body += "<b>" + computerNickName + "</b> (" + computerName + ").";
+            } else {
+                subject += " Server: " + computerName;
+                body += "<b>" + computerName + "</b>.";
+            }
+            body += "<br/><br/>" + contentHTML + " <br/><br/>  Exception: " + ex;
             for (StackTraceElement stackTraceElement : ex.getStackTrace()) {
                 body = body + " <br/>             " + stackTraceElement;
             }

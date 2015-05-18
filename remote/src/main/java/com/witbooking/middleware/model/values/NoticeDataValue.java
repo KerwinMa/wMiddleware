@@ -73,7 +73,7 @@ public class NoticeDataValue extends DataValue<Integer> {
             case CONSTANT:
                 int constantValue;
                 try {
-                    constantValue = Integer.valueOf(value.trim()).intValue();
+                    constantValue = Float.valueOf(value.trim()).intValue();
                 } catch (Exception nfe) {
                     logger.error(" NumberFormatException: " + nfe.getMessage());
                     throw new DataValueFormatException("Invalid NoticeDataValue CONSTANT value {value:'" + value + "', typeValue:" + typeValue + "}");

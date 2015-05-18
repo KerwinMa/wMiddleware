@@ -8,14 +8,19 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import javax.xml.datatype.Duration;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import javax.xml.datatype.Duration;
 
 
 /**
@@ -204,13 +209,13 @@ public class RateRulesType {
     @XmlElement(name = "AdvanceBooking")
     protected RateRulesType.AdvanceBooking advanceBooking;
     @XmlElement(name = "PickupReturnRules")
-    protected List<PickupReturnRules> pickupReturnRules;
+    protected List<RateRulesType.PickupReturnRules> pickupReturnRules;
     @XmlElement(name = "RateGuarantee")
     protected RateRulesType.RateGuarantee rateGuarantee;
     @XmlElement(name = "PaymentRules")
     protected RateRulesType.PaymentRules paymentRules;
     @XmlElement(name = "CancelPenaltyInfo")
-    protected List<CancelPenaltyInfo> cancelPenaltyInfo;
+    protected List<RateRulesType.CancelPenaltyInfo> cancelPenaltyInfo;
     @XmlElement(name = "RateDeposit")
     protected RateRulesType.RateDeposit rateDeposit;
     @XmlAttribute(name = "MinimumKeep")
@@ -222,11 +227,11 @@ public class RateRulesType {
 
     /**
      * Gets the value of the advanceBooking property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link RateRulesType.AdvanceBooking }
-     *
+     *     
      */
     public RateRulesType.AdvanceBooking getAdvanceBooking() {
         return advanceBooking;
@@ -234,11 +239,11 @@ public class RateRulesType {
 
     /**
      * Sets the value of the advanceBooking property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link RateRulesType.AdvanceBooking }
-     *
+     *     
      */
     public void setAdvanceBooking(RateRulesType.AdvanceBooking value) {
         this.advanceBooking = value;
@@ -246,40 +251,40 @@ public class RateRulesType {
 
     /**
      * Gets the value of the pickupReturnRules property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the pickupReturnRules property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getPickupReturnRules().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link RateRulesType.PickupReturnRules }
-     *
-     *
+     * 
+     * 
      */
-    public List<PickupReturnRules> getPickupReturnRules() {
+    public List<RateRulesType.PickupReturnRules> getPickupReturnRules() {
         if (pickupReturnRules == null) {
-            pickupReturnRules = new ArrayList<PickupReturnRules>();
+            pickupReturnRules = new ArrayList<RateRulesType.PickupReturnRules>();
         }
         return this.pickupReturnRules;
     }
 
     /**
      * Gets the value of the rateGuarantee property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link RateRulesType.RateGuarantee }
-     *
+     *     
      */
     public RateRulesType.RateGuarantee getRateGuarantee() {
         return rateGuarantee;
@@ -287,11 +292,11 @@ public class RateRulesType {
 
     /**
      * Sets the value of the rateGuarantee property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link RateRulesType.RateGuarantee }
-     *
+     *     
      */
     public void setRateGuarantee(RateRulesType.RateGuarantee value) {
         this.rateGuarantee = value;
@@ -299,11 +304,11 @@ public class RateRulesType {
 
     /**
      * Gets the value of the paymentRules property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link RateRulesType.PaymentRules }
-     *
+     *     
      */
     public RateRulesType.PaymentRules getPaymentRules() {
         return paymentRules;
@@ -311,11 +316,11 @@ public class RateRulesType {
 
     /**
      * Sets the value of the paymentRules property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link RateRulesType.PaymentRules }
-     *
+     *     
      */
     public void setPaymentRules(RateRulesType.PaymentRules value) {
         this.paymentRules = value;
@@ -323,40 +328,40 @@ public class RateRulesType {
 
     /**
      * Gets the value of the cancelPenaltyInfo property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the cancelPenaltyInfo property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getCancelPenaltyInfo().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link RateRulesType.CancelPenaltyInfo }
-     *
-     *
+     * 
+     * 
      */
-    public List<CancelPenaltyInfo> getCancelPenaltyInfo() {
+    public List<RateRulesType.CancelPenaltyInfo> getCancelPenaltyInfo() {
         if (cancelPenaltyInfo == null) {
-            cancelPenaltyInfo = new ArrayList<CancelPenaltyInfo>();
+            cancelPenaltyInfo = new ArrayList<RateRulesType.CancelPenaltyInfo>();
         }
         return this.cancelPenaltyInfo;
     }
 
     /**
      * Gets the value of the rateDeposit property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link RateRulesType.RateDeposit }
-     *
+     *     
      */
     public RateRulesType.RateDeposit getRateDeposit() {
         return rateDeposit;
@@ -364,11 +369,11 @@ public class RateRulesType {
 
     /**
      * Sets the value of the rateDeposit property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link RateRulesType.RateDeposit }
-     *
+     *     
      */
     public void setRateDeposit(RateRulesType.RateDeposit value) {
         this.rateDeposit = value;
@@ -376,11 +381,11 @@ public class RateRulesType {
 
     /**
      * Gets the value of the minimumKeep property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link Duration }
-     *
+     *     
      */
     public Duration getMinimumKeep() {
         return minimumKeep;
@@ -388,11 +393,11 @@ public class RateRulesType {
 
     /**
      * Sets the value of the minimumKeep property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link Duration }
-     *
+     *     
      */
     public void setMinimumKeep(Duration value) {
         this.minimumKeep = value;
@@ -400,11 +405,11 @@ public class RateRulesType {
 
     /**
      * Gets the value of the maximumKeep property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link Duration }
-     *
+     *     
      */
     public Duration getMaximumKeep() {
         return maximumKeep;
@@ -412,11 +417,11 @@ public class RateRulesType {
 
     /**
      * Sets the value of the maximumKeep property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link Duration }
-     *
+     *     
      */
     public void setMaximumKeep(Duration value) {
         this.maximumKeep = value;
@@ -424,11 +429,11 @@ public class RateRulesType {
 
     /**
      * Gets the value of the maximumRental property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link Duration }
-     *
+     *     
      */
     public Duration getMaximumRental() {
         return maximumRental;
@@ -436,11 +441,11 @@ public class RateRulesType {
 
     /**
      * Sets the value of the maximumRental property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link Duration }
-     *
+     *     
      */
     public void setMaximumRental(Duration value) {
         this.maximumRental = value;
@@ -449,9 +454,9 @@ public class RateRulesType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -462,8 +467,8 @@ public class RateRulesType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
@@ -483,11 +488,11 @@ public class RateRulesType {
 
         /**
          * Gets the value of the requiredInd property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link Boolean }
-         *
+         *     
          */
         public Boolean isRequiredInd() {
             return requiredInd;
@@ -495,11 +500,11 @@ public class RateRulesType {
 
         /**
          * Sets the value of the requiredInd property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link Boolean }
-         *
+         *     
          */
         public void setRequiredInd(Boolean value) {
             this.requiredInd = value;
@@ -507,11 +512,11 @@ public class RateRulesType {
 
         /**
          * Gets the value of the absoluteDeadline property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getAbsoluteDeadline() {
             return absoluteDeadline;
@@ -519,11 +524,11 @@ public class RateRulesType {
 
         /**
          * Sets the value of the absoluteDeadline property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setAbsoluteDeadline(String value) {
             this.absoluteDeadline = value;
@@ -531,11 +536,11 @@ public class RateRulesType {
 
         /**
          * Gets the value of the offsetTimeUnit property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link TimeUnitType }
-         *
+         *     
          */
         public TimeUnitType getOffsetTimeUnit() {
             return offsetTimeUnit;
@@ -543,11 +548,11 @@ public class RateRulesType {
 
         /**
          * Sets the value of the offsetTimeUnit property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link TimeUnitType }
-         *
+         *     
          */
         public void setOffsetTimeUnit(TimeUnitType value) {
             this.offsetTimeUnit = value;
@@ -555,11 +560,11 @@ public class RateRulesType {
 
         /**
          * Gets the value of the offsetUnitMultiplier property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link Integer }
-         *
+         *     
          */
         public Integer getOffsetUnitMultiplier() {
             return offsetUnitMultiplier;
@@ -567,11 +572,11 @@ public class RateRulesType {
 
         /**
          * Sets the value of the offsetUnitMultiplier property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link Integer }
-         *
+         *     
          */
         public void setOffsetUnitMultiplier(Integer value) {
             this.offsetUnitMultiplier = value;
@@ -579,11 +584,11 @@ public class RateRulesType {
 
         /**
          * Gets the value of the offsetDropTime property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getOffsetDropTime() {
             return offsetDropTime;
@@ -591,11 +596,11 @@ public class RateRulesType {
 
         /**
          * Sets the value of the offsetDropTime property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setOffsetDropTime(String value) {
             this.offsetDropTime = value;
@@ -606,9 +611,9 @@ public class RateRulesType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -640,8 +645,8 @@ public class RateRulesType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -652,7 +657,7 @@ public class RateRulesType {
     public static class CancelPenaltyInfo {
 
         @XmlElement(name = "Deadline")
-        protected List<Deadline> deadline;
+        protected List<RateRulesType.CancelPenaltyInfo.Deadline> deadline;
         @XmlElement(name = "PenaltyFee")
         protected RateRulesType.CancelPenaltyInfo.PenaltyFee penaltyFee;
         @XmlElement(name = "Description")
@@ -664,40 +669,40 @@ public class RateRulesType {
 
         /**
          * Gets the value of the deadline property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the deadline property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getDeadline().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link RateRulesType.CancelPenaltyInfo.Deadline }
-         *
-         *
+         * 
+         * 
          */
-        public List<Deadline> getDeadline() {
+        public List<RateRulesType.CancelPenaltyInfo.Deadline> getDeadline() {
             if (deadline == null) {
-                deadline = new ArrayList<Deadline>();
+                deadline = new ArrayList<RateRulesType.CancelPenaltyInfo.Deadline>();
             }
             return this.deadline;
         }
 
         /**
          * Gets the value of the penaltyFee property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link RateRulesType.CancelPenaltyInfo.PenaltyFee }
-         *
+         *     
          */
         public RateRulesType.CancelPenaltyInfo.PenaltyFee getPenaltyFee() {
             return penaltyFee;
@@ -705,11 +710,11 @@ public class RateRulesType {
 
         /**
          * Sets the value of the penaltyFee property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link RateRulesType.CancelPenaltyInfo.PenaltyFee }
-         *
+         *     
          */
         public void setPenaltyFee(RateRulesType.CancelPenaltyInfo.PenaltyFee value) {
             this.penaltyFee = value;
@@ -717,11 +722,11 @@ public class RateRulesType {
 
         /**
          * Gets the value of the description property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link FormattedTextTextType }
-         *
+         *     
          */
         public FormattedTextTextType getDescription() {
             return description;
@@ -729,11 +734,11 @@ public class RateRulesType {
 
         /**
          * Sets the value of the description property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link FormattedTextTextType }
-         *
+         *     
          */
         public void setDescription(FormattedTextTextType value) {
             this.description = value;
@@ -741,11 +746,11 @@ public class RateRulesType {
 
         /**
          * Gets the value of the guaranteeRequiredInd property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link Boolean }
-         *
+         *     
          */
         public Boolean isGuaranteeRequiredInd() {
             return guaranteeRequiredInd;
@@ -753,11 +758,11 @@ public class RateRulesType {
 
         /**
          * Sets the value of the guaranteeRequiredInd property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link Boolean }
-         *
+         *     
          */
         public void setGuaranteeRequiredInd(Boolean value) {
             this.guaranteeRequiredInd = value;
@@ -765,11 +770,11 @@ public class RateRulesType {
 
         /**
          * Gets the value of the modifyPenaltyInd property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link Boolean }
-         *
+         *     
          */
         public Boolean isModifyPenaltyInd() {
             return modifyPenaltyInd;
@@ -777,11 +782,11 @@ public class RateRulesType {
 
         /**
          * Sets the value of the modifyPenaltyInd property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link Boolean }
-         *
+         *     
          */
         public void setModifyPenaltyInd(Boolean value) {
             this.modifyPenaltyInd = value;
@@ -790,9 +795,9 @@ public class RateRulesType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -802,8 +807,8 @@ public class RateRulesType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
@@ -821,11 +826,11 @@ public class RateRulesType {
 
             /**
              * Gets the value of the absoluteDeadline property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getAbsoluteDeadline() {
                 return absoluteDeadline;
@@ -833,11 +838,11 @@ public class RateRulesType {
 
             /**
              * Sets the value of the absoluteDeadline property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setAbsoluteDeadline(String value) {
                 this.absoluteDeadline = value;
@@ -845,11 +850,11 @@ public class RateRulesType {
 
             /**
              * Gets the value of the offsetTimeUnit property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link TimeUnitType }
-             *
+             *     
              */
             public TimeUnitType getOffsetTimeUnit() {
                 return offsetTimeUnit;
@@ -857,11 +862,11 @@ public class RateRulesType {
 
             /**
              * Sets the value of the offsetTimeUnit property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link TimeUnitType }
-             *
+             *     
              */
             public void setOffsetTimeUnit(TimeUnitType value) {
                 this.offsetTimeUnit = value;
@@ -869,11 +874,11 @@ public class RateRulesType {
 
             /**
              * Gets the value of the offsetUnitMultiplier property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link Integer }
-             *
+             *     
              */
             public Integer getOffsetUnitMultiplier() {
                 return offsetUnitMultiplier;
@@ -881,11 +886,11 @@ public class RateRulesType {
 
             /**
              * Sets the value of the offsetUnitMultiplier property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link Integer }
-             *
+             *     
              */
             public void setOffsetUnitMultiplier(Integer value) {
                 this.offsetUnitMultiplier = value;
@@ -893,11 +898,11 @@ public class RateRulesType {
 
             /**
              * Gets the value of the offsetDropTime property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getOffsetDropTime() {
                 return offsetDropTime;
@@ -905,11 +910,11 @@ public class RateRulesType {
 
             /**
              * Sets the value of the offsetDropTime property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setOffsetDropTime(String value) {
                 this.offsetDropTime = value;
@@ -920,9 +925,9 @@ public class RateRulesType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -932,8 +937,8 @@ public class RateRulesType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
@@ -949,11 +954,11 @@ public class RateRulesType {
 
             /**
              * Gets the value of the amount property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link BigDecimal }
-             *
+             *     
              */
             public BigDecimal getAmount() {
                 return amount;
@@ -961,11 +966,11 @@ public class RateRulesType {
 
             /**
              * Sets the value of the amount property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link BigDecimal }
-             *
+             *     
              */
             public void setAmount(BigDecimal value) {
                 this.amount = value;
@@ -973,11 +978,11 @@ public class RateRulesType {
 
             /**
              * Gets the value of the currencyCode property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getCurrencyCode() {
                 return currencyCode;
@@ -985,11 +990,11 @@ public class RateRulesType {
 
             /**
              * Sets the value of the currencyCode property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setCurrencyCode(String value) {
                 this.currencyCode = value;
@@ -997,11 +1002,11 @@ public class RateRulesType {
 
             /**
              * Gets the value of the decimalPlaces property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link BigInteger }
-             *
+             *     
              */
             public BigInteger getDecimalPlaces() {
                 return decimalPlaces;
@@ -1009,11 +1014,11 @@ public class RateRulesType {
 
             /**
              * Sets the value of the decimalPlaces property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link BigInteger }
-             *
+             *     
              */
             public void setDecimalPlaces(BigInteger value) {
                 this.decimalPlaces = value;
@@ -1026,9 +1031,9 @@ public class RateRulesType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -1059,8 +1064,8 @@ public class RateRulesType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -1071,33 +1076,33 @@ public class RateRulesType {
     {
 
         @XmlElement(name = "AcceptablePayments")
-        protected List<AcceptablePayments> acceptablePayments;
+        protected List<RateRulesType.PaymentRules.AcceptablePayments> acceptablePayments;
 
         /**
          * Gets the value of the acceptablePayments property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the acceptablePayments property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getAcceptablePayments().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link RateRulesType.PaymentRules.AcceptablePayments }
-         *
-         *
+         * 
+         * 
          */
-        public List<AcceptablePayments> getAcceptablePayments() {
+        public List<RateRulesType.PaymentRules.AcceptablePayments> getAcceptablePayments() {
             if (acceptablePayments == null) {
-                acceptablePayments = new ArrayList<AcceptablePayments>();
+                acceptablePayments = new ArrayList<RateRulesType.PaymentRules.AcceptablePayments>();
             }
             return this.acceptablePayments;
         }
@@ -1105,9 +1110,9 @@ public class RateRulesType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -1128,8 +1133,8 @@ public class RateRulesType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
@@ -1138,46 +1143,46 @@ public class RateRulesType {
         public static class AcceptablePayments {
 
             @XmlElement(name = "AcceptablePayment", required = true)
-            protected List<AcceptablePayment> acceptablePayment;
+            protected List<RateRulesType.PaymentRules.AcceptablePayments.AcceptablePayment> acceptablePayment;
             @XmlAttribute(name = "PaymentTypeCode")
             protected String paymentTypeCode;
 
             /**
              * Gets the value of the acceptablePayment property.
-             *
+             * 
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the acceptablePayment property.
-             *
+             * 
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getAcceptablePayment().add(newItem);
              * </pre>
-             *
-             *
+             * 
+             * 
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link RateRulesType.PaymentRules.AcceptablePayments.AcceptablePayment }
-             *
-             *
+             * 
+             * 
              */
-            public List<AcceptablePayment> getAcceptablePayment() {
+            public List<RateRulesType.PaymentRules.AcceptablePayments.AcceptablePayment> getAcceptablePayment() {
                 if (acceptablePayment == null) {
-                    acceptablePayment = new ArrayList<AcceptablePayment>();
+                    acceptablePayment = new ArrayList<RateRulesType.PaymentRules.AcceptablePayments.AcceptablePayment>();
                 }
                 return this.acceptablePayment;
             }
 
             /**
              * Gets the value of the paymentTypeCode property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getPaymentTypeCode() {
                 return paymentTypeCode;
@@ -1185,11 +1190,11 @@ public class RateRulesType {
 
             /**
              * Sets the value of the paymentTypeCode property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setPaymentTypeCode(String value) {
                 this.paymentTypeCode = value;
@@ -1198,9 +1203,9 @@ public class RateRulesType {
 
             /**
              * <p>Java class for anonymous complex type.
-             *
+             * 
              * <p>The following schema fragment specifies the expected content contained within this class.
-             *
+             * 
              * <pre>
              * &lt;complexType>
              *   &lt;complexContent>
@@ -1210,8 +1215,8 @@ public class RateRulesType {
              *   &lt;/complexContent>
              * &lt;/complexType>
              * </pre>
-             *
-             *
+             * 
+             * 
              */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "")
@@ -1222,11 +1227,11 @@ public class RateRulesType {
 
                 /**
                  * Gets the value of the creditCardCode property.
-                 *
+                 * 
                  * @return
                  *     possible object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public String getCreditCardCode() {
                     return creditCardCode;
@@ -1234,11 +1239,11 @@ public class RateRulesType {
 
                 /**
                  * Sets the value of the creditCardCode property.
-                 *
+                 * 
                  * @param value
                  *     allowed object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public void setCreditCardCode(String value) {
                     this.creditCardCode = value;
@@ -1253,9 +1258,9 @@ public class RateRulesType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -1312,8 +1317,8 @@ public class RateRulesType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -1347,11 +1352,11 @@ public class RateRulesType {
 
         /**
          * Gets the value of the earliestPickup property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link RateRulesType.PickupReturnRules.EarliestPickup }
-         *
+         *     
          */
         public RateRulesType.PickupReturnRules.EarliestPickup getEarliestPickup() {
             return earliestPickup;
@@ -1359,11 +1364,11 @@ public class RateRulesType {
 
         /**
          * Sets the value of the earliestPickup property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link RateRulesType.PickupReturnRules.EarliestPickup }
-         *
+         *     
          */
         public void setEarliestPickup(RateRulesType.PickupReturnRules.EarliestPickup value) {
             this.earliestPickup = value;
@@ -1371,11 +1376,11 @@ public class RateRulesType {
 
         /**
          * Gets the value of the latestPickup property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link RateRulesType.PickupReturnRules.LatestPickup }
-         *
+         *     
          */
         public RateRulesType.PickupReturnRules.LatestPickup getLatestPickup() {
             return latestPickup;
@@ -1383,11 +1388,11 @@ public class RateRulesType {
 
         /**
          * Sets the value of the latestPickup property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link RateRulesType.PickupReturnRules.LatestPickup }
-         *
+         *     
          */
         public void setLatestPickup(RateRulesType.PickupReturnRules.LatestPickup value) {
             this.latestPickup = value;
@@ -1395,11 +1400,11 @@ public class RateRulesType {
 
         /**
          * Gets the value of the latestReturn property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link RateRulesType.PickupReturnRules.LatestReturn }
-         *
+         *     
          */
         public RateRulesType.PickupReturnRules.LatestReturn getLatestReturn() {
             return latestReturn;
@@ -1407,11 +1412,11 @@ public class RateRulesType {
 
         /**
          * Sets the value of the latestReturn property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link RateRulesType.PickupReturnRules.LatestReturn }
-         *
+         *     
          */
         public void setLatestReturn(RateRulesType.PickupReturnRules.LatestReturn value) {
             this.latestReturn = value;
@@ -1419,11 +1424,11 @@ public class RateRulesType {
 
         /**
          * Gets the value of the earliestReturn property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link RateRulesType.PickupReturnRules.EarliestReturn }
-         *
+         *     
          */
         public RateRulesType.PickupReturnRules.EarliestReturn getEarliestReturn() {
             return earliestReturn;
@@ -1431,11 +1436,11 @@ public class RateRulesType {
 
         /**
          * Sets the value of the earliestReturn property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link RateRulesType.PickupReturnRules.EarliestReturn }
-         *
+         *     
          */
         public void setEarliestReturn(RateRulesType.PickupReturnRules.EarliestReturn value) {
             this.earliestReturn = value;

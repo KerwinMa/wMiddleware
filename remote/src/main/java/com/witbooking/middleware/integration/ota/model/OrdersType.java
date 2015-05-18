@@ -8,13 +8,18 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -95,7 +100,7 @@ import java.util.List;
 public class OrdersType {
 
     @XmlElement(name = "Order")
-    protected List<Order> order;
+    protected List<OrdersType.Order> order;
     @XmlAttribute(name = "OrderType")
     protected String orderType;
     @XmlAttribute(name = "DiscountCode")
@@ -107,40 +112,40 @@ public class OrdersType {
 
     /**
      * Gets the value of the order property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the order property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getOrder().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link OrdersType.Order }
-     *
-     *
+     * 
+     * 
      */
-    public List<Order> getOrder() {
+    public List<OrdersType.Order> getOrder() {
         if (order == null) {
-            order = new ArrayList<Order>();
+            order = new ArrayList<OrdersType.Order>();
         }
         return this.order;
     }
 
     /**
      * Gets the value of the orderType property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getOrderType() {
         return orderType;
@@ -148,11 +153,11 @@ public class OrdersType {
 
     /**
      * Sets the value of the orderType property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setOrderType(String value) {
         this.orderType = value;
@@ -160,11 +165,11 @@ public class OrdersType {
 
     /**
      * Gets the value of the discountCode property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getDiscountCode() {
         return discountCode;
@@ -172,11 +177,11 @@ public class OrdersType {
 
     /**
      * Sets the value of the discountCode property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setDiscountCode(String value) {
         this.discountCode = value;
@@ -184,11 +189,11 @@ public class OrdersType {
 
     /**
      * Gets the value of the vendorPurchaseOrderID property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getVendorPurchaseOrderID() {
         return vendorPurchaseOrderID;
@@ -196,11 +201,11 @@ public class OrdersType {
 
     /**
      * Sets the value of the vendorPurchaseOrderID property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setVendorPurchaseOrderID(String value) {
         this.vendorPurchaseOrderID = value;
@@ -208,11 +213,11 @@ public class OrdersType {
 
     /**
      * Gets the value of the orderID property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getOrderID() {
         return orderID;
@@ -220,11 +225,11 @@ public class OrdersType {
 
     /**
      * Sets the value of the orderID property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setOrderID(String value) {
         this.orderID = value;
@@ -233,9 +238,9 @@ public class OrdersType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -285,8 +290,8 @@ public class OrdersType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -305,11 +310,11 @@ public class OrdersType {
 
         /**
          * Gets the value of the products property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link OrdersType.Order.Products }
-         *
+         *     
          */
         public OrdersType.Order.Products getProducts() {
             return products;
@@ -317,11 +322,11 @@ public class OrdersType {
 
         /**
          * Sets the value of the products property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link OrdersType.Order.Products }
-         *
+         *     
          */
         public void setProducts(OrdersType.Order.Products value) {
             this.products = value;
@@ -329,11 +334,11 @@ public class OrdersType {
 
         /**
          * Gets the value of the orderType property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getOrderType() {
             return orderType;
@@ -341,11 +346,11 @@ public class OrdersType {
 
         /**
          * Sets the value of the orderType property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setOrderType(String value) {
             this.orderType = value;
@@ -353,11 +358,11 @@ public class OrdersType {
 
         /**
          * Gets the value of the orderID property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getOrderID() {
             return orderID;
@@ -365,11 +370,11 @@ public class OrdersType {
 
         /**
          * Sets the value of the orderID property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setOrderID(String value) {
             this.orderID = value;
@@ -377,25 +382,25 @@ public class OrdersType {
 
         /**
          * Gets the value of the listOfRecipientRPH property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the listOfRecipientRPH property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getListOfRecipientRPH().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link String }
-         *
-         *
+         * 
+         * 
          */
         public List<String> getListOfRecipientRPH() {
             if (listOfRecipientRPH == null) {
@@ -407,9 +412,9 @@ public class OrdersType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -446,8 +451,8 @@ public class OrdersType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
@@ -456,33 +461,33 @@ public class OrdersType {
         public static class Products {
 
             @XmlElement(name = "Product")
-            protected List<Product> product;
+            protected List<OrdersType.Order.Products.Product> product;
 
             /**
              * Gets the value of the product property.
-             *
+             * 
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the product property.
-             *
+             * 
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getProduct().add(newItem);
              * </pre>
-             *
-             *
+             * 
+             * 
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link OrdersType.Order.Products.Product }
-             *
-             *
+             * 
+             * 
              */
-            public List<Product> getProduct() {
+            public List<OrdersType.Order.Products.Product> getProduct() {
                 if (product == null) {
-                    product = new ArrayList<Product>();
+                    product = new ArrayList<OrdersType.Order.Products.Product>();
                 }
                 return this.product;
             }

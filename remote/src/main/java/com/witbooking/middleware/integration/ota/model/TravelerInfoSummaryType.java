@@ -8,12 +8,17 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -141,25 +146,25 @@ public class TravelerInfoSummaryType {
 
     /**
      * Gets the value of the seatsRequested property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the seatsRequested property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getSeatsRequested().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link BigInteger }
-     *
-     *
+     * 
+     * 
      */
     public List<BigInteger> getSeatsRequested() {
         if (seatsRequested == null) {
@@ -170,25 +175,25 @@ public class TravelerInfoSummaryType {
 
     /**
      * Gets the value of the airTravelerAvail property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the airTravelerAvail property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getAirTravelerAvail().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link TravelerInformationType }
-     *
-     *
+     * 
+     * 
      */
     public List<TravelerInformationType> getAirTravelerAvail() {
         if (airTravelerAvail == null) {
@@ -199,11 +204,11 @@ public class TravelerInfoSummaryType {
 
     /**
      * Gets the value of the priceRequestInformation property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link TravelerInfoSummaryType.PriceRequestInformation }
-     *
+     *     
      */
     public TravelerInfoSummaryType.PriceRequestInformation getPriceRequestInformation() {
         return priceRequestInformation;
@@ -211,11 +216,11 @@ public class TravelerInfoSummaryType {
 
     /**
      * Sets the value of the priceRequestInformation property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link TravelerInfoSummaryType.PriceRequestInformation }
-     *
+     *     
      */
     public void setPriceRequestInformation(TravelerInfoSummaryType.PriceRequestInformation value) {
         this.priceRequestInformation = value;
@@ -224,9 +229,9 @@ public class TravelerInfoSummaryType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -314,8 +319,8 @@ public class TravelerInfoSummaryType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -331,68 +336,68 @@ public class TravelerInfoSummaryType {
     {
 
         @XmlElement(name = "FareRestrictionPref")
-        protected List<FareRestrictionPref> fareRestrictionPref;
+        protected List<TravelerInfoSummaryType.PriceRequestInformation.FareRestrictionPref> fareRestrictionPref;
         @XmlElement(name = "Tax")
         protected List<AirTaxType> tax;
         @XmlElement(name = "DiscountPricing")
         protected TravelerInfoSummaryType.PriceRequestInformation.DiscountPricing discountPricing;
         @XmlElement(name = "SegmentOverride")
-        protected List<SegmentOverride> segmentOverride;
+        protected List<TravelerInfoSummaryType.PriceRequestInformation.SegmentOverride> segmentOverride;
         @XmlElement(name = "Account")
-        protected List<Account> account;
+        protected List<TravelerInfoSummaryType.PriceRequestInformation.Account> account;
         @XmlElement(name = "LocationRequirement")
         protected TravelerInfoSummaryType.PriceRequestInformation.LocationRequirement locationRequirement;
 
         /**
          * Gets the value of the fareRestrictionPref property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the fareRestrictionPref property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getFareRestrictionPref().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link TravelerInfoSummaryType.PriceRequestInformation.FareRestrictionPref }
-         *
-         *
+         * 
+         * 
          */
-        public List<FareRestrictionPref> getFareRestrictionPref() {
+        public List<TravelerInfoSummaryType.PriceRequestInformation.FareRestrictionPref> getFareRestrictionPref() {
             if (fareRestrictionPref == null) {
-                fareRestrictionPref = new ArrayList<FareRestrictionPref>();
+                fareRestrictionPref = new ArrayList<TravelerInfoSummaryType.PriceRequestInformation.FareRestrictionPref>();
             }
             return this.fareRestrictionPref;
         }
 
         /**
          * Gets the value of the tax property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the tax property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getTax().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link AirTaxType }
-         *
-         *
+         * 
+         * 
          */
         public List<AirTaxType> getTax() {
             if (tax == null) {
@@ -403,11 +408,11 @@ public class TravelerInfoSummaryType {
 
         /**
          * Gets the value of the discountPricing property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link TravelerInfoSummaryType.PriceRequestInformation.DiscountPricing }
-         *
+         *     
          */
         public TravelerInfoSummaryType.PriceRequestInformation.DiscountPricing getDiscountPricing() {
             return discountPricing;
@@ -415,11 +420,11 @@ public class TravelerInfoSummaryType {
 
         /**
          * Sets the value of the discountPricing property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link TravelerInfoSummaryType.PriceRequestInformation.DiscountPricing }
-         *
+         *     
          */
         public void setDiscountPricing(TravelerInfoSummaryType.PriceRequestInformation.DiscountPricing value) {
             this.discountPricing = value;
@@ -427,69 +432,69 @@ public class TravelerInfoSummaryType {
 
         /**
          * Gets the value of the segmentOverride property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the segmentOverride property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getSegmentOverride().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link TravelerInfoSummaryType.PriceRequestInformation.SegmentOverride }
-         *
-         *
+         * 
+         * 
          */
-        public List<SegmentOverride> getSegmentOverride() {
+        public List<TravelerInfoSummaryType.PriceRequestInformation.SegmentOverride> getSegmentOverride() {
             if (segmentOverride == null) {
-                segmentOverride = new ArrayList<SegmentOverride>();
+                segmentOverride = new ArrayList<TravelerInfoSummaryType.PriceRequestInformation.SegmentOverride>();
             }
             return this.segmentOverride;
         }
 
         /**
          * Gets the value of the account property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the account property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getAccount().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link TravelerInfoSummaryType.PriceRequestInformation.Account }
-         *
-         *
+         * 
+         * 
          */
-        public List<Account> getAccount() {
+        public List<TravelerInfoSummaryType.PriceRequestInformation.Account> getAccount() {
             if (account == null) {
-                account = new ArrayList<Account>();
+                account = new ArrayList<TravelerInfoSummaryType.PriceRequestInformation.Account>();
             }
             return this.account;
         }
 
         /**
          * Gets the value of the locationRequirement property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link TravelerInfoSummaryType.PriceRequestInformation.LocationRequirement }
-         *
+         *     
          */
         public TravelerInfoSummaryType.PriceRequestInformation.LocationRequirement getLocationRequirement() {
             return locationRequirement;
@@ -497,11 +502,11 @@ public class TravelerInfoSummaryType {
 
         /**
          * Sets the value of the locationRequirement property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link TravelerInfoSummaryType.PriceRequestInformation.LocationRequirement }
-         *
+         *     
          */
         public void setLocationRequirement(TravelerInfoSummaryType.PriceRequestInformation.LocationRequirement value) {
             this.locationRequirement = value;
@@ -510,9 +515,9 @@ public class TravelerInfoSummaryType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -523,8 +528,8 @@ public class TravelerInfoSummaryType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
@@ -537,11 +542,11 @@ public class TravelerInfoSummaryType {
 
             /**
              * Gets the value of the codeOnlyFaresInd property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link Boolean }
-             *
+             *     
              */
             public Boolean isCodeOnlyFaresInd() {
                 return codeOnlyFaresInd;
@@ -549,11 +554,11 @@ public class TravelerInfoSummaryType {
 
             /**
              * Sets the value of the codeOnlyFaresInd property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link Boolean }
-             *
+             *     
              */
             public void setCodeOnlyFaresInd(Boolean value) {
                 this.codeOnlyFaresInd = value;
@@ -561,11 +566,11 @@ public class TravelerInfoSummaryType {
 
             /**
              * Gets the value of the code property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getCode() {
                 return code;
@@ -573,11 +578,11 @@ public class TravelerInfoSummaryType {
 
             /**
              * Sets the value of the code property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setCode(String value) {
                 this.code = value;
@@ -588,9 +593,9 @@ public class TravelerInfoSummaryType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -611,8 +616,8 @@ public class TravelerInfoSummaryType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
@@ -621,7 +626,7 @@ public class TravelerInfoSummaryType {
         public static class DiscountPricing {
 
             @XmlElement(name = "FlightReference")
-            protected List<FlightReference> flightReference;
+            protected List<TravelerInfoSummaryType.PriceRequestInformation.DiscountPricing.FlightReference> flightReference;
             @XmlAttribute(name = "Purpose")
             @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
             protected String purpose;
@@ -640,29 +645,29 @@ public class TravelerInfoSummaryType {
 
             /**
              * Gets the value of the flightReference property.
-             *
+             * 
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the flightReference property.
-             *
+             * 
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getFlightReference().add(newItem);
              * </pre>
-             *
-             *
+             * 
+             * 
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link TravelerInfoSummaryType.PriceRequestInformation.DiscountPricing.FlightReference }
-             *
-             *
+             * 
+             * 
              */
-            public List<FlightReference> getFlightReference() {
+            public List<TravelerInfoSummaryType.PriceRequestInformation.DiscountPricing.FlightReference> getFlightReference() {
                 if (flightReference == null) {
-                    flightReference = new ArrayList<FlightReference>();
+                    flightReference = new ArrayList<TravelerInfoSummaryType.PriceRequestInformation.DiscountPricing.FlightReference>();
                 }
                 return this.flightReference;
             }

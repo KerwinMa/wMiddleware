@@ -8,10 +8,14 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -148,11 +152,11 @@ public class VehicleLocationAdditionalFeesType {
 
     /**
      * Gets the value of the taxes property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleLocationAdditionalFeesType.Taxes }
-     *
+     *     
      */
     public VehicleLocationAdditionalFeesType.Taxes getTaxes() {
         return taxes;
@@ -160,11 +164,11 @@ public class VehicleLocationAdditionalFeesType {
 
     /**
      * Sets the value of the taxes property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleLocationAdditionalFeesType.Taxes }
-     *
+     *     
      */
     public void setTaxes(VehicleLocationAdditionalFeesType.Taxes value) {
         this.taxes = value;
@@ -172,11 +176,11 @@ public class VehicleLocationAdditionalFeesType {
 
     /**
      * Gets the value of the fees property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleLocationAdditionalFeesType.Fees }
-     *
+     *     
      */
     public VehicleLocationAdditionalFeesType.Fees getFees() {
         return fees;
@@ -184,11 +188,11 @@ public class VehicleLocationAdditionalFeesType {
 
     /**
      * Sets the value of the fees property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleLocationAdditionalFeesType.Fees }
-     *
+     *     
      */
     public void setFees(VehicleLocationAdditionalFeesType.Fees value) {
         this.fees = value;
@@ -196,11 +200,11 @@ public class VehicleLocationAdditionalFeesType {
 
     /**
      * Gets the value of the surcharges property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleLocationAdditionalFeesType.Surcharges }
-     *
+     *     
      */
     public VehicleLocationAdditionalFeesType.Surcharges getSurcharges() {
         return surcharges;
@@ -208,11 +212,11 @@ public class VehicleLocationAdditionalFeesType {
 
     /**
      * Sets the value of the surcharges property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleLocationAdditionalFeesType.Surcharges }
-     *
+     *     
      */
     public void setSurcharges(VehicleLocationAdditionalFeesType.Surcharges value) {
         this.surcharges = value;
@@ -220,11 +224,11 @@ public class VehicleLocationAdditionalFeesType {
 
     /**
      * Gets the value of the miscellaneousCharges property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleLocationAdditionalFeesType.MiscellaneousCharges }
-     *
+     *     
      */
     public VehicleLocationAdditionalFeesType.MiscellaneousCharges getMiscellaneousCharges() {
         return miscellaneousCharges;
@@ -232,11 +236,11 @@ public class VehicleLocationAdditionalFeesType {
 
     /**
      * Sets the value of the miscellaneousCharges property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleLocationAdditionalFeesType.MiscellaneousCharges }
-     *
+     *     
      */
     public void setMiscellaneousCharges(VehicleLocationAdditionalFeesType.MiscellaneousCharges value) {
         this.miscellaneousCharges = value;
@@ -244,11 +248,11 @@ public class VehicleLocationAdditionalFeesType {
 
     /**
      * Gets the value of the tpaExtensions property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link TPAExtensionsType }
-     *
+     *     
      */
     public TPAExtensionsType getTPAExtensions() {
         return tpaExtensions;
@@ -256,11 +260,11 @@ public class VehicleLocationAdditionalFeesType {
 
     /**
      * Sets the value of the tpaExtensions property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link TPAExtensionsType }
-     *
+     *     
      */
     public void setTPAExtensions(TPAExtensionsType value) {
         this.tpaExtensions = value;
@@ -269,9 +273,9 @@ public class VehicleLocationAdditionalFeesType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -294,8 +298,8 @@ public class VehicleLocationAdditionalFeesType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -305,46 +309,46 @@ public class VehicleLocationAdditionalFeesType {
     public static class Fees {
 
         @XmlElement(name = "Fee")
-        protected List<Fee> fee;
+        protected List<VehicleLocationAdditionalFeesType.Fees.Fee> fee;
         @XmlElement(name = "Info")
         protected FormattedTextType info;
 
         /**
          * Gets the value of the fee property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the fee property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getFee().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link VehicleLocationAdditionalFeesType.Fees.Fee }
-         *
-         *
+         * 
+         * 
          */
-        public List<Fee> getFee() {
+        public List<VehicleLocationAdditionalFeesType.Fees.Fee> getFee() {
             if (fee == null) {
-                fee = new ArrayList<Fee>();
+                fee = new ArrayList<VehicleLocationAdditionalFeesType.Fees.Fee>();
             }
             return this.fee;
         }
 
         /**
          * Gets the value of the info property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link FormattedTextType }
-         *
+         *     
          */
         public FormattedTextType getInfo() {
             return info;
@@ -352,11 +356,11 @@ public class VehicleLocationAdditionalFeesType {
 
         /**
          * Sets the value of the info property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link FormattedTextType }
-         *
+         *     
          */
         public void setInfo(FormattedTextType value) {
             this.info = value;
@@ -365,9 +369,9 @@ public class VehicleLocationAdditionalFeesType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -379,8 +383,8 @@ public class VehicleLocationAdditionalFeesType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
@@ -395,11 +399,11 @@ public class VehicleLocationAdditionalFeesType {
 
             /**
              * Gets the value of the info property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link FormattedTextType }
-             *
+             *     
              */
             public FormattedTextType getInfo() {
                 return info;
@@ -407,11 +411,11 @@ public class VehicleLocationAdditionalFeesType {
 
             /**
              * Sets the value of the info property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link FormattedTextType }
-             *
+             *     
              */
             public void setInfo(FormattedTextType value) {
                 this.info = value;
@@ -424,9 +428,9 @@ public class VehicleLocationAdditionalFeesType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -449,8 +453,8 @@ public class VehicleLocationAdditionalFeesType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -460,46 +464,46 @@ public class VehicleLocationAdditionalFeesType {
     public static class MiscellaneousCharges {
 
         @XmlElement(name = "MiscellaneousCharge")
-        protected List<MiscellaneousCharge> miscellaneousCharge;
+        protected List<VehicleLocationAdditionalFeesType.MiscellaneousCharges.MiscellaneousCharge> miscellaneousCharge;
         @XmlElement(name = "Info")
         protected FormattedTextType info;
 
         /**
          * Gets the value of the miscellaneousCharge property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the miscellaneousCharge property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getMiscellaneousCharge().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link VehicleLocationAdditionalFeesType.MiscellaneousCharges.MiscellaneousCharge }
-         *
-         *
+         * 
+         * 
          */
-        public List<MiscellaneousCharge> getMiscellaneousCharge() {
+        public List<VehicleLocationAdditionalFeesType.MiscellaneousCharges.MiscellaneousCharge> getMiscellaneousCharge() {
             if (miscellaneousCharge == null) {
-                miscellaneousCharge = new ArrayList<MiscellaneousCharge>();
+                miscellaneousCharge = new ArrayList<VehicleLocationAdditionalFeesType.MiscellaneousCharges.MiscellaneousCharge>();
             }
             return this.miscellaneousCharge;
         }
 
         /**
          * Gets the value of the info property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link FormattedTextType }
-         *
+         *     
          */
         public FormattedTextType getInfo() {
             return info;
@@ -507,11 +511,11 @@ public class VehicleLocationAdditionalFeesType {
 
         /**
          * Sets the value of the info property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link FormattedTextType }
-         *
+         *     
          */
         public void setInfo(FormattedTextType value) {
             this.info = value;
@@ -520,9 +524,9 @@ public class VehicleLocationAdditionalFeesType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -534,8 +538,8 @@ public class VehicleLocationAdditionalFeesType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
@@ -550,11 +554,11 @@ public class VehicleLocationAdditionalFeesType {
 
             /**
              * Gets the value of the info property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link FormattedTextType }
-             *
+             *     
              */
             public FormattedTextType getInfo() {
                 return info;
@@ -562,11 +566,11 @@ public class VehicleLocationAdditionalFeesType {
 
             /**
              * Sets the value of the info property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link FormattedTextType }
-             *
+             *     
              */
             public void setInfo(FormattedTextType value) {
                 this.info = value;
@@ -579,9 +583,9 @@ public class VehicleLocationAdditionalFeesType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -605,8 +609,8 @@ public class VehicleLocationAdditionalFeesType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -616,7 +620,7 @@ public class VehicleLocationAdditionalFeesType {
     public static class Surcharges {
 
         @XmlElement(name = "Surcharge")
-        protected List<Surcharge> surcharge;
+        protected List<VehicleLocationAdditionalFeesType.Surcharges.Surcharge> surcharge;
         @XmlElement(name = "Info")
         protected FormattedTextType info;
         @XmlAttribute(name = "Start")
@@ -628,40 +632,40 @@ public class VehicleLocationAdditionalFeesType {
 
         /**
          * Gets the value of the surcharge property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the surcharge property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getSurcharge().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link VehicleLocationAdditionalFeesType.Surcharges.Surcharge }
-         *
-         *
+         * 
+         * 
          */
-        public List<Surcharge> getSurcharge() {
+        public List<VehicleLocationAdditionalFeesType.Surcharges.Surcharge> getSurcharge() {
             if (surcharge == null) {
-                surcharge = new ArrayList<Surcharge>();
+                surcharge = new ArrayList<VehicleLocationAdditionalFeesType.Surcharges.Surcharge>();
             }
             return this.surcharge;
         }
 
         /**
          * Gets the value of the info property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link FormattedTextType }
-         *
+         *     
          */
         public FormattedTextType getInfo() {
             return info;
@@ -669,11 +673,11 @@ public class VehicleLocationAdditionalFeesType {
 
         /**
          * Sets the value of the info property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link FormattedTextType }
-         *
+         *     
          */
         public void setInfo(FormattedTextType value) {
             this.info = value;
@@ -681,11 +685,11 @@ public class VehicleLocationAdditionalFeesType {
 
         /**
          * Gets the value of the start property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getStart() {
             return start;
@@ -693,11 +697,11 @@ public class VehicleLocationAdditionalFeesType {
 
         /**
          * Sets the value of the start property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setStart(String value) {
             this.start = value;
@@ -705,11 +709,11 @@ public class VehicleLocationAdditionalFeesType {
 
         /**
          * Gets the value of the duration property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getDuration() {
             return duration;
@@ -717,11 +721,11 @@ public class VehicleLocationAdditionalFeesType {
 
         /**
          * Sets the value of the duration property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setDuration(String value) {
             this.duration = value;
@@ -729,11 +733,11 @@ public class VehicleLocationAdditionalFeesType {
 
         /**
          * Gets the value of the end property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getEnd() {
             return end;
@@ -741,11 +745,11 @@ public class VehicleLocationAdditionalFeesType {
 
         /**
          * Sets the value of the end property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setEnd(String value) {
             this.end = value;
@@ -754,9 +758,9 @@ public class VehicleLocationAdditionalFeesType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -768,8 +772,8 @@ public class VehicleLocationAdditionalFeesType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
@@ -784,11 +788,11 @@ public class VehicleLocationAdditionalFeesType {
 
             /**
              * Gets the value of the info property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link FormattedTextType }
-             *
+             *     
              */
             public FormattedTextType getInfo() {
                 return info;
@@ -796,11 +800,11 @@ public class VehicleLocationAdditionalFeesType {
 
             /**
              * Sets the value of the info property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link FormattedTextType }
-             *
+             *     
              */
             public void setInfo(FormattedTextType value) {
                 this.info = value;
@@ -813,9 +817,9 @@ public class VehicleLocationAdditionalFeesType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -841,8 +845,8 @@ public class VehicleLocationAdditionalFeesType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -852,7 +856,7 @@ public class VehicleLocationAdditionalFeesType {
     public static class Taxes {
 
         @XmlElement(name = "Tax")
-        protected List<Tax> tax;
+        protected List<VehicleLocationAdditionalFeesType.Taxes.Tax> tax;
         @XmlElement(name = "Info")
         protected FormattedTextType info;
         @XmlAttribute(name = "Start")
@@ -864,29 +868,29 @@ public class VehicleLocationAdditionalFeesType {
 
         /**
          * Gets the value of the tax property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the tax property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getTax().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link VehicleLocationAdditionalFeesType.Taxes.Tax }
-         *
-         *
+         * 
+         * 
          */
-        public List<Tax> getTax() {
+        public List<VehicleLocationAdditionalFeesType.Taxes.Tax> getTax() {
             if (tax == null) {
-                tax = new ArrayList<Tax>();
+                tax = new ArrayList<VehicleLocationAdditionalFeesType.Taxes.Tax>();
             }
             return this.tax;
         }

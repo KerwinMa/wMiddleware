@@ -8,11 +8,17 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.datatype.XMLGregorianCalendar;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
@@ -99,7 +105,7 @@ public class RoomRateType {
     @XmlElement(name = "Total")
     protected TotalType total;
     @XmlElement(name = "Availability")
-    protected List<Availability> availability;
+    protected List<RoomRateType.Availability> availability;
     @XmlAttribute(name = "BookingCode")
     protected String bookingCode;
     @XmlAttribute(name = "RoomTypeCode")
@@ -137,16 +143,16 @@ public class RoomRateType {
 
     /**
      * Gets the value of the rates property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link RateType }
-     *
+     *     
      */
     public RateType getRates() {
         return rates;
     }
-
+    
     public void addRate(RateType.Rate item){
         if (rates == null){
             this.rates = new RateType();
@@ -156,11 +162,11 @@ public class RoomRateType {
 
     /**
      * Sets the value of the rates property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link RateType }
-     *
+     *     
      */
     public void setRates(RateType value) {
         this.rates = value;
@@ -168,25 +174,25 @@ public class RoomRateType {
 
     /**
      * Gets the value of the roomRateDescription property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the roomRateDescription property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getRoomRateDescription().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ParagraphType }
-     *
-     *
+     * 
+     * 
      */
     public List<ParagraphType> getRoomRateDescription() {
         if (roomRateDescription == null) {
@@ -197,11 +203,11 @@ public class RoomRateType {
 
     /**
      * Gets the value of the features property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link RoomRateType.Features }
-     *
+     *     
      */
     public RoomRateType.Features getFeatures() {
         return features;
@@ -209,11 +215,11 @@ public class RoomRateType {
 
     /**
      * Sets the value of the features property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link RoomRateType.Features }
-     *
+     *     
      */
     public void setFeatures(RoomRateType.Features value) {
         this.features = value;
@@ -221,11 +227,11 @@ public class RoomRateType {
 
     /**
      * Gets the value of the total property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link TotalType }
-     *
+     *     
      */
     public TotalType getTotal() {
         return total;
@@ -233,11 +239,11 @@ public class RoomRateType {
 
     /**
      * Sets the value of the total property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link TotalType }
-     *
+     *     
      */
     public void setTotal(TotalType value) {
         this.total = value;
@@ -245,40 +251,40 @@ public class RoomRateType {
 
     /**
      * Gets the value of the availability property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the availability property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getAvailability().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link RoomRateType.Availability }
-     *
-     *
+     * 
+     * 
      */
-    public List<Availability> getAvailability() {
+    public List<RoomRateType.Availability> getAvailability() {
         if (availability == null) {
-            availability = new ArrayList<Availability>();
+            availability = new ArrayList<RoomRateType.Availability>();
         }
         return this.availability;
     }
 
     /**
      * Gets the value of the bookingCode property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getBookingCode() {
         return bookingCode;
@@ -286,11 +292,11 @@ public class RoomRateType {
 
     /**
      * Sets the value of the bookingCode property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setBookingCode(String value) {
         this.bookingCode = value;
@@ -298,11 +304,11 @@ public class RoomRateType {
 
     /**
      * Gets the value of the roomTypeCode property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getRoomTypeCode() {
         return roomTypeCode;
@@ -310,11 +316,11 @@ public class RoomRateType {
 
     /**
      * Sets the value of the roomTypeCode property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setRoomTypeCode(String value) {
         this.roomTypeCode = value;
@@ -322,11 +328,11 @@ public class RoomRateType {
 
     /**
      * Gets the value of the invBlockCode property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getInvBlockCode() {
         return invBlockCode;
@@ -334,11 +340,11 @@ public class RoomRateType {
 
     /**
      * Sets the value of the invBlockCode property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setInvBlockCode(String value) {
         this.invBlockCode = value;
@@ -346,11 +352,11 @@ public class RoomRateType {
 
     /**
      * Gets the value of the numberOfUnits property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link BigInteger }
-     *
+     *     
      */
     public Integer getNumberOfUnits() {
         return numberOfUnits;
@@ -358,11 +364,11 @@ public class RoomRateType {
 
     /**
      * Sets the value of the numberOfUnits property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link BigInteger }
-     *
+     *     
      */
     public void setNumberOfUnits(Integer value) {
         this.numberOfUnits = value;
@@ -370,11 +376,11 @@ public class RoomRateType {
 
     /**
      * Gets the value of the availabilityStatus property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link RateIndicatorType }
-     *
+     *     
      */
     public RateIndicatorType getAvailabilityStatus() {
         return availabilityStatus;
@@ -382,11 +388,11 @@ public class RoomRateType {
 
     /**
      * Sets the value of the availabilityStatus property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link RateIndicatorType }
-     *
+     *     
      */
     public void setAvailabilityStatus(RateIndicatorType value) {
         this.availabilityStatus = value;
@@ -394,11 +400,11 @@ public class RoomRateType {
 
     /**
      * Gets the value of the roomID property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getRoomID() {
         return roomID;
@@ -406,11 +412,11 @@ public class RoomRateType {
 
     /**
      * Sets the value of the roomID property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setRoomID(String value) {
         this.roomID = value;
@@ -418,11 +424,11 @@ public class RoomRateType {
 
     /**
      * Gets the value of the ratePlanType property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getRatePlanType() {
         return ratePlanType;
@@ -430,11 +436,11 @@ public class RoomRateType {
 
     /**
      * Sets the value of the ratePlanType property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setRatePlanType(String value) {
         this.ratePlanType = value;
@@ -442,11 +448,11 @@ public class RoomRateType {
 
     /**
      * Gets the value of the ratePlanCode property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getRatePlanCode() {
         return ratePlanCode;
@@ -454,11 +460,11 @@ public class RoomRateType {
 
     /**
      * Sets the value of the ratePlanCode property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setRatePlanCode(String value) {
         this.ratePlanCode = value;
@@ -466,11 +472,11 @@ public class RoomRateType {
 
     /**
      * Gets the value of the ratePlanID property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getRatePlanID() {
         return ratePlanID;
@@ -478,11 +484,11 @@ public class RoomRateType {
 
     /**
      * Sets the value of the ratePlanID property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setRatePlanID(String value) {
         this.ratePlanID = value;
@@ -490,11 +496,11 @@ public class RoomRateType {
 
     /**
      * Gets the value of the ratePlanQualifier property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link Boolean }
-     *
+     *     
      */
     public Boolean isRatePlanQualifier() {
         return ratePlanQualifier;
@@ -502,11 +508,11 @@ public class RoomRateType {
 
     /**
      * Sets the value of the ratePlanQualifier property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *
+     *     
      */
     public void setRatePlanQualifier(Boolean value) {
         this.ratePlanQualifier = value;
@@ -514,11 +520,11 @@ public class RoomRateType {
 
     /**
      * Gets the value of the promotionCode property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getPromotionCode() {
         return promotionCode;
@@ -526,11 +532,11 @@ public class RoomRateType {
 
     /**
      * Sets the value of the promotionCode property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setPromotionCode(String value) {
         this.promotionCode = value;
@@ -538,25 +544,25 @@ public class RoomRateType {
 
     /**
      * Gets the value of the promotionVendorCode property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the promotionVendorCode property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getPromotionVendorCode().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link String }
-     *
-     *
+     * 
+     * 
      */
     public List<String> getPromotionVendorCode() {
         if (promotionVendorCode == null) {
@@ -567,11 +573,11 @@ public class RoomRateType {
 
     /**
      * Gets the value of the ratePlanCategory property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getRatePlanCategory() {
         return ratePlanCategory;
@@ -579,11 +585,11 @@ public class RoomRateType {
 
     /**
      * Sets the value of the ratePlanCategory property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setRatePlanCategory(String value) {
         this.ratePlanCategory = value;
@@ -591,11 +597,11 @@ public class RoomRateType {
 
     /**
      * Gets the value of the effectiveDate property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link XMLGregorianCalendar }
-     *
+     *     
      */
     public XMLGregorianCalendar getEffectiveDate() {
         return effectiveDate;
@@ -603,11 +609,11 @@ public class RoomRateType {
 
     /**
      * Sets the value of the effectiveDate property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link XMLGregorianCalendar }
-     *
+     *     
      */
     public void setEffectiveDate(XMLGregorianCalendar value) {
         this.effectiveDate = value;
@@ -615,11 +621,11 @@ public class RoomRateType {
 
     /**
      * Gets the value of the expireDate property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link XMLGregorianCalendar }
-     *
+     *     
      */
     public XMLGregorianCalendar getExpireDate() {
         return expireDate;
@@ -627,11 +633,11 @@ public class RoomRateType {
 
     /**
      * Sets the value of the expireDate property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link XMLGregorianCalendar }
-     *
+     *     
      */
     public void setExpireDate(XMLGregorianCalendar value) {
         this.expireDate = value;
@@ -639,11 +645,11 @@ public class RoomRateType {
 
     /**
      * Gets the value of the expireDateExclusiveIndicator property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link Boolean }
-     *
+     *     
      */
     public Boolean isExpireDateExclusiveIndicator() {
         return expireDateExclusiveIndicator;
@@ -651,11 +657,11 @@ public class RoomRateType {
 
     /**
      * Sets the value of the expireDateExclusiveIndicator property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *
+     *     
      */
     public void setExpireDateExclusiveIndicator(Boolean value) {
         this.expireDateExclusiveIndicator = value;
@@ -664,9 +670,9 @@ public class RoomRateType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -676,8 +682,8 @@ public class RoomRateType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
@@ -688,11 +694,11 @@ public class RoomRateType {
 
         /**
          * Gets the value of the availabilityStatus property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link RateIndicatorType }
-         *
+         *     
          */
         public RateIndicatorType getAvailabilityStatus() {
             return availabilityStatus;
@@ -700,11 +706,11 @@ public class RoomRateType {
 
         /**
          * Sets the value of the availabilityStatus property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link RateIndicatorType }
-         *
+         *     
          */
         public void setAvailabilityStatus(RateIndicatorType value) {
             this.availabilityStatus = value;
@@ -715,9 +721,9 @@ public class RoomRateType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -742,8 +748,8 @@ public class RoomRateType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -752,33 +758,33 @@ public class RoomRateType {
     public static class Features {
 
         @XmlElement(name = "Feature")
-        protected List<Feature> feature;
+        protected List<RoomRateType.Features.Feature> feature;
 
         /**
          * Gets the value of the feature property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the feature property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getFeature().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link RoomRateType.Features.Feature }
-         *
-         *
+         * 
+         * 
          */
-        public List<Feature> getFeature() {
+        public List<RoomRateType.Features.Feature> getFeature() {
             if (feature == null) {
-                feature = new ArrayList<Feature>();
+                feature = new ArrayList<RoomRateType.Features.Feature>();
             }
             return this.feature;
         }

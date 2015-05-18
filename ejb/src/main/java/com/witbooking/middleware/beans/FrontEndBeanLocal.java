@@ -32,7 +32,7 @@ public interface FrontEndBeanLocal {
    public List<Inventory> getInventory(InventoryDBHandler inventoryDBHandler) throws FrontEndException;
 
    public List<HashRangeValue> getARIValues(DailyValuesDBHandler dailyValuesDBHandler,
-                                            List<Inventory> inventoryList, Date startDate, Date endDate, String currency)
+           List<Inventory> inventoryList, Date startDate, Date endDate, String currency)
            throws FrontEndException;
 
    public String testFrontEndServices();

@@ -7,9 +7,9 @@
  */
 package com.witbooking.middleware.utils.serializers;
 
-import javax.xml.bind.annotation.adapters.XmlAdapter;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
 
 /**
  *

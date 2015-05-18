@@ -8,10 +8,16 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.datatype.XMLGregorianCalendar;
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
@@ -110,11 +116,11 @@ public class VehicleType
 
     /**
      * Gets the value of the vehMakeModel property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleType.VehMakeModel }
-     *
+     *     
      */
     public VehicleType.VehMakeModel getVehMakeModel() {
         return vehMakeModel;
@@ -122,11 +128,11 @@ public class VehicleType
 
     /**
      * Sets the value of the vehMakeModel property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleType.VehMakeModel }
-     *
+     *     
      */
     public void setVehMakeModel(VehicleType.VehMakeModel value) {
         this.vehMakeModel = value;
@@ -134,11 +140,11 @@ public class VehicleType
 
     /**
      * Gets the value of the pictureURL property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getPictureURL() {
         return pictureURL;
@@ -146,11 +152,11 @@ public class VehicleType
 
     /**
      * Sets the value of the pictureURL property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setPictureURL(String value) {
         this.pictureURL = value;
@@ -158,11 +164,11 @@ public class VehicleType
 
     /**
      * Gets the value of the vehIdentity property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleType.VehIdentity }
-     *
+     *     
      */
     public VehicleType.VehIdentity getVehIdentity() {
         return vehIdentity;
@@ -170,11 +176,11 @@ public class VehicleType
 
     /**
      * Sets the value of the vehIdentity property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleType.VehIdentity }
-     *
+     *     
      */
     public void setVehIdentity(VehicleType.VehIdentity value) {
         this.vehIdentity = value;

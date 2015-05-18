@@ -7,11 +7,15 @@
 package com.witbooking.middleware.integration.ota.model;
 
 import com.witbooking.middleware.integration.booking.model.Constants;
-
-import javax.xml.bind.annotation.*;
-import javax.xml.datatype.XMLGregorianCalendar;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.XMLGregorianCalendar;
 
 /**
  * <p>Java class for HotelReservationIDsType complex type.
@@ -57,14 +61,14 @@ import java.util.List;
 public class HotelReservationIDsType {
     
     @XmlElement(name = "HotelReservationID", required = true)
-    protected List<HotelReservationID> hotelReservationID;
-
+    protected List<HotelReservationIDsType.HotelReservationID> hotelReservationID;
+    
     public HotelReservationIDsType() {
-        this.hotelReservationID = new ArrayList<HotelReservationID>();
+        this.hotelReservationID = new ArrayList<HotelReservationIDsType.HotelReservationID>();
     }
-
+    
     public HotelReservationIDsType(final String reservationId) {
-        this.hotelReservationID = new ArrayList<HotelReservationID>();
+        this.hotelReservationID = new ArrayList<HotelReservationIDsType.HotelReservationID>();
         this.hotelReservationID.add(new HotelReservationID(reservationId));
     }
 
@@ -90,9 +94,9 @@ public class HotelReservationIDsType {
      *
      *
      */
-    public List<HotelReservationID> getHotelReservationID() {
+    public List<HotelReservationIDsType.HotelReservationID> getHotelReservationID() {
         if (hotelReservationID == null) {
-            hotelReservationID = new ArrayList<HotelReservationID>();
+            hotelReservationID = new ArrayList<HotelReservationIDsType.HotelReservationID>();
         }
         return this.hotelReservationID;
     }

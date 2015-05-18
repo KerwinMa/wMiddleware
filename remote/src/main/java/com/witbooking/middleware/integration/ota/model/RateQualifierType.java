@@ -8,9 +8,14 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -94,11 +99,11 @@ public class RateQualifierType {
 
     /**
      * Gets the value of the promoDesc property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getPromoDesc() {
         return promoDesc;
@@ -106,11 +111,11 @@ public class RateQualifierType {
 
     /**
      * Sets the value of the promoDesc property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setPromoDesc(String value) {
         this.promoDesc = value;
@@ -118,11 +123,11 @@ public class RateQualifierType {
 
     /**
      * Gets the value of the rateComments property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link RateQualifierType.RateComments }
-     *
+     *     
      */
     public RateQualifierType.RateComments getRateComments() {
         return rateComments;
@@ -130,11 +135,11 @@ public class RateQualifierType {
 
     /**
      * Sets the value of the rateComments property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link RateQualifierType.RateComments }
-     *
+     *     
      */
     public void setRateComments(RateQualifierType.RateComments value) {
         this.rateComments = value;
@@ -142,11 +147,11 @@ public class RateQualifierType {
 
     /**
      * Gets the value of the arriveByFlight property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link Boolean }
-     *
+     *     
      */
     public Boolean isArriveByFlight() {
         return arriveByFlight;
@@ -154,11 +159,11 @@ public class RateQualifierType {
 
     /**
      * Sets the value of the arriveByFlight property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *
+     *     
      */
     public void setArriveByFlight(Boolean value) {
         this.arriveByFlight = value;
@@ -166,11 +171,11 @@ public class RateQualifierType {
 
     /**
      * Gets the value of the rateAuthorizationCode property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getRateAuthorizationCode() {
         return rateAuthorizationCode;
@@ -178,11 +183,11 @@ public class RateQualifierType {
 
     /**
      * Sets the value of the rateAuthorizationCode property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setRateAuthorizationCode(String value) {
         this.rateAuthorizationCode = value;
@@ -190,11 +195,11 @@ public class RateQualifierType {
 
     /**
      * Gets the value of the vendorRateID property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getVendorRateID() {
         return vendorRateID;
@@ -202,11 +207,11 @@ public class RateQualifierType {
 
     /**
      * Sets the value of the vendorRateID property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setVendorRateID(String value) {
         this.vendorRateID = value;
@@ -214,11 +219,11 @@ public class RateQualifierType {
 
     /**
      * Gets the value of the travelPurpose property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getTravelPurpose() {
         return travelPurpose;
@@ -226,11 +231,11 @@ public class RateQualifierType {
 
     /**
      * Sets the value of the travelPurpose property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setTravelPurpose(String value) {
         this.travelPurpose = value;
@@ -238,11 +243,11 @@ public class RateQualifierType {
 
     /**
      * Gets the value of the rateCategory property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getRateCategory() {
         return rateCategory;
@@ -250,11 +255,11 @@ public class RateQualifierType {
 
     /**
      * Sets the value of the rateCategory property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setRateCategory(String value) {
         this.rateCategory = value;
@@ -262,11 +267,11 @@ public class RateQualifierType {
 
     /**
      * Gets the value of the corpDiscountNmbr property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getCorpDiscountNmbr() {
         return corpDiscountNmbr;
@@ -274,11 +279,11 @@ public class RateQualifierType {
 
     /**
      * Sets the value of the corpDiscountNmbr property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setCorpDiscountNmbr(String value) {
         this.corpDiscountNmbr = value;
@@ -286,11 +291,11 @@ public class RateQualifierType {
 
     /**
      * Gets the value of the promotionCode property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getPromotionCode() {
         return promotionCode;
@@ -298,11 +303,11 @@ public class RateQualifierType {
 
     /**
      * Sets the value of the promotionCode property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setPromotionCode(String value) {
         this.promotionCode = value;
@@ -310,25 +315,25 @@ public class RateQualifierType {
 
     /**
      * Gets the value of the promotionVendorCode property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the promotionVendorCode property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getPromotionVendorCode().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link String }
-     *
-     *
+     * 
+     * 
      */
     public List<String> getPromotionVendorCode() {
         if (promotionVendorCode == null) {
@@ -339,11 +344,11 @@ public class RateQualifierType {
 
     /**
      * Gets the value of the rateQualifier property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getRateQualifier() {
         return rateQualifier;
@@ -351,11 +356,11 @@ public class RateQualifierType {
 
     /**
      * Sets the value of the rateQualifier property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setRateQualifier(String value) {
         this.rateQualifier = value;
@@ -363,11 +368,11 @@ public class RateQualifierType {
 
     /**
      * Gets the value of the ratePeriod property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link RatePeriodSimpleType }
-     *
+     *     
      */
     public RatePeriodSimpleType getRatePeriod() {
         return ratePeriod;
@@ -375,11 +380,11 @@ public class RateQualifierType {
 
     /**
      * Sets the value of the ratePeriod property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link RatePeriodSimpleType }
-     *
+     *     
      */
     public void setRatePeriod(RatePeriodSimpleType value) {
         this.ratePeriod = value;
@@ -387,11 +392,11 @@ public class RateQualifierType {
 
     /**
      * Gets the value of the guaranteedInd property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link Boolean }
-     *
+     *     
      */
     public Boolean isGuaranteedInd() {
         return guaranteedInd;
@@ -399,11 +404,11 @@ public class RateQualifierType {
 
     /**
      * Sets the value of the guaranteedInd property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *
+     *     
      */
     public void setGuaranteedInd(Boolean value) {
         this.guaranteedInd = value;
@@ -412,9 +417,9 @@ public class RateQualifierType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -434,8 +439,8 @@ public class RateQualifierType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -444,33 +449,33 @@ public class RateQualifierType {
     public static class RateComments {
 
         @XmlElement(name = "RateComment", required = true)
-        protected List<RateComment> rateComment;
+        protected List<RateQualifierType.RateComments.RateComment> rateComment;
 
         /**
          * Gets the value of the rateComment property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the rateComment property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getRateComment().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link RateQualifierType.RateComments.RateComment }
-         *
-         *
+         * 
+         * 
          */
-        public List<RateComment> getRateComment() {
+        public List<RateQualifierType.RateComments.RateComment> getRateComment() {
             if (rateComment == null) {
-                rateComment = new ArrayList<RateComment>();
+                rateComment = new ArrayList<RateQualifierType.RateComments.RateComment>();
             }
             return this.rateComment;
         }

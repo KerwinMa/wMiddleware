@@ -8,10 +8,15 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
+import java.math.BigDecimal;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import java.math.BigDecimal;
 
 
 /**
@@ -130,11 +135,11 @@ public class DonationType {
 
     /**
      * Gets the value of the frontOfficeInfo property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link DonationType.FrontOfficeInfo }
-     *
+     *     
      */
     public DonationType.FrontOfficeInfo getFrontOfficeInfo() {
         return frontOfficeInfo;
@@ -142,11 +147,11 @@ public class DonationType {
 
     /**
      * Sets the value of the frontOfficeInfo property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link DonationType.FrontOfficeInfo }
-     *
+     *     
      */
     public void setFrontOfficeInfo(DonationType.FrontOfficeInfo value) {
         this.frontOfficeInfo = value;
@@ -154,11 +159,11 @@ public class DonationType {
 
     /**
      * Gets the value of the creditCardInfo property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link DonationType.CreditCardInfo }
-     *
+     *     
      */
     public DonationType.CreditCardInfo getCreditCardInfo() {
         return creditCardInfo;
@@ -166,11 +171,11 @@ public class DonationType {
 
     /**
      * Sets the value of the creditCardInfo property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link DonationType.CreditCardInfo }
-     *
+     *     
      */
     public void setCreditCardInfo(DonationType.CreditCardInfo value) {
         this.creditCardInfo = value;
@@ -178,11 +183,11 @@ public class DonationType {
 
     /**
      * Gets the value of the donorInfo property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link DonationType.DonorInfo }
-     *
+     *     
      */
     public DonationType.DonorInfo getDonorInfo() {
         return donorInfo;
@@ -190,11 +195,11 @@ public class DonationType {
 
     /**
      * Sets the value of the donorInfo property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link DonationType.DonorInfo }
-     *
+     *     
      */
     public void setDonorInfo(DonationType.DonorInfo value) {
         this.donorInfo = value;
@@ -202,11 +207,11 @@ public class DonationType {
 
     /**
      * Gets the value of the language property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getLanguage() {
         return language;
@@ -214,11 +219,11 @@ public class DonationType {
 
     /**
      * Sets the value of the language property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setLanguage(String value) {
         this.language = value;
@@ -226,11 +231,11 @@ public class DonationType {
 
     /**
      * Gets the value of the gdsid property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getGDSID() {
         return gdsid;
@@ -238,11 +243,11 @@ public class DonationType {
 
     /**
      * Sets the value of the gdsid property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setGDSID(String value) {
         this.gdsid = value;
@@ -250,7 +255,7 @@ public class DonationType {
 
     /**
      * Gets the value of the askForReceiptInd property.
-     *
+     * 
      */
     public boolean isAskForReceiptInd() {
         return askForReceiptInd;
@@ -258,7 +263,7 @@ public class DonationType {
 
     /**
      * Sets the value of the askForReceiptInd property.
-     *
+     * 
      */
     public void setAskForReceiptInd(boolean value) {
         this.askForReceiptInd = value;
@@ -266,11 +271,11 @@ public class DonationType {
 
     /**
      * Gets the value of the countryCode property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getCountryCode() {
         return countryCode;
@@ -278,11 +283,11 @@ public class DonationType {
 
     /**
      * Sets the value of the countryCode property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setCountryCode(String value) {
         this.countryCode = value;
@@ -290,11 +295,11 @@ public class DonationType {
 
     /**
      * Gets the value of the stateCode property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getStateCode() {
         return stateCode;
@@ -302,11 +307,11 @@ public class DonationType {
 
     /**
      * Sets the value of the stateCode property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setStateCode(String value) {
         this.stateCode = value;
@@ -315,9 +320,9 @@ public class DonationType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -328,8 +333,8 @@ public class DonationType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
@@ -344,11 +349,11 @@ public class DonationType {
 
         /**
          * Gets the value of the currency property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getCurrency() {
             return currency;
@@ -356,11 +361,11 @@ public class DonationType {
 
         /**
          * Sets the value of the currency property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setCurrency(String value) {
             this.currency = value;
@@ -368,11 +373,11 @@ public class DonationType {
 
         /**
          * Gets the value of the donationAmount property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link BigDecimal }
-         *
+         *     
          */
         public BigDecimal getDonationAmount() {
             return donationAmount;
@@ -380,11 +385,11 @@ public class DonationType {
 
         /**
          * Sets the value of the donationAmount property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link BigDecimal }
-         *
+         *     
          */
         public void setDonationAmount(BigDecimal value) {
             this.donationAmount = value;
@@ -395,9 +400,9 @@ public class DonationType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -425,8 +430,8 @@ public class DonationType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -442,11 +447,11 @@ public class DonationType {
 
         /**
          * Gets the value of the name property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link DonationType.DonorInfo.Name }
-         *
+         *     
          */
         public DonationType.DonorInfo.Name getName() {
             return name;
@@ -454,11 +459,11 @@ public class DonationType {
 
         /**
          * Sets the value of the name property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link DonationType.DonorInfo.Name }
-         *
+         *     
          */
         public void setName(DonationType.DonorInfo.Name value) {
             this.name = value;
@@ -466,11 +471,11 @@ public class DonationType {
 
         /**
          * Gets the value of the contactInfo property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link DonationType.DonorInfo.ContactInfo }
-         *
+         *     
          */
         public DonationType.DonorInfo.ContactInfo getContactInfo() {
             return contactInfo;
@@ -478,11 +483,11 @@ public class DonationType {
 
         /**
          * Sets the value of the contactInfo property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link DonationType.DonorInfo.ContactInfo }
-         *
+         *     
          */
         public void setContactInfo(DonationType.DonorInfo.ContactInfo value) {
             this.contactInfo = value;

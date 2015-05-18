@@ -2,6 +2,11 @@ package com.witbooking.middleware.model.dynamicPriceVariation;
 
 import com.witbooking.middleware.exceptions.model.IncompatibleTypesException;
 import com.witbooking.middleware.exceptions.model.RangeException;
+import org.joda.time.LocalTime;
+import org.joda.time.ReadableInstant;
+import org.joda.time.ReadablePartial;
+import org.joda.time.base.AbstractInstant;
+import org.joda.time.base.AbstractPartial;
 
 import java.io.Serializable;
 import java.util.Arrays;

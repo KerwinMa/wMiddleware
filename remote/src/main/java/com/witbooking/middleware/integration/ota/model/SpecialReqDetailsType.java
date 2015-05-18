@@ -8,10 +8,16 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.datatype.XMLGregorianCalendar;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.XmlValue;
+import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
@@ -163,11 +169,11 @@ public class SpecialReqDetailsType {
 
     /**
      * Gets the value of the seatRequests property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link SpecialReqDetailsType.SeatRequests }
-     *
+     *     
      */
     public SpecialReqDetailsType.SeatRequests getSeatRequests() {
         return seatRequests;
@@ -175,11 +181,11 @@ public class SpecialReqDetailsType {
 
     /**
      * Sets the value of the seatRequests property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link SpecialReqDetailsType.SeatRequests }
-     *
+     *     
      */
     public void setSeatRequests(SpecialReqDetailsType.SeatRequests value) {
         this.seatRequests = value;
@@ -187,11 +193,11 @@ public class SpecialReqDetailsType {
 
     /**
      * Gets the value of the specialServiceRequests property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link SpecialReqDetailsType.SpecialServiceRequests }
-     *
+     *     
      */
     public SpecialReqDetailsType.SpecialServiceRequests getSpecialServiceRequests() {
         return specialServiceRequests;
@@ -199,11 +205,11 @@ public class SpecialReqDetailsType {
 
     /**
      * Sets the value of the specialServiceRequests property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link SpecialReqDetailsType.SpecialServiceRequests }
-     *
+     *     
      */
     public void setSpecialServiceRequests(SpecialReqDetailsType.SpecialServiceRequests value) {
         this.specialServiceRequests = value;
@@ -211,11 +217,11 @@ public class SpecialReqDetailsType {
 
     /**
      * Gets the value of the otherServiceInformations property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link SpecialReqDetailsType.OtherServiceInformations }
-     *
+     *     
      */
     public SpecialReqDetailsType.OtherServiceInformations getOtherServiceInformations() {
         return otherServiceInformations;
@@ -223,11 +229,11 @@ public class SpecialReqDetailsType {
 
     /**
      * Sets the value of the otherServiceInformations property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link SpecialReqDetailsType.OtherServiceInformations }
-     *
+     *     
      */
     public void setOtherServiceInformations(SpecialReqDetailsType.OtherServiceInformations value) {
         this.otherServiceInformations = value;
@@ -235,11 +241,11 @@ public class SpecialReqDetailsType {
 
     /**
      * Gets the value of the remarks property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link SpecialReqDetailsType.Remarks }
-     *
+     *     
      */
     public SpecialReqDetailsType.Remarks getRemarks() {
         return remarks;
@@ -247,11 +253,11 @@ public class SpecialReqDetailsType {
 
     /**
      * Sets the value of the remarks property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link SpecialReqDetailsType.Remarks }
-     *
+     *     
      */
     public void setRemarks(SpecialReqDetailsType.Remarks value) {
         this.remarks = value;
@@ -259,11 +265,11 @@ public class SpecialReqDetailsType {
 
     /**
      * Gets the value of the specialRemarks property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link SpecialReqDetailsType.SpecialRemarks }
-     *
+     *     
      */
     public SpecialReqDetailsType.SpecialRemarks getSpecialRemarks() {
         return specialRemarks;
@@ -271,11 +277,11 @@ public class SpecialReqDetailsType {
 
     /**
      * Sets the value of the specialRemarks property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link SpecialReqDetailsType.SpecialRemarks }
-     *
+     *     
      */
     public void setSpecialRemarks(SpecialReqDetailsType.SpecialRemarks value) {
         this.specialRemarks = value;
@@ -284,9 +290,9 @@ public class SpecialReqDetailsType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -307,8 +313,8 @@ public class SpecialReqDetailsType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -317,33 +323,33 @@ public class SpecialReqDetailsType {
     public static class OtherServiceInformations {
 
         @XmlElement(name = "OtherServiceInformation", required = true)
-        protected List<OtherServiceInformation> otherServiceInformation;
+        protected List<SpecialReqDetailsType.OtherServiceInformations.OtherServiceInformation> otherServiceInformation;
 
         /**
          * Gets the value of the otherServiceInformation property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the otherServiceInformation property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getOtherServiceInformation().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link SpecialReqDetailsType.OtherServiceInformations.OtherServiceInformation }
-         *
-         *
+         * 
+         * 
          */
-        public List<OtherServiceInformation> getOtherServiceInformation() {
+        public List<SpecialReqDetailsType.OtherServiceInformations.OtherServiceInformation> getOtherServiceInformation() {
             if (otherServiceInformation == null) {
-                otherServiceInformation = new ArrayList<OtherServiceInformation>();
+                otherServiceInformation = new ArrayList<SpecialReqDetailsType.OtherServiceInformations.OtherServiceInformation>();
             }
             return this.otherServiceInformation;
         }
@@ -351,9 +357,9 @@ public class SpecialReqDetailsType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -364,8 +370,8 @@ public class SpecialReqDetailsType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
@@ -380,11 +386,11 @@ public class SpecialReqDetailsType {
 
             /**
              * Gets the value of the rph property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getRPH() {
                 return rph;
@@ -392,11 +398,11 @@ public class SpecialReqDetailsType {
 
             /**
              * Sets the value of the rph property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setRPH(String value) {
                 this.rph = value;
@@ -404,11 +410,11 @@ public class SpecialReqDetailsType {
 
             /**
              * Gets the value of the operation property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link ActionType }
-             *
+             *     
              */
             public ActionType getOperation() {
                 return operation;
@@ -416,11 +422,11 @@ public class SpecialReqDetailsType {
 
             /**
              * Sets the value of the operation property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link ActionType }
-             *
+             *     
              */
             public void setOperation(ActionType value) {
                 this.operation = value;
@@ -433,9 +439,9 @@ public class SpecialReqDetailsType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -456,8 +462,8 @@ public class SpecialReqDetailsType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -466,33 +472,33 @@ public class SpecialReqDetailsType {
     public static class Remarks {
 
         @XmlElement(name = "Remark", required = true)
-        protected List<Remark> remark;
+        protected List<SpecialReqDetailsType.Remarks.Remark> remark;
 
         /**
          * Gets the value of the remark property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the remark property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getRemark().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link SpecialReqDetailsType.Remarks.Remark }
-         *
-         *
+         * 
+         * 
          */
-        public List<Remark> getRemark() {
+        public List<SpecialReqDetailsType.Remarks.Remark> getRemark() {
             if (remark == null) {
-                remark = new ArrayList<Remark>();
+                remark = new ArrayList<SpecialReqDetailsType.Remarks.Remark>();
             }
             return this.remark;
         }
@@ -500,9 +506,9 @@ public class SpecialReqDetailsType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -513,8 +519,8 @@ public class SpecialReqDetailsType {
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
@@ -531,11 +537,11 @@ public class SpecialReqDetailsType {
 
             /**
              * Gets the value of the value property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getValue() {
                 return value;
@@ -543,11 +549,11 @@ public class SpecialReqDetailsType {
 
             /**
              * Sets the value of the value property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setValue(String value) {
                 this.value = value;
@@ -555,11 +561,11 @@ public class SpecialReqDetailsType {
 
             /**
              * Gets the value of the rph property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getRPH() {
                 return rph;
@@ -567,11 +573,11 @@ public class SpecialReqDetailsType {
 
             /**
              * Sets the value of the rph property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setRPH(String value) {
                 this.rph = value;
@@ -579,11 +585,11 @@ public class SpecialReqDetailsType {
 
             /**
              * Gets the value of the operation property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link ActionType }
-             *
+             *     
              */
             public ActionType getOperation() {
                 return operation;
@@ -591,11 +597,11 @@ public class SpecialReqDetailsType {
 
             /**
              * Sets the value of the operation property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link ActionType }
-             *
+             *     
              */
             public void setOperation(ActionType value) {
                 this.operation = value;
@@ -608,9 +614,9 @@ public class SpecialReqDetailsType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -632,8 +638,8 @@ public class SpecialReqDetailsType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -642,33 +648,33 @@ public class SpecialReqDetailsType {
     public static class SeatRequests {
 
         @XmlElement(name = "SeatRequest", required = true)
-        protected List<SeatRequest> seatRequest;
+        protected List<SpecialReqDetailsType.SeatRequests.SeatRequest> seatRequest;
 
         /**
          * Gets the value of the seatRequest property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the seatRequest property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getSeatRequest().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link SpecialReqDetailsType.SeatRequests.SeatRequest }
-         *
-         *
+         * 
+         * 
          */
-        public List<SeatRequest> getSeatRequest() {
+        public List<SpecialReqDetailsType.SeatRequests.SeatRequest> getSeatRequest() {
             if (seatRequest == null) {
-                seatRequest = new ArrayList<SeatRequest>();
+                seatRequest = new ArrayList<SpecialReqDetailsType.SeatRequests.SeatRequest>();
             }
             return this.seatRequest;
         }
@@ -676,9 +682,9 @@ public class SpecialReqDetailsType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -690,8 +696,8 @@ public class SpecialReqDetailsType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
@@ -708,25 +714,25 @@ public class SpecialReqDetailsType {
 
             /**
              * Gets the value of the travelerRefNumberRPHList property.
-             *
+             * 
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the travelerRefNumberRPHList property.
-             *
+             * 
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getTravelerRefNumberRPHList().add(newItem);
              * </pre>
-             *
-             *
+             * 
+             * 
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link String }
-             *
-             *
+             * 
+             * 
              */
             public List<String> getTravelerRefNumberRPHList() {
                 if (travelerRefNumberRPHList == null) {
@@ -737,25 +743,25 @@ public class SpecialReqDetailsType {
 
             /**
              * Gets the value of the flightRefNumberRPHList property.
-             *
+             * 
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the flightRefNumberRPHList property.
-             *
+             * 
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getFlightRefNumberRPHList().add(newItem);
              * </pre>
-             *
-             *
+             * 
+             * 
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link String }
-             *
-             *
+             * 
+             * 
              */
             public List<String> getFlightRefNumberRPHList() {
                 if (flightRefNumberRPHList == null) {
@@ -766,11 +772,11 @@ public class SpecialReqDetailsType {
 
             /**
              * Gets the value of the partialSeatingInd property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link Boolean }
-             *
+             *     
              */
             public Boolean isPartialSeatingInd() {
                 return partialSeatingInd;
@@ -778,11 +784,11 @@ public class SpecialReqDetailsType {
 
             /**
              * Sets the value of the partialSeatingInd property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link Boolean }
-             *
+             *     
              */
             public void setPartialSeatingInd(Boolean value) {
                 this.partialSeatingInd = value;
@@ -795,9 +801,9 @@ public class SpecialReqDetailsType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -821,8 +827,8 @@ public class SpecialReqDetailsType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -831,33 +837,33 @@ public class SpecialReqDetailsType {
     public static class SpecialRemarks {
 
         @XmlElement(name = "SpecialRemark", required = true)
-        protected List<SpecialRemark> specialRemark;
+        protected List<SpecialReqDetailsType.SpecialRemarks.SpecialRemark> specialRemark;
 
         /**
          * Gets the value of the specialRemark property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the specialRemark property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getSpecialRemark().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link SpecialReqDetailsType.SpecialRemarks.SpecialRemark }
-         *
-         *
+         * 
+         * 
          */
-        public List<SpecialRemark> getSpecialRemark() {
+        public List<SpecialReqDetailsType.SpecialRemarks.SpecialRemark> getSpecialRemark() {
             if (specialRemark == null) {
-                specialRemark = new ArrayList<SpecialRemark>();
+                specialRemark = new ArrayList<SpecialReqDetailsType.SpecialRemarks.SpecialRemark>();
             }
             return this.specialRemark;
         }
@@ -865,9 +871,9 @@ public class SpecialReqDetailsType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -881,8 +887,8 @@ public class SpecialReqDetailsType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
@@ -901,11 +907,11 @@ public class SpecialReqDetailsType {
 
             /**
              * Gets the value of the flightLeg property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link FlightLegType }
-             *
+             *     
              */
             public FlightLegType getFlightLeg() {
                 return flightLeg;
@@ -913,11 +919,11 @@ public class SpecialReqDetailsType {
 
             /**
              * Sets the value of the flightLeg property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link FlightLegType }
-             *
+             *     
              */
             public void setFlightLeg(FlightLegType value) {
                 this.flightLeg = value;
@@ -925,11 +931,11 @@ public class SpecialReqDetailsType {
 
             /**
              * Gets the value of the operation property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link ActionType }
-             *
+             *     
              */
             public ActionType getOperation() {
                 return operation;
@@ -937,11 +943,11 @@ public class SpecialReqDetailsType {
 
             /**
              * Sets the value of the operation property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link ActionType }
-             *
+             *     
              */
             public void setOperation(ActionType value) {
                 this.operation = value;
@@ -949,11 +955,11 @@ public class SpecialReqDetailsType {
 
             /**
              * Gets the value of the rph property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getRPH() {
                 return rph;
@@ -961,11 +967,11 @@ public class SpecialReqDetailsType {
 
             /**
              * Sets the value of the rph property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setRPH(String value) {
                 this.rph = value;
@@ -978,9 +984,9 @@ public class SpecialReqDetailsType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -1005,8 +1011,8 @@ public class SpecialReqDetailsType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -1015,33 +1021,33 @@ public class SpecialReqDetailsType {
     public static class SpecialServiceRequests {
 
         @XmlElement(name = "SpecialServiceRequest", required = true)
-        protected List<SpecialServiceRequest> specialServiceRequest;
+        protected List<SpecialReqDetailsType.SpecialServiceRequests.SpecialServiceRequest> specialServiceRequest;
 
         /**
          * Gets the value of the specialServiceRequest property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the specialServiceRequest property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getSpecialServiceRequest().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link SpecialReqDetailsType.SpecialServiceRequests.SpecialServiceRequest }
-         *
-         *
+         * 
+         * 
          */
-        public List<SpecialServiceRequest> getSpecialServiceRequest() {
+        public List<SpecialReqDetailsType.SpecialServiceRequests.SpecialServiceRequest> getSpecialServiceRequest() {
             if (specialServiceRequest == null) {
-                specialServiceRequest = new ArrayList<SpecialServiceRequest>();
+                specialServiceRequest = new ArrayList<SpecialReqDetailsType.SpecialServiceRequests.SpecialServiceRequest>();
             }
             return this.specialServiceRequest;
         }

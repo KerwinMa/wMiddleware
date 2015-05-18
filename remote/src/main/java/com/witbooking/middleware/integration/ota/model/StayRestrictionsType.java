@@ -8,7 +8,11 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -80,11 +84,11 @@ public class StayRestrictionsType {
 
     /**
      * Gets the value of the minimumStay property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link StayRestrictionsType.MinimumStay }
-     *
+     *     
      */
     public StayRestrictionsType.MinimumStay getMinimumStay() {
         return minimumStay;
@@ -92,11 +96,11 @@ public class StayRestrictionsType {
 
     /**
      * Sets the value of the minimumStay property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link StayRestrictionsType.MinimumStay }
-     *
+     *     
      */
     public void setMinimumStay(StayRestrictionsType.MinimumStay value) {
         this.minimumStay = value;
@@ -104,11 +108,11 @@ public class StayRestrictionsType {
 
     /**
      * Gets the value of the maximumStay property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link StayRestrictionsType.MaximumStay }
-     *
+     *     
      */
     public StayRestrictionsType.MaximumStay getMaximumStay() {
         return maximumStay;
@@ -116,11 +120,11 @@ public class StayRestrictionsType {
 
     /**
      * Sets the value of the maximumStay property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link StayRestrictionsType.MaximumStay }
-     *
+     *     
      */
     public void setMaximumStay(StayRestrictionsType.MaximumStay value) {
         this.maximumStay = value;

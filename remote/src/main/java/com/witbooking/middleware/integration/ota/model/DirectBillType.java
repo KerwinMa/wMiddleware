@@ -8,7 +8,12 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
@@ -87,11 +92,11 @@ public class DirectBillType {
 
     /**
      * Gets the value of the companyName property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link DirectBillType.CompanyName }
-     *
+     *     
      */
     public DirectBillType.CompanyName getCompanyName() {
         return companyName;
@@ -99,11 +104,11 @@ public class DirectBillType {
 
     /**
      * Sets the value of the companyName property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link DirectBillType.CompanyName }
-     *
+     *     
      */
     public void setCompanyName(DirectBillType.CompanyName value) {
         this.companyName = value;
@@ -111,11 +116,11 @@ public class DirectBillType {
 
     /**
      * Gets the value of the address property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link AddressInfoType }
-     *
+     *     
      */
     public AddressInfoType getAddress() {
         return address;
@@ -123,11 +128,11 @@ public class DirectBillType {
 
     /**
      * Sets the value of the address property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link AddressInfoType }
-     *
+     *     
      */
     public void setAddress(AddressInfoType value) {
         this.address = value;
@@ -135,11 +140,11 @@ public class DirectBillType {
 
     /**
      * Gets the value of the email property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link EmailType }
-     *
+     *     
      */
     public EmailType getEmail() {
         return email;
@@ -147,11 +152,11 @@ public class DirectBillType {
 
     /**
      * Sets the value of the email property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link EmailType }
-     *
+     *     
      */
     public void setEmail(EmailType value) {
         this.email = value;
@@ -159,11 +164,11 @@ public class DirectBillType {
 
     /**
      * Gets the value of the telephone property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link DirectBillType.Telephone }
-     *
+     *     
      */
     public DirectBillType.Telephone getTelephone() {
         return telephone;
@@ -171,11 +176,11 @@ public class DirectBillType {
 
     /**
      * Sets the value of the telephone property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link DirectBillType.Telephone }
-     *
+     *     
      */
     public void setTelephone(DirectBillType.Telephone value) {
         this.telephone = value;

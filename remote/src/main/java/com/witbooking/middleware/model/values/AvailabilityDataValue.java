@@ -48,7 +48,7 @@ public class AvailabilityDataValue extends DataValue<Integer> {
    }
      
    public AvailabilityDataValue(String value, int typeValue) throws DataValueFormatException {
-      this(value, EnumDataValueType.getValidDataValueType(typeValue));
+      this(value,EnumDataValueType.getValidDataValueType(typeValue));
    }
 
    public AvailabilityDataValue(String value, EnumDataValueType typeValue) throws DataValueFormatException {

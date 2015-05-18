@@ -8,7 +8,11 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
@@ -51,11 +55,11 @@ public class PhonePrefType {
 
     /**
      * Gets the value of the telephone property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link PhonePrefType.Telephone }
-     *
+     *     
      */
     public PhonePrefType.Telephone getTelephone() {
         return telephone;
@@ -63,11 +67,11 @@ public class PhonePrefType {
 
     /**
      * Sets the value of the telephone property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link PhonePrefType.Telephone }
-     *
+     *     
      */
     public void setTelephone(PhonePrefType.Telephone value) {
         this.telephone = value;

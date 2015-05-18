@@ -8,7 +8,12 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -82,11 +87,11 @@ public class RuleInfoType {
 
     /**
      * Gets the value of the resTicketingRules property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link RuleInfoType.ResTicketingRules }
-     *
+     *     
      */
     public RuleInfoType.ResTicketingRules getResTicketingRules() {
         return resTicketingRules;
@@ -94,11 +99,11 @@ public class RuleInfoType {
 
     /**
      * Sets the value of the resTicketingRules property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link RuleInfoType.ResTicketingRules }
-     *
+     *     
      */
     public void setResTicketingRules(RuleInfoType.ResTicketingRules value) {
         this.resTicketingRules = value;
@@ -106,11 +111,11 @@ public class RuleInfoType {
 
     /**
      * Gets the value of the lengthOfStayRules property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link StayRestrictionsType }
-     *
+     *     
      */
     public StayRestrictionsType getLengthOfStayRules() {
         return lengthOfStayRules;
@@ -118,11 +123,11 @@ public class RuleInfoType {
 
     /**
      * Sets the value of the lengthOfStayRules property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link StayRestrictionsType }
-     *
+     *     
      */
     public void setLengthOfStayRules(StayRestrictionsType value) {
         this.lengthOfStayRules = value;
@@ -130,11 +135,11 @@ public class RuleInfoType {
 
     /**
      * Gets the value of the chargesRules property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link RuleInfoType.ChargesRules }
-     *
+     *     
      */
     public RuleInfoType.ChargesRules getChargesRules() {
         return chargesRules;
@@ -142,11 +147,11 @@ public class RuleInfoType {
 
     /**
      * Sets the value of the chargesRules property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link RuleInfoType.ChargesRules }
-     *
+     *     
      */
     public void setChargesRules(RuleInfoType.ChargesRules value) {
         this.chargesRules = value;
@@ -155,9 +160,9 @@ public class RuleInfoType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -170,8 +175,8 @@ public class RuleInfoType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -187,11 +192,11 @@ public class RuleInfoType {
 
         /**
          * Gets the value of the voluntaryChanges property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link VoluntaryChangesType }
-         *
+         *     
          */
         public VoluntaryChangesType getVoluntaryChanges() {
             return voluntaryChanges;
@@ -199,11 +204,11 @@ public class RuleInfoType {
 
         /**
          * Sets the value of the voluntaryChanges property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link VoluntaryChangesType }
-         *
+         *     
          */
         public void setVoluntaryChanges(VoluntaryChangesType value) {
             this.voluntaryChanges = value;
@@ -211,11 +216,11 @@ public class RuleInfoType {
 
         /**
          * Gets the value of the voluntaryRefunds property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link VoluntaryChangesType }
-         *
+         *     
          */
         public VoluntaryChangesType getVoluntaryRefunds() {
             return voluntaryRefunds;
@@ -223,11 +228,11 @@ public class RuleInfoType {
 
         /**
          * Sets the value of the voluntaryRefunds property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link VoluntaryChangesType }
-         *
+         *     
          */
         public void setVoluntaryRefunds(VoluntaryChangesType value) {
             this.voluntaryRefunds = value;
@@ -238,9 +243,9 @@ public class RuleInfoType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -261,8 +266,8 @@ public class RuleInfoType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -275,11 +280,11 @@ public class RuleInfoType {
 
         /**
          * Gets the value of the advResTicketing property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link RuleInfoType.ResTicketingRules.AdvResTicketing }
-         *
+         *     
          */
         public RuleInfoType.ResTicketingRules.AdvResTicketing getAdvResTicketing() {
             return advResTicketing;
@@ -287,11 +292,11 @@ public class RuleInfoType {
 
         /**
          * Sets the value of the advResTicketing property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link RuleInfoType.ResTicketingRules.AdvResTicketing }
-         *
+         *     
          */
         public void setAdvResTicketing(RuleInfoType.ResTicketingRules.AdvResTicketing value) {
             this.advResTicketing = value;

@@ -31,7 +31,12 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.math.MathContext;
 import java.math.RoundingMode;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Stack;
 
 /**
 * <h1>EvalEx - Java Expression Evaluator</h1>
@@ -208,12 +213,12 @@ public class Expression {
 	/**
 	 * All defined operators with name and implementation.
 	 */
-	private Map<String, Operator> operators = new HashMap<String, Operator>();
+	private Map<String, Operator> operators = new HashMap<String, Expression.Operator>();
 
 	/**
 	 * All defined functions with name and implementation.
 	 */
-	private Map<String, Function> functions = new HashMap<String, Function>();
+	private Map<String, Function> functions = new HashMap<String, Expression.Function>();
 
 	/**
 	 * All defined variables with name and value.

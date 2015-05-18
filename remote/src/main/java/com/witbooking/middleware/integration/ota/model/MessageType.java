@@ -8,12 +8,17 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.datatype.XMLGregorianCalendar;
-import java.math.BigDecimal;
-import java.math.BigInteger;
 
 
 /**
@@ -116,11 +121,11 @@ public class MessageType {
 
     /**
      * Gets the value of the originalPayloadStdAttributes property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link MessageType.OriginalPayloadStdAttributes }
-     *
+     *     
      */
     public MessageType.OriginalPayloadStdAttributes getOriginalPayloadStdAttributes() {
         return originalPayloadStdAttributes;
@@ -128,11 +133,11 @@ public class MessageType {
 
     /**
      * Sets the value of the originalPayloadStdAttributes property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link MessageType.OriginalPayloadStdAttributes }
-     *
+     *     
      */
     public void setOriginalPayloadStdAttributes(MessageType.OriginalPayloadStdAttributes value) {
         this.originalPayloadStdAttributes = value;

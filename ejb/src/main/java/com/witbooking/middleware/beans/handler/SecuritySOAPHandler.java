@@ -83,7 +83,7 @@ public class SecuritySOAPHandler
                 if (header == null) {
                     logger.debug("No headers found in the input SOAP request.");
                 } else {
-                    soapMessageContext.put(AUTHN_STAUTS, Boolean.TRUE);
+                    soapMessageContext.put(AUTHN_STAUTS, java.lang.Boolean.TRUE);
                     String login = "";
                     String pass = "";
                     Iterator headerChildElements = header.getChildElements(new QName(AUTHN_URI, AUTHN_LNAME));

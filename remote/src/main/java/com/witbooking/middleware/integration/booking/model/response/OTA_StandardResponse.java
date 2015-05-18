@@ -2,15 +2,12 @@ package com.witbooking.middleware.integration.booking.model.response;
 
 import com.witbooking.middleware.integration.booking.model.Constants;
 
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.*;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
 /**
- *
  * @author Jose Francisco Fiorillo < jffiorillo@gmail.com >
  */
 public abstract class OTA_StandardResponse implements Serializable {
@@ -82,6 +79,18 @@ public abstract class OTA_StandardResponse implements Serializable {
         return ret;
     }
 
+    public boolean findErrorText(String strings) {
+        if (errors == null || errorsEmpty()) {
+            return false;
+        } else {
+            for (Message message : errors.getErrors()) {
+                if (message.getShortText().contains(strings))
+                    return true;
+            }
+            return false;
+        }
+    }
+
 
     public String toStringStandardResponse() {
         final String status = (errors == null) ? "Success" : "Error";
@@ -127,10 +136,19 @@ public abstract class OTA_StandardResponse implements Serializable {
     }
 
     @XmlRootElement(name = "Errors")
+    @XmlAccessorType(XmlAccessType.FIELD)
     public static class Errors implements Serializable {
 
         @XmlElement(name = "Error")
         List<Message> errors;
+
+        public List<Message> getErrors() {
+            return errors;
+        }
+
+        public void setErrors(List<Message> errors) {
+            this.errors = errors;
+        }
 
         public int size() {
             return errors.size();

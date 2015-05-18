@@ -8,9 +8,14 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -58,11 +63,11 @@ public class RevenueCategoryType {
 
     /**
      * Gets the value of the summaryAmount property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link RevenueCategoryType.SummaryAmount }
-     *
+     *     
      */
     public RevenueCategoryType.SummaryAmount getSummaryAmount() {
         return summaryAmount;
@@ -70,11 +75,11 @@ public class RevenueCategoryType {
 
     /**
      * Sets the value of the summaryAmount property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link RevenueCategoryType.SummaryAmount }
-     *
+     *     
      */
     public void setSummaryAmount(RevenueCategoryType.SummaryAmount value) {
         this.summaryAmount = value;

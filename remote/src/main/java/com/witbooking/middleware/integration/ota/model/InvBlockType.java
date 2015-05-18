@@ -8,12 +8,16 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.datatype.Duration;
-import java.util.ArrayList;
-import java.util.List;
 
 
 /**
@@ -164,11 +168,11 @@ public class InvBlockType {
 
     /**
      * Gets the value of the hotelRef property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link InvBlockType.HotelRef }
-     *
+     *     
      */
     public InvBlockType.HotelRef getHotelRef() {
         return hotelRef;
@@ -176,11 +180,11 @@ public class InvBlockType {
 
     /**
      * Sets the value of the hotelRef property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link InvBlockType.HotelRef }
-     *
+     *     
      */
     public void setHotelRef(InvBlockType.HotelRef value) {
         this.hotelRef = value;
@@ -188,11 +192,11 @@ public class InvBlockType {
 
     /**
      * Gets the value of the invBlockDates property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link InvBlockType.InvBlockDates }
-     *
+     *     
      */
     public InvBlockType.InvBlockDates getInvBlockDates() {
         return invBlockDates;
@@ -200,11 +204,11 @@ public class InvBlockType {
 
     /**
      * Sets the value of the invBlockDates property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link InvBlockType.InvBlockDates }
-     *
+     *     
      */
     public void setInvBlockDates(InvBlockType.InvBlockDates value) {
         this.invBlockDates = value;
@@ -212,11 +216,11 @@ public class InvBlockType {
 
     /**
      * Gets the value of the roomTypes property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link InvBlockType.RoomTypes }
-     *
+     *     
      */
     public InvBlockType.RoomTypes getRoomTypes() {
         return roomTypes;
@@ -224,11 +228,11 @@ public class InvBlockType {
 
     /**
      * Sets the value of the roomTypes property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link InvBlockType.RoomTypes }
-     *
+     *     
      */
     public void setRoomTypes(InvBlockType.RoomTypes value) {
         this.roomTypes = value;
@@ -236,11 +240,11 @@ public class InvBlockType {
 
     /**
      * Gets the value of the methodInfo property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link InvBlockType.MethodInfo }
-     *
+     *     
      */
     public InvBlockType.MethodInfo getMethodInfo() {
         return methodInfo;
@@ -248,11 +252,11 @@ public class InvBlockType {
 
     /**
      * Sets the value of the methodInfo property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link InvBlockType.MethodInfo }
-     *
+     *     
      */
     public void setMethodInfo(InvBlockType.MethodInfo value) {
         this.methodInfo = value;
@@ -260,11 +264,11 @@ public class InvBlockType {
 
     /**
      * Gets the value of the blockDescriptions property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link InvBlockType.BlockDescriptions }
-     *
+     *     
      */
     public InvBlockType.BlockDescriptions getBlockDescriptions() {
         return blockDescriptions;
@@ -272,11 +276,11 @@ public class InvBlockType {
 
     /**
      * Sets the value of the blockDescriptions property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link InvBlockType.BlockDescriptions }
-     *
+     *     
      */
     public void setBlockDescriptions(InvBlockType.BlockDescriptions value) {
         this.blockDescriptions = value;
@@ -284,11 +288,11 @@ public class InvBlockType {
 
     /**
      * Gets the value of the contacts property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link InvBlockType.Contacts }
-     *
+     *     
      */
     public InvBlockType.Contacts getContacts() {
         return contacts;
@@ -296,11 +300,11 @@ public class InvBlockType {
 
     /**
      * Sets the value of the contacts property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link InvBlockType.Contacts }
-     *
+     *     
      */
     public void setContacts(InvBlockType.Contacts value) {
         this.contacts = value;
@@ -308,11 +312,11 @@ public class InvBlockType {
 
     /**
      * Gets the value of the destinationSystemCodes property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link DestinationSystemCodesType }
-     *
+     *     
      */
     public DestinationSystemCodesType getDestinationSystemCodes() {
         return destinationSystemCodes;
@@ -320,11 +324,11 @@ public class InvBlockType {
 
     /**
      * Sets the value of the destinationSystemCodes property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link DestinationSystemCodesType }
-     *
+     *     
      */
     public void setDestinationSystemCodes(DestinationSystemCodesType value) {
         this.destinationSystemCodes = value;
@@ -332,11 +336,11 @@ public class InvBlockType {
 
     /**
      * Gets the value of the bookingStatus property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getBookingStatus() {
         return bookingStatus;
@@ -344,11 +348,11 @@ public class InvBlockType {
 
     /**
      * Sets the value of the bookingStatus property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setBookingStatus(String value) {
         this.bookingStatus = value;
@@ -356,11 +360,11 @@ public class InvBlockType {
 
     /**
      * Gets the value of the invBlockTypeCode property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getInvBlockTypeCode() {
         return invBlockTypeCode;
@@ -368,11 +372,11 @@ public class InvBlockType {
 
     /**
      * Sets the value of the invBlockTypeCode property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setInvBlockTypeCode(String value) {
         this.invBlockTypeCode = value;
@@ -380,11 +384,11 @@ public class InvBlockType {
 
     /**
      * Gets the value of the invBlockCode property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getInvBlockCode() {
         return invBlockCode;
@@ -392,11 +396,11 @@ public class InvBlockType {
 
     /**
      * Sets the value of the invBlockCode property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setInvBlockCode(String value) {
         this.invBlockCode = value;
@@ -404,11 +408,11 @@ public class InvBlockType {
 
     /**
      * Gets the value of the invBlockGroupingCode property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getInvBlockGroupingCode() {
         return invBlockGroupingCode;
@@ -416,11 +420,11 @@ public class InvBlockType {
 
     /**
      * Sets the value of the invBlockGroupingCode property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setInvBlockGroupingCode(String value) {
         this.invBlockGroupingCode = value;
@@ -428,11 +432,11 @@ public class InvBlockType {
 
     /**
      * Gets the value of the invBlockName property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getInvBlockName() {
         return invBlockName;
@@ -440,11 +444,11 @@ public class InvBlockType {
 
     /**
      * Sets the value of the invBlockName property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setInvBlockName(String value) {
         this.invBlockName = value;
@@ -452,11 +456,11 @@ public class InvBlockType {
 
     /**
      * Gets the value of the invBlockLongName property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getInvBlockLongName() {
         return invBlockLongName;
@@ -464,11 +468,11 @@ public class InvBlockType {
 
     /**
      * Sets the value of the invBlockLongName property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setInvBlockLongName(String value) {
         this.invBlockLongName = value;
@@ -476,11 +480,11 @@ public class InvBlockType {
 
     /**
      * Gets the value of the invBlockStatusCode property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getInvBlockStatusCode() {
         return invBlockStatusCode;
@@ -488,11 +492,11 @@ public class InvBlockType {
 
     /**
      * Sets the value of the invBlockStatusCode property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setInvBlockStatusCode(String value) {
         this.invBlockStatusCode = value;
@@ -500,11 +504,11 @@ public class InvBlockType {
 
     /**
      * Gets the value of the pmsInvBlockID property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getPMSInvBlockID() {
         return pmsInvBlockID;
@@ -512,11 +516,11 @@ public class InvBlockType {
 
     /**
      * Sets the value of the pmsInvBlockID property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setPMSInvBlockID(String value) {
         this.pmsInvBlockID = value;
@@ -524,11 +528,11 @@ public class InvBlockType {
 
     /**
      * Gets the value of the opportunityID property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getOpportunityID() {
         return opportunityID;
@@ -536,11 +540,11 @@ public class InvBlockType {
 
     /**
      * Sets the value of the opportunityID property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setOpportunityID(String value) {
         this.opportunityID = value;
@@ -548,11 +552,11 @@ public class InvBlockType {
 
     /**
      * Gets the value of the invBlockCompanyID property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getInvBlockCompanyID() {
         return invBlockCompanyID;
@@ -560,11 +564,11 @@ public class InvBlockType {
 
     /**
      * Sets the value of the invBlockCompanyID property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setInvBlockCompanyID(String value) {
         this.invBlockCompanyID = value;
@@ -572,25 +576,25 @@ public class InvBlockType {
 
     /**
      * Gets the value of the restrictedBookingCodeList property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the restrictedBookingCodeList property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getRestrictedBookingCodeList().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link String }
-     *
-     *
+     * 
+     * 
      */
     public List<String> getRestrictedBookingCodeList() {
         if (restrictedBookingCodeList == null) {
@@ -601,25 +605,25 @@ public class InvBlockType {
 
     /**
      * Gets the value of the restrictedViewingCodeList property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the restrictedViewingCodeList property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getRestrictedViewingCodeList().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link String }
-     *
-     *
+     * 
+     * 
      */
     public List<String> getRestrictedViewingCodeList() {
         if (restrictedViewingCodeList == null) {
@@ -630,11 +634,11 @@ public class InvBlockType {
 
     /**
      * Gets the value of the transactionAction property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link TransactionActionType }
-     *
+     *     
      */
     public TransactionActionType getTransactionAction() {
         return transactionAction;
@@ -642,11 +646,11 @@ public class InvBlockType {
 
     /**
      * Sets the value of the transactionAction property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link TransactionActionType }
-     *
+     *     
      */
     public void setTransactionAction(TransactionActionType value) {
         this.transactionAction = value;
@@ -654,11 +658,11 @@ public class InvBlockType {
 
     /**
      * Gets the value of the transactionDetail property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getTransactionDetail() {
         return transactionDetail;
@@ -666,11 +670,11 @@ public class InvBlockType {
 
     /**
      * Sets the value of the transactionDetail property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setTransactionDetail(String value) {
         this.transactionDetail = value;
@@ -678,11 +682,11 @@ public class InvBlockType {
 
     /**
      * Gets the value of the quoteID property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getQuoteID() {
         return quoteID;
@@ -690,11 +694,11 @@ public class InvBlockType {
 
     /**
      * Sets the value of the quoteID property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setQuoteID(String value) {
         this.quoteID = value;
@@ -703,9 +707,9 @@ public class InvBlockType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -725,8 +729,8 @@ public class InvBlockType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -735,33 +739,33 @@ public class InvBlockType {
     public static class BlockDescriptions {
 
         @XmlElement(name = "BlockDescription", required = true)
-        protected List<BlockDescription> blockDescription;
+        protected List<InvBlockType.BlockDescriptions.BlockDescription> blockDescription;
 
         /**
          * Gets the value of the blockDescription property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the blockDescription property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getBlockDescription().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link InvBlockType.BlockDescriptions.BlockDescription }
-         *
-         *
+         * 
+         * 
          */
-        public List<BlockDescription> getBlockDescription() {
+        public List<InvBlockType.BlockDescriptions.BlockDescription> getBlockDescription() {
             if (blockDescription == null) {
-                blockDescription = new ArrayList<BlockDescription>();
+                blockDescription = new ArrayList<InvBlockType.BlockDescriptions.BlockDescription>();
             }
             return this.blockDescription;
         }

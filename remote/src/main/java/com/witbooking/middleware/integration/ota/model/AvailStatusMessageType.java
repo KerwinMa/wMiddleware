@@ -498,7 +498,7 @@ public class AvailStatusMessageType {
     public static class BestAvailableRates {
 
         @XmlElement(name = "BestAvailableRate", required = true)
-        protected List<BestAvailableRate> bestAvailableRate;
+        protected List<AvailStatusMessageType.BestAvailableRates.BestAvailableRate> bestAvailableRate;
 
         /**
          * Gets the value of the bestAvailableRate property.
@@ -520,9 +520,9 @@ public class AvailStatusMessageType {
          * Objects of the following type(s) are allowed in the list
          * {@link AvailStatusMessageType.BestAvailableRates.BestAvailableRate }
          */
-        public List<BestAvailableRate> getBestAvailableRate() {
+        public List<AvailStatusMessageType.BestAvailableRates.BestAvailableRate> getBestAvailableRate() {
             if (bestAvailableRate == null) {
-                bestAvailableRate = new ArrayList<BestAvailableRate>();
+                bestAvailableRate = new ArrayList<AvailStatusMessageType.BestAvailableRates.BestAvailableRate>();
             }
             return this.bestAvailableRate;
         }

@@ -8,11 +8,16 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -126,8 +131,8 @@ public class AvailRequestSegmentsType {
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link com.witbooking.middleware.integration.ota.model.AvailRequestSegmentsType.AvailRequestSegment }
-     *
-     *
+     * 
+     * 
      */
     public List<AvailRequestSegment> getAvailRequestSegment() {
         if (availRequestSegment == null) {
@@ -139,9 +144,9 @@ public class AvailRequestSegmentsType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -205,8 +210,8 @@ public class AvailRequestSegmentsType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -245,11 +250,11 @@ public class AvailRequestSegmentsType {
 
         /**
          * Gets the value of the stayDateRange property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link com.witbooking.middleware.integration.ota.model.DateTimeSpanType }
-         *
+         *     
          */
         public DateTimeSpanType getStayDateRange() {
             return stayDateRange;
@@ -257,11 +262,11 @@ public class AvailRequestSegmentsType {
 
         /**
          * Sets the value of the stayDateRange property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link com.witbooking.middleware.integration.ota.model.DateTimeSpanType }
-         *
+         *     
          */
         public void setStayDateRange(DateTimeSpanType value) {
             this.stayDateRange = value;
@@ -269,25 +274,25 @@ public class AvailRequestSegmentsType {
 
         /**
          * Gets the value of the rateRange property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the rateRange property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getRateRange().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link com.witbooking.middleware.integration.ota.model.AvailRequestSegmentsType.AvailRequestSegment.RateRange }
-         *
-         *
+         * 
+         * 
          */
         public List<RateRange> getRateRange() {
             if (rateRange == null) {
@@ -298,11 +303,11 @@ public class AvailRequestSegmentsType {
 
         /**
          * Gets the value of the ratePlanCandidates property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link com.witbooking.middleware.integration.ota.model.RatePlanCandidatesType }
-         *
+         *     
          */
         public RatePlanCandidatesType getRatePlanCandidates() {
             return ratePlanCandidates;
@@ -310,11 +315,11 @@ public class AvailRequestSegmentsType {
 
         /**
          * Sets the value of the ratePlanCandidates property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link com.witbooking.middleware.integration.ota.model.RatePlanCandidatesType }
-         *
+         *     
          */
         public void setRatePlanCandidates(RatePlanCandidatesType value) {
             this.ratePlanCandidates = value;
@@ -322,11 +327,11 @@ public class AvailRequestSegmentsType {
 
         /**
          * Gets the value of the profiles property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link com.witbooking.middleware.integration.ota.model.ProfilesType }
-         *
+         *     
          */
         public ProfilesType getProfiles() {
             return profiles;
@@ -334,11 +339,11 @@ public class AvailRequestSegmentsType {
 
         /**
          * Sets the value of the profiles property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link com.witbooking.middleware.integration.ota.model.ProfilesType }
-         *
+         *     
          */
         public void setProfiles(ProfilesType value) {
             this.profiles = value;
@@ -346,11 +351,11 @@ public class AvailRequestSegmentsType {
 
         /**
          * Gets the value of the roomStayCandidates property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link com.witbooking.middleware.integration.ota.model.AvailRequestSegmentsType.AvailRequestSegment.RoomStayCandidates }
-         *
+         *     
          */
         public RoomStayCandidates getRoomStayCandidates() {
             return roomStayCandidates;
@@ -358,11 +363,11 @@ public class AvailRequestSegmentsType {
 
         /**
          * Sets the value of the roomStayCandidates property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link com.witbooking.middleware.integration.ota.model.AvailRequestSegmentsType.AvailRequestSegment.RoomStayCandidates }
-         *
+         *     
          */
         public void setRoomStayCandidates(RoomStayCandidates value) {
             this.roomStayCandidates = value;
@@ -370,11 +375,11 @@ public class AvailRequestSegmentsType {
 
         /**
          * Gets the value of the hotelSearchCriteria property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link com.witbooking.middleware.integration.ota.model.AvailRequestSegmentsType.AvailRequestSegment.HotelSearchCriteria }
-         *
+         *     
          */
         public HotelSearchCriteria getHotelSearchCriteria() {
             return hotelSearchCriteria;
@@ -382,11 +387,11 @@ public class AvailRequestSegmentsType {
 
         /**
          * Sets the value of the hotelSearchCriteria property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link com.witbooking.middleware.integration.ota.model.AvailRequestSegmentsType.AvailRequestSegment.HotelSearchCriteria }
-         *
+         *     
          */
         public void setHotelSearchCriteria(HotelSearchCriteria value) {
             this.hotelSearchCriteria = value;
@@ -394,11 +399,11 @@ public class AvailRequestSegmentsType {
 
         /**
          * Gets the value of the tpaExtensions property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link com.witbooking.middleware.integration.ota.model.TPAExtensionsType }
-         *
+         *     
          */
         public TPAExtensionsType getTPAExtensions() {
             return tpaExtensions;
@@ -406,11 +411,11 @@ public class AvailRequestSegmentsType {
 
         /**
          * Sets the value of the tpaExtensions property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link com.witbooking.middleware.integration.ota.model.TPAExtensionsType }
-         *
+         *     
          */
         public void setTPAExtensions(TPAExtensionsType value) {
             this.tpaExtensions = value;
@@ -418,11 +423,11 @@ public class AvailRequestSegmentsType {
 
         /**
          * Gets the value of the availReqType property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getAvailReqType() {
             return availReqType;
@@ -430,11 +435,11 @@ public class AvailRequestSegmentsType {
 
         /**
          * Sets the value of the availReqType property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setAvailReqType(String value) {
             this.availReqType = value;
@@ -442,11 +447,11 @@ public class AvailRequestSegmentsType {
 
         /**
          * Gets the value of the moreDataEchoToken property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getMoreDataEchoToken() {
             return moreDataEchoToken;
@@ -454,11 +459,11 @@ public class AvailRequestSegmentsType {
 
         /**
          * Sets the value of the moreDataEchoToken property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setMoreDataEchoToken(String value) {
             this.moreDataEchoToken = value;
@@ -466,11 +471,11 @@ public class AvailRequestSegmentsType {
 
         /**
          * Gets the value of the infoSource property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getInfoSource() {
             return infoSource;
@@ -478,11 +483,11 @@ public class AvailRequestSegmentsType {
 
         /**
          * Sets the value of the infoSource property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setInfoSource(String value) {
             this.infoSource = value;
@@ -490,11 +495,11 @@ public class AvailRequestSegmentsType {
 
         /**
          * Gets the value of the responseType property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getResponseType() {
             return responseType;
@@ -502,11 +507,11 @@ public class AvailRequestSegmentsType {
 
         /**
          * Sets the value of the responseType property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setResponseType(String value) {
             this.responseType = value;
@@ -515,9 +520,9 @@ public class AvailRequestSegmentsType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -526,8 +531,8 @@ public class AvailRequestSegmentsType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
@@ -541,9 +546,9 @@ public class AvailRequestSegmentsType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -554,8 +559,8 @@ public class AvailRequestSegmentsType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
@@ -579,11 +584,11 @@ public class AvailRequestSegmentsType {
 
             /**
              * Gets the value of the roomStayCandidateRPH property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getRoomStayCandidateRPH() {
                 return roomStayCandidateRPH;
@@ -591,11 +596,11 @@ public class AvailRequestSegmentsType {
 
             /**
              * Sets the value of the roomStayCandidateRPH property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setRoomStayCandidateRPH(String value) {
                 this.roomStayCandidateRPH = value;
@@ -603,11 +608,11 @@ public class AvailRequestSegmentsType {
 
             /**
              * Gets the value of the minRate property.
-             *
+             * 
              * @return
              *     possible object is
-             *     {@link BigDecimal }
-             *
+             *     {@link java.math.BigDecimal }
+             *     
              */
             public BigDecimal getMinRate() {
                 return minRate;
@@ -615,11 +620,11 @@ public class AvailRequestSegmentsType {
 
             /**
              * Sets the value of the minRate property.
-             *
+             * 
              * @param value
              *     allowed object is
-             *     {@link BigDecimal }
-             *
+             *     {@link java.math.BigDecimal }
+             *     
              */
             public void setMinRate(BigDecimal value) {
                 this.minRate = value;
@@ -627,11 +632,11 @@ public class AvailRequestSegmentsType {
 
             /**
              * Gets the value of the maxRate property.
-             *
+             * 
              * @return
              *     possible object is
-             *     {@link BigDecimal }
-             *
+             *     {@link java.math.BigDecimal }
+             *     
              */
             public BigDecimal getMaxRate() {
                 return maxRate;
@@ -639,11 +644,11 @@ public class AvailRequestSegmentsType {
 
             /**
              * Sets the value of the maxRate property.
-             *
+             * 
              * @param value
              *     allowed object is
-             *     {@link BigDecimal }
-             *
+             *     {@link java.math.BigDecimal }
+             *     
              */
             public void setMaxRate(BigDecimal value) {
                 this.maxRate = value;
@@ -651,11 +656,11 @@ public class AvailRequestSegmentsType {
 
             /**
              * Gets the value of the fixedRate property.
-             *
+             * 
              * @return
              *     possible object is
-             *     {@link BigDecimal }
-             *
+             *     {@link java.math.BigDecimal }
+             *     
              */
             public BigDecimal getFixedRate() {
                 return fixedRate;
@@ -663,11 +668,11 @@ public class AvailRequestSegmentsType {
 
             /**
              * Sets the value of the fixedRate property.
-             *
+             * 
              * @param value
              *     allowed object is
-             *     {@link BigDecimal }
-             *
+             *     {@link java.math.BigDecimal }
+             *     
              */
             public void setFixedRate(BigDecimal value) {
                 this.fixedRate = value;
@@ -675,11 +680,11 @@ public class AvailRequestSegmentsType {
 
             /**
              * Gets the value of the rateTimeUnit property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link com.witbooking.middleware.integration.ota.model.TimeUnitType }
-             *
+             *     
              */
             public TimeUnitType getRateTimeUnit() {
                 return rateTimeUnit;
@@ -687,11 +692,11 @@ public class AvailRequestSegmentsType {
 
             /**
              * Sets the value of the rateTimeUnit property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link com.witbooking.middleware.integration.ota.model.TimeUnitType }
-             *
+             *     
              */
             public void setRateTimeUnit(TimeUnitType value) {
                 this.rateTimeUnit = value;
@@ -699,11 +704,11 @@ public class AvailRequestSegmentsType {
 
             /**
              * Gets the value of the currencyCode property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getCurrencyCode() {
                 return currencyCode;
@@ -711,11 +716,11 @@ public class AvailRequestSegmentsType {
 
             /**
              * Sets the value of the currencyCode property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setCurrencyCode(String value) {
                 this.currencyCode = value;
@@ -723,11 +728,11 @@ public class AvailRequestSegmentsType {
 
             /**
              * Gets the value of the decimalPlaces property.
-             *
+             * 
              * @return
              *     possible object is
-             *     {@link BigInteger }
-             *
+             *     {@link java.math.BigInteger }
+             *     
              */
             public BigInteger getDecimalPlaces() {
                 return decimalPlaces;
@@ -735,11 +740,11 @@ public class AvailRequestSegmentsType {
 
             /**
              * Sets the value of the decimalPlaces property.
-             *
+             * 
              * @param value
              *     allowed object is
-             *     {@link BigInteger }
-             *
+             *     {@link java.math.BigInteger }
+             *     
              */
             public void setDecimalPlaces(BigInteger value) {
                 this.decimalPlaces = value;
@@ -750,9 +755,9 @@ public class AvailRequestSegmentsType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -772,8 +777,8 @@ public class AvailRequestSegmentsType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
@@ -786,20 +791,20 @@ public class AvailRequestSegmentsType {
 
             /**
              * Gets the value of the roomStayCandidate property.
-             *
+             * 
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the roomStayCandidate property.
-             *
+             * 
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getRoomStayCandidate().add(newItem);
              * </pre>
-             *
-             *
+             * 
+             * 
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link com.witbooking.middleware.integration.ota.model.AvailRequestSegmentsType.AvailRequestSegment.RoomStayCandidates.RoomStayCandidate }

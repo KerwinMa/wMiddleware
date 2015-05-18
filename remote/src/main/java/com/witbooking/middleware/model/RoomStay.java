@@ -10,8 +10,10 @@ package com.witbooking.middleware.model;
 import com.witbooking.middleware.db.DBConnection;
 import com.witbooking.middleware.db.handlers.InventoryDBHandler;
 import com.witbooking.middleware.exceptions.db.DBAccessException;
+import com.witbooking.middleware.model.dynamicPriceVariation.BookingPriceRule;
 import com.witbooking.middleware.model.values.DailyValue;
 import com.witbooking.middleware.model.values.RangeValue;
+import com.witbooking.middleware.model.values.RateDataValue;
 import com.witbooking.middleware.utils.DateUtil;
 
 import java.io.Serializable;
@@ -42,6 +44,7 @@ public class RoomStay implements Serializable {
     //Services and discounts
     private List<ServiceRequested> services;
     private List<DiscountApplied> discounts;
+    private List<BookingPriceRulesApplied> bookingPriceRules;
     //Payment
     //In version V6. Rates with taxes
     private RangeValue<Float> roomRates;
@@ -81,6 +84,8 @@ public class RoomStay implements Serializable {
     private String mealPlanType;
     private String configurationType;
     private String conditionType;
+
+    private Reservation.ReservationStatus status;
 
     /**
      * Creates a new instance of
@@ -136,6 +141,45 @@ public class RoomStay implements Serializable {
 
     public Set<DailyValue<Float>> getRoomRatesSetDailyValues() {
         return roomRates == null ? new TreeSet<DailyValue<Float>>() : roomRates.getDailySet();
+    }
+
+    /**
+     * Return the real values in the reservation's rates (dailyvalues +extras -discounts)
+     * @return
+     */
+    public Set<DailyValue<Float>> getRoomRatesFullSetDailyValues() {
+        //Return the real values in the reservation's rates (dailyValues +extras -discounts)
+        Date startDateIter = getRoomRates().getRangeStartDate();
+        Date endDateIter = getRoomRates().getRangeEndDate();
+        Date dateIterator = (Date) startDateIter.clone();
+        float totalServices = 0;
+        //We have to add the daily price for all the extras requested
+        for (ServiceRequested serviceRequested : getServices()) {
+            totalServices = serviceRequested.getTotalServiceAmount() + totalServices;
+        }
+        int days = DateUtil.daysBetweenDates(startDateIter, endDateIter) + 1;
+        if (totalServices > 0 && days > 0)
+            totalServices = (float) Math.round((totalServices / days) * 1000) / 1000;
+
+        RangeValue<Float> fullRates = new RangeValue<>(RateDataValue.DEFAULT_VALUE);
+        //We have subtract the discounts from the daily rate
+        while (DateUtil.dateBetweenDaysRange(dateIterator, startDateIter, endDateIter)) {
+            float actualRate = getRoomRates().getFinalValueForADate(dateIterator);
+            Float discount = null;
+            for (DiscountApplied discountApplied : getDiscounts()) {
+                discount = discountApplied.getDiscountPrice().getValueForADate(dateIterator);
+                //If percentage, Round 3 decimals
+                if (discountApplied.isPercentage() && discount!=null){
+                    discount = (float) Math.round(actualRate * discount * 10) / 1000;
+                    break;
+                }
+            }
+            if (discount != null && discount != 0)
+                actualRate = (float) Math.round((actualRate + discount) * 1000) / 1000;
+            fullRates.putValueForADate(dateIterator, actualRate + totalServices);
+            DateUtil.incrementDays(dateIterator, 1);
+        }
+        return fullRates.getDailySet();
     }
 
     public void setRoomRates(RangeValue<Float> roomRates) {
@@ -254,6 +298,14 @@ public class RoomStay implements Serializable {
         this.discounts = discounts;
     }
 
+    public List<BookingPriceRulesApplied> getBookingPriceRules() {
+        return bookingPriceRules;
+    }
+
+    public void setBookingPriceRules(List<BookingPriceRulesApplied> bookingPriceRules) {
+        this.bookingPriceRules = bookingPriceRules;
+    }
+
     //get babies for the V6
     public int getBabies() {
         try {
@@ -336,6 +388,22 @@ public class RoomStay implements Serializable {
 
     public void setAdditionalRequests(Map<String, String> additionalRequests) {
         this.additionalRequests = additionalRequests;
+    }
+
+    public boolean isCanceledByClient() {
+        return canceledByClient;
+    }
+
+    public void setCanceledByClient(boolean canceledByClient) {
+        this.canceledByClient = canceledByClient;
+    }
+
+    public Reservation.ReservationStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(Reservation.ReservationStatus status) {
+        this.status = status;
     }
 
     @Override

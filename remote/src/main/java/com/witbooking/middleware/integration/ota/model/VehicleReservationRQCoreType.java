@@ -8,11 +8,16 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -154,7 +159,7 @@ public class VehicleReservationRQCoreType {
     @XmlElement(name = "VehPref")
     protected VehiclePrefType vehPref;
     @XmlElement(name = "DriverType")
-    protected List<DriverType> driverType;
+    protected List<VehicleReservationRQCoreType.DriverType> driverType;
     @XmlElement(name = "RateQualifier")
     protected RateQualifierType rateQualifier;
     @XmlElement(name = "Fees")
@@ -164,7 +169,7 @@ public class VehicleReservationRQCoreType {
     @XmlElement(name = "SpecialEquipPrefs")
     protected VehicleReservationRQCoreType.SpecialEquipPrefs specialEquipPrefs;
     @XmlElement(name = "RateDistance")
-    protected List<RateDistance> rateDistance;
+    protected List<VehicleReservationRQCoreType.RateDistance> rateDistance;
     @XmlElement(name = "TotalCharge")
     protected VehicleReservationRQCoreType.TotalCharge totalCharge;
     @XmlElement(name = "Queue")
@@ -176,25 +181,25 @@ public class VehicleReservationRQCoreType {
 
     /**
      * Gets the value of the uniqueID property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the uniqueID property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getUniqueID().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link UniqueIDType }
-     *
-     *
+     * 
+     * 
      */
     public List<UniqueIDType> getUniqueID() {
         if (uniqueID == null) {
@@ -205,11 +210,11 @@ public class VehicleReservationRQCoreType {
 
     /**
      * Gets the value of the vehRentalCore property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleRentalCoreType }
-     *
+     *     
      */
     public VehicleRentalCoreType getVehRentalCore() {
         return vehRentalCore;
@@ -217,11 +222,11 @@ public class VehicleReservationRQCoreType {
 
     /**
      * Sets the value of the vehRentalCore property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleRentalCoreType }
-     *
+     *     
      */
     public void setVehRentalCore(VehicleRentalCoreType value) {
         this.vehRentalCore = value;
@@ -229,11 +234,11 @@ public class VehicleReservationRQCoreType {
 
     /**
      * Gets the value of the customer property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link CustomerPrimaryAdditionalType }
-     *
+     *     
      */
     public CustomerPrimaryAdditionalType getCustomer() {
         return customer;
@@ -241,11 +246,11 @@ public class VehicleReservationRQCoreType {
 
     /**
      * Sets the value of the customer property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link CustomerPrimaryAdditionalType }
-     *
+     *     
      */
     public void setCustomer(CustomerPrimaryAdditionalType value) {
         this.customer = value;
@@ -253,11 +258,11 @@ public class VehicleReservationRQCoreType {
 
     /**
      * Gets the value of the vendorPref property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link CompanyNamePrefType }
-     *
+     *     
      */
     public CompanyNamePrefType getVendorPref() {
         return vendorPref;
@@ -265,11 +270,11 @@ public class VehicleReservationRQCoreType {
 
     /**
      * Sets the value of the vendorPref property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link CompanyNamePrefType }
-     *
+     *     
      */
     public void setVendorPref(CompanyNamePrefType value) {
         this.vendorPref = value;
@@ -277,11 +282,11 @@ public class VehicleReservationRQCoreType {
 
     /**
      * Gets the value of the vehPref property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehiclePrefType }
-     *
+     *     
      */
     public VehiclePrefType getVehPref() {
         return vehPref;
@@ -289,11 +294,11 @@ public class VehicleReservationRQCoreType {
 
     /**
      * Sets the value of the vehPref property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehiclePrefType }
-     *
+     *     
      */
     public void setVehPref(VehiclePrefType value) {
         this.vehPref = value;
@@ -301,40 +306,40 @@ public class VehicleReservationRQCoreType {
 
     /**
      * Gets the value of the driverType property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the driverType property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getDriverType().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link VehicleReservationRQCoreType.DriverType }
-     *
-     *
+     * 
+     * 
      */
-    public List<DriverType> getDriverType() {
+    public List<VehicleReservationRQCoreType.DriverType> getDriverType() {
         if (driverType == null) {
-            driverType = new ArrayList<DriverType>();
+            driverType = new ArrayList<VehicleReservationRQCoreType.DriverType>();
         }
         return this.driverType;
     }
 
     /**
      * Gets the value of the rateQualifier property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link RateQualifierType }
-     *
+     *     
      */
     public RateQualifierType getRateQualifier() {
         return rateQualifier;
@@ -342,11 +347,11 @@ public class VehicleReservationRQCoreType {
 
     /**
      * Sets the value of the rateQualifier property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link RateQualifierType }
-     *
+     *     
      */
     public void setRateQualifier(RateQualifierType value) {
         this.rateQualifier = value;
@@ -354,11 +359,11 @@ public class VehicleReservationRQCoreType {
 
     /**
      * Gets the value of the fees property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleReservationRQCoreType.Fees }
-     *
+     *     
      */
     public VehicleReservationRQCoreType.Fees getFees() {
         return fees;
@@ -366,11 +371,11 @@ public class VehicleReservationRQCoreType {
 
     /**
      * Sets the value of the fees property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleReservationRQCoreType.Fees }
-     *
+     *     
      */
     public void setFees(VehicleReservationRQCoreType.Fees value) {
         this.fees = value;
@@ -378,11 +383,11 @@ public class VehicleReservationRQCoreType {
 
     /**
      * Gets the value of the vehicleCharges property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleReservationRQCoreType.VehicleCharges }
-     *
+     *     
      */
     public VehicleReservationRQCoreType.VehicleCharges getVehicleCharges() {
         return vehicleCharges;
@@ -390,11 +395,11 @@ public class VehicleReservationRQCoreType {
 
     /**
      * Sets the value of the vehicleCharges property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleReservationRQCoreType.VehicleCharges }
-     *
+     *     
      */
     public void setVehicleCharges(VehicleReservationRQCoreType.VehicleCharges value) {
         this.vehicleCharges = value;
@@ -402,11 +407,11 @@ public class VehicleReservationRQCoreType {
 
     /**
      * Gets the value of the specialEquipPrefs property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleReservationRQCoreType.SpecialEquipPrefs }
-     *
+     *     
      */
     public VehicleReservationRQCoreType.SpecialEquipPrefs getSpecialEquipPrefs() {
         return specialEquipPrefs;
@@ -414,11 +419,11 @@ public class VehicleReservationRQCoreType {
 
     /**
      * Sets the value of the specialEquipPrefs property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleReservationRQCoreType.SpecialEquipPrefs }
-     *
+     *     
      */
     public void setSpecialEquipPrefs(VehicleReservationRQCoreType.SpecialEquipPrefs value) {
         this.specialEquipPrefs = value;
@@ -426,40 +431,40 @@ public class VehicleReservationRQCoreType {
 
     /**
      * Gets the value of the rateDistance property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the rateDistance property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getRateDistance().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link VehicleReservationRQCoreType.RateDistance }
-     *
-     *
+     * 
+     * 
      */
-    public List<RateDistance> getRateDistance() {
+    public List<VehicleReservationRQCoreType.RateDistance> getRateDistance() {
         if (rateDistance == null) {
-            rateDistance = new ArrayList<RateDistance>();
+            rateDistance = new ArrayList<VehicleReservationRQCoreType.RateDistance>();
         }
         return this.rateDistance;
     }
 
     /**
      * Gets the value of the totalCharge property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleReservationRQCoreType.TotalCharge }
-     *
+     *     
      */
     public VehicleReservationRQCoreType.TotalCharge getTotalCharge() {
         return totalCharge;
@@ -467,11 +472,11 @@ public class VehicleReservationRQCoreType {
 
     /**
      * Sets the value of the totalCharge property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleReservationRQCoreType.TotalCharge }
-     *
+     *     
      */
     public void setTotalCharge(VehicleReservationRQCoreType.TotalCharge value) {
         this.totalCharge = value;
@@ -479,11 +484,11 @@ public class VehicleReservationRQCoreType {
 
     /**
      * Gets the value of the queue property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleReservationRQCoreType.Queue }
-     *
+     *     
      */
     public VehicleReservationRQCoreType.Queue getQueue() {
         return queue;
@@ -491,11 +496,11 @@ public class VehicleReservationRQCoreType {
 
     /**
      * Sets the value of the queue property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleReservationRQCoreType.Queue }
-     *
+     *     
      */
     public void setQueue(VehicleReservationRQCoreType.Queue value) {
         this.queue = value;
@@ -503,11 +508,11 @@ public class VehicleReservationRQCoreType {
 
     /**
      * Gets the value of the tpaExtensions property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link TPAExtensionsType }
-     *
+     *     
      */
     public TPAExtensionsType getTPAExtensions() {
         return tpaExtensions;
@@ -515,11 +520,11 @@ public class VehicleReservationRQCoreType {
 
     /**
      * Sets the value of the tpaExtensions property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link TPAExtensionsType }
-     *
+     *     
      */
     public void setTPAExtensions(TPAExtensionsType value) {
         this.tpaExtensions = value;
@@ -527,11 +532,11 @@ public class VehicleReservationRQCoreType {
 
     /**
      * Gets the value of the status property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getStatus() {
         return status;
@@ -539,11 +544,11 @@ public class VehicleReservationRQCoreType {
 
     /**
      * Sets the value of the status property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setStatus(String value) {
         this.status = value;
@@ -552,9 +557,9 @@ public class VehicleReservationRQCoreType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -564,8 +569,8 @@ public class VehicleReservationRQCoreType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
@@ -586,11 +591,11 @@ public class VehicleReservationRQCoreType {
 
         /**
          * Gets the value of the age property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link Integer }
-         *
+         *     
          */
         public Integer getAge() {
             return age;
@@ -598,11 +603,11 @@ public class VehicleReservationRQCoreType {
 
         /**
          * Sets the value of the age property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link Integer }
-         *
+         *     
          */
         public void setAge(Integer value) {
             this.age = value;
@@ -610,11 +615,11 @@ public class VehicleReservationRQCoreType {
 
         /**
          * Gets the value of the code property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getCode() {
             return code;
@@ -622,11 +627,11 @@ public class VehicleReservationRQCoreType {
 
         /**
          * Sets the value of the code property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setCode(String value) {
             this.code = value;
@@ -634,11 +639,11 @@ public class VehicleReservationRQCoreType {
 
         /**
          * Gets the value of the codeContext property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getCodeContext() {
             return codeContext;
@@ -646,11 +651,11 @@ public class VehicleReservationRQCoreType {
 
         /**
          * Sets the value of the codeContext property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setCodeContext(String value) {
             this.codeContext = value;
@@ -658,11 +663,11 @@ public class VehicleReservationRQCoreType {
 
         /**
          * Gets the value of the uri property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getURI() {
             return uri;
@@ -670,11 +675,11 @@ public class VehicleReservationRQCoreType {
 
         /**
          * Sets the value of the uri property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setURI(String value) {
             this.uri = value;
@@ -682,11 +687,11 @@ public class VehicleReservationRQCoreType {
 
         /**
          * Gets the value of the quantity property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link BigInteger }
-         *
+         *     
          */
         public BigInteger getQuantity() {
             return quantity;
@@ -694,11 +699,11 @@ public class VehicleReservationRQCoreType {
 
         /**
          * Sets the value of the quantity property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link BigInteger }
-         *
+         *     
          */
         public void setQuantity(BigInteger value) {
             this.quantity = value;
@@ -709,9 +714,9 @@ public class VehicleReservationRQCoreType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -723,8 +728,8 @@ public class VehicleReservationRQCoreType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -737,25 +742,25 @@ public class VehicleReservationRQCoreType {
 
         /**
          * Gets the value of the fee property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the fee property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getFee().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link VehicleChargePurposeType }
-         *
-         *
+         * 
+         * 
          */
         public List<VehicleChargePurposeType> getFee() {
             if (fee == null) {
@@ -769,9 +774,9 @@ public class VehicleReservationRQCoreType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -781,8 +786,8 @@ public class VehicleReservationRQCoreType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
@@ -801,11 +806,11 @@ public class VehicleReservationRQCoreType {
 
         /**
          * Gets the value of the pseudoCityCode property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getPseudoCityCode() {
             return pseudoCityCode;
@@ -813,11 +818,11 @@ public class VehicleReservationRQCoreType {
 
         /**
          * Sets the value of the pseudoCityCode property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setPseudoCityCode(String value) {
             this.pseudoCityCode = value;
@@ -825,11 +830,11 @@ public class VehicleReservationRQCoreType {
 
         /**
          * Gets the value of the queueNumber property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getQueueNumber() {
             return queueNumber;
@@ -837,11 +842,11 @@ public class VehicleReservationRQCoreType {
 
         /**
          * Sets the value of the queueNumber property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setQueueNumber(String value) {
             this.queueNumber = value;
@@ -849,11 +854,11 @@ public class VehicleReservationRQCoreType {
 
         /**
          * Gets the value of the queueCategory property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getQueueCategory() {
             return queueCategory;
@@ -861,11 +866,11 @@ public class VehicleReservationRQCoreType {
 
         /**
          * Sets the value of the queueCategory property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setQueueCategory(String value) {
             this.queueCategory = value;
@@ -873,11 +878,11 @@ public class VehicleReservationRQCoreType {
 
         /**
          * Gets the value of the systemCode property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getSystemCode() {
             return systemCode;
@@ -885,11 +890,11 @@ public class VehicleReservationRQCoreType {
 
         /**
          * Sets the value of the systemCode property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setSystemCode(String value) {
             this.systemCode = value;
@@ -897,11 +902,11 @@ public class VehicleReservationRQCoreType {
 
         /**
          * Gets the value of the queueID property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getQueueID() {
             return queueID;
@@ -909,11 +914,11 @@ public class VehicleReservationRQCoreType {
 
         /**
          * Sets the value of the queueID property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setQueueID(String value) {
             this.queueID = value;
@@ -924,9 +929,9 @@ public class VehicleReservationRQCoreType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -936,8 +941,8 @@ public class VehicleReservationRQCoreType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
@@ -955,7 +960,7 @@ public class VehicleReservationRQCoreType {
 
         /**
          * Gets the value of the unlimited property.
-         *
+         * 
          */
         public boolean isUnlimited() {
             return unlimited;
@@ -963,7 +968,7 @@ public class VehicleReservationRQCoreType {
 
         /**
          * Sets the value of the unlimited property.
-         *
+         * 
          */
         public void setUnlimited(boolean value) {
             this.unlimited = value;
@@ -971,11 +976,11 @@ public class VehicleReservationRQCoreType {
 
         /**
          * Gets the value of the quantity property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link BigInteger }
-         *
+         *     
          */
         public BigInteger getQuantity() {
             return quantity;
@@ -983,11 +988,11 @@ public class VehicleReservationRQCoreType {
 
         /**
          * Sets the value of the quantity property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link BigInteger }
-         *
+         *     
          */
         public void setQuantity(BigInteger value) {
             this.quantity = value;
@@ -995,11 +1000,11 @@ public class VehicleReservationRQCoreType {
 
         /**
          * Gets the value of the distUnitName property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link DistanceUnitNameType }
-         *
+         *     
          */
         public DistanceUnitNameType getDistUnitName() {
             return distUnitName;
@@ -1007,11 +1012,11 @@ public class VehicleReservationRQCoreType {
 
         /**
          * Sets the value of the distUnitName property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link DistanceUnitNameType }
-         *
+         *     
          */
         public void setDistUnitName(DistanceUnitNameType value) {
             this.distUnitName = value;
@@ -1019,11 +1024,11 @@ public class VehicleReservationRQCoreType {
 
         /**
          * Gets the value of the vehiclePeriodUnitName property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link VehiclePeriodUnitNameType }
-         *
+         *     
          */
         public VehiclePeriodUnitNameType getVehiclePeriodUnitName() {
             return vehiclePeriodUnitName;
@@ -1031,11 +1036,11 @@ public class VehicleReservationRQCoreType {
 
         /**
          * Sets the value of the vehiclePeriodUnitName property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link VehiclePeriodUnitNameType }
-         *
+         *     
          */
         public void setVehiclePeriodUnitName(VehiclePeriodUnitNameType value) {
             this.vehiclePeriodUnitName = value;
@@ -1046,9 +1051,9 @@ public class VehicleReservationRQCoreType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -1069,8 +1074,8 @@ public class VehicleReservationRQCoreType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -1080,35 +1085,35 @@ public class VehicleReservationRQCoreType {
     public static class SpecialEquipPrefs {
 
         @XmlElement(name = "SpecialEquipPref", required = true)
-        protected List<SpecialEquipPref> specialEquipPref;
+        protected List<VehicleReservationRQCoreType.SpecialEquipPrefs.SpecialEquipPref> specialEquipPref;
         @XmlElement(name = "Charge")
         protected VehicleChargeType charge;
 
         /**
          * Gets the value of the specialEquipPref property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the specialEquipPref property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getSpecialEquipPref().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link VehicleReservationRQCoreType.SpecialEquipPrefs.SpecialEquipPref }
-         *
-         *
+         * 
+         * 
          */
-        public List<SpecialEquipPref> getSpecialEquipPref() {
+        public List<VehicleReservationRQCoreType.SpecialEquipPrefs.SpecialEquipPref> getSpecialEquipPref() {
             if (specialEquipPref == null) {
-                specialEquipPref = new ArrayList<SpecialEquipPref>();
+                specialEquipPref = new ArrayList<VehicleReservationRQCoreType.SpecialEquipPrefs.SpecialEquipPref>();
             }
             return this.specialEquipPref;
         }

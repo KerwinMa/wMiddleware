@@ -8,12 +8,17 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.datatype.XMLGregorianCalendar;
-import java.util.ArrayList;
-import java.util.List;
 
 
 /**
@@ -88,11 +93,11 @@ public class OrganizationType {
 
     /**
      * Gets the value of the orgMemberName property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link OrganizationType.OrgMemberName }
-     *
+     *     
      */
     public OrganizationType.OrgMemberName getOrgMemberName() {
         return orgMemberName;
@@ -100,11 +105,11 @@ public class OrganizationType {
 
     /**
      * Sets the value of the orgMemberName property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link OrganizationType.OrgMemberName }
-     *
+     *     
      */
     public void setOrgMemberName(OrganizationType.OrgMemberName value) {
         this.orgMemberName = value;

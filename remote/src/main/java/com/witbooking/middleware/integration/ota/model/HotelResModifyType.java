@@ -8,12 +8,12 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
+import java.util.ArrayList;
+import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
-import java.util.ArrayList;
-import java.util.List;
 
 
 /**
@@ -66,7 +66,7 @@ import java.util.List;
 public class HotelResModifyType {
 
     @XmlElement(name = "HotelResModify", required = true)
-    protected List<HotelResModify> hotelResModify;
+    protected List<HotelResModifyType.HotelResModify> hotelResModify;
     @XmlElement(name = "RoutingHops")
     protected RoutingHopType routingHops;
     @XmlElement(name = "WrittenConfInst")
@@ -74,40 +74,40 @@ public class HotelResModifyType {
 
     /**
      * Gets the value of the hotelResModify property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the hotelResModify property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getHotelResModify().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link HotelResModifyType.HotelResModify }
-     *
-     *
+     * 
+     * 
      */
-    public List<HotelResModify> getHotelResModify() {
+    public List<HotelResModifyType.HotelResModify> getHotelResModify() {
         if (hotelResModify == null) {
-            hotelResModify = new ArrayList<HotelResModify>();
+            hotelResModify = new ArrayList<HotelResModifyType.HotelResModify>();
         }
         return this.hotelResModify;
     }
 
     /**
      * Gets the value of the routingHops property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link RoutingHopType }
-     *
+     *     
      */
     public RoutingHopType getRoutingHops() {
         return routingHops;
@@ -115,11 +115,11 @@ public class HotelResModifyType {
 
     /**
      * Sets the value of the routingHops property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link RoutingHopType }
-     *
+     *     
      */
     public void setRoutingHops(RoutingHopType value) {
         this.routingHops = value;
@@ -127,11 +127,11 @@ public class HotelResModifyType {
 
     /**
      * Gets the value of the writtenConfInst property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link WrittenConfInstType }
-     *
+     *     
      */
     public WrittenConfInstType getWrittenConfInst() {
         return writtenConfInst;
@@ -139,11 +139,11 @@ public class HotelResModifyType {
 
     /**
      * Sets the value of the writtenConfInst property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link WrittenConfInstType }
-     *
+     *     
      */
     public void setWrittenConfInst(WrittenConfInstType value) {
         this.writtenConfInst = value;
@@ -152,9 +152,9 @@ public class HotelResModifyType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -176,8 +176,8 @@ public class HotelResModifyType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -188,33 +188,33 @@ public class HotelResModifyType {
     {
 
         @XmlElement(name = "Verification")
-        protected List<Verification> verification;
+        protected List<HotelResModifyType.HotelResModify.Verification> verification;
 
         /**
          * Gets the value of the verification property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the verification property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getVerification().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link HotelResModifyType.HotelResModify.Verification }
-         *
-         *
+         * 
+         * 
          */
-        public List<Verification> getVerification() {
+        public List<HotelResModifyType.HotelResModify.Verification> getVerification() {
             if (verification == null) {
-                verification = new ArrayList<Verification>();
+                verification = new ArrayList<HotelResModifyType.HotelResModify.Verification>();
             }
             return this.verification;
         }

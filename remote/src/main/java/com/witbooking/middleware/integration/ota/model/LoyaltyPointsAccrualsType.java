@@ -8,9 +8,13 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -47,33 +51,33 @@ import java.util.List;
 public class LoyaltyPointsAccrualsType {
 
     @XmlElement(name = "SelectedLoyalty", required = true)
-    protected List<SelectedLoyalty> selectedLoyalty;
+    protected List<LoyaltyPointsAccrualsType.SelectedLoyalty> selectedLoyalty;
 
     /**
      * Gets the value of the selectedLoyalty property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the selectedLoyalty property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getSelectedLoyalty().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link LoyaltyPointsAccrualsType.SelectedLoyalty }
-     *
-     *
+     * 
+     * 
      */
-    public List<SelectedLoyalty> getSelectedLoyalty() {
+    public List<LoyaltyPointsAccrualsType.SelectedLoyalty> getSelectedLoyalty() {
         if (selectedLoyalty == null) {
-            selectedLoyalty = new ArrayList<SelectedLoyalty>();
+            selectedLoyalty = new ArrayList<LoyaltyPointsAccrualsType.SelectedLoyalty>();
         }
         return this.selectedLoyalty;
     }

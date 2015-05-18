@@ -8,7 +8,6 @@
 package com.witbooking.middleware.utils.serializers;
 
 import com.witbooking.middleware.integration.booking.model.response.Message;
-
 import javax.xml.bind.annotation.adapters.XmlAdapter;
 
 /**

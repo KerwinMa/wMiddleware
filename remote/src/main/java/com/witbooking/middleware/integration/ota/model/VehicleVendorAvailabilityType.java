@@ -8,11 +8,15 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -86,11 +90,11 @@ public class VehicleVendorAvailabilityType {
 
     /**
      * Gets the value of the vendor property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link CompanyNameType }
-     *
+     *     
      */
     public CompanyNameType getVendor() {
         return vendor;
@@ -98,11 +102,11 @@ public class VehicleVendorAvailabilityType {
 
     /**
      * Sets the value of the vendor property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link CompanyNameType }
-     *
+     *     
      */
     public void setVendor(CompanyNameType value) {
         this.vendor = value;
@@ -110,11 +114,11 @@ public class VehicleVendorAvailabilityType {
 
     /**
      * Gets the value of the vehAvails property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleVendorAvailabilityType.VehAvails }
-     *
+     *     
      */
     public VehicleVendorAvailabilityType.VehAvails getVehAvails() {
         return vehAvails;
@@ -122,11 +126,11 @@ public class VehicleVendorAvailabilityType {
 
     /**
      * Sets the value of the vehAvails property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleVendorAvailabilityType.VehAvails }
-     *
+     *     
      */
     public void setVehAvails(VehicleVendorAvailabilityType.VehAvails value) {
         this.vehAvails = value;
@@ -134,11 +138,11 @@ public class VehicleVendorAvailabilityType {
 
     /**
      * Gets the value of the info property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleAvailVendorInfoType }
-     *
+     *     
      */
     public VehicleAvailVendorInfoType getInfo() {
         return info;
@@ -146,11 +150,11 @@ public class VehicleVendorAvailabilityType {
 
     /**
      * Sets the value of the info property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleAvailVendorInfoType }
-     *
+     *     
      */
     public void setInfo(VehicleAvailVendorInfoType value) {
         this.info = value;
@@ -159,9 +163,9 @@ public class VehicleVendorAvailabilityType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -196,8 +200,8 @@ public class VehicleVendorAvailabilityType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -206,7 +210,7 @@ public class VehicleVendorAvailabilityType {
     public static class VehAvails {
 
         @XmlElement(name = "VehAvail", required = true)
-        protected List<VehAvail> vehAvail;
+        protected List<VehicleVendorAvailabilityType.VehAvails.VehAvail> vehAvail;
         @XmlAttribute(name = "RateCategory")
         protected String rateCategory;
         @XmlAttribute(name = "RatePeriod")
@@ -214,40 +218,40 @@ public class VehicleVendorAvailabilityType {
 
         /**
          * Gets the value of the vehAvail property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the vehAvail property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getVehAvail().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link VehicleVendorAvailabilityType.VehAvails.VehAvail }
-         *
-         *
+         * 
+         * 
          */
-        public List<VehAvail> getVehAvail() {
+        public List<VehicleVendorAvailabilityType.VehAvails.VehAvail> getVehAvail() {
             if (vehAvail == null) {
-                vehAvail = new ArrayList<VehAvail>();
+                vehAvail = new ArrayList<VehicleVendorAvailabilityType.VehAvails.VehAvail>();
             }
             return this.vehAvail;
         }
 
         /**
          * Gets the value of the rateCategory property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getRateCategory() {
             return rateCategory;
@@ -255,11 +259,11 @@ public class VehicleVendorAvailabilityType {
 
         /**
          * Sets the value of the rateCategory property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setRateCategory(String value) {
             this.rateCategory = value;
@@ -267,11 +271,11 @@ public class VehicleVendorAvailabilityType {
 
         /**
          * Gets the value of the ratePeriod property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link RatePeriodSimpleType }
-         *
+         *     
          */
         public RatePeriodSimpleType getRatePeriod() {
             return ratePeriod;
@@ -279,11 +283,11 @@ public class VehicleVendorAvailabilityType {
 
         /**
          * Sets the value of the ratePeriod property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link RatePeriodSimpleType }
-         *
+         *     
          */
         public void setRatePeriod(RatePeriodSimpleType value) {
             this.ratePeriod = value;
@@ -292,9 +296,9 @@ public class VehicleVendorAvailabilityType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -317,8 +321,8 @@ public class VehicleVendorAvailabilityType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
@@ -337,11 +341,11 @@ public class VehicleVendorAvailabilityType {
 
             /**
              * Gets the value of the vehAvailCore property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link VehicleAvailCoreType }
-             *
+             *     
              */
             public VehicleAvailCoreType getVehAvailCore() {
                 return vehAvailCore;
@@ -349,11 +353,11 @@ public class VehicleVendorAvailabilityType {
 
             /**
              * Sets the value of the vehAvailCore property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link VehicleAvailCoreType }
-             *
+             *     
              */
             public void setVehAvailCore(VehicleAvailCoreType value) {
                 this.vehAvailCore = value;
@@ -361,11 +365,11 @@ public class VehicleVendorAvailabilityType {
 
             /**
              * Gets the value of the vehAvailInfo property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link VehicleAvailAdditionalInfoType }
-             *
+             *     
              */
             public VehicleAvailAdditionalInfoType getVehAvailInfo() {
                 return vehAvailInfo;
@@ -373,11 +377,11 @@ public class VehicleVendorAvailabilityType {
 
             /**
              * Sets the value of the vehAvailInfo property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link VehicleAvailAdditionalInfoType }
-             *
+             *     
              */
             public void setVehAvailInfo(VehicleAvailAdditionalInfoType value) {
                 this.vehAvailInfo = value;
@@ -385,11 +389,11 @@ public class VehicleVendorAvailabilityType {
 
             /**
              * Gets the value of the advanceBooking property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link VehicleVendorAvailabilityType.VehAvails.VehAvail.AdvanceBooking }
-             *
+             *     
              */
             public VehicleVendorAvailabilityType.VehAvails.VehAvail.AdvanceBooking getAdvanceBooking() {
                 return advanceBooking;
@@ -397,11 +401,11 @@ public class VehicleVendorAvailabilityType {
 
             /**
              * Sets the value of the advanceBooking property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link VehicleVendorAvailabilityType.VehAvails.VehAvail.AdvanceBooking }
-             *
+             *     
              */
             public void setAdvanceBooking(VehicleVendorAvailabilityType.VehAvails.VehAvail.AdvanceBooking value) {
                 this.advanceBooking = value;

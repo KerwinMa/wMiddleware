@@ -1,5 +1,6 @@
 package com.witbooking.middleware.model.dynamicPriceVariation;
 
+import com.witbooking.middleware.exceptions.model.IncompatibleTypesException;
 import com.witbooking.middleware.exceptions.model.RangeException;
 import org.apache.log4j.Logger;
 import org.joda.time.DateTime;
@@ -8,6 +9,7 @@ import org.joda.time.LocalTime;
 
 import java.io.Serializable;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 
@@ -85,7 +87,7 @@ public class HourRangeCondition extends DatetimeCondition implements Serializabl
             /*Get currentTimezone in UTC*/
             LocalTime currentLocalTimeUTC=null;
             try {
-                currentLocalTimeUTC = ((DateTime) arguments.get(ARGUMENT_CURRENT_TIME)).toLocalTime();
+                currentLocalTimeUTC = ((DateTime) arguments.get(ARGUMENT_CURRENT_TIME)).withZone(tz).toLocalTime();
             }catch (ClassCastException e){
                 logger.error("Invalid arguments in the "+ARGUMENT_CURRENT_TIME+" key.");
                 throw new IllegalArgumentException("Method arguments map must have a valid DateTime in the "+ARGUMENT_CURRENT_TIME+ " key.");

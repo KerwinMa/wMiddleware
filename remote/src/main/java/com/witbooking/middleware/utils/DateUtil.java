@@ -152,6 +152,15 @@ public class DateUtil {
         }
     }
 
+    public static boolean isCalendarFormat(String date){
+        return date.matches("((19|20)\\d\\d)-(0[1-9]|1[012])-([012][0-9]|3[01])");
+    }
+
+    public static boolean isTimestampFormat(String date){
+        return date.matches("((19|20)\\d\\d)-(0[1-9]|1[012])-([012][0-9]|3[01]) (2[0-4]|[01][0-9]):([0-5][0-9]):([0-5][0-9])");
+    }
+
+
     /**
      * Return A Date from a String with Date in ISO 8601, using the UTC TimeZone
      * yyyy-MM-ddTHH:mm:ssZ

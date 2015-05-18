@@ -8,11 +8,16 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -87,11 +92,11 @@ public class VehicleAdditionalDriverRequirementsType {
 
     /**
      * Gets the value of the addlDriverInfos property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleAdditionalDriverRequirementsType.AddlDriverInfos }
-     *
+     *     
      */
     public VehicleAdditionalDriverRequirementsType.AddlDriverInfos getAddlDriverInfos() {
         return addlDriverInfos;
@@ -99,11 +104,11 @@ public class VehicleAdditionalDriverRequirementsType {
 
     /**
      * Sets the value of the addlDriverInfos property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleAdditionalDriverRequirementsType.AddlDriverInfos }
-     *
+     *     
      */
     public void setAddlDriverInfos(VehicleAdditionalDriverRequirementsType.AddlDriverInfos value) {
         this.addlDriverInfos = value;
@@ -112,9 +117,9 @@ public class VehicleAdditionalDriverRequirementsType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -158,8 +163,8 @@ public class VehicleAdditionalDriverRequirementsType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -169,7 +174,7 @@ public class VehicleAdditionalDriverRequirementsType {
     public static class AddlDriverInfos {
 
         @XmlElement(name = "AddlDriverInfo", required = true)
-        protected List<AddlDriverInfo> addlDriverInfo;
+        protected List<VehicleAdditionalDriverRequirementsType.AddlDriverInfos.AddlDriverInfo> addlDriverInfo;
         @XmlElement(name = "Vehicles")
         protected VehicleAdditionalDriverRequirementsType.AddlDriverInfos.Vehicles vehicles;
         @XmlAttribute(name = "ChargeType")
@@ -190,40 +195,40 @@ public class VehicleAdditionalDriverRequirementsType {
 
         /**
          * Gets the value of the addlDriverInfo property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the addlDriverInfo property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getAddlDriverInfo().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link VehicleAdditionalDriverRequirementsType.AddlDriverInfos.AddlDriverInfo }
-         *
-         *
+         * 
+         * 
          */
-        public List<AddlDriverInfo> getAddlDriverInfo() {
+        public List<VehicleAdditionalDriverRequirementsType.AddlDriverInfos.AddlDriverInfo> getAddlDriverInfo() {
             if (addlDriverInfo == null) {
-                addlDriverInfo = new ArrayList<AddlDriverInfo>();
+                addlDriverInfo = new ArrayList<VehicleAdditionalDriverRequirementsType.AddlDriverInfos.AddlDriverInfo>();
             }
             return this.addlDriverInfo;
         }
 
         /**
          * Gets the value of the vehicles property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link VehicleAdditionalDriverRequirementsType.AddlDriverInfos.Vehicles }
-         *
+         *     
          */
         public VehicleAdditionalDriverRequirementsType.AddlDriverInfos.Vehicles getVehicles() {
             return vehicles;
@@ -231,11 +236,11 @@ public class VehicleAdditionalDriverRequirementsType {
 
         /**
          * Sets the value of the vehicles property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link VehicleAdditionalDriverRequirementsType.AddlDriverInfos.Vehicles }
-         *
+         *     
          */
         public void setVehicles(VehicleAdditionalDriverRequirementsType.AddlDriverInfos.Vehicles value) {
             this.vehicles = value;
@@ -243,11 +248,11 @@ public class VehicleAdditionalDriverRequirementsType {
 
         /**
          * Gets the value of the chargeType property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getChargeType() {
             return chargeType;
@@ -255,11 +260,11 @@ public class VehicleAdditionalDriverRequirementsType {
 
         /**
          * Sets the value of the chargeType property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setChargeType(String value) {
             this.chargeType = value;
@@ -267,11 +272,11 @@ public class VehicleAdditionalDriverRequirementsType {
 
         /**
          * Gets the value of the amount property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link BigDecimal }
-         *
+         *     
          */
         public BigDecimal getAmount() {
             return amount;
@@ -279,11 +284,11 @@ public class VehicleAdditionalDriverRequirementsType {
 
         /**
          * Sets the value of the amount property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link BigDecimal }
-         *
+         *     
          */
         public void setAmount(BigDecimal value) {
             this.amount = value;
@@ -291,11 +296,11 @@ public class VehicleAdditionalDriverRequirementsType {
 
         /**
          * Gets the value of the currencyCode property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getCurrencyCode() {
             return currencyCode;
@@ -303,11 +308,11 @@ public class VehicleAdditionalDriverRequirementsType {
 
         /**
          * Sets the value of the currencyCode property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setCurrencyCode(String value) {
             this.currencyCode = value;
@@ -315,11 +320,11 @@ public class VehicleAdditionalDriverRequirementsType {
 
         /**
          * Gets the value of the decimalPlaces property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link BigInteger }
-         *
+         *     
          */
         public BigInteger getDecimalPlaces() {
             return decimalPlaces;
@@ -327,11 +332,11 @@ public class VehicleAdditionalDriverRequirementsType {
 
         /**
          * Sets the value of the decimalPlaces property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link BigInteger }
-         *
+         *     
          */
         public void setDecimalPlaces(BigInteger value) {
             this.decimalPlaces = value;
@@ -339,11 +344,11 @@ public class VehicleAdditionalDriverRequirementsType {
 
         /**
          * Gets the value of the start property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getStart() {
             return start;
@@ -351,11 +356,11 @@ public class VehicleAdditionalDriverRequirementsType {
 
         /**
          * Sets the value of the start property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setStart(String value) {
             this.start = value;
@@ -363,11 +368,11 @@ public class VehicleAdditionalDriverRequirementsType {
 
         /**
          * Gets the value of the duration property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getDuration() {
             return duration;
@@ -375,11 +380,11 @@ public class VehicleAdditionalDriverRequirementsType {
 
         /**
          * Sets the value of the duration property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setDuration(String value) {
             this.duration = value;
@@ -387,11 +392,11 @@ public class VehicleAdditionalDriverRequirementsType {
 
         /**
          * Gets the value of the end property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getEnd() {
             return end;
@@ -399,11 +404,11 @@ public class VehicleAdditionalDriverRequirementsType {
 
         /**
          * Sets the value of the end property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setEnd(String value) {
             this.end = value;
@@ -412,9 +417,9 @@ public class VehicleAdditionalDriverRequirementsType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -424,8 +429,8 @@ public class VehicleAdditionalDriverRequirementsType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
@@ -438,11 +443,11 @@ public class VehicleAdditionalDriverRequirementsType {
 
             /**
              * Gets the value of the type property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link LocationDetailRequirementAddlDriverInfoType }
-             *
+             *     
              */
             public LocationDetailRequirementAddlDriverInfoType getType() {
                 return type;
@@ -450,11 +455,11 @@ public class VehicleAdditionalDriverRequirementsType {
 
             /**
              * Sets the value of the type property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link LocationDetailRequirementAddlDriverInfoType }
-             *
+             *     
              */
             public void setType(LocationDetailRequirementAddlDriverInfoType value) {
                 this.type = value;
@@ -465,9 +470,9 @@ public class VehicleAdditionalDriverRequirementsType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -487,8 +492,8 @@ public class VehicleAdditionalDriverRequirementsType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
@@ -497,33 +502,33 @@ public class VehicleAdditionalDriverRequirementsType {
         public static class Vehicles {
 
             @XmlElement(name = "Vehicle", required = true)
-            protected List<Vehicle> vehicle;
+            protected List<VehicleAdditionalDriverRequirementsType.AddlDriverInfos.Vehicles.Vehicle> vehicle;
 
             /**
              * Gets the value of the vehicle property.
-             *
+             * 
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the vehicle property.
-             *
+             * 
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getVehicle().add(newItem);
              * </pre>
-             *
-             *
+             * 
+             * 
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link VehicleAdditionalDriverRequirementsType.AddlDriverInfos.Vehicles.Vehicle }
-             *
-             *
+             * 
+             * 
              */
-            public List<Vehicle> getVehicle() {
+            public List<VehicleAdditionalDriverRequirementsType.AddlDriverInfos.Vehicles.Vehicle> getVehicle() {
                 if (vehicle == null) {
-                    vehicle = new ArrayList<Vehicle>();
+                    vehicle = new ArrayList<VehicleAdditionalDriverRequirementsType.AddlDriverInfos.Vehicles.Vehicle>();
                 }
                 return this.vehicle;
             }

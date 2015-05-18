@@ -159,6 +159,18 @@ public final class ChannelsHotelDBHandler extends DBHandler {
         }
     }
 
+    public List<String> getTickersMapped(String channelTicker) throws DBAccessException {
+        if (channelsHandler.getItems() == null || channelsHandler.getItems().isEmpty()) {
+            //Update the channelHandler
+            updateChannelHandler(channelTicker);
+        }
+        List<String> tickers = new ArrayList<>();
+        for (ChannelMappingAbstract item : channelsHandler.getItems()) {
+            tickers.add(item.getInventoryTicker());
+        }
+        return tickers;
+    }
+
     private String findInChannelHandler(String channelTicker, List<String> codes) {
         String inventoryTicker = null;
         if (channelTicker != null && codes != null) {

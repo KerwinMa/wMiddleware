@@ -8,7 +8,12 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -80,11 +85,11 @@ public class AdvResTicketingType {
 
     /**
      * Gets the value of the advReservation property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link AdvResTicketingType.AdvReservation }
-     *
+     *     
      */
     public AdvResTicketingType.AdvReservation getAdvReservation() {
         return advReservation;
@@ -92,11 +97,11 @@ public class AdvResTicketingType {
 
     /**
      * Sets the value of the advReservation property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link AdvResTicketingType.AdvReservation }
-     *
+     *     
      */
     public void setAdvReservation(AdvResTicketingType.AdvReservation value) {
         this.advReservation = value;
@@ -104,11 +109,11 @@ public class AdvResTicketingType {
 
     /**
      * Gets the value of the advTicketing property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link AdvResTicketingType.AdvTicketing }
-     *
+     *     
      */
     public AdvResTicketingType.AdvTicketing getAdvTicketing() {
         return advTicketing;
@@ -116,11 +121,11 @@ public class AdvResTicketingType {
 
     /**
      * Sets the value of the advTicketing property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link AdvResTicketingType.AdvTicketing }
-     *
+     *     
      */
     public void setAdvTicketing(AdvResTicketingType.AdvTicketing value) {
         this.advTicketing = value;

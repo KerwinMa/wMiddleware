@@ -8,11 +8,17 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.datatype.XMLGregorianCalendar;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
@@ -94,11 +100,11 @@ public class FlightSegmentBaseType {
 
     /**
      * Gets the value of the departureAirport property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link FlightSegmentBaseType.DepartureAirport }
-     *
+     *     
      */
     public FlightSegmentBaseType.DepartureAirport getDepartureAirport() {
         return departureAirport;
@@ -106,11 +112,11 @@ public class FlightSegmentBaseType {
 
     /**
      * Sets the value of the departureAirport property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link FlightSegmentBaseType.DepartureAirport }
-     *
+     *     
      */
     public void setDepartureAirport(FlightSegmentBaseType.DepartureAirport value) {
         this.departureAirport = value;
@@ -118,11 +124,11 @@ public class FlightSegmentBaseType {
 
     /**
      * Gets the value of the arrivalAirport property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link FlightSegmentBaseType.ArrivalAirport }
-     *
+     *     
      */
     public FlightSegmentBaseType.ArrivalAirport getArrivalAirport() {
         return arrivalAirport;
@@ -130,11 +136,11 @@ public class FlightSegmentBaseType {
 
     /**
      * Sets the value of the arrivalAirport property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link FlightSegmentBaseType.ArrivalAirport }
-     *
+     *     
      */
     public void setArrivalAirport(FlightSegmentBaseType.ArrivalAirport value) {
         this.arrivalAirport = value;

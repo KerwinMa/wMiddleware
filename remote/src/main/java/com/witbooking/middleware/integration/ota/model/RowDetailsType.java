@@ -8,10 +8,14 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -87,11 +91,11 @@ public class RowDetailsType {
 
     /**
      * Gets the value of the airSeats property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link RowDetailsType.AirSeats }
-     *
+     *     
      */
     public RowDetailsType.AirSeats getAirSeats() {
         return airSeats;
@@ -99,11 +103,11 @@ public class RowDetailsType {
 
     /**
      * Sets the value of the airSeats property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link RowDetailsType.AirSeats }
-     *
+     *     
      */
     public void setAirSeats(RowDetailsType.AirSeats value) {
         this.airSeats = value;
@@ -111,11 +115,11 @@ public class RowDetailsType {
 
     /**
      * Gets the value of the airRowCharacteristics property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link RowDetailsType.AirRowCharacteristics }
-     *
+     *     
      */
     public RowDetailsType.AirRowCharacteristics getAirRowCharacteristics() {
         return airRowCharacteristics;
@@ -123,11 +127,11 @@ public class RowDetailsType {
 
     /**
      * Sets the value of the airRowCharacteristics property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link RowDetailsType.AirRowCharacteristics }
-     *
+     *     
      */
     public void setAirRowCharacteristics(RowDetailsType.AirRowCharacteristics value) {
         this.airRowCharacteristics = value;
@@ -135,11 +139,11 @@ public class RowDetailsType {
 
     /**
      * Gets the value of the maxNumberOfSeats property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link Integer }
-     *
+     *     
      */
     public Integer getMaxNumberOfSeats() {
         return maxNumberOfSeats;
@@ -147,11 +151,11 @@ public class RowDetailsType {
 
     /**
      * Sets the value of the maxNumberOfSeats property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link Integer }
-     *
+     *     
      */
     public void setMaxNumberOfSeats(Integer value) {
         this.maxNumberOfSeats = value;
@@ -159,11 +163,11 @@ public class RowDetailsType {
 
     /**
      * Gets the value of the rowNumber property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link BigInteger }
-     *
+     *     
      */
     public BigInteger getRowNumber() {
         return rowNumber;
@@ -171,11 +175,11 @@ public class RowDetailsType {
 
     /**
      * Sets the value of the rowNumber property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link BigInteger }
-     *
+     *     
      */
     public void setRowNumber(BigInteger value) {
         this.rowNumber = value;
@@ -183,11 +187,11 @@ public class RowDetailsType {
 
     /**
      * Gets the value of the airBookDesigCode property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getAirBookDesigCode() {
         return airBookDesigCode;
@@ -195,11 +199,11 @@ public class RowDetailsType {
 
     /**
      * Sets the value of the airBookDesigCode property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setAirBookDesigCode(String value) {
         this.airBookDesigCode = value;
@@ -207,11 +211,11 @@ public class RowDetailsType {
 
     /**
      * Gets the value of the rowSequenceNumber property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link BigInteger }
-     *
+     *     
      */
     public BigInteger getRowSequenceNumber() {
         return rowSequenceNumber;
@@ -219,11 +223,11 @@ public class RowDetailsType {
 
     /**
      * Sets the value of the rowSequenceNumber property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link BigInteger }
-     *
+     *     
      */
     public void setRowSequenceNumber(BigInteger value) {
         this.rowSequenceNumber = value;
@@ -232,9 +236,9 @@ public class RowDetailsType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -244,8 +248,8 @@ public class RowDetailsType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
@@ -256,25 +260,25 @@ public class RowDetailsType {
 
         /**
          * Gets the value of the characteristicList property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the characteristicList property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getCharacteristicList().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link String }
-         *
-         *
+         * 
+         * 
          */
         public List<String> getCharacteristicList() {
             if (characteristicList == null) {
@@ -288,9 +292,9 @@ public class RowDetailsType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -311,8 +315,8 @@ public class RowDetailsType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -321,33 +325,33 @@ public class RowDetailsType {
     public static class AirSeats {
 
         @XmlElement(name = "AirSeat", required = true)
-        protected List<AirSeat> airSeat;
+        protected List<RowDetailsType.AirSeats.AirSeat> airSeat;
 
         /**
          * Gets the value of the airSeat property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the airSeat property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getAirSeat().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link RowDetailsType.AirSeats.AirSeat }
-         *
-         *
+         * 
+         * 
          */
-        public List<AirSeat> getAirSeat() {
+        public List<RowDetailsType.AirSeats.AirSeat> getAirSeat() {
             if (airSeat == null) {
-                airSeat = new ArrayList<AirSeat>();
+                airSeat = new ArrayList<RowDetailsType.AirSeats.AirSeat>();
             }
             return this.airSeat;
         }

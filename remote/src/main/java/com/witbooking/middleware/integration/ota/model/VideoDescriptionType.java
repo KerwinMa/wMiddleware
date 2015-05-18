@@ -8,9 +8,14 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -52,35 +57,35 @@ import java.util.List;
 public class VideoDescriptionType {
 
     @XmlElement(name = "VideoFormat")
-    protected List<VideoFormat> videoFormat;
+    protected List<VideoDescriptionType.VideoFormat> videoFormat;
     @XmlAttribute(name = "Category")
     protected String category;
 
     /**
      * Gets the value of the videoFormat property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the videoFormat property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getVideoFormat().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link VideoDescriptionType.VideoFormat }
-     *
-     *
+     * 
+     * 
      */
-    public List<VideoFormat> getVideoFormat() {
+    public List<VideoDescriptionType.VideoFormat> getVideoFormat() {
         if (videoFormat == null) {
-            videoFormat = new ArrayList<VideoFormat>();
+            videoFormat = new ArrayList<VideoDescriptionType.VideoFormat>();
         }
         return this.videoFormat;
     }

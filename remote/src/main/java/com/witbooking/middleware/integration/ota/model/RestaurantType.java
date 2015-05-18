@@ -8,10 +8,15 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -169,11 +174,11 @@ public class RestaurantType {
 
     /**
      * Gets the value of the multimediaDescriptions property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link RestaurantType.MultimediaDescriptions }
-     *
+     *     
      */
     public RestaurantType.MultimediaDescriptions getMultimediaDescriptions() {
         return multimediaDescriptions;
@@ -181,11 +186,11 @@ public class RestaurantType {
 
     /**
      * Sets the value of the multimediaDescriptions property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link RestaurantType.MultimediaDescriptions }
-     *
+     *     
      */
     public void setMultimediaDescriptions(RestaurantType.MultimediaDescriptions value) {
         this.multimediaDescriptions = value;
@@ -193,11 +198,11 @@ public class RestaurantType {
 
     /**
      * Gets the value of the relativePosition property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link RelativePositionType }
-     *
+     *     
      */
     public RelativePositionType getRelativePosition() {
         return relativePosition;
@@ -205,11 +210,11 @@ public class RestaurantType {
 
     /**
      * Sets the value of the relativePosition property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link RelativePositionType }
-     *
+     *     
      */
     public void setRelativePosition(RelativePositionType value) {
         this.relativePosition = value;
@@ -217,11 +222,11 @@ public class RestaurantType {
 
     /**
      * Gets the value of the operationSchedules property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link OperationSchedulesPlusChargeType }
-     *
+     *     
      */
     public OperationSchedulesPlusChargeType getOperationSchedules() {
         return operationSchedules;
@@ -229,11 +234,11 @@ public class RestaurantType {
 
     /**
      * Sets the value of the operationSchedules property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link OperationSchedulesPlusChargeType }
-     *
+     *     
      */
     public void setOperationSchedules(OperationSchedulesPlusChargeType value) {
         this.operationSchedules = value;
@@ -241,11 +246,11 @@ public class RestaurantType {
 
     /**
      * Gets the value of the infoCodes property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link RestaurantType.InfoCodes }
-     *
+     *     
      */
     public RestaurantType.InfoCodes getInfoCodes() {
         return infoCodes;
@@ -253,11 +258,11 @@ public class RestaurantType {
 
     /**
      * Sets the value of the infoCodes property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link RestaurantType.InfoCodes }
-     *
+     *     
      */
     public void setInfoCodes(RestaurantType.InfoCodes value) {
         this.infoCodes = value;
@@ -265,11 +270,11 @@ public class RestaurantType {
 
     /**
      * Gets the value of the cuisineCodes property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link RestaurantType.CuisineCodes }
-     *
+     *     
      */
     public RestaurantType.CuisineCodes getCuisineCodes() {
         return cuisineCodes;
@@ -277,11 +282,11 @@ public class RestaurantType {
 
     /**
      * Sets the value of the cuisineCodes property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link RestaurantType.CuisineCodes }
-     *
+     *     
      */
     public void setCuisineCodes(RestaurantType.CuisineCodes value) {
         this.cuisineCodes = value;
@@ -289,11 +294,11 @@ public class RestaurantType {
 
     /**
      * Gets the value of the descriptiveText property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getDescriptiveText() {
         return descriptiveText;
@@ -301,11 +306,11 @@ public class RestaurantType {
 
     /**
      * Sets the value of the descriptiveText property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setDescriptiveText(String value) {
         this.descriptiveText = value;
@@ -313,11 +318,11 @@ public class RestaurantType {
 
     /**
      * Gets the value of the restaurantName property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getRestaurantName() {
         return restaurantName;
@@ -325,11 +330,11 @@ public class RestaurantType {
 
     /**
      * Sets the value of the restaurantName property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setRestaurantName(String value) {
         this.restaurantName = value;
@@ -337,11 +342,11 @@ public class RestaurantType {
 
     /**
      * Gets the value of the maxSeatingCapacity property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link BigInteger }
-     *
+     *     
      */
     public BigInteger getMaxSeatingCapacity() {
         return maxSeatingCapacity;
@@ -349,11 +354,11 @@ public class RestaurantType {
 
     /**
      * Sets the value of the maxSeatingCapacity property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link BigInteger }
-     *
+     *     
      */
     public void setMaxSeatingCapacity(BigInteger value) {
         this.maxSeatingCapacity = value;
@@ -361,11 +366,11 @@ public class RestaurantType {
 
     /**
      * Gets the value of the maxSingleParty property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link BigInteger }
-     *
+     *     
      */
     public BigInteger getMaxSingleParty() {
         return maxSingleParty;
@@ -373,11 +378,11 @@ public class RestaurantType {
 
     /**
      * Sets the value of the maxSingleParty property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link BigInteger }
-     *
+     *     
      */
     public void setMaxSingleParty(BigInteger value) {
         this.maxSingleParty = value;
@@ -385,11 +390,11 @@ public class RestaurantType {
 
     /**
      * Gets the value of the invCode property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getInvCode() {
         return invCode;
@@ -397,11 +402,11 @@ public class RestaurantType {
 
     /**
      * Sets the value of the invCode property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setInvCode(String value) {
         this.invCode = value;
@@ -409,11 +414,11 @@ public class RestaurantType {
 
     /**
      * Gets the value of the offerBreakfast property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link Boolean }
-     *
+     *     
      */
     public Boolean isOfferBreakfast() {
         return offerBreakfast;
@@ -421,11 +426,11 @@ public class RestaurantType {
 
     /**
      * Sets the value of the offerBreakfast property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *
+     *     
      */
     public void setOfferBreakfast(Boolean value) {
         this.offerBreakfast = value;
@@ -433,11 +438,11 @@ public class RestaurantType {
 
     /**
      * Gets the value of the offerLunch property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link Boolean }
-     *
+     *     
      */
     public Boolean isOfferLunch() {
         return offerLunch;
@@ -445,11 +450,11 @@ public class RestaurantType {
 
     /**
      * Sets the value of the offerLunch property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *
+     *     
      */
     public void setOfferLunch(Boolean value) {
         this.offerLunch = value;
@@ -457,11 +462,11 @@ public class RestaurantType {
 
     /**
      * Gets the value of the offerDinner property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link Boolean }
-     *
+     *     
      */
     public Boolean isOfferDinner() {
         return offerDinner;
@@ -469,11 +474,11 @@ public class RestaurantType {
 
     /**
      * Sets the value of the offerDinner property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *
+     *     
      */
     public void setOfferDinner(Boolean value) {
         this.offerDinner = value;
@@ -481,11 +486,11 @@ public class RestaurantType {
 
     /**
      * Gets the value of the offerBrunch property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link Boolean }
-     *
+     *     
      */
     public Boolean isOfferBrunch() {
         return offerBrunch;
@@ -493,11 +498,11 @@ public class RestaurantType {
 
     /**
      * Sets the value of the offerBrunch property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *
+     *     
      */
     public void setOfferBrunch(Boolean value) {
         this.offerBrunch = value;
@@ -505,11 +510,11 @@ public class RestaurantType {
 
     /**
      * Gets the value of the proximityCode property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getProximityCode() {
         return proximityCode;
@@ -517,11 +522,11 @@ public class RestaurantType {
 
     /**
      * Sets the value of the proximityCode property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setProximityCode(String value) {
         this.proximityCode = value;
@@ -529,11 +534,11 @@ public class RestaurantType {
 
     /**
      * Gets the value of the sort property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link BigInteger }
-     *
+     *     
      */
     public BigInteger getSort() {
         return sort;
@@ -541,11 +546,11 @@ public class RestaurantType {
 
     /**
      * Sets the value of the sort property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link BigInteger }
-     *
+     *     
      */
     public void setSort(BigInteger value) {
         this.sort = value;
@@ -553,11 +558,11 @@ public class RestaurantType {
 
     /**
      * Gets the value of the reservationReqInd property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link Boolean }
-     *
+     *     
      */
     public Boolean isReservationReqInd() {
         return reservationReqInd;
@@ -565,11 +570,11 @@ public class RestaurantType {
 
     /**
      * Sets the value of the reservationReqInd property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *
+     *     
      */
     public void setReservationReqInd(Boolean value) {
         this.reservationReqInd = value;
@@ -577,11 +582,11 @@ public class RestaurantType {
 
     /**
      * Gets the value of the id property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getID() {
         return id;
@@ -589,11 +594,11 @@ public class RestaurantType {
 
     /**
      * Sets the value of the id property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setID(String value) {
         this.id = value;
@@ -602,9 +607,9 @@ public class RestaurantType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -627,8 +632,8 @@ public class RestaurantType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -637,33 +642,33 @@ public class RestaurantType {
     public static class CuisineCodes {
 
         @XmlElement(name = "CuisineCode", required = true)
-        protected List<CuisineCode> cuisineCode;
+        protected List<RestaurantType.CuisineCodes.CuisineCode> cuisineCode;
 
         /**
          * Gets the value of the cuisineCode property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the cuisineCode property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getCuisineCode().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link RestaurantType.CuisineCodes.CuisineCode }
-         *
-         *
+         * 
+         * 
          */
-        public List<CuisineCode> getCuisineCode() {
+        public List<RestaurantType.CuisineCodes.CuisineCode> getCuisineCode() {
             if (cuisineCode == null) {
-                cuisineCode = new ArrayList<CuisineCode>();
+                cuisineCode = new ArrayList<RestaurantType.CuisineCodes.CuisineCode>();
             }
             return this.cuisineCode;
         }
@@ -671,9 +676,9 @@ public class RestaurantType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -686,8 +691,8 @@ public class RestaurantType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
@@ -706,11 +711,11 @@ public class RestaurantType {
 
             /**
              * Gets the value of the code property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getCode() {
                 return code;
@@ -718,11 +723,11 @@ public class RestaurantType {
 
             /**
              * Sets the value of the code property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setCode(String value) {
                 this.code = value;
@@ -730,11 +735,11 @@ public class RestaurantType {
 
             /**
              * Gets the value of the isMain property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link Boolean }
-             *
+             *     
              */
             public Boolean isIsMain() {
                 return isMain;
@@ -742,11 +747,11 @@ public class RestaurantType {
 
             /**
              * Sets the value of the isMain property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link Boolean }
-             *
+             *     
              */
             public void setIsMain(Boolean value) {
                 this.isMain = value;
@@ -754,11 +759,11 @@ public class RestaurantType {
 
             /**
              * Gets the value of the existsCode property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getExistsCode() {
                 return existsCode;
@@ -766,11 +771,11 @@ public class RestaurantType {
 
             /**
              * Sets the value of the existsCode property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setExistsCode(String value) {
                 this.existsCode = value;
@@ -778,11 +783,11 @@ public class RestaurantType {
 
             /**
              * Gets the value of the codeDetail property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getCodeDetail() {
                 return codeDetail;
@@ -790,11 +795,11 @@ public class RestaurantType {
 
             /**
              * Sets the value of the codeDetail property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setCodeDetail(String value) {
                 this.codeDetail = value;
@@ -802,11 +807,11 @@ public class RestaurantType {
 
             /**
              * Gets the value of the removal property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link Boolean }
-             *
+             *     
              */
             public Boolean isRemoval() {
                 return removal;
@@ -814,11 +819,11 @@ public class RestaurantType {
 
             /**
              * Sets the value of the removal property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link Boolean }
-             *
+             *     
              */
             public void setRemoval(Boolean value) {
                 this.removal = value;
@@ -831,9 +836,9 @@ public class RestaurantType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -865,8 +870,8 @@ public class RestaurantType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -875,33 +880,33 @@ public class RestaurantType {
     public static class InfoCodes {
 
         @XmlElement(name = "InfoCode", required = true)
-        protected List<InfoCode> infoCode;
+        protected List<RestaurantType.InfoCodes.InfoCode> infoCode;
 
         /**
          * Gets the value of the infoCode property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the infoCode property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getInfoCode().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link RestaurantType.InfoCodes.InfoCode }
-         *
-         *
+         * 
+         * 
          */
-        public List<InfoCode> getInfoCode() {
+        public List<RestaurantType.InfoCodes.InfoCode> getInfoCode() {
             if (infoCode == null) {
-                infoCode = new ArrayList<InfoCode>();
+                infoCode = new ArrayList<RestaurantType.InfoCodes.InfoCode>();
             }
             return this.infoCode;
         }

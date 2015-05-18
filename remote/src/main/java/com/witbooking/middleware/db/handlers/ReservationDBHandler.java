@@ -11,6 +11,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import com.google.gson.reflect.TypeToken;
 import com.witbooking.middleware.db.DAOUtil;
 import com.witbooking.middleware.db.DBConnection;
 import com.witbooking.middleware.db.handlers.sqlinstructions.SQLInstructions;
@@ -21,6 +22,7 @@ import com.witbooking.middleware.model.*;
 import com.witbooking.middleware.model.values.RangeValue;
 import com.witbooking.middleware.model.values.RateDataValue;
 import com.witbooking.middleware.utils.DateUtil;
+import com.witbooking.middleware.utils.JsonUtils;
 import org.apache.log4j.Logger;
 
 import java.sql.PreparedStatement;
@@ -129,21 +131,21 @@ public class ReservationDBHandler extends DBHandler {
 
     public int updateReservationEmailInfo(EmailData emailData) throws DBAccessException {
 
-        if(emailData==null){
+        if (emailData == null) {
             return -1;
         }
         PreparedStatement statement;
-        String query=null;
-        if(emailData.getMessageType().equals(Message.MessageType.HOTEL_CONFIRMATION)){
-            query= SQLInstructions.ReservationDBHandler.UPDATE_HOTEL_RESERVATION_EMAIL_INFO;
-        }else if(emailData.getMessageType().equals(Message.MessageType.USER_CONFIRMATION)){
-            query= SQLInstructions.ReservationDBHandler.UPDATE_USER_RESERVATION_EMAIL_INFO;
-        }else{
-            logger.error("Invalid Message Type for EmailData "+emailData.getMessageType());
+        String query = null;
+        if (emailData.getMessageType().equals(Message.MessageType.HOTEL_CONFIRMATION)) {
+            query = SQLInstructions.ReservationDBHandler.UPDATE_HOTEL_RESERVATION_EMAIL_INFO;
+        } else if (emailData.getMessageType().equals(Message.MessageType.USER_CONFIRMATION)) {
+            query = SQLInstructions.ReservationDBHandler.UPDATE_USER_RESERVATION_EMAIL_INFO;
+        } else {
+            logger.error("Invalid Message Type for EmailData " + emailData.getMessageType());
         }
 
         ArrayList<Object> values = new ArrayList<Object>();
-        String emailDataStatus= emailData.getLastEmailStatus().getValue();
+        String emailDataStatus = emailData.getLastEmailStatus().getValue();
 
         values.add(emailDataStatus);
         values.add(emailData.getReservationID());
@@ -155,21 +157,21 @@ public class ReservationDBHandler extends DBHandler {
         return totalInserted;
     }
 
-    public int updateReservationEmailInfo(EmailData clientEmailData,EmailData hotelEmailData) throws DBAccessException {
+    public int updateReservationEmailInfo(EmailData clientEmailData, EmailData hotelEmailData) throws DBAccessException {
 
-        if(clientEmailData==null && hotelEmailData==null){
+        if (clientEmailData == null && hotelEmailData == null) {
             return -1;
         }
         PreparedStatement statement;
 
         ArrayList<Object> values = new ArrayList<Object>();
-        String clientEmailDataStatus= Event.EventType.INVALID.getValue();
+        String clientEmailDataStatus = Event.EventType.INVALID.getValue();
         String hotelEmailDataStatus = Event.EventType.INVALID.getValue();
         if (clientEmailData != null && clientEmailData.getLastEmailStatus() != null) {
-            clientEmailDataStatus=clientEmailData.getLastEmailStatus().getValue();
+            clientEmailDataStatus = clientEmailData.getLastEmailStatus().getValue();
         }
         if (hotelEmailData != null && hotelEmailData.getLastEmailStatus() != null) {
-            hotelEmailDataStatus=hotelEmailData.getLastEmailStatus().getValue();
+            hotelEmailDataStatus = hotelEmailData.getLastEmailStatus().getValue();
         }
 
         values.add(clientEmailDataStatus);
@@ -392,6 +394,19 @@ public class ReservationDBHandler extends DBHandler {
         return updatedEntries;
     }
 
+    public int updateCreditCardBeforeDate(String ccNumber, String ccValid, String ccCCVCode, Date lastDate)
+            throws DBAccessException {
+        List<Object> values = new ArrayList<>();
+        values.add(ccNumber);
+        values.add(ccValid);
+        values.add(ccCCVCode);
+        values.add(new java.sql.Date(lastDate.getTime()));
+        PreparedStatement statement = prepareStatement(SQLInstructions.ReservationDBHandler.UPDATE_CREDIT_CARD, values);
+        final int updatedEntries = executeUpdate(statement);
+        DAOUtil.close(statement);
+        return updatedEntries;
+    }
+
     public int[] updateReservations(List<Reservation> reservationList) throws DBAccessException {
         if (reservationList == null) {
             return new int[]{};
@@ -510,8 +525,19 @@ public class ReservationDBHandler extends DBHandler {
                 discounts.add(discount);
             }
         }
+
+        JsonArray bookingPriceRules = null;
+        try {
+            bookingPriceRules = (JsonArray) JsonUtils.gsonInstance().toJsonTree(roomStay.getBookingPriceRules());
+        } catch (Exception e) {
+            logger.error("Could not serialize booking price rules in reservation " + e.getMessage());
+        }
+
         resumenJson.add("selectedextrasdetails", services);
         resumenJson.add("selectedpromosdetails", discounts);
+        if (bookingPriceRules != null) {
+            resumenJson.add("bookingPriceRules", bookingPriceRules);
+        }
 
         //The Guest for the reservation for OTA integrations
         if (roomStay.getGuestList() != null && !roomStay.getGuestList().isEmpty()) {
@@ -590,7 +616,10 @@ public class ReservationDBHandler extends DBHandler {
         roomValues.set(5, customer.getTelephone());
 
         //TODO: if (estado='cancelada') -> set cancel values
-        roomValues.set(6, reservation.getStatus().getStringValue());
+        if (roomStay.getStatus() != null)
+            roomValues.set(6, roomStay.getStatus().getStringValue());
+        else
+            roomValues.set(6, reservation.getStatus().getStringValue());
         roomValues.set(7, reservation.getPaymentStatus());
         roomValues.set(8, roomStay.getQuantity());
         roomValues.set(9, roomStay.getNights());
@@ -800,6 +829,7 @@ public class ReservationDBHandler extends DBHandler {
             roomStay.setDateCheckOut(getDate(resultSet, 22));
             roomStay.setQuantity(getInt(resultSet, 24));
             roomStay.setTotalAmount(getFloat(resultSet, 7));
+            roomStay.setStatus(status);
 
             String resumen = getString(resultSet, 25);
             RangeValue<Float> rates = new RangeValue<>(RateDataValue.DEFAULT_VALUE);
@@ -901,6 +931,22 @@ public class ReservationDBHandler extends DBHandler {
                 } catch (Exception ex) {
                     logger.error(" JsonFail.Discounts: " + ex.getMessage());
                     logger.error(" JsonFail.Discounts: " + elementJson);
+                }
+                try {
+                    //Get the bookingPriceRules from the JSON (resumen)
+                    elementJson = resumenJson.get("bookingPriceRules");
+                    if (elementJson != null) {
+                        JsonArray requestsJson = elementJson.getAsJsonArray();
+                        List<BookingPriceRulesApplied> rulesApplied = JsonUtils.gsonInstance().fromJson(requestsJson,
+                                new TypeToken<ArrayList<BookingPriceRulesApplied>>() {
+                                }.getType());
+                        roomStay.setBookingPriceRules(rulesApplied);
+                    } else {
+                        roomStay.setBookingPriceRules(null);
+                    }
+                } catch (Exception ex) {
+                    logger.error(" JsonFail.BookingPriceRules: " + ex.getMessage());
+                    logger.error(" JsonFail.BookingPriceRules: " + elementJson);
                 }
                 try {
                     //Get the additionalRequests from the JSON (resumen)

@@ -41,7 +41,7 @@ import java.util.List;
 public class LocalizedText {
 
     @XmlElement(name = "Text", required = true)
-    protected List<Text> text;
+    protected List<LocalizedText.Text> text;
 
     public LocalizedText() {
     }
@@ -72,23 +72,23 @@ public class LocalizedText {
      * Objects of the following type(s) are allowed in the list
      * {@link LocalizedText.Text }
      */
-    public List<Text> getText() {
+    public List<LocalizedText.Text> getText() {
         if (text == null) {
-            text = new ArrayList<Text>();
+            text = new ArrayList<LocalizedText.Text>();
         }
         return this.text;
     }
 
     public void addText(String text1) {
         if (text == null) {
-            text = new ArrayList<Text>();
+            text = new ArrayList<LocalizedText.Text>();
         }
         if (text1 != null) text.add(new Text(text1));
     }
 
     public void addText(String text1, String locale) {
         if (text == null) {
-            text = new ArrayList<Text>();
+            text = new ArrayList<LocalizedText.Text>();
         }
         if (text1 != null) text.add(new Text(text1, locale));
     }

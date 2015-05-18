@@ -8,11 +8,16 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -76,7 +81,7 @@ public class ContactPersonType {
     @XmlElement(name = "PersonName")
     protected PersonNameType personName;
     @XmlElement(name = "Telephone")
-    protected List<Telephone> telephone;
+    protected List<ContactPersonType.Telephone> telephone;
     @XmlElement(name = "Address")
     protected List<AddressInfoType> address;
     @XmlElement(name = "Email")
@@ -110,11 +115,11 @@ public class ContactPersonType {
 
     /**
      * Gets the value of the personName property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link PersonNameType }
-     *
+     *     
      */
     public PersonNameType getPersonName() {
         return personName;
@@ -122,11 +127,11 @@ public class ContactPersonType {
 
     /**
      * Sets the value of the personName property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link PersonNameType }
-     *
+     *     
      */
     public void setPersonName(PersonNameType value) {
         this.personName = value;
@@ -134,29 +139,29 @@ public class ContactPersonType {
 
     /**
      * Gets the value of the telephone property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the telephone property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getTelephone().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ContactPersonType.Telephone }
-     *
-     *
+     * 
+     * 
      */
-    public List<Telephone> getTelephone() {
+    public List<ContactPersonType.Telephone> getTelephone() {
         if (telephone == null) {
-            telephone = new ArrayList<Telephone>();
+            telephone = new ArrayList<ContactPersonType.Telephone>();
         }
         return this.telephone;
     }

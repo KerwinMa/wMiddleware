@@ -11,10 +11,7 @@ import com.witbooking.middleware.model.values.*;
 import com.witbooking.middleware.utils.DateUtil;
 
 import java.io.Serializable;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 /**
  * Insert description here
@@ -243,6 +240,17 @@ public class Discount implements Serializable, DataValueHolder, Comparable<Disco
 
     public boolean isActive() {
         return active;
+    }
+
+    @Override
+    public List<DataValue> getDataValues() {
+        List<DataValue> dataValues = new ArrayList<>();
+        dataValues.add(lock);
+        dataValues.add(minStay);
+        dataValues.add(maxStay);
+        dataValues.add(minNotice);
+        dataValues.add(maxNotice);
+        return dataValues;
     }
 
     public void setActive(boolean active) {

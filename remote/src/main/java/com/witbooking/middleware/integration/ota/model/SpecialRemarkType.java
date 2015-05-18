@@ -8,11 +8,16 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -97,9 +102,9 @@ import java.util.List;
 public class SpecialRemarkType {
 
     @XmlElement(name = "TravelerRefNumber")
-    protected List<TravelerRefNumber> travelerRefNumber;
+    protected List<SpecialRemarkType.TravelerRefNumber> travelerRefNumber;
     @XmlElement(name = "FlightRefNumber")
-    protected List<FlightRefNumber> flightRefNumber;
+    protected List<SpecialRemarkType.FlightRefNumber> flightRefNumber;
     @XmlElement(name = "Text")
     protected String text;
     @XmlElement(name = "Airline")
@@ -113,69 +118,69 @@ public class SpecialRemarkType {
 
     /**
      * Gets the value of the travelerRefNumber property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the travelerRefNumber property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getTravelerRefNumber().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link SpecialRemarkType.TravelerRefNumber }
-     *
-     *
+     * 
+     * 
      */
-    public List<TravelerRefNumber> getTravelerRefNumber() {
+    public List<SpecialRemarkType.TravelerRefNumber> getTravelerRefNumber() {
         if (travelerRefNumber == null) {
-            travelerRefNumber = new ArrayList<TravelerRefNumber>();
+            travelerRefNumber = new ArrayList<SpecialRemarkType.TravelerRefNumber>();
         }
         return this.travelerRefNumber;
     }
 
     /**
      * Gets the value of the flightRefNumber property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the flightRefNumber property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getFlightRefNumber().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link SpecialRemarkType.FlightRefNumber }
-     *
-     *
+     * 
+     * 
      */
-    public List<FlightRefNumber> getFlightRefNumber() {
+    public List<SpecialRemarkType.FlightRefNumber> getFlightRefNumber() {
         if (flightRefNumber == null) {
-            flightRefNumber = new ArrayList<FlightRefNumber>();
+            flightRefNumber = new ArrayList<SpecialRemarkType.FlightRefNumber>();
         }
         return this.flightRefNumber;
     }
 
     /**
      * Gets the value of the text property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getText() {
         return text;
@@ -183,11 +188,11 @@ public class SpecialRemarkType {
 
     /**
      * Sets the value of the text property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setText(String value) {
         this.text = value;
@@ -195,25 +200,25 @@ public class SpecialRemarkType {
 
     /**
      * Gets the value of the airline property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the airline property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getAirline().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link CompanyNameType }
-     *
-     *
+     * 
+     * 
      */
     public List<CompanyNameType> getAirline() {
         if (airline == null) {
@@ -224,11 +229,11 @@ public class SpecialRemarkType {
 
     /**
      * Gets the value of the authorizedViewers property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link SpecialRemarkType.AuthorizedViewers }
-     *
+     *     
      */
     public SpecialRemarkType.AuthorizedViewers getAuthorizedViewers() {
         return authorizedViewers;
@@ -236,11 +241,11 @@ public class SpecialRemarkType {
 
     /**
      * Sets the value of the authorizedViewers property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link SpecialRemarkType.AuthorizedViewers }
-     *
+     *     
      */
     public void setAuthorizedViewers(SpecialRemarkType.AuthorizedViewers value) {
         this.authorizedViewers = value;
@@ -248,11 +253,11 @@ public class SpecialRemarkType {
 
     /**
      * Gets the value of the remarkType property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getRemarkType() {
         return remarkType;
@@ -260,11 +265,11 @@ public class SpecialRemarkType {
 
     /**
      * Sets the value of the remarkType property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setRemarkType(String value) {
         this.remarkType = value;
@@ -272,11 +277,11 @@ public class SpecialRemarkType {
 
     /**
      * Gets the value of the id property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getID() {
         return id;
@@ -284,11 +289,11 @@ public class SpecialRemarkType {
 
     /**
      * Sets the value of the id property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setID(String value) {
         this.id = value;
@@ -297,9 +302,9 @@ public class SpecialRemarkType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -320,8 +325,8 @@ public class SpecialRemarkType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -330,33 +335,33 @@ public class SpecialRemarkType {
     public static class AuthorizedViewers {
 
         @XmlElement(name = "AuthorizedViewer", required = true)
-        protected List<AuthorizedViewer> authorizedViewer;
+        protected List<SpecialRemarkType.AuthorizedViewers.AuthorizedViewer> authorizedViewer;
 
         /**
          * Gets the value of the authorizedViewer property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the authorizedViewer property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getAuthorizedViewer().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link SpecialRemarkType.AuthorizedViewers.AuthorizedViewer }
-         *
-         *
+         * 
+         * 
          */
-        public List<AuthorizedViewer> getAuthorizedViewer() {
+        public List<SpecialRemarkType.AuthorizedViewers.AuthorizedViewer> getAuthorizedViewer() {
             if (authorizedViewer == null) {
-                authorizedViewer = new ArrayList<AuthorizedViewer>();
+                authorizedViewer = new ArrayList<SpecialRemarkType.AuthorizedViewers.AuthorizedViewer>();
             }
             return this.authorizedViewer;
         }

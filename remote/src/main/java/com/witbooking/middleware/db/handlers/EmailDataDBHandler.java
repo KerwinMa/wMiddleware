@@ -23,8 +23,7 @@ import org.apache.log4j.Logger;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * Insert description here
@@ -48,7 +47,7 @@ public class EmailDataDBHandler extends DBHandler {
 
     public EmailData getEmailData(String emailID) throws DBAccessException, NonexistentValueException, SQLException {
 
-        String query= SQLInstructions.WitMetaDataDBHandler.GET_EMAIL_DATA;
+        String query=SQLInstructions.WitMetaDataDBHandler.GET_EMAIL_DATA;
         List<String> values = new ArrayList<String>();
         values.add(emailID);
 

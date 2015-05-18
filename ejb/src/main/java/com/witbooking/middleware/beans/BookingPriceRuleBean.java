@@ -8,12 +8,21 @@
 package com.witbooking.middleware.beans;
 
 import com.witbooking.middleware.db.handlers.BookingPriceRuleDBHandler;
+import com.witbooking.middleware.db.handlers.DailyValuesDBHandler;
+import com.witbooking.middleware.db.handlers.InventoryDBHandler;
 import com.witbooking.middleware.exceptions.BookingPriceRuleException;
+import com.witbooking.middleware.exceptions.FrontEndException;
+import com.witbooking.middleware.exceptions.MiddlewareException;
+import com.witbooking.middleware.exceptions.db.DBAccessException;
+import com.witbooking.middleware.model.Inventory;
 import com.witbooking.middleware.model.dynamicPriceVariation.BookingPriceRule;
+import com.witbooking.middleware.model.values.HashRangeValue;
 
 import javax.ejb.Stateless;
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
-
 /**
  * Wrapper bean for BookingPriceRulesActions
  *

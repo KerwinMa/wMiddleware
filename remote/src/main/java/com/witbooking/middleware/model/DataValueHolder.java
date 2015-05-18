@@ -9,6 +9,8 @@ package com.witbooking.middleware.model;
 
 import com.witbooking.middleware.model.values.*;
 
+import java.util.List;
+
 /**
  * Insert description here
  *
@@ -25,6 +27,10 @@ public interface DataValueHolder {
     public String getTicker();
 
     public void setTicker(String ticker);
+
+    public String getName();
+
+    public void setName(String name);
 
     public RateDataValue getRate();
 
@@ -53,5 +59,9 @@ public interface DataValueHolder {
     public NoticeDataValue getMaxNotice();
 
     public void setMaxNotice(NoticeDataValue maxNotice);
+
+    public boolean isActive();
+
+    public List<DataValue> getDataValues();
 
 }

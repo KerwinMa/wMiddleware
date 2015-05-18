@@ -8,9 +8,13 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -47,33 +51,33 @@ import java.util.List;
 public class OperationSchedulesPlusChargeType {
 
     @XmlElement(name = "OperationSchedule")
-    protected List<OperationSchedule> operationSchedule;
+    protected List<OperationSchedulesPlusChargeType.OperationSchedule> operationSchedule;
 
     /**
      * Gets the value of the operationSchedule property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the operationSchedule property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getOperationSchedule().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link OperationSchedulesPlusChargeType.OperationSchedule }
-     *
-     *
+     * 
+     * 
      */
-    public List<OperationSchedule> getOperationSchedule() {
+    public List<OperationSchedulesPlusChargeType.OperationSchedule> getOperationSchedule() {
         if (operationSchedule == null) {
-            operationSchedule = new ArrayList<OperationSchedule>();
+            operationSchedule = new ArrayList<OperationSchedulesPlusChargeType.OperationSchedule>();
         }
         return this.operationSchedule;
     }

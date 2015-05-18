@@ -8,12 +8,17 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -68,11 +73,11 @@ public class AcceptablePaymentCardsInfoType implements Serializable {
 
     /**
      * Gets the value of the acceptablePaymentCards property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link AcceptablePaymentCardsInfoType.AcceptablePaymentCards }
-     *
+     *     
      */
     public AcceptablePaymentCardsInfoType.AcceptablePaymentCards getAcceptablePaymentCards() {
         return acceptablePaymentCards;
@@ -80,11 +85,11 @@ public class AcceptablePaymentCardsInfoType implements Serializable {
 
     /**
      * Sets the value of the acceptablePaymentCards property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link AcceptablePaymentCardsInfoType.AcceptablePaymentCards }
-     *
+     *     
      */
     public void setAcceptablePaymentCards(AcceptablePaymentCardsInfoType.AcceptablePaymentCards value) {
         this.acceptablePaymentCards = value;
@@ -92,11 +97,11 @@ public class AcceptablePaymentCardsInfoType implements Serializable {
 
     /**
      * Gets the value of the info property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link FormattedTextType }
-     *
+     *     
      */
     public FormattedTextType getInfo() {
         return info;
@@ -104,11 +109,11 @@ public class AcceptablePaymentCardsInfoType implements Serializable {
 
     /**
      * Sets the value of the info property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link FormattedTextType }
-     *
+     *     
      */
     public void setInfo(FormattedTextType value) {
         this.info = value;
@@ -117,9 +122,9 @@ public class AcceptablePaymentCardsInfoType implements Serializable {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -139,8 +144,8 @@ public class AcceptablePaymentCardsInfoType implements Serializable {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -149,33 +154,33 @@ public class AcceptablePaymentCardsInfoType implements Serializable {
     public static class AcceptablePaymentCards implements Serializable{
 
         @XmlElement(name = "AcceptablePaymentCard", required = true)
-        protected List<AcceptablePaymentCard> acceptablePaymentCard;
+        protected List<AcceptablePaymentCardsInfoType.AcceptablePaymentCards.AcceptablePaymentCard> acceptablePaymentCard;
 
         /**
          * Gets the value of the acceptablePaymentCard property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the acceptablePaymentCard property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getAcceptablePaymentCard().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link AcceptablePaymentCardsInfoType.AcceptablePaymentCards.AcceptablePaymentCard }
-         *
-         *
+         * 
+         * 
          */
-        public List<AcceptablePaymentCard> getAcceptablePaymentCard() {
+        public List<AcceptablePaymentCardsInfoType.AcceptablePaymentCards.AcceptablePaymentCard> getAcceptablePaymentCard() {
             if (acceptablePaymentCard == null) {
-                acceptablePaymentCard = new ArrayList<AcceptablePaymentCard>();
+                acceptablePaymentCard = new ArrayList<AcceptablePaymentCardsInfoType.AcceptablePaymentCards.AcceptablePaymentCard>();
             }
             return this.acceptablePaymentCard;
         }

@@ -8,13 +8,17 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -72,66 +76,66 @@ import java.util.List;
 public class WeatherInfoType {
 
     @XmlElement(name = "Precipitation")
-    protected List<Precipitation> precipitation;
+    protected List<WeatherInfoType.Precipitation> precipitation;
     @XmlElement(name = "Temperature")
-    protected List<Temperature> temperature;
+    protected List<WeatherInfoType.Temperature> temperature;
     @XmlAttribute(name = "Period")
     protected String period;
 
     /**
      * Gets the value of the precipitation property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the precipitation property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getPrecipitation().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link WeatherInfoType.Precipitation }
-     *
-     *
+     * 
+     * 
      */
-    public List<Precipitation> getPrecipitation() {
+    public List<WeatherInfoType.Precipitation> getPrecipitation() {
         if (precipitation == null) {
-            precipitation = new ArrayList<Precipitation>();
+            precipitation = new ArrayList<WeatherInfoType.Precipitation>();
         }
         return this.precipitation;
     }
 
     /**
      * Gets the value of the temperature property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the temperature property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getTemperature().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link WeatherInfoType.Temperature }
-     *
-     *
+     * 
+     * 
      */
-    public List<Temperature> getTemperature() {
+    public List<WeatherInfoType.Temperature> getTemperature() {
         if (temperature == null) {
-            temperature = new ArrayList<Temperature>();
+            temperature = new ArrayList<WeatherInfoType.Temperature>();
         }
         return this.temperature;
     }

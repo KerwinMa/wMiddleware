@@ -8,11 +8,17 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -199,23 +205,23 @@ public class HotelSearchCriterionType
 {
 
     @XmlElement(name = "HotelAmenity")
-    protected List<HotelAmenity> hotelAmenity;
+    protected List<HotelSearchCriterionType.HotelAmenity> hotelAmenity;
     @XmlElement(name = "RoomAmenity")
     protected List<RoomAmenityPrefType> roomAmenity;
     @XmlElement(name = "HotelFeature")
-    protected List<HotelFeature> hotelFeature;
+    protected List<HotelSearchCriterionType.HotelFeature> hotelFeature;
     @XmlElement(name = "Award")
-    protected List<Award> award;
+    protected List<HotelSearchCriterionType.Award> award;
     @XmlElement(name = "Recreation")
-    protected List<Recreation> recreation;
+    protected List<HotelSearchCriterionType.Recreation> recreation;
     @XmlElement(name = "Service")
-    protected List<Service> service;
+    protected List<HotelSearchCriterionType.Service> service;
     @XmlElement(name = "Transportation")
-    protected List<Transportation> transportation;
+    protected List<HotelSearchCriterionType.Transportation> transportation;
     @XmlElement(name = "StayDateRange")
     protected DateTimeSpanType stayDateRange;
     @XmlElement(name = "RateRange")
-    protected List<RateRange> rateRange;
+    protected List<HotelSearchCriterionType.RateRange> rateRange;
     @XmlElement(name = "RatePlanCandidates")
     protected HotelSearchCriterionType.RatePlanCandidates ratePlanCandidates;
     @XmlElement(name = "Profiles")
@@ -225,7 +231,7 @@ public class HotelSearchCriterionType
     @XmlElement(name = "AcceptedPayments")
     protected AcceptedPaymentsType acceptedPayments;
     @XmlElement(name = "Media")
-    protected List<Media> media;
+    protected List<HotelSearchCriterionType.Media> media;
     @XmlElement(name = "HotelMeetingFacility")
     protected HotelSearchCriterionType.HotelMeetingFacility hotelMeetingFacility;
     @XmlElement(name = "MealPlan")
@@ -237,54 +243,54 @@ public class HotelSearchCriterionType
 
     /**
      * Gets the value of the hotelAmenity property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the hotelAmenity property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getHotelAmenity().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link HotelSearchCriterionType.HotelAmenity }
-     *
-     *
+     * 
+     * 
      */
-    public List<HotelAmenity> getHotelAmenity() {
+    public List<HotelSearchCriterionType.HotelAmenity> getHotelAmenity() {
         if (hotelAmenity == null) {
-            hotelAmenity = new ArrayList<HotelAmenity>();
+            hotelAmenity = new ArrayList<HotelSearchCriterionType.HotelAmenity>();
         }
         return this.hotelAmenity;
     }
 
     /**
      * Gets the value of the roomAmenity property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the roomAmenity property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getRoomAmenity().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link RoomAmenityPrefType }
-     *
-     *
+     * 
+     * 
      */
     public List<RoomAmenityPrefType> getRoomAmenity() {
         if (roomAmenity == null) {
@@ -295,156 +301,156 @@ public class HotelSearchCriterionType
 
     /**
      * Gets the value of the hotelFeature property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the hotelFeature property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getHotelFeature().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link HotelSearchCriterionType.HotelFeature }
-     *
-     *
+     * 
+     * 
      */
-    public List<HotelFeature> getHotelFeature() {
+    public List<HotelSearchCriterionType.HotelFeature> getHotelFeature() {
         if (hotelFeature == null) {
-            hotelFeature = new ArrayList<HotelFeature>();
+            hotelFeature = new ArrayList<HotelSearchCriterionType.HotelFeature>();
         }
         return this.hotelFeature;
     }
 
     /**
      * Gets the value of the award property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the award property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getAward().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link HotelSearchCriterionType.Award }
-     *
-     *
+     * 
+     * 
      */
-    public List<Award> getAward() {
+    public List<HotelSearchCriterionType.Award> getAward() {
         if (award == null) {
-            award = new ArrayList<Award>();
+            award = new ArrayList<HotelSearchCriterionType.Award>();
         }
         return this.award;
     }
 
     /**
      * Gets the value of the recreation property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the recreation property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getRecreation().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link HotelSearchCriterionType.Recreation }
-     *
-     *
+     * 
+     * 
      */
-    public List<Recreation> getRecreation() {
+    public List<HotelSearchCriterionType.Recreation> getRecreation() {
         if (recreation == null) {
-            recreation = new ArrayList<Recreation>();
+            recreation = new ArrayList<HotelSearchCriterionType.Recreation>();
         }
         return this.recreation;
     }
 
     /**
      * Gets the value of the service property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the service property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getService().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link HotelSearchCriterionType.Service }
-     *
-     *
+     * 
+     * 
      */
-    public List<Service> getService() {
+    public List<HotelSearchCriterionType.Service> getService() {
         if (service == null) {
-            service = new ArrayList<Service>();
+            service = new ArrayList<HotelSearchCriterionType.Service>();
         }
         return this.service;
     }
 
     /**
      * Gets the value of the transportation property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the transportation property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getTransportation().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link HotelSearchCriterionType.Transportation }
-     *
-     *
+     * 
+     * 
      */
-    public List<Transportation> getTransportation() {
+    public List<HotelSearchCriterionType.Transportation> getTransportation() {
         if (transportation == null) {
-            transportation = new ArrayList<Transportation>();
+            transportation = new ArrayList<HotelSearchCriterionType.Transportation>();
         }
         return this.transportation;
     }
 
     /**
      * Gets the value of the stayDateRange property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link DateTimeSpanType }
-     *
+     *     
      */
     public DateTimeSpanType getStayDateRange() {
         return stayDateRange;
@@ -452,11 +458,11 @@ public class HotelSearchCriterionType
 
     /**
      * Sets the value of the stayDateRange property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link DateTimeSpanType }
-     *
+     *     
      */
     public void setStayDateRange(DateTimeSpanType value) {
         this.stayDateRange = value;
@@ -464,40 +470,40 @@ public class HotelSearchCriterionType
 
     /**
      * Gets the value of the rateRange property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the rateRange property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getRateRange().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link HotelSearchCriterionType.RateRange }
-     *
-     *
+     * 
+     * 
      */
-    public List<RateRange> getRateRange() {
+    public List<HotelSearchCriterionType.RateRange> getRateRange() {
         if (rateRange == null) {
-            rateRange = new ArrayList<RateRange>();
+            rateRange = new ArrayList<HotelSearchCriterionType.RateRange>();
         }
         return this.rateRange;
     }
 
     /**
      * Gets the value of the ratePlanCandidates property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link HotelSearchCriterionType.RatePlanCandidates }
-     *
+     *     
      */
     public HotelSearchCriterionType.RatePlanCandidates getRatePlanCandidates() {
         return ratePlanCandidates;
@@ -505,11 +511,11 @@ public class HotelSearchCriterionType
 
     /**
      * Sets the value of the ratePlanCandidates property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link HotelSearchCriterionType.RatePlanCandidates }
-     *
+     *     
      */
     public void setRatePlanCandidates(HotelSearchCriterionType.RatePlanCandidates value) {
         this.ratePlanCandidates = value;
@@ -517,11 +523,11 @@ public class HotelSearchCriterionType
 
     /**
      * Gets the value of the profiles property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link ProfilesType }
-     *
+     *     
      */
     public ProfilesType getProfiles() {
         return profiles;
@@ -529,11 +535,11 @@ public class HotelSearchCriterionType
 
     /**
      * Sets the value of the profiles property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link ProfilesType }
-     *
+     *     
      */
     public void setProfiles(ProfilesType value) {
         this.profiles = value;
@@ -541,11 +547,11 @@ public class HotelSearchCriterionType
 
     /**
      * Gets the value of the roomStayCandidates property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link HotelSearchCriterionType.RoomStayCandidates }
-     *
+     *     
      */
     public HotelSearchCriterionType.RoomStayCandidates getRoomStayCandidates() {
         return roomStayCandidates;
@@ -553,11 +559,11 @@ public class HotelSearchCriterionType
 
     /**
      * Sets the value of the roomStayCandidates property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link HotelSearchCriterionType.RoomStayCandidates }
-     *
+     *     
      */
     public void setRoomStayCandidates(HotelSearchCriterionType.RoomStayCandidates value) {
         this.roomStayCandidates = value;
@@ -565,11 +571,11 @@ public class HotelSearchCriterionType
 
     /**
      * Gets the value of the acceptedPayments property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link AcceptedPaymentsType }
-     *
+     *     
      */
     public AcceptedPaymentsType getAcceptedPayments() {
         return acceptedPayments;
@@ -577,11 +583,11 @@ public class HotelSearchCriterionType
 
     /**
      * Sets the value of the acceptedPayments property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link AcceptedPaymentsType }
-     *
+     *     
      */
     public void setAcceptedPayments(AcceptedPaymentsType value) {
         this.acceptedPayments = value;
@@ -589,40 +595,40 @@ public class HotelSearchCriterionType
 
     /**
      * Gets the value of the media property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the media property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getMedia().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link HotelSearchCriterionType.Media }
-     *
-     *
+     * 
+     * 
      */
-    public List<Media> getMedia() {
+    public List<HotelSearchCriterionType.Media> getMedia() {
         if (media == null) {
-            media = new ArrayList<Media>();
+            media = new ArrayList<HotelSearchCriterionType.Media>();
         }
         return this.media;
     }
 
     /**
      * Gets the value of the hotelMeetingFacility property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link HotelSearchCriterionType.HotelMeetingFacility }
-     *
+     *     
      */
     public HotelSearchCriterionType.HotelMeetingFacility getHotelMeetingFacility() {
         return hotelMeetingFacility;
@@ -630,11 +636,11 @@ public class HotelSearchCriterionType
 
     /**
      * Sets the value of the hotelMeetingFacility property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link HotelSearchCriterionType.HotelMeetingFacility }
-     *
+     *     
      */
     public void setHotelMeetingFacility(HotelSearchCriterionType.HotelMeetingFacility value) {
         this.hotelMeetingFacility = value;
@@ -642,11 +648,11 @@ public class HotelSearchCriterionType
 
     /**
      * Gets the value of the mealPlan property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link HotelSearchCriterionType.MealPlan }
-     *
+     *     
      */
     public HotelSearchCriterionType.MealPlan getMealPlan() {
         return mealPlan;
@@ -654,11 +660,11 @@ public class HotelSearchCriterionType
 
     /**
      * Sets the value of the mealPlan property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link HotelSearchCriterionType.MealPlan }
-     *
+     *     
      */
     public void setMealPlan(HotelSearchCriterionType.MealPlan value) {
         this.mealPlan = value;
@@ -666,11 +672,11 @@ public class HotelSearchCriterionType
 
     /**
      * Gets the value of the rebatePrograms property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link HotelSearchCriterionType.RebatePrograms }
-     *
+     *     
      */
     public HotelSearchCriterionType.RebatePrograms getRebatePrograms() {
         return rebatePrograms;
@@ -678,11 +684,11 @@ public class HotelSearchCriterionType
 
     /**
      * Sets the value of the rebatePrograms property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link HotelSearchCriterionType.RebatePrograms }
-     *
+     *     
      */
     public void setRebatePrograms(HotelSearchCriterionType.RebatePrograms value) {
         this.rebatePrograms = value;

@@ -2,6 +2,7 @@ package com.witbooking.middleware.model.dynamicPriceVariation;
 
 import com.witbooking.middleware.exceptions.model.IncompatibleTypesException;
 import org.apache.log4j.Logger;
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.io.Serializable;
 import java.util.Arrays;

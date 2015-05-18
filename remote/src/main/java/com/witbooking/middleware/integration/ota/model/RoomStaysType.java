@@ -6,10 +6,15 @@
 //
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.datatype.XMLGregorianCalendar;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.XMLGregorianCalendar;
 
 /**
  * <p>Java class for RoomStaysType complex type.
@@ -63,10 +68,10 @@ import java.util.List;
 public class RoomStaysType {
 
     @XmlElement(name = "RoomStay", required = true)
-    protected List<RoomStay> roomStay;
+    protected List<RoomStaysType.RoomStay> roomStay;
 
     public RoomStaysType() {
-        this.roomStay = new ArrayList<RoomStay>();
+        this.roomStay = new ArrayList<RoomStaysType.RoomStay>();
     }
 
     /**
@@ -91,9 +96,9 @@ public class RoomStaysType {
      *
      *
      */
-    public List<RoomStay> getRoomStay() {
+    public List<RoomStaysType.RoomStay> getRoomStay() {
         if (roomStay == null) {
-            roomStay = new ArrayList<RoomStay>();
+            roomStay = new ArrayList<RoomStaysType.RoomStay>();
         }
         return this.roomStay;
     }

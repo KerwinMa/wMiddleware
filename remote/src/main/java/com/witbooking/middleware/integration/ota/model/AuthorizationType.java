@@ -8,13 +8,18 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -156,11 +161,11 @@ public class AuthorizationType {
 
     /**
      * Gets the value of the checkAuthorization property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link AuthorizationType.CheckAuthorization }
-     *
+     *     
      */
     public AuthorizationType.CheckAuthorization getCheckAuthorization() {
         return checkAuthorization;
@@ -168,11 +173,11 @@ public class AuthorizationType {
 
     /**
      * Sets the value of the checkAuthorization property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link AuthorizationType.CheckAuthorization }
-     *
+     *     
      */
     public void setCheckAuthorization(AuthorizationType.CheckAuthorization value) {
         this.checkAuthorization = value;
@@ -180,11 +185,11 @@ public class AuthorizationType {
 
     /**
      * Gets the value of the creditCardAuthorization property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link AuthorizationType.CreditCardAuthorization }
-     *
+     *     
      */
     public AuthorizationType.CreditCardAuthorization getCreditCardAuthorization() {
         return creditCardAuthorization;
@@ -192,11 +197,11 @@ public class AuthorizationType {
 
     /**
      * Sets the value of the creditCardAuthorization property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link AuthorizationType.CreditCardAuthorization }
-     *
+     *     
      */
     public void setCreditCardAuthorization(AuthorizationType.CreditCardAuthorization value) {
         this.creditCardAuthorization = value;
@@ -204,11 +209,11 @@ public class AuthorizationType {
 
     /**
      * Gets the value of the accountAuthorization property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link AuthorizationType.AccountAuthorization }
-     *
+     *     
      */
     public AuthorizationType.AccountAuthorization getAccountAuthorization() {
         return accountAuthorization;
@@ -216,11 +221,11 @@ public class AuthorizationType {
 
     /**
      * Sets the value of the accountAuthorization property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link AuthorizationType.AccountAuthorization }
-     *
+     *     
      */
     public void setAccountAuthorization(AuthorizationType.AccountAuthorization value) {
         this.accountAuthorization = value;
@@ -228,11 +233,11 @@ public class AuthorizationType {
 
     /**
      * Gets the value of the driversLicenseAuthorization property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link DocumentType }
-     *
+     *     
      */
     public DocumentType getDriversLicenseAuthorization() {
         return driversLicenseAuthorization;
@@ -240,11 +245,11 @@ public class AuthorizationType {
 
     /**
      * Sets the value of the driversLicenseAuthorization property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link DocumentType }
-     *
+     *     
      */
     public void setDriversLicenseAuthorization(DocumentType value) {
         this.driversLicenseAuthorization = value;
@@ -252,11 +257,11 @@ public class AuthorizationType {
 
     /**
      * Gets the value of the bookingReferenceID property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link AuthorizationType.BookingReferenceID }
-     *
+     *     
      */
     public AuthorizationType.BookingReferenceID getBookingReferenceID() {
         return bookingReferenceID;
@@ -264,11 +269,11 @@ public class AuthorizationType {
 
     /**
      * Sets the value of the bookingReferenceID property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link AuthorizationType.BookingReferenceID }
-     *
+     *     
      */
     public void setBookingReferenceID(AuthorizationType.BookingReferenceID value) {
         this.bookingReferenceID = value;
@@ -276,11 +281,11 @@ public class AuthorizationType {
 
     /**
      * Gets the value of the principalCompanyCode property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getPrincipalCompanyCode() {
         return principalCompanyCode;
@@ -288,11 +293,11 @@ public class AuthorizationType {
 
     /**
      * Sets the value of the principalCompanyCode property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setPrincipalCompanyCode(String value) {
         this.principalCompanyCode = value;
@@ -300,11 +305,11 @@ public class AuthorizationType {
 
     /**
      * Gets the value of the refNumber property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getRefNumber() {
         return refNumber;
@@ -312,11 +317,11 @@ public class AuthorizationType {
 
     /**
      * Sets the value of the refNumber property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setRefNumber(String value) {
         this.refNumber = value;
@@ -325,9 +330,9 @@ public class AuthorizationType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -353,8 +358,8 @@ public class AuthorizationType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -376,11 +381,11 @@ public class AuthorizationType {
 
         /**
          * Gets the value of the accountInfo property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link AuthorizationType.AccountAuthorization.AccountInfo }
-         *
+         *     
          */
         public AuthorizationType.AccountAuthorization.AccountInfo getAccountInfo() {
             return accountInfo;
@@ -388,11 +393,11 @@ public class AuthorizationType {
 
         /**
          * Sets the value of the accountInfo property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link AuthorizationType.AccountAuthorization.AccountInfo }
-         *
+         *     
          */
         public void setAccountInfo(AuthorizationType.AccountAuthorization.AccountInfo value) {
             this.accountInfo = value;

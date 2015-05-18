@@ -295,14 +295,15 @@ public class ResGuest implements Serializable {
                         }
 
                         public String getAddressWithoutCountry() {
-                            String ret = (addressLine == null) ? "" : addressLine;
+                            String ret = "";
                             String[] items = new String[]{
+                                addressLine,
                                 companyName,
                                 cityName,
                                 postalCode
                             };
                             for (String i : items) {
-                                ret += (i == null || "".equals(i)) ? "" : ", "+i;
+                                ret = ret + ((i == null || "".equals(i)) ? "" : (ret.isEmpty() ? "" : ", ") + i);
                             }
                             return ret;
                         }

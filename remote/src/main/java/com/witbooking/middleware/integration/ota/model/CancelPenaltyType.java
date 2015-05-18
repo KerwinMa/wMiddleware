@@ -8,11 +8,15 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -95,11 +99,11 @@ public class CancelPenaltyType {
 
     /**
      * Gets the value of the deadline property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link CancelPenaltyType.Deadline }
-     *
+     *     
      */
     public CancelPenaltyType.Deadline getDeadline() {
         return deadline;
@@ -107,11 +111,11 @@ public class CancelPenaltyType {
 
     /**
      * Sets the value of the deadline property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link CancelPenaltyType.Deadline }
-     *
+     *     
      */
     public void setDeadline(CancelPenaltyType.Deadline value) {
         this.deadline = value;

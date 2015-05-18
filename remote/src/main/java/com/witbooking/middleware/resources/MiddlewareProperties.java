@@ -94,6 +94,14 @@ public class MiddlewareProperties {
     public static String SCHEDULER_TRANSFERS_HOUR;
     public static String SCHEDULER_TRANSFERS_MIN;
     public static String SCHEDULER_TRANSFERS_SEG;
+    //Params to configure Booking.com Scheduler
+    public static String SCHEDULER_BOOKING_HOUR;
+    public static String SCHEDULER_BOOKING_MIN;
+    public static String SCHEDULER_BOOKING_SEG;
+    //Params to configure Review Reservations Scheduler
+    public static String SCHEDULER_RESERVATIONS_HOUR;
+    public static String SCHEDULER_RESERVATIONS_MIN;
+    public static String SCHEDULER_RESERVATIONS_SEG;
     //Params to configure Integration Executor
     public static String SCHEDULER_EXECUTOR_HOUR;
     public static String SCHEDULER_EXECUTOR_MIN;
@@ -108,6 +116,8 @@ public class MiddlewareProperties {
     public static String NOTIFICATIONS_EMAIL_ADDRESS;
     public static String NOTIFICATIONS_EMAIL_PASSWORD;
     public static String STATIC_ROOT_URL;
+    //days to delete the creditCards
+    public static String DAYS_BEFORE_DELETE_CC;
 
     //Name servers.
     public static String PROD_SERVER_NAME = "";
@@ -127,6 +137,8 @@ public class MiddlewareProperties {
     //Those variables can not be defined in witbooking.properties.
     //Activate Scheduler of integration
     public static String ACTIVATE_SCHEDULER_INTEGRATION = "true";
+    //Activate Transfer Scheduler
+    public static String ACTIVATE_SCHEDULER_TRANSFERS_VALIDATION = "true";
     //Activate mailing Scheduler of integration
     public static String ACTIVATE_MAILING_SCHEDULER_INTEGRATION = "true";
     private static final boolean NOT_FOUND_PROPERTY_EXCEPTION_ACTIVATED = true, NOT_FOUND_PROPERTY_EXCEPTION_DEACTIVATE = false;
@@ -228,13 +240,15 @@ public class MiddlewareProperties {
                     "SUPPORT_DB_FILE", "PROPERTY_RESERVATION_ALLOWED", "URL_TRIVAGO_V5",
                     "URL_TINYURL", "SCHEDULER_MAIL_HOUR", "SCHEDULER_MAIL_MIN", "SCHEDULER_MAIL_SEG",
                     "SCHEDULER_TRANSFERS_HOUR", "SCHEDULER_TRANSFERS_MIN", "SCHEDULER_TRANSFERS_SEG",
+                    "SCHEDULER_BOOKING_HOUR", "SCHEDULER_BOOKING_MIN", "SCHEDULER_BOOKING_SEG",
+                    "SCHEDULER_RESERVATIONS_HOUR", "SCHEDULER_RESERVATIONS_MIN", "SCHEDULER_RESERVATIONS_SEG",
                     "BOOKING_ARI_URL", "BOOKING_RESERVATION_URL",
                     "CHANNELS_LOGGER_DIR", "SITEMINDER_RES_URL", "SITEMINDER_USER_ID", "SITEMINDER_PASSWORD", "RATEGAIN_RES_URL",
                     "RATEGAIN_USER_ID", "RATEGAIN_PASSWORD",
                     "TRIP_ADVISOR_KEY", "TRIP_ADVISOR_URL", "BOOKING_USER", "BOOKING_PASSWORD",
                     "NOTIFICATIONS_EMAIL_ADDRESS", "NOTIFICATIONS_EMAIL_PASSWORD",
                     "SCHEDULER_EXECUTOR_HOUR", "SCHEDULER_EXECUTOR_MIN", "SCHEDULER_EXECUTOR_SEG",
-                    "STATIC_ROOT_URL", "MANDRILL_API_KEY" ,"REDIS_SERVER"
+                    "STATIC_ROOT_URL", "MANDRILL_API_KEY", "REDIS_SERVER"
             };
             for (String item : constants) {
                 if ((value = properties.getProperty(item)) == null) {
@@ -253,7 +267,8 @@ public class MiddlewareProperties {
             }
             //Those variables could not be defined on witbooking.properties.
             String[] variables = {"ACTIVATE_SCHEDULER_INTEGRATION", "ACTIVATE_MAILING_SCHEDULER_INTEGRATION",
-                    "PROD_SERVER_NAME", "LUKE_SERVER_NAME", "TEST_SERVER_NAME", "GEO_IP_DB_FILEPATH"};
+                    "PROD_SERVER_NAME", "LUKE_SERVER_NAME", "TEST_SERVER_NAME", "GEO_IP_DB_FILEPATH",
+                    "DAYS_BEFORE_DELETE_CC", "ACTIVATE_SCHEDULER_TRANSFERS_VALIDATION"};
             for (String item : variables) {
                 if ((value = properties.getProperty(item)) != null) {
                     try {
@@ -320,6 +335,9 @@ public class MiddlewareProperties {
 
     public static Boolean schedulerIsActivate() {
         return !"false".equalsIgnoreCase(ACTIVATE_SCHEDULER_INTEGRATION);
+    }
+    public static Boolean transfersSchedulerIsActivate() {
+        return !"false".equalsIgnoreCase(ACTIVATE_SCHEDULER_TRANSFERS_VALIDATION);
     }
 
     public static Boolean mailingSchedulerIsActivate() {

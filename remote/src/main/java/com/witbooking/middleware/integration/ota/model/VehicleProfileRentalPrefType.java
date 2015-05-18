@@ -8,12 +8,17 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -90,19 +95,19 @@ import java.util.List;
 public class VehicleProfileRentalPrefType {
 
     @XmlElement(name = "LoyaltyPref")
-    protected List<LoyaltyPref> loyaltyPref;
+    protected List<VehicleProfileRentalPrefType.LoyaltyPref> loyaltyPref;
     @XmlElement(name = "VendorPref")
     protected List<CompanyNamePrefType> vendorPref;
     @XmlElement(name = "PaymentFormPref")
-    protected List<PaymentFormPref> paymentFormPref;
+    protected List<VehicleProfileRentalPrefType.PaymentFormPref> paymentFormPref;
     @XmlElement(name = "CoveragePref")
-    protected List<CoveragePref> coveragePref;
+    protected List<VehicleProfileRentalPrefType.CoveragePref> coveragePref;
     @XmlElement(name = "SpecialReqPref")
     protected List<VehicleSpecialReqPrefType> specialReqPref;
     @XmlElement(name = "VehTypePref")
     protected List<VehiclePrefType> vehTypePref;
     @XmlElement(name = "SpecialEquipPref")
-    protected List<SpecialEquipPref> specialEquipPref;
+    protected List<VehicleProfileRentalPrefType.SpecialEquipPref> specialEquipPref;
     @XmlAttribute(name = "GasPrePay")
     protected Boolean gasPrePay;
     @XmlAttribute(name = "PreferLevel")
@@ -118,54 +123,54 @@ public class VehicleProfileRentalPrefType {
 
     /**
      * Gets the value of the loyaltyPref property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the loyaltyPref property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getLoyaltyPref().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link VehicleProfileRentalPrefType.LoyaltyPref }
-     *
-     *
+     * 
+     * 
      */
-    public List<LoyaltyPref> getLoyaltyPref() {
+    public List<VehicleProfileRentalPrefType.LoyaltyPref> getLoyaltyPref() {
         if (loyaltyPref == null) {
-            loyaltyPref = new ArrayList<LoyaltyPref>();
+            loyaltyPref = new ArrayList<VehicleProfileRentalPrefType.LoyaltyPref>();
         }
         return this.loyaltyPref;
     }
 
     /**
      * Gets the value of the vendorPref property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the vendorPref property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getVendorPref().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link CompanyNamePrefType }
-     *
-     *
+     * 
+     * 
      */
     public List<CompanyNamePrefType> getVendorPref() {
         if (vendorPref == null) {
@@ -176,83 +181,83 @@ public class VehicleProfileRentalPrefType {
 
     /**
      * Gets the value of the paymentFormPref property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the paymentFormPref property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getPaymentFormPref().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link VehicleProfileRentalPrefType.PaymentFormPref }
-     *
-     *
+     * 
+     * 
      */
-    public List<PaymentFormPref> getPaymentFormPref() {
+    public List<VehicleProfileRentalPrefType.PaymentFormPref> getPaymentFormPref() {
         if (paymentFormPref == null) {
-            paymentFormPref = new ArrayList<PaymentFormPref>();
+            paymentFormPref = new ArrayList<VehicleProfileRentalPrefType.PaymentFormPref>();
         }
         return this.paymentFormPref;
     }
 
     /**
      * Gets the value of the coveragePref property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the coveragePref property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getCoveragePref().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link VehicleProfileRentalPrefType.CoveragePref }
-     *
-     *
+     * 
+     * 
      */
-    public List<CoveragePref> getCoveragePref() {
+    public List<VehicleProfileRentalPrefType.CoveragePref> getCoveragePref() {
         if (coveragePref == null) {
-            coveragePref = new ArrayList<CoveragePref>();
+            coveragePref = new ArrayList<VehicleProfileRentalPrefType.CoveragePref>();
         }
         return this.coveragePref;
     }
 
     /**
      * Gets the value of the specialReqPref property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the specialReqPref property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getSpecialReqPref().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link VehicleSpecialReqPrefType }
-     *
-     *
+     * 
+     * 
      */
     public List<VehicleSpecialReqPrefType> getSpecialReqPref() {
         if (specialReqPref == null) {
@@ -263,25 +268,25 @@ public class VehicleProfileRentalPrefType {
 
     /**
      * Gets the value of the vehTypePref property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the vehTypePref property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getVehTypePref().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link VehiclePrefType }
-     *
-     *
+     * 
+     * 
      */
     public List<VehiclePrefType> getVehTypePref() {
         if (vehTypePref == null) {
@@ -292,29 +297,29 @@ public class VehicleProfileRentalPrefType {
 
     /**
      * Gets the value of the specialEquipPref property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the specialEquipPref property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getSpecialEquipPref().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link VehicleProfileRentalPrefType.SpecialEquipPref }
-     *
-     *
+     * 
+     * 
      */
-    public List<SpecialEquipPref> getSpecialEquipPref() {
+    public List<VehicleProfileRentalPrefType.SpecialEquipPref> getSpecialEquipPref() {
         if (specialEquipPref == null) {
-            specialEquipPref = new ArrayList<SpecialEquipPref>();
+            specialEquipPref = new ArrayList<VehicleProfileRentalPrefType.SpecialEquipPref>();
         }
         return this.specialEquipPref;
     }

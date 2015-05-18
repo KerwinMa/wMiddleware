@@ -7,9 +7,13 @@
 
 package com.witbooking.middleware.integration.rategain.model;
 
-import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -51,41 +55,41 @@ import java.util.List;
 public class HotelProductsType {
 
     @XmlElement(name = "HotelProduct", required = true)
-    protected List<HotelProduct> hotelProduct;
+    protected List<HotelProductsType.HotelProduct> hotelProduct;
     @XmlAttribute(name = "HotelCode", required = true)
     protected String hotelCode;
-
+    
     public HotelProductsType(){}
-    public HotelProductsType(List<HotelProduct> hotelProduct,String hotelCode){
+    public HotelProductsType(List<HotelProductsType.HotelProduct> hotelProduct,String hotelCode){
         this.hotelProduct = hotelProduct;
         this.hotelCode = hotelCode;
     }
 
     /**
      * Gets the value of the hotelProduct property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the hotelProduct property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getHotelProduct().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link HotelProductsType.HotelProduct }
-     *
-     *
+     * 
+     * 
      */
-    public List<HotelProduct> getHotelProduct() {
+    public List<HotelProductsType.HotelProduct> getHotelProduct() {
         if (hotelProduct == null) {
-            hotelProduct = new ArrayList<HotelProduct>();
+            hotelProduct = new ArrayList<HotelProductsType.HotelProduct>();
         }
         return this.hotelProduct;
     }

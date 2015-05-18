@@ -8,7 +8,12 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
 
 
@@ -72,11 +77,11 @@ public class FlightLegType {
 
     /**
      * Gets the value of the departureAirport property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link FlightLegType.DepartureAirport }
-     *
+     *     
      */
     public FlightLegType.DepartureAirport getDepartureAirport() {
         return departureAirport;
@@ -84,11 +89,11 @@ public class FlightLegType {
 
     /**
      * Sets the value of the departureAirport property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link FlightLegType.DepartureAirport }
-     *
+     *     
      */
     public void setDepartureAirport(FlightLegType.DepartureAirport value) {
         this.departureAirport = value;
@@ -96,11 +101,11 @@ public class FlightLegType {
 
     /**
      * Gets the value of the arrivalAirport property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link FlightLegType.ArrivalAirport }
-     *
+     *     
      */
     public FlightLegType.ArrivalAirport getArrivalAirport() {
         return arrivalAirport;
@@ -108,11 +113,11 @@ public class FlightLegType {
 
     /**
      * Sets the value of the arrivalAirport property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link FlightLegType.ArrivalAirport }
-     *
+     *     
      */
     public void setArrivalAirport(FlightLegType.ArrivalAirport value) {
         this.arrivalAirport = value;

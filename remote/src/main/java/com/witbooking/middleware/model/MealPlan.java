@@ -29,6 +29,13 @@ public class MealPlan implements Serializable, Comparable<MealPlan> {
     private Date dateModification;
     private int order;
 
+    //MealPlans tickers in DB v6
+    public static final String ROOM_ONLY = "SA";
+    public static final String BED_AND_BREAKFAST = "HD";
+    public static final String HALF_BOARD = "MP";
+    public static final String FULL_BOARD = "PC";
+    public static final String ALL_INCLUSIVE = "TI";
+
     /**
      * Creates a new instance of
      * <code>MealPlan</code> without params.
@@ -85,21 +92,17 @@ public class MealPlan implements Serializable, Comparable<MealPlan> {
 
     /*
      * This return true if the MealPlan had breakfast
-     * TODO: para version 5 solo se filtra por solo alojamiento
      */
     public boolean hasBreakfast() {
-        //TODO: Sacar este valor de algun lado, para no cablearlo
-        return !this.ticker.contains("SA");
+        return !this.ticker.contains(ROOM_ONLY);
     }
 
     public boolean hasLunch() {
-        //TODO: Sacar este valor de algun lado, para no cablearlo
-        return !this.ticker.contains("SA") && !this.ticker.contains("HD");
+        return this.ticker.contains(FULL_BOARD) || this.ticker.contains(ALL_INCLUSIVE);
     }
 
     public boolean hasDinner() {
-        //TODO: Sacar este valor de algun lado, para no cablearlo
-        return this.ticker.contains("PC") || this.ticker.contains("TI");
+        return !this.ticker.contains(ROOM_ONLY) && !this.ticker.contains(BED_AND_BREAKFAST);
     }
 
     @Override

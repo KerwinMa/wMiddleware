@@ -28,7 +28,7 @@ public interface BookingBeanLocal {
 
     public void handleModifiedReservations(String bookingHotelTicker, String reservationId, Date lastChange) throws BookingException;
 
-    public void handleNewReserves(String bookingHotelTicker, String reservationId, Date lastChange) throws BookingException;
+    public void handleNewReserves(String bookingHotelID, String reservationId, Date lastChange) throws BookingException;
 
     public OTA_HotelAvailNotifRS updateARI(String hotelTicker, List<String> inventoryTickers, Date start, Date end) throws BookingException;
 

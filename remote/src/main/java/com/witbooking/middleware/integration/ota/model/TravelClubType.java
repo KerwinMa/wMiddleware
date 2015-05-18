@@ -8,7 +8,12 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.datatype.XMLGregorianCalendar;
@@ -72,11 +77,11 @@ public class TravelClubType {
 
     /**
      * Gets the value of the travelClubName property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link CompanyNameType }
-     *
+     *     
      */
     public CompanyNameType getTravelClubName() {
         return travelClubName;
@@ -84,11 +89,11 @@ public class TravelClubType {
 
     /**
      * Sets the value of the travelClubName property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link CompanyNameType }
-     *
+     *     
      */
     public void setTravelClubName(CompanyNameType value) {
         this.travelClubName = value;
@@ -96,11 +101,11 @@ public class TravelClubType {
 
     /**
      * Gets the value of the clubMemberName property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link TravelClubType.ClubMemberName }
-     *
+     *     
      */
     public TravelClubType.ClubMemberName getClubMemberName() {
         return clubMemberName;
@@ -108,11 +113,11 @@ public class TravelClubType {
 
     /**
      * Sets the value of the clubMemberName property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link TravelClubType.ClubMemberName }
-     *
+     *     
      */
     public void setClubMemberName(TravelClubType.ClubMemberName value) {
         this.clubMemberName = value;

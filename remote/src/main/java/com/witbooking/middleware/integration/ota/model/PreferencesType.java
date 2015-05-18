@@ -8,11 +8,15 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -59,7 +63,7 @@ import java.util.List;
 public class PreferencesType {
 
     @XmlElement(name = "PrefCollection", required = true)
-    protected List<PrefCollection> prefCollection;
+    protected List<PreferencesType.PrefCollection> prefCollection;
     @XmlAttribute(name = "ShareSynchInd")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String shareSynchInd;
@@ -69,29 +73,29 @@ public class PreferencesType {
 
     /**
      * Gets the value of the prefCollection property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the prefCollection property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getPrefCollection().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link PreferencesType.PrefCollection }
-     *
-     *
+     * 
+     * 
      */
-    public List<PrefCollection> getPrefCollection() {
+    public List<PreferencesType.PrefCollection> getPrefCollection() {
         if (prefCollection == null) {
-            prefCollection = new ArrayList<PrefCollection>();
+            prefCollection = new ArrayList<PreferencesType.PrefCollection>();
         }
         return this.prefCollection;
     }

@@ -1,11 +1,17 @@
 
 package com.witbooking.middleware.integration.google.model.hpa;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -87,33 +93,33 @@ import java.util.List;
 public class PointsOfSale {
 
     @XmlElement(name = "PointOfSale", required = true)
-    protected List<PointOfSale> pointOfSale;
+    protected List<PointsOfSale.PointOfSale> pointOfSale;
 
     /**
      * Gets the value of the pointOfSale property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the pointOfSale property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getPointOfSale().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link PointsOfSale.PointOfSale }
-     *
-     *
+     * 
+     * 
      */
-    public List<PointOfSale> getPointOfSale() {
+    public List<PointsOfSale.PointOfSale> getPointOfSale() {
         if (pointOfSale == null) {
-            pointOfSale = new ArrayList<PointOfSale>();
+            pointOfSale = new ArrayList<PointsOfSale.PointOfSale>();
         }
         return this.pointOfSale;
     }
@@ -121,9 +127,9 @@ public class PointsOfSale {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -177,8 +183,8 @@ public class PointsOfSale {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -189,9 +195,9 @@ public class PointsOfSale {
     public static class PointOfSale {
 
         @XmlElement(name = "DisplayNames")
-        protected List<DisplayNames> displayNames;
+        protected List<PointsOfSale.PointOfSale.DisplayNames> displayNames;
         @XmlElement(name = "Match", required = true)
-        protected List<Match> match;
+        protected List<PointsOfSale.PointOfSale.Match> match;
         @XmlElement(name = "URL", required = true)
         @XmlSchemaType(name = "anyURI")
         protected String url;
@@ -200,58 +206,58 @@ public class PointsOfSale {
 
         /**
          * Gets the value of the displayNames property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the displayNames property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getDisplayNames().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link PointsOfSale.PointOfSale.DisplayNames }
-         *
-         *
+         * 
+         * 
          */
-        public List<DisplayNames> getDisplayNames() {
+        public List<PointsOfSale.PointOfSale.DisplayNames> getDisplayNames() {
             if (displayNames == null) {
-                displayNames = new ArrayList<DisplayNames>();
+                displayNames = new ArrayList<PointsOfSale.PointOfSale.DisplayNames>();
             }
             return this.displayNames;
         }
 
         /**
          * Gets the value of the match property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the match property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getMatch().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link PointsOfSale.PointOfSale.Match }
-         *
-         *
+         * 
+         * 
          */
-        public List<Match> getMatch() {
+        public List<PointsOfSale.PointOfSale.Match> getMatch() {
             if (match == null) {
-                match = new ArrayList<Match>();
+                match = new ArrayList<PointsOfSale.PointOfSale.Match>();
             }
             return this.match;
         }

@@ -8,12 +8,12 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
+import java.util.ArrayList;
+import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
-import java.util.ArrayList;
-import java.util.List;
 
 
 /**
@@ -60,11 +60,11 @@ public class VehicleAvailRSCoreType {
 
     /**
      * Gets the value of the vehRentalCore property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleRentalCoreType }
-     *
+     *     
      */
     public VehicleRentalCoreType getVehRentalCore() {
         return vehRentalCore;
@@ -72,11 +72,11 @@ public class VehicleAvailRSCoreType {
 
     /**
      * Sets the value of the vehRentalCore property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleRentalCoreType }
-     *
+     *     
      */
     public void setVehRentalCore(VehicleRentalCoreType value) {
         this.vehRentalCore = value;
@@ -84,11 +84,11 @@ public class VehicleAvailRSCoreType {
 
     /**
      * Gets the value of the vehVendorAvails property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleAvailRSCoreType.VehVendorAvails }
-     *
+     *     
      */
     public VehicleAvailRSCoreType.VehVendorAvails getVehVendorAvails() {
         return vehVendorAvails;
@@ -96,11 +96,11 @@ public class VehicleAvailRSCoreType {
 
     /**
      * Sets the value of the vehVendorAvails property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleAvailRSCoreType.VehVendorAvails }
-     *
+     *     
      */
     public void setVehVendorAvails(VehicleAvailRSCoreType.VehVendorAvails value) {
         this.vehVendorAvails = value;

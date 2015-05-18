@@ -8,10 +8,17 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.XmlValue;
 
 
 /**
@@ -68,9 +75,9 @@ import java.util.List;
 public class PriceRequestInformationType {
 
     @XmlElement(name = "NegotiatedFareCode")
-    protected List<NegotiatedFareCode> negotiatedFareCode;
+    protected List<PriceRequestInformationType.NegotiatedFareCode> negotiatedFareCode;
     @XmlElement(name = "RebookOption")
-    protected List<RebookOption> rebookOption;
+    protected List<PriceRequestInformationType.RebookOption> rebookOption;
     @XmlAttribute(name = "CabinType")
     protected CabinType cabinType;
     @XmlAttribute(name = "TicketingCountry")
@@ -96,58 +103,58 @@ public class PriceRequestInformationType {
 
     /**
      * Gets the value of the negotiatedFareCode property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the negotiatedFareCode property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getNegotiatedFareCode().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link PriceRequestInformationType.NegotiatedFareCode }
-     *
-     *
+     * 
+     * 
      */
-    public List<NegotiatedFareCode> getNegotiatedFareCode() {
+    public List<PriceRequestInformationType.NegotiatedFareCode> getNegotiatedFareCode() {
         if (negotiatedFareCode == null) {
-            negotiatedFareCode = new ArrayList<NegotiatedFareCode>();
+            negotiatedFareCode = new ArrayList<PriceRequestInformationType.NegotiatedFareCode>();
         }
         return this.negotiatedFareCode;
     }
 
     /**
      * Gets the value of the rebookOption property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the rebookOption property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getRebookOption().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link PriceRequestInformationType.RebookOption }
-     *
-     *
+     * 
+     * 
      */
-    public List<RebookOption> getRebookOption() {
+    public List<PriceRequestInformationType.RebookOption> getRebookOption() {
         if (rebookOption == null) {
-            rebookOption = new ArrayList<RebookOption>();
+            rebookOption = new ArrayList<PriceRequestInformationType.RebookOption>();
         }
         return this.rebookOption;
     }

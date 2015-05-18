@@ -8,12 +8,17 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.datatype.XMLGregorianCalendar;
-import java.util.ArrayList;
-import java.util.List;
 
 
 /**
@@ -54,33 +59,33 @@ import java.util.List;
 public class VideoItemsType {
 
     @XmlElement(name = "VideoItem", required = true)
-    protected List<VideoItem> videoItem;
+    protected List<VideoItemsType.VideoItem> videoItem;
 
     /**
      * Gets the value of the videoItem property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the videoItem property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getVideoItem().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link VideoItemsType.VideoItem }
-     *
-     *
+     * 
+     * 
      */
-    public List<VideoItem> getVideoItem() {
+    public List<VideoItemsType.VideoItem> getVideoItem() {
         if (videoItem == null) {
-            videoItem = new ArrayList<VideoItem>();
+            videoItem = new ArrayList<VideoItemsType.VideoItem>();
         }
         return this.videoItem;
     }

@@ -1,7 +1,5 @@
 package com.witbooking.middleware.beans;
 
-import com.google.gson.JsonSyntaxException;
-import com.google.gson.reflect.TypeToken;
 import com.microtripit.mandrillapp.lutung.view.MandrillMessageStatus;
 import com.witbooking.middleware.db.DAOUtil;
 import com.witbooking.middleware.db.DBConnection;
@@ -14,13 +12,14 @@ import com.witbooking.middleware.integration.mandrill.model.Message;
 import com.witbooking.middleware.model.*;
 import com.witbooking.middleware.model.Currency;
 import com.witbooking.middleware.model.dynamicPriceVariation.*;
+import com.witbooking.middleware.model.values.DailyValue;
 import com.witbooking.middleware.model.values.EnumDataValueType;
 import com.witbooking.middleware.model.values.HashRangeValue;
+import com.witbooking.middleware.model.values.RangeValue;
 import com.witbooking.middleware.resources.DBProperties;
 import com.witbooking.middleware.resources.MiddlewareProperties;
 import com.witbooking.middleware.utils.DateUtil;
 import com.witbooking.middleware.utils.EmailsUtils;
-import com.witbooking.middleware.utils.JsonUtils;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
 import org.joda.time.LocalTime;
@@ -39,71 +38,86 @@ import java.util.*;
 @Stateless
 public class ServerInformationBean implements ServerInformationBeanLocal, ServerInformationBeanRemote {
 
+    public static final String EMAIL_AVAILABILITY_MSG = "emailAvisoDispo";
+    public static final String LIMIT_AVAILABILITY_MSG = "limiteAvisoDisponibilidad";
     private static final org.apache.log4j.Logger logger = org.apache.log4j.Logger.getLogger(ServerInformationBean.class);
     @EJB
     private ConnectionBeanLocal connectionBeanLocal;
     @EJB
     private IntegrationBeanLocal integrationBeanLocal;
-
     @EJB
     private BookingPriceRuleBeanLocal bookingPriceRuleBean;
-
-    public static final String EMAIL_AVAILABILITY_MSG = "emailAvisoDispo";
-    public static final String LIMIT_AVAILABILITY_MSG = "limiteAvisoDisponibilidad";
+    @EJB
+    private MailingBeanLocal mailingBeanLocal;
 
     public Establishment getEstablishment(String hotelTicker, String locale) throws FrontEndException {
         Establishment establishment;
+        InventoryDBHandler inventoryDBHandler = null;
         try {
             DBCredentials dbCredential = getDBCredentials(hotelTicker);
-            InventoryDBHandler inventoryDBHandler = new InventoryDBHandler(new DBConnection(dbCredential), locale);
+            inventoryDBHandler = new InventoryDBHandler(new DBConnection(dbCredential), locale);
             establishment = inventoryDBHandler.getHotel();
             inventoryDBHandler.closeDbConnection();
             return establishment;
         } catch (DBAccessException ex) {
             logger.error(ex.getMessage());
             throw new FrontEndException(ex);
+        } finally {
+            closeHandler(inventoryDBHandler);
         }
     }
 
     public List<Accommodation> getAccommodations(String hotelTicker, String locale) throws FrontEndException {
         List<Accommodation> accommodationList;
+        DBConnection dBConnection = null;
         try {
             DBCredentials dbCredential = getDBCredentials(hotelTicker);
-            InventoryDBHandler inventoryDBHandler = new InventoryDBHandler(new DBConnection(dbCredential), locale);
+            dBConnection = new DBConnection(dbCredential);
+            InventoryDBHandler inventoryDBHandler = new InventoryDBHandler(dBConnection, locale);
             accommodationList = inventoryDBHandler.getAccommodationsActives();
             inventoryDBHandler.closeDbConnection();
             return accommodationList;
         } catch (DBAccessException ex) {
             logger.error(ex.getMessage());
             throw new FrontEndException(ex);
+        } finally {
+            DAOUtil.close(dBConnection);
         }
     }
 
     public List<Discount> getDiscounts(String hotelTicker, String locale) throws FrontEndException {
         List<Discount> discountList;
+        DBConnection dBConnection = null;
         try {
             DBCredentials dbCredential = getDBCredentials(hotelTicker);
-            InventoryDBHandler inventoryDBHandler = new InventoryDBHandler(new DBConnection(dbCredential), locale);
+            dBConnection = new DBConnection(dbCredential);
+            InventoryDBHandler inventoryDBHandler = new InventoryDBHandler(dBConnection, locale);
             discountList = inventoryDBHandler.getDiscountsActives();
             inventoryDBHandler.closeDbConnection();
             return discountList;
         } catch (DBAccessException ex) {
             logger.error(ex.getMessage());
             throw new FrontEndException(ex);
+        } finally {
+            DAOUtil.close(dBConnection);
         }
     }
 
     public List<Service> getServices(String hotelTicker, String locale) throws FrontEndException {
         List<Service> serviceList;
+        DBConnection dBConnection = null;
         try {
             DBCredentials dbCredential = getDBCredentials(hotelTicker);
-            InventoryDBHandler inventoryDBHandler = new InventoryDBHandler(new DBConnection(dbCredential), locale);
+            dBConnection = new DBConnection(dbCredential);
+            InventoryDBHandler inventoryDBHandler = new InventoryDBHandler(dBConnection, locale);
             serviceList = inventoryDBHandler.getServicesActives();
             inventoryDBHandler.closeDbConnection();
             return serviceList;
         } catch (DBAccessException ex) {
             logger.error(ex.getMessage());
             throw new FrontEndException(ex);
+        } finally {
+            DAOUtil.close(dBConnection);
         }
     }
 
@@ -168,7 +182,7 @@ public class ServerInformationBean implements ServerInformationBeanLocal, Server
                 finalResult.put(keyDBConnection, result);
             }
         } catch (FrontEndException e) {
-            e.printStackTrace();
+            logger.error(e + " Ticker: '" + ticker + "'");
         }
         return finalResult;
 
@@ -246,9 +260,9 @@ public class ServerInformationBean implements ServerInformationBeanLocal, Server
             if (rulesActive) {
                 try {
                     rangeValues = applyRules(hotelTicker, start, end, inventoryDBHandler, inventoryTickers, country, promotionalCode, rangeValues);
-                }catch (Exception ex){
-                    logger.error("Error Applying Rules "+ex.getMessage());
-                    ex.printStackTrace();
+                } catch (Exception ex) {
+                    logger.error("Error Applying Rules hotelTicker: '" + hotelTicker + "'");
+                    logger.error("Error Applying Rules " + ex.getMessage());
                 }
             }
 
@@ -278,7 +292,8 @@ public class ServerInformationBean implements ServerInformationBeanLocal, Server
             Map arguments = new HashMap();
 
             DateTime currentDateTimeUTC = new DateTime(DateTimeZone.UTC);
-            DateTime startDateTimeUTC = (new DateTime(start)).withZoneRetainFields(DateTimeZone.UTC);
+            /*Because we need to compare with stay dates and stay dates dont take hours into account, we restart the hours and set an UTC timezone  */
+            DateTime startDateTimeUTC = (new DateTime(DateUtil.toBeginningOfTheDay(start))).withZoneRetainFields(DateTimeZone.UTC);
 
             WeekDayCondition.WeekDay.getFromValue(currentDateTimeUTC.getDayOfWeek());
             arguments.put(DatetimeCondition.ARGUMENT_CURRENT_TIME, new LocalTime().toDateTimeToday().withZone(DateTimeZone.UTC));
@@ -308,7 +323,7 @@ public class ServerInformationBean implements ServerInformationBeanLocal, Server
                 for (BookingPriceRule bookingPriceRule : bookingPriceRules) {
                     TickerCondition tickerCondition = bookingPriceRule.getTickerCondition();
                     arguments.put(TickerCondition.ARGUMENT_TICKER, inventoryTicker);
-                    if (!tickerCondition.evaluate(arguments)) {
+                    if (tickerCondition==null || !tickerCondition.evaluate(arguments)) {
                         continue;
                     }
                     if (!oneTimeEvaluationRulesCache.containsKey(bookingPriceRule.getId())) {
@@ -344,6 +359,18 @@ public class ServerInformationBean implements ServerInformationBeanLocal, Server
                 Double numericVariation = (Double) variation.get("variation");
                 Boolean isPercentage = (Boolean) variation.get("isPercentage");
                 hashRangeValue.getHashRangeValues().get(HashRangeValue.RATE).applyVariation(numericVariation, isPercentage);
+
+                /*CREATE RULES APPLIED HASHRANGE VALUE*/
+                DailyValue<List<BookingPriceRule>> dailyValue= new DailyValue<>();
+                /*TODO: WE ARE PREPARING FOR MULTIPLE RULES APPLIED TO ONE RATE*/
+                List<BookingPriceRule> ruleList = Arrays.asList((BookingPriceRule) variation.get("rule"));
+                /*TODO : IT COULD BE POSSIBLE THAT A RULE APPLIES TO  DATE SEGMENTS, LIKE DISCOUNTS, THIS IS NOT SUPPORTED. */
+                dailyValue.setStartDate(hashRangeValue.getHashRangeValues().get(HashRangeValue.RATE).getRangeStartDate());
+                dailyValue.setEndDate(hashRangeValue.getHashRangeValues().get(HashRangeValue.RATE).getRangeEndDate());
+                dailyValue.setValue(ruleList);
+                RangeValue<List<BookingPriceRule>> rulesRangeValue = new RangeValue<>(dailyValue ,null);
+                /*END CREATE RULES APPLIED HASHRANGE VALUE*/
+                hashRangeValue.putRangeValues(HashRangeValue.RULES_APPLIED,rulesRangeValue);
             }
 
         } catch (BookingPriceRuleException e) {
@@ -364,6 +391,7 @@ public class ServerInformationBean implements ServerInformationBeanLocal, Server
         if (!bookingPriceRules.isEmpty()) {
             BookingPriceRule bookingPriceRule = Collections.max(bookingPriceRules);
             variation = Collections.max(bookingPriceRules).getPriceVariation();
+            result.put("rule", bookingPriceRule);
             result.put("variation", bookingPriceRule.getPriceVariation());
             result.put("isPercentage", bookingPriceRule.isPercentage());
         }
@@ -373,15 +401,18 @@ public class ServerInformationBean implements ServerInformationBeanLocal, Server
 
     public List<Language> getLanguages(String hotelTicker) throws FrontEndException {
         List<Language> languageList;
+        HotelConfigurationDBHandler hotelConfigurationDBHandler = null;
         try {
             DBCredentials dbCredential = getDBCredentials(hotelTicker);
-            HotelConfigurationDBHandler hotelConfigurationDBHandler = new HotelConfigurationDBHandler(new DBConnection(dbCredential));
+            hotelConfigurationDBHandler = new HotelConfigurationDBHandler(new DBConnection(dbCredential));
             languageList = hotelConfigurationDBHandler.getActiveLanguages();
             hotelConfigurationDBHandler.closeDbConnection();
             return languageList;
         } catch (DBAccessException ex) {
             logger.error(ex.getMessage());
             throw new FrontEndException(ex);
+        } finally {
+            closeHandler(hotelConfigurationDBHandler);
         }
     }
 
@@ -437,15 +468,18 @@ public class ServerInformationBean implements ServerInformationBeanLocal, Server
 
     public List<Currency> getCurrencies(String hotelTicker) throws FrontEndException {
         List<Currency> currencies;
+        HotelConfigurationDBHandler hotelConfigurationDBHandler = null;
         try {
             DBCredentials dbCredential = getDBCredentials(hotelTicker);
-            HotelConfigurationDBHandler hotelConfigurationDBHandler = new HotelConfigurationDBHandler(new DBConnection(dbCredential));
+            hotelConfigurationDBHandler = new HotelConfigurationDBHandler(new DBConnection(dbCredential));
             currencies = hotelConfigurationDBHandler.getActivesCurrencies();
             hotelConfigurationDBHandler.closeDbConnection();
             return currencies;
         } catch (DBAccessException ex) {
             logger.error(ex.getMessage());
             throw new FrontEndException(ex);
+        } finally {
+            closeHandler(hotelConfigurationDBHandler);
         }
     }
 
@@ -630,25 +664,28 @@ public class ServerInformationBean implements ServerInformationBeanLocal, Server
 
             //Sending Confirmation Email, just if the Reservation is Confirmed
             if (newReservation.getStatus() == Reservation.ReservationStatus.RESERVATION) {
-                String responseEmails = "";
-                String clientEmailStatus = "";
+                List<MandrillMessageStatus> messageStatusReports = null;
                 try {
-                    responseEmails = connectionBeanLocal.sendConfirmationEmail(hotelTicker, newReservation.getReservationId());
-                    List<MandrillMessageStatus> messageStatusReports = JsonUtils.gsonInstance().fromJson(responseEmails, new TypeToken<ArrayList<MandrillMessageStatus>>() {
-                    }.getType());
-                    for (MandrillMessageStatus mandrillMessageStatus : messageStatusReports) {
-                        if (mandrillMessageStatus.getEmail().equals(reservation.getCustomer().getEmail())) {
-                            clientEmailStatus = mandrillMessageStatus.getStatus();
-                        }
-                    }
-                    Event.MandrillMessageEventType messageEventType = Event.MandrillMessageEventType.getFromValue(clientEmailStatus);
-                    if (responseEmails == null) {
+                    messageStatusReports = mailingBeanLocal.sendConfirmationEmail(hotelTicker, newReservation);
+                    if (messageStatusReports == null || messageStatusReports.isEmpty()) {
                         throw new RemoteServiceException("Error in Service Sending the Email. Response Email is NULL. ");
                     }
                     /*TODO: THIS SHOULD RUN IN A PARALLEL THREAD SAVE EMAIL DATA*/
-                    saveReservationEmailData(responseEmails, reservation, hotelTicker, reservationDBHandler);
-                    if (messageEventType != Event.MandrillMessageEventType.SENT &&
-                            messageEventType != Event.MandrillMessageEventType.QUEUED) {
+                    List<EmailData> emailDataList = mailingBeanLocal.saveReservationEmailData(reservation, hotelTicker, messageStatusReports);
+                    EmailData clientEmailData = new EmailData();
+                    EmailData hotelEmailData = new EmailData();
+                    for (EmailData emailData : emailDataList) {
+                        if (emailData.getMessageType() == Message.MessageType.USER_CONFIRMATION) {
+                            clientEmailData = emailData;
+                        } else {
+                            hotelEmailData = emailData;
+                        }
+                    }
+                    //saving the status for the email sent
+                    reservationDBHandler.updateReservationEmailInfo(clientEmailData, hotelEmailData);
+                    Event.EventType eventClient = clientEmailData.getLastEmailStatus();
+                    if (eventClient == Event.EventType.REJECT || eventClient == Event.EventType.INVALID ||
+                            eventClient == Event.EventType.HARD_BOUNCE || eventClient == Event.EventType.SOFT_BOUNCE) {
                         throw new RemoteServiceException("Error in Service Sending the Email.");
                     }
                 } catch (Exception ex) {
@@ -657,7 +694,7 @@ public class ServerInformationBean implements ServerInformationBeanLocal, Server
                             "Error sending confirmation email for hotel: '" + hotelTicker +
                                     "' <br/> Reservation: '" + newReservation.getReservationId() + "' <br/>" +
                                     " <br/> Error: '" + ex + "' <br/>" +
-                                    " <br/> ResponsePHP: '" + responseEmails + "' <br/>" +
+                                    " <br/> MandrillMessageStatus: '" + messageStatusReports + "' <br/>" +
                                     " <br/>Please Verify and resend the Emails if is necessary!<br/>",
                             Arrays.asList("WitBookerAPI Errors", "Error Confirmation Emails"), ex);
                 }
@@ -671,42 +708,6 @@ public class ServerInformationBean implements ServerInformationBeanLocal, Server
             DAOUtil.close(dbConnection);
         }
         return newReservation;
-    }
-
-    private int saveReservationEmailData(String emailStatusInformation, Reservation reservation, String hotelTicker, ReservationDBHandler reservationDBHandler) {
-        try {
-            List<MandrillMessageStatus> messageStatusReports = JsonUtils.gsonInstance().fromJson(emailStatusInformation, new TypeToken<ArrayList<MandrillMessageStatus>>() {
-            }.getType());
-
-            EmailDataDBHandler emailDataDBHandler = null;
-            emailDataDBHandler = new EmailDataDBHandler();
-            EmailData clientEmailData = new EmailData();
-            EmailData hotelEmailData = new EmailData();
-
-            for (MandrillMessageStatus mandrillMessageStatus : messageStatusReports) {
-                EmailData emailData = new EmailData();
-                emailData.setLastEmailStatus(Event.EventType.convertFromMandrillMessageEventType(Event.MandrillMessageEventType.getFromValue(mandrillMessageStatus.getStatus())));
-                emailData.setEmailID(mandrillMessageStatus.getId());
-                emailData.setHotelTicker(hotelTicker);
-                emailData.setReservationID(reservation.getReservationId());
-                if (mandrillMessageStatus.getEmail().equals(reservation.getCustomer().getEmail())) {
-                    emailData.setMessageType(Message.MessageType.USER_CONFIRMATION);
-                    clientEmailData = emailData;
-                } else {
-                    emailData.setMessageType(Message.MessageType.HOTEL_CONFIRMATION);
-                    hotelEmailData = emailData;
-                }
-                emailDataDBHandler.saveEmailData(emailData);
-            }
-
-            reservationDBHandler.updateReservationEmailInfo(clientEmailData, hotelEmailData);
-
-        } catch (JsonSyntaxException | ExternalFileException | DBAccessException | NonexistentValueException e) {
-            logger.error("Could not save reservation email Data" + e);
-        }
-
-
-        return 0;
     }
 
     public Map<String, Establishment> getWitBookerVisualRepresentation(final String ticker,

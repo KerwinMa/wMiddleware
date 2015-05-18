@@ -8,13 +8,18 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -252,17 +257,17 @@ public class PTCFareBreakdownType {
     @XmlElement(name = "FareBasisCodes")
     protected PTCFareBreakdownType.FareBasisCodes fareBasisCodes;
     @XmlElement(name = "PassengerFare")
-    protected List<PassengerFare> passengerFare;
+    protected List<PTCFareBreakdownType.PassengerFare> passengerFare;
     @XmlElement(name = "TravelerRefNumber")
-    protected List<TravelerRefNumber> travelerRefNumber;
+    protected List<PTCFareBreakdownType.TravelerRefNumber> travelerRefNumber;
     @XmlElement(name = "TicketDesignators")
     protected PTCFareBreakdownType.TicketDesignators ticketDesignators;
     @XmlElement(name = "Endorsements")
     protected PTCFareBreakdownType.Endorsements endorsements;
     @XmlElement(name = "FareInfo")
-    protected List<FareInfo> fareInfo;
+    protected List<PTCFareBreakdownType.FareInfo> fareInfo;
     @XmlElement(name = "PricingUnit")
-    protected List<PricingUnit> pricingUnit;
+    protected List<PTCFareBreakdownType.PricingUnit> pricingUnit;
     @XmlAttribute(name = "PricingSource")
     protected PricingSourceType pricingSource;
     @XmlAttribute(name = "FlightRefNumberRPHList")
@@ -270,11 +275,11 @@ public class PTCFareBreakdownType {
 
     /**
      * Gets the value of the passengerTypeQuantity property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link PassengerTypeQuantityType }
-     *
+     *     
      */
     public PassengerTypeQuantityType getPassengerTypeQuantity() {
         return passengerTypeQuantity;
@@ -282,11 +287,11 @@ public class PTCFareBreakdownType {
 
     /**
      * Sets the value of the passengerTypeQuantity property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link PassengerTypeQuantityType }
-     *
+     *     
      */
     public void setPassengerTypeQuantity(PassengerTypeQuantityType value) {
         this.passengerTypeQuantity = value;
@@ -294,11 +299,11 @@ public class PTCFareBreakdownType {
 
     /**
      * Gets the value of the fareBasisCodes property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link PTCFareBreakdownType.FareBasisCodes }
-     *
+     *     
      */
     public PTCFareBreakdownType.FareBasisCodes getFareBasisCodes() {
         return fareBasisCodes;
@@ -306,11 +311,11 @@ public class PTCFareBreakdownType {
 
     /**
      * Sets the value of the fareBasisCodes property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link PTCFareBreakdownType.FareBasisCodes }
-     *
+     *     
      */
     public void setFareBasisCodes(PTCFareBreakdownType.FareBasisCodes value) {
         this.fareBasisCodes = value;
@@ -318,69 +323,69 @@ public class PTCFareBreakdownType {
 
     /**
      * Gets the value of the passengerFare property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the passengerFare property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getPassengerFare().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link PTCFareBreakdownType.PassengerFare }
-     *
-     *
+     * 
+     * 
      */
-    public List<PassengerFare> getPassengerFare() {
+    public List<PTCFareBreakdownType.PassengerFare> getPassengerFare() {
         if (passengerFare == null) {
-            passengerFare = new ArrayList<PassengerFare>();
+            passengerFare = new ArrayList<PTCFareBreakdownType.PassengerFare>();
         }
         return this.passengerFare;
     }
 
     /**
      * Gets the value of the travelerRefNumber property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the travelerRefNumber property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getTravelerRefNumber().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link PTCFareBreakdownType.TravelerRefNumber }
-     *
-     *
+     * 
+     * 
      */
-    public List<TravelerRefNumber> getTravelerRefNumber() {
+    public List<PTCFareBreakdownType.TravelerRefNumber> getTravelerRefNumber() {
         if (travelerRefNumber == null) {
-            travelerRefNumber = new ArrayList<TravelerRefNumber>();
+            travelerRefNumber = new ArrayList<PTCFareBreakdownType.TravelerRefNumber>();
         }
         return this.travelerRefNumber;
     }
 
     /**
      * Gets the value of the ticketDesignators property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link PTCFareBreakdownType.TicketDesignators }
-     *
+     *     
      */
     public PTCFareBreakdownType.TicketDesignators getTicketDesignators() {
         return ticketDesignators;
@@ -388,11 +393,11 @@ public class PTCFareBreakdownType {
 
     /**
      * Sets the value of the ticketDesignators property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link PTCFareBreakdownType.TicketDesignators }
-     *
+     *     
      */
     public void setTicketDesignators(PTCFareBreakdownType.TicketDesignators value) {
         this.ticketDesignators = value;
@@ -400,11 +405,11 @@ public class PTCFareBreakdownType {
 
     /**
      * Gets the value of the endorsements property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link PTCFareBreakdownType.Endorsements }
-     *
+     *     
      */
     public PTCFareBreakdownType.Endorsements getEndorsements() {
         return endorsements;
@@ -412,11 +417,11 @@ public class PTCFareBreakdownType {
 
     /**
      * Sets the value of the endorsements property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link PTCFareBreakdownType.Endorsements }
-     *
+     *     
      */
     public void setEndorsements(PTCFareBreakdownType.Endorsements value) {
         this.endorsements = value;
@@ -424,69 +429,69 @@ public class PTCFareBreakdownType {
 
     /**
      * Gets the value of the fareInfo property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the fareInfo property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getFareInfo().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link PTCFareBreakdownType.FareInfo }
-     *
-     *
+     * 
+     * 
      */
-    public List<FareInfo> getFareInfo() {
+    public List<PTCFareBreakdownType.FareInfo> getFareInfo() {
         if (fareInfo == null) {
-            fareInfo = new ArrayList<FareInfo>();
+            fareInfo = new ArrayList<PTCFareBreakdownType.FareInfo>();
         }
         return this.fareInfo;
     }
 
     /**
      * Gets the value of the pricingUnit property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the pricingUnit property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getPricingUnit().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link PTCFareBreakdownType.PricingUnit }
-     *
-     *
+     * 
+     * 
      */
-    public List<PricingUnit> getPricingUnit() {
+    public List<PTCFareBreakdownType.PricingUnit> getPricingUnit() {
         if (pricingUnit == null) {
-            pricingUnit = new ArrayList<PricingUnit>();
+            pricingUnit = new ArrayList<PTCFareBreakdownType.PricingUnit>();
         }
         return this.pricingUnit;
     }
 
     /**
      * Gets the value of the pricingSource property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link PricingSourceType }
-     *
+     *     
      */
     public PricingSourceType getPricingSource() {
         return pricingSource;
@@ -494,11 +499,11 @@ public class PTCFareBreakdownType {
 
     /**
      * Sets the value of the pricingSource property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link PricingSourceType }
-     *
+     *     
      */
     public void setPricingSource(PricingSourceType value) {
         this.pricingSource = value;
@@ -506,25 +511,25 @@ public class PTCFareBreakdownType {
 
     /**
      * Gets the value of the flightRefNumberRPHList property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the flightRefNumberRPHList property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getFlightRefNumberRPHList().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link String }
-     *
-     *
+     * 
+     * 
      */
     public List<String> getFlightRefNumberRPHList() {
         if (flightRefNumberRPHList == null) {
@@ -536,9 +541,9 @@ public class PTCFareBreakdownType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -560,8 +565,8 @@ public class PTCFareBreakdownType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -570,7 +575,7 @@ public class PTCFareBreakdownType {
     public static class Endorsements {
 
         @XmlElement(name = "Endorsement", required = true)
-        protected List<Endorsement> endorsement;
+        protected List<PTCFareBreakdownType.Endorsements.Endorsement> endorsement;
         @XmlAttribute(name = "NonRefundableIndicator")
         protected Boolean nonRefundableIndicator;
         @XmlAttribute(name = "NonEndorsableIndicator")
@@ -578,40 +583,40 @@ public class PTCFareBreakdownType {
 
         /**
          * Gets the value of the endorsement property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the endorsement property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getEndorsement().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link PTCFareBreakdownType.Endorsements.Endorsement }
-         *
-         *
+         * 
+         * 
          */
-        public List<Endorsement> getEndorsement() {
+        public List<PTCFareBreakdownType.Endorsements.Endorsement> getEndorsement() {
             if (endorsement == null) {
-                endorsement = new ArrayList<Endorsement>();
+                endorsement = new ArrayList<PTCFareBreakdownType.Endorsements.Endorsement>();
             }
             return this.endorsement;
         }
 
         /**
          * Gets the value of the nonRefundableIndicator property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link Boolean }
-         *
+         *     
          */
         public Boolean isNonRefundableIndicator() {
             return nonRefundableIndicator;
@@ -619,11 +624,11 @@ public class PTCFareBreakdownType {
 
         /**
          * Sets the value of the nonRefundableIndicator property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link Boolean }
-         *
+         *     
          */
         public void setNonRefundableIndicator(Boolean value) {
             this.nonRefundableIndicator = value;
@@ -631,11 +636,11 @@ public class PTCFareBreakdownType {
 
         /**
          * Gets the value of the nonEndorsableIndicator property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link Boolean }
-         *
+         *     
          */
         public Boolean isNonEndorsableIndicator() {
             return nonEndorsableIndicator;
@@ -643,11 +648,11 @@ public class PTCFareBreakdownType {
 
         /**
          * Sets the value of the nonEndorsableIndicator property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link Boolean }
-         *
+         *     
          */
         public void setNonEndorsableIndicator(Boolean value) {
             this.nonEndorsableIndicator = value;
@@ -656,9 +661,9 @@ public class PTCFareBreakdownType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -668,8 +673,8 @@ public class PTCFareBreakdownType {
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
@@ -682,11 +687,11 @@ public class PTCFareBreakdownType {
 
             /**
              * Gets the value of the operation property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link ActionType }
-             *
+             *     
              */
             public ActionType getOperation() {
                 return operation;
@@ -694,11 +699,11 @@ public class PTCFareBreakdownType {
 
             /**
              * Sets the value of the operation property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link ActionType }
-             *
+             *     
              */
             public void setOperation(ActionType value) {
                 this.operation = value;
@@ -711,9 +716,9 @@ public class PTCFareBreakdownType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -725,8 +730,8 @@ public class PTCFareBreakdownType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -739,25 +744,25 @@ public class PTCFareBreakdownType {
 
         /**
          * Gets the value of the fareBasisCode property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the fareBasisCode property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getFareBasisCode().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link FareBasisCodeType }
-         *
-         *
+         * 
+         * 
          */
         public List<FareBasisCodeType> getFareBasisCode() {
             if (fareBasisCode == null) {
@@ -771,9 +776,9 @@ public class PTCFareBreakdownType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -785,8 +790,8 @@ public class PTCFareBreakdownType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -801,11 +806,11 @@ public class PTCFareBreakdownType {
 
         /**
          * Gets the value of the passengerFare property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link FareType }
-         *
+         *     
          */
         public FareType getPassengerFare() {
             return passengerFare;
@@ -813,11 +818,11 @@ public class PTCFareBreakdownType {
 
         /**
          * Sets the value of the passengerFare property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link FareType }
-         *
+         *     
          */
         public void setPassengerFare(FareType value) {
             this.passengerFare = value;
@@ -828,9 +833,9 @@ public class PTCFareBreakdownType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -920,8 +925,8 @@ public class PTCFareBreakdownType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -939,11 +944,11 @@ public class PTCFareBreakdownType {
 
         /**
          * Gets the value of the ticketFeeDetail property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link PTCFareBreakdownType.PassengerFare.TicketFeeDetail }
-         *
+         *     
          */
         public PTCFareBreakdownType.PassengerFare.TicketFeeDetail getTicketFeeDetail() {
             return ticketFeeDetail;
@@ -951,11 +956,11 @@ public class PTCFareBreakdownType {
 
         /**
          * Sets the value of the ticketFeeDetail property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link PTCFareBreakdownType.PassengerFare.TicketFeeDetail }
-         *
+         *     
          */
         public void setTicketFeeDetail(PTCFareBreakdownType.PassengerFare.TicketFeeDetail value) {
             this.ticketFeeDetail = value;
@@ -963,11 +968,11 @@ public class PTCFareBreakdownType {
 
         /**
          * Gets the value of the usage property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getUsage() {
             return usage;
@@ -975,11 +980,11 @@ public class PTCFareBreakdownType {
 
         /**
          * Sets the value of the usage property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setUsage(String value) {
             this.usage = value;
@@ -988,9 +993,9 @@ public class PTCFareBreakdownType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -1062,8 +1067,8 @@ public class PTCFareBreakdownType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
@@ -1073,9 +1078,9 @@ public class PTCFareBreakdownType {
         public static class TicketFeeDetail {
 
             @XmlElement(name = "Fee", required = true)
-            protected List<Fee> fee;
+            protected List<PTCFareBreakdownType.PassengerFare.TicketFeeDetail.Fee> fee;
             @XmlElement(name = "Total")
-            protected List<Total> total;
+            protected List<PTCFareBreakdownType.PassengerFare.TicketFeeDetail.Total> total;
             @XmlAttribute(name = "CurrencyCode")
             protected String currencyCode;
             @XmlAttribute(name = "DecimalPlaces")
@@ -1084,69 +1089,69 @@ public class PTCFareBreakdownType {
 
             /**
              * Gets the value of the fee property.
-             *
+             * 
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the fee property.
-             *
+             * 
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getFee().add(newItem);
              * </pre>
-             *
-             *
+             * 
+             * 
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link PTCFareBreakdownType.PassengerFare.TicketFeeDetail.Fee }
-             *
-             *
+             * 
+             * 
              */
-            public List<Fee> getFee() {
+            public List<PTCFareBreakdownType.PassengerFare.TicketFeeDetail.Fee> getFee() {
                 if (fee == null) {
-                    fee = new ArrayList<Fee>();
+                    fee = new ArrayList<PTCFareBreakdownType.PassengerFare.TicketFeeDetail.Fee>();
                 }
                 return this.fee;
             }
 
             /**
              * Gets the value of the total property.
-             *
+             * 
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the total property.
-             *
+             * 
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getTotal().add(newItem);
              * </pre>
-             *
-             *
+             * 
+             * 
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link PTCFareBreakdownType.PassengerFare.TicketFeeDetail.Total }
-             *
-             *
+             * 
+             * 
              */
-            public List<Total> getTotal() {
+            public List<PTCFareBreakdownType.PassengerFare.TicketFeeDetail.Total> getTotal() {
                 if (total == null) {
-                    total = new ArrayList<Total>();
+                    total = new ArrayList<PTCFareBreakdownType.PassengerFare.TicketFeeDetail.Total>();
                 }
                 return this.total;
             }
 
             /**
              * Gets the value of the currencyCode property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getCurrencyCode() {
                 return currencyCode;
@@ -1154,11 +1159,11 @@ public class PTCFareBreakdownType {
 
             /**
              * Sets the value of the currencyCode property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setCurrencyCode(String value) {
                 this.currencyCode = value;
@@ -1166,11 +1171,11 @@ public class PTCFareBreakdownType {
 
             /**
              * Gets the value of the decimalPlaces property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link BigInteger }
-             *
+             *     
              */
             public BigInteger getDecimalPlaces() {
                 return decimalPlaces;
@@ -1178,11 +1183,11 @@ public class PTCFareBreakdownType {
 
             /**
              * Sets the value of the decimalPlaces property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link BigInteger }
-             *
+             *     
              */
             public void setDecimalPlaces(BigInteger value) {
                 this.decimalPlaces = value;
@@ -1191,9 +1196,9 @@ public class PTCFareBreakdownType {
 
             /**
              * <p>Java class for anonymous complex type.
-             *
+             * 
              * <p>The following schema fragment specifies the expected content contained within this class.
-             *
+             * 
              * <pre>
              * &lt;complexType>
              *   &lt;complexContent>
@@ -1236,8 +1241,8 @@ public class PTCFareBreakdownType {
              *   &lt;/complexContent>
              * &lt;/complexType>
              * </pre>
-             *
-             *
+             * 
+             * 
              */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "", propOrder = {
@@ -1260,11 +1265,11 @@ public class PTCFareBreakdownType {
 
                 /**
                  * Gets the value of the baseFee property.
-                 *
+                 * 
                  * @return
                  *     possible object is
                  *     {@link PTCFareBreakdownType.PassengerFare.TicketFeeDetail.Fee.BaseFee }
-                 *
+                 *     
                  */
                 public PTCFareBreakdownType.PassengerFare.TicketFeeDetail.Fee.BaseFee getBaseFee() {
                     return baseFee;
@@ -1272,11 +1277,11 @@ public class PTCFareBreakdownType {
 
                 /**
                  * Sets the value of the baseFee property.
-                 *
+                 * 
                  * @param value
                  *     allowed object is
                  *     {@link PTCFareBreakdownType.PassengerFare.TicketFeeDetail.Fee.BaseFee }
-                 *
+                 *     
                  */
                 public void setBaseFee(PTCFareBreakdownType.PassengerFare.TicketFeeDetail.Fee.BaseFee value) {
                     this.baseFee = value;
@@ -1284,11 +1289,11 @@ public class PTCFareBreakdownType {
 
                 /**
                  * Gets the value of the taxes property.
-                 *
+                 * 
                  * @return
                  *     possible object is
                  *     {@link PTCFareBreakdownType.PassengerFare.TicketFeeDetail.Fee.Taxes }
-                 *
+                 *     
                  */
                 public PTCFareBreakdownType.PassengerFare.TicketFeeDetail.Fee.Taxes getTaxes() {
                     return taxes;
@@ -1296,11 +1301,11 @@ public class PTCFareBreakdownType {
 
                 /**
                  * Sets the value of the taxes property.
-                 *
+                 * 
                  * @param value
                  *     allowed object is
                  *     {@link PTCFareBreakdownType.PassengerFare.TicketFeeDetail.Fee.Taxes }
-                 *
+                 *     
                  */
                 public void setTaxes(PTCFareBreakdownType.PassengerFare.TicketFeeDetail.Fee.Taxes value) {
                     this.taxes = value;
@@ -1308,11 +1313,11 @@ public class PTCFareBreakdownType {
 
                 /**
                  * Gets the value of the total property.
-                 *
+                 * 
                  * @return
                  *     possible object is
                  *     {@link PTCFareBreakdownType.PassengerFare.TicketFeeDetail.Fee.Total }
-                 *
+                 *     
                  */
                 public PTCFareBreakdownType.PassengerFare.TicketFeeDetail.Fee.Total getTotal() {
                     return total;
@@ -1320,11 +1325,11 @@ public class PTCFareBreakdownType {
 
                 /**
                  * Sets the value of the total property.
-                 *
+                 * 
                  * @param value
                  *     allowed object is
                  *     {@link PTCFareBreakdownType.PassengerFare.TicketFeeDetail.Fee.Total }
-                 *
+                 *     
                  */
                 public void setTotal(PTCFareBreakdownType.PassengerFare.TicketFeeDetail.Fee.Total value) {
                     this.total = value;
@@ -1332,11 +1337,11 @@ public class PTCFareBreakdownType {
 
                 /**
                  * Gets the value of the feeCode property.
-                 *
+                 * 
                  * @return
                  *     possible object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public String getFeeCode() {
                     return feeCode;
@@ -1344,11 +1349,11 @@ public class PTCFareBreakdownType {
 
                 /**
                  * Sets the value of the feeCode property.
-                 *
+                 * 
                  * @param value
                  *     allowed object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public void setFeeCode(String value) {
                     this.feeCode = value;
@@ -1356,11 +1361,11 @@ public class PTCFareBreakdownType {
 
                 /**
                  * Gets the value of the description property.
-                 *
+                 * 
                  * @return
                  *     possible object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public String getDescription() {
                     return description;
@@ -1368,11 +1373,11 @@ public class PTCFareBreakdownType {
 
                 /**
                  * Sets the value of the description property.
-                 *
+                 * 
                  * @param value
                  *     allowed object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public void setDescription(String value) {
                     this.description = value;
@@ -1381,9 +1386,9 @@ public class PTCFareBreakdownType {
 
                 /**
                  * <p>Java class for anonymous complex type.
-                 *
+                 * 
                  * <p>The following schema fragment specifies the expected content contained within this class.
-                 *
+                 * 
                  * <pre>
                  * &lt;complexType>
                  *   &lt;complexContent>
@@ -1393,8 +1398,8 @@ public class PTCFareBreakdownType {
                  *   &lt;/complexContent>
                  * &lt;/complexType>
                  * </pre>
-                 *
-                 *
+                 * 
+                 * 
                  */
                 @XmlAccessorType(XmlAccessType.FIELD)
                 @XmlType(name = "")
@@ -1405,11 +1410,11 @@ public class PTCFareBreakdownType {
 
                     /**
                      * Gets the value of the amount property.
-                     *
+                     * 
                      * @return
                      *     possible object is
                      *     {@link BigDecimal }
-                     *
+                     *     
                      */
                     public BigDecimal getAmount() {
                         return amount;
@@ -1417,11 +1422,11 @@ public class PTCFareBreakdownType {
 
                     /**
                      * Sets the value of the amount property.
-                     *
+                     * 
                      * @param value
                      *     allowed object is
                      *     {@link BigDecimal }
-                     *
+                     *     
                      */
                     public void setAmount(BigDecimal value) {
                         this.amount = value;
@@ -1432,9 +1437,9 @@ public class PTCFareBreakdownType {
 
                 /**
                  * <p>Java class for anonymous complex type.
-                 *
+                 * 
                  * <p>The following schema fragment specifies the expected content contained within this class.
-                 *
+                 * 
                  * <pre>
                  * &lt;complexType>
                  *   &lt;complexContent>
@@ -1447,8 +1452,8 @@ public class PTCFareBreakdownType {
                  *   &lt;/complexContent>
                  * &lt;/complexType>
                  * </pre>
-                 *
-                 *
+                 * 
+                 * 
                  */
                 @XmlAccessorType(XmlAccessType.FIELD)
                 @XmlType(name = "", propOrder = {
@@ -1463,25 +1468,25 @@ public class PTCFareBreakdownType {
 
                     /**
                      * Gets the value of the tax property.
-                     *
+                     * 
                      * <p>
                      * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
                      * returned list will be present inside the JAXB object.
                      * This is why there is not a <CODE>set</CODE> method for the tax property.
-                     *
+                     * 
                      * <p>
                      * For example, to add a new item, do as follows:
                      * <pre>
                      *    getTax().add(newItem);
                      * </pre>
-                     *
-                     *
+                     * 
+                     * 
                      * <p>
                      * Objects of the following type(s) are allowed in the list
                      * {@link AirTaxType }
-                     *
-                     *
+                     * 
+                     * 
                      */
                     public List<AirTaxType> getTax() {
                         if (tax == null) {
@@ -1492,11 +1497,11 @@ public class PTCFareBreakdownType {
 
                     /**
                      * Gets the value of the amount property.
-                     *
+                     * 
                      * @return
                      *     possible object is
                      *     {@link BigDecimal }
-                     *
+                     *     
                      */
                     public BigDecimal getAmount() {
                         return amount;
@@ -1504,11 +1509,11 @@ public class PTCFareBreakdownType {
 
                     /**
                      * Sets the value of the amount property.
-                     *
+                     * 
                      * @param value
                      *     allowed object is
                      *     {@link BigDecimal }
-                     *
+                     *     
                      */
                     public void setAmount(BigDecimal value) {
                         this.amount = value;
@@ -1519,9 +1524,9 @@ public class PTCFareBreakdownType {
 
                 /**
                  * <p>Java class for anonymous complex type.
-                 *
+                 * 
                  * <p>The following schema fragment specifies the expected content contained within this class.
-                 *
+                 * 
                  * <pre>
                  * &lt;complexType>
                  *   &lt;complexContent>
@@ -1531,8 +1536,8 @@ public class PTCFareBreakdownType {
                  *   &lt;/complexContent>
                  * &lt;/complexType>
                  * </pre>
-                 *
-                 *
+                 * 
+                 * 
                  */
                 @XmlAccessorType(XmlAccessType.FIELD)
                 @XmlType(name = "")
@@ -1543,11 +1548,11 @@ public class PTCFareBreakdownType {
 
                     /**
                      * Gets the value of the amount property.
-                     *
+                     * 
                      * @return
                      *     possible object is
                      *     {@link BigDecimal }
-                     *
+                     *     
                      */
                     public BigDecimal getAmount() {
                         return amount;
@@ -1555,11 +1560,11 @@ public class PTCFareBreakdownType {
 
                     /**
                      * Sets the value of the amount property.
-                     *
+                     * 
                      * @param value
                      *     allowed object is
                      *     {@link BigDecimal }
-                     *
+                     *     
                      */
                     public void setAmount(BigDecimal value) {
                         this.amount = value;
@@ -1572,9 +1577,9 @@ public class PTCFareBreakdownType {
 
             /**
              * <p>Java class for anonymous complex type.
-             *
+             * 
              * <p>The following schema fragment specifies the expected content contained within this class.
-             *
+             * 
              * <pre>
              * &lt;complexType>
              *   &lt;complexContent>
@@ -1593,8 +1598,8 @@ public class PTCFareBreakdownType {
              *   &lt;/complexContent>
              * &lt;/complexType>
              * </pre>
-             *
-             *
+             * 
+             * 
              */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "")
@@ -1608,11 +1613,11 @@ public class PTCFareBreakdownType {
 
                 /**
                  * Gets the value of the type property.
-                 *
+                 * 
                  * @return
                  *     possible object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public String getType() {
                     return type;
@@ -1620,11 +1625,11 @@ public class PTCFareBreakdownType {
 
                 /**
                  * Sets the value of the type property.
-                 *
+                 * 
                  * @param value
                  *     allowed object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public void setType(String value) {
                     this.type = value;
@@ -1632,11 +1637,11 @@ public class PTCFareBreakdownType {
 
                 /**
                  * Gets the value of the amount property.
-                 *
+                 * 
                  * @return
                  *     possible object is
                  *     {@link BigDecimal }
-                 *
+                 *     
                  */
                 public BigDecimal getAmount() {
                     return amount;
@@ -1644,11 +1649,11 @@ public class PTCFareBreakdownType {
 
                 /**
                  * Sets the value of the amount property.
-                 *
+                 * 
                  * @param value
                  *     allowed object is
                  *     {@link BigDecimal }
-                 *
+                 *     
                  */
                 public void setAmount(BigDecimal value) {
                     this.amount = value;
@@ -1663,9 +1668,9 @@ public class PTCFareBreakdownType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -1700,8 +1705,8 @@ public class PTCFareBreakdownType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -1710,42 +1715,42 @@ public class PTCFareBreakdownType {
     public static class PricingUnit {
 
         @XmlElement(name = "FareComponent", required = true)
-        protected List<FareComponent> fareComponent;
+        protected List<PTCFareBreakdownType.PricingUnit.FareComponent> fareComponent;
         @XmlAttribute(name = "UnitNumber", required = true)
         protected int unitNumber;
 
         /**
          * Gets the value of the fareComponent property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the fareComponent property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getFareComponent().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link PTCFareBreakdownType.PricingUnit.FareComponent }
-         *
-         *
+         * 
+         * 
          */
-        public List<FareComponent> getFareComponent() {
+        public List<PTCFareBreakdownType.PricingUnit.FareComponent> getFareComponent() {
             if (fareComponent == null) {
-                fareComponent = new ArrayList<FareComponent>();
+                fareComponent = new ArrayList<PTCFareBreakdownType.PricingUnit.FareComponent>();
             }
             return this.fareComponent;
         }
 
         /**
          * Gets the value of the unitNumber property.
-         *
+         * 
          */
         public int getUnitNumber() {
             return unitNumber;
@@ -1753,7 +1758,7 @@ public class PTCFareBreakdownType {
 
         /**
          * Sets the value of the unitNumber property.
-         *
+         * 
          */
         public void setUnitNumber(int value) {
             this.unitNumber = value;
@@ -1762,9 +1767,9 @@ public class PTCFareBreakdownType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -1788,8 +1793,8 @@ public class PTCFareBreakdownType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
@@ -1798,7 +1803,7 @@ public class PTCFareBreakdownType {
         public static class FareComponent {
 
             @XmlElement(name = "FlightLeg", required = true)
-            protected List<FlightLeg> flightLeg;
+            protected List<PTCFareBreakdownType.PricingUnit.FareComponent.FlightLeg> flightLeg;
             @XmlAttribute(name = "Number", required = true)
             protected int number;
             @XmlAttribute(name = "Amount")
@@ -1811,36 +1816,36 @@ public class PTCFareBreakdownType {
 
             /**
              * Gets the value of the flightLeg property.
-             *
+             * 
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the flightLeg property.
-             *
+             * 
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getFlightLeg().add(newItem);
              * </pre>
-             *
-             *
+             * 
+             * 
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link PTCFareBreakdownType.PricingUnit.FareComponent.FlightLeg }
-             *
-             *
+             * 
+             * 
              */
-            public List<FlightLeg> getFlightLeg() {
+            public List<PTCFareBreakdownType.PricingUnit.FareComponent.FlightLeg> getFlightLeg() {
                 if (flightLeg == null) {
-                    flightLeg = new ArrayList<FlightLeg>();
+                    flightLeg = new ArrayList<PTCFareBreakdownType.PricingUnit.FareComponent.FlightLeg>();
                 }
                 return this.flightLeg;
             }
 
             /**
              * Gets the value of the number property.
-             *
+             * 
              */
             public int getNumber() {
                 return number;
@@ -1848,7 +1853,7 @@ public class PTCFareBreakdownType {
 
             /**
              * Sets the value of the number property.
-             *
+             * 
              */
             public void setNumber(int value) {
                 this.number = value;
@@ -1856,11 +1861,11 @@ public class PTCFareBreakdownType {
 
             /**
              * Gets the value of the amount property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link BigDecimal }
-             *
+             *     
              */
             public BigDecimal getAmount() {
                 return amount;
@@ -1868,11 +1873,11 @@ public class PTCFareBreakdownType {
 
             /**
              * Sets the value of the amount property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link BigDecimal }
-             *
+             *     
              */
             public void setAmount(BigDecimal value) {
                 this.amount = value;
@@ -1880,11 +1885,11 @@ public class PTCFareBreakdownType {
 
             /**
              * Gets the value of the currencyCode property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getCurrencyCode() {
                 return currencyCode;
@@ -1892,11 +1897,11 @@ public class PTCFareBreakdownType {
 
             /**
              * Sets the value of the currencyCode property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setCurrencyCode(String value) {
                 this.currencyCode = value;
@@ -1904,11 +1909,11 @@ public class PTCFareBreakdownType {
 
             /**
              * Gets the value of the decimalPlaces property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link BigInteger }
-             *
+             *     
              */
             public BigInteger getDecimalPlaces() {
                 return decimalPlaces;
@@ -1916,11 +1921,11 @@ public class PTCFareBreakdownType {
 
             /**
              * Sets the value of the decimalPlaces property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link BigInteger }
-             *
+             *     
              */
             public void setDecimalPlaces(BigInteger value) {
                 this.decimalPlaces = value;
@@ -1929,9 +1934,9 @@ public class PTCFareBreakdownType {
 
             /**
              * <p>Java class for anonymous complex type.
-             *
+             * 
              * <p>The following schema fragment specifies the expected content contained within this class.
-             *
+             * 
              * <pre>
              * &lt;complexType>
              *   &lt;complexContent>
@@ -1943,8 +1948,8 @@ public class PTCFareBreakdownType {
              *   &lt;/complexContent>
              * &lt;/complexType>
              * </pre>
-             *
-             *
+             * 
+             * 
              */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "")
@@ -1965,11 +1970,11 @@ public class PTCFareBreakdownType {
 
                 /**
                  * Gets the value of the surchargeInd property.
-                 *
+                 * 
                  * @return
                  *     possible object is
                  *     {@link Boolean }
-                 *
+                 *     
                  */
                 public Boolean isSurchargeInd() {
                     return surchargeInd;
@@ -1977,11 +1982,11 @@ public class PTCFareBreakdownType {
 
                 /**
                  * Sets the value of the surchargeInd property.
-                 *
+                 * 
                  * @param value
                  *     allowed object is
                  *     {@link Boolean }
-                 *
+                 *     
                  */
                 public void setSurchargeInd(Boolean value) {
                     this.surchargeInd = value;
@@ -1989,11 +1994,11 @@ public class PTCFareBreakdownType {
 
                 /**
                  * Gets the value of the fareBasisCode property.
-                 *
+                 * 
                  * @return
                  *     possible object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public String getFareBasisCode() {
                     return fareBasisCode;
@@ -2001,11 +2006,11 @@ public class PTCFareBreakdownType {
 
                 /**
                  * Sets the value of the fareBasisCode property.
-                 *
+                 * 
                  * @param value
                  *     allowed object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public void setFareBasisCode(String value) {
                     this.fareBasisCode = value;
@@ -2013,11 +2018,11 @@ public class PTCFareBreakdownType {
 
                 /**
                  * Gets the value of the unitOfMeasureQuantity property.
-                 *
+                 * 
                  * @return
                  *     possible object is
                  *     {@link BigDecimal }
-                 *
+                 *     
                  */
                 public BigDecimal getUnitOfMeasureQuantity() {
                     return unitOfMeasureQuantity;
@@ -2025,11 +2030,11 @@ public class PTCFareBreakdownType {
 
                 /**
                  * Sets the value of the unitOfMeasureQuantity property.
-                 *
+                 * 
                  * @param value
                  *     allowed object is
                  *     {@link BigDecimal }
-                 *
+                 *     
                  */
                 public void setUnitOfMeasureQuantity(BigDecimal value) {
                     this.unitOfMeasureQuantity = value;
@@ -2037,11 +2042,11 @@ public class PTCFareBreakdownType {
 
                 /**
                  * Gets the value of the unitOfMeasure property.
-                 *
+                 * 
                  * @return
                  *     possible object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public String getUnitOfMeasure() {
                     return unitOfMeasure;
@@ -2049,11 +2054,11 @@ public class PTCFareBreakdownType {
 
                 /**
                  * Sets the value of the unitOfMeasure property.
-                 *
+                 * 
                  * @param value
                  *     allowed object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public void setUnitOfMeasure(String value) {
                     this.unitOfMeasure = value;
@@ -2061,11 +2066,11 @@ public class PTCFareBreakdownType {
 
                 /**
                  * Gets the value of the unitOfMeasureCode property.
-                 *
+                 * 
                  * @return
                  *     possible object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public String getUnitOfMeasureCode() {
                     return unitOfMeasureCode;
@@ -2073,11 +2078,11 @@ public class PTCFareBreakdownType {
 
                 /**
                  * Sets the value of the unitOfMeasureCode property.
-                 *
+                 * 
                  * @param value
                  *     allowed object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public void setUnitOfMeasureCode(String value) {
                     this.unitOfMeasureCode = value;
@@ -2092,9 +2097,9 @@ public class PTCFareBreakdownType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -2116,8 +2121,8 @@ public class PTCFareBreakdownType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -2126,33 +2131,33 @@ public class PTCFareBreakdownType {
     public static class TicketDesignators {
 
         @XmlElement(name = "TicketDesignator", required = true)
-        protected List<TicketDesignator> ticketDesignator;
+        protected List<PTCFareBreakdownType.TicketDesignators.TicketDesignator> ticketDesignator;
 
         /**
          * Gets the value of the ticketDesignator property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the ticketDesignator property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getTicketDesignator().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link PTCFareBreakdownType.TicketDesignators.TicketDesignator }
-         *
-         *
+         * 
+         * 
          */
-        public List<TicketDesignator> getTicketDesignator() {
+        public List<PTCFareBreakdownType.TicketDesignators.TicketDesignator> getTicketDesignator() {
             if (ticketDesignator == null) {
-                ticketDesignator = new ArrayList<TicketDesignator>();
+                ticketDesignator = new ArrayList<PTCFareBreakdownType.TicketDesignators.TicketDesignator>();
             }
             return this.ticketDesignator;
         }

@@ -7,14 +7,20 @@
 
 package com.witbooking.middleware.integration.rategain.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import javax.xml.datatype.XMLGregorianCalendar;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
@@ -87,11 +93,11 @@ public class HotelARIGetRQ extends RateGainValidationRQInterface {
 
     /**
      * Gets the value of the authentication property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link AuthenticationType }
-     *
+     *     
      */
     @Override
     public AuthenticationType getAuthentication() {
@@ -105,7 +111,7 @@ public class HotelARIGetRQ extends RateGainValidationRQInterface {
                 || getHotelARIGetRequests().getHotelARIGetRequest().isEmpty()){
             return new ErrorsType(errorFound());
         }
-        final Iterator<HotelARIGetRequests.HotelARIGetRequest> iterator =  getHotelARIGetRequests().getHotelARIGetRequest().iterator();
+        final Iterator<HotelARIGetRQ.HotelARIGetRequests.HotelARIGetRequest> iterator =  getHotelARIGetRequests().getHotelARIGetRequest().iterator();
         while(iterator.hasNext()){
             final HotelARIGetRQ.HotelARIGetRequests.HotelARIGetRequest elem = iterator.next();
             if (elem.getApplicationControl() == null
@@ -123,11 +129,11 @@ public class HotelARIGetRQ extends RateGainValidationRQInterface {
 
     /**
      * Sets the value of the authentication property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link AuthenticationType }
-     *
+     *     
      */
     public void setAuthentication(AuthenticationType value) {
         this.authentication = value;
@@ -135,27 +141,27 @@ public class HotelARIGetRQ extends RateGainValidationRQInterface {
 
     /**
      * Gets the value of the hotelARIGetRequests property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link HotelARIGetRQ.HotelARIGetRequests }
-     *
+     *     
      */
     public HotelARIGetRQ.HotelARIGetRequests getHotelARIGetRequests() {
         return hotelARIGetRequests;
     }
-
+    
     public String getHotelARIGetRequestHotelTicker() {
         return hotelARIGetRequests != null ? hotelARIGetRequests.getHotelCode() : null;
     }
 
     /**
      * Sets the value of the hotelARIGetRequests property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link HotelARIGetRQ.HotelARIGetRequests }
-     *
+     *     
      */
     public void setHotelARIGetRequests(HotelARIGetRQ.HotelARIGetRequests value) {
         this.hotelARIGetRequests = value;
@@ -163,11 +169,11 @@ public class HotelARIGetRQ extends RateGainValidationRQInterface {
 
     /**
      * Gets the value of the echoToken property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getEchoToken() {
         return echoToken;
@@ -175,11 +181,11 @@ public class HotelARIGetRQ extends RateGainValidationRQInterface {
 
     /**
      * Sets the value of the echoToken property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setEchoToken(String value) {
         this.echoToken = value;
@@ -187,11 +193,11 @@ public class HotelARIGetRQ extends RateGainValidationRQInterface {
 
     /**
      * Gets the value of the timeStamp property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link XMLGregorianCalendar }
-     *
+     *     
      */
     public XMLGregorianCalendar getTimeStamp() {
         return timeStamp;
@@ -199,11 +205,11 @@ public class HotelARIGetRQ extends RateGainValidationRQInterface {
 
     /**
      * Sets the value of the timeStamp property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link XMLGregorianCalendar }
-     *
+     *     
      */
     public void setTimeStamp(XMLGregorianCalendar value) {
         this.timeStamp = value;
@@ -211,11 +217,11 @@ public class HotelARIGetRQ extends RateGainValidationRQInterface {
 
     /**
      * Gets the value of the target property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     @Override
     public String getTarget() {
@@ -224,11 +230,11 @@ public class HotelARIGetRQ extends RateGainValidationRQInterface {
 
     /**
      * Sets the value of the target property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setTarget(String value) {
         this.target = value;
@@ -236,11 +242,11 @@ public class HotelARIGetRQ extends RateGainValidationRQInterface {
 
     /**
      * Gets the value of the version property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link BigDecimal }
-     *
+     *     
      */
     @Override
     public BigDecimal getVersion() {
@@ -249,11 +255,11 @@ public class HotelARIGetRQ extends RateGainValidationRQInterface {
 
     /**
      * Sets the value of the version property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link BigDecimal }
-     *
+     *     
      */
     public void setVersion(BigDecimal value) {
         this.version = value;
@@ -261,11 +267,11 @@ public class HotelARIGetRQ extends RateGainValidationRQInterface {
 
     /**
      * Gets the value of the transactionIdentifier property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getTransactionIdentifier() {
         return transactionIdentifier;
@@ -273,11 +279,11 @@ public class HotelARIGetRQ extends RateGainValidationRQInterface {
 
     /**
      * Sets the value of the transactionIdentifier property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setTransactionIdentifier(String value) {
         this.transactionIdentifier = value;
@@ -286,9 +292,9 @@ public class HotelARIGetRQ extends RateGainValidationRQInterface {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -312,8 +318,8 @@ public class HotelARIGetRQ extends RateGainValidationRQInterface {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -322,35 +328,35 @@ public class HotelARIGetRQ extends RateGainValidationRQInterface {
     public static class HotelARIGetRequests {
 
         @XmlElement(name = "HotelARIGetRequest", required = true)
-        protected List<HotelARIGetRequest> hotelARIGetRequest;
+        protected List<HotelARIGetRQ.HotelARIGetRequests.HotelARIGetRequest> hotelARIGetRequest;
         @XmlAttribute(name = "HotelCode", required = true)
         protected String hotelCode;
 
         /**
          * Gets the value of the hotelARIGetRequest property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the hotelARIGetRequest property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getHotelARIGetRequest().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link HotelARIGetRQ.HotelARIGetRequests.HotelARIGetRequest }
-         *
-         *
+         * 
+         * 
          */
-        public List<HotelARIGetRequest> getHotelARIGetRequest() {
+        public List<HotelARIGetRQ.HotelARIGetRequests.HotelARIGetRequest> getHotelARIGetRequest() {
             if (hotelARIGetRequest == null) {
-                hotelARIGetRequest = new ArrayList<HotelARIGetRequest>();
+                hotelARIGetRequest = new ArrayList<HotelARIGetRQ.HotelARIGetRequests.HotelARIGetRequest>();
             }
             return this.hotelARIGetRequest;
         }

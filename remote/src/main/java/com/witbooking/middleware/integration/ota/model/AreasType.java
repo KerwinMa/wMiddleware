@@ -8,9 +8,13 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -53,33 +57,33 @@ import java.util.List;
 public class AreasType {
 
     @XmlElement(name = "Area", required = true)
-    protected List<Area> area;
+    protected List<AreasType.Area> area;
 
     /**
      * Gets the value of the area property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the area property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getArea().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link AreasType.Area }
-     *
-     *
+     * 
+     * 
      */
-    public List<Area> getArea() {
+    public List<AreasType.Area> getArea() {
         if (area == null) {
-            area = new ArrayList<Area>();
+            area = new ArrayList<AreasType.Area>();
         }
         return this.area;
     }

@@ -8,12 +8,16 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -98,17 +102,17 @@ public class VehicleRentalDetailsType {
     @XmlElement(name = "OdometerReading")
     protected VehicleRentalDetailsType.OdometerReading odometerReading;
     @XmlElement(name = "ConditionReport")
-    protected List<ConditionReport> conditionReport;
+    protected List<VehicleRentalDetailsType.ConditionReport> conditionReport;
     @XmlAttribute(name = "ParkingLocation")
     protected String parkingLocation;
 
     /**
      * Gets the value of the fuelLevelDetails property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleRentalDetailsType.FuelLevelDetails }
-     *
+     *     
      */
     public VehicleRentalDetailsType.FuelLevelDetails getFuelLevelDetails() {
         return fuelLevelDetails;
@@ -116,11 +120,11 @@ public class VehicleRentalDetailsType {
 
     /**
      * Sets the value of the fuelLevelDetails property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleRentalDetailsType.FuelLevelDetails }
-     *
+     *     
      */
     public void setFuelLevelDetails(VehicleRentalDetailsType.FuelLevelDetails value) {
         this.fuelLevelDetails = value;
@@ -128,11 +132,11 @@ public class VehicleRentalDetailsType {
 
     /**
      * Gets the value of the odometerReading property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleRentalDetailsType.OdometerReading }
-     *
+     *     
      */
     public VehicleRentalDetailsType.OdometerReading getOdometerReading() {
         return odometerReading;
@@ -140,11 +144,11 @@ public class VehicleRentalDetailsType {
 
     /**
      * Sets the value of the odometerReading property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleRentalDetailsType.OdometerReading }
-     *
+     *     
      */
     public void setOdometerReading(VehicleRentalDetailsType.OdometerReading value) {
         this.odometerReading = value;
@@ -152,29 +156,29 @@ public class VehicleRentalDetailsType {
 
     /**
      * Gets the value of the conditionReport property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the conditionReport property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getConditionReport().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link VehicleRentalDetailsType.ConditionReport }
-     *
-     *
+     * 
+     * 
      */
-    public List<ConditionReport> getConditionReport() {
+    public List<VehicleRentalDetailsType.ConditionReport> getConditionReport() {
         if (conditionReport == null) {
-            conditionReport = new ArrayList<ConditionReport>();
+            conditionReport = new ArrayList<VehicleRentalDetailsType.ConditionReport>();
         }
         return this.conditionReport;
     }

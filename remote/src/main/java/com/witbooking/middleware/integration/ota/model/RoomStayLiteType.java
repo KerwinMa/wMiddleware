@@ -8,9 +8,13 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -109,11 +113,11 @@ public class RoomStayLiteType {
 
     /**
      * Gets the value of the roomTypes property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link RoomStayLiteType.RoomTypes }
-     *
+     *     
      */
     public RoomStayLiteType.RoomTypes getRoomTypes() {
         return roomTypes;
@@ -121,11 +125,11 @@ public class RoomStayLiteType {
 
     /**
      * Sets the value of the roomTypes property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link RoomStayLiteType.RoomTypes }
-     *
+     *     
      */
     public void setRoomTypes(RoomStayLiteType.RoomTypes value) {
         this.roomTypes = value;
@@ -133,11 +137,11 @@ public class RoomStayLiteType {
 
     /**
      * Gets the value of the ratePlans property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link RoomStayLiteType.RatePlans }
-     *
+     *     
      */
     public RoomStayLiteType.RatePlans getRatePlans() {
         return ratePlans;
@@ -145,11 +149,11 @@ public class RoomStayLiteType {
 
     /**
      * Sets the value of the ratePlans property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link RoomStayLiteType.RatePlans }
-     *
+     *     
      */
     public void setRatePlans(RoomStayLiteType.RatePlans value) {
         this.ratePlans = value;
@@ -157,11 +161,11 @@ public class RoomStayLiteType {
 
     /**
      * Gets the value of the roomRates property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link RoomStayLiteType.RoomRates }
-     *
+     *     
      */
     public RoomStayLiteType.RoomRates getRoomRates() {
         return roomRates;
@@ -169,11 +173,11 @@ public class RoomStayLiteType {
 
     /**
      * Sets the value of the roomRates property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link RoomStayLiteType.RoomRates }
-     *
+     *     
      */
     public void setRoomRates(RoomStayLiteType.RoomRates value) {
         this.roomRates = value;
@@ -181,11 +185,11 @@ public class RoomStayLiteType {
 
     /**
      * Gets the value of the guestCounts property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link GuestCountType }
-     *
+     *     
      */
     public GuestCountType getGuestCounts() {
         return guestCounts;
@@ -193,11 +197,11 @@ public class RoomStayLiteType {
 
     /**
      * Sets the value of the guestCounts property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link GuestCountType }
-     *
+     *     
      */
     public void setGuestCounts(GuestCountType value) {
         this.guestCounts = value;
@@ -205,11 +209,11 @@ public class RoomStayLiteType {
 
     /**
      * Gets the value of the timeSpan property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link DateTimeSpanType }
-     *
+     *     
      */
     public DateTimeSpanType getTimeSpan() {
         return timeSpan;
@@ -217,11 +221,11 @@ public class RoomStayLiteType {
 
     /**
      * Sets the value of the timeSpan property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link DateTimeSpanType }
-     *
+     *     
      */
     public void setTimeSpan(DateTimeSpanType value) {
         this.timeSpan = value;
@@ -229,25 +233,25 @@ public class RoomStayLiteType {
 
     /**
      * Gets the value of the guarantee property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the guarantee property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getGuarantee().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link GuaranteeType }
-     *
-     *
+     * 
+     * 
      */
     public List<GuaranteeType> getGuarantee() {
         if (guarantee == null) {
@@ -258,25 +262,25 @@ public class RoomStayLiteType {
 
     /**
      * Gets the value of the depositPayment property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the depositPayment property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getDepositPayment().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link RequiredPaymentLiteType }
-     *
-     *
+     * 
+     * 
      */
     public List<RequiredPaymentLiteType> getDepositPayment() {
         if (depositPayment == null) {
@@ -287,11 +291,11 @@ public class RoomStayLiteType {
 
     /**
      * Gets the value of the basicPropertyInfo property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link RoomStayLiteType.BasicPropertyInfo }
-     *
+     *     
      */
     public RoomStayLiteType.BasicPropertyInfo getBasicPropertyInfo() {
         return basicPropertyInfo;
@@ -299,11 +303,11 @@ public class RoomStayLiteType {
 
     /**
      * Sets the value of the basicPropertyInfo property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link RoomStayLiteType.BasicPropertyInfo }
-     *
+     *     
      */
     public void setBasicPropertyInfo(RoomStayLiteType.BasicPropertyInfo value) {
         this.basicPropertyInfo = value;

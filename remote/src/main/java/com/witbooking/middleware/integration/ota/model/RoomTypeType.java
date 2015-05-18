@@ -8,12 +8,16 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -81,7 +85,7 @@ public class RoomTypeType {
     @XmlElement(name = "Amenities")
     protected RoomTypeType.Amenities amenities;
     @XmlElement(name = "Occupancy")
-    protected List<Occupancy> occupancy;
+    protected List<RoomTypeType.Occupancy> occupancy;
     @XmlElement(name = "TPA_Extensions")
     protected TPAExtensionsType tpaExtensions;
     @XmlAttribute(name = "NumberOfUnits")
@@ -135,18 +139,18 @@ public class RoomTypeType {
     protected String roomGender;
     @XmlAttribute(name = "SharedRoomInd")
     protected Boolean sharedRoomInd;
-
+    
     public RoomTypeType(){
         this.roomDescription = new ParagraphType();
     }
 
     /**
      * Gets the value of the roomDescription property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link ParagraphType }
-     *
+     *     
      */
     public ParagraphType getRoomDescription() {
         return roomDescription;
@@ -154,27 +158,27 @@ public class RoomTypeType {
 
     /**
      * Sets the value of the roomDescription property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link ParagraphType }
-     *
+     *     
      */
     public void setRoomDescription(ParagraphType value) {
         this.roomDescription = value;
     }
-
+    
     public void setRoomDescriptionName(String name){
         roomDescription.setName(name);
     }
 
     /**
      * Gets the value of the additionalDetails property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link AdditionalDetailsType }
-     *
+     *     
      */
     public AdditionalDetailsType getAdditionalDetails() {
         return additionalDetails;
@@ -182,11 +186,11 @@ public class RoomTypeType {
 
     /**
      * Sets the value of the additionalDetails property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link AdditionalDetailsType }
-     *
+     *     
      */
     public void setAdditionalDetails(AdditionalDetailsType value) {
         this.additionalDetails = value;
@@ -194,11 +198,11 @@ public class RoomTypeType {
 
     /**
      * Gets the value of the amenities property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link RoomTypeType.Amenities }
-     *
+     *     
      */
     public RoomTypeType.Amenities getAmenities() {
         return amenities;
@@ -206,11 +210,11 @@ public class RoomTypeType {
 
     /**
      * Sets the value of the amenities property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link RoomTypeType.Amenities }
-     *
+     *     
      */
     public void setAmenities(RoomTypeType.Amenities value) {
         this.amenities = value;
@@ -218,29 +222,29 @@ public class RoomTypeType {
 
     /**
      * Gets the value of the occupancy property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the occupancy property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getOccupancy().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link RoomTypeType.Occupancy }
-     *
-     *
+     * 
+     * 
      */
-    public List<Occupancy> getOccupancy() {
+    public List<RoomTypeType.Occupancy> getOccupancy() {
         if (occupancy == null) {
-            occupancy = new ArrayList<Occupancy>();
+            occupancy = new ArrayList<RoomTypeType.Occupancy>();
         }
         return this.occupancy;
     }

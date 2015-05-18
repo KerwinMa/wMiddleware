@@ -8,11 +8,16 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -138,11 +143,11 @@ public class CommissionType {
 
     /**
      * Gets the value of the uniqueID property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link UniqueIDType }
-     *
+     *     
      */
     public UniqueIDType getUniqueID() {
         return uniqueID;
@@ -150,11 +155,11 @@ public class CommissionType {
 
     /**
      * Sets the value of the uniqueID property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link UniqueIDType }
-     *
+     *     
      */
     public void setUniqueID(UniqueIDType value) {
         this.uniqueID = value;
@@ -162,11 +167,11 @@ public class CommissionType {
 
     /**
      * Gets the value of the commissionableAmount property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link CommissionType.CommissionableAmount }
-     *
+     *     
      */
     public CommissionType.CommissionableAmount getCommissionableAmount() {
         return commissionableAmount;
@@ -174,11 +179,11 @@ public class CommissionType {
 
     /**
      * Sets the value of the commissionableAmount property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link CommissionType.CommissionableAmount }
-     *
+     *     
      */
     public void setCommissionableAmount(CommissionType.CommissionableAmount value) {
         this.commissionableAmount = value;
@@ -186,11 +191,11 @@ public class CommissionType {
 
     /**
      * Gets the value of the prepaidAmount property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link CommissionType.PrepaidAmount }
-     *
+     *     
      */
     public CommissionType.PrepaidAmount getPrepaidAmount() {
         return prepaidAmount;
@@ -198,11 +203,11 @@ public class CommissionType {
 
     /**
      * Sets the value of the prepaidAmount property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link CommissionType.PrepaidAmount }
-     *
+     *     
      */
     public void setPrepaidAmount(CommissionType.PrepaidAmount value) {
         this.prepaidAmount = value;
@@ -210,11 +215,11 @@ public class CommissionType {
 
     /**
      * Gets the value of the flatCommission property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link CommissionType.FlatCommission }
-     *
+     *     
      */
     public CommissionType.FlatCommission getFlatCommission() {
         return flatCommission;
@@ -222,11 +227,11 @@ public class CommissionType {
 
     /**
      * Sets the value of the flatCommission property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link CommissionType.FlatCommission }
-     *
+     *     
      */
     public void setFlatCommission(CommissionType.FlatCommission value) {
         this.flatCommission = value;
@@ -234,11 +239,11 @@ public class CommissionType {
 
     /**
      * Gets the value of the commissionPayableAmount property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link CommissionType.CommissionPayableAmount }
-     *
+     *     
      */
     public CommissionType.CommissionPayableAmount getCommissionPayableAmount() {
         return commissionPayableAmount;
@@ -246,11 +251,11 @@ public class CommissionType {
 
     /**
      * Sets the value of the commissionPayableAmount property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link CommissionType.CommissionPayableAmount }
-     *
+     *     
      */
     public void setCommissionPayableAmount(CommissionType.CommissionPayableAmount value) {
         this.commissionPayableAmount = value;

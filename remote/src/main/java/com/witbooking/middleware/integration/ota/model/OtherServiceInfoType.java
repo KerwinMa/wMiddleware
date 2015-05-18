@@ -8,9 +8,14 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -55,7 +60,7 @@ import java.util.List;
 public class OtherServiceInfoType {
 
     @XmlElement(name = "TravelerRefNumber")
-    protected List<TravelerRefNumber> travelerRefNumber;
+    protected List<OtherServiceInfoType.TravelerRefNumber> travelerRefNumber;
     @XmlElement(name = "Airline", required = true)
     protected CompanyNameType airline;
     @XmlElement(name = "Text", required = true)
@@ -65,29 +70,29 @@ public class OtherServiceInfoType {
 
     /**
      * Gets the value of the travelerRefNumber property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the travelerRefNumber property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getTravelerRefNumber().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link OtherServiceInfoType.TravelerRefNumber }
-     *
-     *
+     * 
+     * 
      */
-    public List<TravelerRefNumber> getTravelerRefNumber() {
+    public List<OtherServiceInfoType.TravelerRefNumber> getTravelerRefNumber() {
         if (travelerRefNumber == null) {
-            travelerRefNumber = new ArrayList<TravelerRefNumber>();
+            travelerRefNumber = new ArrayList<OtherServiceInfoType.TravelerRefNumber>();
         }
         return this.travelerRefNumber;
     }

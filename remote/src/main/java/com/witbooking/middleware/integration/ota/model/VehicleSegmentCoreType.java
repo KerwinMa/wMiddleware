@@ -8,11 +8,17 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -102,7 +108,7 @@ import java.util.List;
 public class VehicleSegmentCoreType {
 
     @XmlElement(name = "ConfID", required = true)
-    protected List<ConfID> confID;
+    protected List<VehicleSegmentCoreType.ConfID> confID;
     @XmlElement(name = "Vendor")
     protected CompanyNameType vendor;
     @XmlElement(name = "VehRentalCore")
@@ -124,40 +130,40 @@ public class VehicleSegmentCoreType {
 
     /**
      * Gets the value of the confID property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the confID property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getConfID().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link VehicleSegmentCoreType.ConfID }
-     *
-     *
+     * 
+     * 
      */
-    public List<ConfID> getConfID() {
+    public List<VehicleSegmentCoreType.ConfID> getConfID() {
         if (confID == null) {
-            confID = new ArrayList<ConfID>();
+            confID = new ArrayList<VehicleSegmentCoreType.ConfID>();
         }
         return this.confID;
     }
 
     /**
      * Gets the value of the vendor property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link CompanyNameType }
-     *
+     *     
      */
     public CompanyNameType getVendor() {
         return vendor;
@@ -165,11 +171,11 @@ public class VehicleSegmentCoreType {
 
     /**
      * Sets the value of the vendor property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link CompanyNameType }
-     *
+     *     
      */
     public void setVendor(CompanyNameType value) {
         this.vendor = value;
@@ -177,11 +183,11 @@ public class VehicleSegmentCoreType {
 
     /**
      * Gets the value of the vehRentalCore property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleRentalCoreType }
-     *
+     *     
      */
     public VehicleRentalCoreType getVehRentalCore() {
         return vehRentalCore;
@@ -189,11 +195,11 @@ public class VehicleSegmentCoreType {
 
     /**
      * Sets the value of the vehRentalCore property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleRentalCoreType }
-     *
+     *     
      */
     public void setVehRentalCore(VehicleRentalCoreType value) {
         this.vehRentalCore = value;
@@ -201,11 +207,11 @@ public class VehicleSegmentCoreType {
 
     /**
      * Gets the value of the vehicle property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleType }
-     *
+     *     
      */
     public VehicleType getVehicle() {
         return vehicle;
@@ -213,11 +219,11 @@ public class VehicleSegmentCoreType {
 
     /**
      * Sets the value of the vehicle property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleType }
-     *
+     *     
      */
     public void setVehicle(VehicleType value) {
         this.vehicle = value;
@@ -225,11 +231,11 @@ public class VehicleSegmentCoreType {
 
     /**
      * Gets the value of the rentalRate property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleRentalRateType }
-     *
+     *     
      */
     public VehicleRentalRateType getRentalRate() {
         return rentalRate;
@@ -237,11 +243,11 @@ public class VehicleSegmentCoreType {
 
     /**
      * Sets the value of the rentalRate property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleRentalRateType }
-     *
+     *     
      */
     public void setRentalRate(VehicleRentalRateType value) {
         this.rentalRate = value;
@@ -249,11 +255,11 @@ public class VehicleSegmentCoreType {
 
     /**
      * Gets the value of the pricedEquips property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleSegmentCoreType.PricedEquips }
-     *
+     *     
      */
     public VehicleSegmentCoreType.PricedEquips getPricedEquips() {
         return pricedEquips;
@@ -261,11 +267,11 @@ public class VehicleSegmentCoreType {
 
     /**
      * Sets the value of the pricedEquips property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleSegmentCoreType.PricedEquips }
-     *
+     *     
      */
     public void setPricedEquips(VehicleSegmentCoreType.PricedEquips value) {
         this.pricedEquips = value;
@@ -273,11 +279,11 @@ public class VehicleSegmentCoreType {
 
     /**
      * Gets the value of the fees property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleSegmentCoreType.Fees }
-     *
+     *     
      */
     public VehicleSegmentCoreType.Fees getFees() {
         return fees;
@@ -285,11 +291,11 @@ public class VehicleSegmentCoreType {
 
     /**
      * Sets the value of the fees property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleSegmentCoreType.Fees }
-     *
+     *     
      */
     public void setFees(VehicleSegmentCoreType.Fees value) {
         this.fees = value;
@@ -297,11 +303,11 @@ public class VehicleSegmentCoreType {
 
     /**
      * Gets the value of the totalCharge property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleSegmentCoreType.TotalCharge }
-     *
+     *     
      */
     public VehicleSegmentCoreType.TotalCharge getTotalCharge() {
         return totalCharge;
@@ -309,11 +315,11 @@ public class VehicleSegmentCoreType {
 
     /**
      * Sets the value of the totalCharge property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleSegmentCoreType.TotalCharge }
-     *
+     *     
      */
     public void setTotalCharge(VehicleSegmentCoreType.TotalCharge value) {
         this.totalCharge = value;

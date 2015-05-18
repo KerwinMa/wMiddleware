@@ -8,9 +8,14 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.XmlValue;
 
 
 /**
@@ -67,33 +72,33 @@ import java.util.List;
 public class RoomSharesType {
 
     @XmlElement(name = "RoomShare", required = true)
-    protected List<RoomShare> roomShare;
+    protected List<RoomSharesType.RoomShare> roomShare;
 
     /**
      * Gets the value of the roomShare property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the roomShare property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getRoomShare().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link RoomSharesType.RoomShare }
-     *
-     *
+     * 
+     * 
      */
-    public List<RoomShare> getRoomShare() {
+    public List<RoomSharesType.RoomShare> getRoomShare() {
         if (roomShare == null) {
-            roomShare = new ArrayList<RoomShare>();
+            roomShare = new ArrayList<RoomSharesType.RoomShare>();
         }
         return this.roomShare;
     }
@@ -101,9 +106,9 @@ public class RoomSharesType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -133,8 +138,8 @@ public class RoomSharesType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -147,11 +152,11 @@ public class RoomSharesType {
 
         /**
          * Gets the value of the guestRPHs property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link RoomSharesType.RoomShare.GuestRPHs }
-         *
+         *     
          */
         public RoomSharesType.RoomShare.GuestRPHs getGuestRPHs() {
             return guestRPHs;
@@ -159,11 +164,11 @@ public class RoomSharesType {
 
         /**
          * Sets the value of the guestRPHs property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link RoomSharesType.RoomShare.GuestRPHs }
-         *
+         *     
          */
         public void setGuestRPHs(RoomSharesType.RoomShare.GuestRPHs value) {
             this.guestRPHs = value;
@@ -172,9 +177,9 @@ public class RoomSharesType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -194,8 +199,8 @@ public class RoomSharesType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
@@ -204,33 +209,33 @@ public class RoomSharesType {
         public static class GuestRPHs {
 
             @XmlElement(name = "GuestRPH", required = true)
-            protected List<GuestRPH> guestRPH;
+            protected List<RoomSharesType.RoomShare.GuestRPHs.GuestRPH> guestRPH;
 
             /**
              * Gets the value of the guestRPH property.
-             *
+             * 
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the guestRPH property.
-             *
+             * 
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getGuestRPH().add(newItem);
              * </pre>
-             *
-             *
+             * 
+             * 
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link RoomSharesType.RoomShare.GuestRPHs.GuestRPH }
-             *
-             *
+             * 
+             * 
              */
-            public List<GuestRPH> getGuestRPH() {
+            public List<RoomSharesType.RoomShare.GuestRPHs.GuestRPH> getGuestRPH() {
                 if (guestRPH == null) {
-                    guestRPH = new ArrayList<GuestRPH>();
+                    guestRPH = new ArrayList<RoomSharesType.RoomShare.GuestRPHs.GuestRPH>();
                 }
                 return this.guestRPH;
             }

@@ -8,13 +8,18 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -136,7 +141,7 @@ import java.util.List;
 public class VehicleRentalTransactionType {
 
     @XmlElement(name = "PickUpReturnDetails")
-    protected List<PickUpReturnDetails> pickUpReturnDetails;
+    protected List<VehicleRentalTransactionType.PickUpReturnDetails> pickUpReturnDetails;
     @XmlElement(name = "Vehicle", required = true)
     protected VehicleRentalTransactionType.Vehicle vehicle;
     @XmlElement(name = "RentalRate")
@@ -154,40 +159,40 @@ public class VehicleRentalTransactionType {
 
     /**
      * Gets the value of the pickUpReturnDetails property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the pickUpReturnDetails property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getPickUpReturnDetails().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link VehicleRentalTransactionType.PickUpReturnDetails }
-     *
-     *
+     * 
+     * 
      */
-    public List<PickUpReturnDetails> getPickUpReturnDetails() {
+    public List<VehicleRentalTransactionType.PickUpReturnDetails> getPickUpReturnDetails() {
         if (pickUpReturnDetails == null) {
-            pickUpReturnDetails = new ArrayList<PickUpReturnDetails>();
+            pickUpReturnDetails = new ArrayList<VehicleRentalTransactionType.PickUpReturnDetails>();
         }
         return this.pickUpReturnDetails;
     }
 
     /**
      * Gets the value of the vehicle property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleRentalTransactionType.Vehicle }
-     *
+     *     
      */
     public VehicleRentalTransactionType.Vehicle getVehicle() {
         return vehicle;
@@ -195,11 +200,11 @@ public class VehicleRentalTransactionType {
 
     /**
      * Sets the value of the vehicle property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleRentalTransactionType.Vehicle }
-     *
+     *     
      */
     public void setVehicle(VehicleRentalTransactionType.Vehicle value) {
         this.vehicle = value;
@@ -207,11 +212,11 @@ public class VehicleRentalTransactionType {
 
     /**
      * Gets the value of the rentalRate property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleRentalRateType }
-     *
+     *     
      */
     public VehicleRentalRateType getRentalRate() {
         return rentalRate;
@@ -219,11 +224,11 @@ public class VehicleRentalTransactionType {
 
     /**
      * Sets the value of the rentalRate property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleRentalRateType }
-     *
+     *     
      */
     public void setRentalRate(VehicleRentalRateType value) {
         this.rentalRate = value;
@@ -231,11 +236,11 @@ public class VehicleRentalTransactionType {
 
     /**
      * Gets the value of the pricedEquips property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleRentalTransactionType.PricedEquips }
-     *
+     *     
      */
     public VehicleRentalTransactionType.PricedEquips getPricedEquips() {
         return pricedEquips;
@@ -243,11 +248,11 @@ public class VehicleRentalTransactionType {
 
     /**
      * Sets the value of the pricedEquips property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleRentalTransactionType.PricedEquips }
-     *
+     *     
      */
     public void setPricedEquips(VehicleRentalTransactionType.PricedEquips value) {
         this.pricedEquips = value;
@@ -255,11 +260,11 @@ public class VehicleRentalTransactionType {
 
     /**
      * Gets the value of the fees property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleRentalTransactionType.Fees }
-     *
+     *     
      */
     public VehicleRentalTransactionType.Fees getFees() {
         return fees;
@@ -267,11 +272,11 @@ public class VehicleRentalTransactionType {
 
     /**
      * Sets the value of the fees property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleRentalTransactionType.Fees }
-     *
+     *     
      */
     public void setFees(VehicleRentalTransactionType.Fees value) {
         this.fees = value;
@@ -279,11 +284,11 @@ public class VehicleRentalTransactionType {
 
     /**
      * Gets the value of the totalCharge property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleRentalTransactionType.TotalCharge }
-     *
+     *     
      */
     public VehicleRentalTransactionType.TotalCharge getTotalCharge() {
         return totalCharge;
@@ -291,11 +296,11 @@ public class VehicleRentalTransactionType {
 
     /**
      * Sets the value of the totalCharge property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleRentalTransactionType.TotalCharge }
-     *
+     *     
      */
     public void setTotalCharge(VehicleRentalTransactionType.TotalCharge value) {
         this.totalCharge = value;
@@ -303,11 +308,11 @@ public class VehicleRentalTransactionType {
 
     /**
      * Gets the value of the confID property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link UniqueIDType }
-     *
+     *     
      */
     public UniqueIDType getConfID() {
         return confID;
@@ -315,11 +320,11 @@ public class VehicleRentalTransactionType {
 
     /**
      * Sets the value of the confID property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link UniqueIDType }
-     *
+     *     
      */
     public void setConfID(UniqueIDType value) {
         this.confID = value;
@@ -327,11 +332,11 @@ public class VehicleRentalTransactionType {
 
     /**
      * Gets the value of the contractID property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link UniqueIDType }
-     *
+     *     
      */
     public UniqueIDType getContractID() {
         return contractID;
@@ -339,11 +344,11 @@ public class VehicleRentalTransactionType {
 
     /**
      * Sets the value of the contractID property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link UniqueIDType }
-     *
+     *     
      */
     public void setContractID(UniqueIDType value) {
         this.contractID = value;
@@ -352,9 +357,9 @@ public class VehicleRentalTransactionType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -366,8 +371,8 @@ public class VehicleRentalTransactionType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -380,25 +385,25 @@ public class VehicleRentalTransactionType {
 
         /**
          * Gets the value of the fee property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the fee property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getFee().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link VehicleChargePurposeType }
-         *
-         *
+         * 
+         * 
          */
         public List<VehicleChargePurposeType> getFee() {
             if (fee == null) {
@@ -412,9 +417,9 @@ public class VehicleRentalTransactionType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -431,8 +436,8 @@ public class VehicleRentalTransactionType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
@@ -446,11 +451,11 @@ public class VehicleRentalTransactionType {
 
         /**
          * Gets the value of the expectedActualCode property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getExpectedActualCode() {
             return expectedActualCode;
@@ -458,11 +463,11 @@ public class VehicleRentalTransactionType {
 
         /**
          * Sets the value of the expectedActualCode property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setExpectedActualCode(String value) {
             this.expectedActualCode = value;
@@ -473,9 +478,9 @@ public class VehicleRentalTransactionType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -513,8 +518,8 @@ public class VehicleRentalTransactionType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -523,33 +528,33 @@ public class VehicleRentalTransactionType {
     public static class PricedEquips {
 
         @XmlElement(name = "PricedEquip", required = true)
-        protected List<PricedEquip> pricedEquip;
+        protected List<VehicleRentalTransactionType.PricedEquips.PricedEquip> pricedEquip;
 
         /**
          * Gets the value of the pricedEquip property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the pricedEquip property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getPricedEquip().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link VehicleRentalTransactionType.PricedEquips.PricedEquip }
-         *
-         *
+         * 
+         * 
          */
-        public List<PricedEquip> getPricedEquip() {
+        public List<VehicleRentalTransactionType.PricedEquips.PricedEquip> getPricedEquip() {
             if (pricedEquip == null) {
-                pricedEquip = new ArrayList<PricedEquip>();
+                pricedEquip = new ArrayList<VehicleRentalTransactionType.PricedEquips.PricedEquip>();
             }
             return this.pricedEquip;
         }
@@ -557,9 +562,9 @@ public class VehicleRentalTransactionType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -587,8 +592,8 @@ public class VehicleRentalTransactionType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
@@ -598,35 +603,35 @@ public class VehicleRentalTransactionType {
         public static class PricedEquip {
 
             @XmlElement(name = "Equipment", required = true)
-            protected List<Equipment> equipment;
+            protected List<VehicleRentalTransactionType.PricedEquips.PricedEquip.Equipment> equipment;
             @XmlElement(name = "Charge")
             protected VehicleChargeType charge;
 
             /**
              * Gets the value of the equipment property.
-             *
+             * 
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the equipment property.
-             *
+             * 
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getEquipment().add(newItem);
              * </pre>
-             *
-             *
+             * 
+             * 
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link VehicleRentalTransactionType.PricedEquips.PricedEquip.Equipment }
-             *
-             *
+             * 
+             * 
              */
-            public List<Equipment> getEquipment() {
+            public List<VehicleRentalTransactionType.PricedEquips.PricedEquip.Equipment> getEquipment() {
                 if (equipment == null) {
-                    equipment = new ArrayList<Equipment>();
+                    equipment = new ArrayList<VehicleRentalTransactionType.PricedEquips.PricedEquip.Equipment>();
                 }
                 return this.equipment;
             }

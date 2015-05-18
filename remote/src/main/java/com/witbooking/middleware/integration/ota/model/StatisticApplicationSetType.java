@@ -8,11 +8,16 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -128,11 +133,11 @@ public class StatisticApplicationSetType {
 
     /**
      * Gets the value of the statisticCodes property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link StatisticApplicationSetType.StatisticCodes }
-     *
+     *     
      */
     public StatisticApplicationSetType.StatisticCodes getStatisticCodes() {
         return statisticCodes;
@@ -140,11 +145,11 @@ public class StatisticApplicationSetType {
 
     /**
      * Sets the value of the statisticCodes property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link StatisticApplicationSetType.StatisticCodes }
-     *
+     *     
      */
     public void setStatisticCodes(StatisticApplicationSetType.StatisticCodes value) {
         this.statisticCodes = value;
@@ -152,11 +157,11 @@ public class StatisticApplicationSetType {
 
     /**
      * Gets the value of the revenueCategorySummaries property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link StatisticApplicationSetType.RevenueCategorySummaries }
-     *
+     *     
      */
     public StatisticApplicationSetType.RevenueCategorySummaries getRevenueCategorySummaries() {
         return revenueCategorySummaries;
@@ -164,11 +169,11 @@ public class StatisticApplicationSetType {
 
     /**
      * Sets the value of the revenueCategorySummaries property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link StatisticApplicationSetType.RevenueCategorySummaries }
-     *
+     *     
      */
     public void setRevenueCategorySummaries(StatisticApplicationSetType.RevenueCategorySummaries value) {
         this.revenueCategorySummaries = value;
@@ -176,11 +181,11 @@ public class StatisticApplicationSetType {
 
     /**
      * Gets the value of the countCategorySummaries property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link StatisticApplicationSetType.CountCategorySummaries }
-     *
+     *     
      */
     public StatisticApplicationSetType.CountCategorySummaries getCountCategorySummaries() {
         return countCategorySummaries;
@@ -188,11 +193,11 @@ public class StatisticApplicationSetType {
 
     /**
      * Sets the value of the countCategorySummaries property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link StatisticApplicationSetType.CountCategorySummaries }
-     *
+     *     
      */
     public void setCountCategorySummaries(StatisticApplicationSetType.CountCategorySummaries value) {
         this.countCategorySummaries = value;
@@ -200,11 +205,11 @@ public class StatisticApplicationSetType {
 
     /**
      * Gets the value of the reportSummaries property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link StatisticApplicationSetType.ReportSummaries }
-     *
+     *     
      */
     public StatisticApplicationSetType.ReportSummaries getReportSummaries() {
         return reportSummaries;
@@ -212,11 +217,11 @@ public class StatisticApplicationSetType {
 
     /**
      * Sets the value of the reportSummaries property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link StatisticApplicationSetType.ReportSummaries }
-     *
+     *     
      */
     public void setReportSummaries(StatisticApplicationSetType.ReportSummaries value) {
         this.reportSummaries = value;
@@ -224,11 +229,11 @@ public class StatisticApplicationSetType {
 
     /**
      * Gets the value of the start property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getStart() {
         return start;
@@ -236,11 +241,11 @@ public class StatisticApplicationSetType {
 
     /**
      * Sets the value of the start property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setStart(String value) {
         this.start = value;
@@ -248,11 +253,11 @@ public class StatisticApplicationSetType {
 
     /**
      * Gets the value of the duration property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getDuration() {
         return duration;
@@ -260,11 +265,11 @@ public class StatisticApplicationSetType {
 
     /**
      * Sets the value of the duration property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setDuration(String value) {
         this.duration = value;
@@ -272,11 +277,11 @@ public class StatisticApplicationSetType {
 
     /**
      * Gets the value of the end property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getEnd() {
         return end;
@@ -284,11 +289,11 @@ public class StatisticApplicationSetType {
 
     /**
      * Sets the value of the end property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setEnd(String value) {
         this.end = value;
@@ -297,9 +302,9 @@ public class StatisticApplicationSetType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -319,8 +324,8 @@ public class StatisticApplicationSetType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -329,33 +334,33 @@ public class StatisticApplicationSetType {
     public static class CountCategorySummaries {
 
         @XmlElement(name = "CountCategorySummary", required = true)
-        protected List<CountCategorySummary> countCategorySummary;
+        protected List<StatisticApplicationSetType.CountCategorySummaries.CountCategorySummary> countCategorySummary;
 
         /**
          * Gets the value of the countCategorySummary property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the countCategorySummary property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getCountCategorySummary().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link StatisticApplicationSetType.CountCategorySummaries.CountCategorySummary }
-         *
-         *
+         * 
+         * 
          */
-        public List<CountCategorySummary> getCountCategorySummary() {
+        public List<StatisticApplicationSetType.CountCategorySummaries.CountCategorySummary> getCountCategorySummary() {
             if (countCategorySummary == null) {
-                countCategorySummary = new ArrayList<CountCategorySummary>();
+                countCategorySummary = new ArrayList<StatisticApplicationSetType.CountCategorySummaries.CountCategorySummary>();
             }
             return this.countCategorySummary;
         }
@@ -363,9 +368,9 @@ public class StatisticApplicationSetType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -375,8 +380,8 @@ public class StatisticApplicationSetType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
@@ -390,11 +395,11 @@ public class StatisticApplicationSetType {
 
             /**
              * Gets the value of the summaryCount property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link BigInteger }
-             *
+             *     
              */
             public BigInteger getSummaryCount() {
                 return summaryCount;
@@ -402,11 +407,11 @@ public class StatisticApplicationSetType {
 
             /**
              * Sets the value of the summaryCount property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link BigInteger }
-             *
+             *     
              */
             public void setSummaryCount(BigInteger value) {
                 this.summaryCount = value;
@@ -414,11 +419,11 @@ public class StatisticApplicationSetType {
 
             /**
              * Gets the value of the countCategoryCode property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getCountCategoryCode() {
                 return countCategoryCode;
@@ -426,11 +431,11 @@ public class StatisticApplicationSetType {
 
             /**
              * Sets the value of the countCategoryCode property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setCountCategoryCode(String value) {
                 this.countCategoryCode = value;
@@ -443,9 +448,9 @@ public class StatisticApplicationSetType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -457,8 +462,8 @@ public class StatisticApplicationSetType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -471,25 +476,25 @@ public class StatisticApplicationSetType {
 
         /**
          * Gets the value of the reportSummary property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the reportSummary property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getReportSummary().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link ParagraphType }
-         *
-         *
+         * 
+         * 
          */
         public List<ParagraphType> getReportSummary() {
             if (reportSummary == null) {
@@ -503,9 +508,9 @@ public class StatisticApplicationSetType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -525,8 +530,8 @@ public class StatisticApplicationSetType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -535,33 +540,33 @@ public class StatisticApplicationSetType {
     public static class RevenueCategorySummaries {
 
         @XmlElement(name = "RevenueCategorySummary", required = true)
-        protected List<RevenueCategorySummary> revenueCategorySummary;
+        protected List<StatisticApplicationSetType.RevenueCategorySummaries.RevenueCategorySummary> revenueCategorySummary;
 
         /**
          * Gets the value of the revenueCategorySummary property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the revenueCategorySummary property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getRevenueCategorySummary().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link StatisticApplicationSetType.RevenueCategorySummaries.RevenueCategorySummary }
-         *
-         *
+         * 
+         * 
          */
-        public List<RevenueCategorySummary> getRevenueCategorySummary() {
+        public List<StatisticApplicationSetType.RevenueCategorySummaries.RevenueCategorySummary> getRevenueCategorySummary() {
             if (revenueCategorySummary == null) {
-                revenueCategorySummary = new ArrayList<RevenueCategorySummary>();
+                revenueCategorySummary = new ArrayList<StatisticApplicationSetType.RevenueCategorySummaries.RevenueCategorySummary>();
             }
             return this.revenueCategorySummary;
         }
@@ -569,9 +574,9 @@ public class StatisticApplicationSetType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -581,8 +586,8 @@ public class StatisticApplicationSetType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
@@ -600,11 +605,11 @@ public class StatisticApplicationSetType {
 
             /**
              * Gets the value of the revenueCategoryCode property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getRevenueCategoryCode() {
                 return revenueCategoryCode;
@@ -612,11 +617,11 @@ public class StatisticApplicationSetType {
 
             /**
              * Sets the value of the revenueCategoryCode property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setRevenueCategoryCode(String value) {
                 this.revenueCategoryCode = value;
@@ -624,11 +629,11 @@ public class StatisticApplicationSetType {
 
             /**
              * Gets the value of the amount property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link BigDecimal }
-             *
+             *     
              */
             public BigDecimal getAmount() {
                 return amount;
@@ -636,11 +641,11 @@ public class StatisticApplicationSetType {
 
             /**
              * Sets the value of the amount property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link BigDecimal }
-             *
+             *     
              */
             public void setAmount(BigDecimal value) {
                 this.amount = value;
@@ -648,11 +653,11 @@ public class StatisticApplicationSetType {
 
             /**
              * Gets the value of the currencyCode property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getCurrencyCode() {
                 return currencyCode;
@@ -660,11 +665,11 @@ public class StatisticApplicationSetType {
 
             /**
              * Sets the value of the currencyCode property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setCurrencyCode(String value) {
                 this.currencyCode = value;
@@ -672,11 +677,11 @@ public class StatisticApplicationSetType {
 
             /**
              * Gets the value of the decimalPlaces property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link BigInteger }
-             *
+             *     
              */
             public BigInteger getDecimalPlaces() {
                 return decimalPlaces;
@@ -684,11 +689,11 @@ public class StatisticApplicationSetType {
 
             /**
              * Sets the value of the decimalPlaces property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link BigInteger }
-             *
+             *     
              */
             public void setDecimalPlaces(BigInteger value) {
                 this.decimalPlaces = value;
@@ -701,9 +706,9 @@ public class StatisticApplicationSetType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -723,8 +728,8 @@ public class StatisticApplicationSetType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -733,33 +738,33 @@ public class StatisticApplicationSetType {
     public static class StatisticCodes {
 
         @XmlElement(name = "StatisticCode", required = true)
-        protected List<StatisticCode> statisticCode;
+        protected List<StatisticApplicationSetType.StatisticCodes.StatisticCode> statisticCode;
 
         /**
          * Gets the value of the statisticCode property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the statisticCode property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getStatisticCode().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link StatisticApplicationSetType.StatisticCodes.StatisticCode }
-         *
-         *
+         * 
+         * 
          */
-        public List<StatisticCode> getStatisticCode() {
+        public List<StatisticApplicationSetType.StatisticCodes.StatisticCode> getStatisticCode() {
             if (statisticCode == null) {
-                statisticCode = new ArrayList<StatisticCode>();
+                statisticCode = new ArrayList<StatisticApplicationSetType.StatisticCodes.StatisticCode>();
             }
             return this.statisticCode;
         }

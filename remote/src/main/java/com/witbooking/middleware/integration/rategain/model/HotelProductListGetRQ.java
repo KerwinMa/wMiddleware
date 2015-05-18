@@ -7,11 +7,17 @@
 
 package com.witbooking.middleware.integration.rategain.model;
 
-import javax.xml.bind.annotation.*;
+import java.math.BigDecimal;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.datatype.XMLGregorianCalendar;
-import java.math.BigDecimal;
 
 
 /**
@@ -70,30 +76,30 @@ public class HotelProductListGetRQ extends RateGainValidationRQInterface {
 
     /**
      * Gets the value of the authentication property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link AuthenticationType }
-     *
+     *     
      */
     @Override
     public AuthenticationType getAuthentication() {
         return authentication;
     }
-
+      
     @Override
     public ErrorsType validateClass(){
-        return getHotelProductListRequest() == null || getHotelProductListRequest().getHotelCode() == null
+        return getHotelProductListRequest() == null || getHotelProductListRequest().getHotelCode() == null 
                 ? new ErrorsType(errorFound())
                 : null;
     }
     /**
      * Sets the value of the authentication property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link AuthenticationType }
-     *
+     *     
      */
     public void setAuthentication(AuthenticationType value) {
         this.authentication = value;
@@ -101,11 +107,11 @@ public class HotelProductListGetRQ extends RateGainValidationRQInterface {
 
     /**
      * Gets the value of the hotelProductListRequest property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link HotelProductListGetRQ.HotelProductListRequest }
-     *
+     *     
      */
     public HotelProductListGetRQ.HotelProductListRequest getHotelProductListRequest() {
         return hotelProductListRequest;
@@ -113,11 +119,11 @@ public class HotelProductListGetRQ extends RateGainValidationRQInterface {
 
     /**
      * Sets the value of the hotelProductListRequest property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link HotelProductListGetRQ.HotelProductListRequest }
-     *
+     *     
      */
     public void setHotelProductListRequest(HotelProductListGetRQ.HotelProductListRequest value) {
         this.hotelProductListRequest = value;

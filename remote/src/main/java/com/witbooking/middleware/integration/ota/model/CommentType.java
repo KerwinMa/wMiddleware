@@ -6,9 +6,13 @@
 //
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for CommentType complex type.
@@ -46,15 +50,15 @@ import java.util.List;
 public class CommentType {
 
     @XmlElement(name = "Comment", required = true)
-    protected List<Comment> comment;
+    protected List<CommentType.Comment> comment;
 
     public CommentType() {
-        this.comment = new ArrayList<Comment>();
+        this.comment = new ArrayList<CommentType.Comment>();
     }
 
     public void addComment(final String comment) {
         if (this.comment == null) {
-            this.comment = new ArrayList<Comment>();
+            this.comment = new ArrayList<CommentType.Comment>();
         }
         if (comment != null) {
             this.comment.add(new Comment(comment));
@@ -83,9 +87,9 @@ public class CommentType {
      *
      *
      */
-    public List<Comment> getComment() {
+    public List<CommentType.Comment> getComment() {
         if (comment == null) {
-            comment = new ArrayList<Comment>();
+            comment = new ArrayList<CommentType.Comment>();
         }
         return this.comment;
     }

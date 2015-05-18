@@ -8,13 +8,19 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import javax.xml.datatype.XMLGregorianCalendar;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
@@ -147,15 +153,15 @@ public class BasicPropertyInfoType {
     @XmlElement(name = "ContactNumbers")
     protected BasicPropertyInfoType.ContactNumbers contactNumbers;
     @XmlElement(name = "Award")
-    protected List<Award> award;
+    protected List<BasicPropertyInfoType.Award> award;
     @XmlElement(name = "RelativePosition")
     protected RelativePositionType relativePosition;
     @XmlElement(name = "HotelAmenity")
-    protected List<HotelAmenity> hotelAmenity;
+    protected List<BasicPropertyInfoType.HotelAmenity> hotelAmenity;
     @XmlElement(name = "Recreation")
-    protected List<Recreation> recreation;
+    protected List<BasicPropertyInfoType.Recreation> recreation;
     @XmlElement(name = "Service")
-    protected List<Service> service;
+    protected List<BasicPropertyInfoType.Service> service;
     @XmlElement(name = "Policy")
     protected BasicPropertyInfoType.Policy policy;
     @XmlAttribute(name = "HotelSegmentCategoryCode")
@@ -191,11 +197,11 @@ public class BasicPropertyInfoType {
 
     /**
      * Gets the value of the vendorMessages property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VendorMessagesType }
-     *
+     *     
      */
     public VendorMessagesType getVendorMessages() {
         return vendorMessages;
@@ -203,11 +209,11 @@ public class BasicPropertyInfoType {
 
     /**
      * Sets the value of the vendorMessages property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VendorMessagesType }
-     *
+     *     
      */
     public void setVendorMessages(VendorMessagesType value) {
         this.vendorMessages = value;
@@ -215,11 +221,11 @@ public class BasicPropertyInfoType {
 
     /**
      * Gets the value of the position property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link BasicPropertyInfoType.Position }
-     *
+     *     
      */
     public BasicPropertyInfoType.Position getPosition() {
         return position;
@@ -227,11 +233,11 @@ public class BasicPropertyInfoType {
 
     /**
      * Sets the value of the position property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link BasicPropertyInfoType.Position }
-     *
+     *     
      */
     public void setPosition(BasicPropertyInfoType.Position value) {
         this.position = value;
@@ -239,11 +245,11 @@ public class BasicPropertyInfoType {
 
     /**
      * Gets the value of the address property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link AddressInfoType }
-     *
+     *     
      */
     public AddressInfoType getAddress() {
         return address;
@@ -251,11 +257,11 @@ public class BasicPropertyInfoType {
 
     /**
      * Sets the value of the address property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link AddressInfoType }
-     *
+     *     
      */
     public void setAddress(AddressInfoType value) {
         this.address = value;
@@ -263,11 +269,11 @@ public class BasicPropertyInfoType {
 
     /**
      * Gets the value of the contactNumbers property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link BasicPropertyInfoType.ContactNumbers }
-     *
+     *     
      */
     public BasicPropertyInfoType.ContactNumbers getContactNumbers() {
         return contactNumbers;
@@ -275,11 +281,11 @@ public class BasicPropertyInfoType {
 
     /**
      * Sets the value of the contactNumbers property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link BasicPropertyInfoType.ContactNumbers }
-     *
+     *     
      */
     public void setContactNumbers(BasicPropertyInfoType.ContactNumbers value) {
         this.contactNumbers = value;
@@ -287,40 +293,40 @@ public class BasicPropertyInfoType {
 
     /**
      * Gets the value of the award property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the award property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getAward().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link BasicPropertyInfoType.Award }
-     *
-     *
+     * 
+     * 
      */
-    public List<Award> getAward() {
+    public List<BasicPropertyInfoType.Award> getAward() {
         if (award == null) {
-            award = new ArrayList<Award>();
+            award = new ArrayList<BasicPropertyInfoType.Award>();
         }
         return this.award;
     }
 
     /**
      * Gets the value of the relativePosition property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link RelativePositionType }
-     *
+     *     
      */
     public RelativePositionType getRelativePosition() {
         return relativePosition;
@@ -328,11 +334,11 @@ public class BasicPropertyInfoType {
 
     /**
      * Sets the value of the relativePosition property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link RelativePositionType }
-     *
+     *     
      */
     public void setRelativePosition(RelativePositionType value) {
         this.relativePosition = value;
@@ -340,98 +346,98 @@ public class BasicPropertyInfoType {
 
     /**
      * Gets the value of the hotelAmenity property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the hotelAmenity property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getHotelAmenity().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link BasicPropertyInfoType.HotelAmenity }
-     *
-     *
+     * 
+     * 
      */
-    public List<HotelAmenity> getHotelAmenity() {
+    public List<BasicPropertyInfoType.HotelAmenity> getHotelAmenity() {
         if (hotelAmenity == null) {
-            hotelAmenity = new ArrayList<HotelAmenity>();
+            hotelAmenity = new ArrayList<BasicPropertyInfoType.HotelAmenity>();
         }
         return this.hotelAmenity;
     }
 
     /**
      * Gets the value of the recreation property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the recreation property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getRecreation().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link BasicPropertyInfoType.Recreation }
-     *
-     *
+     * 
+     * 
      */
-    public List<Recreation> getRecreation() {
+    public List<BasicPropertyInfoType.Recreation> getRecreation() {
         if (recreation == null) {
-            recreation = new ArrayList<Recreation>();
+            recreation = new ArrayList<BasicPropertyInfoType.Recreation>();
         }
         return this.recreation;
     }
 
     /**
      * Gets the value of the service property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the service property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getService().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link BasicPropertyInfoType.Service }
-     *
-     *
+     * 
+     * 
      */
-    public List<Service> getService() {
+    public List<BasicPropertyInfoType.Service> getService() {
         if (service == null) {
-            service = new ArrayList<Service>();
+            service = new ArrayList<BasicPropertyInfoType.Service>();
         }
         return this.service;
     }
 
     /**
      * Gets the value of the policy property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link BasicPropertyInfoType.Policy }
-     *
+     *     
      */
     public BasicPropertyInfoType.Policy getPolicy() {
         return policy;
@@ -439,11 +445,11 @@ public class BasicPropertyInfoType {
 
     /**
      * Sets the value of the policy property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link BasicPropertyInfoType.Policy }
-     *
+     *     
      */
     public void setPolicy(BasicPropertyInfoType.Policy value) {
         this.policy = value;
@@ -451,11 +457,11 @@ public class BasicPropertyInfoType {
 
     /**
      * Gets the value of the hotelSegmentCategoryCode property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getHotelSegmentCategoryCode() {
         return hotelSegmentCategoryCode;
@@ -463,11 +469,11 @@ public class BasicPropertyInfoType {
 
     /**
      * Sets the value of the hotelSegmentCategoryCode property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setHotelSegmentCategoryCode(String value) {
         this.hotelSegmentCategoryCode = value;
@@ -475,11 +481,11 @@ public class BasicPropertyInfoType {
 
     /**
      * Gets the value of the supplierIntegrationLevel property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link BigInteger }
-     *
+     *     
      */
     public BigInteger getSupplierIntegrationLevel() {
         return supplierIntegrationLevel;
@@ -487,11 +493,11 @@ public class BasicPropertyInfoType {
 
     /**
      * Sets the value of the supplierIntegrationLevel property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link BigInteger }
-     *
+     *     
      */
     public void setSupplierIntegrationLevel(BigInteger value) {
         this.supplierIntegrationLevel = value;
@@ -499,11 +505,11 @@ public class BasicPropertyInfoType {
 
     /**
      * Gets the value of the maxGroupRoomQuantity property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link BigInteger }
-     *
+     *     
      */
     public BigInteger getMaxGroupRoomQuantity() {
         return maxGroupRoomQuantity;
@@ -511,11 +517,11 @@ public class BasicPropertyInfoType {
 
     /**
      * Sets the value of the maxGroupRoomQuantity property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link BigInteger }
-     *
+     *     
      */
     public void setMaxGroupRoomQuantity(BigInteger value) {
         this.maxGroupRoomQuantity = value;
@@ -523,11 +529,11 @@ public class BasicPropertyInfoType {
 
     /**
      * Gets the value of the currencyCode property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getCurrencyCode() {
         return currencyCode;
@@ -535,11 +541,11 @@ public class BasicPropertyInfoType {
 
     /**
      * Sets the value of the currencyCode property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setCurrencyCode(String value) {
         this.currencyCode = value;
@@ -547,11 +553,11 @@ public class BasicPropertyInfoType {
 
     /**
      * Gets the value of the masterChainCode property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getMasterChainCode() {
         return masterChainCode;
@@ -559,11 +565,11 @@ public class BasicPropertyInfoType {
 
     /**
      * Sets the value of the masterChainCode property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setMasterChainCode(String value) {
         this.masterChainCode = value;
@@ -571,11 +577,11 @@ public class BasicPropertyInfoType {
 
     /**
      * Gets the value of the chainCode property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getChainCode() {
         return chainCode;
@@ -583,11 +589,11 @@ public class BasicPropertyInfoType {
 
     /**
      * Sets the value of the chainCode property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setChainCode(String value) {
         this.chainCode = value;
@@ -595,11 +601,11 @@ public class BasicPropertyInfoType {
 
     /**
      * Gets the value of the brandCode property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getBrandCode() {
         return brandCode;
@@ -607,11 +613,11 @@ public class BasicPropertyInfoType {
 
     /**
      * Sets the value of the brandCode property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setBrandCode(String value) {
         this.brandCode = value;
@@ -619,11 +625,11 @@ public class BasicPropertyInfoType {
 
     /**
      * Gets the value of the hotelCode property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getHotelCode() {
         return hotelCode;
@@ -631,11 +637,11 @@ public class BasicPropertyInfoType {
 
     /**
      * Sets the value of the hotelCode property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setHotelCode(String value) {
         this.hotelCode = value;
@@ -643,11 +649,11 @@ public class BasicPropertyInfoType {
 
     /**
      * Gets the value of the hotelCityCode property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getHotelCityCode() {
         return hotelCityCode;
@@ -655,11 +661,11 @@ public class BasicPropertyInfoType {
 
     /**
      * Sets the value of the hotelCityCode property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setHotelCityCode(String value) {
         this.hotelCityCode = value;
@@ -667,11 +673,11 @@ public class BasicPropertyInfoType {
 
     /**
      * Gets the value of the hotelName property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getHotelName() {
         return hotelName;
@@ -679,11 +685,11 @@ public class BasicPropertyInfoType {
 
     /**
      * Sets the value of the hotelName property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setHotelName(String value) {
         this.hotelName = value;
@@ -691,11 +697,11 @@ public class BasicPropertyInfoType {
 
     /**
      * Gets the value of the hotelCodeContext property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getHotelCodeContext() {
         return hotelCodeContext;
@@ -703,11 +709,11 @@ public class BasicPropertyInfoType {
 
     /**
      * Sets the value of the hotelCodeContext property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setHotelCodeContext(String value) {
         this.hotelCodeContext = value;
@@ -715,11 +721,11 @@ public class BasicPropertyInfoType {
 
     /**
      * Gets the value of the chainName property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getChainName() {
         return chainName;
@@ -727,11 +733,11 @@ public class BasicPropertyInfoType {
 
     /**
      * Sets the value of the chainName property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setChainName(String value) {
         this.chainName = value;
@@ -739,11 +745,11 @@ public class BasicPropertyInfoType {
 
     /**
      * Gets the value of the brandName property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getBrandName() {
         return brandName;
@@ -751,11 +757,11 @@ public class BasicPropertyInfoType {
 
     /**
      * Sets the value of the brandName property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setBrandName(String value) {
         this.brandName = value;
@@ -763,11 +769,11 @@ public class BasicPropertyInfoType {
 
     /**
      * Gets the value of the areaID property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getAreaID() {
         return areaID;
@@ -775,11 +781,11 @@ public class BasicPropertyInfoType {
 
     /**
      * Sets the value of the areaID property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setAreaID(String value) {
         this.areaID = value;
@@ -788,9 +794,9 @@ public class BasicPropertyInfoType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -801,8 +807,8 @@ public class BasicPropertyInfoType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
@@ -815,11 +821,11 @@ public class BasicPropertyInfoType {
 
         /**
          * Gets the value of the provider property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getProvider() {
             return provider;
@@ -827,11 +833,11 @@ public class BasicPropertyInfoType {
 
         /**
          * Sets the value of the provider property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setProvider(String value) {
             this.provider = value;
@@ -839,11 +845,11 @@ public class BasicPropertyInfoType {
 
         /**
          * Gets the value of the rating property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getRating() {
             return rating;
@@ -851,11 +857,11 @@ public class BasicPropertyInfoType {
 
         /**
          * Sets the value of the rating property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setRating(String value) {
             this.rating = value;
@@ -866,9 +872,9 @@ public class BasicPropertyInfoType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -888,8 +894,8 @@ public class BasicPropertyInfoType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -898,33 +904,33 @@ public class BasicPropertyInfoType {
     public static class ContactNumbers {
 
         @XmlElement(name = "ContactNumber")
-        protected List<ContactNumber> contactNumber;
+        protected List<BasicPropertyInfoType.ContactNumbers.ContactNumber> contactNumber;
 
         /**
          * Gets the value of the contactNumber property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the contactNumber property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getContactNumber().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link BasicPropertyInfoType.ContactNumbers.ContactNumber }
-         *
-         *
+         * 
+         * 
          */
-        public List<ContactNumber> getContactNumber() {
+        public List<BasicPropertyInfoType.ContactNumbers.ContactNumber> getContactNumber() {
             if (contactNumber == null) {
-                contactNumber = new ArrayList<ContactNumber>();
+                contactNumber = new ArrayList<BasicPropertyInfoType.ContactNumbers.ContactNumber>();
             }
             return this.contactNumber;
         }

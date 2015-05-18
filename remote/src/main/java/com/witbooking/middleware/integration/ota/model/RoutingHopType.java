@@ -8,11 +8,16 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.datatype.XMLGregorianCalendar;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
@@ -54,33 +59,33 @@ import java.util.List;
 public class RoutingHopType {
 
     @XmlElement(name = "RoutingHop", required = true)
-    protected List<RoutingHop> routingHop;
+    protected List<RoutingHopType.RoutingHop> routingHop;
 
     /**
      * Gets the value of the routingHop property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the routingHop property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getRoutingHop().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link RoutingHopType.RoutingHop }
-     *
-     *
+     * 
+     * 
      */
-    public List<RoutingHop> getRoutingHop() {
+    public List<RoutingHopType.RoutingHop> getRoutingHop() {
         if (routingHop == null) {
-            routingHop = new ArrayList<RoutingHop>();
+            routingHop = new ArrayList<RoutingHopType.RoutingHop>();
         }
         return this.routingHop;
     }

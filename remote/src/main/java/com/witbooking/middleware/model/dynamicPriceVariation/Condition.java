@@ -49,9 +49,9 @@ public abstract class Condition implements Evaluable, Serializable {
             throw new IncompatibleTypesException("Invalid type for condition. Accepted values are: "+validConditions);
         }
 
-        if(conditionType== ConditionType.EXCLUDE && value && isType(ConditionType.INCLUDE)){
+        if(conditionType==ConditionType.EXCLUDE && value && isType(ConditionType.INCLUDE)){
             throw new IncompatibleTypesException("Cannot add both EXCLUDE and INCLUDE type");
-        }else if(conditionType== ConditionType.INCLUDE && value && isType(ConditionType.EXCLUDE)){
+        }else if(conditionType==ConditionType.INCLUDE && value && isType(ConditionType.EXCLUDE)){
             throw new IncompatibleTypesException("Cannot add both EXCLUDE and INCLUDE type");
         }
     }

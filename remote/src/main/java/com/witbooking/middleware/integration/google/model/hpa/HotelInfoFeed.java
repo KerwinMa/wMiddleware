@@ -53,7 +53,7 @@ public class HotelInfoFeed {
     @XmlElement(name = "PartnerData")
     protected RoomPriceDataType partnerData;
     @XmlElement(name = "Property")
-    protected List<Property> property;
+    protected List<HotelInfoFeed.Property> property;
     @XmlAttribute(name = "timestamp", required = true)
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar timestamp;
@@ -110,16 +110,16 @@ public class HotelInfoFeed {
      * Objects of the following type(s) are allowed in the list
      * {@link HotelInfoFeed.Property }
      */
-    public List<Property> getProperty() {
+    public List<HotelInfoFeed.Property> getProperty() {
         if (property == null) {
-            property = new ArrayList<Property>();
+            property = new ArrayList<HotelInfoFeed.Property>();
         }
         return this.property;
     }
 
     public void addProperty(HotelInfoFeed.Property property1) {
         if (property == null) {
-            property = new ArrayList<Property>();
+            property = new ArrayList<HotelInfoFeed.Property>();
         }
         if (property1 != null) property.add(property1);
     }

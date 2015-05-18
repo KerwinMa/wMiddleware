@@ -1,10 +1,10 @@
 package com.witbooking.middleware.integration.booking.model.response;
 
+import java.io.Serializable;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
-import java.io.Serializable;
 
 /**
  * Warnings can be combined with success messages if the request was still processed.

@@ -8,7 +8,12 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
@@ -68,11 +73,11 @@ public class FlightSegmentType
 
     /**
      * Gets the value of the marketingAirline property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link FlightSegmentType.MarketingAirline }
-     *
+     *     
      */
     public FlightSegmentType.MarketingAirline getMarketingAirline() {
         return marketingAirline;
@@ -80,11 +85,11 @@ public class FlightSegmentType
 
     /**
      * Sets the value of the marketingAirline property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link FlightSegmentType.MarketingAirline }
-     *
+     *     
      */
     public void setMarketingAirline(FlightSegmentType.MarketingAirline value) {
         this.marketingAirline = value;

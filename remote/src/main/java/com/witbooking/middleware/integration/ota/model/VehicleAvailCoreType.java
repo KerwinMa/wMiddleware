@@ -8,14 +8,19 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import javax.xml.datatype.XMLGregorianCalendar;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
@@ -151,7 +156,7 @@ public class VehicleAvailCoreType {
     @XmlElement(name = "RentalRate")
     protected List<VehicleRentalRateType> rentalRate;
     @XmlElement(name = "TotalCharge")
-    protected List<TotalCharge> totalCharge;
+    protected List<VehicleAvailCoreType.TotalCharge> totalCharge;
     @XmlElement(name = "PricedEquips")
     protected VehicleAvailCoreType.PricedEquips pricedEquips;
     @XmlElement(name = "Fees")
@@ -165,7 +170,7 @@ public class VehicleAvailCoreType {
     @XmlElement(name = "DropOffLocation")
     protected VehicleAvailCoreType.DropOffLocation dropOffLocation;
     @XmlElement(name = "Discount")
-    protected List<Discount> discount;
+    protected List<VehicleAvailCoreType.Discount> discount;
     @XmlElement(name = "TPA_Extensions")
     protected TPAExtensionsType tpaExtensions;
     @XmlAttribute(name = "Status", required = true)
@@ -175,11 +180,11 @@ public class VehicleAvailCoreType {
 
     /**
      * Gets the value of the vehicle property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleType }
-     *
+     *     
      */
     public VehicleType getVehicle() {
         return vehicle;
@@ -187,11 +192,11 @@ public class VehicleAvailCoreType {
 
     /**
      * Sets the value of the vehicle property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleType }
-     *
+     *     
      */
     public void setVehicle(VehicleType value) {
         this.vehicle = value;
@@ -199,25 +204,25 @@ public class VehicleAvailCoreType {
 
     /**
      * Gets the value of the rentalRate property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the rentalRate property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getRentalRate().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link VehicleRentalRateType }
-     *
-     *
+     * 
+     * 
      */
     public List<VehicleRentalRateType> getRentalRate() {
         if (rentalRate == null) {
@@ -228,40 +233,40 @@ public class VehicleAvailCoreType {
 
     /**
      * Gets the value of the totalCharge property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the totalCharge property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getTotalCharge().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link VehicleAvailCoreType.TotalCharge }
-     *
-     *
+     * 
+     * 
      */
-    public List<TotalCharge> getTotalCharge() {
+    public List<VehicleAvailCoreType.TotalCharge> getTotalCharge() {
         if (totalCharge == null) {
-            totalCharge = new ArrayList<TotalCharge>();
+            totalCharge = new ArrayList<VehicleAvailCoreType.TotalCharge>();
         }
         return this.totalCharge;
     }
 
     /**
      * Gets the value of the pricedEquips property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleAvailCoreType.PricedEquips }
-     *
+     *     
      */
     public VehicleAvailCoreType.PricedEquips getPricedEquips() {
         return pricedEquips;
@@ -269,11 +274,11 @@ public class VehicleAvailCoreType {
 
     /**
      * Sets the value of the pricedEquips property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleAvailCoreType.PricedEquips }
-     *
+     *     
      */
     public void setPricedEquips(VehicleAvailCoreType.PricedEquips value) {
         this.pricedEquips = value;
@@ -281,11 +286,11 @@ public class VehicleAvailCoreType {
 
     /**
      * Gets the value of the fees property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleAvailCoreType.Fees }
-     *
+     *     
      */
     public VehicleAvailCoreType.Fees getFees() {
         return fees;
@@ -293,11 +298,11 @@ public class VehicleAvailCoreType {
 
     /**
      * Sets the value of the fees property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleAvailCoreType.Fees }
-     *
+     *     
      */
     public void setFees(VehicleAvailCoreType.Fees value) {
         this.fees = value;
@@ -305,11 +310,11 @@ public class VehicleAvailCoreType {
 
     /**
      * Gets the value of the reference property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleAvailCoreType.Reference }
-     *
+     *     
      */
     public VehicleAvailCoreType.Reference getReference() {
         return reference;
@@ -317,11 +322,11 @@ public class VehicleAvailCoreType {
 
     /**
      * Sets the value of the reference property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleAvailCoreType.Reference }
-     *
+     *     
      */
     public void setReference(VehicleAvailCoreType.Reference value) {
         this.reference = value;
@@ -329,11 +334,11 @@ public class VehicleAvailCoreType {
 
     /**
      * Gets the value of the vendor property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleAvailCoreType.Vendor }
-     *
+     *     
      */
     public VehicleAvailCoreType.Vendor getVendor() {
         return vendor;
@@ -341,11 +346,11 @@ public class VehicleAvailCoreType {
 
     /**
      * Sets the value of the vendor property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleAvailCoreType.Vendor }
-     *
+     *     
      */
     public void setVendor(VehicleAvailCoreType.Vendor value) {
         this.vendor = value;
@@ -353,11 +358,11 @@ public class VehicleAvailCoreType {
 
     /**
      * Gets the value of the vendorLocation property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleAvailCoreType.VendorLocation }
-     *
+     *     
      */
     public VehicleAvailCoreType.VendorLocation getVendorLocation() {
         return vendorLocation;
@@ -365,11 +370,11 @@ public class VehicleAvailCoreType {
 
     /**
      * Sets the value of the vendorLocation property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleAvailCoreType.VendorLocation }
-     *
+     *     
      */
     public void setVendorLocation(VehicleAvailCoreType.VendorLocation value) {
         this.vendorLocation = value;
@@ -377,11 +382,11 @@ public class VehicleAvailCoreType {
 
     /**
      * Gets the value of the dropOffLocation property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleAvailCoreType.DropOffLocation }
-     *
+     *     
      */
     public VehicleAvailCoreType.DropOffLocation getDropOffLocation() {
         return dropOffLocation;
@@ -389,11 +394,11 @@ public class VehicleAvailCoreType {
 
     /**
      * Sets the value of the dropOffLocation property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleAvailCoreType.DropOffLocation }
-     *
+     *     
      */
     public void setDropOffLocation(VehicleAvailCoreType.DropOffLocation value) {
         this.dropOffLocation = value;
@@ -401,29 +406,29 @@ public class VehicleAvailCoreType {
 
     /**
      * Gets the value of the discount property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the discount property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getDiscount().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link VehicleAvailCoreType.Discount }
-     *
-     *
+     * 
+     * 
      */
-    public List<Discount> getDiscount() {
+    public List<VehicleAvailCoreType.Discount> getDiscount() {
         if (discount == null) {
-            discount = new ArrayList<Discount>();
+            discount = new ArrayList<VehicleAvailCoreType.Discount>();
         }
         return this.discount;
     }

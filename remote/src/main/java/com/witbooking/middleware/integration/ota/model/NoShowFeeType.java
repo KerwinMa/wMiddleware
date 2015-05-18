@@ -8,11 +8,16 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -84,11 +89,11 @@ public class NoShowFeeType {
 
     /**
      * Gets the value of the deadline property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link NoShowFeeType.Deadline }
-     *
+     *     
      */
     public NoShowFeeType.Deadline getDeadline() {
         return deadline;
@@ -96,11 +101,11 @@ public class NoShowFeeType {
 
     /**
      * Sets the value of the deadline property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link NoShowFeeType.Deadline }
-     *
+     *     
      */
     public void setDeadline(NoShowFeeType.Deadline value) {
         this.deadline = value;
@@ -108,11 +113,11 @@ public class NoShowFeeType {
 
     /**
      * Gets the value of the gracePeriod property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link NoShowFeeType.GracePeriod }
-     *
+     *     
      */
     public NoShowFeeType.GracePeriod getGracePeriod() {
         return gracePeriod;
@@ -120,11 +125,11 @@ public class NoShowFeeType {
 
     /**
      * Sets the value of the gracePeriod property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link NoShowFeeType.GracePeriod }
-     *
+     *     
      */
     public void setGracePeriod(NoShowFeeType.GracePeriod value) {
         this.gracePeriod = value;
@@ -132,11 +137,11 @@ public class NoShowFeeType {
 
     /**
      * Gets the value of the feeAmount property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link NoShowFeeType.FeeAmount }
-     *
+     *     
      */
     public NoShowFeeType.FeeAmount getFeeAmount() {
         return feeAmount;
@@ -144,11 +149,11 @@ public class NoShowFeeType {
 
     /**
      * Sets the value of the feeAmount property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link NoShowFeeType.FeeAmount }
-     *
+     *     
      */
     public void setFeeAmount(NoShowFeeType.FeeAmount value) {
         this.feeAmount = value;

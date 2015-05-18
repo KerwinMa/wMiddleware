@@ -8,12 +8,17 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.datatype.XMLGregorianCalendar;
-import java.util.ArrayList;
-import java.util.List;
 
 
 /**
@@ -127,33 +132,33 @@ import java.util.List;
 public class RequiredPaymentsType {
 
     @XmlElement(name = "GuaranteePayment", required = true)
-    protected List<GuaranteePayment> guaranteePayment;
+    protected List<RequiredPaymentsType.GuaranteePayment> guaranteePayment;
 
     /**
      * Gets the value of the guaranteePayment property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the guaranteePayment property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getGuaranteePayment().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link RequiredPaymentsType.GuaranteePayment }
-     *
-     *
+     * 
+     * 
      */
-    public List<GuaranteePayment> getGuaranteePayment() {
+    public List<RequiredPaymentsType.GuaranteePayment> getGuaranteePayment() {
         if (guaranteePayment == null) {
-            guaranteePayment = new ArrayList<GuaranteePayment>();
+            guaranteePayment = new ArrayList<RequiredPaymentsType.GuaranteePayment>();
         }
         return this.guaranteePayment;
     }
@@ -161,9 +166,9 @@ public class RequiredPaymentsType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -250,8 +255,8 @@ public class RequiredPaymentsType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -269,11 +274,11 @@ public class RequiredPaymentsType {
         @XmlElement(name = "AmountPercent")
         protected RequiredPaymentsType.GuaranteePayment.AmountPercent amountPercent;
         @XmlElement(name = "Deadline")
-        protected List<Deadline> deadline;
+        protected List<RequiredPaymentsType.GuaranteePayment.Deadline> deadline;
         @XmlElement(name = "Description")
         protected List<ParagraphType> description;
         @XmlElement(name = "Address")
-        protected List<Address> address;
+        protected List<RequiredPaymentsType.GuaranteePayment.Address> address;
         @XmlElement(name = "TPA_Extensions")
         protected TPAExtensionsType tpaExtensions;
         @XmlAttribute(name = "RetributionType")
@@ -334,11 +339,11 @@ public class RequiredPaymentsType {
 
         /**
          * Gets the value of the acceptedPayments property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link AcceptedPaymentsType }
-         *
+         *     
          */
         public AcceptedPaymentsType getAcceptedPayments() {
             return acceptedPayments;
@@ -346,11 +351,11 @@ public class RequiredPaymentsType {
 
         /**
          * Sets the value of the acceptedPayments property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link AcceptedPaymentsType }
-         *
+         *     
          */
         public void setAcceptedPayments(AcceptedPaymentsType value) {
             this.acceptedPayments = value;
@@ -358,11 +363,11 @@ public class RequiredPaymentsType {
 
         /**
          * Gets the value of the amountPercent property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link RequiredPaymentsType.GuaranteePayment.AmountPercent }
-         *
+         *     
          */
         public RequiredPaymentsType.GuaranteePayment.AmountPercent getAmountPercent() {
             return amountPercent;
@@ -370,11 +375,11 @@ public class RequiredPaymentsType {
 
         /**
          * Sets the value of the amountPercent property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link RequiredPaymentsType.GuaranteePayment.AmountPercent }
-         *
+         *     
          */
         public void setAmountPercent(RequiredPaymentsType.GuaranteePayment.AmountPercent value) {
             this.amountPercent = value;
@@ -382,54 +387,54 @@ public class RequiredPaymentsType {
 
         /**
          * Gets the value of the deadline property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the deadline property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getDeadline().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link RequiredPaymentsType.GuaranteePayment.Deadline }
-         *
-         *
+         * 
+         * 
          */
-        public List<Deadline> getDeadline() {
+        public List<RequiredPaymentsType.GuaranteePayment.Deadline> getDeadline() {
             if (deadline == null) {
-                deadline = new ArrayList<Deadline>();
+                deadline = new ArrayList<RequiredPaymentsType.GuaranteePayment.Deadline>();
             }
             return this.deadline;
         }
 
         /**
          * Gets the value of the description property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the description property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getDescription().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link ParagraphType }
-         *
-         *
+         * 
+         * 
          */
         public List<ParagraphType> getDescription() {
             if (description == null) {
@@ -440,29 +445,29 @@ public class RequiredPaymentsType {
 
         /**
          * Gets the value of the address property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the address property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getAddress().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link RequiredPaymentsType.GuaranteePayment.Address }
-         *
-         *
+         * 
+         * 
          */
-        public List<Address> getAddress() {
+        public List<RequiredPaymentsType.GuaranteePayment.Address> getAddress() {
             if (address == null) {
-                address = new ArrayList<Address>();
+                address = new ArrayList<RequiredPaymentsType.GuaranteePayment.Address>();
             }
             return this.address;
         }

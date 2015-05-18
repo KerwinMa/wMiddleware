@@ -3,12 +3,16 @@ package com.witbooking.middleware.integration.booking.model.request.OTA_HotelRat
 import com.witbooking.middleware.exceptions.integration.booking.BookingException;
 import com.witbooking.middleware.integration.booking.model.request.OTA_HotelAvailNotif.AvailStatusMessage;
 import com.witbooking.middleware.integration.booking.model.request.StatusApplicationControl;
-
-import javax.xml.bind.annotation.*;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * RateAmountMessage represents the price change message sent to Booking.
@@ -55,8 +59,8 @@ public class RateAmountMessage implements Serializable {
      * @param ratePlanTicker Booking Rate Plan ticker to set.
      * @throws BookingException occurs when something is wrong with the day
      * range checked by 
-     * {@link AvailStatusMessage#checkDates(Date, Date) }.
-     * @see AvailStatusMessage#checkDates(Date, Date)
+     * {@link AvailStatusMessage#checkDates(java.util.Date, java.util.Date) }.
+     * @see AvailStatusMessage#checkDates(java.util.Date, java.util.Date)
      */
     public RateAmountMessage(String roomTicker, Date start, Date end, String ratePlanTicker) throws BookingException {
         AvailStatusMessage.checkDates(start, end);
@@ -79,10 +83,10 @@ public class RateAmountMessage implements Serializable {
         }
         rates.add(prices);
     }
-
+    
     /**
      * Adds price to {@link #rates} list.
-     * @param price
+     * @param price 
      */
     public void addRate(BaseByGuestAmt price) {
         if (rates == null) {
@@ -90,7 +94,7 @@ public class RateAmountMessage implements Serializable {
         }
         rates.add(price);
     }
-
+    
     /**
      * Rates class is a container class who have the {@link BaseByGuestAmts} object.
      */
@@ -107,20 +111,20 @@ public class RateAmountMessage implements Serializable {
         public Rates() {
             rates = new BaseByGuestAmts();
         }
-
+        
         /**
          * Adds all elements to {@link #rates}.
-         *
+         * 
          * @param items{@link BaseByGuestAmt} elements to add.
-         * @return {@link BaseByGuestAmts#add(List)}
-         * @see BaseByGuestAmts#add(List)
+         * @return {@link BaseByGuestAmts#add(java.util.List)}
+         * @see BaseByGuestAmts#add(java.util.List) 
          */
         public boolean add(List<BaseByGuestAmt> items) {
             return rates.add(items);
         }
         /**
          * Adds an {@link BaseByGuestAmt} element to {@link #rates}.
-         *
+         * 
          * @param items {@link BaseByGuestAmt} element to add.
          * @return {@link BaseByGuestAmts#add(com.witbooking.middleware.integration.booking.model.request.OTA_HotelRateAmountNotif.BaseByGuestAmt) }
          * @see BaseByGuestAmts#add(com.witbooking.middleware.integration.booking.model.request.OTA_HotelRateAmountNotif.BaseByGuestAmt)
@@ -129,7 +133,7 @@ public class RateAmountMessage implements Serializable {
             return rates.add(items);
         }
     }
-
+    
     /**
      * BaseByGuestAmts class is a container class who have the {@link BaseByGuestAmt} list.
      */
@@ -145,20 +149,20 @@ public class RateAmountMessage implements Serializable {
         }
         /**
          * Adds all elements to {@link #rates}.
-         *
+         * 
          * @param items {@link BaseByGuestAmt} elements to add.
          * @return {@link List#addAll(java.util.Collection)}
-         * @see List#addAll(java.util.Collection)
+         * @see List#addAll(java.util.Collection) 
          */
         public boolean add(List<BaseByGuestAmt> items) {
             return rates.addAll(items);
         }
         /**
          * Adds an {@link BaseByGuestAmt} element to {@link #rates}.
-         *
+         * 
          * @param items {@link BaseByGuestAmt} element to add.
-         * @return {@link List#add(Object) }
-         * @see List#add(Object)
+         * @return {@link List#add(java.lang.Object) }
+         * @see List#add(java.lang.Object) 
          */
         public boolean add(BaseByGuestAmt items) {
             return rates.add(items);

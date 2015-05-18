@@ -3,12 +3,16 @@ package com.witbooking.middleware.integration.booking.model.request.OTA_HotelRat
 import com.witbooking.middleware.exceptions.integration.booking.BookingException;
 import com.witbooking.middleware.integration.booking.model.Constants;
 import com.witbooking.middleware.integration.booking.model.request.OTA_HotelAvailNotif.AvailStatusMessage;
-
-import javax.xml.bind.annotation.*;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * OTA_HotelRateAmountNotifRQ class represents the object to set the rate amount
@@ -66,7 +70,7 @@ public class OTA_HotelRateAmountNotifRQ implements Serializable {
 
     /**
      * Adds new messages prices
-     * {@link RateAmountMessage#RateAmountMessage(String, Date, Date, String)}
+     * {@link RateAmountMessage#RateAmountMessage(java.lang.String, java.util.Date, java.util.Date, java.lang.String)}
      * for the rate plan/room stay/day range and prices given.
      *
      * @param roomTicker Booking room stay ticker to set.
@@ -75,10 +79,10 @@ public class OTA_HotelRateAmountNotifRQ implements Serializable {
      * @param end End day of day range.
      * @param prices Prices list to set.
      * @throws BookingException occurs when the day range given is wrong
-     * {@link AvailStatusMessage#checkDates(Date, Date)}
-     * @see AvailStatusMessage#checkDates(Date, Date)
-     * @see RateAmountMessage#RateAmountMessage(String, Date, Date, String)
-     * @see #addToList(com.witbooking.middleware.integration.booking.model.request.OTA_HotelRateAmountNotif.RateAmountMessage)
+     * {@link AvailStatusMessage#checkDates(java.util.Date, java.util.Date)}
+     * @see AvailStatusMessage#checkDates(java.util.Date, java.util.Date)
+     * @see RateAmountMessage#RateAmountMessage(java.lang.String, java.util.Date, java.util.Date, java.lang.String) 
+     * @see #addToList(com.witbooking.middleware.integration.booking.model.request.OTA_HotelRateAmountNotif.RateAmountMessage) 
      */
     public void addRate(String roomTicker, String ratePlan, Date start, Date end, List<BaseByGuestAmt> prices) throws BookingException {
         RateAmountMessage item = new RateAmountMessage(roomTicker, start, end, ratePlan);
@@ -88,7 +92,7 @@ public class OTA_HotelRateAmountNotifRQ implements Serializable {
 
         /**
      * Adds new message price
-     * {@link RateAmountMessage#RateAmountMessage(String, Date, Date, String)}
+     * {@link RateAmountMessage#RateAmountMessage(java.lang.String, java.util.Date, java.util.Date, java.lang.String)}
      * for the rate plan/room stay/day range and prices given.
      *
      * @param roomTicker Booking room stay ticker to set.
@@ -97,10 +101,10 @@ public class OTA_HotelRateAmountNotifRQ implements Serializable {
      * @param end End day of day range.
      * @param prices Prices list to set.
      * @throws BookingException occurs when the day range given is wrong
-     * {@link AvailStatusMessage#checkDates(Date, Date)}
-     * @see AvailStatusMessage#checkDates(Date, Date)
-     * @see RateAmountMessage#RateAmountMessage(String, Date, Date, String)
-     * @see #addToList(com.witbooking.middleware.integration.booking.model.request.OTA_HotelRateAmountNotif.RateAmountMessage)
+     * {@link AvailStatusMessage#checkDates(java.util.Date, java.util.Date)}
+     * @see AvailStatusMessage#checkDates(java.util.Date, java.util.Date)
+     * @see RateAmountMessage#RateAmountMessage(java.lang.String, java.util.Date, java.util.Date, java.lang.String) 
+     * @see #addToList(com.witbooking.middleware.integration.booking.model.request.OTA_HotelRateAmountNotif.RateAmountMessage) 
      */
     public void addRate(String roomTicker, String ratePlan, Date start, Date end, BaseByGuestAmt prices) throws BookingException {
         RateAmountMessage item = new RateAmountMessage(roomTicker, start, end, ratePlan);
@@ -118,5 +122,9 @@ public class OTA_HotelRateAmountNotifRQ implements Serializable {
         }
         item.setId(messages.size() + 1);
         messages.add(item);
+    }
+
+    public boolean isEmpty(){
+        return messages == null || messages.isEmpty();
     }
 }

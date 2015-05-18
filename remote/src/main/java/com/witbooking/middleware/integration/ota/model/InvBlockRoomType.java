@@ -8,10 +8,15 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -137,7 +142,7 @@ import java.util.List;
 public class InvBlockRoomType {
 
     @XmlElement(name = "RoomTypeAllocations")
-    protected List<RoomTypeAllocations> roomTypeAllocations;
+    protected List<InvBlockRoomType.RoomTypeAllocations> roomTypeAllocations;
     @XmlElement(name = "RatePlans")
     protected InvBlockRoomType.RatePlans ratePlans;
     @XmlElement(name = "DaysOfWeeks")
@@ -153,40 +158,40 @@ public class InvBlockRoomType {
 
     /**
      * Gets the value of the roomTypeAllocations property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the roomTypeAllocations property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getRoomTypeAllocations().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link InvBlockRoomType.RoomTypeAllocations }
-     *
-     *
+     * 
+     * 
      */
-    public List<RoomTypeAllocations> getRoomTypeAllocations() {
+    public List<InvBlockRoomType.RoomTypeAllocations> getRoomTypeAllocations() {
         if (roomTypeAllocations == null) {
-            roomTypeAllocations = new ArrayList<RoomTypeAllocations>();
+            roomTypeAllocations = new ArrayList<InvBlockRoomType.RoomTypeAllocations>();
         }
         return this.roomTypeAllocations;
     }
 
     /**
      * Gets the value of the ratePlans property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link InvBlockRoomType.RatePlans }
-     *
+     *     
      */
     public InvBlockRoomType.RatePlans getRatePlans() {
         return ratePlans;
@@ -194,11 +199,11 @@ public class InvBlockRoomType {
 
     /**
      * Sets the value of the ratePlans property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link InvBlockRoomType.RatePlans }
-     *
+     *     
      */
     public void setRatePlans(InvBlockRoomType.RatePlans value) {
         this.ratePlans = value;
@@ -206,11 +211,11 @@ public class InvBlockRoomType {
 
     /**
      * Gets the value of the daysOfWeeks property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link InvBlockRoomType.DaysOfWeeks }
-     *
+     *     
      */
     public InvBlockRoomType.DaysOfWeeks getDaysOfWeeks() {
         return daysOfWeeks;
@@ -218,11 +223,11 @@ public class InvBlockRoomType {
 
     /**
      * Sets the value of the daysOfWeeks property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link InvBlockRoomType.DaysOfWeeks }
-     *
+     *     
      */
     public void setDaysOfWeeks(InvBlockRoomType.DaysOfWeeks value) {
         this.daysOfWeeks = value;
@@ -230,11 +235,11 @@ public class InvBlockRoomType {
 
     /**
      * Gets the value of the roomTypeCode property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getRoomTypeCode() {
         return roomTypeCode;
@@ -242,11 +247,11 @@ public class InvBlockRoomType {
 
     /**
      * Sets the value of the roomTypeCode property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setRoomTypeCode(String value) {
         this.roomTypeCode = value;
@@ -254,11 +259,11 @@ public class InvBlockRoomType {
 
     /**
      * Gets the value of the start property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getStart() {
         return start;
@@ -266,11 +271,11 @@ public class InvBlockRoomType {
 
     /**
      * Sets the value of the start property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setStart(String value) {
         this.start = value;
@@ -278,11 +283,11 @@ public class InvBlockRoomType {
 
     /**
      * Gets the value of the duration property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getDuration() {
         return duration;
@@ -290,11 +295,11 @@ public class InvBlockRoomType {
 
     /**
      * Sets the value of the duration property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setDuration(String value) {
         this.duration = value;
@@ -302,11 +307,11 @@ public class InvBlockRoomType {
 
     /**
      * Gets the value of the end property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getEnd() {
         return end;
@@ -314,11 +319,11 @@ public class InvBlockRoomType {
 
     /**
      * Sets the value of the end property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setEnd(String value) {
         this.end = value;
@@ -327,9 +332,9 @@ public class InvBlockRoomType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -341,8 +346,8 @@ public class InvBlockRoomType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -355,25 +360,25 @@ public class InvBlockRoomType {
 
         /**
          * Gets the value of the daysOfWeek property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the daysOfWeek property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getDaysOfWeek().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link DOWRulesType }
-         *
-         *
+         * 
+         * 
          */
         public List<DOWRulesType> getDaysOfWeek() {
             if (daysOfWeek == null) {
@@ -387,9 +392,9 @@ public class InvBlockRoomType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -446,8 +451,8 @@ public class InvBlockRoomType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -456,33 +461,33 @@ public class InvBlockRoomType {
     public static class RatePlans {
 
         @XmlElement(name = "RatePlan", required = true)
-        protected List<RatePlan> ratePlan;
+        protected List<InvBlockRoomType.RatePlans.RatePlan> ratePlan;
 
         /**
          * Gets the value of the ratePlan property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the ratePlan property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getRatePlan().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link InvBlockRoomType.RatePlans.RatePlan }
-         *
-         *
+         * 
+         * 
          */
-        public List<RatePlan> getRatePlan() {
+        public List<InvBlockRoomType.RatePlans.RatePlan> getRatePlan() {
             if (ratePlan == null) {
-                ratePlan = new ArrayList<RatePlan>();
+                ratePlan = new ArrayList<InvBlockRoomType.RatePlans.RatePlan>();
             }
             return this.ratePlan;
         }
@@ -490,9 +495,9 @@ public class InvBlockRoomType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -539,8 +544,8 @@ public class InvBlockRoomType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
@@ -554,11 +559,11 @@ public class InvBlockRoomType {
         {
 
             @XmlElement(name = "MarketCode")
-            protected List<MarketCode> marketCode;
+            protected List<InvBlockRoomType.RatePlans.RatePlan.MarketCode> marketCode;
             @XmlElement(name = "Commission")
             protected CommissionType commission;
             @XmlElement(name = "MethodInfo")
-            protected List<MethodInfo> methodInfo;
+            protected List<InvBlockRoomType.RatePlans.RatePlan.MethodInfo> methodInfo;
             @XmlElement(name = "DaysOfWeeks")
             protected InvBlockRoomType.RatePlans.RatePlan.DaysOfWeeks daysOfWeeks;
             @XmlAttribute(name = "RatePlanCode")
@@ -574,40 +579,40 @@ public class InvBlockRoomType {
 
             /**
              * Gets the value of the marketCode property.
-             *
+             * 
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the marketCode property.
-             *
+             * 
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getMarketCode().add(newItem);
              * </pre>
-             *
-             *
+             * 
+             * 
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link InvBlockRoomType.RatePlans.RatePlan.MarketCode }
-             *
-             *
+             * 
+             * 
              */
-            public List<MarketCode> getMarketCode() {
+            public List<InvBlockRoomType.RatePlans.RatePlan.MarketCode> getMarketCode() {
                 if (marketCode == null) {
-                    marketCode = new ArrayList<MarketCode>();
+                    marketCode = new ArrayList<InvBlockRoomType.RatePlans.RatePlan.MarketCode>();
                 }
                 return this.marketCode;
             }
 
             /**
              * Gets the value of the commission property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link CommissionType }
-             *
+             *     
              */
             public CommissionType getCommission() {
                 return commission;
@@ -615,11 +620,11 @@ public class InvBlockRoomType {
 
             /**
              * Sets the value of the commission property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link CommissionType }
-             *
+             *     
              */
             public void setCommission(CommissionType value) {
                 this.commission = value;
@@ -627,40 +632,40 @@ public class InvBlockRoomType {
 
             /**
              * Gets the value of the methodInfo property.
-             *
+             * 
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the methodInfo property.
-             *
+             * 
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getMethodInfo().add(newItem);
              * </pre>
-             *
-             *
+             * 
+             * 
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link InvBlockRoomType.RatePlans.RatePlan.MethodInfo }
-             *
-             *
+             * 
+             * 
              */
-            public List<MethodInfo> getMethodInfo() {
+            public List<InvBlockRoomType.RatePlans.RatePlan.MethodInfo> getMethodInfo() {
                 if (methodInfo == null) {
-                    methodInfo = new ArrayList<MethodInfo>();
+                    methodInfo = new ArrayList<InvBlockRoomType.RatePlans.RatePlan.MethodInfo>();
                 }
                 return this.methodInfo;
             }
 
             /**
              * Gets the value of the daysOfWeeks property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link InvBlockRoomType.RatePlans.RatePlan.DaysOfWeeks }
-             *
+             *     
              */
             public InvBlockRoomType.RatePlans.RatePlan.DaysOfWeeks getDaysOfWeeks() {
                 return daysOfWeeks;
@@ -668,11 +673,11 @@ public class InvBlockRoomType {
 
             /**
              * Sets the value of the daysOfWeeks property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link InvBlockRoomType.RatePlans.RatePlan.DaysOfWeeks }
-             *
+             *     
              */
             public void setDaysOfWeeks(InvBlockRoomType.RatePlans.RatePlan.DaysOfWeeks value) {
                 this.daysOfWeeks = value;
@@ -680,11 +685,11 @@ public class InvBlockRoomType {
 
             /**
              * Gets the value of the ratePlanCode property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getRatePlanCode() {
                 return ratePlanCode;
@@ -692,11 +697,11 @@ public class InvBlockRoomType {
 
             /**
              * Sets the value of the ratePlanCode property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setRatePlanCode(String value) {
                 this.ratePlanCode = value;
@@ -704,11 +709,11 @@ public class InvBlockRoomType {
 
             /**
              * Gets the value of the bookingCode property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getBookingCode() {
                 return bookingCode;
@@ -716,11 +721,11 @@ public class InvBlockRoomType {
 
             /**
              * Sets the value of the bookingCode property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setBookingCode(String value) {
                 this.bookingCode = value;
@@ -728,11 +733,11 @@ public class InvBlockRoomType {
 
             /**
              * Gets the value of the upgradeIndicator property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link Boolean }
-             *
+             *     
              */
             public Boolean isUpgradeIndicator() {
                 return upgradeIndicator;
@@ -740,11 +745,11 @@ public class InvBlockRoomType {
 
             /**
              * Sets the value of the upgradeIndicator property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link Boolean }
-             *
+             *     
              */
             public void setUpgradeIndicator(Boolean value) {
                 this.upgradeIndicator = value;
@@ -752,11 +757,11 @@ public class InvBlockRoomType {
 
             /**
              * Gets the value of the promotionCode property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getPromotionCode() {
                 return promotionCode;
@@ -764,11 +769,11 @@ public class InvBlockRoomType {
 
             /**
              * Sets the value of the promotionCode property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setPromotionCode(String value) {
                 this.promotionCode = value;
@@ -776,25 +781,25 @@ public class InvBlockRoomType {
 
             /**
              * Gets the value of the promotionVendorCode property.
-             *
+             * 
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the promotionVendorCode property.
-             *
+             * 
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getPromotionVendorCode().add(newItem);
              * </pre>
-             *
-             *
+             * 
+             * 
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link String }
-             *
-             *
+             * 
+             * 
              */
             public List<String> getPromotionVendorCode() {
                 if (promotionVendorCode == null) {
@@ -806,9 +811,9 @@ public class InvBlockRoomType {
 
             /**
              * <p>Java class for anonymous complex type.
-             *
+             * 
              * <p>The following schema fragment specifies the expected content contained within this class.
-             *
+             * 
              * <pre>
              * &lt;complexType>
              *   &lt;complexContent>
@@ -820,8 +825,8 @@ public class InvBlockRoomType {
              *   &lt;/complexContent>
              * &lt;/complexType>
              * </pre>
-             *
-             *
+             * 
+             * 
              */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "", propOrder = {
@@ -834,25 +839,25 @@ public class InvBlockRoomType {
 
                 /**
                  * Gets the value of the daysOfWeek property.
-                 *
+                 * 
                  * <p>
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
                  * This is why there is not a <CODE>set</CODE> method for the daysOfWeek property.
-                 *
+                 * 
                  * <p>
                  * For example, to add a new item, do as follows:
                  * <pre>
                  *    getDaysOfWeek().add(newItem);
                  * </pre>
-                 *
-                 *
+                 * 
+                 * 
                  * <p>
                  * Objects of the following type(s) are allowed in the list
                  * {@link DOWRulesType }
-                 *
-                 *
+                 * 
+                 * 
                  */
                 public List<DOWRulesType> getDaysOfWeek() {
                     if (daysOfWeek == null) {
@@ -866,9 +871,9 @@ public class InvBlockRoomType {
 
             /**
              * <p>Java class for anonymous complex type.
-             *
+             * 
              * <p>The following schema fragment specifies the expected content contained within this class.
-             *
+             * 
              * <pre>
              * &lt;complexType>
              *   &lt;complexContent>
@@ -880,8 +885,8 @@ public class InvBlockRoomType {
              *   &lt;/complexContent>
              * &lt;/complexType>
              * </pre>
-             *
-             *
+             * 
+             * 
              */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "")
@@ -896,11 +901,11 @@ public class InvBlockRoomType {
 
                 /**
                  * Gets the value of the marketCode property.
-                 *
+                 * 
                  * @return
                  *     possible object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public String getMarketCode() {
                     return marketCode;
@@ -908,11 +913,11 @@ public class InvBlockRoomType {
 
                 /**
                  * Sets the value of the marketCode property.
-                 *
+                 * 
                  * @param value
                  *     allowed object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public void setMarketCode(String value) {
                     this.marketCode = value;
@@ -920,11 +925,11 @@ public class InvBlockRoomType {
 
                 /**
                  * Gets the value of the marketCodeName property.
-                 *
+                 * 
                  * @return
                  *     possible object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public String getMarketCodeName() {
                     return marketCodeName;
@@ -932,11 +937,11 @@ public class InvBlockRoomType {
 
                 /**
                  * Sets the value of the marketCodeName property.
-                 *
+                 * 
                  * @param value
                  *     allowed object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public void setMarketCodeName(String value) {
                     this.marketCodeName = value;
@@ -944,11 +949,11 @@ public class InvBlockRoomType {
 
                 /**
                  * Gets the value of the commissionableIndicator property.
-                 *
+                 * 
                  * @return
                  *     possible object is
                  *     {@link Boolean }
-                 *
+                 *     
                  */
                 public Boolean isCommissionableIndicator() {
                     return commissionableIndicator;
@@ -956,11 +961,11 @@ public class InvBlockRoomType {
 
                 /**
                  * Sets the value of the commissionableIndicator property.
-                 *
+                 * 
                  * @param value
                  *     allowed object is
                  *     {@link Boolean }
-                 *
+                 *     
                  */
                 public void setCommissionableIndicator(Boolean value) {
                     this.commissionableIndicator = value;
@@ -971,9 +976,9 @@ public class InvBlockRoomType {
 
             /**
              * <p>Java class for anonymous complex type.
-             *
+             * 
              * <p>The following schema fragment specifies the expected content contained within this class.
-             *
+             * 
              * <pre>
              * &lt;complexType>
              *   &lt;complexContent>
@@ -983,8 +988,8 @@ public class InvBlockRoomType {
              *   &lt;/complexContent>
              * &lt;/complexType>
              * </pre>
-             *
-             *
+             * 
+             * 
              */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "")
@@ -999,11 +1004,11 @@ public class InvBlockRoomType {
 
                 /**
                  * Gets the value of the billingType property.
-                 *
+                 * 
                  * @return
                  *     possible object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public String getBillingType() {
                     return billingType;
@@ -1011,11 +1016,11 @@ public class InvBlockRoomType {
 
                 /**
                  * Sets the value of the billingType property.
-                 *
+                 * 
                  * @param value
                  *     allowed object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public void setBillingType(String value) {
                     this.billingType = value;
@@ -1023,11 +1028,11 @@ public class InvBlockRoomType {
 
                 /**
                  * Gets the value of the signFoodAndBev property.
-                 *
+                 * 
                  * @return
                  *     possible object is
                  *     {@link Boolean }
-                 *
+                 *     
                  */
                 public Boolean isSignFoodAndBev() {
                     return signFoodAndBev;
@@ -1035,11 +1040,11 @@ public class InvBlockRoomType {
 
                 /**
                  * Sets the value of the signFoodAndBev property.
-                 *
+                 * 
                  * @param value
                  *     allowed object is
                  *     {@link Boolean }
-                 *
+                 *     
                  */
                 public void setSignFoodAndBev(Boolean value) {
                     this.signFoodAndBev = value;
@@ -1047,11 +1052,11 @@ public class InvBlockRoomType {
 
                 /**
                  * Gets the value of the reservationMethodCode property.
-                 *
+                 * 
                  * @return
                  *     possible object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public String getReservationMethodCode() {
                     return reservationMethodCode;
@@ -1059,11 +1064,11 @@ public class InvBlockRoomType {
 
                 /**
                  * Sets the value of the reservationMethodCode property.
-                 *
+                 * 
                  * @param value
                  *     allowed object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public void setReservationMethodCode(String value) {
                     this.reservationMethodCode = value;
@@ -1078,9 +1083,9 @@ public class InvBlockRoomType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -1108,8 +1113,8 @@ public class InvBlockRoomType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -1118,35 +1123,35 @@ public class InvBlockRoomType {
     public static class RoomTypeAllocations {
 
         @XmlElement(name = "RoomTypeAllocation", required = true)
-        protected List<RoomTypeAllocation> roomTypeAllocation;
+        protected List<InvBlockRoomType.RoomTypeAllocations.RoomTypeAllocation> roomTypeAllocation;
         @XmlAttribute(name = "RoomTypePickUpStatus")
         protected String roomTypePickUpStatus;
 
         /**
          * Gets the value of the roomTypeAllocation property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the roomTypeAllocation property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getRoomTypeAllocation().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link InvBlockRoomType.RoomTypeAllocations.RoomTypeAllocation }
-         *
-         *
+         * 
+         * 
          */
-        public List<RoomTypeAllocation> getRoomTypeAllocation() {
+        public List<InvBlockRoomType.RoomTypeAllocations.RoomTypeAllocation> getRoomTypeAllocation() {
             if (roomTypeAllocation == null) {
-                roomTypeAllocation = new ArrayList<RoomTypeAllocation>();
+                roomTypeAllocation = new ArrayList<InvBlockRoomType.RoomTypeAllocations.RoomTypeAllocation>();
             }
             return this.roomTypeAllocation;
         }

@@ -8,12 +8,12 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
+import java.util.ArrayList;
+import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
-import java.util.ArrayList;
-import java.util.List;
 
 
 /**
@@ -53,44 +53,44 @@ import java.util.List;
 public class ProfilesType {
 
     @XmlElement(name = "ProfileInfo", required = true)
-    protected List<ProfileInfo> profileInfo;
+    protected List<ProfilesType.ProfileInfo> profileInfo;
 
     public ProfilesType() {
-        this.profileInfo = new ArrayList<ProfileInfo>();
+        this.profileInfo = new ArrayList<ProfilesType.ProfileInfo>();
     }
 
-    public ProfilesType(final List<String> givenName, final String surName,
+    public ProfilesType(final List<String> givenName, final String surName, 
             final String telephoneNumber,final String email,
             final String address,final String country,final String countryCode) {
-        this.profileInfo = new ArrayList<ProfileInfo>(1);
+        this.profileInfo = new ArrayList<ProfilesType.ProfileInfo>(1);
         this.profileInfo.add(new ProfileInfo(givenName, surName, telephoneNumber, email, address,country,countryCode));
     }
-
+    
     /**
      * Gets the value of the profileInfo property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the profileInfo property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getProfileInfo().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ProfilesType.ProfileInfo }
-     *
-     *
+     * 
+     * 
      */
-    public List<ProfileInfo> getProfileInfo() {
+    public List<ProfilesType.ProfileInfo> getProfileInfo() {
         if (profileInfo == null) {
-            profileInfo = new ArrayList<ProfileInfo>();
+            profileInfo = new ArrayList<ProfilesType.ProfileInfo>();
         }
         return this.profileInfo;
     }
@@ -135,7 +135,7 @@ public class ProfilesType {
         public ProfileInfo(final List<String> givenName, final String surName, 
             final String telephoneNumber,final String email,
             final String address,final String country,final String countryCode) {
-            this.profile = new ProfileType(givenName, surName, telephoneNumber,
+            this.profile = new ProfileType(givenName, surName, telephoneNumber, 
                     email, address,country,countryCode);
         }
         

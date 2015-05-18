@@ -2,11 +2,10 @@ package com.witbooking.middleware.model.dynamicPriceVariation;
 
 import org.apache.log4j.Logger;
 import org.joda.time.DateTime;
+import org.joda.time.DateTimeZone;
 
 import java.io.Serializable;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by mongoose on 9/29/14.
@@ -59,20 +58,35 @@ public class DatetimeRangeCondition  extends DatetimeCondition implements Serial
         if(!super.evaluate(arguments)){
             return false;
         }
-        super.validateArguments(arguments,REQUIRED_ARGUMENTS);
+        super.validateArguments(arguments, REQUIRED_ARGUMENTS);
+
+        //Getting the Timezone object from this condition Identifier
+        //Because of DST's and such I need to get the timezone everytime
+        //due to offsets not being fixed for a given timezone
+        DateTimeZone conditionTimezone=DateTimeZone.forID(getTimezone());
+
+        //The start date is saved with UTC timezone in mind, but the corresponding values for date time
+        //apply to the user selected timezone, so we must first restore this date to UTC and then
+        //switch it back to the users corresponding timezone, to finally restore it to an UTC common ground
+        DateTime conditionStart = null;
+        DateTime conditionEnd   = null;
 
         DateTime comparisonDateTimeUTC=null;
         try {
             if(isType(ConditionType.CONTRACT)){
                 comparisonDateTimeUTC = ((DateTime) arguments.get(ARGUMENT_CURRENT_TIME));
+                conditionStart = getStart().withZone(DateTimeZone.UTC).withZoneRetainFields(conditionTimezone).withZone(DateTimeZone.UTC);
+                conditionEnd   = getEnd().withZone(DateTimeZone.UTC).withZoneRetainFields(conditionTimezone).withZone(DateTimeZone.UTC);
             }else if  (isType(ConditionType.STAY)){
                 comparisonDateTimeUTC = ((DateTime) arguments.get(ARGUMENT_COMPARISON_DATE));
+                conditionStart = getStart().withZone(DateTimeZone.UTC).withZoneRetainFields(conditionTimezone).dayOfMonth().roundFloorCopy().withZoneRetainFields(DateTimeZone.UTC);
+                conditionEnd   = getEnd().withZone(DateTimeZone.UTC).withZoneRetainFields(conditionTimezone).dayOfMonth().roundFloorCopy().withZoneRetainFields(DateTimeZone.UTC);
             }
         }catch (ClassCastException e){
             logger.error("Invalid arguments in the "+ARGUMENT_COMPARISON_DATE+" key.");
             throw new IllegalArgumentException("Method arguments map must have a valid DateTime in the "+ARGUMENT_COMPARISON_DATE+ " key.");
         }
 
-        return comparisonDateTimeUTC.isAfter(getStart()) && comparisonDateTimeUTC.isBefore(getEnd());
+        return ( comparisonDateTimeUTC.isEqual(conditionStart) || comparisonDateTimeUTC.isEqual(conditionEnd) ) ||  comparisonDateTimeUTC.isAfter(conditionStart) && comparisonDateTimeUTC.isBefore(conditionEnd);
     }
 }

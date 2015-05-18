@@ -8,11 +8,15 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -85,7 +89,7 @@ public class AgreementsType {
     @XmlElement(name = "CommissionInfo")
     protected List<CommissionInfoType> commissionInfo;
     @XmlElement(name = "ProfileSecurity")
-    protected List<ProfileSecurity> profileSecurity;
+    protected List<AgreementsType.ProfileSecurity> profileSecurity;
     @XmlElement(name = "ContractInformation")
     protected ParagraphType contractInformation;
     @XmlElement(name = "TPA_Extensions")
@@ -99,25 +103,25 @@ public class AgreementsType {
 
     /**
      * Gets the value of the certification property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the certification property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getCertification().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link CertificationType }
-     *
-     *
+     * 
+     * 
      */
     public List<CertificationType> getCertification() {
         if (certification == null) {
@@ -128,25 +132,25 @@ public class AgreementsType {
 
     /**
      * Gets the value of the allianceConsortium property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the allianceConsortium property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getAllianceConsortium().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link AllianceConsortiumType }
-     *
-     *
+     * 
+     * 
      */
     public List<AllianceConsortiumType> getAllianceConsortium() {
         if (allianceConsortium == null) {
@@ -157,25 +161,25 @@ public class AgreementsType {
 
     /**
      * Gets the value of the commissionInfo property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the commissionInfo property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getCommissionInfo().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link CommissionInfoType }
-     *
-     *
+     * 
+     * 
      */
     public List<CommissionInfoType> getCommissionInfo() {
         if (commissionInfo == null) {
@@ -186,29 +190,29 @@ public class AgreementsType {
 
     /**
      * Gets the value of the profileSecurity property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the profileSecurity property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getProfileSecurity().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link AgreementsType.ProfileSecurity }
-     *
-     *
+     * 
+     * 
      */
-    public List<ProfileSecurity> getProfileSecurity() {
+    public List<AgreementsType.ProfileSecurity> getProfileSecurity() {
         if (profileSecurity == null) {
-            profileSecurity = new ArrayList<ProfileSecurity>();
+            profileSecurity = new ArrayList<AgreementsType.ProfileSecurity>();
         }
         return this.profileSecurity;
     }

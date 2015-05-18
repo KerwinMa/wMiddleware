@@ -8,10 +8,15 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -103,11 +108,11 @@ public class VehicleAvailRQAdditionalInfoType {
 
     /**
      * Gets the value of the customer property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link CustomerPrimaryAdditionalType }
-     *
+     *     
      */
     public CustomerPrimaryAdditionalType getCustomer() {
         return customer;
@@ -115,11 +120,11 @@ public class VehicleAvailRQAdditionalInfoType {
 
     /**
      * Sets the value of the customer property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link CustomerPrimaryAdditionalType }
-     *
+     *     
      */
     public void setCustomer(CustomerPrimaryAdditionalType value) {
         this.customer = value;
@@ -127,25 +132,25 @@ public class VehicleAvailRQAdditionalInfoType {
 
     /**
      * Gets the value of the specialReqPref property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the specialReqPref property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getSpecialReqPref().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link VehicleSpecialReqPrefType }
-     *
-     *
+     * 
+     * 
      */
     public List<VehicleSpecialReqPrefType> getSpecialReqPref() {
         if (specialReqPref == null) {
@@ -156,11 +161,11 @@ public class VehicleAvailRQAdditionalInfoType {
 
     /**
      * Gets the value of the coveragePrefs property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleAvailRQAdditionalInfoType.CoveragePrefs }
-     *
+     *     
      */
     public VehicleAvailRQAdditionalInfoType.CoveragePrefs getCoveragePrefs() {
         return coveragePrefs;
@@ -168,11 +173,11 @@ public class VehicleAvailRQAdditionalInfoType {
 
     /**
      * Sets the value of the coveragePrefs property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleAvailRQAdditionalInfoType.CoveragePrefs }
-     *
+     *     
      */
     public void setCoveragePrefs(VehicleAvailRQAdditionalInfoType.CoveragePrefs value) {
         this.coveragePrefs = value;
@@ -180,25 +185,25 @@ public class VehicleAvailRQAdditionalInfoType {
 
     /**
      * Gets the value of the offLocService property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the offLocService property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getOffLocService().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link OffLocationServiceType }
-     *
-     *
+     * 
+     * 
      */
     public List<OffLocationServiceType> getOffLocService() {
         if (offLocService == null) {
@@ -209,11 +214,11 @@ public class VehicleAvailRQAdditionalInfoType {
 
     /**
      * Gets the value of the arrivalDetails property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleArrivalDetailsType }
-     *
+     *     
      */
     public VehicleArrivalDetailsType getArrivalDetails() {
         return arrivalDetails;
@@ -221,11 +226,11 @@ public class VehicleAvailRQAdditionalInfoType {
 
     /**
      * Sets the value of the arrivalDetails property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleArrivalDetailsType }
-     *
+     *     
      */
     public void setArrivalDetails(VehicleArrivalDetailsType value) {
         this.arrivalDetails = value;
@@ -233,11 +238,11 @@ public class VehicleAvailRQAdditionalInfoType {
 
     /**
      * Gets the value of the tourInfo property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleTourInfoType }
-     *
+     *     
      */
     public VehicleTourInfoType getTourInfo() {
         return tourInfo;
@@ -245,11 +250,11 @@ public class VehicleAvailRQAdditionalInfoType {
 
     /**
      * Sets the value of the tourInfo property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleTourInfoType }
-     *
+     *     
      */
     public void setTourInfo(VehicleTourInfoType value) {
         this.tourInfo = value;
@@ -257,11 +262,11 @@ public class VehicleAvailRQAdditionalInfoType {
 
     /**
      * Gets the value of the tpaExtensions property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link TPAExtensionsType }
-     *
+     *     
      */
     public TPAExtensionsType getTPAExtensions() {
         return tpaExtensions;
@@ -269,11 +274,11 @@ public class VehicleAvailRQAdditionalInfoType {
 
     /**
      * Sets the value of the tpaExtensions property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link TPAExtensionsType }
-     *
+     *     
      */
     public void setTPAExtensions(TPAExtensionsType value) {
         this.tpaExtensions = value;
@@ -281,11 +286,11 @@ public class VehicleAvailRQAdditionalInfoType {
 
     /**
      * Gets the value of the luggageQty property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link BigInteger }
-     *
+     *     
      */
     public BigInteger getLuggageQty() {
         return luggageQty;
@@ -293,11 +298,11 @@ public class VehicleAvailRQAdditionalInfoType {
 
     /**
      * Sets the value of the luggageQty property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link BigInteger }
-     *
+     *     
      */
     public void setLuggageQty(BigInteger value) {
         this.luggageQty = value;
@@ -305,11 +310,11 @@ public class VehicleAvailRQAdditionalInfoType {
 
     /**
      * Gets the value of the passengerQty property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link BigInteger }
-     *
+     *     
      */
     public BigInteger getPassengerQty() {
         return passengerQty;
@@ -317,11 +322,11 @@ public class VehicleAvailRQAdditionalInfoType {
 
     /**
      * Sets the value of the passengerQty property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link BigInteger }
-     *
+     *     
      */
     public void setPassengerQty(BigInteger value) {
         this.passengerQty = value;
@@ -329,11 +334,11 @@ public class VehicleAvailRQAdditionalInfoType {
 
     /**
      * Gets the value of the gasPrePay property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link Boolean }
-     *
+     *     
      */
     public Boolean isGasPrePay() {
         return gasPrePay;
@@ -341,11 +346,11 @@ public class VehicleAvailRQAdditionalInfoType {
 
     /**
      * Sets the value of the gasPrePay property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *
+     *     
      */
     public void setGasPrePay(Boolean value) {
         this.gasPrePay = value;
@@ -353,11 +358,11 @@ public class VehicleAvailRQAdditionalInfoType {
 
     /**
      * Gets the value of the singleQuote property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link Boolean }
-     *
+     *     
      */
     public Boolean isSingleQuote() {
         return singleQuote;
@@ -365,11 +370,11 @@ public class VehicleAvailRQAdditionalInfoType {
 
     /**
      * Sets the value of the singleQuote property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *
+     *     
      */
     public void setSingleQuote(Boolean value) {
         this.singleQuote = value;
@@ -377,11 +382,11 @@ public class VehicleAvailRQAdditionalInfoType {
 
     /**
      * Gets the value of the smokingAllowed property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link Boolean }
-     *
+     *     
      */
     public Boolean isSmokingAllowed() {
         return smokingAllowed;
@@ -389,11 +394,11 @@ public class VehicleAvailRQAdditionalInfoType {
 
     /**
      * Sets the value of the smokingAllowed property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *
+     *     
      */
     public void setSmokingAllowed(Boolean value) {
         this.smokingAllowed = value;
@@ -402,9 +407,9 @@ public class VehicleAvailRQAdditionalInfoType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -424,8 +429,8 @@ public class VehicleAvailRQAdditionalInfoType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -434,33 +439,33 @@ public class VehicleAvailRQAdditionalInfoType {
     public static class CoveragePrefs {
 
         @XmlElement(name = "CoveragePref", required = true)
-        protected List<CoveragePref> coveragePref;
+        protected List<VehicleAvailRQAdditionalInfoType.CoveragePrefs.CoveragePref> coveragePref;
 
         /**
          * Gets the value of the coveragePref property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the coveragePref property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getCoveragePref().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link VehicleAvailRQAdditionalInfoType.CoveragePrefs.CoveragePref }
-         *
-         *
+         * 
+         * 
          */
-        public List<CoveragePref> getCoveragePref() {
+        public List<VehicleAvailRQAdditionalInfoType.CoveragePrefs.CoveragePref> getCoveragePref() {
             if (coveragePref == null) {
-                coveragePref = new ArrayList<CoveragePref>();
+                coveragePref = new ArrayList<VehicleAvailRQAdditionalInfoType.CoveragePrefs.CoveragePref>();
             }
             return this.coveragePref;
         }

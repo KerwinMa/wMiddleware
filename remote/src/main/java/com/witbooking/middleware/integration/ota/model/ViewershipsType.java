@@ -8,10 +8,16 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.XmlValue;
 
 
 /**
@@ -185,33 +191,33 @@ import java.util.List;
 public class ViewershipsType {
 
     @XmlElement(name = "Viewership", required = true)
-    protected List<Viewership> viewership;
+    protected List<ViewershipsType.Viewership> viewership;
 
     /**
      * Gets the value of the viewership property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the viewership property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getViewership().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ViewershipsType.Viewership }
-     *
-     *
+     * 
+     * 
      */
-    public List<Viewership> getViewership() {
+    public List<ViewershipsType.Viewership> getViewership() {
         if (viewership == null) {
-            viewership = new ArrayList<Viewership>();
+            viewership = new ArrayList<ViewershipsType.Viewership>();
         }
         return this.viewership;
     }
@@ -219,9 +225,9 @@ public class ViewershipsType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -368,8 +374,8 @@ public class ViewershipsType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -407,11 +413,11 @@ public class ViewershipsType {
 
         /**
          * Gets the value of the viewershipCodes property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link ViewershipsType.Viewership.ViewershipCodes }
-         *
+         *     
          */
         public ViewershipsType.Viewership.ViewershipCodes getViewershipCodes() {
             return viewershipCodes;
@@ -419,11 +425,11 @@ public class ViewershipsType {
 
         /**
          * Sets the value of the viewershipCodes property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link ViewershipsType.Viewership.ViewershipCodes }
-         *
+         *     
          */
         public void setViewershipCodes(ViewershipsType.Viewership.ViewershipCodes value) {
             this.viewershipCodes = value;
@@ -431,11 +437,11 @@ public class ViewershipsType {
 
         /**
          * Gets the value of the systemCodes property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link ViewershipsType.Viewership.SystemCodes }
-         *
+         *     
          */
         public ViewershipsType.Viewership.SystemCodes getSystemCodes() {
             return systemCodes;
@@ -443,11 +449,11 @@ public class ViewershipsType {
 
         /**
          * Sets the value of the systemCodes property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link ViewershipsType.Viewership.SystemCodes }
-         *
+         *     
          */
         public void setSystemCodes(ViewershipsType.Viewership.SystemCodes value) {
             this.systemCodes = value;
@@ -455,11 +461,11 @@ public class ViewershipsType {
 
         /**
          * Gets the value of the profileTypes property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link ViewershipsType.Viewership.ProfileTypes }
-         *
+         *     
          */
         public ViewershipsType.Viewership.ProfileTypes getProfileTypes() {
             return profileTypes;
@@ -467,11 +473,11 @@ public class ViewershipsType {
 
         /**
          * Sets the value of the profileTypes property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link ViewershipsType.Viewership.ProfileTypes }
-         *
+         *     
          */
         public void setProfileTypes(ViewershipsType.Viewership.ProfileTypes value) {
             this.profileTypes = value;
@@ -479,11 +485,11 @@ public class ViewershipsType {
 
         /**
          * Gets the value of the profileRefs property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link ViewershipsType.Viewership.ProfileRefs }
-         *
+         *     
          */
         public ViewershipsType.Viewership.ProfileRefs getProfileRefs() {
             return profileRefs;
@@ -491,11 +497,11 @@ public class ViewershipsType {
 
         /**
          * Sets the value of the profileRefs property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link ViewershipsType.Viewership.ProfileRefs }
-         *
+         *     
          */
         public void setProfileRefs(ViewershipsType.Viewership.ProfileRefs value) {
             this.profileRefs = value;
@@ -503,11 +509,11 @@ public class ViewershipsType {
 
         /**
          * Gets the value of the profiles property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link ViewershipsType.Viewership.Profiles }
-         *
+         *     
          */
         public ViewershipsType.Viewership.Profiles getProfiles() {
             return profiles;
@@ -515,11 +521,11 @@ public class ViewershipsType {
 
         /**
          * Sets the value of the profiles property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link ViewershipsType.Viewership.Profiles }
-         *
+         *     
          */
         public void setProfiles(ViewershipsType.Viewership.Profiles value) {
             this.profiles = value;
@@ -527,11 +533,11 @@ public class ViewershipsType {
 
         /**
          * Gets the value of the locationCodes property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link ViewershipsType.Viewership.LocationCodes }
-         *
+         *     
          */
         public ViewershipsType.Viewership.LocationCodes getLocationCodes() {
             return locationCodes;
@@ -539,11 +545,11 @@ public class ViewershipsType {
 
         /**
          * Sets the value of the locationCodes property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link ViewershipsType.Viewership.LocationCodes }
-         *
+         *     
          */
         public void setLocationCodes(ViewershipsType.Viewership.LocationCodes value) {
             this.locationCodes = value;
@@ -551,11 +557,11 @@ public class ViewershipsType {
 
         /**
          * Gets the value of the bookingChannelCodes property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link ViewershipsType.Viewership.BookingChannelCodes }
-         *
+         *     
          */
         public ViewershipsType.Viewership.BookingChannelCodes getBookingChannelCodes() {
             return bookingChannelCodes;
@@ -563,11 +569,11 @@ public class ViewershipsType {
 
         /**
          * Sets the value of the bookingChannelCodes property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link ViewershipsType.Viewership.BookingChannelCodes }
-         *
+         *     
          */
         public void setBookingChannelCodes(ViewershipsType.Viewership.BookingChannelCodes value) {
             this.bookingChannelCodes = value;
@@ -575,11 +581,11 @@ public class ViewershipsType {
 
         /**
          * Gets the value of the distributorTypes property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link ViewershipsType.Viewership.DistributorTypes }
-         *
+         *     
          */
         public ViewershipsType.Viewership.DistributorTypes getDistributorTypes() {
             return distributorTypes;
@@ -587,11 +593,11 @@ public class ViewershipsType {
 
         /**
          * Sets the value of the distributorTypes property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link ViewershipsType.Viewership.DistributorTypes }
-         *
+         *     
          */
         public void setDistributorTypes(ViewershipsType.Viewership.DistributorTypes value) {
             this.distributorTypes = value;
@@ -599,11 +605,11 @@ public class ViewershipsType {
 
         /**
          * Gets the value of the viewershipRPH property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getViewershipRPH() {
             return viewershipRPH;
@@ -611,11 +617,11 @@ public class ViewershipsType {
 
         /**
          * Sets the value of the viewershipRPH property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setViewershipRPH(String value) {
             this.viewershipRPH = value;
@@ -623,11 +629,11 @@ public class ViewershipsType {
 
         /**
          * Gets the value of the viewOnly property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link Boolean }
-         *
+         *     
          */
         public Boolean isViewOnly() {
             return viewOnly;
@@ -635,11 +641,11 @@ public class ViewershipsType {
 
         /**
          * Sets the value of the viewOnly property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link Boolean }
-         *
+         *     
          */
         public void setViewOnly(Boolean value) {
             this.viewOnly = value;
@@ -648,9 +654,9 @@ public class ViewershipsType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -671,8 +677,8 @@ public class ViewershipsType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
@@ -681,46 +687,46 @@ public class ViewershipsType {
         public static class BookingChannelCodes {
 
             @XmlElement(name = "BookingChannelCode", required = true)
-            protected List<BookingChannelCode> bookingChannelCode;
+            protected List<ViewershipsType.Viewership.BookingChannelCodes.BookingChannelCode> bookingChannelCode;
             @XmlAttribute(name = "ChannelCodesInclusive")
             protected Boolean channelCodesInclusive;
 
             /**
              * Gets the value of the bookingChannelCode property.
-             *
+             * 
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the bookingChannelCode property.
-             *
+             * 
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getBookingChannelCode().add(newItem);
              * </pre>
-             *
-             *
+             * 
+             * 
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link ViewershipsType.Viewership.BookingChannelCodes.BookingChannelCode }
-             *
-             *
+             * 
+             * 
              */
-            public List<BookingChannelCode> getBookingChannelCode() {
+            public List<ViewershipsType.Viewership.BookingChannelCodes.BookingChannelCode> getBookingChannelCode() {
                 if (bookingChannelCode == null) {
-                    bookingChannelCode = new ArrayList<BookingChannelCode>();
+                    bookingChannelCode = new ArrayList<ViewershipsType.Viewership.BookingChannelCodes.BookingChannelCode>();
                 }
                 return this.bookingChannelCode;
             }
 
             /**
              * Gets the value of the channelCodesInclusive property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link Boolean }
-             *
+             *     
              */
             public Boolean isChannelCodesInclusive() {
                 return channelCodesInclusive;
@@ -728,11 +734,11 @@ public class ViewershipsType {
 
             /**
              * Sets the value of the channelCodesInclusive property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link Boolean }
-             *
+             *     
              */
             public void setChannelCodesInclusive(Boolean value) {
                 this.channelCodesInclusive = value;
@@ -741,9 +747,9 @@ public class ViewershipsType {
 
             /**
              * <p>Java class for anonymous complex type.
-             *
+             * 
              * <p>The following schema fragment specifies the expected content contained within this class.
-             *
+             * 
              * <pre>
              * &lt;complexType>
              *   &lt;simpleContent>
@@ -753,8 +759,8 @@ public class ViewershipsType {
              *   &lt;/simpleContent>
              * &lt;/complexType>
              * </pre>
-             *
-             *
+             * 
+             * 
              */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "", propOrder = {
@@ -772,11 +778,11 @@ public class ViewershipsType {
 
                 /**
                  * Gets the value of the value property.
-                 *
+                 * 
                  * @return
                  *     possible object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public String getValue() {
                     return value;
@@ -784,11 +790,11 @@ public class ViewershipsType {
 
                 /**
                  * Sets the value of the value property.
-                 *
+                 * 
                  * @param value
                  *     allowed object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public void setValue(String value) {
                     this.value = value;
@@ -796,11 +802,11 @@ public class ViewershipsType {
 
                 /**
                  * Gets the value of the restrictedDisplayIndicator property.
-                 *
+                 * 
                  * @return
                  *     possible object is
                  *     {@link Boolean }
-                 *
+                 *     
                  */
                 public Boolean isRestrictedDisplayIndicator() {
                     return restrictedDisplayIndicator;
@@ -808,11 +814,11 @@ public class ViewershipsType {
 
                 /**
                  * Sets the value of the restrictedDisplayIndicator property.
-                 *
+                 * 
                  * @param value
                  *     allowed object is
                  *     {@link Boolean }
-                 *
+                 *     
                  */
                 public void setRestrictedDisplayIndicator(Boolean value) {
                     this.restrictedDisplayIndicator = value;
@@ -820,11 +826,11 @@ public class ViewershipsType {
 
                 /**
                  * Gets the value of the sort property.
-                 *
+                 * 
                  * @return
                  *     possible object is
                  *     {@link BigInteger }
-                 *
+                 *     
                  */
                 public BigInteger getSort() {
                     return sort;
@@ -832,11 +838,11 @@ public class ViewershipsType {
 
                 /**
                  * Sets the value of the sort property.
-                 *
+                 * 
                  * @param value
                  *     allowed object is
                  *     {@link BigInteger }
-                 *
+                 *     
                  */
                 public void setSort(BigInteger value) {
                     this.sort = value;
@@ -849,9 +855,9 @@ public class ViewershipsType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -872,8 +878,8 @@ public class ViewershipsType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
@@ -882,33 +888,33 @@ public class ViewershipsType {
         public static class DistributorTypes {
 
             @XmlElement(name = "DistributorType", required = true)
-            protected List<DistributorType> distributorType;
+            protected List<ViewershipsType.Viewership.DistributorTypes.DistributorType> distributorType;
 
             /**
              * Gets the value of the distributorType property.
-             *
+             * 
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the distributorType property.
-             *
+             * 
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getDistributorType().add(newItem);
              * </pre>
-             *
-             *
+             * 
+             * 
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link ViewershipsType.Viewership.DistributorTypes.DistributorType }
-             *
-             *
+             * 
+             * 
              */
-            public List<DistributorType> getDistributorType() {
+            public List<ViewershipsType.Viewership.DistributorTypes.DistributorType> getDistributorType() {
                 if (distributorType == null) {
-                    distributorType = new ArrayList<DistributorType>();
+                    distributorType = new ArrayList<ViewershipsType.Viewership.DistributorTypes.DistributorType>();
                 }
                 return this.distributorType;
             }
@@ -916,9 +922,9 @@ public class ViewershipsType {
 
             /**
              * <p>Java class for anonymous complex type.
-             *
+             * 
              * <p>The following schema fragment specifies the expected content contained within this class.
-             *
+             * 
              * <pre>
              * &lt;complexType>
              *   &lt;simpleContent>
@@ -929,8 +935,8 @@ public class ViewershipsType {
              *   &lt;/simpleContent>
              * &lt;/complexType>
              * </pre>
-             *
-             *
+             * 
+             * 
              */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "", propOrder = {
@@ -947,11 +953,11 @@ public class ViewershipsType {
 
                 /**
                  * Gets the value of the value property.
-                 *
+                 * 
                  * @return
                  *     possible object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public String getValue() {
                     return value;
@@ -959,11 +965,11 @@ public class ViewershipsType {
 
                 /**
                  * Sets the value of the value property.
-                 *
+                 * 
                  * @param value
                  *     allowed object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public void setValue(String value) {
                     this.value = value;
@@ -971,11 +977,11 @@ public class ViewershipsType {
 
                 /**
                  * Gets the value of the distributorCode property.
-                 *
+                 * 
                  * @return
                  *     possible object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public String getDistributorCode() {
                     return distributorCode;
@@ -983,11 +989,11 @@ public class ViewershipsType {
 
                 /**
                  * Sets the value of the distributorCode property.
-                 *
+                 * 
                  * @param value
                  *     allowed object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public void setDistributorCode(String value) {
                     this.distributorCode = value;
@@ -995,11 +1001,11 @@ public class ViewershipsType {
 
                 /**
                  * Gets the value of the distributorTypeCode property.
-                 *
+                 * 
                  * @return
                  *     possible object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public String getDistributorTypeCode() {
                     return distributorTypeCode;
@@ -1007,11 +1013,11 @@ public class ViewershipsType {
 
                 /**
                  * Sets the value of the distributorTypeCode property.
-                 *
+                 * 
                  * @param value
                  *     allowed object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public void setDistributorTypeCode(String value) {
                     this.distributorTypeCode = value;
@@ -1024,9 +1030,9 @@ public class ViewershipsType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -1049,8 +1055,8 @@ public class ViewershipsType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
@@ -1059,46 +1065,46 @@ public class ViewershipsType {
         public static class LocationCodes {
 
             @XmlElement(name = "LocationCode", required = true)
-            protected List<LocationCode> locationCode;
+            protected List<ViewershipsType.Viewership.LocationCodes.LocationCode> locationCode;
             @XmlAttribute(name = "LocationCodesInclusive")
             protected Boolean locationCodesInclusive;
 
             /**
              * Gets the value of the locationCode property.
-             *
+             * 
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the locationCode property.
-             *
+             * 
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getLocationCode().add(newItem);
              * </pre>
-             *
-             *
+             * 
+             * 
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link ViewershipsType.Viewership.LocationCodes.LocationCode }
-             *
-             *
+             * 
+             * 
              */
-            public List<LocationCode> getLocationCode() {
+            public List<ViewershipsType.Viewership.LocationCodes.LocationCode> getLocationCode() {
                 if (locationCode == null) {
-                    locationCode = new ArrayList<LocationCode>();
+                    locationCode = new ArrayList<ViewershipsType.Viewership.LocationCodes.LocationCode>();
                 }
                 return this.locationCode;
             }
 
             /**
              * Gets the value of the locationCodesInclusive property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link Boolean }
-             *
+             *     
              */
             public Boolean isLocationCodesInclusive() {
                 return locationCodesInclusive;
@@ -1106,11 +1112,11 @@ public class ViewershipsType {
 
             /**
              * Sets the value of the locationCodesInclusive property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link Boolean }
-             *
+             *     
              */
             public void setLocationCodesInclusive(Boolean value) {
                 this.locationCodesInclusive = value;
@@ -1119,9 +1125,9 @@ public class ViewershipsType {
 
             /**
              * <p>Java class for anonymous complex type.
-             *
+             * 
              * <p>The following schema fragment specifies the expected content contained within this class.
-             *
+             * 
              * <pre>
              * &lt;complexType>
              *   &lt;complexContent>
@@ -1133,8 +1139,8 @@ public class ViewershipsType {
              *   &lt;/complexContent>
              * &lt;/complexType>
              * </pre>
-             *
-             *
+             * 
+             * 
              */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "")
@@ -1149,11 +1155,11 @@ public class ViewershipsType {
 
                 /**
                  * Gets the value of the cityCode property.
-                 *
+                 * 
                  * @return
                  *     possible object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public String getCityCode() {
                     return cityCode;
@@ -1161,11 +1167,11 @@ public class ViewershipsType {
 
                 /**
                  * Sets the value of the cityCode property.
-                 *
+                 * 
                  * @param value
                  *     allowed object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public void setCityCode(String value) {
                     this.cityCode = value;
@@ -1173,11 +1179,11 @@ public class ViewershipsType {
 
                 /**
                  * Gets the value of the stateProvinceCode property.
-                 *
+                 * 
                  * @return
                  *     possible object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public String getStateProvinceCode() {
                     return stateProvinceCode;
@@ -1185,11 +1191,11 @@ public class ViewershipsType {
 
                 /**
                  * Sets the value of the stateProvinceCode property.
-                 *
+                 * 
                  * @param value
                  *     allowed object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public void setStateProvinceCode(String value) {
                     this.stateProvinceCode = value;
@@ -1197,11 +1203,11 @@ public class ViewershipsType {
 
                 /**
                  * Gets the value of the countryCode property.
-                 *
+                 * 
                  * @return
                  *     possible object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public String getCountryCode() {
                     return countryCode;
@@ -1209,11 +1215,11 @@ public class ViewershipsType {
 
                 /**
                  * Sets the value of the countryCode property.
-                 *
+                 * 
                  * @param value
                  *     allowed object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public void setCountryCode(String value) {
                     this.countryCode = value;
@@ -1226,9 +1232,9 @@ public class ViewershipsType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -1240,8 +1246,8 @@ public class ViewershipsType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
@@ -1254,25 +1260,25 @@ public class ViewershipsType {
 
             /**
              * Gets the value of the profileRef property.
-             *
+             * 
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the profileRef property.
-             *
+             * 
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getProfileRef().add(newItem);
              * </pre>
-             *
-             *
+             * 
+             * 
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link UniqueIDType }
-             *
-             *
+             * 
+             * 
              */
             public List<UniqueIDType> getProfileRef() {
                 if (profileRef == null) {
@@ -1286,9 +1292,9 @@ public class ViewershipsType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -1300,8 +1306,8 @@ public class ViewershipsType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
@@ -1314,25 +1320,25 @@ public class ViewershipsType {
 
             /**
              * Gets the value of the profile property.
-             *
+             * 
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the profile property.
-             *
+             * 
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getProfile().add(newItem);
              * </pre>
-             *
-             *
+             * 
+             * 
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link ProfileType }
-             *
-             *
+             * 
+             * 
              */
             public List<ProfileType> getProfile() {
                 if (profile == null) {
@@ -1346,9 +1352,9 @@ public class ViewershipsType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -1368,8 +1374,8 @@ public class ViewershipsType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
@@ -1378,33 +1384,33 @@ public class ViewershipsType {
         public static class ProfileTypes {
 
             @XmlElement(name = "ProfileType", required = true)
-            protected List<ProfileType> profileType;
+            protected List<ViewershipsType.Viewership.ProfileTypes.ProfileType> profileType;
 
             /**
              * Gets the value of the profileType property.
-             *
+             * 
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the profileType property.
-             *
+             * 
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getProfileType().add(newItem);
              * </pre>
-             *
-             *
+             * 
+             * 
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link ViewershipsType.Viewership.ProfileTypes.ProfileType }
-             *
-             *
+             * 
+             * 
              */
-            public List<ProfileType> getProfileType() {
+            public List<ViewershipsType.Viewership.ProfileTypes.ProfileType> getProfileType() {
                 if (profileType == null) {
-                    profileType = new ArrayList<ProfileType>();
+                    profileType = new ArrayList<ViewershipsType.Viewership.ProfileTypes.ProfileType>();
                 }
                 return this.profileType;
             }
@@ -1412,9 +1418,9 @@ public class ViewershipsType {
 
             /**
              * <p>Java class for anonymous complex type.
-             *
+             * 
              * <p>The following schema fragment specifies the expected content contained within this class.
-             *
+             * 
              * <pre>
              * &lt;complexType>
              *   &lt;complexContent>
@@ -1424,8 +1430,8 @@ public class ViewershipsType {
              *   &lt;/complexContent>
              * &lt;/complexType>
              * </pre>
-             *
-             *
+             * 
+             * 
              */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "")
@@ -1436,11 +1442,11 @@ public class ViewershipsType {
 
                 /**
                  * Gets the value of the profileType property.
-                 *
+                 * 
                  * @return
                  *     possible object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public String getProfileType() {
                     return profileType;
@@ -1448,11 +1454,11 @@ public class ViewershipsType {
 
                 /**
                  * Sets the value of the profileType property.
-                 *
+                 * 
                  * @param value
                  *     allowed object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public void setProfileType(String value) {
                     this.profileType = value;
@@ -1465,9 +1471,9 @@ public class ViewershipsType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -1488,8 +1494,8 @@ public class ViewershipsType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
@@ -1498,35 +1504,35 @@ public class ViewershipsType {
         public static class SystemCodes {
 
             @XmlElement(name = "SystemCode", required = true)
-            protected List<SystemCode> systemCode;
+            protected List<ViewershipsType.Viewership.SystemCodes.SystemCode> systemCode;
             @XmlAttribute(name = "SystemCodesInclusive")
             protected Boolean systemCodesInclusive;
 
             /**
              * Gets the value of the systemCode property.
-             *
+             * 
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the systemCode property.
-             *
+             * 
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getSystemCode().add(newItem);
              * </pre>
-             *
-             *
+             * 
+             * 
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link ViewershipsType.Viewership.SystemCodes.SystemCode }
-             *
-             *
+             * 
+             * 
              */
-            public List<SystemCode> getSystemCode() {
+            public List<ViewershipsType.Viewership.SystemCodes.SystemCode> getSystemCode() {
                 if (systemCode == null) {
-                    systemCode = new ArrayList<SystemCode>();
+                    systemCode = new ArrayList<ViewershipsType.Viewership.SystemCodes.SystemCode>();
                 }
                 return this.systemCode;
             }

@@ -8,13 +8,19 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -72,7 +78,7 @@ public class PaymentDetailType
 {
 
     @XmlElement(name = "PaymentAmount")
-    protected List<PaymentAmount> paymentAmount;
+    protected List<PaymentDetailType.PaymentAmount> paymentAmount;
     @XmlElement(name = "Commission")
     protected CommissionType commission;
     @XmlAttribute(name = "PaymentType")
@@ -86,29 +92,29 @@ public class PaymentDetailType
 
     /**
      * Gets the value of the paymentAmount property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the paymentAmount property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getPaymentAmount().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link PaymentDetailType.PaymentAmount }
-     *
-     *
+     * 
+     * 
      */
-    public List<PaymentAmount> getPaymentAmount() {
+    public List<PaymentDetailType.PaymentAmount> getPaymentAmount() {
         if (paymentAmount == null) {
-            paymentAmount = new ArrayList<PaymentAmount>();
+            paymentAmount = new ArrayList<PaymentDetailType.PaymentAmount>();
         }
         return this.paymentAmount;
     }

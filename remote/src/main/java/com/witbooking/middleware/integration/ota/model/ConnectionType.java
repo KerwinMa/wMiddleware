@@ -8,12 +8,17 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -71,33 +76,33 @@ import java.util.List;
 public class ConnectionType {
 
     @XmlElement(name = "ConnectionLocation", required = true)
-    protected List<ConnectionLocation> connectionLocation;
+    protected List<ConnectionType.ConnectionLocation> connectionLocation;
 
     /**
      * Gets the value of the connectionLocation property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the connectionLocation property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getConnectionLocation().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ConnectionType.ConnectionLocation }
-     *
-     *
+     * 
+     * 
      */
-    public List<ConnectionLocation> getConnectionLocation() {
+    public List<ConnectionType.ConnectionLocation> getConnectionLocation() {
         if (connectionLocation == null) {
-            connectionLocation = new ArrayList<ConnectionLocation>();
+            connectionLocation = new ArrayList<ConnectionType.ConnectionLocation>();
         }
         return this.connectionLocation;
     }

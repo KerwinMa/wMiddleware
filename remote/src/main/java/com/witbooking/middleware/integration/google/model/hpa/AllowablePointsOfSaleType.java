@@ -40,33 +40,33 @@ import java.util.List;
 public class AllowablePointsOfSaleType {
 
     @XmlElement(name = "PointOfSale", required = true)
-    protected List<PointOfSale> pointOfSale;
+    protected List<AllowablePointsOfSaleType.PointOfSale> pointOfSale;
 
     /**
      * Gets the value of the pointOfSale property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the pointOfSale property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getPointOfSale().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link AllowablePointsOfSaleType.PointOfSale }
-     *
-     *
+     * 
+     * 
      */
-    public List<PointOfSale> getPointOfSale() {
+    public List<AllowablePointsOfSaleType.PointOfSale> getPointOfSale() {
         if (pointOfSale == null) {
-            pointOfSale = new ArrayList<PointOfSale>();
+            pointOfSale = new ArrayList<AllowablePointsOfSaleType.PointOfSale>();
         }
         return this.pointOfSale;
     }

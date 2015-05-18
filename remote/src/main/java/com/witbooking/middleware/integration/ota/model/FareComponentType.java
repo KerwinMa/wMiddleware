@@ -8,11 +8,17 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -135,9 +141,9 @@ import java.util.List;
 public class FareComponentType {
 
     @XmlElement(name = "PriceableUnit", required = true)
-    protected List<PriceableUnit> priceableUnit;
+    protected List<FareComponentType.PriceableUnit> priceableUnit;
     @XmlElement(name = "TotalConstructionAmount", required = true)
-    protected List<TotalConstructionAmount> totalConstructionAmount;
+    protected List<FareComponentType.TotalConstructionAmount> totalConstructionAmount;
     @XmlAttribute(name = "PriceQuoteDate")
     protected String priceQuoteDate;
     @XmlAttribute(name = "AccountCode")
@@ -152,69 +158,69 @@ public class FareComponentType {
 
     /**
      * Gets the value of the priceableUnit property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the priceableUnit property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getPriceableUnit().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link FareComponentType.PriceableUnit }
-     *
-     *
+     * 
+     * 
      */
-    public List<PriceableUnit> getPriceableUnit() {
+    public List<FareComponentType.PriceableUnit> getPriceableUnit() {
         if (priceableUnit == null) {
-            priceableUnit = new ArrayList<PriceableUnit>();
+            priceableUnit = new ArrayList<FareComponentType.PriceableUnit>();
         }
         return this.priceableUnit;
     }
 
     /**
      * Gets the value of the totalConstructionAmount property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the totalConstructionAmount property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getTotalConstructionAmount().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link FareComponentType.TotalConstructionAmount }
-     *
-     *
+     * 
+     * 
      */
-    public List<TotalConstructionAmount> getTotalConstructionAmount() {
+    public List<FareComponentType.TotalConstructionAmount> getTotalConstructionAmount() {
         if (totalConstructionAmount == null) {
-            totalConstructionAmount = new ArrayList<TotalConstructionAmount>();
+            totalConstructionAmount = new ArrayList<FareComponentType.TotalConstructionAmount>();
         }
         return this.totalConstructionAmount;
     }
 
     /**
      * Gets the value of the priceQuoteDate property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getPriceQuoteDate() {
         return priceQuoteDate;
@@ -222,11 +228,11 @@ public class FareComponentType {
 
     /**
      * Sets the value of the priceQuoteDate property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setPriceQuoteDate(String value) {
         this.priceQuoteDate = value;
@@ -234,11 +240,11 @@ public class FareComponentType {
 
     /**
      * Gets the value of the accountCode property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getAccountCode() {
         return accountCode;
@@ -246,11 +252,11 @@ public class FareComponentType {
 
     /**
      * Sets the value of the accountCode property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setAccountCode(String value) {
         this.accountCode = value;
@@ -258,11 +264,11 @@ public class FareComponentType {
 
     /**
      * Gets the value of the pricingDesignator property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getPricingDesignator() {
         return pricingDesignator;
@@ -270,11 +276,11 @@ public class FareComponentType {
 
     /**
      * Sets the value of the pricingDesignator property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setPricingDesignator(String value) {
         this.pricingDesignator = value;
@@ -282,11 +288,11 @@ public class FareComponentType {
 
     /**
      * Gets the value of the exchangeRate property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link BigDecimal }
-     *
+     *     
      */
     public BigDecimal getExchangeRate() {
         return exchangeRate;
@@ -294,11 +300,11 @@ public class FareComponentType {
 
     /**
      * Sets the value of the exchangeRate property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link BigDecimal }
-     *
+     *     
      */
     public void setExchangeRate(BigDecimal value) {
         this.exchangeRate = value;
@@ -306,11 +312,11 @@ public class FareComponentType {
 
     /**
      * Gets the value of the quantity property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link BigInteger }
-     *
+     *     
      */
     public BigInteger getQuantity() {
         return quantity;
@@ -318,11 +324,11 @@ public class FareComponentType {
 
     /**
      * Sets the value of the quantity property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link BigInteger }
-     *
+     *     
      */
     public void setQuantity(BigInteger value) {
         this.quantity = value;
@@ -331,9 +337,9 @@ public class FareComponentType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -410,8 +416,8 @@ public class FareComponentType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -420,46 +426,46 @@ public class FareComponentType {
     public static class PriceableUnit {
 
         @XmlElement(name = "FareComponentDetail", required = true)
-        protected List<FareComponentDetail> fareComponentDetail;
+        protected List<FareComponentType.PriceableUnit.FareComponentDetail> fareComponentDetail;
         @XmlAttribute(name = "Number", required = true)
         protected String number;
 
         /**
          * Gets the value of the fareComponentDetail property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the fareComponentDetail property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getFareComponentDetail().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link FareComponentType.PriceableUnit.FareComponentDetail }
-         *
-         *
+         * 
+         * 
          */
-        public List<FareComponentDetail> getFareComponentDetail() {
+        public List<FareComponentType.PriceableUnit.FareComponentDetail> getFareComponentDetail() {
             if (fareComponentDetail == null) {
-                fareComponentDetail = new ArrayList<FareComponentDetail>();
+                fareComponentDetail = new ArrayList<FareComponentType.PriceableUnit.FareComponentDetail>();
             }
             return this.fareComponentDetail;
         }
 
         /**
          * Gets the value of the number property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getNumber() {
             return number;
@@ -467,11 +473,11 @@ public class FareComponentType {
 
         /**
          * Sets the value of the number property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setNumber(String value) {
             this.number = value;
@@ -480,9 +486,9 @@ public class FareComponentType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -548,8 +554,8 @@ public class FareComponentType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
@@ -561,13 +567,13 @@ public class FareComponentType {
         public static class FareComponentDetail {
 
             @XmlElement(name = "CouponSequence", required = true)
-            protected List<CouponSequence> couponSequence;
+            protected List<FareComponentType.PriceableUnit.FareComponentDetail.CouponSequence> couponSequence;
             @XmlElement(name = "ConstructionPrinciple")
-            protected List<ConstructionPrinciple> constructionPrinciple;
+            protected List<FareComponentType.PriceableUnit.FareComponentDetail.ConstructionPrinciple> constructionPrinciple;
             @XmlElement(name = "BaseAmount", required = true)
-            protected List<BaseAmount> baseAmount;
+            protected List<FareComponentType.PriceableUnit.FareComponentDetail.BaseAmount> baseAmount;
             @XmlElement(name = "TicketDesignator")
-            protected List<TicketDesignator> ticketDesignator;
+            protected List<FareComponentType.PriceableUnit.FareComponentDetail.TicketDesignator> ticketDesignator;
             @XmlAttribute(name = "Number", required = true)
             protected int number;
             @XmlAttribute(name = "TariffNumber")
@@ -595,116 +601,116 @@ public class FareComponentType {
 
             /**
              * Gets the value of the couponSequence property.
-             *
+             * 
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the couponSequence property.
-             *
+             * 
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getCouponSequence().add(newItem);
              * </pre>
-             *
-             *
+             * 
+             * 
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link FareComponentType.PriceableUnit.FareComponentDetail.CouponSequence }
-             *
-             *
+             * 
+             * 
              */
-            public List<CouponSequence> getCouponSequence() {
+            public List<FareComponentType.PriceableUnit.FareComponentDetail.CouponSequence> getCouponSequence() {
                 if (couponSequence == null) {
-                    couponSequence = new ArrayList<CouponSequence>();
+                    couponSequence = new ArrayList<FareComponentType.PriceableUnit.FareComponentDetail.CouponSequence>();
                 }
                 return this.couponSequence;
             }
 
             /**
              * Gets the value of the constructionPrinciple property.
-             *
+             * 
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the constructionPrinciple property.
-             *
+             * 
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getConstructionPrinciple().add(newItem);
              * </pre>
-             *
-             *
+             * 
+             * 
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link FareComponentType.PriceableUnit.FareComponentDetail.ConstructionPrinciple }
-             *
-             *
+             * 
+             * 
              */
-            public List<ConstructionPrinciple> getConstructionPrinciple() {
+            public List<FareComponentType.PriceableUnit.FareComponentDetail.ConstructionPrinciple> getConstructionPrinciple() {
                 if (constructionPrinciple == null) {
-                    constructionPrinciple = new ArrayList<ConstructionPrinciple>();
+                    constructionPrinciple = new ArrayList<FareComponentType.PriceableUnit.FareComponentDetail.ConstructionPrinciple>();
                 }
                 return this.constructionPrinciple;
             }
 
             /**
              * Gets the value of the baseAmount property.
-             *
+             * 
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the baseAmount property.
-             *
+             * 
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getBaseAmount().add(newItem);
              * </pre>
-             *
-             *
+             * 
+             * 
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link FareComponentType.PriceableUnit.FareComponentDetail.BaseAmount }
-             *
-             *
+             * 
+             * 
              */
-            public List<BaseAmount> getBaseAmount() {
+            public List<FareComponentType.PriceableUnit.FareComponentDetail.BaseAmount> getBaseAmount() {
                 if (baseAmount == null) {
-                    baseAmount = new ArrayList<BaseAmount>();
+                    baseAmount = new ArrayList<FareComponentType.PriceableUnit.FareComponentDetail.BaseAmount>();
                 }
                 return this.baseAmount;
             }
 
             /**
              * Gets the value of the ticketDesignator property.
-             *
+             * 
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the ticketDesignator property.
-             *
+             * 
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getTicketDesignator().add(newItem);
              * </pre>
-             *
-             *
+             * 
+             * 
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link FareComponentType.PriceableUnit.FareComponentDetail.TicketDesignator }
-             *
-             *
+             * 
+             * 
              */
-            public List<TicketDesignator> getTicketDesignator() {
+            public List<FareComponentType.PriceableUnit.FareComponentDetail.TicketDesignator> getTicketDesignator() {
                 if (ticketDesignator == null) {
-                    ticketDesignator = new ArrayList<TicketDesignator>();
+                    ticketDesignator = new ArrayList<FareComponentType.PriceableUnit.FareComponentDetail.TicketDesignator>();
                 }
                 return this.ticketDesignator;
             }

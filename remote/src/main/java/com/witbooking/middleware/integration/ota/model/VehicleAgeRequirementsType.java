@@ -8,11 +8,16 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -105,11 +110,11 @@ public class VehicleAgeRequirementsType {
 
     /**
      * Gets the value of the age property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleAgeRequirementsType.Age }
-     *
+     *     
      */
     public VehicleAgeRequirementsType.Age getAge() {
         return age;
@@ -117,11 +122,11 @@ public class VehicleAgeRequirementsType {
 
     /**
      * Sets the value of the age property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleAgeRequirementsType.Age }
-     *
+     *     
      */
     public void setAge(VehicleAgeRequirementsType.Age value) {
         this.age = value;
@@ -130,9 +135,9 @@ public class VehicleAgeRequirementsType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -194,8 +199,8 @@ public class VehicleAgeRequirementsType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -206,7 +211,7 @@ public class VehicleAgeRequirementsType {
     public static class Age {
 
         @XmlElement(name = "AgeSurcharge")
-        protected List<AgeSurcharge> ageSurcharge;
+        protected List<VehicleAgeRequirementsType.Age.AgeSurcharge> ageSurcharge;
         @XmlElement(name = "AgeInfos")
         protected VehicleAgeRequirementsType.Age.AgeInfos ageInfos;
         @XmlElement(name = "Vehicles", required = true)
@@ -220,40 +225,40 @@ public class VehicleAgeRequirementsType {
 
         /**
          * Gets the value of the ageSurcharge property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the ageSurcharge property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getAgeSurcharge().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link VehicleAgeRequirementsType.Age.AgeSurcharge }
-         *
-         *
+         * 
+         * 
          */
-        public List<AgeSurcharge> getAgeSurcharge() {
+        public List<VehicleAgeRequirementsType.Age.AgeSurcharge> getAgeSurcharge() {
             if (ageSurcharge == null) {
-                ageSurcharge = new ArrayList<AgeSurcharge>();
+                ageSurcharge = new ArrayList<VehicleAgeRequirementsType.Age.AgeSurcharge>();
             }
             return this.ageSurcharge;
         }
 
         /**
          * Gets the value of the ageInfos property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link VehicleAgeRequirementsType.Age.AgeInfos }
-         *
+         *     
          */
         public VehicleAgeRequirementsType.Age.AgeInfos getAgeInfos() {
             return ageInfos;
@@ -261,11 +266,11 @@ public class VehicleAgeRequirementsType {
 
         /**
          * Sets the value of the ageInfos property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link VehicleAgeRequirementsType.Age.AgeInfos }
-         *
+         *     
          */
         public void setAgeInfos(VehicleAgeRequirementsType.Age.AgeInfos value) {
             this.ageInfos = value;
@@ -273,11 +278,11 @@ public class VehicleAgeRequirementsType {
 
         /**
          * Gets the value of the vehicles property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link VehicleAgeRequirementsType.Age.Vehicles }
-         *
+         *     
          */
         public VehicleAgeRequirementsType.Age.Vehicles getVehicles() {
             return vehicles;
@@ -285,11 +290,11 @@ public class VehicleAgeRequirementsType {
 
         /**
          * Sets the value of the vehicles property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link VehicleAgeRequirementsType.Age.Vehicles }
-         *
+         *     
          */
         public void setVehicles(VehicleAgeRequirementsType.Age.Vehicles value) {
             this.vehicles = value;
@@ -297,11 +302,11 @@ public class VehicleAgeRequirementsType {
 
         /**
          * Gets the value of the minimumAge property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link BigInteger }
-         *
+         *     
          */
         public BigInteger getMinimumAge() {
             return minimumAge;
@@ -309,11 +314,11 @@ public class VehicleAgeRequirementsType {
 
         /**
          * Sets the value of the minimumAge property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link BigInteger }
-         *
+         *     
          */
         public void setMinimumAge(BigInteger value) {
             this.minimumAge = value;
@@ -321,11 +326,11 @@ public class VehicleAgeRequirementsType {
 
         /**
          * Gets the value of the maximumAge property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link BigInteger }
-         *
+         *     
          */
         public BigInteger getMaximumAge() {
             return maximumAge;
@@ -333,11 +338,11 @@ public class VehicleAgeRequirementsType {
 
         /**
          * Sets the value of the maximumAge property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link BigInteger }
-         *
+         *     
          */
         public void setMaximumAge(BigInteger value) {
             this.maximumAge = value;
@@ -346,9 +351,9 @@ public class VehicleAgeRequirementsType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -368,8 +373,8 @@ public class VehicleAgeRequirementsType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
@@ -378,33 +383,33 @@ public class VehicleAgeRequirementsType {
         public static class AgeInfos {
 
             @XmlElement(name = "AgeInfo", required = true)
-            protected List<AgeInfo> ageInfo;
+            protected List<VehicleAgeRequirementsType.Age.AgeInfos.AgeInfo> ageInfo;
 
             /**
              * Gets the value of the ageInfo property.
-             *
+             * 
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the ageInfo property.
-             *
+             * 
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getAgeInfo().add(newItem);
              * </pre>
-             *
-             *
+             * 
+             * 
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link VehicleAgeRequirementsType.Age.AgeInfos.AgeInfo }
-             *
-             *
+             * 
+             * 
              */
-            public List<AgeInfo> getAgeInfo() {
+            public List<VehicleAgeRequirementsType.Age.AgeInfos.AgeInfo> getAgeInfo() {
                 if (ageInfo == null) {
-                    ageInfo = new ArrayList<AgeInfo>();
+                    ageInfo = new ArrayList<VehicleAgeRequirementsType.Age.AgeInfos.AgeInfo>();
                 }
                 return this.ageInfo;
             }
@@ -412,9 +417,9 @@ public class VehicleAgeRequirementsType {
 
             /**
              * <p>Java class for anonymous complex type.
-             *
+             * 
              * <p>The following schema fragment specifies the expected content contained within this class.
-             *
+             * 
              * <pre>
              * &lt;complexType>
              *   &lt;complexContent>
@@ -424,8 +429,8 @@ public class VehicleAgeRequirementsType {
              *   &lt;/complexContent>
              * &lt;/complexType>
              * </pre>
-             *
-             *
+             * 
+             * 
              */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "")
@@ -438,11 +443,11 @@ public class VehicleAgeRequirementsType {
 
                 /**
                  * Gets the value of the type property.
-                 *
+                 * 
                  * @return
                  *     possible object is
                  *     {@link LocationDetailRequirementAgeInfoType }
-                 *
+                 *     
                  */
                 public LocationDetailRequirementAgeInfoType getType() {
                     return type;
@@ -450,11 +455,11 @@ public class VehicleAgeRequirementsType {
 
                 /**
                  * Sets the value of the type property.
-                 *
+                 * 
                  * @param value
                  *     allowed object is
                  *     {@link LocationDetailRequirementAgeInfoType }
-                 *
+                 *     
                  */
                 public void setType(LocationDetailRequirementAgeInfoType value) {
                     this.type = value;
@@ -467,9 +472,9 @@ public class VehicleAgeRequirementsType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -481,8 +486,8 @@ public class VehicleAgeRequirementsType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
@@ -502,11 +507,11 @@ public class VehicleAgeRequirementsType {
 
             /**
              * Gets the value of the age property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getAge() {
                 return age;
@@ -514,11 +519,11 @@ public class VehicleAgeRequirementsType {
 
             /**
              * Sets the value of the age property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setAge(String value) {
                 this.age = value;
@@ -526,11 +531,11 @@ public class VehicleAgeRequirementsType {
 
             /**
              * Gets the value of the chargeType property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getChargeType() {
                 return chargeType;
@@ -538,11 +543,11 @@ public class VehicleAgeRequirementsType {
 
             /**
              * Sets the value of the chargeType property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setChargeType(String value) {
                 this.chargeType = value;
@@ -550,11 +555,11 @@ public class VehicleAgeRequirementsType {
 
             /**
              * Gets the value of the amount property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link BigDecimal }
-             *
+             *     
              */
             public BigDecimal getAmount() {
                 return amount;
@@ -562,11 +567,11 @@ public class VehicleAgeRequirementsType {
 
             /**
              * Sets the value of the amount property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link BigDecimal }
-             *
+             *     
              */
             public void setAmount(BigDecimal value) {
                 this.amount = value;
@@ -574,11 +579,11 @@ public class VehicleAgeRequirementsType {
 
             /**
              * Gets the value of the currencyCode property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getCurrencyCode() {
                 return currencyCode;
@@ -586,11 +591,11 @@ public class VehicleAgeRequirementsType {
 
             /**
              * Sets the value of the currencyCode property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setCurrencyCode(String value) {
                 this.currencyCode = value;
@@ -598,11 +603,11 @@ public class VehicleAgeRequirementsType {
 
             /**
              * Gets the value of the decimalPlaces property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link BigInteger }
-             *
+             *     
              */
             public BigInteger getDecimalPlaces() {
                 return decimalPlaces;
@@ -610,11 +615,11 @@ public class VehicleAgeRequirementsType {
 
             /**
              * Sets the value of the decimalPlaces property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link BigInteger }
-             *
+             *     
              */
             public void setDecimalPlaces(BigInteger value) {
                 this.decimalPlaces = value;
@@ -625,9 +630,9 @@ public class VehicleAgeRequirementsType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -647,8 +652,8 @@ public class VehicleAgeRequirementsType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
@@ -657,33 +662,33 @@ public class VehicleAgeRequirementsType {
         public static class Vehicles {
 
             @XmlElement(name = "Vehicle", required = true)
-            protected List<Vehicle> vehicle;
+            protected List<VehicleAgeRequirementsType.Age.Vehicles.Vehicle> vehicle;
 
             /**
              * Gets the value of the vehicle property.
-             *
+             * 
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the vehicle property.
-             *
+             * 
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getVehicle().add(newItem);
              * </pre>
-             *
-             *
+             * 
+             * 
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link VehicleAgeRequirementsType.Age.Vehicles.Vehicle }
-             *
-             *
+             * 
+             * 
              */
-            public List<Vehicle> getVehicle() {
+            public List<VehicleAgeRequirementsType.Age.Vehicles.Vehicle> getVehicle() {
                 if (vehicle == null) {
-                    vehicle = new ArrayList<Vehicle>();
+                    vehicle = new ArrayList<VehicleAgeRequirementsType.Age.Vehicles.Vehicle>();
                 }
                 return this.vehicle;
             }

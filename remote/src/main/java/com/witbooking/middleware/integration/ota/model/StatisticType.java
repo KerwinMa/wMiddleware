@@ -8,9 +8,13 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -77,11 +81,11 @@ public class StatisticType {
 
     /**
      * Gets the value of the statisticApplicationSets property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link StatisticType.StatisticApplicationSets }
-     *
+     *     
      */
     public StatisticType.StatisticApplicationSets getStatisticApplicationSets() {
         return statisticApplicationSets;
@@ -89,11 +93,11 @@ public class StatisticType {
 
     /**
      * Sets the value of the statisticApplicationSets property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link StatisticType.StatisticApplicationSets }
-     *
+     *     
      */
     public void setStatisticApplicationSets(StatisticType.StatisticApplicationSets value) {
         this.statisticApplicationSets = value;

@@ -173,7 +173,7 @@ public class OTAHotelAvailRQ  implements Serializable {
      * @return
      *     possible object is
      *     {@link com.witbooking.middleware.integration.ota.model.POSType }
-     *
+     *     
      */
     public POSType getPOS() {
         return pos;
@@ -181,11 +181,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Sets the value of the pos property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link com.witbooking.middleware.integration.ota.model.POSType }
-     *
+     *     
      */
     public void setPOS(POSType value) {
         this.pos = value;
@@ -193,11 +193,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Gets the value of the availRequestSegments property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link com.witbooking.middleware.integration.ota.model.OTAHotelAvailRQ.AvailRequestSegments }
-     *
+     *     
      */
     public AvailRequestSegments getAvailRequestSegments() {
         return availRequestSegments;
@@ -205,11 +205,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Sets the value of the availRequestSegments property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link com.witbooking.middleware.integration.ota.model.OTAHotelAvailRQ.AvailRequestSegments }
-     *
+     *     
      */
     public void setAvailRequestSegments(AvailRequestSegments value) {
         this.availRequestSegments = value;
@@ -217,11 +217,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Gets the value of the hotelReservationIDs property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link com.witbooking.middleware.integration.ota.model.HotelReservationIDsType }
-     *
+     *     
      */
     public HotelReservationIDsType getHotelReservationIDs() {
         return hotelReservationIDs;
@@ -229,11 +229,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Sets the value of the hotelReservationIDs property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link com.witbooking.middleware.integration.ota.model.HotelReservationIDsType }
-     *
+     *     
      */
     public void setHotelReservationIDs(HotelReservationIDsType value) {
         this.hotelReservationIDs = value;
@@ -241,11 +241,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Gets the value of the summaryOnly property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link Boolean }
-     *
+     *     
      */
     public Boolean isSummaryOnly() {
         return summaryOnly;
@@ -253,11 +253,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Sets the value of the summaryOnly property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *
+     *     
      */
     public void setSummaryOnly(Boolean value) {
         this.summaryOnly = value;
@@ -265,11 +265,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Gets the value of the sortOrder property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getSortOrder() {
         return sortOrder;
@@ -277,11 +277,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Sets the value of the sortOrder property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setSortOrder(String value) {
         this.sortOrder = value;
@@ -289,11 +289,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Gets the value of the availRatesOnly property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link Boolean }
-     *
+     *     
      */
     public Boolean isAvailRatesOnly() {
         return availRatesOnly;
@@ -301,11 +301,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Sets the value of the availRatesOnly property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *
+     *     
      */
     public void setAvailRatesOnly(Boolean value) {
         this.availRatesOnly = value;
@@ -313,11 +313,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Gets the value of the onRequestInd property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link Boolean }
-     *
+     *     
      */
     public Boolean isOnRequestInd() {
         return onRequestInd;
@@ -325,11 +325,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Sets the value of the onRequestInd property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *
+     *     
      */
     public void setOnRequestInd(Boolean value) {
         this.onRequestInd = value;
@@ -337,11 +337,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Gets the value of the bestOnly property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link Boolean }
-     *
+     *     
      */
     public Boolean isBestOnly() {
         return bestOnly;
@@ -349,11 +349,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Sets the value of the bestOnly property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *
+     *     
      */
     public void setBestOnly(Boolean value) {
         this.bestOnly = value;
@@ -361,11 +361,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Gets the value of the rateRangeOnly property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link Boolean }
-     *
+     *     
      */
     public Boolean isRateRangeOnly() {
         return rateRangeOnly;
@@ -373,11 +373,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Sets the value of the rateRangeOnly property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *
+     *     
      */
     public void setRateRangeOnly(Boolean value) {
         this.rateRangeOnly = value;
@@ -385,11 +385,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Gets the value of the exactMatchOnly property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link Boolean }
-     *
+     *     
      */
     public Boolean isExactMatchOnly() {
         return exactMatchOnly;
@@ -397,11 +397,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Sets the value of the exactMatchOnly property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *
+     *     
      */
     public void setExactMatchOnly(Boolean value) {
         this.exactMatchOnly = value;
@@ -409,11 +409,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Gets the value of the allowPartialAvail property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link Boolean }
-     *
+     *     
      */
     public Boolean isAllowPartialAvail() {
         return allowPartialAvail;
@@ -421,11 +421,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Sets the value of the allowPartialAvail property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *
+     *     
      */
     public void setAllowPartialAvail(Boolean value) {
         this.allowPartialAvail = value;
@@ -433,11 +433,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Gets the value of the requestedCurrency property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getRequestedCurrency() {
         return requestedCurrency;
@@ -445,11 +445,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Sets the value of the requestedCurrency property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setRequestedCurrency(String value) {
         this.requestedCurrency = value;
@@ -457,11 +457,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Gets the value of the requestedCurrencyIndicator property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link Boolean }
-     *
+     *     
      */
     public Boolean isRequestedCurrencyIndicator() {
         return requestedCurrencyIndicator;
@@ -469,11 +469,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Sets the value of the requestedCurrencyIndicator property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *
+     *     
      */
     public void setRequestedCurrencyIndicator(Boolean value) {
         this.requestedCurrencyIndicator = value;
@@ -481,11 +481,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Gets the value of the isModify property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link Boolean }
-     *
+     *     
      */
     public Boolean isIsModify() {
         return isModify;
@@ -493,11 +493,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Sets the value of the isModify property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *
+     *     
      */
     public void setIsModify(Boolean value) {
         this.isModify = value;
@@ -505,11 +505,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Gets the value of the searchCacheLevel property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getSearchCacheLevel() {
         return searchCacheLevel;
@@ -517,11 +517,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Sets the value of the searchCacheLevel property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setSearchCacheLevel(String value) {
         this.searchCacheLevel = value;
@@ -529,11 +529,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Gets the value of the hotelStayOnly property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link Boolean }
-     *
+     *     
      */
     public Boolean isHotelStayOnly() {
         return hotelStayOnly;
@@ -541,11 +541,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Sets the value of the hotelStayOnly property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *
+     *     
      */
     public void setHotelStayOnly(Boolean value) {
         this.hotelStayOnly = value;
@@ -553,11 +553,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Gets the value of the rateDetailsInd property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link Boolean }
-     *
+     *     
      */
     public Boolean isRateDetailsInd() {
         return rateDetailsInd;
@@ -565,11 +565,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Sets the value of the rateDetailsInd property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *
+     *     
      */
     public void setRateDetailsInd(Boolean value) {
         this.rateDetailsInd = value;
@@ -577,11 +577,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Gets the value of the maxResponses property.
-     *
+     * 
      * @return
      *     possible object is
-     *     {@link BigInteger }
-     *
+     *     {@link java.math.BigInteger }
+     *     
      */
     public BigInteger getMaxResponses() {
         return maxResponses;
@@ -589,11 +589,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Sets the value of the maxResponses property.
-     *
+     * 
      * @param value
      *     allowed object is
-     *     {@link BigInteger }
-     *
+     *     {@link java.math.BigInteger }
+     *     
      */
     public void setMaxResponses(BigInteger value) {
         this.maxResponses = value;
@@ -601,11 +601,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Gets the value of the mapRequired property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link Boolean }
-     *
+     *     
      */
     public Boolean isMapRequired() {
         return mapRequired;
@@ -613,11 +613,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Sets the value of the mapRequired property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *
+     *     
      */
     public void setMapRequired(Boolean value) {
         this.mapRequired = value;
@@ -625,11 +625,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Gets the value of the mapHeight property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link Integer }
-     *
+     *     
      */
     public Integer getMapHeight() {
         return mapHeight;
@@ -637,11 +637,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Sets the value of the mapHeight property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link Integer }
-     *
+     *     
      */
     public void setMapHeight(Integer value) {
         this.mapHeight = value;
@@ -649,11 +649,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Gets the value of the mapWidth property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link Integer }
-     *
+     *     
      */
     public Integer getMapWidth() {
         return mapWidth;
@@ -661,11 +661,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Sets the value of the mapWidth property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link Integer }
-     *
+     *     
      */
     public void setMapWidth(Integer value) {
         this.mapWidth = value;
@@ -673,11 +673,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Gets the value of the echoToken property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getEchoToken() {
         return echoToken;
@@ -685,11 +685,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Sets the value of the echoToken property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setEchoToken(String value) {
         this.echoToken = value;
@@ -697,11 +697,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Gets the value of the timeStamp property.
-     *
+     * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *
+     *     {@link javax.xml.datatype.XMLGregorianCalendar }
+     *     
      */
     public XMLGregorianCalendar getTimeStamp() {
         return timeStamp;
@@ -709,11 +709,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Sets the value of the timeStamp property.
-     *
+     * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *
+     *     {@link javax.xml.datatype.XMLGregorianCalendar }
+     *     
      */
     public void setTimeStamp(XMLGregorianCalendar value) {
         this.timeStamp = value;
@@ -721,11 +721,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Gets the value of the target property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getTarget() {
         return target;
@@ -733,11 +733,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Sets the value of the target property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setTarget(String value) {
         this.target = value;
@@ -745,11 +745,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Gets the value of the version property.
-     *
+     * 
      * @return
      *     possible object is
-     *     {@link BigDecimal }
-     *
+     *     {@link java.math.BigDecimal }
+     *     
      */
     public BigDecimal getVersion() {
         return version;
@@ -757,11 +757,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Sets the value of the version property.
-     *
+     * 
      * @param value
      *     allowed object is
-     *     {@link BigDecimal }
-     *
+     *     {@link java.math.BigDecimal }
+     *     
      */
     public void setVersion(BigDecimal value) {
         this.version = value;
@@ -769,11 +769,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Gets the value of the transactionIdentifier property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getTransactionIdentifier() {
         return transactionIdentifier;
@@ -781,11 +781,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Sets the value of the transactionIdentifier property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setTransactionIdentifier(String value) {
         this.transactionIdentifier = value;
@@ -793,11 +793,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Gets the value of the sequenceNmbr property.
-     *
+     * 
      * @return
      *     possible object is
-     *     {@link BigInteger }
-     *
+     *     {@link java.math.BigInteger }
+     *     
      */
     public BigInteger getSequenceNmbr() {
         return sequenceNmbr;
@@ -805,11 +805,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Sets the value of the sequenceNmbr property.
-     *
+     * 
      * @param value
      *     allowed object is
-     *     {@link BigInteger }
-     *
+     *     {@link java.math.BigInteger }
+     *     
      */
     public void setSequenceNmbr(BigInteger value) {
         this.sequenceNmbr = value;
@@ -817,11 +817,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Gets the value of the transactionStatusCode property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getTransactionStatusCode() {
         return transactionStatusCode;
@@ -829,11 +829,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Sets the value of the transactionStatusCode property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setTransactionStatusCode(String value) {
         this.transactionStatusCode = value;
@@ -841,11 +841,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Gets the value of the retransmissionIndicator property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link Boolean }
-     *
+     *     
      */
     public Boolean isRetransmissionIndicator() {
         return retransmissionIndicator;
@@ -853,11 +853,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Sets the value of the retransmissionIndicator property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *
+     *     
      */
     public void setRetransmissionIndicator(Boolean value) {
         this.retransmissionIndicator = value;
@@ -865,11 +865,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Gets the value of the correlationID property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getCorrelationID() {
         return correlationID;
@@ -877,11 +877,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Sets the value of the correlationID property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setCorrelationID(String value) {
         this.correlationID = value;
@@ -889,11 +889,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Gets the value of the altLangID property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getAltLangID() {
         return altLangID;
@@ -901,11 +901,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Sets the value of the altLangID property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setAltLangID(String value) {
         this.altLangID = value;
@@ -913,11 +913,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Gets the value of the primaryLangID property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getPrimaryLangID() {
         return primaryLangID;
@@ -925,11 +925,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * Sets the value of the primaryLangID property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setPrimaryLangID(String value) {
         this.primaryLangID = value;
@@ -938,9 +938,9 @@ public class OTAHotelAvailRQ  implements Serializable {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -950,8 +950,8 @@ public class OTAHotelAvailRQ  implements Serializable {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
@@ -964,11 +964,11 @@ public class OTAHotelAvailRQ  implements Serializable {
 
         /**
          * Gets the value of the maximumWaitTime property.
-         *
+         * 
          * @return
          *     possible object is
-         *     {@link BigDecimal }
-         *
+         *     {@link java.math.BigDecimal }
+         *     
          */
         public BigDecimal getMaximumWaitTime() {
             return maximumWaitTime;
@@ -976,10 +976,10 @@ public class OTAHotelAvailRQ  implements Serializable {
 
         /**
          * Sets the value of the maximumWaitTime property.
-         *
+         * 
          * @param value
          *     allowed object is
-         *     {@link BigDecimal }
+         *     {@link java.math.BigDecimal }
          *     
          */
         public void setMaximumWaitTime(BigDecimal value) {

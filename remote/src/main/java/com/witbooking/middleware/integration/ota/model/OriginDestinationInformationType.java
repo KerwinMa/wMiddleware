@@ -8,7 +8,11 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -69,11 +73,11 @@ public class OriginDestinationInformationType
 
     /**
      * Gets the value of the originLocation property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link OriginDestinationInformationType.OriginLocation }
-     *
+     *     
      */
     public OriginDestinationInformationType.OriginLocation getOriginLocation() {
         return originLocation;
@@ -81,11 +85,11 @@ public class OriginDestinationInformationType
 
     /**
      * Sets the value of the originLocation property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link OriginDestinationInformationType.OriginLocation }
-     *
+     *     
      */
     public void setOriginLocation(OriginDestinationInformationType.OriginLocation value) {
         this.originLocation = value;
@@ -93,11 +97,11 @@ public class OriginDestinationInformationType
 
     /**
      * Gets the value of the destinationLocation property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link OriginDestinationInformationType.DestinationLocation }
-     *
+     *     
      */
     public OriginDestinationInformationType.DestinationLocation getDestinationLocation() {
         return destinationLocation;
@@ -105,11 +109,11 @@ public class OriginDestinationInformationType
 
     /**
      * Sets the value of the destinationLocation property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link OriginDestinationInformationType.DestinationLocation }
-     *
+     *     
      */
     public void setDestinationLocation(OriginDestinationInformationType.DestinationLocation value) {
         this.destinationLocation = value;

@@ -61,7 +61,7 @@ import java.util.List;
 public class Transaction {
 
     @XmlElement(name = "Result")
-    protected List<Result> result;
+    protected List<Transaction.Result> result;
     @XmlAttribute(name = "timestamp", required = true)
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar timestamp;
@@ -94,16 +94,16 @@ public class Transaction {
      * Objects of the following type(s) are allowed in the list
      * {@link Transaction.Result }
      */
-    public List<Result> getResult() {
+    public List<Transaction.Result> getResult() {
         if (result == null) {
-            result = new ArrayList<Result>();
+            result = new ArrayList<Transaction.Result>();
         }
         return this.result;
     }
 
     public void addResult(Result result1) {
         if (result == null) {
-            result = new ArrayList<Result>();
+            result = new ArrayList<Transaction.Result>();
         }
         result.add(result1);
     }

@@ -8,9 +8,13 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -52,33 +56,33 @@ import java.util.List;
 public class OriginDestinationOptionType {
 
     @XmlElement(name = "FlightSegment", required = true)
-    protected List<FlightSegment> flightSegment;
+    protected List<OriginDestinationOptionType.FlightSegment> flightSegment;
 
     /**
      * Gets the value of the flightSegment property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the flightSegment property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getFlightSegment().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link OriginDestinationOptionType.FlightSegment }
-     *
-     *
+     * 
+     * 
      */
-    public List<FlightSegment> getFlightSegment() {
+    public List<OriginDestinationOptionType.FlightSegment> getFlightSegment() {
         if (flightSegment == null) {
-            flightSegment = new ArrayList<FlightSegment>();
+            flightSegment = new ArrayList<OriginDestinationOptionType.FlightSegment>();
         }
         return this.flightSegment;
     }

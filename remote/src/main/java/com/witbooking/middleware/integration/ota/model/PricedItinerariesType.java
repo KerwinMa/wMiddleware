@@ -8,9 +8,13 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -47,33 +51,33 @@ import java.util.List;
 public class PricedItinerariesType {
 
     @XmlElement(name = "PricedItinerary", required = true)
-    protected List<PricedItinerary> pricedItinerary;
+    protected List<PricedItinerariesType.PricedItinerary> pricedItinerary;
 
     /**
      * Gets the value of the pricedItinerary property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the pricedItinerary property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getPricedItinerary().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link PricedItinerariesType.PricedItinerary }
-     *
-     *
+     * 
+     * 
      */
-    public List<PricedItinerary> getPricedItinerary() {
+    public List<PricedItinerariesType.PricedItinerary> getPricedItinerary() {
         if (pricedItinerary == null) {
-            pricedItinerary = new ArrayList<PricedItinerary>();
+            pricedItinerary = new ArrayList<PricedItinerariesType.PricedItinerary>();
         }
         return this.pricedItinerary;
     }

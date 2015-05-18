@@ -8,11 +8,16 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -73,33 +78,33 @@ import java.util.List;
 public class FeaturesType {
 
     @XmlElement(name = "Feature", required = true)
-    protected List<Feature> feature;
+    protected List<FeaturesType.Feature> feature;
 
     /**
      * Gets the value of the feature property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the feature property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getFeature().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link FeaturesType.Feature }
-     *
-     *
+     * 
+     * 
      */
-    public List<Feature> getFeature() {
+    public List<FeaturesType.Feature> getFeature() {
         if (feature == null) {
-            feature = new ArrayList<Feature>();
+            feature = new ArrayList<FeaturesType.Feature>();
         }
         return this.feature;
     }
@@ -107,9 +112,9 @@ public class FeaturesType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -143,8 +148,8 @@ public class FeaturesType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -177,11 +182,11 @@ public class FeaturesType {
 
         /**
          * Gets the value of the charge property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link FeaturesType.Feature.Charge }
-         *
+         *     
          */
         public FeaturesType.Feature.Charge getCharge() {
             return charge;
@@ -189,11 +194,11 @@ public class FeaturesType {
 
         /**
          * Sets the value of the charge property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link FeaturesType.Feature.Charge }
-         *
+         *     
          */
         public void setCharge(FeaturesType.Feature.Charge value) {
             this.charge = value;

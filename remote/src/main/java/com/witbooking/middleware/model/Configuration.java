@@ -21,7 +21,7 @@ import java.util.Map;
  * @version 1.0
  * @since
  */
-public class Configuration implements Serializable {
+public class Configuration implements Serializable, Comparable<Configuration>  {
 
    /**
     * Constant serialized ID used for compatibility.
@@ -124,6 +124,18 @@ public class Configuration implements Serializable {
         return 0;
     }
 
+    public int getMinors() {
+        int quantity = 0;
+        for (Guest guest : guests.keySet()) {
+            if (guest.isInfant()) {
+                quantity += guests.get(guest) != null ? guests.get(guest) : 0;
+            } else if (guest.isChild()) {
+                quantity += guests.get(guest) != null ? guests.get(guest) : 0;
+            }
+        }
+        return quantity;
+    }
+
     public int getTotalGuests() {
         int total = 0;
         for (Integer number : guests.values()) {
@@ -188,5 +200,11 @@ public class Configuration implements Serializable {
         }
         return true;
     }
-   
+
+
+    @Override
+    public int compareTo(Configuration o) {
+        return ticker.compareTo(o.ticker);
+    }
+
 }

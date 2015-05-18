@@ -4,10 +4,7 @@ import com.witbooking.middleware.exceptions.model.IncompatibleTypesException;
 import org.apache.log4j.Logger;
 
 import java.io.Serializable;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by mongoose on 9/29/14.
@@ -20,7 +17,7 @@ public class CountryOfOriginCondition extends Condition implements Serializable 
 
     private static List<String> REQUIRED_ARGUMENTS= Arrays.asList(ARGUMENT_COUNTRY);
 
-    private static HashSet<ConditionType> VALID_CONDITIONS= new HashSet<ConditionType>(Arrays.asList(ConditionType.INCLUDE, ConditionType.EXCLUDE, ConditionType.EXACT, ConditionType.LIKE, ConditionType.ALL));
+    private static HashSet<ConditionType> VALID_CONDITIONS= new HashSet<ConditionType>(Arrays.asList(ConditionType.INCLUDE,ConditionType.EXCLUDE,ConditionType.EXACT,ConditionType.LIKE,ConditionType.ALL));
 
     private HashSet<String> countries;
 

@@ -7,6 +7,7 @@
  */
 package com.witbooking.middleware.utils.serializers;
 
+import com.google.gson.*;
 import com.google.gson.reflect.TypeToken;
 import com.witbooking.middleware.model.Reservation;
 import com.witbooking.middleware.model.RoomStay;
@@ -15,7 +16,6 @@ import com.witbooking.middleware.utils.JSONExclusionStrategy;
 
 import java.lang.reflect.Type;
 import java.util.Date;
-import com.google.gson.*;
 
 /**
  * Insert description here

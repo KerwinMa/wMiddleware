@@ -8,9 +8,13 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -114,11 +118,11 @@ public class VehicleLocationLiabilitiesType {
 
     /**
      * Gets the value of the coverages property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleLocationLiabilitiesType.Coverages }
-     *
+     *     
      */
     public VehicleLocationLiabilitiesType.Coverages getCoverages() {
         return coverages;
@@ -126,11 +130,11 @@ public class VehicleLocationLiabilitiesType {
 
     /**
      * Sets the value of the coverages property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleLocationLiabilitiesType.Coverages }
-     *
+     *     
      */
     public void setCoverages(VehicleLocationLiabilitiesType.Coverages value) {
         this.coverages = value;
@@ -138,11 +142,11 @@ public class VehicleLocationLiabilitiesType {
 
     /**
      * Gets the value of the info property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link FormattedTextType }
-     *
+     *     
      */
     public FormattedTextType getInfo() {
         return info;
@@ -150,11 +154,11 @@ public class VehicleLocationLiabilitiesType {
 
     /**
      * Sets the value of the info property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link FormattedTextType }
-     *
+     *     
      */
     public void setInfo(FormattedTextType value) {
         this.info = value;
@@ -162,11 +166,11 @@ public class VehicleLocationLiabilitiesType {
 
     /**
      * Gets the value of the tpaExtensions property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link TPAExtensionsType }
-     *
+     *     
      */
     public TPAExtensionsType getTPAExtensions() {
         return tpaExtensions;
@@ -174,11 +178,11 @@ public class VehicleLocationLiabilitiesType {
 
     /**
      * Sets the value of the tpaExtensions property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link TPAExtensionsType }
-     *
+     *     
      */
     public void setTPAExtensions(TPAExtensionsType value) {
         this.tpaExtensions = value;
@@ -187,9 +191,9 @@ public class VehicleLocationLiabilitiesType {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -254,8 +258,8 @@ public class VehicleLocationLiabilitiesType {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -264,33 +268,33 @@ public class VehicleLocationLiabilitiesType {
     public static class Coverages {
 
         @XmlElement(name = "Coverage")
-        protected List<Coverage> coverage;
+        protected List<VehicleLocationLiabilitiesType.Coverages.Coverage> coverage;
 
         /**
          * Gets the value of the coverage property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the coverage property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getCoverage().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link VehicleLocationLiabilitiesType.Coverages.Coverage }
-         *
-         *
+         * 
+         * 
          */
-        public List<Coverage> getCoverage() {
+        public List<VehicleLocationLiabilitiesType.Coverages.Coverage> getCoverage() {
             if (coverage == null) {
-                coverage = new ArrayList<Coverage>();
+                coverage = new ArrayList<VehicleLocationLiabilitiesType.Coverages.Coverage>();
             }
             return this.coverage;
         }
@@ -298,9 +302,9 @@ public class VehicleLocationLiabilitiesType {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -355,8 +359,8 @@ public class VehicleLocationLiabilitiesType {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
@@ -376,11 +380,11 @@ public class VehicleLocationLiabilitiesType {
 
             /**
              * Gets the value of the coverageInfo property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link FormattedTextType }
-             *
+             *     
              */
             public FormattedTextType getCoverageInfo() {
                 return coverageInfo;
@@ -388,11 +392,11 @@ public class VehicleLocationLiabilitiesType {
 
             /**
              * Sets the value of the coverageInfo property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link FormattedTextType }
-             *
+             *     
              */
             public void setCoverageInfo(FormattedTextType value) {
                 this.coverageInfo = value;
@@ -400,11 +404,11 @@ public class VehicleLocationLiabilitiesType {
 
             /**
              * Gets the value of the coverageFees property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link VehicleLocationLiabilitiesType.Coverages.Coverage.CoverageFees }
-             *
+             *     
              */
             public VehicleLocationLiabilitiesType.Coverages.Coverage.CoverageFees getCoverageFees() {
                 return coverageFees;
@@ -412,11 +416,11 @@ public class VehicleLocationLiabilitiesType {
 
             /**
              * Sets the value of the coverageFees property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link VehicleLocationLiabilitiesType.Coverages.Coverage.CoverageFees }
-             *
+             *     
              */
             public void setCoverageFees(VehicleLocationLiabilitiesType.Coverages.Coverage.CoverageFees value) {
                 this.coverageFees = value;
@@ -424,11 +428,11 @@ public class VehicleLocationLiabilitiesType {
 
             /**
              * Gets the value of the type property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getType() {
                 return type;
@@ -436,11 +440,11 @@ public class VehicleLocationLiabilitiesType {
 
             /**
              * Sets the value of the type property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setType(String value) {
                 this.type = value;
@@ -448,11 +452,11 @@ public class VehicleLocationLiabilitiesType {
 
             /**
              * Gets the value of the requiredInd property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link Boolean }
-             *
+             *     
              */
             public Boolean isRequiredInd() {
                 return requiredInd;
@@ -460,11 +464,11 @@ public class VehicleLocationLiabilitiesType {
 
             /**
              * Sets the value of the requiredInd property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link Boolean }
-             *
+             *     
              */
             public void setRequiredInd(Boolean value) {
                 this.requiredInd = value;
@@ -473,9 +477,9 @@ public class VehicleLocationLiabilitiesType {
 
             /**
              * <p>Java class for anonymous complex type.
-             *
+             * 
              * <p>The following schema fragment specifies the expected content contained within this class.
-             *
+             * 
              * <pre>
              * &lt;complexType>
              *   &lt;complexContent>
@@ -517,8 +521,8 @@ public class VehicleLocationLiabilitiesType {
              *   &lt;/complexContent>
              * &lt;/complexType>
              * </pre>
-             *
-             *
+             * 
+             * 
              */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "", propOrder = {
@@ -527,33 +531,33 @@ public class VehicleLocationLiabilitiesType {
             public static class CoverageFees {
 
                 @XmlElement(name = "CoverageFee", required = true)
-                protected List<CoverageFee> coverageFee;
+                protected List<VehicleLocationLiabilitiesType.Coverages.Coverage.CoverageFees.CoverageFee> coverageFee;
 
                 /**
                  * Gets the value of the coverageFee property.
-                 *
+                 * 
                  * <p>
                  * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
                  * returned list will be present inside the JAXB object.
                  * This is why there is not a <CODE>set</CODE> method for the coverageFee property.
-                 *
+                 * 
                  * <p>
                  * For example, to add a new item, do as follows:
                  * <pre>
                  *    getCoverageFee().add(newItem);
                  * </pre>
-                 *
-                 *
+                 * 
+                 * 
                  * <p>
                  * Objects of the following type(s) are allowed in the list
                  * {@link VehicleLocationLiabilitiesType.Coverages.Coverage.CoverageFees.CoverageFee }
-                 *
-                 *
+                 * 
+                 * 
                  */
-                public List<CoverageFee> getCoverageFee() {
+                public List<VehicleLocationLiabilitiesType.Coverages.Coverage.CoverageFees.CoverageFee> getCoverageFee() {
                     if (coverageFee == null) {
-                        coverageFee = new ArrayList<CoverageFee>();
+                        coverageFee = new ArrayList<VehicleLocationLiabilitiesType.Coverages.Coverage.CoverageFees.CoverageFee>();
                     }
                     return this.coverageFee;
                 }
@@ -561,9 +565,9 @@ public class VehicleLocationLiabilitiesType {
 
                 /**
                  * <p>Java class for anonymous complex type.
-                 *
+                 * 
                  * <p>The following schema fragment specifies the expected content contained within this class.
-                 *
+                 * 
                  * <pre>
                  * &lt;complexType>
                  *   &lt;complexContent>
@@ -595,8 +599,8 @@ public class VehicleLocationLiabilitiesType {
                  *   &lt;/complexContent>
                  * &lt;/complexType>
                  * </pre>
-                 *
-                 *
+                 * 
+                 * 
                  */
                 @XmlAccessorType(XmlAccessType.FIELD)
                 @XmlType(name = "", propOrder = {
@@ -615,11 +619,11 @@ public class VehicleLocationLiabilitiesType {
 
                     /**
                      * Gets the value of the charge property.
-                     *
+                     * 
                      * @return
                      *     possible object is
                      *     {@link VehicleChargeType }
-                     *
+                     *     
                      */
                     public VehicleChargeType getCharge() {
                         return charge;
@@ -627,11 +631,11 @@ public class VehicleLocationLiabilitiesType {
 
                     /**
                      * Sets the value of the charge property.
-                     *
+                     * 
                      * @param value
                      *     allowed object is
                      *     {@link VehicleChargeType }
-                     *
+                     *     
                      */
                     public void setCharge(VehicleChargeType value) {
                         this.charge = value;
@@ -639,11 +643,11 @@ public class VehicleLocationLiabilitiesType {
 
                     /**
                      * Gets the value of the vehicles property.
-                     *
+                     * 
                      * @return
                      *     possible object is
                      *     {@link VehicleLocationLiabilitiesType.Coverages.Coverage.CoverageFees.CoverageFee.Vehicles }
-                     *
+                     *     
                      */
                     public VehicleLocationLiabilitiesType.Coverages.Coverage.CoverageFees.CoverageFee.Vehicles getVehicles() {
                         return vehicles;
@@ -651,11 +655,11 @@ public class VehicleLocationLiabilitiesType {
 
                     /**
                      * Sets the value of the vehicles property.
-                     *
+                     * 
                      * @param value
                      *     allowed object is
                      *     {@link VehicleLocationLiabilitiesType.Coverages.Coverage.CoverageFees.CoverageFee.Vehicles }
-                     *
+                     *     
                      */
                     public void setVehicles(VehicleLocationLiabilitiesType.Coverages.Coverage.CoverageFees.CoverageFee.Vehicles value) {
                         this.vehicles = value;
@@ -663,11 +667,11 @@ public class VehicleLocationLiabilitiesType {
 
                     /**
                      * Gets the value of the deductible property.
-                     *
+                     * 
                      * @return
                      *     possible object is
                      *     {@link DeductibleType }
-                     *
+                     *     
                      */
                     public DeductibleType getDeductible() {
                         return deductible;
@@ -675,11 +679,11 @@ public class VehicleLocationLiabilitiesType {
 
                     /**
                      * Sets the value of the deductible property.
-                     *
+                     * 
                      * @param value
                      *     allowed object is
                      *     {@link DeductibleType }
-                     *
+                     *     
                      */
                     public void setDeductible(DeductibleType value) {
                         this.deductible = value;
@@ -688,9 +692,9 @@ public class VehicleLocationLiabilitiesType {
 
                     /**
                      * <p>Java class for anonymous complex type.
-                     *
+                     * 
                      * <p>The following schema fragment specifies the expected content contained within this class.
-                     *
+                     * 
                      * <pre>
                      * &lt;complexType>
                      *   &lt;complexContent>
@@ -710,8 +714,8 @@ public class VehicleLocationLiabilitiesType {
                      *   &lt;/complexContent>
                      * &lt;/complexType>
                      * </pre>
-                     *
-                     *
+                     * 
+                     * 
                      */
                     @XmlAccessorType(XmlAccessType.FIELD)
                     @XmlType(name = "", propOrder = {
@@ -720,33 +724,33 @@ public class VehicleLocationLiabilitiesType {
                     public static class Vehicles {
 
                         @XmlElement(name = "Vehicle", required = true)
-                        protected List<Vehicle> vehicle;
+                        protected List<VehicleLocationLiabilitiesType.Coverages.Coverage.CoverageFees.CoverageFee.Vehicles.Vehicle> vehicle;
 
                         /**
                          * Gets the value of the vehicle property.
-                         *
+                         * 
                          * <p>
                          * This accessor method returns a reference to the live list,
                          * not a snapshot. Therefore any modification you make to the
                          * returned list will be present inside the JAXB object.
                          * This is why there is not a <CODE>set</CODE> method for the vehicle property.
-                         *
+                         * 
                          * <p>
                          * For example, to add a new item, do as follows:
                          * <pre>
                          *    getVehicle().add(newItem);
                          * </pre>
-                         *
-                         *
+                         * 
+                         * 
                          * <p>
                          * Objects of the following type(s) are allowed in the list
                          * {@link VehicleLocationLiabilitiesType.Coverages.Coverage.CoverageFees.CoverageFee.Vehicles.Vehicle }
-                         *
-                         *
+                         * 
+                         * 
                          */
-                        public List<Vehicle> getVehicle() {
+                        public List<VehicleLocationLiabilitiesType.Coverages.Coverage.CoverageFees.CoverageFee.Vehicles.Vehicle> getVehicle() {
                             if (vehicle == null) {
-                                vehicle = new ArrayList<Vehicle>();
+                                vehicle = new ArrayList<VehicleLocationLiabilitiesType.Coverages.Coverage.CoverageFees.CoverageFee.Vehicles.Vehicle>();
                             }
                             return this.vehicle;
                         }

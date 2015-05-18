@@ -9,16 +9,21 @@
 package com.witbooking.middleware.integration.ota.model;
 
 import com.witbooking.middleware.utils.serializers.JaxbDateWithoutTimeSerializer;
-
-import javax.xml.bind.annotation.*;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import javax.xml.datatype.XMLGregorianCalendar;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
@@ -120,7 +125,7 @@ public class AmountType{
     @XmlElement(name = "PaymentPolicies")
     protected RequiredPaymentsType paymentPolicies;
     @XmlElement(name = "Discount")
-    protected List<Discount> discount;
+    protected List<AmountType.Discount> discount;
     @XmlElement(name = "Total")
     protected TotalType total;
     @XmlElement(name = "RateDescription")
@@ -177,9 +182,9 @@ public class AmountType{
     @XmlAttribute(name = "ExpireDateExclusiveIndicator")
     protected Boolean expireDateExclusiveIndicator;
 
-
+    
     public AmountType(){}
-
+    
     public AmountType(final Date startDate,final Date endDate,
             final float amountBeforeTax,final float amountAfterTax,
             final String currencyCode){
@@ -189,11 +194,11 @@ public class AmountType{
     }
     /**
      * Gets the value of the base property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link TotalType }
-     *
+     *     
      */
     public TotalType getBase() {
         return base;
@@ -201,11 +206,11 @@ public class AmountType{
 
     /**
      * Sets the value of the base property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link TotalType }
-     *
+     *     
      */
     public void setBase(TotalType value) {
         this.base = value;
@@ -213,11 +218,11 @@ public class AmountType{
 
     /**
      * Gets the value of the additionalGuestAmounts property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link AmountType.AdditionalGuestAmounts }
-     *
+     *     
      */
     public AmountType.AdditionalGuestAmounts getAdditionalGuestAmounts() {
         return additionalGuestAmounts;
@@ -225,11 +230,11 @@ public class AmountType{
 
     /**
      * Sets the value of the additionalGuestAmounts property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link AmountType.AdditionalGuestAmounts }
-     *
+     *     
      */
     public void setAdditionalGuestAmounts(AmountType.AdditionalGuestAmounts value) {
         this.additionalGuestAmounts = value;
@@ -237,11 +242,11 @@ public class AmountType{
 
     /**
      * Gets the value of the fees property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link FeesType }
-     *
+     *     
      */
     public FeesType getFees() {
         return fees;
@@ -249,11 +254,11 @@ public class AmountType{
 
     /**
      * Sets the value of the fees property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link FeesType }
-     *
+     *     
      */
     public void setFees(FeesType value) {
         this.fees = value;
@@ -261,11 +266,11 @@ public class AmountType{
 
     /**
      * Gets the value of the cancelPolicies property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link CancelPenaltiesType }
-     *
+     *     
      */
     public CancelPenaltiesType getCancelPolicies() {
         return cancelPolicies;
@@ -273,11 +278,11 @@ public class AmountType{
 
     /**
      * Sets the value of the cancelPolicies property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link CancelPenaltiesType }
-     *
+     *     
      */
     public void setCancelPolicies(CancelPenaltiesType value) {
         this.cancelPolicies = value;
@@ -285,11 +290,11 @@ public class AmountType{
 
     /**
      * Gets the value of the paymentPolicies property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link RequiredPaymentsType }
-     *
+     *     
      */
     public RequiredPaymentsType getPaymentPolicies() {
         return paymentPolicies;
@@ -297,11 +302,11 @@ public class AmountType{
 
     /**
      * Sets the value of the paymentPolicies property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link RequiredPaymentsType }
-     *
+     *     
      */
     public void setPaymentPolicies(RequiredPaymentsType value) {
         this.paymentPolicies = value;
@@ -309,29 +314,29 @@ public class AmountType{
 
     /**
      * Gets the value of the discount property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the discount property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getDiscount().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link AmountType.Discount }
-     *
-     *
+     * 
+     * 
      */
-    public List<Discount> getDiscount() {
+    public List<AmountType.Discount> getDiscount() {
         if (discount == null) {
-            discount = new ArrayList<Discount>();
+            discount = new ArrayList<AmountType.Discount>();
         }
         return this.discount;
     }

@@ -26,7 +26,7 @@ public interface BookingPriceRuleBeanLocal {
 
     public List<BookingPriceRule> getRules(String ticker) throws BookingPriceRuleException;
 
-    public BookingPriceRule setRule(String ticker, BookingPriceRule bookingPriceRule) throws BookingPriceRuleException;
+    public BookingPriceRule setRule(String ticker,BookingPriceRule bookingPriceRule) throws BookingPriceRuleException;
 
     public Long deleteRule(String ticker, String id) throws BookingPriceRuleException;
 

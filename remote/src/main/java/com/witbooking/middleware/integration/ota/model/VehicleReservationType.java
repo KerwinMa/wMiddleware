@@ -8,7 +8,12 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
 
 
@@ -80,11 +85,11 @@ public class VehicleReservationType {
 
     /**
      * Gets the value of the customer property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link CustomerPrimaryAdditionalType }
-     *
+     *     
      */
     public CustomerPrimaryAdditionalType getCustomer() {
         return customer;
@@ -92,11 +97,11 @@ public class VehicleReservationType {
 
     /**
      * Sets the value of the customer property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link CustomerPrimaryAdditionalType }
-     *
+     *     
      */
     public void setCustomer(CustomerPrimaryAdditionalType value) {
         this.customer = value;
@@ -104,11 +109,11 @@ public class VehicleReservationType {
 
     /**
      * Gets the value of the vehSegmentCore property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link VehicleReservationType.VehSegmentCore }
-     *
+     *     
      */
     public VehicleReservationType.VehSegmentCore getVehSegmentCore() {
         return vehSegmentCore;
@@ -116,11 +121,11 @@ public class VehicleReservationType {
 
     /**
      * Sets the value of the vehSegmentCore property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link VehicleReservationType.VehSegmentCore }
-     *
+     *     
      */
     public void setVehSegmentCore(VehicleReservationType.VehSegmentCore value) {
         this.vehSegmentCore = value;

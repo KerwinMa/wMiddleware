@@ -57,6 +57,10 @@ public class BookingPriceRuleDBHandler {
         String ruleID= bookingPriceRule.getId()!=null ? String.valueOf(bookingPriceRule.getId()):String.valueOf(jedis.incr(rulesIDKey));
         bookingPriceRule.setId(Long.parseLong(ruleID));
 
+        if(bookingPriceRule.getOrder()==0){
+            bookingPriceRule.setOrder(Integer.parseInt(ruleID));
+        }
+
         /* HSET hotelTicker:rules ruleTicker jsonSerializedRule */
         long status=jedis.hset(rulesKey,ruleID,gson.toJson(bookingPriceRule));
 

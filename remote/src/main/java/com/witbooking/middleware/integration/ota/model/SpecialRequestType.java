@@ -8,10 +8,14 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -50,33 +54,33 @@ import java.util.List;
 public class SpecialRequestType {
 
     @XmlElement(name = "SpecialRequest", required = true)
-    protected List<SpecialRequest> specialRequest;
+    protected List<SpecialRequestType.SpecialRequest> specialRequest;
 
     /**
      * Gets the value of the specialRequest property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the specialRequest property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getSpecialRequest().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link SpecialRequestType.SpecialRequest }
-     *
-     *
+     * 
+     * 
      */
-    public List<SpecialRequest> getSpecialRequest() {
+    public List<SpecialRequestType.SpecialRequest> getSpecialRequest() {
         if (specialRequest == null) {
-            specialRequest = new ArrayList<SpecialRequest>();
+            specialRequest = new ArrayList<SpecialRequestType.SpecialRequest>();
         }
         return this.specialRequest;
     }

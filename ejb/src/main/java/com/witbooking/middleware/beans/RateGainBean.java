@@ -31,7 +31,6 @@ import com.witbooking.middleware.model.*;
 import com.witbooking.middleware.model.values.DailyValue;
 import com.witbooking.middleware.model.values.EnumDataValueType;
 import com.witbooking.middleware.model.values.RangeValue;
-import com.witbooking.middleware.model.values.RateDataValue;
 import com.witbooking.middleware.model.values.types.DaysCondition;
 import com.witbooking.middleware.model.values.types.SharedValue;
 import com.witbooking.middleware.resources.DBProperties;
@@ -77,7 +76,7 @@ public class RateGainBean implements RateGainBeanRemote, RateGainBeanLocal {
             } else {
                 throw new RateGainException(new NullPointerException("ReservationRS with ticker " + reservationId + " can not be found."));
             }
-        } catch (DBAccessException | ExternalFileException | NonexistentValueException ex) {
+        } catch (Exception ex) {
             logger.error(ex);
             throw new RateGainException(ex);
         } finally {
@@ -736,37 +735,7 @@ public class RateGainBean implements RateGainBeanRemote, RateGainBeanLocal {
         Set<DailyValue<Float>> dailyValueSet;
         //if useFullRatesChMg is true, we send all the real values in the reservation's rates (dailyvalues +extras -discounts)
         if (useFullRatesChMg) {
-            Date startDateIter = roomStay.getRoomRates().getRangeStartDate();
-            Date endDateIter = roomStay.getRoomRates().getRangeEndDate();
-            Date dateIterator = (Date) startDateIter.clone();
-            float totalServices = 0;
-            //We have to add the daily price for all the extras requested
-            for (ServiceRequested serviceRequested : roomStay.getServices()) {
-                totalServices = serviceRequested.getTotalServiceAmount() + totalServices;
-            }
-            int days = DateUtil.daysBetweenDates(startDateIter, endDateIter) + 1;
-            if (totalServices > 0 && days > 0)
-                totalServices = (float) Math.round((totalServices / days) * 1000) / 1000;
-
-            RangeValue<Float> fullRates = new RangeValue<Float>(RateDataValue.DEFAULT_VALUE);
-            //We have subtract the discounts from the daily rate
-            while (DateUtil.dateBetweenDaysRange(dateIterator, startDateIter, endDateIter)) {
-                float actualRate = roomStay.getRoomRates().getFinalValueForADate(dateIterator);
-                Float discount = null;
-                for (DiscountApplied discountApplied : roomStay.getDiscounts()) {
-                    discount = discountApplied.getDiscountPrice().getValueForADate(dateIterator);
-                    //If percentage, Round 3 decimals
-                    if (discountApplied.isPercentage())
-                        discount = (float) Math.round(actualRate * discount * 10) / 1000;
-                    if (discount != null)
-                        break;
-                }
-                if (discount != null && discount != 0)
-                    actualRate = (float) Math.round((actualRate + discount.floatValue()) * 1000) / 1000;
-                fullRates.putValueForADate(dateIterator, actualRate + totalServices);
-                DateUtil.incrementDays(dateIterator, 1);
-            }
-            dailyValueSet = fullRates.getDailySet();
+            dailyValueSet = roomStay.getRoomRatesFullSetDailyValues();
         } else {
             dailyValueSet = roomStay.getRoomRatesSetDailyValues();
         }

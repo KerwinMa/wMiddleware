@@ -8,11 +8,17 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -86,11 +92,11 @@ import java.util.List;
 public class CabinAvailabilityType {
 
     @XmlElement(name = "Meal")
-    protected List<Meal> meal;
+    protected List<CabinAvailabilityType.Meal> meal;
     @XmlElement(name = "BaggageAllowance")
     protected CabinAvailabilityType.BaggageAllowance baggageAllowance;
     @XmlElement(name = "Entertainment")
-    protected List<Entertainment> entertainment;
+    protected List<CabinAvailabilityType.Entertainment> entertainment;
     @XmlElement(name = "FlightLoadInfo")
     protected CabinAvailabilityType.FlightLoadInfo flightLoadInfo;
     @XmlAttribute(name = "CabinType", required = true)
@@ -101,40 +107,40 @@ public class CabinAvailabilityType {
 
     /**
      * Gets the value of the meal property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the meal property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getMeal().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link CabinAvailabilityType.Meal }
-     *
-     *
+     * 
+     * 
      */
-    public List<Meal> getMeal() {
+    public List<CabinAvailabilityType.Meal> getMeal() {
         if (meal == null) {
-            meal = new ArrayList<Meal>();
+            meal = new ArrayList<CabinAvailabilityType.Meal>();
         }
         return this.meal;
     }
 
     /**
      * Gets the value of the baggageAllowance property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link CabinAvailabilityType.BaggageAllowance }
-     *
+     *     
      */
     public CabinAvailabilityType.BaggageAllowance getBaggageAllowance() {
         return baggageAllowance;
@@ -142,11 +148,11 @@ public class CabinAvailabilityType {
 
     /**
      * Sets the value of the baggageAllowance property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link CabinAvailabilityType.BaggageAllowance }
-     *
+     *     
      */
     public void setBaggageAllowance(CabinAvailabilityType.BaggageAllowance value) {
         this.baggageAllowance = value;
@@ -154,40 +160,40 @@ public class CabinAvailabilityType {
 
     /**
      * Gets the value of the entertainment property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the entertainment property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getEntertainment().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link CabinAvailabilityType.Entertainment }
-     *
-     *
+     * 
+     * 
      */
-    public List<Entertainment> getEntertainment() {
+    public List<CabinAvailabilityType.Entertainment> getEntertainment() {
         if (entertainment == null) {
-            entertainment = new ArrayList<Entertainment>();
+            entertainment = new ArrayList<CabinAvailabilityType.Entertainment>();
         }
         return this.entertainment;
     }
 
     /**
      * Gets the value of the flightLoadInfo property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link CabinAvailabilityType.FlightLoadInfo }
-     *
+     *     
      */
     public CabinAvailabilityType.FlightLoadInfo getFlightLoadInfo() {
         return flightLoadInfo;
@@ -195,11 +201,11 @@ public class CabinAvailabilityType {
 
     /**
      * Sets the value of the flightLoadInfo property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link CabinAvailabilityType.FlightLoadInfo }
-     *
+     *     
      */
     public void setFlightLoadInfo(CabinAvailabilityType.FlightLoadInfo value) {
         this.flightLoadInfo = value;

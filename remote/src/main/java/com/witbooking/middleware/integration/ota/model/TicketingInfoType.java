@@ -8,14 +8,20 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import javax.xml.datatype.XMLGregorianCalendar;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
@@ -108,7 +114,7 @@ import java.util.List;
 public class TicketingInfoType {
 
     @XmlElement(name = "TicketAdvisory")
-    protected List<TicketAdvisory> ticketAdvisory;
+    protected List<TicketingInfoType.TicketAdvisory> ticketAdvisory;
     @XmlElement(name = "TicketingVendor")
     protected TicketingInfoType.TicketingVendor ticketingVendor;
     @XmlElement(name = "PricingSystem")
@@ -150,40 +156,40 @@ public class TicketingInfoType {
 
     /**
      * Gets the value of the ticketAdvisory property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the ticketAdvisory property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getTicketAdvisory().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link TicketingInfoType.TicketAdvisory }
-     *
-     *
+     * 
+     * 
      */
-    public List<TicketAdvisory> getTicketAdvisory() {
+    public List<TicketingInfoType.TicketAdvisory> getTicketAdvisory() {
         if (ticketAdvisory == null) {
-            ticketAdvisory = new ArrayList<TicketAdvisory>();
+            ticketAdvisory = new ArrayList<TicketingInfoType.TicketAdvisory>();
         }
         return this.ticketAdvisory;
     }
 
     /**
      * Gets the value of the ticketingVendor property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link TicketingInfoType.TicketingVendor }
-     *
+     *     
      */
     public TicketingInfoType.TicketingVendor getTicketingVendor() {
         return ticketingVendor;
@@ -191,11 +197,11 @@ public class TicketingInfoType {
 
     /**
      * Sets the value of the ticketingVendor property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link TicketingInfoType.TicketingVendor }
-     *
+     *     
      */
     public void setTicketingVendor(TicketingInfoType.TicketingVendor value) {
         this.ticketingVendor = value;
@@ -203,11 +209,11 @@ public class TicketingInfoType {
 
     /**
      * Gets the value of the pricingSystem property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link TicketingInfoType.PricingSystem }
-     *
+     *     
      */
     public TicketingInfoType.PricingSystem getPricingSystem() {
         return pricingSystem;
@@ -215,11 +221,11 @@ public class TicketingInfoType {
 
     /**
      * Sets the value of the pricingSystem property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link TicketingInfoType.PricingSystem }
-     *
+     *     
      */
     public void setPricingSystem(TicketingInfoType.PricingSystem value) {
         this.pricingSystem = value;
@@ -227,11 +233,11 @@ public class TicketingInfoType {
 
     /**
      * Gets the value of the totalFare property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link TicketingInfoType.TotalFare }
-     *
+     *     
      */
     public TicketingInfoType.TotalFare getTotalFare() {
         return totalFare;
@@ -239,11 +245,11 @@ public class TicketingInfoType {
 
     /**
      * Sets the value of the totalFare property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link TicketingInfoType.TotalFare }
-     *
+     *     
      */
     public void setTotalFare(TicketingInfoType.TotalFare value) {
         this.totalFare = value;

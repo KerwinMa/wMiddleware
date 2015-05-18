@@ -8,10 +8,15 @@
 
 package com.witbooking.middleware.integration.ota.model;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.datatype.XMLGregorianCalendar;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
@@ -51,33 +56,33 @@ import java.util.List;
 public class ImageItemsType {
 
     @XmlElement(name = "ImageItem", required = true)
-    protected List<ImageItem> imageItem;
+    protected List<ImageItemsType.ImageItem> imageItem;
 
     /**
      * Gets the value of the imageItem property.
-     *
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the imageItem property.
-     *
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getImageItem().add(newItem);
      * </pre>
-     *
-     *
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ImageItemsType.ImageItem }
-     *
-     *
+     * 
+     * 
      */
-    public List<ImageItem> getImageItem() {
+    public List<ImageItemsType.ImageItem> getImageItem() {
         if (imageItem == null) {
-            imageItem = new ArrayList<ImageItem>();
+            imageItem = new ArrayList<ImageItemsType.ImageItem>();
         }
         return this.imageItem;
     }
