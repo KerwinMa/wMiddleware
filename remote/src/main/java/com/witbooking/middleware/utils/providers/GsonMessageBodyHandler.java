@@ -23,7 +23,7 @@ import com.google.gson.GsonBuilder;
 @Provider
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
-public final class GsonMessageBodyHandler implements MessageBodyWriter<Object>,
+public class GsonMessageBodyHandler implements MessageBodyWriter<Object>,
         MessageBodyReader<Object> {
 
     private static final String UTF_8 = "UTF-8";
