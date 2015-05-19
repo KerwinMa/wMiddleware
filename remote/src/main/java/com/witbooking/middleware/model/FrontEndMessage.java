@@ -67,6 +67,9 @@ public class FrontEndMessage implements Serializable {
 
     private Date start, end, creation, lastModification;
 
+    public FrontEndMessage(){
+
+    }
 
     public FrontEndMessage(Integer id, String username, String editedName, String description, String title, Position position, Type type, Boolean hidden, Boolean unavailable, Date start, Date end, Date creation, Date lastModification) {
         this.id = id;
