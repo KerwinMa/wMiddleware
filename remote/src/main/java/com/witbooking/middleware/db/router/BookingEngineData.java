@@ -6,6 +6,14 @@ package com.witbooking.middleware.db.router;
 public class BookingEngineData {
     String hotelTicker;
 
+    public  BookingEngineData(){
+
+    }
+
+    public BookingEngineData(String hotelTicker) {
+        this.hotelTicker = hotelTicker;
+    }
+
     public String getHotelTicker() {
         return hotelTicker;
     }

@@ -20,7 +20,7 @@ import java.util.Objects;
  */
 
 @Entity
-@Table(name = "FRONTENDMESSAGE")
+@Table(name = "mensajes")
 /*@Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)*/
 public class FrontEndMessage implements Serializable {
 
@@ -35,7 +35,7 @@ public class FrontEndMessage implements Serializable {
 
     @NotNull
     @Size(max = 90)
-    @Column(name = "edited_name", length = 90, nullable = false)
+    @Column(name = "editedname", length = 90, nullable = false)
     private String editedName;
 
     @Column(name = "descripcion")
@@ -56,7 +56,7 @@ public class FrontEndMessage implements Serializable {
     @Column(name = "visible")
     private Boolean visible;
 
-    @Column(name = "unavailable")
+    @Column(name = "alojamientos")
     private Boolean unavailable;
 
     @Type(type = "org.jadira.usertype.dateandtime.joda.PersistentDateTime")
@@ -74,14 +74,18 @@ public class FrontEndMessage implements Serializable {
     @Type(type = "org.jadira.usertype.dateandtime.joda.PersistentDateTime")
     @JsonSerialize(using = CustomDateTimeSerializer.class)
     @JsonDeserialize(using = CustomDateTimeDeserializer.class)
-    @Column(name = "fcreation")
+    @Column(name = "fcreacion")
     private DateTime fcreation;
 
     @Type(type = "org.jadira.usertype.dateandtime.joda.PersistentDateTime")
     @JsonSerialize(using = CustomDateTimeSerializer.class)
     @JsonDeserialize(using = CustomDateTimeDeserializer.class)
-    @Column(name = "fmodification")
+    @Column(name = "fmodificacion")
     private DateTime fmodification;
+
+    public FrontEndMessage() {
+
+    }
 
     public FrontEndMessage(com.witbooking.middleware.model.FrontEndMessage frontEndMessage) {
         this.id=new Long(frontEndMessage.getId());

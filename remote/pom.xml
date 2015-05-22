@@ -180,16 +180,26 @@
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
 
+<!--
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
         </dependency>
+-->
 
     </dependencies>
 
     <build>
         <!-- Specify the artifact name, this is referred to in the EAR's application.xml -->
         <finalName>${project.artifactId}</finalName>
+
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+        </resources>
+
+
         <!-- Compiler plugin enforces Java 1.6 compatibility and activates
             annotation processors -->
         <plugins>

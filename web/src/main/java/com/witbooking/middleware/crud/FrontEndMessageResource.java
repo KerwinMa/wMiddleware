@@ -1,10 +1,14 @@
 package com.witbooking.middleware.crud;
 
 import com.witbooking.middleware.crud.util.PaginationUtil;
-import com.witbooking.middleware.db.model.FrontEndMessageRepository;
+import com.witbooking.middleware.db.repository.FrontEndMessageRepository;
+import com.witbooking.middleware.db.router.BookingEngineContextHolder;
+import com.witbooking.middleware.db.router.BookingEngineData;
 import com.witbooking.middleware.model.FrontEndMessage;
+import com.witbooking.middleware.model.trash.PersonRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.http.HttpHeaders;
@@ -13,7 +17,6 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.inject.Inject;
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 import java.net.URI;
@@ -34,7 +37,8 @@ public class FrontEndMessageResource {
 
     private final Logger log = LoggerFactory.getLogger(FrontEndMessageResource.class);
 
-    @Inject
+    /*TODO: FIGURE OUT WHY INJECT IS NOT WORKING*/
+    @Autowired
     private FrontEndMessageRepository frontEndMessageRepository;
 
 
@@ -48,6 +52,7 @@ public class FrontEndMessageResource {
         }
         com.witbooking.middleware.db.model.FrontEndMessage dbFrontEndMessage = new com.witbooking.middleware.db.model.FrontEndMessage(frontEndMessage);
         frontEndMessageRepository.save(dbFrontEndMessage);
+
         return ResponseEntity.created(new URI("/api/frontEndMessages/" + frontEndMessage.getId())).build();
     }
 
@@ -70,6 +75,8 @@ public class FrontEndMessageResource {
     public ResponseEntity<List<FrontEndMessage>> getAll(@PathVariable String hotelTicker, @RequestParam(value = "page", required = false) Integer offset,
                                                         @RequestParam(value = "per_page", required = false) Integer limit)
             throws URISyntaxException {
+        BookingEngineContextHolder.setBookingEngineData(new BookingEngineData(hotelTicker));
+        frontEndMessageRepository.findAll(PaginationUtil.generatePageRequest(offset, limit));
         Page<com.witbooking.middleware.db.model.FrontEndMessage> dbPage = frontEndMessageRepository.findAll(PaginationUtil.generatePageRequest(offset, limit));
         List<FrontEndMessage> frontEndMessages = new ArrayList<>();
         for (com.witbooking.middleware.db.model.FrontEndMessage frontEndMessage : dbPage) {

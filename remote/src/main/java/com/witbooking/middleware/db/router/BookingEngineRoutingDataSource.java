@@ -14,6 +14,7 @@ import com.witbooking.middleware.resources.DBProperties;
 import com.witbooking.middleware.resources.MiddlewareProperties;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource;
 
 import javax.sql.DataSource;
@@ -25,6 +26,7 @@ import java.util.Map;
 
 public class BookingEngineRoutingDataSource extends AbstractRoutingDataSource {
 
+    boolean isDataSourceCacheEmpty = true;
 
     protected DBCredentials getDBCredentialsFromJson(JsonObject jsonCredentials, String ticker) throws
             ExternalFileException {
@@ -78,6 +80,8 @@ public class BookingEngineRoutingDataSource extends AbstractRoutingDataSource {
                 credentialsMap.put(hotelTicker,dbCredentials);
             }
 
+            isDataSourceCacheEmpty=credentialsMap.isEmpty();
+
             return credentialsMap;
         } catch (Exception ex) {
             logger.error("There is something wrong with the Customers DB File. "+ ex);
@@ -87,17 +91,23 @@ public class BookingEngineRoutingDataSource extends AbstractRoutingDataSource {
     }
 
     @Cacheable("datasources")
-    protected Map<Object, Object> getDynamicTargetDataSources(){
+    public Map<Object, Object> getDynamicTargetDataSources(){
         Map<Object,Object> dataSourcesMap=new HashMap<>();
         try {
             Map<String,DBCredentials> credentialsMap=readCredentialsFromConfigFile();
             for (Map.Entry<String,DBCredentials> entry : credentialsMap.entrySet()) {
                 DBCredentials dbCredentials = entry.getValue();
                 String hotelTicker = entry.getKey();
-                String dbURL = "jdbc:mysql://" + dbCredentials.getHost()
-                        + ":" + dbCredentials.getPort()
-                        + "/" + dbCredentials.getNameDB();
-                dataSourcesMap.put(hotelTicker,dbURL);
+
+                String dbURL = "jdbc:mysql://" +dbCredentials.getHost()+":" +dbCredentials.getPort()+"/"+dbCredentials.getNameDB();
+
+                final DriverManagerDataSource dataSource = new DriverManagerDataSource();
+                dataSource.setDriverClassName("com.mysql.jdbc.Driver");
+                dataSource.setUrl(dbURL);
+                dataSource.setUsername(dbCredentials.getUserDB());
+                dataSource.setPassword(dbCredentials.getPassDB());
+
+                dataSourcesMap.put(hotelTicker,dataSource);
             }
 
         } catch (ExternalFileException e) {
@@ -108,19 +118,21 @@ public class BookingEngineRoutingDataSource extends AbstractRoutingDataSource {
 
     @CacheEvict("datasources")
     public void clearDynamicTargetDataSources(){
-
+        isDataSourceCacheEmpty=true;
     }
 
     @Override
     protected DataSource determineTargetDataSource() {
-        setTargetDataSources(getDynamicTargetDataSources());
-        afterPropertiesSet();
+        if(isDataSourceCacheEmpty){
+            setTargetDataSources(getDynamicTargetDataSources());
+            afterPropertiesSet();
+        }
         return super.determineTargetDataSource();
     }
 
     @Override
     protected Object determineCurrentLookupKey() {
-        return BookingEngineContextHolder.getBookingEngineData().getHotelTicker();
+        return BookingEngineContextHolder.getBookingEngineData()!=null ? BookingEngineContextHolder.getBookingEngineData().getHotelTicker() : "hoteldemo.com.v6";
     }
 }
 

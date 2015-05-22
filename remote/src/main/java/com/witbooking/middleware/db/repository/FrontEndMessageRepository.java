@@ -1,5 +1,6 @@
-package com.witbooking.middleware.db.model;
+package com.witbooking.middleware.db.repository;
 
+import com.witbooking.middleware.db.model.FrontEndMessage;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
