@@ -87,14 +87,8 @@
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
-            <version>18.0</version>
         </dependency>
 
-        <dependency>
-            <groupId>joda-time</groupId>
-            <artifactId>joda-time</artifactId>
-            <version>2.7</version>
-        </dependency>
 
         <dependency>
             <groupId>com.google.code.gson</groupId>
@@ -111,7 +105,6 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.35</version>
         </dependency>
 
         <dependency>
@@ -165,9 +158,9 @@
         </dependency>
 
         <dependency>
-            <groupId>org.appdapter</groupId>
-            <artifactId>ext.bundle.math.symja_jas</artifactId>
-            <version>1.2.3</version>
+            <groupId>org.matheclipse</groupId>
+            <artifactId>matheclipse</artifactId>
+            <version>1.0</version>
         </dependency>
 
         <dependency>

@@ -52,6 +52,12 @@
             <type>war</type>
         </dependency>
         <dependency>
+            <groupId>com.witbooking.middleware</groupId>
+            <artifactId>witbooking-api-war</artifactId>
+            <type>pom</type>
+            <version>9.0.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
 			<groupId>com.witbooking.middleware</groupId>
 			<artifactId>witbooking-api-ejb</artifactId>
             <type>ejb</type>
@@ -73,6 +79,7 @@
                 <version>${version.ear.plugin}</version>
                 <!-- configuring the ear plugin -->
                 <configuration>
+                    <skinnyWars>true</skinnyWars>
                     <!-- Tell Maven we are using Java EE 7 -->
                     <version>6</version>
                     <!-- Use Java EE ear libraries as needed. Java EE ear libraries 

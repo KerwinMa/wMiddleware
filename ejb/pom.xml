@@ -66,11 +66,6 @@
             <scope>provided</scope>
         </dependency>
 
-        <dependency>
-            <groupId>joda-time</groupId>
-            <artifactId>joda-time</artifactId>
-            <version>2.7</version>
-        </dependency>
 
         <dependency>
             <groupId>com.google.code.gson</groupId>
@@ -93,7 +88,6 @@
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
-            <version>18.0</version>
         </dependency>
 
         <dependency>

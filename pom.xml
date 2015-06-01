@@ -60,7 +60,7 @@
 
         <!-- other plugin versions -->
         <version.compiler.plugin>3.1</version.compiler.plugin>
-        <version.ear.plugin>2.6</version.ear.plugin>
+        <version.ear.plugin>2.10</version.ear.plugin>
         <version.ejb.plugin>2.3</version.ejb.plugin>
         <version.war.plugin>2.5</version.war.plugin>
 
@@ -69,9 +69,109 @@
         <maven.compiler.source>1.7</maven.compiler.source>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+            <version>2.7</version>
+        </dependency>
+    </dependencies>
+
     <dependencyManagement>
         <dependencies>
-            <!-- Define the version of the EJB jar so that we don't need 
+
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-entitymanager</artifactId>
+                <version>4.3.8.Final</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>18.0</version>
+            </dependency>
+
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>5.1.35</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>4.3.6</version>
+            </dependency>
+
+            <dependency>
+                <groupId>redis.clients</groupId>
+                <artifactId>jedis</artifactId>
+                <version>2.7.2</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sun.mail</groupId>
+                <artifactId>javax.mail</artifactId>
+                <version>1.5.2</version>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>2.4</version>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-codec</groupId>
+                <artifactId>commons-codec</artifactId>
+                <version>1.10</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-pool2</artifactId>
+                <version>2.3</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.tomcat</groupId>
+                <artifactId>tomcat-jdbc</artifactId>
+                <version>8.0.20</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.tomcat</groupId>
+                <artifactId>tomcat-juli</artifactId>
+                <version>8.0.20</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.atteo</groupId>
+                <artifactId>evo-inflector</artifactId>
+                <version>1.2.1</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>jcl-over-slf4j</artifactId>
+                <version>1.7.11</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>1.7.11</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.google.code.findbugs</groupId>
+                <artifactId>jsr305</artifactId>
+                <version>2.0.3</version>
+            </dependency>
+
+
+            <!-- Define the version of the EJB jar so that we don't need
                 to repeat ourselves in every module -->
             <dependency>
                 <groupId>com.witbooking.middleware</groupId>
@@ -144,6 +244,27 @@
                     <skip>true</skip>
                 </configuration>
             </plugin>
+
+<!--            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-install-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>initialize</phase>
+                        <goals>
+                            <goal>install-file</goal>
+                        </goals>
+                        <configuration>
+                            <groupId>org.matheclipse</groupId>
+                            <artifactId>matheclipse</artifactId>
+                            <version>1.0</version>
+                            <packaging>jar</packaging>
+                            <file>${basedir}/lib/meconsole010.jar</file>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>-->
+
         </plugins>
     </build>
 
