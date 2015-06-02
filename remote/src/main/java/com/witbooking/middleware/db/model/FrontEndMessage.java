@@ -1,18 +1,22 @@
 package com.witbooking.middleware.db.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.witbooking.middleware.db.model.util.CustomDateTimeDeserializer;
 import com.witbooking.middleware.db.model.util.CustomDateTimeSerializer;
+import org.hibernate.annotations.*;
 import org.hibernate.annotations.Cache;
-import org.hibernate.annotations.CacheConcurrencyStrategy;
-import org.hibernate.annotations.Type;
 import org.joda.time.DateTime;
 
 import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import javax.validation.constraints.*;
 import java.io.Serializable;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 
 /**
@@ -23,6 +27,8 @@ import java.util.Objects;
 @Table(name = "mensajes")
 /*@Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)*/
 public class FrontEndMessage implements Serializable {
+
+    public String model="Mensaje";
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -82,6 +88,15 @@ public class FrontEndMessage implements Serializable {
     @JsonDeserialize(using = CustomDateTimeDeserializer.class)
     @Column(name = "fmodificacion")
     private DateTime fmodification;
+
+    @OneToMany()
+    @JoinColumns({
+            @JoinColumn(name = "id", referencedColumnName = "foreign_key"),
+            @JoinColumn(name = "model", referencedColumnName = "model")
+    })
+    private Set<Translation> translations = new HashSet<>();
+
+
 
     public FrontEndMessage() {
 
