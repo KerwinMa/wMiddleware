@@ -85,7 +85,7 @@
                     <!-- Use Java EE ear libraries as needed. Java EE ear libraries 
                         are in easy way to package any libraries needed in the ear, and automatically 
                         have any modules (EJB-JARs and WARs) use them -->
-                    <defaultLibBundleDir>lib</defaultLibBundleDir>
+                    <defaultLibBundleDir> </defaultLibBundleDir>
                     <modules>
                     <!-- Default context root of the web app is /wildfly-ejb-in-ear-web.
                         If a custom context root is needed, uncomment the following snippet to
@@ -93,7 +93,7 @@
                         <webModule>
 							<groupId>com.witbooking.middleware</groupId>
                             <artifactId>witbooking-api-war</artifactId>
-                            <contextRoot>/WitBookerAPI-war</contextRoot>
+                            <contextRoot>/springi</contextRoot>
                         </webModule>
                     </modules>
                     <fileNameMapping>no-version</fileNameMapping>
