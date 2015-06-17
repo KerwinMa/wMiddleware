@@ -76,7 +76,6 @@ public class FrontEndMessageResource {
                                                         @RequestParam(value = "per_page", required = false) Integer limit)
             throws URISyntaxException {
         BookingEngineContextHolder.setBookingEngineData(new BookingEngineData(hotelTicker));
-        frontEndMessageRepository.findAll(PaginationUtil.generatePageRequest(offset, limit));
         Page<com.witbooking.middleware.db.model.FrontEndMessage> dbPage = frontEndMessageRepository.findAll(PaginationUtil.generatePageRequest(offset, limit));
         List<FrontEndMessage> frontEndMessages = new ArrayList<>();
         for (com.witbooking.middleware.db.model.FrontEndMessage frontEndMessage : dbPage) {

@@ -14,9 +14,7 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.validation.constraints.*;
 import java.io.Serializable;
-import java.util.HashSet;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
 
 
 /**
@@ -28,6 +26,7 @@ import java.util.Set;
 /*@Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)*/
 public class FrontEndMessage implements Serializable {
 
+    @Transient
     public String model="Mensaje";
 
     @Id
@@ -89,12 +88,13 @@ public class FrontEndMessage implements Serializable {
     @Column(name = "fmodificacion")
     private DateTime fmodification;
 
-/*    @OneToMany()
-    @JoinColumns({
-            @JoinColumn(name = "id", referencedColumnName = "foreign_key"),
-            @JoinColumn(name = "model", referencedColumnName = "model")
-    })
-    private Set<Translation> translations = new HashSet<>();*/
+
+    @OneToMany
+    @JoinColumn(name = "foreign_key", referencedColumnName = "id")
+    @Where(clause = "model = Mensaje")
+    @MapKey(name="locale")
+    private Map<String, Translation> translations = new HashMap<>();
+
 
 
 
@@ -134,7 +134,7 @@ public class FrontEndMessage implements Serializable {
         frontEndMessage.setLastModification(this.fmodification.toDate());
         return frontEndMessage;
     }
-    
+
     public Long getId() {
         return id;
     }

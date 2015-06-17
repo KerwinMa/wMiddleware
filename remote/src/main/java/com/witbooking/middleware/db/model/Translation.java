@@ -1,32 +1,26 @@
-/*
 package com.witbooking.middleware.db.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.witbooking.middleware.db.model.util.CustomDateTimeDeserializer;
-import com.witbooking.middleware.db.model.util.CustomDateTimeSerializer;
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.hibernate.annotations.Type;
 import org.joda.time.DateTime;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.Objects;
 
-
-*/
 /**
- * A FrontEndMessage.
- *//*
-
-
+ * A Translation.
+ */
 @Entity
 @Table(name = "i18n")
-*/
-/*@Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)*//*
-
 public class Translation implements Serializable {
 
     @Id
@@ -44,8 +38,8 @@ public class Translation implements Serializable {
     private String model;
 
     @NotNull
-    @Column(name = "foreign_key")
-    private String referencedId;
+    @Column(name = "foreign_key", nullable = false)
+    private String foreign_key;
 
     @NotNull
     @Size(max = 255)
@@ -53,12 +47,14 @@ public class Translation implements Serializable {
     private String field;
 
     @NotNull
-    @Column(name = "field", nullable = true,columnDefinition = "TEXT")
+    @Column(name = "content", nullable = true, columnDefinition = "TEXT")
     private String content;
 
+/*
     @Column(name = "lastmodified")
     @Temporal(TemporalType.TIMESTAMP)
     private Date lastmodified;
+*/
 
 
     public Long getId() {
@@ -85,12 +81,12 @@ public class Translation implements Serializable {
         this.model = model;
     }
 
-    public String getReferencedId() {
-        return referencedId;
+    public String getForeign_key() {
+        return foreign_key;
     }
 
-    public void setReferencedId(String referencedId) {
-        this.referencedId = referencedId;
+    public void setForeign_key(String foreign_key) {
+        this.foreign_key = foreign_key;
     }
 
     public String getField() {
@@ -109,13 +105,13 @@ public class Translation implements Serializable {
         this.content = content;
     }
 
-    public Date getLastmodified() {
+/*    public Date getLastmodified() {
         return lastmodified;
     }
 
     public void setLastmodified(Date lastmodified) {
         this.lastmodified = lastmodified;
-    }
+    }*/
 
     @Override
     public boolean equals(Object o) {
@@ -128,7 +124,7 @@ public class Translation implements Serializable {
 
         Translation translation = (Translation) o;
 
-        if ( ! Objects.equals(id, translation.id)) return false;
+        if (!Objects.equals(id, translation.id)) return false;
 
         return true;
     }
@@ -142,13 +138,14 @@ public class Translation implements Serializable {
     public String toString() {
         return "Translation{" +
                 "id=" + id +
-                ", locale='" + locale + '\'' +
-                ", model='" + model + '\'' +
-                ", referencedId='" + referencedId + '\'' +
-                ", field='" + field + '\'' +
-                ", content='" + content + '\'' +
-                ", lastmodified=" + lastmodified +
+                ", locale='" + locale + "'" +
+                ", model='" + model + "'" +
+                ", foreign_key='" + foreign_key + "'" +
+                ", field='" + field + "'" +
+                ", content='" + content + "'" +
+/*
+                ", lastmodified='" + lastmodified + "'" +
+*/
                 '}';
     }
 }
-*/
