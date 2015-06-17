@@ -79,13 +79,16 @@
                 <version>${version.ear.plugin}</version>
                 <!-- configuring the ear plugin -->
                 <configuration>
+<!--
                     <skinnyWars>true</skinnyWars>
+-->
                     <!-- Tell Maven we are using Java EE 7 -->
-                    <version>6</version>
+                    <version>7</version>
                     <!-- Use Java EE ear libraries as needed. Java EE ear libraries 
                         are in easy way to package any libraries needed in the ear, and automatically 
                         have any modules (EJB-JARs and WARs) use them -->
-                    <defaultLibBundleDir> </defaultLibBundleDir>
+                    <defaultLibBundleDir>lib</defaultLibBundleDir>
+                    <packagingExcludes>**/spring-**.jar</packagingExcludes>
                     <modules>
                     <!-- Default context root of the web app is /wildfly-ejb-in-ear-web.
                         If a custom context root is needed, uncomment the following snippet to

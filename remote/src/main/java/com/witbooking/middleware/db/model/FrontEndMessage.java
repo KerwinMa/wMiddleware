@@ -89,12 +89,12 @@ public class FrontEndMessage implements Serializable {
     @Column(name = "fmodificacion")
     private DateTime fmodification;
 
-    @OneToMany()
+/*    @OneToMany()
     @JoinColumns({
             @JoinColumn(name = "id", referencedColumnName = "foreign_key"),
             @JoinColumn(name = "model", referencedColumnName = "model")
     })
-    private Set<Translation> translations = new HashSet<>();
+    private Set<Translation> translations = new HashSet<>();*/
 
 
 

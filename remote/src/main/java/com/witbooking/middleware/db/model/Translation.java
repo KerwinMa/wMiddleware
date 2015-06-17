@@ -1,3 +1,4 @@
+/*
 package com.witbooking.middleware.db.model;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
@@ -15,13 +16,17 @@ import java.util.Date;
 import java.util.Objects;
 
 
+*/
 /**
  * A FrontEndMessage.
- */
+ *//*
+
 
 @Entity
 @Table(name = "i18n")
-/*@Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)*/
+*/
+/*@Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)*//*
+
 public class Translation implements Serializable {
 
     @Id
@@ -146,3 +151,4 @@ public class Translation implements Serializable {
                 '}';
     }
 }
+*/
