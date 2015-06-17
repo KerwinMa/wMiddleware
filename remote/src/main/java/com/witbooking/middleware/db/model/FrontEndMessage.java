@@ -91,7 +91,7 @@ public class FrontEndMessage implements Serializable {
 
     @OneToMany
     @JoinColumn(name = "foreign_key", referencedColumnName = "id")
-    @Where(clause = "model = Mensaje")
+    @Where(clause = "model = 'Mensaje'")
     @MapKey(name="locale")
     private Map<String, Translation> translations = new HashMap<>();
 
