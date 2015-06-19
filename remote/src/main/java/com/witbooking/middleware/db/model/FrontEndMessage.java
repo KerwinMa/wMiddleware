@@ -24,7 +24,9 @@ import java.util.*;
 @Entity
 @Table(name = "mensajes")
 /*@Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)*/
-public class FrontEndMessage implements Serializable {
+public class FrontEndMessage extends Localized implements Serializable {
+
+    public static final String MODEL="Mensaje";
 
     @Transient
     public String model="Mensaje";
@@ -91,7 +93,7 @@ public class FrontEndMessage implements Serializable {
 
     @OneToMany
     @JoinColumn(name = "foreign_key", referencedColumnName = "id")
-    @Where(clause = "model = 'Mensaje'")
+    @Where(clause = "model = " + MODEL)
     @MapKey(name="locale")
     private Map<String, Translation> translations = new HashMap<>();
 
